@@ -1,38 +1,36 @@
-<footer class="site-footer">
-
-  <div class="wrapper">
-
-    <h2 class="footer-heading">{{ site.title }}</h2>
-
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li>{{ site.title }}</li>
-          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-        </ul>
+  <div class="w-section footer-section">
+    <div class="w-container container footer-container">
+      <div class="w-row">
+        <div class="w-col w-col-3 footer-links-columns">
+          <h5 class="footer-headings">VPaaS</h5><a class="footer-links" href="#">Overview</a><a class="footer-links" href="#">API</a><a class="footer-links" href="#">Case Studies</a><a class="footer-links" href="#">Register for a Free Trial</a>
+        </div>
+        <div class="w-col w-col-3 footer-links-columns">
+          <h5 class="footer-headings">Tools</h5><a class="footer-links" href="#">API Test Console</a><a class="footer-links" href="#">Client Libraries</a><a class="footer-links" href="#">iOS &amp; Android Mobile SDKs</a><a class="footer-links" href="#">Interactive Code Recipes</a><a class="footer-links" href="#">Player Toolkit</a><a class="footer-links" href="#">Kaltura Application Framework</a><a class="footer-links" href="#">Kaltura on Github</a><a class="footer-links" href="#">Kaltura on Stack Overflow</a>
+        </div>
+        <div class="w-col w-col-3 footer-links-columns">
+          <h5 class="footer-headings">Resources</h5><a class="footer-links" href="#">API Documentation</a><a class="footer-links" href="#">Knowledge Center</a><a class="footer-links" href="#">Kaltura University</a><a class="footer-links" href="#">Webinars</a><a class="footer-links" href="#">Kaltura Video Tutorials</a><a class="footer-links" href="#">Certified Integrators</a>
+        </div>
+        <div class="w-col w-col-3 footer-links-columns">
+          <h5 class="footer-headings">Community</h5><a class="footer-links" href="#">Forums</a><a class="footer-links" href="#">Kaltura Developer Days</a><a class="footer-links" href="#">Meet Kaltura at Events</a><a class="footer-links" href="#">Blog</a>
+          <h5 class="footer-headings footer-heading-margin">Open Source</h5><a class="footer-links" href="#">opensource.kaltura.org</a>
+        </div>
       </div>
-
-      <div class="footer-col footer-col-2">
-        <ul class="social-media-list">
-          {% if site.github_username %}
-          <li>
-            {% include icon-github.html username=site.github_username %}
-          </li>
-          {% endif %}
-
-          {% if site.twitter_username %}
-          <li>
-            {% include icon-twitter.html username=site.twitter_username %}
-          </li>
-          {% endif %}
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-3">
-        <p>{{ site.description }}</p>
+      <div class="social-icon-container">
+        <div class="social-div fa-stack-overflow fa fa-2x"></div>
+        <div class="social-div fa-github fa fa-2x"></div>
+        <div class="social-div fa fa-twitter fa-2x"></div>
+        <div class="social-div fa fa-linkedin fa-2x"></div>
       </div>
     </div>
-
+    <div class="w-container copyright-container">
+      <div class="w-row">
+        <div class="w-col w-col-8 w-col-medium-6 copyright-column">
+          <div class="footer-copyright">Copyright © 2015 Kaltura Inc.</div>
+          <div class="footer-copyright-description">All Rights Reserved. Designated trademarks and brands are the property of their respective owners.
+            <br>Use of this web site constitutes acceptance of the Terms of Use and Privacy Policy.</div>
+        </div>
+        <div class="w-col w-col-4 w-col-medium-6 footer-last-links-column"><a class="sub-footer-links" href="#">Kaltura.com</a><a class="sub-footer-links" href="#">Sitemap</a><a class="sub-footer-links" href="#">About</a>
+        </div>
+      </div>
+    </div>
   </div>
-
-</footer>

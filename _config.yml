@@ -6,16 +6,18 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Kaltura Dev Site
+title: Kaltura VPaaS
 email: community@kaltura.com
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Kaltura VPaaS is... content goes here
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://vpass.kaltura.com" # the base hostname & protocol for your site
 twitter_username: kaltura
 github_username:  kaltura
+permalink: none
 
 # Build settings
 markdown: kramdown
+timezone: America/New_York
+lsi: true
+#incremental: true
