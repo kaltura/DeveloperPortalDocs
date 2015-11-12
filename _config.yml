@@ -11,7 +11,7 @@ email: community@kaltura.com
 description: > # this means to ignore newlines until "baseurl:"
   Kaltura VPaaS is... content goes here
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://vpass.kaltura.com" # the base hostname & protocol for your site
+url: "54.161.130.174" # the base hostname & protocol for your site
 twitter_username: kaltura
 github_username:  kaltura
 permalink: none
