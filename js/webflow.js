@@ -1159,7 +1159,6 @@
 	  var inApp = env();
 	  var emptyFix = env.chrome && env.chrome < 35;
 	  var transNone = 'none 0s ease 0s';
-	  var fallbackProps = /width|height/;
 	  var $subs = $();
 	  var config = {};
 	  var anchors = [];
@@ -1447,8 +1446,7 @@
 	      transitions = transitions.split(',');
 	      for (var i = 0; i < transitions.length; i++) {
 	        var transition = transitions[i];
-	        var options = fallbackProps.test(transition) ? { fallback: true } : null;
-	        _tram[addMethod](transition, options);
+	        _tram[addMethod](transition);
 	      }
 	    }
 
@@ -2930,7 +2928,7 @@
 	  var win = window;
 	  var loc = win.location;
 	  var history = inIframe() ? null : win.history;
-	  var validHash = /^[a-zA-Z][\w:.-]*$/;
+	  var validHash = /^[a-zA-Z0-9][\w:.-]*$/;
 
 	  function inIframe() {
 	    try {
@@ -2988,7 +2986,12 @@
 	    }
 
 	    // Push new history state
-	    if (loc.hash !== hash && history && history.pushState) {
+	    if (
+	      loc.hash !== hash &&
+	      history && history.pushState &&
+	      // Navigation breaks Chrome when the protocol is `file:`.
+	      !(Webflow.env.chrome && loc.protocol === 'file:')
+	    ) {
 	      var oldHash = history.state && history.state.hash;
 	      if (oldHash !== hash) {
 	        history.pushState({ hash: hash }, '', '#' + hash);
@@ -4321,5 +4324,11 @@ Webflow.require('ix').init([
   {"slug":"grp-4-open-close","name":"grp 4 open / close","value":{"style":{},"triggers":[{"type":"click","selector":".grp-4-links","stepsA":[{"display":"block","opacity":1,"transition":"opacity 500ms ease 0ms"}],"stepsB":[{"display":"none","opacity":0,"transition":"opacity 500ms ease 0ms"}]}]}},
   {"slug":"grp-5-open-close","name":"Grp 5 open / close","value":{"style":{},"triggers":[{"type":"click","selector":".grp-5-links","stepsA":[{"display":"block","opacity":1,"transition":"opacity 500ms ease 0ms"}],"stepsB":[{"display":"none","opacity":0,"transition":"opacity 500ms ease 0ms"}]}]}},
   {"slug":"grp-6-open-close","name":"Grp 6 open / close","value":{"style":{},"triggers":[{"type":"click","selector":".grp-6-links","stepsA":[{"display":"block","opacity":1,"transition":"opacity 500ms ease 0ms"}],"stepsB":[{"display":"none","opacity":0,"transition":"opacity 500ms ease 0ms"}]}]}},
-  {"slug":"grp-7-open-close","name":"Grp 7 open / close","value":{"style":{},"triggers":[{"type":"click","selector":".grp-7-links","stepsA":[{"display":"block","opacity":1,"transition":"opacity 500ms ease 0ms"}],"stepsB":[{"display":"none","opacity":0,"transition":"opacity 500ms ease 0ms"}]}]}}
+  {"slug":"grp-7-open-close","name":"Grp 7 open / close","value":{"style":{},"triggers":[{"type":"click","selector":".grp-7-links","stepsA":[{"display":"block","opacity":1,"transition":"opacity 500ms ease 0ms"}],"stepsB":[{"display":"none","opacity":0,"transition":"opacity 500ms ease 0ms"}]}]}},
+  {"slug":"bug-report-form-show-hide","name":"Bug Report Form Show / Hide","value":{"style":{},"triggers":[{"type":"click","selector":".bug-form-wrapper","stepsA":[{"display":"block","opacity":1,"transition":"opacity 500ms ease 0ms"}],"stepsB":[]}]}},
+  {"slug":"bug-form-hide-on-page-load","name":"Bug Form hide on page load","value":{"style":{"display":"none","opacity":0},"triggers":[]}},
+  {"slug":"hide-on-page-load","name":"Hide on page load","value":{"style":{"display":"none","opacity":0},"triggers":[]}},
+  {"slug":"page-contents-open-close","name":"Page Contents Open / Close","value":{"style":{},"triggers":[{"type":"click","selector":".contents-body","stepsA":[{"display":"block","opacity":1,"transition":"opacity 500ms ease 0ms"}],"stepsB":[{"display":"none","opacity":0,"transition":"opacity 500ms ease 0ms"}]}]}},
+  {"slug":"search-button","name":"Search Button","value":{"style":{},"triggers":[{"type":"click","selector":".nav-links","stepsA":[{"display":"none"}],"stepsB":[{"display":"inline-block"}]},{"type":"click","selector":".search-text-block","stepsA":[{"display":"inline-block","opacity":1,"transition":"opacity 500ms ease 0ms"}],"stepsB":[{"display":"none","opacity":0,"transition":"opacity 500ms ease 0ms"}]},{"type":"click","selector":".nav-logo","stepsA":[{"display":"none","opacity":0,"transition":"opacity 500ms ease 0ms"}],"stepsB":[{"display":"inline-block","opacity":1,"transition":"opacity 500ms ease 0ms"}]}]}},
+  {"slug":"search-bar","name":"Search Bar","value":{"style":{"display":"none","opacity":0},"triggers":[]}}
 ]);
