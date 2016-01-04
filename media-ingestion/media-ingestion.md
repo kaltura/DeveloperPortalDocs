@@ -18,5 +18,6 @@ Find the sutiable ingestion methologies for your workflow below:
  * Upload in Objective C
 * Bulk Upload XML and CSV formats
 * Drop Folders and Aspera
-* Webcam Recording and Live Publishing
+* Webcam Recording
+* Live Streaming
 
