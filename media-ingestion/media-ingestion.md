@@ -23,3 +23,8 @@ Find the sutiable ingestion methologies for your workflow below:
 * Webcam Recording
 * Live Streaming
 
+## What's Next?
+* Media transcoding and preparation 
+* Metadata extraction and management
+* Content entitlements and access control
+* Media playback and delivery
