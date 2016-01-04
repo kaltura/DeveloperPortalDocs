@@ -12,12 +12,9 @@ Ingestion and acquisition is the process through which your media assets (video,
 The Kaltura VPaaS offers many ways for ingesting content; a file upload API, bulk files import using CSV or XML, MRSS ingest services, and various widgets you can integrate into your workflows or sites to allow user contributions and build custom upload interfaces.
 
 Find the sutiable ingestion methologies for your workflow below:
+* The File Upload and Import REST APIs
+* Upload in JavaScript with Resumable.js or jQuery-File-Upload
+* Bulk Upload XML and CSV formats
+* Drop Folders and Aspera
+* Webcam Recording and Live Publishing
 
-* Bulk Upload (XML / CSV / FTP)
-* Drop Folders
-* High-Speed Upload (Aspera Drop folder)
-* Upload using the KMC upload tab
-* Upload using Kaltura API
-* Kaltura Simple Uploader (KSU)
-* Upload using MediaSpace
-* KRecord
