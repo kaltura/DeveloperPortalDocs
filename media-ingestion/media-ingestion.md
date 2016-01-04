@@ -20,7 +20,6 @@ Find the sutiable ingestion methologies for your workflow below:
  * Upload in Java
  * Upload in Objective C
 * Bulk Upload XML and CSV formats
- * The Open Media 
 * Drop Folders and Aspera
 * Webcam Recording
 * Live Streaming
