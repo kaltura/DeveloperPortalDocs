@@ -13,7 +13,7 @@ The Kaltura VPaaS offers many ways for ingesting content; a file upload API, bul
 
 Find the sutiable ingestion methologies for your workflow below:
 * The File Upload and Import REST APIs
-* Upload in JavaScript with Resumable.js or jQuery-File-Upload
+** Upload in JavaScript with Resumable.js or jQuery-File-Upload
 * Bulk Upload XML and CSV formats
 * Drop Folders and Aspera
 * Webcam Recording and Live Publishing
