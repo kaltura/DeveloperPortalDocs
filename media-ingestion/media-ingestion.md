@@ -13,13 +13,12 @@ Kaltura VPaaS is designed to handle unparalleled volumes of media assets and sca
 
 ## Media Ingestion APIs and Tools
 The Kaltura VPaaS offers many ways for ingesting content; a file upload API, bulk files import using CSV or XML, MRSS ingest services, and various widgets you can integrate into your workflows or sites to allow user contributions and build custom upload interfaces.
-
 Find the sutiable ingestion methologies for your workflow below:
 
 * The File Upload and Import REST APIs
- * Web Upload in JavaScript (using Resumable.js or jQuery-File-Upload)
- * Upload in Java
- * Upload in Objective C
+	* Web Upload in JavaScript (using Resumable.js or jQuery-File-Upload)
+	* Upload in Java
+	* Upload in Objective C
 * Bulk Upload XML and CSV formats
 * Drop Folders and Aspera
 * Webcam Recording
