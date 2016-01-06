@@ -3,6 +3,7 @@ layout: page
 title:  "Testme"
 categories: blog
 ---
+{{ oembed http://www.kaltura.com/index.php/extwidget/preview/partner_id/1829791/uiconf_id/32334692/entry_id/1_ddrwr3yz/embed/auto?&flashvars[streamerType]=auto }}
 <div id="kaltura_player_1452094042" style="width: 400px; height: 333px;" itemprop="video" itemscope itemtype="http://schema.org/VideoObject">
 <span itemprop="name" content="vid_file.mp4"></span>
 <span itemprop="description" content=""></span>
