@@ -17,8 +17,8 @@ github_username:  kaltura
 permalink: none
 highlighter: pygments
 # Build settings
-# markdown: kramdown
-markdown: redcarpet
+markdown: kramdown
+#markdown: redcarpet
 redcarpet:
   extensions:
     - no_intra_emphasis
