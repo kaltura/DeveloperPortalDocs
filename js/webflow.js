@@ -547,11 +547,11 @@
 
 	Webflow.define('dropdown', module.exports = function($, _) {
 	  var api = {};
-	  var tram = $.tram;
 	  var $doc = $(document);
 	  var $dropdowns;
 	  var designer;
 	  var inApp = Webflow.env();
+	  var touch = Webflow.env.touch;
 	  var namespace = '.w-dropdown';
 	  var stateOpen = 'w--open';
 	  var closeEvent = 'w-close' + namespace;
@@ -584,6 +584,7 @@
 	    data.links = data.list.children('.w-dropdown-link');
 	    data.outside = outside(data);
 	    data.complete = complete(data);
+	    data.leave = leave(data);
 
 	    // Remove old events
 	    $el.off(namespace);
@@ -601,6 +602,9 @@
 	      $el.on('setting' + namespace, handler(data));
 	    } else {
 	      data.toggle.on('tap' + namespace, toggle(data));
+	      if (data.config.hover) {
+	        data.toggle.on('mouseenter' + namespace, enter(data));
+	      }
 	      $el.on(closeEvent, handler(data));
 	      // Close in preview mode
 	      inApp && close(data);
@@ -609,8 +613,8 @@
 
 	  function configure(data) {
 	    data.config = {
-	      hover: +data.el.attr('data-hover'),
-	      delay: +data.el.attr('data-delay') || 0
+	      hover: Boolean(data.el.attr('data-hover')) && !touch,
+	      delay: Number(data.el.attr('data-delay')) || 0
 	    };
 	  }
 
@@ -632,12 +636,12 @@
 	  }
 
 	  function toggle(data) {
-	    return _.debounce(function(evt) {
+	    return _.debounce(function() {
 	      data.open ? close(data) : open(data);
 	    });
 	  }
 
-	  function open(data, immediate) {
+	  function open(data) {
 	    if (data.open) return;
 	    closeOthers(data);
 	    data.open = true;
@@ -648,6 +652,7 @@
 
 	    // Listen for tap outside events
 	    if (!designer) $doc.on('tap' + namespace, data.outside);
+	    if (data.hovering) data.el.on('mouseleave' + namespace, data.leave);
 
 	    // Clear previous delay
 	    window.clearTimeout(data.delayId);
@@ -655,12 +660,17 @@
 
 	  function close(data, immediate) {
 	    if (!data.open) return;
+
+	    // Do not close hover-based menus if currently hovering
+	    if (data.config.hover && data.hovering) return;
+
 	    data.open = false;
 	    var config = data.config;
 	    ix.outro(0, data.el[0]);
 
 	    // Stop listening for tap outside events
 	    $doc.off('tap' + namespace, data.outside);
+	    data.el.off('mouseleave' + namespace, data.leave);
 
 	    // Clear previous delay
 	    window.clearTimeout(data.delayId);
@@ -703,6 +713,20 @@
 	    };
 	  }
 
+	  function enter(data) {
+	    return function() {
+	      data.hovering = true;
+	      open(data);
+	    };
+	  }
+
+	  function leave(data) {
+	    return function() {
+	      data.hovering = false;
+	      close(data);
+	    };
+	  }
+
 	  // Export module
 	  return api;
 	});
@@ -733,6 +757,7 @@
 
 	  var api = {};
 	  var $win = $(window);
+	  var $html = $(document.documentElement);
 	  var location = document.location;
 	  var hashchange = 'hashchange';
 	  var loaded;
@@ -766,6 +791,7 @@
 	    $win.off(hashchange, checkHash);
 	    $.ajax({
 	      url: cleanSlashes(("https://editor-api.webflow.com") + '/api/editor/view'),
+	      data: { siteId: $html.attr('data-wf-site') },
 	      xhrFields: { withCredentials: true },
 	      dataType: 'json',
 	      crossDomain: true,
@@ -1141,6 +1167,7 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
+	/*eslint no-self-compare:0 */
 
 	/**
 	 * Webflow: Interactions
@@ -1323,11 +1350,11 @@
 
 	  function convert(offset) {
 	    if (!offset) return 0;
-	    offset = offset + '';
+	    offset = String(offset);
 	    var result = parseInt(offset, 10);
 	    if (result !== result) return 0;
 	    if (offset.indexOf('%') > 0) {
-	      result = result / 100;
+	      result /= 100;
 	      if (result >= 1) result = 0.999;
 	    }
 	    return result;
@@ -1397,16 +1424,21 @@
 	      // Find selector within element descendants, siblings, or query whole document
 	      var selector = trigger.selector;
 	      if (selector) {
-	        $el = (
-	          trigger.descend ? $el.find(selector) :
-	          trigger.siblings ? $el.siblings(selector) :
-	          $(selector)
-	        );
+	        if (trigger.descend) {
+	          $el = $el.find(selector);
+	        } else if (trigger.siblings) {
+	          $el = $el.siblings(selector);
+	        } else {
+	          $el = $(selector);
+	        }
 	        if (inApp) $el.attr('data-ix-affect', 1);
 	      }
 
 	      // Apply empty fix for certain Chrome versions
 	      if (emptyFix) $el.addClass('w-ix-emptyfix');
+
+	      // Set preserve3d for triggers with transforms
+	      if (trigger.preserve3d) $el.css('transform-style', 'preserve-3d');
 	    }
 
 	    var _tram = tram($el);
@@ -4328,7 +4360,7 @@ Webflow.require('ix').init([
   {"slug":"bug-report-form-show-hide","name":"Bug Report Form Show / Hide","value":{"style":{},"triggers":[{"type":"click","selector":".bug-form-wrapper","stepsA":[{"display":"block","opacity":1,"transition":"opacity 500ms ease 0ms"}],"stepsB":[]}]}},
   {"slug":"bug-form-hide-on-page-load","name":"Bug Form hide on page load","value":{"style":{"display":"none","opacity":0},"triggers":[]}},
   {"slug":"hide-on-page-load","name":"Hide on page load","value":{"style":{"display":"none","opacity":0},"triggers":[]}},
-  {"slug":"page-contents-open-close","name":"Page Contents Open / Close","value":{"style":{},"triggers":[{"type":"click","selector":".contents-body","stepsA":[{"display":"block","opacity":1,"transition":"opacity 500ms ease 0ms"}],"stepsB":[{"display":"none","opacity":0,"transition":"opacity 500ms ease 0ms"}]}]}},
-  {"slug":"search-button","name":"Search Button","value":{"style":{},"triggers":[{"type":"click","selector":".nav-links","stepsA":[{"display":"none"}],"stepsB":[{"display":"inline-block"}]},{"type":"click","selector":".search-text-block","stepsA":[{"display":"inline-block","opacity":1,"transition":"opacity 500ms ease 0ms"}],"stepsB":[{"display":"none","opacity":0,"transition":"opacity 500ms ease 0ms"}]},{"type":"click","selector":".nav-logo","stepsA":[{"display":"none","opacity":0,"transition":"opacity 500ms ease 0ms"}],"stepsB":[{"display":"inline-block","opacity":1,"transition":"opacity 500ms ease 0ms"}]}]}},
+  {"slug":"page-contents-open-close","name":"Page Contents Open / Close","value":{"style":{},"triggers":[{"type":"click","selector":".contents-body","stepsA":[{"display":"block","opacity":1,"transition":"opacity 500ms ease 0ms"}],"stepsB":[{"display":"none","opacity":0,"transition":"opacity 500ms ease 0ms"}]},{"type":"click","selector":".drop-icon","stepsA":[{"transition":"transform 500ms ease 0ms","rotateX":"0deg","rotateY":"0deg","rotateZ":"90deg"}],"stepsB":[{"transition":"transform 500ms ease 0ms","rotateX":"0deg","rotateY":"0deg","rotateZ":"0deg"}]}]}},
+  {"slug":"search-button","name":"Search Button","value":{"style":{},"triggers":[{"type":"click","selector":".nav-links","stepsA":[{"display":"none"}],"stepsB":[{"display":"inline-block"}]},{"type":"click","selector":".search-text-block","stepsA":[{"display":"inline-block","opacity":1,"transition":"opacity 500ms ease 0ms"}],"stepsB":[{"display":"none","opacity":0,"transition":"opacity 500ms ease 0ms"}]}]}},
   {"slug":"search-bar","name":"Search Bar","value":{"style":{"display":"none","opacity":0},"triggers":[]}}
 ]);

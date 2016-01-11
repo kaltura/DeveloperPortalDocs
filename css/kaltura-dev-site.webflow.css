@@ -550,9 +550,11 @@ h4 {
 
 .sidenav-headings.grp-1-heading {
   margin-top: 29px;
-  border-top: 1px solid #ccc;
+  border-top: 1px none #ccc;
+  border-bottom: 1px dotted #ccc;
   color: #188093;
   font-size: 16px;
+  font-weight: 400;
 }
 
 .sidenav-headings.grp-1-heading:focus {
@@ -560,50 +562,60 @@ h4 {
 }
 
 .sidenav-headings.grp-2-heading {
+  border-bottom: 1px dotted #ccc;
   color: #188093;
   font-size: 16px;
 }
 
 .sidenav-headings.grp-3-heading {
+  border-bottom: 1px dotted #ccc;
   color: #188093;
   font-size: 16px;
 }
 
 .sidenav-headings.grp-4-heading {
+  border-bottom: 1px dotted #ccc;
   color: #188093;
   font-size: 16px;
 }
 
 .sidenav-headings.grp-5-heading {
+  border-bottom: 1px dotted #ccc;
   color: #188093;
   font-size: 16px;
 }
 
 .sidenav-headings.grp-6-heading {
+  border-bottom: 1px dotted #ccc;
   color: #188093;
   font-size: 16px;
 }
 
 .sidenav-headings.grp-7-heading {
+  border-bottom: 1px dotted #ccc;
   color: #188093;
   font-size: 16px;
 }
 
 .sidenav-links {
   display: block;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 12px;
+  padding-bottom: 12px;
   padding-left: 15px;
-  border-bottom: 1px solid #146f80;
-  background-color: #188093;
-  color: white;
+  border-bottom: 1px solid #ececec;
+  background-color: transparent;
+  -webkit-transition: color 200ms ease-in-out;
+  transition: color 200ms ease-in-out;
+  font-family: proxima-nova, sans-serif;
+  color: #505050;
   letter-spacing: 0.6px;
   text-decoration: none;
 }
 
 .sidenav-links:hover {
-  background-color: #157586;
-  color: #ccc;
+  background-color: transparent;
+  color: #f7a600;
+  font-weight: 400;
   letter-spacing: 0.6px;
 }
 
@@ -658,10 +670,12 @@ h4 {
 
 .code-snippet {
   margin-top: 0px;
-  margin-bottom: 40px;
-  padding: 0px 15px 15px;
-  border: 1px solid #ccc;
-  background-color: #f8f8f8;
+  margin-bottom: 0px;
+  padding: 2px 10px;
+  border: 1px none #188093;
+  border-radius: 4px;
+  background-color: #e7e7e7;
+  color: #188093;
 }
 
 .video-player-wrapper {
@@ -692,8 +706,10 @@ h4 {
 
 .standard-button {
   background-color: #f7a600;
-  -webkit-transition: opacity 300ms ease, -webkit-transform 200ms ease-in, background-color 300ms ease-in;
+  -webkit-transition: opacity 300ms ease, background-color 300ms ease-in, -webkit-transform 200ms ease-in;
+  transition: opacity 300ms ease, background-color 300ms ease-in, -webkit-transform 200ms ease-in;
   transition: opacity 300ms ease, transform 200ms ease-in, background-color 300ms ease-in;
+  transition: opacity 300ms ease, transform 200ms ease-in, background-color 300ms ease-in, -webkit-transform 200ms ease-in;
   font-family: proxima-nova, sans-serif;
   color: white;
   letter-spacing: 0.2px;
@@ -847,6 +863,7 @@ h4 {
 }
 
 .page-contents-text {
+  display: inline-block;
   background-color: transparent;
   font-family: proxima-nova, sans-serif;
 }
@@ -855,6 +872,7 @@ h4 {
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 10px;
+  border-bottom: 1px dotted #ccc;
 }
 
 .contents-links {
@@ -870,6 +888,16 @@ h4 {
 
 .contents-links:hover {
   color: #575756;
+}
+
+.contents-links.subsection {
+  padding-left: 20px;
+  font-size: 13px;
+}
+
+.contents-links._2nd_subsection {
+  padding-left: 40px;
+  font-size: 13px;
 }
 
 .search-btn {
@@ -897,6 +925,32 @@ h4 {
   background-color: #f7f7f7;
 }
 
+.block_quote {
+  margin-bottom: 35px;
+  border-left-color: #f7a600;
+  color: #575756;
+  font-size: 14px;
+  font-style: italic;
+}
+
+.report-issue-form {
+  margin-top: 50px;
+}
+
+.drop-icon {
+  display: inline-block;
+  margin-right: 13px;
+  float: right;
+}
+
+.drop-icon.fa.fa-angle-right {
+  margin-top: 2px;
+  -webkit-transition: -webkit-transform 200ms ease-in-out;
+  transition: -webkit-transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
+}
+
 html.w-mod-js *[data-ix="hide-on-load"] {
   display: none;
   opacity: 0;
@@ -920,6 +974,9 @@ html.w-mod-js *[data-ix="search-bar"] {
 @media (max-width: 991px) {
   .nav-logo-img {
     padding-left: 0px;
+  }
+  .container.tabs-container {
+    margin-top: -25px;
   }
   .tabbed-section {
     padding-top: 25px;
