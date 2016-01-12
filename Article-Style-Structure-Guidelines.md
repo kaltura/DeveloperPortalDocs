@@ -1,68 +1,18 @@
 #Article Style and Structure Guidelines
 
-The following types of content can be used to piece together your document using Markdown syntax:
+The Kaltura VPaaS Developer Site is using markdown syntax as the basis of the articles.
+To learn about Markdown basics and how to use the format, please read: https://help.github.com/articles/markdown-basics/
+
+The Kaltura VPaaS Developer Site extends the default markdown with Onebox embeds as follow:
+
+To add Kaltura videos:   
+`{% onebox http://www.kaltura.com/tiny/nex76 %} `
+
+To add YouTube videos:   
+`{% onebox https://www.youtube.com/watch?v=Owh8nBt4QSs %}`
 
 
-###Here is a crash course:
-
-```
-Paragraphs
-Just type regular text without any syntax.
-
-
-Headings
-## for an H2, ### for an H3
-Example: ## This is a heading
-
-
-Text Links
-[this is a link](www.google.com) will look like this: this is a link
-
-
-Notices / Blockquotes
-> This indicates that this text will be formatted as a blockquote
-
-
-Unordered Lists
-* This is a list item
-* This is another list item
-
-
-Ordered lists
-1. This is a list item
-2. This is another list item
-
-
-Images
-To add an image, use the following syntax:
-![Image Description](URL)
-
-Code snippets
-Code snippets use a backticks syntax.
-
-`this is an inline snippet`
-
-Code blocks use a backticks syntax with an optional language identifier
-```ruby
-This is a multi-line code block of ruby code
-This is a multi-line code block ruby code
-This is a multi-line code block ruby code
-/``` (without the slash)
-
-
-Videos
-Videos from Kaltura or YouTube can be added by using the following simple syntax:
-
-Kaltura:
-{% onebox http://www.kaltura.com/tiny/nex76 %} 
-
-YouTube:
-{% onebox https://www.youtube.com/watch?v=Owh8nBt4QSs %}
-
-```
-
-For additional reading on how to use Markdown, take a look here: https://help.github.com/articles/markdown-basics/
-https://help.github.com/articles/github-flavored-markdown/
+For additional reading on the Markdown flavor we use read: [GitHub flavored markdown](https://help.github.com/articles/github-flavored-markdown/).
 
 A nifty tool to help you to see how your markdown looks as you create it: http://dillinger.io/
 
