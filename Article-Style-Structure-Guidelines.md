@@ -1,6 +1,6 @@
 #Article Style and Structure Guidelines
 
-The Kaltura VPaaS Developer Site is using markdown syntax as the basis of the articles.
+The Kaltura VPaaS Developer Site is using [Jekyll engine](http://jekyllrb.com/) and markdown syntax as the basis of the articles.
 To learn about Markdown basics and how to use the format, please read: [GitHub markdown basics](https://help.github.com/articles/markdown-basics/).
 
 The Kaltura VPaaS Developer Site extends the default markdown with Onebox embeds as follow:
