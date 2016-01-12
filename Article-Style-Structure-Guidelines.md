@@ -54,5 +54,5 @@ type: header
 The fields and options are:  
 * `layout:` this is static, and should always be set to `page`
 * `title:` this is the title of the page (correlates to `<title></title>` tag in HTML)
-* `permalink:` the respective link to the rendered page on the website (e.g. http://vpaas.com/introduction/vpaas-website-sample-article)
+* `permalink:` the respective **relative** link to the rendered page on the website (e.g. `/introduction/vpaas-website-sample-article` will be: http://vpaas.com/introduction/vpaas-website-sample-article)
 * `type:` this indicates that this page should be included in the website menu. If this page should not be on the menu, this parameter should not be specified at all.
