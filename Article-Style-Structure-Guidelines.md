@@ -1,3 +1,9 @@
+---
+layout: page
+title: Article Style and Structure Guidelines
+permalink: Article-Style-Structure-Guidelines.html
+---
+
 #Article Style and Structure Guidelines
 
 The Kaltura VPaaS Developer Site is using [Jekyll engine](http://jekyllrb.com/) and markdown syntax as the basis of the articles.
