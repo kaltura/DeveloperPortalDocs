@@ -30,6 +30,7 @@ module Jekyll
         return if relative_path && !tracked_files.include?(relative_path)
 
         authors = self.authors(relative_path)
+print authors
         lines = self.lines(relative_path)
 	current_branch =  `git rev-parse --abbrev-ref HEAD`
 	github_baseurl = `git config --get remote.origin.url`
