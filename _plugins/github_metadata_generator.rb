@@ -56,10 +56,11 @@ print authors
         cmd << " -- #{file}" if file
 	print cmd + "\n"
         result = %x{ #{cmd} }
+	print result + "\n"
         result.lines.each do |line|
           commits, name, email = line.scan(/(.*)\t(.*)<(.*)>/).first.map(&:strip)
           results << { 'commits' => commits.to_i, 'name' => name, 'email' => email }
-	print results
+	print commits + "\n"
         end
         results
       end
