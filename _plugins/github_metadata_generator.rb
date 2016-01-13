@@ -31,12 +31,12 @@ module Jekyll
 
         authors = self.authors(relative_path)
         lines = self.lines(relative_path)
-	current_branch =  %x{ git rev-parse --abbrev-ref HEAD }
-	github_baseurl = %x{ git config --get remote.origin.url }
-	if relative_path
-		github_url=github_baseurl.chomp + "/tree/#{current_branch.chomp}/" + relative_path.chomp
-		github_url=github_url.sub('.git', '')
-	end
+	#current_branch =  %x{ git rev-parse --abbrev-ref HEAD }
+	#github_baseurl = %x{ git config --get remote.origin.url }
+	#if relative_path
+	#	github_url=github_baseurl.chomp + "/tree/#{current_branch.chomp}/" + relative_path.chomp
+	#	github_url=github_url.sub('.git', '')
+	#end
 	#github_url= github_url +"/tree/#{current_branch}/"+relative_path
         {
           'authors' => authors,
@@ -45,7 +45,7 @@ module Jekyll
           'total_subtractions' => lines.inject(0) { |sum, h| sum += h['subtractions'] },
           'first_commit' => commit(lines.last['sha']),
           'last_commit' => commit(lines.first['sha']),
-	  'github_url' => github_url
+	  #'github_url' => github_url
         }
       end
 
@@ -53,15 +53,15 @@ module Jekyll
         results = []
         cmd = 'git shortlog -se'
         cmd << " -- #{file}" if file
-	print cmd + "\n"
-	print %x{ whoami }
-	print %x{ pwd }
+	#print cmd + "\n"
+	#print %x{ whoami }
+	#print %x{ pwd }
         result = %x{ #{cmd} }
 	print result + "\n"
         result.lines.each do |line|
           commits, name, email = line.scan(/(.*)\t(.*)<(.*)>/).first.map(&:strip)
           results << { 'commits' => commits.to_i, 'name' => name, 'email' => email }
-	print commits + "\n"
+	#print commits + "\n"
         end
         results
       end
