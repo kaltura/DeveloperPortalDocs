@@ -11,15 +11,10 @@ To learn about Markdown basics and how to use the format, please read: [GitHub m
 
 The Kaltura VPaaS Developer Site extends the default markdown with Onebox embeds as follow:
 
-To add Kaltura videos:   
-```
-{% onebox http://www.kaltura.com/tiny/nex76 %} 
-```
+To add Kaltura videos: {% onebox http://www.kaltura.com/tiny/nex76 %} 
 
-To add YouTube videos:   
-```
-{% onebox https://www.youtube.com/watch?v=Owh8nBt4QSs %}
-```
+To add YouTube videos: {% onebox https://www.youtube.com/watch?v=Owh8nBt4QSs %}
+
 
 
 For additional reading on the Markdown flavor we use read: [GitHub flavored markdown](https://help.github.com/articles/github-flavored-markdown/).
@@ -54,6 +49,7 @@ Remember that your audience is developer-focused, therefore:
 
 ##Article header notation
 At the top of every markdown file, you will find the below notation. This designates the type of page and its location in the website menu.
+
 ```---
 layout: page
 title: VPaaS Website Sample Article
