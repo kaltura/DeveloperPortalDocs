@@ -7,7 +7,15 @@ layout: default
   <header class="post-header">
     <h1 class="post-title">{{ page.title }}</h1>
   </header>
-{{ page.git }}
+
+Created on: {{ page.git.first_commit.commit_date }}
+<br>
+Last commit: {{ page.git.last_commit.commit_date }}
+<br>
+{% for contrib in page.git.authors %}
+{{ contrib.name }}
+<img alt="@{{ contrib.name }}" class="avatar" height="20" src="https://avatars3.githubusercontent.com/{{ contrib.name }}?v=3&amp;s=40" width="20" />
+{% endfor %}
   <div class="post-content">
     {{ content }}
   </div>
