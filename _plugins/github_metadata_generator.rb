@@ -54,8 +54,8 @@ module Jekyll
         cmd = 'git shortlog -se'
         cmd << " -- #{file}" if file
 	print cmd + "\n"
-	`whoami`
-	`pwd`
+	print `whoami`
+	print `pwd`
         result = %x{ #{cmd} }
 	print result + "\n"
         result.lines.each do |line|
