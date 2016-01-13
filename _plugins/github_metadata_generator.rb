@@ -54,11 +54,12 @@ print authors
         results = []
         cmd = 'git shortlog -se'
         cmd << " -- #{file}" if file
-	print cmd
+	print cmd + "\n"
         result = %x{ #{cmd} }
         result.lines.each do |line|
           commits, name, email = line.scan(/(.*)\t(.*)<(.*)>/).first.map(&:strip)
           results << { 'commits' => commits.to_i, 'name' => name, 'email' => email }
+	print results
         end
         results
       end
