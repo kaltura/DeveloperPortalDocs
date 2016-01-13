@@ -31,8 +31,8 @@ module Jekyll
 
         authors = self.authors(relative_path)
         lines = self.lines(relative_path)
-	current_branch =  `git rev-parse --abbrev-ref HEAD`
-	github_baseurl = `git config --get remote.origin.url`
+	current_branch =  %x{ git rev-parse --abbrev-ref HEAD }
+	github_baseurl = %x{ git config --get remote.origin.url }
 	if relative_path
 		github_url=github_baseurl.chomp + "/tree/#{current_branch.chomp}/" + relative_path.chomp
 		github_url=github_url.sub('.git', '')
@@ -54,8 +54,8 @@ module Jekyll
         cmd = 'git shortlog -se'
         cmd << " -- #{file}" if file
 	print cmd + "\n"
-	print `whoami`
-	print `pwd`
+	print %x{ whoami }
+	print %x{ pwd }
         result = %x{ #{cmd} }
 	print result + "\n"
         result.lines.each do |line|
