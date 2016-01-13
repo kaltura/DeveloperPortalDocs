@@ -31,3 +31,5 @@ redcarpet:
 timezone: America/New_York
 lsi: true
 #incremental: true
+gems:
+  - jekyll-git_metadata
