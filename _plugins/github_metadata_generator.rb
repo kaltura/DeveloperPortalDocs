@@ -11,7 +11,8 @@ module Jekyll
 
         Dir.chdir(site.source) do
           site.config['git'] = site_data
-          (site.pages + site.posts).each do |page|
+          (site.pages + site.posts.docs).each do |page|
+          #(site.collections["pages"].docs + site.collections["posts"].docs).each do |page|
             page.data['git'] = page_data(page.path)
           end
         end
@@ -30,13 +31,21 @@ module Jekyll
 
         authors = self.authors(relative_path)
         lines = self.lines(relative_path)
+	current_branch =  `git rev-parse --abbrev-ref HEAD`
+	github_baseurl = `git config --get remote.origin.url`
+	if relative_path
+		github_url=github_baseurl.chomp + "/tree/#{current_branch.chomp}/" + relative_path.chomp
+		github_url=github_url.sub('.git', '')
+	end
+	#github_url= github_url +"/tree/#{current_branch}/"+relative_path
         {
           'authors' => authors,
           'total_commits' => authors.inject(0) { |sum, h| sum += h['commits'] },
           'total_additions' => lines.inject(0) { |sum, h| sum += h['additions'] },
           'total_subtractions' => lines.inject(0) { |sum, h| sum += h['subtractions'] },
           'first_commit' => commit(lines.last['sha']),
-          'last_commit' => commit(lines.first['sha'])
+          'last_commit' => commit(lines.first['sha']),
+	  'github_url' => github_url
         }
       end
 
@@ -73,6 +82,8 @@ module Jekyll
           .scan(/commit (.*)\nAuthor:(.*)<(.*)>\nAuthorDate:(.*)\nCommit:(.*)<(.*)>\nCommitDate:(.*)\n\n(.*)/)
           .first
           .map(&:strip)
+	#avatar_url = %x{ get_github_avatar.js #{author_email} }
+	#print avatar_url + "\n" 
         {
           'short_sha' => sha,
           'long_sha' => long_sha,
@@ -83,6 +94,7 @@ module Jekyll
           'commit_email' => commit_email,
           'commit_date' => commit_date,
           'message' => message
+	  #'avatar_url' => avatar_url
         }
       end
 
