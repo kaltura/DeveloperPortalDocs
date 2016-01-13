@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Article Style and Structure Guidelines
-permalink: Article-Style-Structure-Guidelines.html
+permalink: Article-Style-Structure-Guidelines
 ---
 
 #Article Style and Structure Guidelines
