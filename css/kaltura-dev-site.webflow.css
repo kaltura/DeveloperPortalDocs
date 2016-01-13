@@ -336,7 +336,7 @@ h4 {
 }
 
 .post-content a {
-  display: block;
+  display: inline;
   margin-top: 6px;
   padding-top: 0px;
   font-family: proxima-nova, sans-serif;
