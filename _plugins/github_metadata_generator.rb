@@ -37,7 +37,6 @@ module Jekyll
 		github_url=github_baseurl.chomp + "/tree/#{current_branch.chomp}/" + relative_path.chomp
 		github_url=github_url.sub('.git', '')
 	end
-	github_url= github_url +"/tree/#{current_branch}/"+relative_path
         {
           'authors' => authors,
           'total_commits' => authors.inject(0) { |sum, h| sum += h['commits'] },
@@ -45,7 +44,7 @@ module Jekyll
           'total_subtractions' => lines.inject(0) { |sum, h| sum += h['subtractions'] },
           'first_commit' => commit(lines.last['sha']),
           'last_commit' => commit(lines.first['sha']),
-	  #'github_url' => github_url
+	  'github_url' => github_url
         }
       end
 
@@ -53,11 +52,7 @@ module Jekyll
         results = []
         cmd = 'git shortlog -se'
         cmd << " -- #{file}" if file
-	#print cmd + "\n"
-	#print %x{ whoami }
-	#print %x{ pwd }
         result = %x{ #{cmd} }
-	print result + "\n"
         result.lines.each do |line|
           commits, name, email = line.scan(/(.*)\t(.*)<(.*)>/).first.map(&:strip)
           results << { 'commits' => commits.to_i, 'name' => name, 'email' => email }
@@ -88,7 +83,6 @@ module Jekyll
           .first
           .map(&:strip)
 	#avatar_url = %x{ get_github_avatar.js #{author_email} }
-	#print avatar_url + "\n" 
         {
           'short_sha' => sha,
           'long_sha' => long_sha,
