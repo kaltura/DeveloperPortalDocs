@@ -30,7 +30,6 @@ module Jekyll
         return if relative_path && !tracked_files.include?(relative_path)
 
         authors = self.authors(relative_path)
-print authors
         lines = self.lines(relative_path)
 	current_branch =  `git rev-parse --abbrev-ref HEAD`
 	github_baseurl = `git config --get remote.origin.url`
@@ -55,6 +54,8 @@ print authors
         cmd = 'git shortlog -se'
         cmd << " -- #{file}" if file
 	print cmd + "\n"
+	`whoami`
+	`pwd`
         result = %x{ #{cmd} }
 	print result + "\n"
         result.lines.each do |line|
