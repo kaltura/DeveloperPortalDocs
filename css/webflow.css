@@ -1728,6 +1728,10 @@ textarea.w-select {
 }
 .w-richtext figure.w-richtext-align-fullwidth > div {
   display: inline-block;
+  /* padding-bottom is used for aspect ratios in video figures
+      we want the div to inherit that so hover/selection borders in the designer-canvas
+      fit right*/
+  padding-bottom: inherit;
 }
 .w-richtext figure.w-richtext-align-fullwidth > figcaption {
   display: block;
