@@ -55,13 +55,10 @@ module Jekyll
 	else
 		cmd = "git --no-pager shortlog -se HEAD"
 	end
-	print cmd + "\n"
-        #cmd << " -- #{file}'" if file
         result = %x{ #{cmd} }
         result.lines.each do |line|
           commits, name, email = line.scan(/(.*)\t(.*)<(.*)>/).first.map(&:strip)
           results << { 'commits' => commits.to_i, 'name' => name, 'email' => email }
-	#print commits + "\n"
         end
         results
       end
