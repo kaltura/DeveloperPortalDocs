@@ -51,7 +51,7 @@ module Jekyll
       def authors(file = nil)
         results = []
 	if file
-	        cmd = "git --no-pager shortlog -se HEAD -- #{file}'"
+	        cmd = "git --no-pager shortlog -se HEAD -- #{file}"
 	else
 		cmd = "git --no-pager shortlog -se HEAD"
 	end
