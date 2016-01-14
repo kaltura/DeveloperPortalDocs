@@ -15,9 +15,12 @@ url: "http://54.161.130.174" # the base hostname & protocol for your site
 twitter_username: kaltura
 github_username:  kaltura
 permalink: none
-highlighter: pygments
+#highlighter: pygments
 # Build settings
 markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
 #markdown: redcarpet
 redcarpet:
   extensions:
