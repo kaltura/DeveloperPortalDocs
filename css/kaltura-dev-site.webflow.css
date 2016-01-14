@@ -335,8 +335,8 @@ h4 {
   margin-bottom: 17px;
 }
 
-.post-content a {
-  display: inline;
+.body-text-link {
+  display: block;
   margin-top: 6px;
   padding-top: 0px;
   font-family: proxima-nova, sans-serif;
@@ -629,7 +629,7 @@ h4 {
   padding-left: 50px;
 }
 
-.post-content h2 {
+.temp-pg-headings {
   display: inline-block;
   float: none;
   font-family: proxima-nova, sans-serif;
@@ -637,18 +637,18 @@ h4 {
   letter-spacing: 0.4px;
 }
 
-.post-header h1 {
+.temp-pg-headings.first-heading {
   margin-bottom: 22px;
 }
 
-.post-content p {
+.temp-descriptions {
   margin-bottom: 25px;
   font-family: proxima-nova, sans-serif;
   color: #575756;
   letter-spacing: 0.2px;
 }
 
-.post-content img {
+.temp-img {
   margin-top: 15px;
   margin-bottom: 40px;
   padding: 5px;
@@ -656,19 +656,19 @@ h4 {
   box-shadow: none;
 }
 
-.post-content li {
+.temp-list {
   margin-bottom: 6px;
   font-family: proxima-nova, sans-serif;
   color: #575756;
   letter-spacing: 0.2px;
 }
 
-.post-content ul {
+.temp-list-wrapper {
   margin-top: 0px;
   margin-bottom: 25px;
 }
 
-.post-content code {
+.code-snippet {
   margin-top: 0px;
   margin-bottom: 0px;
   padding: 2px 10px;
@@ -908,6 +908,18 @@ h4 {
   font-family: proxima-nova, sans-serif;
 }
 
+.search-btn.fa.fa-search.fa-lg {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  -webkit-transition: color 200ms ease-in-out;
+  transition: color 200ms ease-in-out;
+  color: #188093;
+}
+
+.search-btn.fa.fa-search.fa-lg:hover {
+  color: #333;
+}
+
 .search-text-block {
   display: inline-block;
   width: auto;
@@ -925,7 +937,7 @@ h4 {
   background-color: #f7f7f7;
 }
 
-.post-content blockquote {
+.block_quote {
   margin-bottom: 35px;
   border-left-color: #f7a600;
   color: #575756;
@@ -951,6 +963,11 @@ h4 {
   transition: transform 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
 }
 
+.search-input {
+  display: inline-block;
+  float: right;
+}
+
 html.w-mod-js *[data-ix="hide-on-load"] {
   display: none;
   opacity: 0;
@@ -969,6 +986,10 @@ html.w-mod-js *[data-ix="hide-on-page-load"] {
 html.w-mod-js *[data-ix="search-bar"] {
   display: none;
   opacity: 0;
+}
+
+html.w-mod-js *[data-ix="new-interaction"] {
+  display: none;
 }
 
 @media (max-width: 991px) {
