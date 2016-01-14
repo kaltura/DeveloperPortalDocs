@@ -50,7 +50,7 @@ module Jekyll
 
       def authors(file = nil)
         results = []
-        cmd = 'git shortlog -se'
+        cmd = 'bash -l git shortlog -se'
         cmd << " -- #{file}" if file
         result = %x{ #{cmd} }
         result.lines.each do |line|
