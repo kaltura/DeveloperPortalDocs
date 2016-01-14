@@ -11,18 +11,19 @@ the quick brown fox jumps over the lazy dog.
 {% onebox http://www.kaltura.com/tiny/wtvep %}
 
 
-``` html
+{% highlight html %}
 <a href="#">Hello world</a>
-```
+{% endhighlight %}
 
-``` c
+{% highlight c %}
 printf("fuck %s", this);
-```
+{% endhighlight %}
 
-
-``` php
-echo "hello\n"
-```
+{% highlight php %}
+\<?php
+$someone='jess';
+echo "hello $someone\n"
+{% endhighlight %}
 
 {% highlight ruby %}
 def print_hi(name)
