@@ -11,16 +11,16 @@ the quick brown fox jumps over the lazy dog.
 {% onebox http://www.kaltura.com/tiny/wtvep %}
 
 
-``` html
+```html
 <a href="#">Hello world</a>
 ```
 
-``` c
+```c
 printf("fuck %s", this);
 ```
 
 
-``` php
+```php
 echo "hello\n"
 ```
 
