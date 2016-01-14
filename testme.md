@@ -20,7 +20,9 @@ printf("fuck %s", this);
 {% endhighlight %}
 
 {% highlight php %}
-echo "hello\n"
+<?php
+$someone='jess';
+echo "hello $someone\n"
 {% endhighlight %}
 
 {% highlight ruby %}
