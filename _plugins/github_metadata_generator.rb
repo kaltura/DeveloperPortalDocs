@@ -51,9 +51,9 @@ module Jekyll
       def authors(file = nil)
         results = []
 	if file
-	        cmd = "bash -l -c 'git shortlog -se -- #{file}'"
+	        cmd = "git shortlog -se HEAD -- #{file}'"
 	else
-		cmd = "bash -l -c 'git shortlog -se'"
+		cmd = "git shortlog -se HEAD"
 	end
         #cmd << " -- #{file}'" if file
         result = %x{ #{cmd} }
