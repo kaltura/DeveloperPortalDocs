@@ -12,14 +12,14 @@ To learn about Markdown basics and how to use the format, please read: [GitHub m
 The Kaltura VPaaS Developer Site extends the default markdown with Onebox embeds as follow:
 
 To add Kaltura videos: 
-`
+{% raw %}
 {% onebox http://www.kaltura.com/tiny/nex76 %}
-`
+{% endraw %}
 
 To add YouTube videos: 
-`
+{% raw %}
 {% onebox https://www.youtube.com/watch?v=Owh8nBt4QSs %}
-`
+{% endraw %}
 
 
 
