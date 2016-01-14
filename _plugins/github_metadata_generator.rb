@@ -55,6 +55,7 @@ module Jekyll
 	else
 		cmd = "git --no-pager shortlog -se HEAD"
 	end
+	print cmd + "\n"
         #cmd << " -- #{file}'" if file
         result = %x{ #{cmd} }
         result.lines.each do |line|
