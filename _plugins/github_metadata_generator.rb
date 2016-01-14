@@ -50,8 +50,12 @@ module Jekyll
 
       def authors(file = nil)
         results = []
-        cmd = 'bash -l git shortlog -se'
-        cmd << " -- #{file}" if file
+	if file
+	        cmd = "bash -l -c 'git shortlog -se -- #{file}'"
+	else
+		cmd = "bash -l -c 'git shortlog -se'"
+	end
+        #cmd << " -- #{file}'" if file
         result = %x{ #{cmd} }
         result.lines.each do |line|
           commits, name, email = line.scan(/(.*)\t(.*)<(.*)>/).first.map(&:strip)
