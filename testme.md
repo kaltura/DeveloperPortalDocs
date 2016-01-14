@@ -4,6 +4,9 @@ title:  "Testme"
 categories: blog
 ---
 the quick brown fox jumps over the lazy dog.
+{% onebox http://www.kaltura.com/tiny/nex76 %}
+
+
 {% highlight html %}
 <a href="#">Hello world</a>
 {% endhighlight %}
@@ -26,5 +29,4 @@ print_hi('Tom')
 #=> prints 'Hi, Tom' to STDOUT.
 {% endhighlight %}
 
-{% onebox http://www.kaltura.com/tiny/nex76 %}
 
