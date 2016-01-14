@@ -17,11 +17,11 @@ the quick brown fox jumps over the lazy dog.
 
 {% highlight c %}
 printf("fuck %s", this);
-{% highlight %}
+{% endhighlight %}
 
 {% highlight php %}
 echo "hello\n"
-{% highlight %}
+{% endhighlight %}
 
 {% highlight ruby %}
 def print_hi(name)
