@@ -12,16 +12,24 @@ To learn about Markdown basics and how to use the format, please read: [GitHub m
 The Kaltura VPaaS Developer Site extends the default markdown with Onebox embeds as follow:
 
 To add Kaltura videos: 
-{% raw %}
-{% onebox http://www.kaltura.com/tiny/nex76 %}
-{% endraw %}
+{{"{%"}} onebox http://www.kaltura.com/tiny/nex76 %}
 
 To add YouTube videos: 
-{% raw %}
-{% onebox https://www.youtube.com/watch?v=Owh8nBt4QSs %}
-{% endraw %}
+{{"{%"}} onebox https://www.youtube.com/watch?v=Owh8nBt4QSs %}
+
+To add a syntax highligted code:
+
+{{"{%"}} highlight html %}
+<a href="#">Hello world</a>
+{{"{%"}} endhighlight %}
 
 
+{{"{%"}} highlight c %}
+int hello(char *world)
+{
+    printf("Hello %s\n", world);
+}
+{{"{%"}} endhighlight %}
 
 For additional reading on the Markdown flavor we use read: [GitHub flavored markdown](https://help.github.com/articles/github-flavored-markdown/).
 
