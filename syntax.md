@@ -3,25 +3,25 @@ layout: page
 title:  "Testme"
 categories: blog
 ---
-HTML:
 
+### HTML:
 {% highlight html %}
 <a href="#">Hello world</a>
 {% endhighlight %}
 
-C:
+### C:
 {% highlight c %}
 printf("fuck %s", this);
 {% endhighlight %}
 
-PHP:
+### PHP:
 {% highlight php %}
 \<?php
 $someone='jess';
 echo "hello $someone\n"
 {% endhighlight %}
 
-Ruby:
+### Ruby:
 {% highlight ruby %}
 def print_hi(name)
   puts "Hi, #{name}" 
