@@ -8,9 +8,9 @@ layout: default
     <h1 class="post-title">{{ page.title }}</h1>
   </header>
 
+{% if page.git %}
 <a href="{{ page.git.github_url }}" target="_blank">Edit on Github</a>
 <table>
-{% if page.git %}
 <tr><td>Created on: {{ page.git.first_commit.commit_date }}, By: {{ page.git.first_commit.author_name }}</td></tr>
 <tr><td>Last commit: {{ page.git.last_commit.commit_date }}, By: {{ page.git.last_commit.author_name }}</td></tr>
 {% for contrib in page.git.authors %}
