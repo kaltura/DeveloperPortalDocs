@@ -13,6 +13,8 @@ The Kaltura VPaaS Developer Site extends the default markdown with Onebox embeds
 
 To add Kaltura videos: 
 &#123;% onebox http://www.kaltura.com/tiny/nex76 %&#125;
+The above code will be rendered as:
+{% onebox http://www.kaltura.com/tiny/nex76 %}
 
 To add YouTube videos: 
 &#123;% onebox https://www.youtube.com/watch?v=Owh8nBt4QSs %&#125;
