@@ -15,21 +15,21 @@ To add Kaltura videos:
 &#123;% onebox http://www.kaltura.com/tiny/nex76 %&#125;
 
 To add YouTube videos: 
-{{"{%"}} onebox https://www.youtube.com/watch?v=Owh8nBt4QSs %}
+&#123;% onebox https://www.youtube.com/watch?v=Owh8nBt4QSs %&#125;
 
 To add a syntax highligted code:
 
-{{"{%"}} highlight html %}
+&#123;% highlight html %&#125;
 <a href="#">Hello world</a>
-{{"{%"}} endhighlight %}
+&#123;%} endhighlight %&#125;
 
 
-{{"{%"}} highlight c %}
+{% highlight c %}
 int hello(char *world)
 {
     printf("Hello %s\n", world);
 }
-{{"{%"}} endhighlight %}
+{% endhighlight %}
 
 For additional reading on the Markdown flavor we use read: [GitHub flavored markdown](https://help.github.com/articles/github-flavored-markdown/).
 
