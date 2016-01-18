@@ -23,12 +23,10 @@ To add YouTube videos:
 To add a syntax highligted code:
 
 &#123;% highlight c %&#125;
-```
 int hello(char *world)  
 {  
     printf("Hello %s\n", world);  
 }  
-```
 &#123;% endhighlight %&#125;
 
 Will render as:
