@@ -22,20 +22,22 @@ To add YouTube videos:
 
 To add a syntax highligted code:
 
-&#123;% highlight html %&#125;
-```
-<a href="#">Hello world</a>
-```
-&#123;%} endhighlight %&#125;
-
-
-{% highlight c %}
+&#123;% highlight c %&#125;
 ```
 int hello(char *world)
 {
     printf("Hello %s\n", world);
 }
 ```
+&#123;%} endhighlight %&#125;
+
+Will render as:
+
+{% highlight c %}
+int hello(char *world)
+{
+    printf("Hello %s\n", world);
+}
 {% endhighlight %}
 
 For additional reading on the Markdown flavor we use read: [GitHub flavored markdown](https://help.github.com/articles/github-flavored-markdown/).
