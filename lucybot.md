@@ -1,7 +1,7 @@
 ---
 layout: page
 title:  "Testme"
-categories: blog
 ---
 the quick brown fox jumps over the lazy dog.
-{% onebox https://developer.kaltura.org/recipes/authentication %}
+
+{% onebox http://developer.kaltura.org:3000/recipes/authentication %}
