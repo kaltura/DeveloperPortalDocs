@@ -335,7 +335,7 @@ h4 {
   margin-bottom: 17px;
 }
 
-.body-text-link {
+.post-content a {
   display: block;
   margin-top: 6px;
   padding-top: 0px;
@@ -608,6 +608,7 @@ h4 {
   transition: color 200ms ease-in-out;
   font-family: proxima-nova, sans-serif;
   color: #505050;
+  font-weight: 400;
   letter-spacing: 0.6px;
   text-decoration: none;
 }
@@ -629,26 +630,33 @@ h4 {
   padding-left: 50px;
 }
 
-.temp-pg-headings {
+.post-header h1, .post-header h2, .post-header h3, .post-header h4  {
   display: inline-block;
   float: none;
   font-family: proxima-nova, sans-serif;
   font-weight: 400;
   letter-spacing: 0.4px;
-}
-
-.temp-pg-headings.first-heading {
   margin-bottom: 22px;
 }
 
-.temp-descriptions {
+.post-content h1, .post-content h2, .post-content h3, .post-content h4  {
+  display: inline-block;
+  float: none;
+  font-family: proxima-nova, sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.4px;
+  margin-bottom: 22px;
+}
+
+
+.post-content p {
   margin-bottom: 25px;
   font-family: proxima-nova, sans-serif;
   color: #575756;
   letter-spacing: 0.2px;
 }
 
-.temp-img {
+.post-content img {
   margin-top: 15px;
   margin-bottom: 40px;
   padding: 5px;
@@ -656,19 +664,19 @@ h4 {
   box-shadow: none;
 }
 
-.temp-list {
+.post-content li {
   margin-bottom: 6px;
   font-family: proxima-nova, sans-serif;
   color: #575756;
   letter-spacing: 0.2px;
 }
 
-.temp-list-wrapper {
+.post-content ul {
   margin-top: 0px;
   margin-bottom: 25px;
 }
 
-.code-snippet {
+.post-content span {
   margin-top: 0px;
   margin-bottom: 0px;
   padding: 2px 10px;
@@ -679,22 +687,13 @@ h4 {
 }
 
 .video-player-wrapper {
-  display: inline-block;
-  position: relative;
-  width: 100%;
-}
-
-.video-margin {
-  margin-top: 56.25%;
+  width: auto;
+  margin-bottom: 40px;
 }
 
 .video-player {
-  position:absolute;
-  top:0;
-  left:0;
-  left: 0;
-  right: 0;
-  bottom:0;
+  width: 100%;
+  height: 372px;
 }
 
 .social-bug-wrapper {
@@ -750,46 +749,6 @@ h4 {
   border: 1px solid #188093;
 }
 
-.revision-links {
-  margin-top: 24px;
-  padding: 9px 12px 7px;
-  float: right;
-  border: 1px solid #ccc;
-  -webkit-transition: color 200ms ease-in;
-  transition: color 200ms ease-in;
-  font-family: proxima-nova, sans-serif;
-  color: #a2a2a2;
-  letter-spacing: 0.2px;
-  text-decoration: none;
-}
-
-.revision-links:hover {
-  color: #f7a600;
-}
-
-.alert-wrapper {
-  margin-bottom: 25px;
-}
-
-.alert-column-1 {
-  min-height: 120px;
-  border-style: none;
-  background-color: #f7a600;
-}
-
-.alert-row {
-  padding: 0px;
-  border: 1px solid #ccc;
-}
-
-.alert-description {
-  margin-top: 10px;
-  margin-right: 10px;
-  margin-left: 21px;
-  font-family: proxima-nova, sans-serif;
-  color: #575756;
-}
-
 .contributor-wrapper {
   margin-bottom: 0px;
   border-top: 1px solid #ccc;
@@ -807,7 +766,7 @@ h4 {
   background-color: white;
 }
 
-.contributor-heading {
+.post-header h4 {
   display: block;
   margin-top: 8px;
   margin-left: 75px;
@@ -929,15 +888,6 @@ h4 {
   color: #333;
 }
 
-.search-text-block {
-  display: inline-block;
-  width: auto;
-  padding: 22px 20px 20px;
-  float: right;
-  background-color: #e7e7e7;
-  font-family: proxima-nova, sans-serif;
-}
-
 .tabs-bk {
   height: 78px;
   border-style: solid none none;
@@ -946,7 +896,7 @@ h4 {
   background-color: #f7f7f7;
 }
 
-.block_quote {
+.post-content blockquote {
   margin-bottom: 35px;
   border-left-color: #f7a600;
   color: #575756;
@@ -1212,9 +1162,6 @@ html.w-mod-js *[data-ix="new-interaction"] {
     margin-top: 15px;
     padding-right: 20px;
     padding-left: 20px;
-  }
-  .alert-column-1 {
-    min-height: 40px;
   }
 }
 
