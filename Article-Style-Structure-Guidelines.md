@@ -4,7 +4,7 @@ title: Article Style and Structure Guidelines
 permalink: Article-Style-Structure-Guidelines
 ---
 
-#Article Style and Structure Guidelines
+# Article Style and Structure Guidelines
 
 The Kaltura VPaaS Developer Site is using [Jekyll engine](http://jekyllrb.com/) and markdown syntax as the basis of the articles.
 To learn about Markdown basics and how to use the format, please read: [GitHub markdown basics](https://help.github.com/articles/markdown-basics/).
@@ -44,7 +44,7 @@ For additional reading on the Markdown flavor we use read: [GitHub flavored mark
 
 A nifty tool to help you to see how your markdown looks as you create it: http://dillinger.io/
 
-##Tips for Creating Great Content
+## Tips for Creating Great Content
 
 * Start with an introduction by answering the question “what will be learned in this document”.
 * Think about the steps that will get your reader from A to Z in the fastest way possible while following Kaltura best-practises.
@@ -58,7 +58,7 @@ Remember that your audience is developer-focused, therefore:
 * Clearly explain the required workflows to achieve an end-result
 
 
-##How to contribute and help improve the documentation
+## How to contribute and help improve the documentation
 
 * Every topic category (e.g. Content Ingestion & Acquisition) has a respective directory under this repository.
 * All markdown documents should be saved in this repository under the respective topic category directory.
@@ -70,7 +70,7 @@ Remember that your audience is developer-focused, therefore:
 * Follow the guidelines for article header notation as per below
 
 
-##Article header notation
+## Article header notation
 At the top of every markdown file, you will find the below notation. This designates the type of page and its location in the website menu.
 
 ```---
