@@ -29,7 +29,7 @@ int hello(char *world)
     printf("Hello %s\n", world);
 }
 ```
-&#123;%} endhighlight %&#125;
+&#123;% endhighlight %&#125;
 
 Will render as:
 
