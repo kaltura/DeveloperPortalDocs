@@ -13,6 +13,7 @@ The Kaltura VPaaS Developer Site extends the default markdown with Onebox embeds
 
 To add Kaltura videos: 
 &#123;% onebox http://www.kaltura.com/tiny/nex76 %&#125;
+
 The above code will be rendered as:
 {% onebox http://www.kaltura.com/tiny/nex76 %}
 
@@ -22,15 +23,19 @@ To add YouTube videos:
 To add a syntax highligted code:
 
 &#123;% highlight html %&#125;
+```
 <a href="#">Hello world</a>
+```
 &#123;%} endhighlight %&#125;
 
 
 {% highlight c %}
+```
 int hello(char *world)
 {
     printf("Hello %s\n", world);
 }
+```
 {% endhighlight %}
 
 For additional reading on the Markdown flavor we use read: [GitHub flavored markdown](https://help.github.com/articles/github-flavored-markdown/).
