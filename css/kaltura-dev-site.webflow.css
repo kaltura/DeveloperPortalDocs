@@ -15,7 +15,7 @@ h4 {
 .section-header {
   max-height: 700px;
   background-color: #188093;
-  background-image: url({{ site.url }}'/images/header_placeholder-3.jpg');
+  background-image: url('http://54.161.130.174/images/header_placeholder-3.jpg');
   background-position: 50% 0px;
   background-size: auto 550px;
   background-repeat: no-repeat;
@@ -351,7 +351,7 @@ h4 {
   padding-top: 70px;
   padding-bottom: 70px;
   background-color: #f7a600;
-  background-image: url({{ site.url }}'/images/events-bk-orange.png');
+  background-image: url('http://54.161.130.174/images/events-bk-orange.png');
   background-position: 0px 50%;
   background-size: cover;
   background-repeat: no-repeat;
