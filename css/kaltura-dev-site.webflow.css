@@ -743,6 +743,13 @@ h4 {
   float: right;
 }
 
+.bug-button-wrapper a {
+  color: #fff;
+  font-weight: 400;
+  padding-top: 9px;
+  margin-top: 0px;
+}
+
 .standard-button {
   background-color: #f7a600;
   -webkit-transition: opacity 300ms ease, background-color 300ms ease-in, -webkit-transform 200ms ease-in;
@@ -944,6 +951,10 @@ h4 {
   color: #575756;
   font-size: 14px;
   font-style: italic;
+}
+
+.post-content blockquote p {
+  margin-bottom: 5px;
 }
 
 .report-issue-form {
