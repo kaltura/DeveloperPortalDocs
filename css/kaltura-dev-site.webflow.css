@@ -833,6 +833,17 @@ h4 {
   letter-spacing: 0.4px;
 }
 
+.editgithub {
+    color: #fff;
+    text-decoration: none;
+    background-color: #aaa;
+    padding: 3px 8px 3px 8px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    margin-top: -20px;
+    letter-spacing: 0.3px;
+}
+
 .contributor-column-1 {
   border-right: 1px none #ccc;
 }
