@@ -118,6 +118,19 @@ h4 {
   text-decoration: none;
 }
 
+.search-input input {
+    padding: 24px 0px 22px 15px;
+    border-bottom: none;
+    border-top: none;
+    border-right: none;
+    border-left: solid #ccc 1px;
+    min-width: 550px;
+}
+
+.search-input input:focus {
+    outline: none;
+}
+
 .summary-icon-section {
   padding-top: 70px;
   padding-bottom: 70px;
