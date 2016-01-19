@@ -48,7 +48,8 @@ A nifty tool to help you to see how your markdown looks as you create it: http:/
 * All sections should be separated by H2 headings (##), subsections by H3 headings (###) and so on.
 * **Don’t forget to spell check!**
 
-Remember that your audience is developer-focused, therefore:
+### Remember that your audience is developer-focused, therefore:
+
 * Include code snippets where relevant
 * Reference API end-points where applicable
 * Reference github/bitbucket repos where applicable
