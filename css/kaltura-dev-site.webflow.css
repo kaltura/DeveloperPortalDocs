@@ -349,7 +349,7 @@ h4 {
 }
 
 .post-content a {
-  display: block;
+  display: inline-block;
   margin-top: 6px;
   padding-top: 0px;
   font-family: proxima-nova, sans-serif;
@@ -357,7 +357,6 @@ h4 {
   font-weight: 700;
   letter-spacing: 0.1px;
   text-decoration: none;
-  text-transform: uppercase;
 }
 
 .events-section {
@@ -652,6 +651,18 @@ h4 {
   margin-bottom: 22px;
 }
 
+.post-header h1 {
+  margin-bottom: 8px;
+}
+
+.lastcommittable {
+  margin-bottom: 8px;
+}
+
+.commit-author {
+  color: #188093;
+}
+
 .post-content h1, .post-content h2, .post-content h3, .post-content h4  {
   display: inline-block;
   float: none;
@@ -661,6 +672,9 @@ h4 {
   margin-bottom: 22px;
 }
 
+.post-content {
+  margin-top: 40px;
+}
 
 .post-content p {
   margin-bottom: 25px;

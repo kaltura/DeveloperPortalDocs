@@ -55,7 +55,7 @@ layout: default
 
 			{% if page.git %}
 			
-			<table>
+			<table class="lastcommittable">
 
 				<!--tr><td>Created on: {{ page.git.first_commit.commit_date }}, By: {{ page.git.first_commit.author_name }}</td></tr-->
 				<tr><td>Last commit: {{ page.git.last_commit.commit_date }}, By: <span class="commit-author">{{ page.git.last_commit.author_name }}</span></td></tr>
