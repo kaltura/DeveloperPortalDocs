@@ -2,29 +2,8 @@
 layout: default
 ---
   <!--link rel="stylesheet" href="{{ site.baseurl }}/site.css"-->
-<article class="post w-section w-container">
-
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
-  </header>
-
-{% if page.git %}
-<a href="{{ page.git.github_url }}" target="_blank">Edit on Github</a>
-<table>
-<tr><td>Created on: {{ page.git.first_commit.commit_date }}, By: {{ page.git.first_commit.author_name }}</td></tr>
-<tr><td>Last commit: {{ page.git.last_commit.commit_date }}, By: {{ page.git.last_commit.author_name }}</td></tr>
-{% for contrib in page.git.authors %}
-<tr>
-<td>{{ contrib.name }} ({{ contrib.commits }} commits) (<a href="mailto:{{ contrib.email }}">{{ contrib.email }}</a>)</td>
-</tr>
-{% endfor %}
-{% endif %}
-</table>
-  
-
-</article>
-
-
+<article>
+	
 <div class="w-section side-nav-section">
     <div class="w-container">
       <div class="w-row body-columns">
@@ -129,4 +108,4 @@ layout: default
   			</div>
   		</div>
   	</div>
-
+</article>
