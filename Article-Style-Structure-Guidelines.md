@@ -44,6 +44,7 @@ A nifty tool to help you to see how your markdown looks as you create it: http:/
 
 * Start with an introduction by answering the question “what will be learned in this document”.
 * Think about the steps that will get your reader from A to Z in the fastest way possible while following Kaltura best-practises.
+* Do not add an H1 title (#) to your article, it will be added automatically from the metadata title defined in the ["article header notation"](#header-notation) section
 * All sections should be separated by H2 headings (##), subsections by H3 headings (###) and so on.
 * **Don’t forget to spell check!**
 
@@ -66,7 +67,7 @@ Remember that your audience is developer-focused, therefore:
 * Follow the guidelines for article header notation as per below
 
 
-## Article header notation
+## <a name="header-notation"></a>Article header notation
 At the top of every markdown file, you will find the below notation. This designates the type of page and its location in the website menu.
 
 ```---
