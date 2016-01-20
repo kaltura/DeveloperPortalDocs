@@ -72,12 +72,14 @@ A nifty tool to help you to see how your markdown looks as you create it: [dilli
 At the top of every markdown file, you will find the below notation. This designates the type of page and its location in the website menu.
 
 ```
+
 ---
 layout: page  
 title: VPaaS Website Sample Article  
 permalink: /introduction/vpaas-website-sample-article  
 type: header  
 ---
+
 ```  
 
 The fields and options are:  
