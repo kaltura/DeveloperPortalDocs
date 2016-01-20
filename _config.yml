@@ -37,5 +37,4 @@ lsi: true
 #incremental: true
 #gems:
 #  - jekyll-git_metadata
-gems:
-    - jekyll-sitemap
+#    - jekyll-sitemap
