@@ -13,7 +13,7 @@ module Jekyll
 
     def render(context)
       output = super
-      "<a class='external' target='_blank' href='"+@link+"'>"+@text+"</a>"
+      "<a class='external' target='_blank' rel=\"nofollow\" href='"+@link+"'>"+@text+"</a>"
     end
   end
 end
