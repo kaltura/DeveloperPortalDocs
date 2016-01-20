@@ -5,6 +5,7 @@ permalink: /VPaaS-APIs/Categories-and-Metadata-Management
 type: header
 ---
 
+Jess
 ## Introduction to Categories
 
 * A category is a metadata field that groups content. 
