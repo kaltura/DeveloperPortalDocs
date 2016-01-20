@@ -14,7 +14,6 @@ To add Kaltura videos:
 
 The above code will be rendered as:
 
-
 {% onebox http://www.kaltura.com/tiny/nex76 %}
 
 To add YouTube videos: 
@@ -23,7 +22,7 @@ To add YouTube videos:
 To add a syntax highligted code:
 
 &#123;% highlight c %&#125;
-int hello(char *world)  
+int hello_world(char *world)  
 {  
     printf("Hello %s\n", world);  
 }  
@@ -32,7 +31,7 @@ int hello(char *world)
 Will render as:
 
 {% highlight c %}
-int hello(char *world)
+int hello_world(char *world)
 {
     printf("Hello %s\n", world);
 }
