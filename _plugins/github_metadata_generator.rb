@@ -14,6 +14,7 @@ module Jekyll
           site.config['git'] = site_data
           (site.pages + site.posts.docs).each do |page|
           #(site.collections["pages"].docs + site.collections["posts"].docs).each do |page|
+	    #print page.path.shellescape + "\n"
             page.data['git'] = page_data(page.path.shellescape)
           end
         end
@@ -28,8 +29,7 @@ module Jekyll
       end
 
       def page_data(relative_path = nil)
-        return if relative_path && !tracked_files.include?(relative_path)
-
+        #return if relative_path && !tracked_files.include?(relative_path)
         authors = self.authors(relative_path)
         lines = self.lines(relative_path)
 	current_branch =  %x{ git rev-parse --abbrev-ref HEAD }
@@ -57,6 +57,8 @@ module Jekyll
 		cmd = "git --no-pager shortlog -se HEAD"
 	end
         result = %x{ #{cmd} }
+	print cmd + "\n"
+	print result + "\n"
         result.lines.each do |line|
           commits, name, email = line.scan(/(.*)\t(.*)<(.*)>/).first.map(&:strip)
           results << { 'commits' => commits.to_i, 'name' => name, 'email' => email }
