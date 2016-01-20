@@ -4,6 +4,8 @@ title:  "Testme"
 categories: blog
 permalink: test/test
 ---
+Just some update to test sitemap auto gen.
+
 the quick brown fox jumps over the lazy dog.
 {% onebox http://www.kaltura.com/tiny/nex76 %}
 {% onebox https://developer.kaltura.org/recipes/authentication %}
