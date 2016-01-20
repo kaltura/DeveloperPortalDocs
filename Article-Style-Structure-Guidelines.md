@@ -13,6 +13,8 @@ To add Kaltura videos:
 &#123;% onebox http://www.kaltura.com/tiny/nex76 %&#125;
 
 The above code will be rendered as:
+
+
 {% onebox http://www.kaltura.com/tiny/nex76 %}
 
 To add YouTube videos: 
