@@ -82,7 +82,7 @@ type: header
 {% endhighlight %}
 
 
-The fields and options are:  
+### The fields and options are:  
 
 * `layout:` this is static, and should always be set to `page`
 * `title:` this is the title of the page (correlates to `<title></title>` tag in HTML)
