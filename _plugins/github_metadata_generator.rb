@@ -35,7 +35,6 @@ module Jekyll
 	current_branch =  %x{ git rev-parse --abbrev-ref HEAD }
 	github_baseurl = %x{ git config --get remote.origin.url }
 	if relative_path
-		print relative_path + "\n"
 		github_url=github_baseurl.chomp + "/tree/#{current_branch.chomp}/" + relative_path.chomp
 		github_url=github_url.sub('.git', '')
 	end
