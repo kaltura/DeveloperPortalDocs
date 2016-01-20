@@ -1,8 +1,6 @@
 ---
-layout: page
+layout: category
 title:  "Testme"
-categories: blog
-permalink: test/test
 ---
 Just some update to test sitemap auto gen.
 
