@@ -1,4 +1,5 @@
 require 'rbconfig'
+require 'shellwords'
 
 module Jekyll
   module GitMetadata
@@ -13,7 +14,7 @@ module Jekyll
           site.config['git'] = site_data
           (site.pages + site.posts.docs).each do |page|
           #(site.collections["pages"].docs + site.collections["posts"].docs).each do |page|
-            page.data['git'] = page_data(page.path)
+            page.data['git'] = page_data(page.path.shellescape)
           end
         end
         
@@ -34,6 +35,7 @@ module Jekyll
 	current_branch =  %x{ git rev-parse --abbrev-ref HEAD }
 	github_baseurl = %x{ git config --get remote.origin.url }
 	if relative_path
+		print relative_path + "\n"
 		github_url=github_baseurl.chomp + "/tree/#{current_branch.chomp}/" + relative_path.chomp
 		github_url=github_url.sub('.git', '')
 	end
