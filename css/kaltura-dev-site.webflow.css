@@ -703,7 +703,7 @@ h4 {
   margin-bottom: 25px;
 }
 
-.post-content .highlighter-rouge {
+.post-content code.highlighter-rouge {
   margin-top: 0px;
   margin-bottom: 0px;
   padding: 2px 10px;

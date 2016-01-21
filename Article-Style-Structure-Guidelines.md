@@ -13,6 +13,7 @@ To add Kaltura videos:
 &#123;% onebox http://www.kaltura.com/tiny/nex76 %&#125;
 
 The above code will be rendered as:
+
 {% onebox http://www.kaltura.com/tiny/nex76 %}
 
 To add YouTube videos: 
@@ -21,7 +22,7 @@ To add YouTube videos:
 To add a syntax highligted code:
 
 &#123;% highlight c %&#125;
-int hello(char *world)  
+int hello_world(char *world)  
 {  
     printf("Hello %s\n", world);  
 }  
@@ -30,7 +31,7 @@ int hello(char *world)
 Will render as:
 
 {% highlight c %}
-int hello(char *world)
+int hello_world(char *world)
 {
     printf("Hello %s\n", world);
 }
@@ -40,7 +41,7 @@ See [List of supported languages and lexers](https://github.com/jneen/rouge/wiki
 
 For additional reading on the Markdown flavor we use read: [Kramdown](http://kramdown.gettalong.org/documentation.html).
 
-A nifty tool to help you to see how your markdown looks as you create it: http://dillinger.io/
+A nifty tool to help you to see how your markdown looks as you create it: [dillinger.io](http://dillinger.io/)
 
 ## Tips for Creating Great Content
 
@@ -73,15 +74,19 @@ A nifty tool to help you to see how your markdown looks as you create it: http:/
 ## <a name="header-notation"></a>Article header notation
 At the top of every markdown file, you will find the below notation. This designates the type of page and its location in the website menu.
 
-```---
+
+{% highlight markdown %}
+---
 layout: page
 title: VPaaS Website Sample Article
 permalink: /introduction/vpaas-website-sample-article
 type: header
 ---
-```
 
-The fields and options are:  
+{% endhighlight %}
+
+
+### The fields and options are:  
 
 * `layout:` this is static, and should always be set to `page`
 * `title:` this is the title of the page (correlates to `<title></title>` tag in HTML)
