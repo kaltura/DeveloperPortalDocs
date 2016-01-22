@@ -1,5 +1,5 @@
 ---
-layout: category
+layout: page 
 title:  "Testme"
 ---
 Just some update to test sitemap auto gen.

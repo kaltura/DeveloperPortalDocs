@@ -8,9 +8,30 @@ layout: default
     <div class="w-container">
       <div class="w-row body-columns">
         <div class="w-col w-col-3 template-page-nav-column">
+{% for cat_hash in site.cats %}
+	<div class="sidenav-grp-7">
+	<h4 data-ix="grp-7-open-close" class="sidenav-headings grp-7-heading">{{ cat_hash[0] }}</h4>
+	<div data-ix="hide-on-load" class="grp-7-links">
+	{% loop_directory directory:{{cat_hash[1]}} iterator:item filter:*.md sort:descending %}
+	    {% if item != 'categorymeta' %}
+		<a href="{{site.url}}/{{ cat_hash[1] }}/{{ item }}" class="sidenav-links">{{item}}</a>
+	    {% endif %}
+	{% endloop_directory %}
+	</div>
+        </div>
+{% endfor %}
           <div class="sidenav-grp-1">
             <h4 data-ix="grp-1-open-close" class="sidenav-headings grp-1-heading">VPaaS APIs</h4>
-            <div data-ix="hide-on-load" class="grp-1-links"><a href="#" data-ix="hide-on-load" class="sidenav-links">Authentication</a><a href="#" class="sidenav-links">Media Ingestion</a><a href="#" class="sidenav-links">Categories</a><a href="#" class="sidenav-links">Entitlements</a><a href="#" class="sidenav-links">Entitlements</a><a href="#" class="sidenav-links">Entitlements</a><a href="#" class="sidenav-links">Entitlements</a><a href="#" class="sidenav-links">Entitlements</a><a href="#" class="sidenav-links">Entitlements</a>
+            <div data-ix="hide-on-load" class="grp-1-links">
+		<a href="#" data-ix="hide-on-load" class="sidenav-links">Authentication</a>
+		<a href="#" class="sidenav-links">Media Ingestion</a>
+		<a href="#" class="sidenav-links">Categories</a>
+		<a href="#" class="sidenav-links">Entitlements</a>
+		<a href="#" class="sidenav-links">Entitlements</a>
+		<a href="#" class="sidenav-links">Entitlements</a>
+		<a href="#" class="sidenav-links">Entitlements</a>
+		<a href="#" class="sidenav-links">Entitlements</a>
+		<a href="#" class="sidenav-links">Entitlements</a>
             </div>
           </div>
           <div class="sidenav-grp-2">
@@ -36,11 +57,6 @@ layout: default
           <div class="sidenav-grp-6">
             <h4 data-ix="grp-6-open-close" class="sidenav-headings grp-6-heading">Monetization</h4>
             <div data-ix="hide-on-load" class="grp-6-links"><a href="#" data-ix="hide-on-load" class="sidenav-links">Authentication</a><a href="#" class="sidenav-links">Media Ingestion</a><a href="#" class="sidenav-links">Categories</a><a href="#" class="sidenav-links">Entitlements</a><a href="#" class="sidenav-links">Entitlements</a>
-            </div>
-          </div>
-          <div class="sidenav-grp-7">
-            <h4 data-ix="grp-7-open-close" class="sidenav-headings grp-7-heading">Mobile Video</h4>
-            <div data-ix="hide-on-load" class="grp-7-links"><a href="#" data-ix="hide-on-load" class="sidenav-links">Authentication</a><a href="#" class="sidenav-links">Media Ingestion</a><a href="#" class="sidenav-links">Categories</a><a href="#" class="sidenav-links">Entitlements</a><a href="#" class="sidenav-links">Entitlements</a>
             </div>
           </div>
         </div>

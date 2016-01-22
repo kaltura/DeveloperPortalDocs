@@ -1,4 +1,4 @@
 ---
-layout: category
+layout: nil
 catname: test11
 ---
