@@ -37,9 +37,9 @@ int hello_world(char *world)
 }
 {% endhighlight %}
 
-See the [list of supported code highlighting languages](https://github.com/jneen/rouge/wiki/list-of-supported-languages-and-lexers).
+See [List of supported languages and lexers](https://github.com/jneen/rouge/wiki/list-of-supported-languages-and-lexers)
 
-For additional reading on the Markdown flavor we use read: [GitHub flavored markdown](https://help.github.com/articles/github-flavored-markdown/).
+For additional reading on the Markdown flavor we use read: [Kramdown](http://kramdown.gettalong.org/documentation.html).
 
 A nifty tool to help you to see how your markdown looks as you create it: [dillinger.io](http://dillinger.io/)
 
