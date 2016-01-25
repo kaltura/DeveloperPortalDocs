@@ -1,7 +1,6 @@
 ---
 layout: page
 title: Categories and Metadata Management
-permalink: /VPaaS-APIs/Categories-and-Metadata-Management
 type: header
 ---
 
