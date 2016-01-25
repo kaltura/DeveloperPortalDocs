@@ -4365,3 +4365,18 @@ Webflow.require('ix').init([
   {"slug":"search-bar","name":"Search Bar","value":{"style":{"display":"none","opacity":0},"triggers":[]}},
   {"slug":"new-interaction","name":"New Interaction","value":{"style":{"display":"none"},"triggers":[]}}
 ]);
+
+
+
+function show_hide_div(div_id) 
+{
+    for (var $i = 0, $j = document.getElementById(div_id).getElementsByTagName('div'); $i < $j.length; $i++) {
+	    if ( $j[$i].style.visibility == 'hidden'){
+		    $j[$i].style.visibility = 'visible';
+		    $j[$i].style.display = 'block';
+	    }else{
+		 $j[$i].style.visibility = 'hidden';
+		 $j[$i].style.display = 'none';
+	    }
+    }
+}

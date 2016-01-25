@@ -2,6 +2,20 @@
 layout: default
 ---
   <!--link rel="stylesheet" href="{{ site.baseurl }}/site.css"-->
+<script>
+function show_hide_div(div_id) 
+{
+    for (var $i = 0, $j = document.getElementById(div_id).getElementsByTagName('div'); $i < $j.length; $i++) {
+	    if ( $j[$i].style.visibility == 'hidden'){
+		    $j[$i].style.visibility = 'visible';
+		    $j[$i].style.display = 'block';
+	    }else{
+		 $j[$i].style.visibility = 'hidden';
+		 $j[$i].style.display = 'none';
+	    }
+    }
+}
+</script>
 <article>
 
 <div class="w-section side-nav-section">
@@ -9,9 +23,9 @@ layout: default
       <div class="w-row body-columns">
         <div class="w-col w-col-3 template-page-nav-column">
 {% for cat_hash in site.cats %}
-	<div class="sidenav-grp-7">
-	<h4 data-ix="grp-7-open-close" class="sidenav-headings grp-7-heading">{{ cat_hash[0] }}</h4>
-	<div data-ix="hide-on-load" class="grp-7-links">
+    <div class="sidenav-grp-7" id="{{ cat_hash[1] }}" onClick="show_hide_div('{{ cat_hash[1] }}')">
+	<h4 class="sidenav-headings grp-7-heading">{{ cat_hash[0] }}</h4>
+	<div class="sidenav-grp-links">
 	{% loop_directory directory:{{cat_hash[1]}} iterator:item filter:*.md sort:descending %}
 	    {% if item != 'categorymeta' %}
 		<a href="{{site.url}}/{{ cat_hash[1] }}/{{ item }}" class="sidenav-links">{{item}}</a>

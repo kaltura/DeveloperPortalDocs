@@ -1,7 +1,6 @@
 ---
 layout: page
 title: Media Ingestion and Acquisition
-permalink: /media-ingestion/media-ingestion
 type: header
 ---
 

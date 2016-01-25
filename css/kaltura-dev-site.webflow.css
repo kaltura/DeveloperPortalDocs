@@ -608,6 +608,10 @@ h4 {
   color: #188093;
   font-size: 16px;
 }
+.sidenav-grp-links {
+  display: none;
+  visibility: hidden;
+}
 
 .sidenav-links {
   display: block;
