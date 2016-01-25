@@ -560,50 +560,12 @@ h4 {
   clear: none;
 }
 
-.sidenav-headings.grp-1-heading {
-  margin-top: 29px;
-  border-top: 1px none #ccc;
-  border-bottom: 1px dotted #ccc;
-  color: #188093;
-  font-size: 16px;
-  font-weight: 400;
-}
 
-.sidenav-headings.grp-1-heading:focus {
+.sidenav-headings.grp-heading:focus {
   background-color: white;
 }
 
-.sidenav-headings.grp-2-heading {
-  border-bottom: 1px dotted #ccc;
-  color: #188093;
-  font-size: 16px;
-}
-
-.sidenav-headings.grp-3-heading {
-  border-bottom: 1px dotted #ccc;
-  color: #188093;
-  font-size: 16px;
-}
-
-.sidenav-headings.grp-4-heading {
-  border-bottom: 1px dotted #ccc;
-  color: #188093;
-  font-size: 16px;
-}
-
-.sidenav-headings.grp-5-heading {
-  border-bottom: 1px dotted #ccc;
-  color: #188093;
-  font-size: 16px;
-}
-
-.sidenav-headings.grp-6-heading {
-  border-bottom: 1px dotted #ccc;
-  color: #188093;
-  font-size: 16px;
-}
-
-.sidenav-headings.grp-7-heading {
+.sidenav-headings.grp-heading {
   border-bottom: 1px dotted #ccc;
   color: #188093;
   font-size: 16px;
@@ -611,6 +573,27 @@ h4 {
 .sidenav-grp-links {
   display: none;
   visibility: hidden;
+}
+.sidenav-cat-links {
+  display: block;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 15px;
+  background-color: transparent;
+  -webkit-transition: color 200ms ease-in-out;
+  transition: color 200ms ease-in-out;
+  font-family: proxima-nova, sans-serif;
+  color: #505050;
+  font-weight: 400;
+  letter-spacing: 0.6px;
+  text-decoration: none;
+}
+
+.sidenav-cat-links:hover {
+  background-color: transparent;
+  color: #f7a600;
+  font-weight: 400;
+  letter-spacing: 0.6px;
 }
 
 .sidenav-links {

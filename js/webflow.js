@@ -4367,7 +4367,6 @@ Webflow.require('ix').init([
 ]);
 
 
-
 function show_hide_div(div_id) 
 {
     for (var $i = 0, $j = document.getElementById(div_id).getElementsByTagName('div'); $i < $j.length; $i++) {

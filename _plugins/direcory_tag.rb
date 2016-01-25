@@ -35,7 +35,6 @@ module Jekyll
 
         def render(context)
             context.registers[:loop_directory] ||= Hash.new(0)
-	    #print context[@attributes['directory']] + "\n"
 	    directory = context[@attributes['directory']] || @attributes['directory']
             files = Dir.glob(File.join(directory, @attributes['filter']))
 
