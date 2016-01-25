@@ -1,8 +1,6 @@
 ---
 layout: page
 title: Playlist Management
-permalink: /media-ingestion/playlist-management
-type: header
 ---
 
 ## Introduction to Playlist Management
