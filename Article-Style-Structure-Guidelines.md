@@ -41,6 +41,12 @@ See [List of supported languages and lexers](https://github.com/jneen/rouge/wiki
 
 For additional reading on the Markdown flavor we use read: [Kramdown](http://kramdown.gettalong.org/documentation.html).
 
+To add a link to an external site use:
+&#123;% extlink Debian GNU Linux http://debian.org %&#125;
+
+Will render as:
+{% extlink Debian GNU Linux http://debian.org %}
+
 A nifty tool to help you to see how your markdown looks as you create it: [dillinger.io](http://dillinger.io/)
 
 ## Tips for Creating Great Content
