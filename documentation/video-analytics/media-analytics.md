@@ -1,8 +1,6 @@
 ---
 layout: page
 title: Media Analytics
-permalink: /media-ingestion/media-analytics
-type: header
 ---
 
 ## Intro to Media Analytics
