@@ -628,6 +628,7 @@ h4 {
   padding-top: 0px;
   padding-left: 50px;
 }
+.template-page-nav-column a.sidenav-cat-links {padding:0}
 
 .post-header h1, .post-header h2, .post-header h3, .post-header h4  {
   display: inline-block;
