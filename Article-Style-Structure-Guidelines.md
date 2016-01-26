@@ -89,16 +89,12 @@ At the top of every markdown file, you will find the below notation. This design
 ---
 layout: page
 title: VPaaS Website Sample Article
-permalink: /introduction/vpaas-website-sample-article
-type: header
 ---
 
 {% endhighlight %}
 
 
-### The fields and options are:  
+### The document metadata fields are:  
 
-* `layout:` this is static, and should always be set to `page`
+* `layout:` for documents, this should always be set to `page`
 * `title:` this is the title of the page (correlates to `<title></title>` tag in HTML)
-* `permalink:` the respective **relative** link to the rendered page on the website (e.g. `/introduction/vpaas-website-sample-article` will be: http://vpaas.com/introduction/vpaas-website-sample-article)
-* `type:` this indicates that this page should be included in the website menu. If this page should not be on the menu, this parameter should not be specified at all.
