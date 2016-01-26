@@ -16,7 +16,7 @@ layout: default
 	<div class="sidenav-grp-links">
 	{% loop_directory directory:{{cat_hash[1]}} iterator:item filter:*.md sort:descending %}
 	    {% if item != 'categorymeta' %}
-	    <a href="{{site.url}}/{{ cat_hash[1] }}/{{ item }}" class="sidenav-links">{{item | upcase| replace: '-',' '}}</a>
+	    <a href="{{site.url}}/{{ cat_hash[1] }}/{{ item }}" class="sidenav-links">{{item | replace: '-',' '}}</a>
 	    {% endif %}
 	{% endloop_directory %}
 	</div>
