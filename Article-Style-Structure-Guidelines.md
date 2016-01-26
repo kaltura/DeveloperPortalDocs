@@ -59,10 +59,14 @@ A nifty tool to help you to see how your markdown looks as you create it: [dilli
 
 ### Remember that your audience is developer-focused, therefore:
 
+Think about steps that will take your reader through actual scenarios breakdown with code reference examples that are complete and easy to follow.
+
 * Include code snippets where relevant
-* Reference API end-points where applicable
-* Reference github/bitbucket repos where applicable
-* Clearly explain the required workflows to achieve an end-result
+* Create code recipes where possible (developer.kaltura.org)
+* Reference API end-points where applicable, and make sure to explain these API end-points and their respective request and response fields and formats 
+* Reference relevant github repositories where applicable
+* Clearly explain the required workflows, and ensure they achieve a final and complete end-result
+* When in doubt, assume that your reader will be a newbie and doesn't know much about the context, so link to relevant reading material and explain things properly
 
 
 ## How to contribute and help improve the documentation
