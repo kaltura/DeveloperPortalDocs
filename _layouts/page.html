@@ -12,11 +12,11 @@ layout: default
         <div class="w-col w-col-3 template-page-nav-column">
 {% for cat_hash in site.cats %}
     <div class="sidenav-grp-7" id="{{ cat_hash[1] }}" onClick="show_hide_div('{{ cat_hash[1] }}')">
-	<a href="#" class="sidenav-cat-links"><h4 class="sidenav-headings grp-heading">{{ cat_hash[0] | upcase }}</h4></a>
+	<a href="#" class="sidenav-cat-links"><h4 class="sidenav-headings grp-heading">{{ cat_hash[0] | capitalize }}</h4></a>
 	<div class="sidenav-grp-links">
 	{% loop_directory directory:{{cat_hash[1]}} iterator:item filter:*.md sort:descending %}
 	    {% if item != 'categorymeta' %}
-	    <a href="{{site.url}}/{{ cat_hash[1] }}/{{ item }}" class="sidenav-links">{{item | replace: '-',' '}}</a>
+	    <a href="{{site.url}}/{{ cat_hash[1] }}/{{ item }}" class="sidenav-links">{{item | capitalize| replace: '-',' '}}</a>
 	    {% endif %}
 	{% endloop_directory %}
 	</div>
