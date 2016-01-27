@@ -2,10 +2,10 @@
 layout: default
 ---
 
-  <div class="w-section section-header"> <!-- Zohar, this div can be set with the video background -->
-    <div class="video">
-        <div class="video-frame" style="background-image: url('http://connect.kaltura.com/wp-content/themes/kalturaconnect2013/images/homepagevideobgconnect.jpg')">
-            <iframe itemprop="video" itemscope="" itemtype="http://schema.org/VideoObject" src="http://cdnapi.kaltura.com/p/939341/sp/93934100/embedIframeJs/uiconf_id/23389431/partner_id/939341?iframeembed=true&playerId=kaltura_player_1395768568&entry_id=1_it2coafz&flashvars[loop]=true" width="560" height="315" allowfullscreen webkitallowfullscreen mozAllowFullScreen frameborder="0" allowTransparency="true" style="background: none transparent;"></iframe>
+  <div class="w-section section-header" style="position:relative;"> <!-- Zohar, this div can be set with the video background -->
+    <div class="video" style="position:absolute; left:0; top:0; width:100%; height:100%; overflow: hidden;">
+        <div class="video-frame" style="width:100%; height:100%; position: absolute; top: 0; left: 0;background-image: url('http://connect.kaltura.com/wp-content/themes/kalturaconnect2013/images/homepagevideobgconnect.jpg')">
+            <iframe itemprop="video" itemscope="" itemtype="http://schema.org/VideoObject" src="http://cdnapi.kaltura.com/p/939341/sp/93934100/embedIframeJs/uiconf_id/23389431/partner_id/939341?iframeembed=true&playerId=kaltura_player_1395768568&entry_id=1_it2coafz&flashvars[loop]=true" width="560" height="315" allowfullscreen webkitallowfullscreen mozAllowFullScreen frameborder="0" allowTransparency="true" style="background: none transparent; width:100%; height:100%;"></iframe>
 <script type="text/javascript">
 jQuery(document).ready(function() {
 setTimeout(function() {
@@ -13,10 +13,10 @@ setTimeout(function() {
 }, 5000);
 });
 </script>
-<img style="width:100%;height:100%;position: absolute;top:0;left:0;" src="<?php the_field('background_image_url'); ?>" id="vidhidderimg" />
+<img style="width:100%; height: auto;width:100%;height:100%;position: absolute;top:0;left:0;" src="http://connect.kaltura.com/wp-content/themes/kalturaconnect2013/images/homepagevideobgconnect.jpg" id="vidhidderimg" />
         </div>
     </div>
-    <div class="w-container header-container">
+    <div class="w-container header-container" style="position:relative;z-index:2">
       <h1 class="header-headings">Kaltura Video Platform as a Service &lt;VPaaS&gt;</h1>
       <p class="header-body"><strong data-new-link="true">&gt;</strong> &nbsp;Add video capabilities to <strong data-new-link="true">existing</strong> apps and services to create rich, interactive video experiences and workflows.
         <br><strong data-new-link="true">&gt;</strong> &nbsp;Build <strong data-new-link="true">new</strong> video-centric applications and services, getting to market fast by building on Kaltura’s market-leading video infrastructure.
