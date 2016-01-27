@@ -1,6 +1,7 @@
 <head>
 <script type="text/javascript">
-if ( (window.location.protocol != "https:")){
+var host = "{{site.domain}}";
+if ((host == window.location.host) && (window.location.protocol != "https:")){
 	window.location.protocol = "https";
 }
 </script>
