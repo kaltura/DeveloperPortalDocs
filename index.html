@@ -22,7 +22,7 @@ layout: default
               "readyCallback": function( playerId ){
           			console.log( "kWidget player ready: " + playerId );
           			var kdp = $( "#" + playerId ).get(0);
-          			kdp.kBind( "playerUpdatePlayhead.showvid", function(){
+          			kdp.kBind( "timeupdate.showvid", function(){
           			  $(".video-container").removeClass("visuallyhidden");
           			  kdp.kUnbind( ".showvid" ){
               	});
