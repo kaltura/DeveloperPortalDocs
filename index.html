@@ -26,6 +26,11 @@ layout: default
           			  $(".video-cover").fadeOut();
           			  kdp.kUnbind( ".showvid" );
               	});
+              	
+              	//header title and body
+              	$('h1.header-headings').on( "click", function () {
+              	  $('p.header-body').slideDown();
+              	});
           		}
             });
           </script>
@@ -34,7 +39,7 @@ layout: default
     </div>
     <div class="w-container header-container" style="position:relative;z-index:2">
       <h1 class="header-headings">Kaltura Video Platform as a Service &lt;VPaaS&gt;</h1>
-      <p class="header-body"><strong data-new-link="true">&gt;</strong> &nbsp;Add video capabilities to <strong data-new-link="true">existing</strong> apps and services to create rich, interactive video experiences and workflows.
+      <p class="header-body" style="visibility:hidden;"><strong data-new-link="true">&gt;</strong> &nbsp;Add video capabilities to <strong data-new-link="true">existing</strong> apps and services to create rich, interactive video experiences and workflows.
         <br><strong data-new-link="true">&gt;</strong> &nbsp;Build <strong data-new-link="true">new</strong> video-centric applications and services, getting to market fast by building on Kaltura’s market-leading video infrastructure.
         <br><strong data-new-link="true">&gt;</strong> &nbsp;Power video experiences and business workflow by starting quickly with boilerplates and <strong data-new-link="true">customize</strong>&nbsp;to fit branding, workflows
         <br> and UX.</p><a href="#" class="w-button header-btn"><span class="sign-in-icon fa fa-sign-in fa-lg">&nbsp; &nbsp;Get</span> a Free Developer Account</a><a href="#" class="w-button header-btn"><span class="get-inspired-icon fa fa-lightbulb-o fa-lg">&nbsp; &nbsp;Get</span> Inspired - Building With Kaltura</a>
