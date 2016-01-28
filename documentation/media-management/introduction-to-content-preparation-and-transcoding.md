@@ -16,6 +16,7 @@ New devices, cameras and input sources are introduced to the market every month 
 #### Integrated Encoding Engines
 
 The following lists the various tools and encoding engines currently integrated and orchestrated (see: Kaltura Decision Layer) in the Kaltura Media Transcoding Services:
+
 * Common Video Encoding Engines: FFMPEG, Mencoder, VLC
 * Proprietary Video Encoding/Encryption Engines: Microsoft Expression Encoder, QuickTimeTools, WebexNbrplayer, Widevine
 * Video Segmentation and Delivery Optimization Engines: Mp4box, FastStart, Segmenter, ISM Index, ISM Manifest, SmilManifest, SmoothProtect 
