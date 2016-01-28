@@ -1,9 +1,0 @@
----
-layout: page
----
-
-/* Add your includes. */
-
-{% include css/kaltura-dev-site.webflow.css %}
-{% include css/normalize.css %}
-{% include css/webflow.css %}
