@@ -5,9 +5,37 @@ layout: default
   <div class="w-section section-header" style="position:relative;overflow: hidden;">
     <div class="video-parent-container" >
         <div class="video-container">
-            <iframe class="video-iframe" src="https://cdnapisec.kaltura.com/p/811441/sp/81144100/embedIframeJs/uiconf_id/33241472/partner_id/811441?iframeembed=true&playerId=kaltura_player_1453930537&entry_id=0_4kwzg46z&flashvars[streamerType]=auto&flashvars[loop]=true" width="100%" height="100%" allowfullscreen webkitallowfullscreen mozAllowFullScreen frameborder="0" allowTransparency="true"></iframe>
+          <script src="https://cdnapisec.kaltura.com/p/811441/sp/81144100/embedIframeJs/uiconf_id/33241472/partner_id/811441"></script>
+          <div id="kaltura_player_1453968704" class="video-iframe"></div>
+          <script>
+            kWidget.embed({
+              "targetId": "kaltura_player_1453968704",
+              "wid": "_811441",
+              "uiconf_id": 33241472,
+              "flashvars": {
+                "streamerType": "auto",
+                "loop": true,
+                "autoPlay": true
+              },
+              "cache_st": 1453968704,
+              "entry_id": "0_4kwzg46z",
+              'readyCallback': function( playerId ){
+          			console.log( "kWidget player ready: " + playerId );
+          			var kdp = $( '#' + playerId ).get(0);
+          			kdp.kBind( 'mediaReady', function(){
+          			  $('.video-container').removeClass('visuallyhidden');
+              	});
+          		}
+            });
+          </script>
+          <!-- iframe class="video-iframe" src="https://cdnapisec.kaltura.com/p/811441/sp/81144100/embedIframeJs/uiconf_id/33241472/partner_id/811441?iframeembed=true&playerId=kaltura_player_1453930537&entry_id=0_4kwzg46z&flashvars[streamerType]=auto&flashvars[loop]=true" width="100%" height="100%" allowfullscreen webkitallowfullscreen mozAllowFullScreen frameborder="0" allowTransparency="true"></iframe -->
         </div>
     </div>
+    <script>
+      $(document).ready(function(){
+          $('.video-container').addClass('visuallyhidden');
+      });
+    </script>
     <div class="w-container header-container" style="position:relative;z-index:2">
       <h1 class="header-headings">Kaltura Video Platform as a Service &lt;VPaaS&gt;</h1>
       <p class="header-body"><strong data-new-link="true">&gt;</strong> &nbsp;Add video capabilities to <strong data-new-link="true">existing</strong> apps and services to create rich, interactive video experiences and workflows.
