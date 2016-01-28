@@ -651,6 +651,22 @@ h4 {
   text-decoration: none;
 }
 
+.sidenav-links-current {
+  display: block;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 15px;
+  border-bottom: 1px solid #ececec;
+  background-color: transparent;
+  -webkit-transition: color 200ms ease-in-out;
+  transition: color 200ms ease-in-out;
+  font-family: proxima-nova, sans-serif;
+  color: green;
+  font-weight: 400;
+  letter-spacing: 0.6px;
+  text-decoration: none;
+}
+
 .sidenav-links:hover {
   background-color: transparent;
   color: #f7a600;

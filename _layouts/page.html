@@ -11,18 +11,32 @@ layout: default
       <div class="w-row body-columns">
         <div class="w-col w-col-3 template-page-nav-column">
 {% for cat_hash in site.cats %}
-    <div class="sidenav-grp-7" id="{{ cat_hash[1] }}" onClick="show_hide_div('{{ cat_hash[1] }}')">
+    <div class="sidenav-grp-7" id="/{{ cat_hash[1] }}" onClick="show_hide_div('/{{ cat_hash[1] }}')">
 	<a href="#" class="sidenav-cat-links"><h4 class="sidenav-headings grp-heading">{{ cat_hash[0] }}</h4></a>
 	<div class="sidenav-grp-links">
 	{% loop_directory directory:{{cat_hash[1]}} iterator:item filter:*.md sort:descending %}
 	    {% if item != 'categorymeta' %}
-	    <a href="{{site.url}}/{{ cat_hash[1] }}/{{ item }}" class="sidenav-links">{{item | capitalize| replace: '-',' '}}</a>
+	    <a id="/{{ cat_hash[1] }}/{{ item }}.md" href="{{site.url}}/{{ cat_hash[1] }}/{{ item }}" class="sidenav-links">{{item | capitalize| replace: '-',' '}}</a>
 	    {% endif %}
 	{% endloop_directory %}
 	</div>
         </div>
 {% endfor %}
         </div>
+	<script>
+	div_id='{{page.dir}}';
+	for (var $i = 0, $j = document.getElementById(div_id).getElementsByTagName('div'); $i < $j.length; $i++) {
+		$j[$i].style.visibility = 'visible';
+		$j[$i].style.display = 'block';
+		for (var $y = 0, $z = $j[$i].getElementsByTagName('a'); $y < $z.length; $y++) {
+		    if($z[$y].getAttribute('id')==='/{{page.path}}'){
+			console.log($z[$y].getAttribute('id'));
+			$z[$y].setAttribute('class', 'sidenav-links-current');
+		    }
+
+		}
+	}
+    </script>
         <div class="w-col w-col-9 template-page-content-column">
           <div class="post-header">
 
