@@ -22,7 +22,7 @@ layout: default
               "readyCallback": function( playerId ){
           			var kdp = $( "#" + playerId ).get(0);
           			kdp.kBind( "timeupdate.showvid", function(){
-          			  $(".video-container").removeClass("visuallyhidden");
+          			  $(".video-iframe").removeClass("visuallyhidden");
           			  $(".video-cover").fadeOut();
           			  kdp.kUnbind( ".showvid" );
               	});
