@@ -9,8 +9,7 @@
 title: Kaltura VPaaS: Video Platform as a Service
 email: community@kaltura.com
 description: > # this means to ignore newlines until "baseurl:"
-  Kaltura VPaaS offers reliable, scalable, and affordable cloud services and SDKs for building video experiences or
-  applications &amp; workflows rich on video
+Kaltura VPaaS offers reliable, scalable, and affordable cloud services and SDKs for building video experiences or applications and workflows rich on video
 baseurl: "" # the subpath of your site, e.g. /blog
 domain: "vpaas.kaltura.com"
 url: "https://vpaas.kaltura.com" # the base hostname & protocol for your site
