@@ -3,7 +3,6 @@ layout: page
 title:  "Testme"
 categories: blog jess
 ---
-{{ site.pages }}
 the quick brown fox jumps over the lazy dog.
 {% onebox http://www.kaltura.com/tiny/nex76 %}
 {% onebox https://developer.kaltura.org/recipes_embed/authentication %}

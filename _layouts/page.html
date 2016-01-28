@@ -16,7 +16,8 @@ layout: default
 	<div class="sidenav-grp-links">
 	{% loop_directory directory:{{cat_hash[1]}} iterator:item filter:*.md sort:descending %}
 	    {% if item != 'categorymeta' %}
-	    <a id="/{{ cat_hash[1] }}/{{ item }}.md" href="{{site.url}}/{{ cat_hash[1] }}/{{ item }}" class="sidenav-links">{{item | capitalize| replace: '-',' '}}</a>
+	    <!--a id="/{{ cat_hash[1] }}/{{ item }}.md" href="{{site.url}}/{{ cat_hash[1] }}/{{ item }}" class="sidenav-links">{{item | capitalize| replace: '-',' '}}</a-->
+	    <a id="/{{ cat_hash[1] }}/{{ item }}.md" href="{{site.url}}/{{ cat_hash[1] }}/{{ item }}" class="sidenav-links">{{item | replace: '-',' '|capitalize_all}}</a>
 	    {% endif %}
 	{% endloop_directory %}
 	</div>
