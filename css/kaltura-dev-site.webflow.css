@@ -22,13 +22,6 @@ h4 {
   background-attachment: fixed;
 }
 
-.video-cover {
-  background-color: transparent;
-  background-image: url('https://vpaas.kaltura.com/images/header_video_placeholder.jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
-
 .navbar {
   border-bottom: 1px solid #ccc;
   background-color: white;
@@ -61,7 +54,7 @@ h4 {
   height: 0px;
   padding-bottom: 56.25%; /* 100% * 9 / 16 */
 }
-.video-container .video-iframe {
+.video-container .video-iframe, .video-cover {
   height: 100%;
   position: absolute;
   top: 0px;
@@ -72,7 +65,12 @@ h4 {
   -webkit-transform: translate(-50%, 0%);
   transform: translate(-50%, 0%);
 }
-
+.video-cover {
+  background-color: transparent;
+  background-image: url('https://vpaas.kaltura.com/images/header_video_placeholder.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
 .visuallyhidden { 
   visibility:hidden;
 }
