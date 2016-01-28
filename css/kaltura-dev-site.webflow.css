@@ -34,7 +34,6 @@ h4 {
 
 .video-parent-container {
   /* any width or height */
-  position: relative;
   overflow: hidden;
 }
 .video-container {
@@ -56,7 +55,6 @@ h4 {
   padding-bottom: 56.25%; /* 100% * 9 / 16 */
 }
 .video-container .video-iframe {
-  width: auto;
   height: 100%;
   position: absolute;
   top: 0px;
