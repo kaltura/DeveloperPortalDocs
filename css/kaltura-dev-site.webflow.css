@@ -531,6 +531,8 @@ h4 {
   font-family: proxima-nova, sans-serif;
   color: #e7e7e7;
   letter-spacing: 0.3px;
+  opacity: 0;
+  margin-bottom: 100px;
 }
 
 .summary-description {
