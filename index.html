@@ -19,12 +19,13 @@ layout: default
               },
               "cache_st": 1453968704,
               "entry_id": "0_4kwzg46z",
-              'readyCallback': function( playerId ){
+              "readyCallback": function( playerId ){
           			console.log( "kWidget player ready: " + playerId );
           			var kdp = $( '#' + playerId ).get(0);
           			kdp.kBind( 'mediaReady', function(){
           			  $('.video-container').removeClass('visuallyhidden');
               	});
+              	console.log("player shown");
           		}
             });
           </script>
