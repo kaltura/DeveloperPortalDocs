@@ -22,8 +22,9 @@ layout: default
               "readyCallback": function( playerId ){
           			console.log( "kWidget player ready: " + playerId );
           			var kdp = $( "#" + playerId ).get(0);
-          			kdp.kBind( "firstPlay", function(){
+          			kdp.kBind( "playerUpdatePlayhead.showvid", function(){
           			  $(".video-container").removeClass("visuallyhidden");
+          			  kdp.kUnbind( ".showvid" ){
               	});
               	console.log("player shown");
           		}
