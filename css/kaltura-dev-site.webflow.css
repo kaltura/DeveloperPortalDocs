@@ -54,7 +54,7 @@ h4 {
   height: 0px;
   padding-bottom: 56.25%; /* 100% * 9 / 16 */
 }
-.video-container .video-iframe, .video-cover {
+.video-container .video-iframe {
   height: 100%;
   position: absolute;
   top: 0px;
@@ -66,6 +66,9 @@ h4 {
   transform: translate(-50%, 0%);
 }
 .video-cover {
+  height: 100%;
+  position: absolute;
+  top: 0px;
   background-color: transparent;
   background-image: url('https://vpaas.kaltura.com/images/header_video_placeholder.jpg');
   background-repeat: no-repeat;
