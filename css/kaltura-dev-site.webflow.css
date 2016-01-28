@@ -66,6 +66,14 @@ h4 {
   transform: translate(-50%, 0%);
 }
 
+.visuallyhidden { 
+  position: absolute; 
+  overflow: hidden; 
+  clip: rect(0 0 0 0); 
+  height: 1px; width: 1px; 
+  margin: -1px; padding: 0; border: 0; 
+}
+
 .header-btn {
   display: inline-block;
   margin-top: 26px;
