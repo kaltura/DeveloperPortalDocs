@@ -30,8 +30,8 @@ layout: default
 		$j[$i].style.display = 'block';
 		for (var $y = 0, $z = $j[$i].getElementsByTagName('a'); $y < $z.length; $y++) {
 		    if($z[$y].getAttribute('id')==='/{{page.path}}'){
-			console.log($z[$y].getAttribute('id'));
 			$z[$y].setAttribute('class', 'sidenav-links-current');
+			//$z[$y].focus();
 		    }
 
 		}
