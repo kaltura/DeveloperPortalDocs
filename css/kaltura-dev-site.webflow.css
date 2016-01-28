@@ -73,6 +73,8 @@ h4 {
   background-image: url('https://vpaas.kaltura.com/images/header_video_placeholder.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-size: cover;
+  background-position: 0px 340px;
 }
 .visuallyhidden { 
   visibility:hidden;
