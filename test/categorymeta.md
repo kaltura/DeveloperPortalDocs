@@ -1,4 +1,0 @@
----
-layout: nil
-catname: Search
----
