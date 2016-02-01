@@ -4361,9 +4361,10 @@ Webflow.require('ix').init([
   {"slug":"bug-form-hide-on-page-load","name":"Bug Form hide on page load","value":{"style":{"display":"none","opacity":0},"triggers":[]}},
   {"slug":"hide-on-page-load","name":"Hide on page load","value":{"style":{"display":"none","opacity":0},"triggers":[]}},
   {"slug":"page-contents-open-close","name":"Page Contents Open / Close","value":{"style":{},"triggers":[{"type":"click","selector":".contents-body","stepsA":[{"display":"block","opacity":1,"transition":"opacity 500ms ease 0ms"}],"stepsB":[{"display":"none","opacity":0,"transition":"opacity 500ms ease 0ms"}]},{"type":"click","selector":".drop-icon","stepsA":[{"transition":"transform 500ms ease 0ms","rotateX":"0deg","rotateY":"0deg","rotateZ":"90deg"}],"stepsB":[{"transition":"transform 500ms ease 0ms","rotateX":"0deg","rotateY":"0deg","rotateZ":"0deg"}]}]}},
-  {"slug":"search-button","name":"Search Button","value":{"style":{},"triggers":[{"type":"click","selector":".nav-links","stepsA":[{"display":"none"}],"stepsB":[{"display":"inline-block"}]},{"type":"click","selector":".search-input","stepsA":[{"display":"inline-block","opacity":1,"transition":"opacity 500ms ease 0ms"}],"stepsB":[{"display":"none","opacity":0,"transition":"opacity 500ms ease 0ms"}]}]}},
+  {"slug":"search-button","name":"Search Button","value":{"style":{},"triggers":[{"type":"click","selector":".nav-links","stepsA":[{"display":"none"}],"stepsB":[]},{"type":"click","selector":".search-input","stepsA":[{"display":"inline-block","opacity":1,"transition":"opacity 500ms ease 0ms"}],"stepsB":[]},{"type":"click","selector":".search-close","stepsA":[{"display":"inline-block"}],"stepsB":[]},{"type":"click","selector":".dropdown-wrapper","stepsA":[{"display":"none"}],"stepsB":[]}]}},
   {"slug":"search-bar","name":"Search Bar","value":{"style":{"display":"none","opacity":0},"triggers":[]}},
-  {"slug":"new-interaction","name":"New Interaction","value":{"style":{"display":"none"},"triggers":[]}}
+  {"slug":"close-search","name":"Close Search","value":{"style":{"display":"none"},"triggers":[{"type":"click","selector":".search-input","stepsA":[{"display":"none"}],"stepsB":[]},{"type":"click","selector":".nav-links","stepsA":[{"display":"inline-block"}],"stepsB":[]},{"type":"click","stepsA":[{"display":"none"}],"stepsB":[]},{"type":"click","selector":".dropdown-wrapper","stepsA":[{"display":"inline-block"}],"stepsB":[]}]}},
+  {"slug":"search-input-hide-on-load","name":"Search input hide on load","value":{"style":{"display":"none"},"triggers":[]}}
 ]);
 
 
