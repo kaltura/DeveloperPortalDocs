@@ -1053,7 +1053,8 @@ figure.highlight {
 
 .search-close.fa.fa-times.fa-lg {
   float: right;
-  color: #575756;
+  color: #ccc;
+  padding-top: 24px;
 }
 
 .nav-dropdown {
