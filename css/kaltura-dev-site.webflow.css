@@ -192,6 +192,14 @@ h4 {
   background: none !important;
 }
 
+.sign-in-icon {
+  margin-right: 13px;
+}
+
+.get-inspired-icon {
+  margin-right: 13px;
+}
+
 .summary-icon-section {
   padding-top: 70px;
   padding-bottom: 70px;
@@ -1269,6 +1277,7 @@ html.w-mod-js *[data-ix="search-input-hide-on-load"] {
     display: block;
     margin-left: 31px;
     text-align: center;
+    font-size: 16px;
   }
   .header-text-link {
     margin-left: 30px;
