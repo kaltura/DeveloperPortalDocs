@@ -762,9 +762,16 @@
 	  var hashchange = 'hashchange';
 	  var loaded;
 	  var loadEditor = options.load || load;
+	  var hasLocalStorage = false;
 
-	  // Check localStorage for editor data
-	  if (localStorage && localStorage.getItem && localStorage.getItem('WebflowEditor')) {
+	  try {
+	    // Check localStorage for editor data
+	    hasLocalStorage = localStorage && localStorage.getItem && localStorage.getItem('WebflowEditor');
+	  } catch (e) {
+	    // SecurityError: browser storage has been disabled
+	  }
+
+	  if (hasLocalStorage) {
 	    loadEditor();
 
 	  } else if (location.search) {
@@ -4366,17 +4373,3 @@ Webflow.require('ix').init([
   {"slug":"close-search","name":"Close Search","value":{"style":{"display":"none"},"triggers":[{"type":"click","selector":".search-input","stepsA":[{"display":"none"}],"stepsB":[]},{"type":"click","selector":".nav-links","stepsA":[{"display":"inline-block"}],"stepsB":[]},{"type":"click","stepsA":[{"display":"none"}],"stepsB":[]},{"type":"click","selector":".dropdown-wrapper","stepsA":[{"display":"inline-block"}],"stepsB":[]}]}},
   {"slug":"search-input-hide-on-load","name":"Search input hide on load","value":{"style":{"display":"none"},"triggers":[]}}
 ]);
-
-
-function show_hide_div(div_id) 
-{
-    for (var $i = 0, $j = document.getElementById(div_id).getElementsByTagName('div'); $i < $j.length; $i++) {
-	    if ( $j[$i].style.visibility == 'hidden'){
-		    $j[$i].style.visibility = 'visible';
-		    $j[$i].style.display = 'block';
-	    }else{
-		 $j[$i].style.visibility = 'hidden';
-		 $j[$i].style.display = 'none';
-	    }
-    }
-}
