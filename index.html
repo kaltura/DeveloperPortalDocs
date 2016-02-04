@@ -26,6 +26,11 @@ layout: default
           			  $(".video-cover").fadeOut();
           			  kdp.kUnbind( ".showvid" );
               	});
+              	
+              	//header title and body
+                $('h1.header-headings').on( "click", function () {
+                  $('p.header-body').animate({'opacity': 1});
+                });
           		}
             });
           </script>
