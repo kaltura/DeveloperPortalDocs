@@ -972,6 +972,25 @@ figure.highlight {
   border-bottom: 1px dotted #ccc;
 }
 
+.sml-caps-header {
+  display: block;
+  width: auto;
+  max-width: 35%;
+  margin-right: auto;
+  margin-bottom: 20px;
+  margin-left: auto;
+  padding-bottom: 10px;
+  border-style: none none solid;
+  border-width: 1px;
+  border-color: #000 #000 #ccc;
+  font-family: proxima-nova, sans-serif;
+  color: #188093;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
 .contents-links {
   display: block;
   margin-bottom: 8px;
