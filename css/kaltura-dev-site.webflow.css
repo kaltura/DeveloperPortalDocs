@@ -1327,10 +1327,23 @@ html.w-mod-js *[data-ix="search-input-hide-on-load"] {
   .section-headings {
     font-size: 29px;
   }
-  .news-item-img {
-    float: none;
-    text-align: left;
-  }
+
+.news-item {
+  margin-bottom: 37px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .15);
+}
+
+.news-item-img {
+  max-width: 140px;
+  margin-right: 25px;
+  padding: 12px;
+  float: left;
+  border: 1px dashed #ccc;
+}
+
   .footer-section {
     padding-right: 17px;
     padding-left: 17px;
