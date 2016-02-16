@@ -257,8 +257,6 @@ h4 {
   -webkit-transition: border 200ms ease-in, background-color 200ms ease;
   transition: border 200ms ease-in, background-color 200ms ease;
   font-family: proxima-nova, sans-serif;
-  display: inline;
-  float: left;
 }
 
 .tab-links:hover {
