@@ -415,6 +415,7 @@ h4 {
 
 .case-study-img {
   margin-bottom: 17px;
+  border: 1px solid #ccc;
 }
 
 .post-content a {
@@ -486,8 +487,11 @@ h4 {
 }
 
 .news-item-img {
+  max-width: 140px;
   margin-right: 25px;
+  padding: 12px;
   float: left;
+  border: 1px dashed #ccc;
 }
 
 .news-item-description {
