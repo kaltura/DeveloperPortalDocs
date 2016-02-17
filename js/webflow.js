@@ -2986,7 +2986,7 @@
 	      }
 
 	      // Ignore links being used by jQuery mobile
-	      //if (window.$.mobile && $(e.currentTarget).hasClass('ui-link')) return;
+	      if (window.$.mobile && $(e.currentTarget).hasClass('ui-link')) return;
 
 	      // Ignore empty # links
 	      if (this.getAttribute('href') === '#') {
