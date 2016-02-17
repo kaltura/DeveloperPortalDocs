@@ -500,6 +500,18 @@ h4 {
   font-family: proxima-nova, sans-serif;
 }
 
+.readmore-text-link {
+  display: block;
+  margin-top: 6px;
+  padding-top: 0px;
+  font-family: proxima-nova, sans-serif;
+  color: #188093;
+  font-weight: 700;
+  letter-spacing: 0.1px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
 .news-column {
   padding-right: 30px;
 }
