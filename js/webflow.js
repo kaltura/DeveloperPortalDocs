@@ -1311,7 +1311,7 @@
 	          if (!Webflow.validClick(evt.currentTarget)) return;
 
 	          // Prevent default on empty hash urls
-	          if ($el.attr('href') === '#') evt.preventDefault();
+	         // if ($el.attr('href') === '#') evt.preventDefault();
 
 	          run(trigger, $el, { group: state.clicked ? 'B' : 'A' });
 	          if (stepsB) state.clicked = !state.clicked;
@@ -2333,7 +2333,7 @@
 	    }
 
 	    // Ignore empty # links
-	    if (href === '#') return;
+	    //if (href === '#') return;
 
 	    // Determine whether the link should be selected
 	    var match = (tempLink.href === location.href) || (href === slug) || (indexPage.test(href) && dirList.test(slug));
@@ -2775,9 +2775,9 @@
 	      }
 
 	      // Close when navigating to an in-page anchor
-	      if (href && href.indexOf('#') === 0 && data.open) {
-	        close(data);
-	      }
+	      //if (href && href.indexOf('#') === 0 && data.open) {
+	      //  close(data);
+	      //}
 	    };
 	  }
 
@@ -2989,10 +2989,10 @@
 	      if (window.$.mobile && $(e.currentTarget).hasClass('ui-link')) return;
 
 	      // Ignore empty # links
-	      if (this.getAttribute('href') === '#') {
+	      /*if (this.getAttribute('href') === '#') {
 	        e.preventDefault();
 	        return;
-	      }
+	      }*/
 
 	      // The href property always contains the full url so we can compare
 	      // with the document’s location to only target links on this page.
