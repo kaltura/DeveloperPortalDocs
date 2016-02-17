@@ -472,7 +472,7 @@ h4 {
 .news-twitter-section {
   padding-top: 70px;
   padding-bottom: 70px;
-  background-color: #f7f7f7;
+  background-color: #fff;
 }
 
 .twitter-html {
@@ -483,7 +483,8 @@ h4 {
   margin-bottom: 37px;
   padding: 20px;
   background-color: white;
-  box-shadow: rgba(0, 0, 0, 0.09) 1px 1px 4px 0px;
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .15);
+  border: 1px solid #ccc;
 }
 
 .news-item-img {
