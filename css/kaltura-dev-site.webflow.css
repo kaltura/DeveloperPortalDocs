@@ -487,6 +487,14 @@ h4 {
   border: 1px solid #ccc;
 }
 
+.blog-headings {
+  margin-top: 0px;
+  font-family: proxima-nova, sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
 .news-item-img {
   max-width: 140px;
   margin-right: 25px;
