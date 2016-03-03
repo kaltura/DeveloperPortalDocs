@@ -1136,6 +1136,218 @@ figure.highlight {
   color: #fff;
 }
 
+.vpaas-sign-up-section {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  background-color: #e7e7e7;
+}
+
+.vpaas-signup-container {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 48px;
+  background-color: #fff;
+  box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, .23);
+}
+
+.input-light {
+  background-color: #e7e7e7;
+  font-family: proxima-nova, sans-serif;
+  color: #333;
+}
+
+.input-light:focus {
+  border: 1px solid #188093;
+}
+
+.input-light.error {
+  border: 1px solid #a70000;
+  background-color: #f5cfcf;
+}
+
+.divider-span {
+  color: #ccc;
+}
+
+.teal-span {
+  color: #188093;
+}
+
+.sign-up-subheadings {
+  max-width: 30%;
+  margin-right: auto;
+  margin-bottom: 16px;
+  margin-left: auto;
+  padding-top: 18px;
+  padding-left: 0px;
+  border-top: 1px solid #ccc;
+  border-bottom-style: none;
+  color: #f7a600;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+}
+
+.radio-label {
+  font-family: proxima-nova, sans-serif;
+  color: #188093;
+  font-weight: 400;
+}
+
+.radio-description {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: proxima-nova, sans-serif;
+  font-style: italic;
+}
+
+._2nd-radio-field {
+  margin-top: 30px;
+}
+
+.pick-account-type-heading {
+  display: block;
+  width: 28%;
+  margin-right: auto;
+  margin-bottom: 30px;
+  margin-left: auto;
+  padding-bottom: 10px;
+  padding-left: 0px;
+  border-bottom-style: solid;
+  color: #f7a600;
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+}
+
+.payment-details-heading {
+  display: block;
+  width: 20%;
+  margin-right: auto;
+  margin-bottom: 30px;
+  margin-left: auto;
+  padding-bottom: 10px;
+  padding-left: 0px;
+  border-bottom-style: solid;
+  color: #f7a600;
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+}
+
+.company-details-heading {
+  width: 20%;
+  margin-right: auto;
+  margin-bottom: 30px;
+  margin-left: auto;
+  padding-bottom: 10px;
+  padding-left: 0px;
+  border-top: 1px none #e7e7e7;
+  border-bottom-style: solid;
+  color: #f7a600;
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+}
+
+.sml-circle {
+  width: 10px;
+  height: 10px;
+  margin-right: auto;
+  margin-left: auto;
+  border-style: none;
+  border-radius: 50%;
+  background-color: #ccc;
+  text-align: center;
+}
+
+.sml-circle.sml-circle-selected {
+  background-color: #188093;
+}
+
+.sml-circle-row {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
+.sml-circle-row-wrapper {
+  width: 20%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.payment-notification {
+  min-height: 50px;
+  margin-top: 25px;
+  padding: 15px;
+  border: 1px solid #ddc380;
+  background-color: #fcf1d5;
+  font-family: proxima-nova, sans-serif;
+  color: #5f5f5f;
+}
+
+.fa.fa-exclamation-circle.fa-lg {
+  margin-right: 10px;
+}
+
+.fa.fa-times {
+  float: right;
+  color: #aaa;
+}
+
+.fa.fa-times.fa-lg {
+  float: right;
+  color: #9e9e9e;
+}
+
+.terms-checkbox {
+  margin-top: 34px;
+  font-family: proxima-nova, sans-serif;
+  letter-spacing: 0.2px;
+}
+
+.terms-link {
+  font-family: proxima-nova, sans-serif;
+  color: #188093;
+  text-decoration: none;
+}
+
+.signup-body {
+  font-family: proxima-nova, sans-serif;
+  text-align: left;
+  letter-spacing: 0.2px;
+}
+
+.signup-body.success-body {
+  text-align: center;
+}
+
+.feature-bullets.fa.fa-chevron-right {
+  margin-right: 10px;
+  color: #f7a600;
+}
+
+.success-heading {
+  margin-right: auto;
+  margin-bottom: 22px;
+  margin-left: auto;
+  font-family: proxima-nova, sans-serif;
+  color: #f7a600;
+  font-size: 38px;
+  font-weight: 300;
+  text-align: center;
+  letter-spacing: 0.4px;
+}
+
 html.w-mod-js *[data-ix="hide-on-load"] {
   display: none;
   opacity: 0;
