@@ -1517,6 +1517,16 @@ html.w-mod-js *[data-ix="search-input-hide-on-load"] {
   .dropdown-link {
     border-bottom: 1px solid #ccc;
   }
+
+  .vpaas-sign-up-section {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+  .company-details-heading {
+    width: 30%;
+    border-style: none none dashed;
+  }
+
 }
 
 @media (max-width: 767px) {
@@ -1652,6 +1662,28 @@ html.w-mod-js *[data-ix="search-input-hide-on-load"] {
     overflow: hidden;
     min-height: 0px;
   }
+
+  .vpaas-sign-up-section {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+  .vpaas-signup-container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .sign-up-subheadings {
+    max-width: 50%;
+  }
+  .sml-circle-row {
+    display: block;
+  }
+  .sml-circle-row-wrapper {
+    width: 30%;
+  }
+  .sml-circle-column {
+    display: inline-block;
+  }
+
 }
 
 @media (max-width: 479px) {
@@ -1729,6 +1761,18 @@ html.w-mod-js *[data-ix="search-input-hide-on-load"] {
   }
   .slider-slide2 {
     background-position: 77% 50%;
+  }
+
+  .vpaas-sign-up-section {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+  .sign-up-subheadings {
+    max-width: 75%;
+  }
+  .company-details-heading {
+    width: 45%;
+    font-size: 14px;
   }
 }
 
