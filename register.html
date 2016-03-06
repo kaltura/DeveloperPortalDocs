@@ -1,0 +1,191 @@
+---
+layout: default
+---
+
+<!DOCTYPE html><!-- This site was created in Webflow. http://www.webflow.com--><!-- Last Published: Thu Mar 03 2016 02:49:45 GMT+0000 (UTC) -->
+<!--html data-wf-site="561bdec5a10e88401184e9a4" data-wf-page="56cf33d0183bcaa02f3636e5">
+<head>
+<meta charset="utf-8">
+<title>VPaaS Signup</title>
+<meta property="og:title" content="VPaaS Signup">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="Webflow">
+<script type="text/javascript" src="https://use.typekit.net/rlx4cjm.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}
+</script>
+<script type="text/javascript" src="https://daks2k3a4ib2z.cloudfront.net/0globals/modernizr-2.7.1.js"></script>
+<link rel="shortcut icon" type="image/x-icon" href="https://daks2k3a4ib2z.cloudfront.net/img/favicon.ico"><link rel="apple-touch-icon" href="https://daks2k3a4ib2z.cloudfront.net/img/webclip.png"><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/github.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js"></script>
+<script type="text/javascript">var switchTo5x=true;</script>
+<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript">stLight.options({publisher: "7acb66da-36ad-4c46-ba0d-f7ede13aa36c", doNotHash: false, doNotCopy: false, hashAddressBar: true});</script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.js"></script>
+<script src="https://checkout.stripe.com/checkout.js"></script>
+<script src="js/country.js"></script>
+
+</head>
+<body--><div class="w-section vpaas-sign-up-section">
+	<div class="w-container vpaas-signup-container">
+	    <h1 class="section-headings vpaas-signup-heading">Sign Up &nbsp;<span class="divider-span">|</span> &nbsp;<span class="teal-span">Kaltura VPaaS</span></h1>
+    <div class="sml-circle-row-wrapper">
+	<div class="w-row sml-circle-row">
+	    <div class="w-col w-col-3 sml-circle-column">
+	    </div>
+	</div>
+    </div>
+    <div class="w-form">
+		
+<form id="email-form" name="email-form" data-name="Email Form">
+<div class="company-details-div">
+<div class="w-row form-row">
+<div class="w-col w-col-6">
+    <label for="First-Name-2" class="form-labels">First Name</label>
+    <input id="First-Name-2" type="text" placeholder="Joe" name="First-Name-2" data-name="First Name 2" required="required" class="w-input input-light">
+    </div>
+    <div class="w-col w-col-6">
+    <label for="Last-Name-2" class="form-labels">Last Name</label>
+    <input id="Last-Name-2" type="text" placeholder="Soap" name="Last-Name-2" required="required" data-name="Last Name 2" class="w-input input-light">
+    </div>
+</div>
+<div class="w-row form-row">
+    <div class="w-col w-col-6">
+    <label for="email-2" class="form-labels">Work Email Address</label>
+    <input id="email-2" type="email" placeholder="joesoap@mediaco.com" name="email-2" data-name="Email 2" required="required" class="w-input input-light">
+    </div>
+    <div class="w-col w-col-6">
+    <label for="Company-2" class="form-labels">Company</label>
+    <input id="Company-2" type="text" placeholder="MediaCo Inc." name="Company-2" required="required" data-name="Company 2" class="w-input input-light">
+    </div>
+</div>
+<div class="w-row form-row">
+<div class="w-col w-col-6">
+<label for="Industry-2" class="form-labels">Industry</label>
+<select id="Industry-2" name="Industry-2" required="required" data-name="Industry 2" class="w-select input-light">
+<option value="">Select one...</option>
+<option value="Education or EdTech">Education or EdTech</option>
+<option value="Media Owners &amp; Creators">Media Owners &amp; Creators</option>
+<option value="Broadcasting">Broadcasting</option>
+<option value="IPTV and Telcos">IPTV and Telcos</option>
+<option value="AdTech / Advertising Agency">AdTech / Advertising Agency</option>
+<option value="Health Care">Health Care</option>
+<option value="Insurance">Insurance</option>
+<option value="Retail / eCommerce">Retail / eCommerce</option>
+<option value="FinTech / Investing / Banking">FinTech / Investing / Banking</option>
+<option value="Real Estate">Real Estate</option>
+<option value="Video Surveillance / Public Safety">Video Surveillance / Public Safety</option>
+<option value="IoT / Smart Cities">IoT / Smart Cities</option>
+<option value="Manufacturing">Manufacturing</option>
+<option value="Construction">Construction</option>
+<option value="Transportation / Utilities / Energy">Transportation / Utilities / Energy</option>
+<option value="Government">Government</option>
+<option value="Registered Not for Profit Organization">Registered Not for Profit Organization</option>
+<option value="Software Provider / Software Publisher / ISV">Software Provider / Software Publisher / ISV</option>
+<option value="Cloud Service Provider (Hosting / Streaming)">Cloud Service Provider (Hosting / Streaming)</option>
+<option value="Systems Integrator">Systems Integrator</option>
+</select>
+</div>
+<div class="w-col w-col-6">
+<label for="Contact-Phone-2" class="form-labels">Contact Phone</label><input id="Contact-Phone-2" type="text" placeholder="(XXX) XXX-XXXX" name="Contact-Phone-2" required="required" data-name="Contact Phone 2" class="w-input input-light">
+</div>
+</div>
+<div class="w-row form-row">
+<div class="w-col w-col-6">
+<div class="form-group valid-row">
+<label for="country" class="form-labels">Country</label>
+<select id="country" name="country" onchange="populateState()" data-name="Country 2" required="required" class="w-select input-light">
+</select>
+</div>
+<div class="w-col w-col-6">
+<label for="state" class="form-labels">State</label>
+<select id="state" name="state" data-name="State 2" required="required" class="w-select input-light">
+</select>
+<script type="text/javascript">initCountry(""); </script>
+</div>
+</div>
+<div class="w-row form-row">
+<div class="w-col w-col-6">
+<label for="Password" class="form-labels">Create a Password</label>
+<input id="Password" type="password" placeholder="**************" name="Password-1" data-name="Password 1" required="required" class="w-input input-light">
+</div>
+<div class="w-col w-col-6">
+<label for="Password-2" class="form-labels">Re-Type Your Password</label>
+<input id="Password-2" type="password" placeholder="**************" name="Password-2" required="required" data-name="Password 2" class="w-input input-light">
+</div>
+</div>
+<label for="Tel-us-what-you-are-building" class="form-labels">Tell Us About What You Are Building</label>
+<textarea id="Tel-us-what-you-are-building" placeholder="What are you building, tell us about your team, how does video fit into your application, etc." name="Tel-us-what-you-are-building" data-name="Tel us what you are building" required="required" class="w-input input-light"></textarea>
+</div>
+<div class="account-type-div">
+<div class="w-radio w-clearfix">
+<input id="VPaaS Account" type="radio" name="Account-Type" value="VPaaS Account" data-name="Account Type" class="w-radio-input">
+<label for="VPaaS Account" class="w-form-label radio-label">VPaaS Account</label>
+</div>
+<div class="radio-description">Complete API access for all video workflows, player, widgets, SDKs, developer tools, Forums &amp; Kaltura University.</div>
+<ul class="w-list-unstyled">
+<li class="temp-list"><span class="feature-bullets fa fa-chevron-right">.</span>Start Free (No Credit Card Required)</li>
+<li class="temp-list"><span class="feature-bullets fa fa-chevron-right">.</span>Pay-As-You-Go</li>
+<li class="temp-list"><span class="feature-bullets fa fa-chevron-right">.</span>$400 Monthly Credits for the 1st Year</li>
+</ul>
+<div class="w-radio w-clearfix _2nd-radio-field">
+<input id="VPaaS Account" type="radio" name="Account-Type" value="VPaaS Account" data-name="Account Type" class="w-radio-input">
+<label for="VPaaS Account" class="w-form-label radio-label">Multi-Publisher Account</label>
+</div>
+<div class="radio-description">All the features of a VPaaS Account, plus get an API to create as many VPaaS Accounts as you need with centralized configuration &amp; consolidated billing across all accounts.</div>
+<ul class="w-list-unstyled">
+<li class="temp-list"><span class="feature-bullets fa fa-chevron-right">.</span>Starting at $1,000 / Month + $33 / Month for Each Sub-Account</li>
+<li class="temp-list"><span class="feature-bullets fa fa-chevron-right">.</span>$400 Monthly Credits for the 1st Year, Consolidated Across All Accounts</li>
+</ul>
+</div>
+<div>
+<div class="w-checkbox terms-checkbox">
+<input id="Terms-Checkbox-2" type="checkbox" name="Terms-Checkbox-2" data-name="Terms Checkbox 2" required="required" class="w-checkbox-input">
+<label for="Terms-Checkbox-2" class="w-form-label">Terms &amp; Conditions</label>
+</div>
+</div>
+<p class="signup-body">By checking this box, you agree to Kaltura VPaaS Terms and Conditions as outlined here: <a class="terms-link" href="#">VPaaS Master License</a></p>
+<!--div class="w-clearfix payment-notification"><span class="fa fa-exclamation-circle fa-lg"> Your</span> credit card number is incorrect.<span class="fa fa-times">.</span></div-->
+</div>
+<!--div class="w-button standard-button"><button id="customButton">Purchase</button></div-->
+<div class="button-center-div">
+<input type="submit" id="submitButton" value="Next" data-wait="Please wait..." data-ix="show-pick-account-type" class="w-button standard-button vpaas-signup-btn">
+</div>
+</form>
+<div class="w-form-done"><p>Thank you! Your submission has been received!</p></div>
+<div class="w-form-fail"><p>Oops! Something went wrong while submitting the form</p></div>
+</div>
+<!--div class="signup-success"><h3 class="success-heading">Success!</h3><p class="signup-body success-body">You have successfully signed up for a %account-type% account. You will be redirected to login shortly...</p></div-->
+</div>
+</div>
+<script>
+  var handler = StripeCheckout.configure({
+    key: 'pk_test_O6gS2z5zwPnD0QZGiLSo6xR3',
+    //image: '/img/documentation/checkout/marketplace.png',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0FCqwVvjvg23uRGT8b_DmXJhXqsINDxg9yfs0OLAubpwB_auRRw',
+    locale: 'auto',
+    token: function(token) {
+      // Use the token to create the charge with a server-side script.
+      // You can access the token ID with `token.id`
+    }
+  });
+
+  $('#submitButton').on('click', function(e) {
+    // Open Checkout with further options
+    handler.open({
+      name: 'Kaltura VPaaS',
+      description: 'Pay up!',
+      amount: 2000
+    });
+    e.preventDefault();
+  });
+
+  // Close Checkout on page navigation
+  $(window).on('popstate', function() {
+    handler.close();
+  });
+</script>
+<script type="text/javascript" src="https://daks2k3a4ib2z.cloudfront.net/561bdec5a10e88401184e9a4/js/webflow.fb47e8ec6.js"></script>
+<!--[if lte IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
+<!--/body></html-->
+
