@@ -1,34 +1,6 @@
 ---
 layout: default
 ---
-
-<!DOCTYPE html><!-- This site was created in Webflow. http://www.webflow.com--><!-- Last Published: Thu Mar 03 2016 02:49:45 GMT+0000 (UTC) -->
-<!--html data-wf-site="561bdec5a10e88401184e9a4" data-wf-page="56cf33d0183bcaa02f3636e5">
-<head>
-<meta charset="utf-8">
-<title>VPaaS Signup</title>
-<meta property="og:title" content="VPaaS Signup">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="generator" content="Webflow">
-<script type="text/javascript" src="https://use.typekit.net/rlx4cjm.js"></script>
-<script type="text/javascript">try{Typekit.load();}catch(e){}
-</script>
-<script type="text/javascript" src="https://daks2k3a4ib2z.cloudfront.net/0globals/modernizr-2.7.1.js"></script>
-<link rel="shortcut icon" type="image/x-icon" href="https://daks2k3a4ib2z.cloudfront.net/img/favicon.ico"><link rel="apple-touch-icon" href="https://daks2k3a4ib2z.cloudfront.net/img/webclip.png"><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/github.min.css">
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js"></script>
-<script type="text/javascript">var switchTo5x=true;</script>
-<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-<script type="text/javascript">stLight.options({publisher: "7acb66da-36ad-4c46-ba0d-f7ede13aa36c", doNotHash: false, doNotCopy: false, hashAddressBar: true});</script>
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.js"></script>
-<script src="https://checkout.stripe.com/checkout.js"></script>
-<script src="js/country.js"></script>
-
-</head>
-<body-->
-    
-    
     <div class="w-section vpaas-sign-up-section">
 	<div class="w-container vpaas-signup-container">
 	    <h1 class="section-headings vpaas-signup-heading">Sign Up &nbsp;<span class="divider-span">|</span> &nbsp;<span class="teal-span">Kaltura VPaaS</span></h1>
@@ -40,7 +12,7 @@ layout: default
     </div>
     <div class="w-form">
 		
-	<form id="register-form" name="register-form" data-name="Register Form" action="https://vpaas.kaltura.com:8443/checkout.php">
+	<form id="register-form" name="register-form" data-name="Register Form" action="https://vpaas.kaltura.com:8443/checkout.php" method="post">
 <div class="company-details-div">
 <div class="w-row form-row">
 <div class="w-col w-col-6">
@@ -170,8 +142,10 @@ $(document).ready(function(){
 	url: "https://vpaas.kaltura.com:8443/get_token.php"
 	//data: {response: response}
 	}).done(function(token) {
-	alert(token);
-		braintree.setup(token, "dropin", {
+	//var clientToken = "eyJ2ZXJzaW9uIjoyLCJhdXRob3JpemF0aW9uRmluZ2VycHJpbnQiOiIyYmQ5MmY1ODZjM2VjNmU2ZGZhYmE4ODc4MDFmYmY4YzEzMDhiMTJkZjc3MDQ3MTQ5Y2NhMTg0YzViNDMxNWRlfGNyZWF0ZWRfYXQ9MjAxNi0wMy0wOFQxMzozMjoxNy4wMjg2OTkzNTErMDAwMFx1MDAyNm1lcmNoYW50X2lkPWZqdG1idmMyZHZjcHJyMzVcdTAwMjZwdWJsaWNfa2V5PXdzc2Z5bTU2ZmJ6enA5cGsiLCJjb25maWdVcmwiOiJodHRwczovL2FwaS5zYW5kYm94LmJyYWludHJlZWdhdGV3YXkuY29tOjQ0My9tZXJjaGFudHMvZmp0bWJ2YzJkdmNwcnIzNS9jbGllbnRfYXBpL3YxL2NvbmZpZ3VyYXRpb24iLCJjaGFsbGVuZ2VzIjpbXSwiZW52aXJvbm1lbnQiOiJzYW5kYm94IiwiY2xpZW50QXBpVXJsIjoiaHR0cHM6Ly9hcGkuc2FuZGJveC5icmFpbnRyZWVnYXRld2F5LmNvbTo0NDMvbWVyY2hhbnRzL2ZqdG1idmMyZHZjcHJyMzUvY2xpZW50X2FwaSIsImFzc2V0c1VybCI6Imh0dHBzOi8vYXNzZXRzLmJyYWludHJlZWdhdGV3YXkuY29tIiwiYXV0aFVybCI6Imh0dHBzOi8vYXV0aC52ZW5tby5zYW5kYm94LmJyYWludHJlZWdhdGV3YXkuY29tIiwiYW5hbHl0aWNzIjp7InVybCI6Imh0dHBzOi8vY2xpZW50LWFuYWx5dGljcy5zYW5kYm94LmJyYWludHJlZWdhdGV3YXkuY29tIn0sInRocmVlRFNlY3VyZUVuYWJsZWQiOmZhbHNlLCJwYXlwYWxFbmFibGVkIjp0cnVlLCJwYXlwYWwiOnsiZGlzcGxheU5hbWUiOiJLYWx0dXJhIiwiY2xpZW50SWQiOm51bGwsInByaXZhY3lVcmwiOiJodHRwOi8vZXhhbXBsZS5jb20vcHAiLCJ1c2VyQWdyZWVtZW50VXJsIjoiaHR0cDovL2V4YW1wbGUuY29tL3RvcyIsImJhc2VVcmwiOiJodHRwczovL2Fzc2V0cy5icmFpbnRyZWVnYXRld2F5LmNvbSIsImFzc2V0c1VybCI6Imh0dHBzOi8vY2hlY2tvdXQucGF5cGFsLmNvbSIsImRpcmVjdEJhc2VVcmwiOm51bGwsImFsbG93SHR0cCI6dHJ1ZSwiZW52aXJvbm1lbnROb05ldHdvcmsiOnRydWUsImVudmlyb25tZW50Ijoib2ZmbGluZSIsInVudmV0dGVkTWVyY2hhbnQiOmZhbHNlLCJicmFpbnRyZWVDbGllbnRJZCI6Im1hc3RlcmNsaWVudDMiLCJiaWxsaW5nQWdyZWVtZW50c0VuYWJsZWQiOnRydWUsIm1lcmNoYW50QWNjb3VudElkIjoia2FsdHVyYSIsImN1cnJlbmN5SXNvQ29kZSI6IlVTRCJ9LCJjb2luYmFzZUVuYWJsZWQiOmZhbHNlLCJtZXJjaGFudElkIjoiZmp0bWJ2YzJkdmNwcnIzNSIsInZlbm1vIjoib2ZmIn0=";
+	clientToken = token;
+//	alert(clientToken);
+		braintree.setup(clientToken, "dropin", {
 			container: "payment-form"
 		});  
 	});
@@ -179,7 +153,4 @@ $(document).ready(function(){
 }); 
 
 </script>
-<!--script type="text/javascript" src="https://daks2k3a4ib2z.cloudfront.net/561bdec5a10e88401184e9a4/js/webflow.fb47e8ec6.js"></script-->
-<!--[if lte IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
-<!--/body></html-->
 
