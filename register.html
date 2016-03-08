@@ -106,8 +106,6 @@ layout: default
 <div class="w-radio w-clearfix _2nd-radio-field">
 <input id="Multi-Publisher Account" type="radio" name="Account-Type" value="Multi-Publisher Account" data-name="Multi-Publisher Account" class="w-radio-input">
 <label for="Multi-Publisher Account" class="w-form-label radio-label">Multi-Publisher Account</label>
-<!--input id="multi-publisher-account" type="radio" name="multi-publisher-account" value="Multi-Publisher Account" data-name="Account Type" class="w-radio-input">
-<label for="Multi-Publisher Account" class="w-form-label radio-label">Multi-Publisher Account</label-->
 </div>
 <div class="radio-description">All the features of a VPaaS Account, plus get an API to create as many VPaaS Accounts as you need with centralized configuration &amp; consolidated billing across all accounts.</div>
 <ul class="w-list-unstyled">
@@ -123,11 +121,13 @@ layout: default
 </div>
 <p class="signup-body">By checking this box, you agree to Kaltura VPaaS Terms and Conditions as outlined here: <a class="terms-link" href="#">VPaaS Master License</a></p>
 </div>
-<div class="button-center-div">
+<div id="payment-fields">
 </br>
     <h3>Payment Options</h3>
     <div id="payment-form"></div>
 </br>
+</div>
+<div class="button-center-div">
 <input type="submit" id="submitButton" value="Submit" data-wait="Please wait..." data-ix="show-pick-account-type" class="w-button standard-button vpaas-signup-btn">
 </div>
 </form>
@@ -141,7 +141,8 @@ layout: default
 <script>
 
 $(document).ready(function(){
-    $.ajax({
+	$('#payment-fields').hide();
+	$.ajax({
 	type: "POST",
 	url: "https://vpaas.kaltura.com:8443/get_token.php"
 	}).done(function(token) {
@@ -150,7 +151,12 @@ $(document).ready(function(){
 			container: "payment-form"
 		});  
 	});
-
+    $("input[id='Multi-Publisher Account']").change(function(){
+	$('#payment-fields').show();
+    });
+    $("input[id='VPaaS Account']").change(function(){
+	$('#payment-fields').hide();
+    });
 }); 
 
 </script>
