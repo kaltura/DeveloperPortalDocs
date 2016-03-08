@@ -170,6 +170,7 @@ $(document).ready(function(){
 	url: "https://vpaas.kaltura.com:8443/get_token.php"
 	//data: {response: response}
 	}).done(function(token) {
+	alert(token);
 		braintree.setup(token, "dropin", {
 			container: "payment-form"
 		});  
