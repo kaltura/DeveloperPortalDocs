@@ -26,7 +26,39 @@ layout: default
 <script src="js/country.js"></script>
 
 </head>
-<body--><div class="w-section vpaas-sign-up-section">
+<body-->
+<script>
+  var handler = StripeCheckout.configure({
+    key: 'pk_test_O6gS2z5zwPnD0QZGiLSo6xR3',
+    //image: '/img/documentation/checkout/marketplace.png',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0FCqwVvjvg23uRGT8b_DmXJhXqsINDxg9yfs0OLAubpwB_auRRw',
+    locale: 'auto',
+    token: function(token) {
+      // Use the token to create the charge with a server-side script.
+      // You can access the token ID with `token.id`
+    }
+  });
+
+//  $('#submitButton').on('submit', function(e) {
+  function credit_pay() 
+  {
+    // Open Checkout with further options
+    handler.open({
+      name: 'Kaltura VPaaS',
+      description: 'Pay up!',
+      amount: 2000
+    });
+    //e.preventDefault();
+  }
+
+  // Close Checkout on page navigation
+  $(window).on('popstate', function() {
+    handler.close();
+  });
+</script>
+    
+    
+    <div class="w-section vpaas-sign-up-section">
 	<div class="w-container vpaas-signup-container">
 	    <h1 class="section-headings vpaas-signup-heading">Sign Up &nbsp;<span class="divider-span">|</span> &nbsp;<span class="teal-span">Kaltura VPaaS</span></h1>
     <div class="sml-circle-row-wrapper">
@@ -37,7 +69,7 @@ layout: default
     </div>
     <div class="w-form">
 		
-<form id="email-form" name="email-form" data-name="Email Form">
+	<form id="email-form" name="email-form" data-name="Email Form" action="javascript:credit_pay();">
 <div class="company-details-div">
 <div class="w-row form-row">
 <div class="w-col w-col-6">
@@ -147,7 +179,6 @@ layout: default
 <p class="signup-body">By checking this box, you agree to Kaltura VPaaS Terms and Conditions as outlined here: <a class="terms-link" href="#">VPaaS Master License</a></p>
 <!--div class="w-clearfix payment-notification"><span class="fa fa-exclamation-circle fa-lg"> Your</span> credit card number is incorrect.<span class="fa fa-times">.</span></div-->
 </div>
-<!--div class="w-button standard-button"><button id="customButton">Purchase</button></div-->
 <div class="button-center-div">
 <input type="submit" id="submitButton" value="Next" data-wait="Please wait..." data-ix="show-pick-account-type" class="w-button standard-button vpaas-signup-btn">
 </div>
@@ -158,33 +189,6 @@ layout: default
 <!--div class="signup-success"><h3 class="success-heading">Success!</h3><p class="signup-body success-body">You have successfully signed up for a %account-type% account. You will be redirected to login shortly...</p></div-->
 </div>
 </div>
-<script>
-  var handler = StripeCheckout.configure({
-    key: 'pk_test_O6gS2z5zwPnD0QZGiLSo6xR3',
-    //image: '/img/documentation/checkout/marketplace.png',
-    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0FCqwVvjvg23uRGT8b_DmXJhXqsINDxg9yfs0OLAubpwB_auRRw',
-    locale: 'auto',
-    token: function(token) {
-      // Use the token to create the charge with a server-side script.
-      // You can access the token ID with `token.id`
-    }
-  });
-
-  $('#submitButton').on('click', function(e) {
-    // Open Checkout with further options
-    handler.open({
-      name: 'Kaltura VPaaS',
-      description: 'Pay up!',
-      amount: 2000
-    });
-    e.preventDefault();
-  });
-
-  // Close Checkout on page navigation
-  $(window).on('popstate', function() {
-    handler.close();
-  });
-</script>
 <!--script type="text/javascript" src="https://daks2k3a4ib2z.cloudfront.net/561bdec5a10e88401184e9a4/js/webflow.fb47e8ec6.js"></script-->
 <!--[if lte IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
 <!--/body></html-->
