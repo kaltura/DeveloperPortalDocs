@@ -16,28 +16,28 @@ layout: default
 <div class="company-details-div">
 <div class="w-row form-row">
 <div class="w-col w-col-6">
-    <label for="First-Name-2" class="form-labels">First Name</label>
-    <input id="First-Name-2" type="text" placeholder="Joe" name="First-Name-2" data-name="First Name 2" required="required" class="w-input input-light">
+    <label for="First-Name" class="form-labels">First Name</label>
+    <input id="first-name" type="text" placeholder="Joe" name="first-name" data-name="First Name" required="required" class="w-input input-light">
     </div>
     <div class="w-col w-col-6">
-    <label for="Last-Name-2" class="form-labels">Last Name</label>
-    <input id="Last-Name-2" type="text" placeholder="Soap" name="Last-Name-2" required="required" data-name="Last Name 2" class="w-input input-light">
+    <label for="Last-Name" class="form-labels">Last Name</label>
+    <input id="last-name" type="text" placeholder="Soap" name="last-name" required="required" data-name="Last Name" class="w-input input-light">
     </div>
 </div>
 <div class="w-row form-row">
     <div class="w-col w-col-6">
-    <label for="email-2" class="form-labels">Work Email Address</label>
-    <input id="email-2" type="email" placeholder="joesoap@mediaco.com" name="email-2" data-name="Email 2" required="required" class="w-input input-light">
+    <label for="email" class="form-labels">Work Email Address</label>
+    <input id="email" type="email" placeholder="joesoap@mediaco.com" name="email" data-name="Email" required="required" class="w-input input-light">
     </div>
     <div class="w-col w-col-6">
-    <label for="Company-2" class="form-labels">Company</label>
-    <input id="Company-2" type="text" placeholder="MediaCo Inc." name="Company-2" required="required" data-name="Company 2" class="w-input input-light">
+    <label for="Company" class="form-labels">Company</label>
+    <input id="company" type="text" placeholder="MediaCo Inc." name="company" required="required" data-name="Company" class="w-input input-light">
     </div>
 </div>
 <div class="w-row form-row">
 <div class="w-col w-col-6">
-<label for="Industry-2" class="form-labels">Industry</label>
-<select id="Industry-2" name="Industry-2" required="required" data-name="Industry 2" class="w-select input-light">
+<label for="Industry" class="form-labels">Industry</label>
+<select id="industry" name="industry" required="required" data-name="Industry" class="w-select input-light">
 <option value="">Select one...</option>
 <option value="Education or EdTech">Education or EdTech</option>
 <option value="Media Owners &amp; Creators">Media Owners &amp; Creators</option>
@@ -62,19 +62,19 @@ layout: default
 </select>
 </div>
 <div class="w-col w-col-6">
-<label for="Contact-Phone-2" class="form-labels">Contact Phone</label><input id="Contact-Phone-2" type="text" placeholder="(XXX) XXX-XXXX" name="Contact-Phone-2" required="required" data-name="Contact Phone 2" class="w-input input-light">
+<label for="Contact-Phone" class="form-labels">Contact Phone</label><input id="contact-phone" type="text" placeholder="(XXX) XXX-XXXX" name="contact-phone" required="required" data-name="Contact Phone" class="w-input input-light">
 </div>
 </div>
 <div class="w-row form-row">
 <div class="w-col w-col-6">
 <div class="form-group valid-row">
 <label for="country" class="form-labels">Country</label>
-<select id="country" name="country" onchange="populateState()" data-name="Country 2" required="required" class="w-select input-light">
+<select id="country" name="country" onchange="populateState()" data-name="Country" required="required" class="w-select input-light">
 </select>
 </div>
 <div class="w-col w-col-6">
 <label for="state" class="form-labels">State</label>
-<select id="state" name="state" data-name="State 2" required="required" class="w-select input-light">
+<select id="state" name="state" data-name="State" required="required" class="w-select input-light">
 </select>
 <script type="text/javascript">initCountry(""); </script>
 </div>
@@ -85,12 +85,12 @@ layout: default
 <input id="Password" type="password" placeholder="**************" name="Password-1" data-name="Password 1" required="required" class="w-input input-light"-->
 </div>
 <div class="w-col w-col-6">
-<!--label for="Password-2" class="form-labels">Re-Type Your Password</label>
-<input id="Password-2" type="password" placeholder="**************" name="Password-2" required="required" data-name="Password 2" class="w-input input-light"-->
+<!--label for="Password" class="form-labels">Re-Type Your Password</label>
+<input id="Password" type="password" placeholder="**************" name="Password" required="required" data-name="Password" class="w-input input-light"-->
 </div>
 </div>
 <label for="Tel-us-what-you-are-building" class="form-labels">Tell Us About What You Are Building</label>
-<textarea id="Tel-us-what-you-are-building" placeholder="What are you building, tell us about your team, how does video fit into your application, etc." name="Tel-us-what-you-are-building" data-name="Tel us what you are building" required="required" class="w-input input-light"></textarea>
+<textarea id="description" placeholder="What are you building, tell us about your team, how does video fit into your application, etc." name="description" data-name="Tel us what you are building" required="required" class="w-input input-light"></textarea>
 </div>
 <div class="account-type-div">
 <div class="w-radio w-clearfix">
@@ -115,8 +115,8 @@ layout: default
 </div>
 <div>
 <div class="w-checkbox terms-checkbox">
-<input id="Terms-Checkbox-2" type="checkbox" name="Terms-Checkbox-2" data-name="Terms Checkbox 2" required="required" class="w-checkbox-input">
-<label for="Terms-Checkbox-2" class="w-form-label">Terms &amp; Conditions</label>
+<input id="Terms-Checkbox" type="checkbox" name="Terms-Checkbox" data-name="Terms Checkbox" required="required" class="w-checkbox-input">
+<label for="Terms-Checkbox" class="w-form-label">Terms &amp; Conditions</label>
 </div>
 </div>
 <p class="signup-body">By checking this box, you agree to Kaltura VPaaS Terms and Conditions as outlined here: <a class="terms-link" href="#">VPaaS Master License</a></p>
@@ -142,11 +142,8 @@ $(document).ready(function(){
     $.ajax({
 	type: "POST",
 	url: "https://vpaas.kaltura.com:8443/get_token.php"
-	//data: {response: response}
 	}).done(function(token) {
-	//var clientToken = "eyJ2ZXJzaW9uIjoyLCJhdXRob3JpemF0aW9uRmluZ2VycHJpbnQiOiIyYmQ5MmY1ODZjM2VjNmU2ZGZhYmE4ODc4MDFmYmY4YzEzMDhiMTJkZjc3MDQ3MTQ5Y2NhMTg0YzViNDMxNWRlfGNyZWF0ZWRfYXQ9MjAxNi0wMy0wOFQxMzozMjoxNy4wMjg2OTkzNTErMDAwMFx1MDAyNm1lcmNoYW50X2lkPWZqdG1idmMyZHZjcHJyMzVcdTAwMjZwdWJsaWNfa2V5PXdzc2Z5bTU2ZmJ6enA5cGsiLCJjb25maWdVcmwiOiJodHRwczovL2FwaS5zYW5kYm94LmJyYWludHJlZWdhdGV3YXkuY29tOjQ0My9tZXJjaGFudHMvZmp0bWJ2YzJkdmNwcnIzNS9jbGllbnRfYXBpL3YxL2NvbmZpZ3VyYXRpb24iLCJjaGFsbGVuZ2VzIjpbXSwiZW52aXJvbm1lbnQiOiJzYW5kYm94IiwiY2xpZW50QXBpVXJsIjoiaHR0cHM6Ly9hcGkuc2FuZGJveC5icmFpbnRyZWVnYXRld2F5LmNvbTo0NDMvbWVyY2hhbnRzL2ZqdG1idmMyZHZjcHJyMzUvY2xpZW50X2FwaSIsImFzc2V0c1VybCI6Imh0dHBzOi8vYXNzZXRzLmJyYWludHJlZWdhdGV3YXkuY29tIiwiYXV0aFVybCI6Imh0dHBzOi8vYXV0aC52ZW5tby5zYW5kYm94LmJyYWludHJlZWdhdGV3YXkuY29tIiwiYW5hbHl0aWNzIjp7InVybCI6Imh0dHBzOi8vY2xpZW50LWFuYWx5dGljcy5zYW5kYm94LmJyYWludHJlZWdhdGV3YXkuY29tIn0sInRocmVlRFNlY3VyZUVuYWJsZWQiOmZhbHNlLCJwYXlwYWxFbmFibGVkIjp0cnVlLCJwYXlwYWwiOnsiZGlzcGxheU5hbWUiOiJLYWx0dXJhIiwiY2xpZW50SWQiOm51bGwsInByaXZhY3lVcmwiOiJodHRwOi8vZXhhbXBsZS5jb20vcHAiLCJ1c2VyQWdyZWVtZW50VXJsIjoiaHR0cDovL2V4YW1wbGUuY29tL3RvcyIsImJhc2VVcmwiOiJodHRwczovL2Fzc2V0cy5icmFpbnRyZWVnYXRld2F5LmNvbSIsImFzc2V0c1VybCI6Imh0dHBzOi8vY2hlY2tvdXQucGF5cGFsLmNvbSIsImRpcmVjdEJhc2VVcmwiOm51bGwsImFsbG93SHR0cCI6dHJ1ZSwiZW52aXJvbm1lbnROb05ldHdvcmsiOnRydWUsImVudmlyb25tZW50Ijoib2ZmbGluZSIsInVudmV0dGVkTWVyY2hhbnQiOmZhbHNlLCJicmFpbnRyZWVDbGllbnRJZCI6Im1hc3RlcmNsaWVudDMiLCJiaWxsaW5nQWdyZWVtZW50c0VuYWJsZWQiOnRydWUsIm1lcmNoYW50QWNjb3VudElkIjoia2FsdHVyYSIsImN1cnJlbmN5SXNvQ29kZSI6IlVTRCJ9LCJjb2luYmFzZUVuYWJsZWQiOmZhbHNlLCJtZXJjaGFudElkIjoiZmp0bWJ2YzJkdmNwcnIzNSIsInZlbm1vIjoib2ZmIn0=";
 	clientToken = token;
-//	alert(clientToken);
 		braintree.setup(clientToken, "dropin", {
 			container: "payment-form"
 		});  
