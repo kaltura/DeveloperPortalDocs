@@ -1142,6 +1142,10 @@ figure.highlight {
   background-color: #e7e7e7;
 }
 
+.vpaas-signup-heading {
+  margin-bottom: 30px;
+}
+
 .vpaas-signup-container {
   margin-top: 0px;
   margin-bottom: 0px;
@@ -1171,6 +1175,10 @@ figure.highlight {
 
 .teal-span {
   color: #188093;
+}
+
+.company-details-div .w-row .form-row {
+  margin-bottom: 25px;
 }
 
 .sign-up-subheadings {
