@@ -1185,6 +1185,11 @@ figure.highlight {
   margin-bottom: 25px;
 }
 
+.no-column-padding {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
 .sign-up-subheadings {
   max-width: 30%;
   margin-right: auto;
