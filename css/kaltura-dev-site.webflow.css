@@ -1338,6 +1338,10 @@ figure.highlight {
   text-decoration: none;
 }
 
+.button-center-div {
+  margin-top: 40px;
+}
+
 .signup-body {
   font-family: proxima-nova, sans-serif;
   text-align: left;
