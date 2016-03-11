@@ -1245,6 +1245,19 @@ figure.highlight {
   padding-top: 50px;
 }
 
+#payment-fields h3 {
+  font-family: proxima-nova, sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.add-payment-method-form-view label {
+  font-family: proxima-nova, sans-serif;
+  font-weight: 400;
+}
+
 .payment-details-heading {
   display: block;
   width: 20%;
