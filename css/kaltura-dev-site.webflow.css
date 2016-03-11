@@ -1253,7 +1253,7 @@ figure.highlight {
   color: #333;
 }
 
-.add-payment-method-form-view label {
+.add-payment-method-form-view .field-name {
   font-family: proxima-nova, sans-serif;
   font-weight: 400;
 }
