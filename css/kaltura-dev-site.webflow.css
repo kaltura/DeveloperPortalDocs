@@ -1240,6 +1240,11 @@ figure.highlight {
   text-transform: uppercase;
 }
 
+.account-type-div {
+  border-top: dashed 1px #ccc;
+  padding-top: 50px;
+}
+
 .payment-details-heading {
   display: block;
   width: 20%;
