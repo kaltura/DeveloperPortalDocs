@@ -25,7 +25,9 @@ Substitute these tokens:
 * {partner_id} - your Kaltura partner id (retrieved from KMC>Settings tab)
 * {uiconf_id} - the desired Kaltura player id  (retrieved from KMC>Studio tab)
 
-`<script src="//cdnapisec.kaltura.com/p/{partner_id}/sp/{partnerId}00/embedIframeJs/uiconf_id/{uiconf_id}/partner_id/{partnerId}"></script>`
+```html
+<script src="//cdnapisec.kaltura.com/p/{partner_id}/sp/{partnerId}00/embedIframeJs/uiconf_id/{uiconf_id}/partner_id/{partnerId}"></script>
+```
 
 After you've included the Kaltura player library, the following kWidget API embed methods will be available to you:
 
