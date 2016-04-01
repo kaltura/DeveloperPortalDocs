@@ -39,13 +39,13 @@ After you've included the Kaltura player library, the following kWidget API embe
 #### The kWidget Settings Object
 | parameter | type | significance | description |
 |:---|:---|:---|
-| `targetId` | String | mandatory | The DOM player target id attribute string if not defined as top level param.
-| `wid` | String |mandatory | The Kaltura widget id. Most commonly, this is set to Kaltura account id (aka partnerId) prefixed by underscore, e.g. `_8111441`. (Refer to the partner service, or visit the KMC>Settings tab to get your account partnerId).
-| `entry_id` | String | mandatory | The entry id of the media item (entry) to play. Can be left empty for a JavaScript based entryId. (Refer to the entry service, or visit the KMC>Content tab for the list of media entries in your account). If this is set to a playlistId, the Kaltura backend will stitch the playlist on the fly, and the player will play back the playlist as if it was a single media entry (Only manual playlists accepted. Refer to the playlist service or visit KMC>Content>Playlists for the list of playlists in your account).
-| `flashvars` | Object | mandatory | Runtime configuration object to set various player configurations and properties. These settings can override arbitrary UIVars and plugin configurations.
-| `uiconf_id` | Number | Optional | The id of the Kaltura player to use (Refer to the uiconf service or visit KMC>Studio for list of players in your account).
-| `readyCallback` | Function | Optional | Local callback method to be called once player is ready for bindings. Player id is passes as an argument. See live example
-| `cache_st` | timestamp | Optional | Only set this in testing or development mode when performance is not required. If set to now+10min will rebuild the player instead of serving the last instance from cache. Use only for testing while making changes to the player. Do not use this in production.
+| `targetId` | String | mandatory | The DOM player target id attribute string if not defined as top level param. |
+| `wid` | String |mandatory | The Kaltura widget id. Most commonly, this is set to Kaltura account id (aka partnerId) |  prefixed by underscore, e.g. `_8111441`. (Refer to the partner service, or visit the KMC>Settings tab to get your account partnerId). | 
+| `entry_id` | String | mandatory | The entry id of the media item (entry) to play. Can be left empty for a JavaScript based entryId. (Refer to the entry service, or visit the KMC>Content tab for the list of media entries in your account). If this is set to a playlistId, the Kaltura backend will stitch the playlist on the fly, and the player will play back the playlist as if it was a single media entry (Only manual playlists accepted. Refer to the playlist service or visit KMC>Content>Playlists for the list of playlists in your account). |
+| `flashvars` | Object | mandatory | Runtime configuration object to set various player configurations and properties. These settings can override arbitrary UIVars and plugin configurations. |
+| `uiconf_id` | Number | Optional | The id of the Kaltura player to use (Refer to the uiconf service or visit KMC>Studio for list of players in your account). |
+| `readyCallback` | Function | Optional | Local callback method to be called once player is ready for bindings. Player id is passed as an argument. |
+| `cache_st` | timestamp | Optional | Only set this in testing or development mode when performance is not required. If set to now+10min will rebuild the player instead of serving the last instance from cache. Use only for testing while making changes to the player. Do not use this in production. |
 
 ### Obtaining a reference to the embedded player
 In order to communicate with embedded player instances via the JavaScript API, a reference to the player instance must be retrieved. To gain a reference to the player,  you should implement the `readyCallback` function. `readyCallback` is called when the player was successfully rendered to the DOM and is ready to accept API calls. 
