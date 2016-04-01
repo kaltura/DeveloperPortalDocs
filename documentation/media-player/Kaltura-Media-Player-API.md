@@ -80,6 +80,7 @@ kWidget.embed({
 
 ## Register to player events (hooks)
 You can register to player events using the "kBind" method and un-register using the "kUnbind" method. 
+
 ```javascript
 kWidget.addReadyCallback( function( playerId ){
 	var kdp = document.getElementById( playerId );
@@ -93,6 +94,7 @@ kWidget.addReadyCallback( function( playerId ){
 	});
 });
 ```
+
 ### Using event namespaces
 It is highly recommended to define your own event namespaces when registering to player event. 
 This will prevent overriding event handlers when registering and unregistering events with multiple player embeds on the same page. 
