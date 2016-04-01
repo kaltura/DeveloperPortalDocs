@@ -37,6 +37,7 @@ After you've included the Kaltura player library, the following kWidget API embe
 * [**`settings`:Object**](#the-kwidget-settings-object) - Object of settings properties to be used when building and rendering the player. | dynamic embed recipe
 
 #### The kWidget Settings Object
+
 | parameter | type | significance | description |
 |:---|:---|:---|
 | `targetId` | String | mandatory | The DOM player target id attribute string if not defined as top level param. |
