@@ -56,7 +56,7 @@ In order to communicate with embedded player instances via the JavaScript API, a
 There are two ways to implement the `readyCallback` function:
 
 #### Registering via the global library facade
-```
+```javascript
 kWidget.addReadyCallback( function( playerId ){
     var kdp = document.getElementById( playerId ); 
     // kdp var now holds the player reference
@@ -65,7 +65,7 @@ kWidget.addReadyCallback( function( playerId ){
 This will register a global function which will be called once for every player instance that will be rendered on the page. 
 
 #### Passing handler function to each individual embed call
-```
+```javascript
 kWidget.embed({
     'targetId': 'kaltura_player',
     'wid': '_243342',
@@ -80,7 +80,7 @@ kWidget.embed({
 
 ## Register to player events (hooks)
 You can register to player events using the "kBind" method and un-register using the "kUnbind" method. 
-```
+```javascript
 kWidget.addReadyCallback( function( playerId ){
 	var kdp = document.getElementById( playerId );
 	var foo = "bar";
@@ -97,11 +97,11 @@ kWidget.addReadyCallback( function( playerId ){
 It is highly recommended to define your own event namespaces when registering to player event. 
 This will prevent overriding event handlers when registering and unregistering events with multiple player embeds on the same page. 
 To use namespaces, postfix the event name with a dot and some alphanumeric string. For example: 
-```
+```javascript
 kdp.kBind( "doPlay.myCustomNameSpace", function(){ ... });
 ```
 Namespaces also provide the ability to un-register all events in the same namespace in one single call to kUnbind. For example:
-```
+```javascript
 kdp.kUnbind('.myCustomNameSpace');
 ```
 > Read more about event namespaces in the [jQuery documentation](https://api.jquery.com/event.namespace/). 
@@ -110,7 +110,7 @@ kdp.kUnbind('.myCustomNameSpace');
 To ensure that the player has been rendered and initialized properly before invoking player methods or modifying player properties register to the player `playerReady` event.  This event is dispatched once all of the player UI and plugins were loaded and playback is ready to begin playback.
 
 The best practice is to register to this event before calling any additional API method. Register to the `playerReady` event using the kBind method: 
-```
+```javascript
 kWidget.addReadyCallback( function( playerId ){
     var kdp = document.getElementById( playerId );
     kdp.kBind( 'playerReady.myNamespace', function(){
@@ -149,7 +149,7 @@ Below is a list of the most commonly used player events triggered during typical
 | `onChangeMediaDone`              | n/a              | Change media operation completed                                                                                                                       |
 
 The following code example shows how the above events are triggered, their data and sequence by throwing log messages to the browser's console (use "Kaltura player" in the string filter):
-```
+```html
 <div id="kaltura_player" style="width:400px;height:330px;"></div>
 <script>
 kWidget.embed({
@@ -196,7 +196,7 @@ When loading and placing ads, the player dispatches many ad related events that 
 ## Invoking player actions
 Invoking player actions is done by calling the `sendNotification` method, passing the desired action name and respective parameters. 
 The notifications sent to the player instruct the player and any loaded plugins to perform an action, such as play, seek, or pause.
-```
+```javascript
 kWidget.addReadyCallback( function( playerId ){
     var kdp = document.getElementById( playerId );
     kdp.kBind( 'playerReady.myNamespace', function(){
@@ -218,7 +218,7 @@ kWidget.addReadyCallback( function( playerId ){
 The Kaltura player allows evaluating player properties using a curly brackets expressions syntax, using the `evaluate` command.
 This feature allows you to get player properties at real time during playback thus gaining information about player, media state and metadata.
 
-```
+```javascript
 kWidget.addReadyCallback(function( playerId ){
 		var kdp = document.getElementById( playerId );
 		// alert the entry name
@@ -256,7 +256,7 @@ Beyond basic player properties such as "playerVersion" or "duration", the Kaltur
 When evaluating expressions, you can apply formatters to format the returned value using any of the available formatting functions or by adding custom formatters. 
 Formatters are applied to evaluated properties by adding pipe (`|`) and the name of the formatters after the property. 
 
-```
+```javascript
 // will print "video was watched 100000 times":
 kdp.evaluate('video was watched {mediaProxy.entry.views} times');
 
@@ -292,11 +292,11 @@ To modify player properties during runtime, use the `setKDPAttribute` command.  
 For example: 
 
 * To change the list of media items (entries) that will show in the Related Videos screen:
-```
+```javascript
 kdp.setKDPAttribute('related', 'entryList', '0_33vkwid6,1_18leun9q,1_23pqn2nu');
 ```
 * To hide the scrubber:
-```
+```javascript
 kdp.setKDPAttribute('scrubber', 'visible', false);
 ```
 
