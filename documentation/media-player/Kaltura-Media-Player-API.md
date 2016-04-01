@@ -98,20 +98,26 @@ kWidget.addReadyCallback( function( playerId ){
 ### Using event namespaces
 It is highly recommended to define your own event namespaces when registering to player event. 
 This will prevent overriding event handlers when registering and unregistering events with multiple player embeds on the same page. 
+
 To use namespaces, postfix the event name with a dot and some alphanumeric string. For example: 
+
 ```javascript
 kdp.kBind( "doPlay.myCustomNameSpace", function(){ ... });
 ```
+
 Namespaces also provide the ability to un-register all events in the same namespace in one single call to kUnbind. For example:
+
 ```javascript
 kdp.kUnbind('.myCustomNameSpace');
 ```
+
 > Read more about event namespaces in the [jQuery documentation](https://api.jquery.com/event.namespace/). 
 
 ### Registering to the `playerReady` event
 To ensure that the player has been rendered and initialized properly before invoking player methods or modifying player properties register to the player `playerReady` event.  This event is dispatched once all of the player UI and plugins were loaded and playback is ready to begin playback.
 
 The best practice is to register to this event before calling any additional API method. Register to the `playerReady` event using the kBind method: 
+
 ```javascript
 kWidget.addReadyCallback( function( playerId ){
     var kdp = document.getElementById( playerId );
@@ -151,6 +157,7 @@ Below is a list of the most commonly used player events triggered during typical
 | `onChangeMediaDone`              | n/a              | Change media operation completed                                                                                                                       |
 
 The following code example shows how the above events are triggered, their data and sequence by throwing log messages to the browser's console (use "Kaltura player" in the string filter):
+
 ```html
 <div id="kaltura_player" style="width:400px;height:330px;"></div>
 <script>
@@ -198,6 +205,7 @@ When loading and placing ads, the player dispatches many ad related events that 
 ## Invoking player actions
 Invoking player actions is done by calling the `sendNotification` method, passing the desired action name and respective parameters. 
 The notifications sent to the player instruct the player and any loaded plugins to perform an action, such as play, seek, or pause.
+
 ```javascript
 kWidget.addReadyCallback( function( playerId ){
     var kdp = document.getElementById( playerId );
@@ -269,6 +277,7 @@ kdp.evaluate('video was watched {mediaProxy.entry.views|numberWithCommas} times'
 > **Using formatters in properties:**
 > Formatters can be used in configuration properties as well. Simply passing the curly braces notation along with piped formatters in configuration properties in flashvars or UIVars will apply formatting to the properties.
 > For example, to set the title bar to show the entry name and number of times it was watched (eg. "My Awesome Video (10,000)"), add to the flashvars the following property:
+>
 > ```
 > "titleLabel": { 
 	"plugin" : true,
@@ -294,10 +303,13 @@ To modify player properties during runtime, use the `setKDPAttribute` command.  
 For example: 
 
 * To change the list of media items (entries) that will show in the Related Videos screen:
+
 ```javascript
 kdp.setKDPAttribute('related', 'entryList', '0_33vkwid6,1_18leun9q,1_23pqn2nu');
 ```
+
 * To hide the scrubber:
+
 ```javascript
 kdp.setKDPAttribute('scrubber', 'visible', false);
 ```
