@@ -240,6 +240,7 @@ kWidget.addReadyCallback(function( playerId ){
 Beyond basic player properties such as "playerVersion" or "duration", the Kaltura player exposes access to nested player objects with many additional properties. The objects are nested JSON objects, read from the evaluate method using dot syntax (e.g. `myObj.nestedObj.property`).
 
 ### Commonly used data objects
+
 | Object           | Description | 
 |:---|:---|
 | `configProxy`      | The player configuration object. Allows access to all UI vars and plugin properties   |
@@ -278,7 +279,7 @@ kdp.evaluate('video was watched {mediaProxy.entry.views|numberWithCommas} times'
 > Formatters can be used in configuration properties as well. Simply passing the curly braces notation along with piped formatters in configuration properties in flashvars or UIVars will apply formatting to the properties.
 > For example, to set the title bar to show the entry name and number of times it was watched (eg. "My Awesome Video (10,000)"), add to the flashvars the following property:
 >
-> ```
+> ```javascript
 > "titleLabel": { 
 	"plugin" : true,
 	"text" :  "{mediaProxy.entry.name} ({mediaProxy.entry.views|numberWithCommas})" 
