@@ -35,8 +35,8 @@ After you've included the Kaltura player library, the following kWidget API embe
 * `kWidget.thumbEmbed(targetId, settings)`: This method will render a thumbnail and play button to the `targetId` DOM element, and only render the full player when the user clicks on the play button. Thumbnail embed will pass all the configuration to the kWidget.embed when the play button is clicked. The player context menu can be disabled by setting the `EmbedPlayer.DisableContextMenu` UIVar to true either via flashvars or Player Studio UIVars.
 
 #### The embed API methods parameters
-* **`targetId`:String** - Id of the DOM element where the player will be rendered (the id will be replaced with the player - any contents of this element will be removed when the player is rendered). 
-* [**`settings`:Object**](#the-kwidget-settings-object) - Object of settings properties to be used when building and rendering the player. | dynamic embed recipe
+* `targetId`:String - Id of the DOM element where the player will be rendered (the id will be replaced with the player - any contents of this element will be removed when the player is rendered). 
+* [`settings`](#the-kwidget-settings-object):Objec - Object of settings properties to be used when building and rendering the player. | dynamic embed recipe
 
 #### The kWidget Settings Object
 
