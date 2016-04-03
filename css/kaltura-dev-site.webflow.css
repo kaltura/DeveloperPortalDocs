@@ -756,7 +756,7 @@ h4 {
 
 .lastcommittable tbody tr td {
   margin-bottom: 8px;
-  border: none;
+  border: none !important;
 }
 
 .commit-author {
