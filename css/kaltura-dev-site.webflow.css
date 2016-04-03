@@ -757,6 +757,7 @@ h4 {
 .lastcommittable tbody tr td {
   margin-bottom: 8px;
   border: none !important;
+  padding-left: 0px !important;
 }
 
 .commit-author {
@@ -794,6 +795,7 @@ thead tr th {
   font-family: proxima-nova, sans-serif;
   color: #575756;
   letter-spacing: 0.2px;
+  line-height: 1.8em;
 }
 
 .post-content img {
@@ -809,6 +811,7 @@ thead tr th {
   font-family: proxima-nova, sans-serif;
   color: #575756;
   letter-spacing: 0.2px;
+  line-height: 1.8em;
 }
 
 .post-content ul {
@@ -841,6 +844,7 @@ figure.highlight {
 td {
   padding: 10px;
   border: 1px solid #ccc;
+  line-height: 1.8em;
 }
 
 .lucybot {
