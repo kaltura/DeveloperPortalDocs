@@ -772,7 +772,7 @@ tr:nth-child(even) {
   background-color: #f7f7f7;
 }
 
-thead {
+thead th {
   padding: 10px;
   border: 1px solid #ccc;
 }
