@@ -756,6 +756,7 @@ h4 {
 
 .lastcommittable {
   margin-bottom: 8px;
+  border: none;
 }
 
 .commit-author {
@@ -804,7 +805,7 @@ thead tr th {
 }
 
 .post-content li {
-  margin-bottom: 6px;
+  margin-bottom: 13px;
   font-family: proxima-nova, sans-serif;
   color: #575756;
   letter-spacing: 0.2px;
