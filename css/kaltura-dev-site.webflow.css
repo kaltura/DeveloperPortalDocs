@@ -768,6 +768,15 @@ table {
   margin-bottom: 25px;
 }
 
+tr:nth-child(even) {
+  background-color: #f7f7f7;
+}
+
+thead {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
 .post-content h1, .post-content h2, .post-content h3, .post-content h4  {
   display: inline-block;
   float: none;
