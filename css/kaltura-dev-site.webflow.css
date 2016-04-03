@@ -754,7 +754,7 @@ h4 {
   margin-bottom: 8px;
 }
 
-.lastcommittable {
+.lastcommittable tbody tr td {
   margin-bottom: 8px;
   border: none;
 }
