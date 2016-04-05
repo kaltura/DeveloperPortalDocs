@@ -41,7 +41,7 @@ After you've included the Kaltura player library, the following kWidget API embe
 
 #### The kWidget Settings Object
 
-| parameter       | type        | required/optional         | description           |
+| parameter       | type        | required         | description           |
 |:---|:---|:---|:---|
 | `targetId` | String | mandatory | The DOM player target id attribute string if not defined as top level param. |
 | `wid` | String | mandatory | The Kaltura widget id. Most commonly, this is set to Kaltura account id (aka partnerId)  prefixed by underscore, e.g. `_8111441`. (Refer to the partner service, or visit the KMC>Settings tab to get your account partnerId). | 
