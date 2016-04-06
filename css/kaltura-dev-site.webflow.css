@@ -1713,8 +1713,7 @@ html.w-mod-js *[data-ix="search-input-hide-on-load"] {
     margin-top: 0px;
     border-top: 1px none #000;
   }
- .template-page-nav-column {
-    display: none;
+  .template-page-nav-column {
     margin-top: 0px;
   }
   .template-page-content-column {
