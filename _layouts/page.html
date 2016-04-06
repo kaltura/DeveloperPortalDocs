@@ -9,6 +9,7 @@ layout: default
 <div class="w-section side-nav-section">
     <div class="w-container">
       <div class="w-row body-columns">
+        <input value="Categories" class="standard-button mobile-doc-btn">
         <div class="w-col w-col-3 template-page-nav-column">
 {% for cat_hash in site.cats %}
     <div class="sidenav-grp-7" id="/{{ cat_hash[1] }}" onClick="show_hide_div('/{{ cat_hash[1] }}')">
