@@ -1735,32 +1735,6 @@ html.w-mod-js *[data-ix="search-input-hide-on-load"] {
     min-height: 0px;
   }
 
-  .standard-button {
-    display: block;
-    margin-top: 25px;
-    margin-right: 18px;
-    margin-left: 18px;
-  }
-  .standard-button:hover {
-    -webkit-transform: none;
-    -ms-transform: none;
-    transform: none;
-  }
-  .standard-button.mobile-topics {
-    width: 94%;
-    margin-right: auto;
-    margin-bottom: 15px;
-    margin-left: auto;
-    border: 1px solid #ccc;
-    background-color: #e7e7e7;
-    color: #188093;
-  }
-
-   .fa.fa-chevron-down {
-    margin-top: 3px;
-    float: right;
-  }
-
   .vpaas-sign-up-section {
     padding-top: 0px;
     padding-bottom: 0px;
