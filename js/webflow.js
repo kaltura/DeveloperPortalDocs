@@ -4364,7 +4364,7 @@ Webflow.require('ix').init([
   {"slug":"search-button","name":"Search Button","value":{"style":{},"triggers":[{"type":"click","selector":".nav-links","stepsA":[{"display":"none"}],"stepsB":[]},{"type":"click","selector":".search-input","stepsA":[{"display":"inline-block","opacity":1,"transition":"opacity 500ms ease 0ms"}],"stepsB":[]},{"type":"click","selector":".search-close","stepsA":[{"display":"inline-block"}],"stepsB":[]},{"type":"click","selector":".dropdown-wrapper","stepsA":[{"display":"none"}],"stepsB":[]}]}},
   {"slug":"search-bar","name":"Search Bar","value":{"style":{"display":"none","opacity":0},"triggers":[]}},
   {"slug":"close-search","name":"Close Search","value":{"style":{"display":"none"},"triggers":[{"type":"click","selector":".search-input","stepsA":[{"display":"none"}],"stepsB":[]},{"type":"click","selector":".nav-links","stepsA":[{"display":"inline-block"}],"stepsB":[]},{"type":"click","stepsA":[{"display":"none"}],"stepsB":[]},{"type":"click","selector":".dropdown-wrapper","stepsA":[{"display":"inline-block"}],"stepsB":[]}]}},
-  {"slug":"search-input-hide-on-load","name":"Search input hide on load","value":{"style":{"display":"none"},"triggers":[]}}
+  {"slug":"search-input-hide-on-load","name":"Search input hide on load","value":{"style":{"display":"none"},"triggers":[]}},
   {"slug":"show-temp-page-nav-column","name":"show temp page nav column","value":{"style":{},"triggers":[{"type":"click","selector":".template-page-nav-column","stepsA":[{"display":"inline-block","opacity":1,"transition":"opacity 500ms ease 0ms"}],"stepsB":[{"display":"none"}]}]}}
 ]);
 
