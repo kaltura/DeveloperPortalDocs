@@ -1762,6 +1762,11 @@ html.w-mod-js *[data-ix="search-input-hide-on-load"] {
     display: inline-block;
   }
 
+  .fa.fa-chevron-down {
+    margin-top: 3px;
+    float: right;
+  }
+
   .mobilebtn {
     display: block;
   }
