@@ -14,8 +14,10 @@ module Jekyll
           site.config['git'] = site_data
           (site.pages + site.posts.docs).each do |page|
           #(site.collections["pages"].docs + site.collections["posts"].docs).each do |page|
-	    #print page.path.shellescape + "\n"
-            page.data['git'] = page_data(page.path.shellescape)
+	    if page.path != 'search.md'
+	    	#print page.path.shellescape + "\n"
+            	page.data['git'] = page_data(page.path.shellescape)
+	    end
           end
         end
         
