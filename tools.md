@@ -5,7 +5,7 @@ permalink: /tools/
 type: header
 ---
 
-Here is a line to test the hook...
+Here is a line to test the hook..
 
 
 
