@@ -3,6 +3,21 @@ layout: default
 ---
   <!--link rel="stylesheet" href="{{ site.baseurl }}/site.css"-->
 <script>
+function submit_feedback()
+{
+	issue=document.getElementById("Issue-Description");
+	email=document.getElementById("email");
+	name=document.getElementById("name");
+        $.ajax({
+                  type: 'GET',
+                  url: '{{ site.url }}:8443/mailme.php',
+                  data: {'issue': issue, 'email':email,'name':name},
+                  success: function(data){
+			post_message=document.getElementById("post_message");
+			post_message.innerHTML='<p>'+data+'</p>';
+		  }
+	});
+}
 </script>
 <article>
 
@@ -96,12 +111,9 @@ layout: default
                 			<textarea id="Issue-Description" placeholder="Describe the issue in as much detail as possible" name="Issue-Description" data-name="Issue Description" required="required" class="w-input form-fields"></textarea>
 					<input type="submit" value="Submit" data-wait="Please wait..." class="w-button standard-button">
               			</form>
-              			<div class="w-form-done">
+              			<div class="w-form-done" id="post_message">
                 			<p>Thank you! Your submission has been received!</p>
              			</div>
-              			<div class="w-form-fail">
-                			<p>Oops! Something went wrong while submitting the form</p>
-              			</div>
             		</div>
   				</div>
   			</div>
