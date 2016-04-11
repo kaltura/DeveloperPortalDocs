@@ -552,7 +552,9 @@ function populateState() {
         selObj = document.getElementById('state');
         selObj.options[0] = new Option('Select State','');
         selObj.selectedIndex = 0;
-      }
+      }else{
+	document.getElementById("statediv").style.visibility = "hidden";
+	}
       if ( stateCode != '' ) {
         selObj.options[optionCntr] = new Option(stateName, stateCode);
       }
