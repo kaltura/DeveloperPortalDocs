@@ -552,8 +552,6 @@ function populateState() {
         selObj = document.getElementById('state');
         selObj.options[0] = new Option('Select State','');
         selObj.selectedIndex = 0;
-      }else{
-	document.getElementById("statediv").style.visibility = "hidden";
 	}
       if ( stateCode != '' ) {
         selObj.options[optionCntr] = new Option(stateName, stateCode);
@@ -568,6 +566,8 @@ function populateState() {
   }
   // If the country has no states, change the select to a text box
   if ( ! foundState ) {
+
+	document.getElementById("statediv").style.visibility = "hidden";
     parentObj = document.getElementById('state').parentNode;
     parentObj.removeChild(selObj);
   // Create the Input Field
