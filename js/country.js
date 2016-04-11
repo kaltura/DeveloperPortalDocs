@@ -541,6 +541,7 @@ function populateState() {
   if (document.getElementById('country').value == countryCode && countryCode != '' ) {
     // If it's a input element, change it to a select
       if ( selObj.type == 'text' ) {
+	document.getElementById("statediv").style.visibility = "visible";
         parentObj = document.getElementById('state').parentNode;
         parentObj.removeChild(selObj);
         var inputSel = document.createElement("SELECT");
