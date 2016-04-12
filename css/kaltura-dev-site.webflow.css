@@ -1172,6 +1172,181 @@ td {
   color: #fff;
 }
 
+.kstart-intro-section {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  background-color: transparent;
+  background-image: url('../images/KStart-Header-Background_30opac.png');
+  background-position: 0px 0px;
+  background-size: contain;
+}
+
+.kstart-program-section {
+  padding-top: 70px;
+  padding-bottom: 0px;
+  background-color: #f3f3f3;
+  background-image: url('../images/KStart-Rocket-3.png');
+  background-position: 50% 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+.kstart-faq-section {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  background-color: #f3f3f3;
+}
+
+.kstart-header {
+  font-family: proxima-nova, sans-serif;
+  color: #188093;
+  font-size: 47px;
+  font-weight: 400;
+}
+
+.kstart-caption {
+  font-family: proxima-nova, sans-serif;
+  line-height: 24px;
+}
+
+.kstart-program-div {
+  margin-right: auto;
+  margin-bottom: 70px;
+  margin-left: auto;
+  padding: 20px 50px;
+  background-color: #fff;
+  box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, .1);
+  text-align: center;
+}
+
+.kstart-program-headers {
+  margin-bottom: 25px;
+  font-family: proxima-nova, sans-serif;
+  color: #188093;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+.kstart-program-li {
+  overflow: hidden;
+  max-height: 90px;
+  padding: 30px;
+  border-bottom: 1px dotted #ccc;
+  font-family: proxima-nova, sans-serif;
+  font-weight: 400;
+  text-align: center;
+}
+
+.kstart-program-column {
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+.kstart-program-column.column-1 {
+  padding-right: 35px;
+}
+
+.kstart-program-column.column-2 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 35px;
+}
+
+.kstart-faq-heading {
+  padding-left: 0px;
+  border-bottom-style: none;
+  color: #188093;
+}
+
+.kstart-faq-description {
+  font-family: proxima-nova, sans-serif;
+  line-height: 23px;
+}
+
+.kstart-faq-div {
+  margin-bottom: 35px;
+  padding-right: 29px;
+}
+
+.blog-headings {
+  margin-top: 0px;
+  font-family: proxima-nova, sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+.kstart-apply-section {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  background-color: #fff;
+  -webkit-transition: opacity 500ms ease-in-out;
+  transition: opacity 500ms ease-in-out;
+}
+
+.kstart-accelerator-section {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.kstart-header-span {
+  color: #f7a600;
+}
+
+.form-label-light {
+  margin-top: 25px;
+  margin-bottom: 10px;
+  font-family: proxima-nova, sans-serif;
+  color: #fff;
+  font-weight: 400;
+}
+
+.button-center-div {
+  max-width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
+.input-dark {
+  border: 1px none #115f6d;
+  background-color: #146e7e;
+  color: #fff;
+}
+
+.input-dark:focus {
+  color: #fff;
+}
+
+.kstart-qualification-text {
+  padding: 10px;
+  font-family: proxima-nova, sans-serif;
+  font-size: 18px;
+  line-height: 33px;
+  text-align: center;
+}
+
+.kstart-logo-slider-wrapper {
+  height: 150px;
+  background-color: transparent;
+}
+
+.center-text-div {
+  max-width: auto;
+  margin-top: 37px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
+.kstart-logos {
+  width: 75%;
+  margin-left: 0px;
+  text-align: left;
+}
+
 .vpaas-sign-up-section {
   padding-top: 70px;
   padding-bottom: 70px;
