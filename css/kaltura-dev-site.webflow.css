@@ -1618,6 +1618,14 @@ td {
   line-height: 33px;
 }
 
+/* Signup Scroll on K Start page */
+
+a[ id="ksignupbtn" ]:target ~ #signup {
+    -webkit-transform: translateY(500px);
+    transform: translateY(5000px);
+}
+
+
 html.w-mod-js *[data-ix="hide-on-load"] {
   display: none;
   opacity: 0;
