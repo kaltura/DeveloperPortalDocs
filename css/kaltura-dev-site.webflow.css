@@ -1598,6 +1598,26 @@ td {
   letter-spacing: 0.4px;
 }
 
+.kstart-header-container {
+  padding: 0px;
+  background-color: transparent;
+}
+
+.kstart-header-div {
+  width: 40%;
+  padding: 10px 25px 25px;
+  float: right;
+  background-color: #fff;
+  box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, .2);
+}
+
+.approved-list {
+  margin-top: 0px;
+  color: #969696;
+  font-size: 14px;
+  line-height: 33px;
+}
+
 html.w-mod-js *[data-ix="hide-on-load"] {
   display: none;
   opacity: 0;
