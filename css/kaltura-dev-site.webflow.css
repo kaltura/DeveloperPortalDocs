@@ -1602,6 +1602,16 @@ html.w-mod-js *[data-ix="search-input-hide-on-load"] {
     border-style: none none dashed;
   }
 
+    .kstart-header-div {
+    width: 100%;
+  }
+  .bk-img-left {
+    display: none;
+  }
+  .bk-img-right {
+    display: none;
+  }
+
 }
 
 @media (max-width: 767px) {
@@ -1741,6 +1751,48 @@ html.w-mod-js *[data-ix="search-input-hide-on-load"] {
     min-height: 0px;
   }
 
+  .standard-button {
+    display: block;
+    min-width: 70%;
+    margin-top: 54px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .standard-button:hover {
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+  }
+  .standard-button.mobile-topics {
+    width: 94%;
+    margin-right: auto;
+    margin-bottom: 15px;
+    margin-left: auto;
+    border: 1px solid #ccc;
+    background-color: #e7e7e7;
+    color: #188093;
+  }
+  .form-labels.kstart-last-label {
+    margin-left: 12px;
+  }
+  .kstart-program-section {
+    padding-top: 0px;
+    background-image: none;
+    background-position: 0px 0px;
+    background-size: auto;
+    background-repeat: repeat;
+  }
+  .kstart-program-div {
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+  .kstart-accelerator-section {
+    display: none;
+  }
+  .kstart-qualification-text {
+    padding-bottom: 82px;
+  }
+
   .vpaas-sign-up-section {
     padding-top: 0px;
     padding-bottom: 0px;
@@ -1749,6 +1801,12 @@ html.w-mod-js *[data-ix="search-input-hide-on-load"] {
     padding-right: 15px;
     padding-left: 15px;
   }
+
+  .input-light.kstart-last-input {
+    width: 96%;
+    margin-left: 12px;
+  }
+
   .sign-up-subheadings {
     max-width: 50%;
   }
@@ -1843,9 +1901,53 @@ html.w-mod-js *[data-ix="search-input-hide-on-load"] {
     width: 100%;
     float: none;
   }
+  
   .standard-button {
-    width: 100%;
+    width: 93%;
   }
+  .standard-button.kstart-signup-button {
+    margin-top: 46px;
+    margin-bottom: 0px;
+  }
+  .kstart-intro-section {
+    padding-top: 35px;
+    padding-bottom: 0px;
+    background-image: none;
+    background-size: auto;
+  }
+  .kstart-program-section {
+    background-image: none;
+    background-position: 0px 0px;
+    background-size: auto;
+    background-repeat: repeat;
+  }
+  .kstart-faq-section {
+    border-top: 1px solid #ccc;
+  }
+  .kstart-header {
+    text-align: center;
+  }
+  .kstart-caption {
+    text-align: center;
+  }
+  .kstart-program-li {
+    max-height: none;
+  }
+  .kstart-faq-heading {
+    text-align: center;
+  }
+  .kstart-faq-description {
+    text-align: center;
+  }
+  .kstart-faq-div {
+    padding-right: 14px;
+    padding-left: 14px;
+  }
+
+  .input-light.kstart-last-input {
+    width: 93%;
+  }
+
   .slider-slide2 {
     background-position: 77% 50%;
   }
