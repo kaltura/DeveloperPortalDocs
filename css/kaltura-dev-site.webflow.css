@@ -1586,6 +1586,10 @@ td {
   color: #f7a600;
 }
 
+.success-section {
+  margin-bottom: 300px;
+}
+
 .success-heading {
   margin-right: auto;
   margin-bottom: 22px;
@@ -1596,6 +1600,7 @@ td {
   font-weight: 300;
   text-align: center;
   letter-spacing: 0.4px;
+  margin-top: 100px;
 }
 
 .kstart-header-container {
