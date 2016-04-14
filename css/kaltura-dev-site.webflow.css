@@ -1625,6 +1625,19 @@ a[ id="ksignupbtn" ]:target ~ #signup {
     transform: translateY(5000px);
 }
 
+.success-caption {
+  font-family: proxima-nova, sans-serif;
+  text-align: center;
+}
+
+.success-btn {
+  width: 15%;
+  margin-top: 22px;
+  background-color: #188093;
+  font-family: proxima-nova, sans-serif;
+  text-align: center;
+}
+
 
 html.w-mod-js *[data-ix="hide-on-load"] {
   display: none;
@@ -1813,6 +1826,10 @@ html.w-mod-js *[data-ix="search-input-hide-on-load"] {
   }
   .bk-img-right {
     display: none;
+  }
+
+    .success-btn {
+    width: 25%;
   }
 
 }
@@ -2032,6 +2049,10 @@ html.w-mod-js *[data-ix="search-input-hide-on-load"] {
     display: block;
   }
 
+  .success-btn {
+    width: 35%;
+  }
+
 }
 
 @media (max-width: 479px) {
@@ -2173,6 +2194,10 @@ html.w-mod-js *[data-ix="search-input-hide-on-load"] {
     background-color: #e7e7e7;
     font-family: proxima-nova, sans-serif;
     color: #188093;
+  }
+
+  .success-btn {
+    width: 90%;
   }
 }
 
