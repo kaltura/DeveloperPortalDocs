@@ -1643,6 +1643,10 @@ a[ id="ksignupbtn" ]:target ~ #signup {
   text-align: center;
 }
 
+.fa .fa-home {
+  padding-right: 9px;
+}
+
 
 html.w-mod-js *[data-ix="hide-on-load"] {
   display: none;
