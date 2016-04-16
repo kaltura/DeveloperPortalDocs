@@ -12,8 +12,10 @@ More advanced customization can be achieved using custom CSS loading, external a
 This article covers these topics from the simplest options to the more advanced and complicated ones.
 
 ## Player and plugin properties
+
 You can set player properties in order to change the player behavior. For example, setting the 'EmbedPlayer.HidePosterOnStart' property to true will show the video first frame instead of the poster image (default thumbnail set on the entry) on start.  
 Many plugins have properties that affect the player look and feel. For example, the controlBarContainer plugin has an "hover" property that defines hovering controls:   
+
 ```javascript
 'flashvars':{
     'controlBarContainer': {
@@ -24,8 +26,10 @@ Many plugins have properties that affect the player look and feel. For example, 
 ```
 
 ## Predefined skin selection
+
 The Kaltura player has 2 available skins you can choose from: "kdark" which is the default skin and "ott" which is a custom skin for OTT products.   
 You can select any of these skins or, if you create your own custom skin, you can select it the same way:  
+
 ```javascript
 'flashvars': {
     'layout':{
@@ -33,15 +37,18 @@ You can select any of these skins or, if you create your own custom skin, you ca
     }
 }
 ```
+
 > **NOTE:** The OTT skin is available only for basic configuration players. It doesn't support all of the Kaltura player plugins.
  
 ## The "theme" plugin
+
 The "theme" plugin allows setting colors and size for all of the player's buttons and basic UI elements such as the scrubber, icons etc.  
 You can access the theme plugin properties using Studio as explained here. 
 You can also use the embed code flashvars object in order to set a theme plugin properties for a specific player instance.  
 It is highly advised to use the theme plugin when applicable over writing your own custom CSS file in order to prevent redundant assets loading and to boost player performances.  
 
 ## Plugin Templates
+
 Some of the player plugins use templates to render its content. You can change this template easily using the plugin properties.  
 You can load external templets to override the default template thus changing both the look and feel and the displayed data.  
 This is achieved by overriding the path to the template tmpl.html file of the specific plugin. 
@@ -55,7 +62,9 @@ For example, to override the template of the share plugin, create your own tmpl.
     }
 }
 ```
+
 Or via UIVars in the Player Studio, pass:
+
 ```
 share.templatePath=https://link-to-my-custom-template.com/templatefile.tmpl.html
 ```
@@ -63,6 +72,7 @@ share.templatePath=https://link-to-my-custom-template.com/templatefile.tmpl.html
 > **NOTE:** When creating and loading external resources such as template files, please consult with the "Managing external assets" section below.
 
 ### Plugins that support templates
+
 | Plugin       | Flashvar     | Default template path     |
 |:---|:---|:---|
 | Share             | templatePath            |  https://github.com/kaltura/mwEmbed/blob/master/modules/KalturaSupport/components/share/share.tmpl.html |
@@ -76,17 +86,21 @@ share.templatePath=https://link-to-my-custom-template.com/templatefile.tmpl.html
 > Review: [Playlist with custom template and paging](http://player.kaltura.com/modules/KalturaSupport/tests/PlaylistPagingTemplate.html) for a rich example of using custom template to customize the playlist plugin UI and behavior.
 
 ## Curly-brackets data binding
+
 Templates work by substituting data bindings against the current player instance data values. Almost all plugin configuration options and data parameters that are displayed on the player UI are exposed as bindable parameters.   
 
 The example below shows how to display the entry view count on the player's title bar next to the entry name:  
+
 ```
 "{mediaProxy.entry.name} has {mediaProxy.entry.views|numberWithCommasNumber} views". 
 ```
+
 > The default value of the title bar text is `"{mediaProxy.entry.name}"`.
 
 So the result is a player where the title bar shows a message like this "My Video Name has 10,000,000 views" (instead of "My Video Name").
 
 ### Formatters
+
 Note the use of pipe+command ("|numberWithCommasNumber") after the binded parameter name - These are called "formatters", and they provide a means to easily format dates, time, numbers and strings according to known algorithm or by specifying one's custom javascript functions.
 
 Default formaters include:
@@ -98,12 +112,14 @@ Default formaters include:
 You can also add your own custom formatters. [Click here to learn about creating your own custom formatters](http://player.kaltura.com/modules/KalturaSupport/tests/CustomFormaters.qunit.html).
 
 ## External CSS assets
+
 Many player plugins use private CSS files which target the plugin UI and screens. Such plugins are playlist, chapters, share and many more.  
 These CSS files can be overridden by defining the `iframeHTML5Css` property in the plugin configuration and setting it to an external CSS file overriding the internal CSS class names.   
 
 > **NOTE:** When creating and loading external resources such as template files, please consult with the "Managing external assets" section below.
 
 ### Common plugins and their default CSS files
+
 | Plugin | Default CSS file
 |:---|:---|
 | Share	| https://github.com/kaltura/mwEmbed/blob/master/modules/KalturaSupport/components/share/share.css |
@@ -116,6 +132,7 @@ These CSS files can be overridden by defining the `iframeHTML5Css` property in t
 
 
 ## Core Player Skin External CSS Overrides
+
 You can load an external CSS file which overrides the player core CSS classes.  
 
 In order to override class names defined in the core CSS files, create your external custom CSS with the same class names you wish to override and load it using the `IframeCustomPluginCss1` Flashvar.  
@@ -127,6 +144,7 @@ In order to make sure your class definitions override the core definitions, alwa
 > We recommend embedding small assets (such as icons) as base64 inside the CSS file to improve loading time.
 
 ### Core Player Skins CSS Files
+
 | Skin name | Core CSS file |
 |:---|:---|
 | kdark	| https://github.com/kaltura/mwEmbed/blob/master/skins/kdark/css/layout.css |
@@ -136,6 +154,7 @@ In order to make sure your class definitions override the core definitions, alwa
 for a rich example of using custom CSS and external resources.
 
 ## Custom Interactivity with Javascript
+
 You can add your own Javascript code which will be loaded and run within the player iframe, by setting the `IframeCustomPluginJs1` Flashvar pointing to your custom JS files.   
 This allows you to register for player events or add custom interactivity to the player without creating a full player plugin.   
 
@@ -143,6 +162,7 @@ This allows you to register for player events or add custom interactivity to the
 
 
 ## Player States CSS
+
 CSS states are CSS classes that are added to the outer most interface element at given player state. These are very useful for quickly building a given look and feel at a given player state, without involving a lot of complicated javascript bindings.   
 
 * `.fullscreen` - The player in fullscreen
@@ -162,13 +182,17 @@ CSS states are CSS classes that are added to the outer most interface element at
 * `.size-large` – more than 700px
 
 ### Examples using CSS States
+
 Consider we have this on-screen redBox element:
 
 * The HTML object:
+
 ```html
 <div class="redBox"></div>
 ```
+
 * The CSS definition:
+
 ```css
 .redBox {
     width: 100px;
@@ -178,32 +202,39 @@ Consider we have this on-screen redBox element:
 ```
 
 #### Hiding redBox when mouse cursor over the player 
+
 To the CSS definitions add:
+
 ```css
 .player-out .redBox { display: none; }
 ```
- As default, have your UI visible, and when it should be hidden use the `.player-out` class to hide the redBox element.
+
+As default, have your UI visible, and when it should be hidden use the `.player-out` class to hide the redBox element.
 
 #### Increase redBox size if player enters fullscreen 
+
 ```css
 .fullscreen .redBox { width: 300px; height: 300px; }
 ``` 
 
 #### Change redBox bg color to green when video is paused
+
 ```css
 .pause-state .redBox { background-color: green; }
 ```
 
 #### CSS Animations Between Player States
+
 You can also make use of CSS animations to transition between player states.   
 For example, to transition the redBox box size transformation when entering fullscreen state:
+
 ```css
 .redBox { transition: width 0.3s ease-in-out, height 0.3s ease-in-out;}
 .fullscreen .redBox { width: 300px; height: 300px; }
 ```
 
-
 ## Managing external assets
+
 External assets such as tmpl.html, CSS, JS, images and font files can be used by the player. When directing the player to load these assets, make sure to consider the following:  
 
 1. Host the external files on a dedicated server, preferably a CDN for best performance, and ensure your server has [CORS headers](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing) enabling loading assets from other domains
