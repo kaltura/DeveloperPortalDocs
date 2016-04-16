@@ -29,6 +29,7 @@ The playlist plugin exposes the following Flashvars configuration parameters to 
 * `initItemEntryId`: The entryId that should be played first
 
 #### Configure Playlist via Player Studio UIVars (each new line is key=value pair):
+
 ```
 playlistAPI.containerPosition=bottom
 playlistAPI.layout=horizontal
@@ -36,6 +37,7 @@ playlistAPI.autoContinue=true
 ```
 
 #### Configure Playlist via embed Flashvars:
+
 ```javascript
 flashvars: {
 	"playlistAPI": {
@@ -86,6 +88,7 @@ When rendering a playlist on the hosting page, consider the following:
 The playlistAPI plugin exposes Javascript API that can be used to communicate with the playlist using the Kaltura player API. 
 
 ### Playlist API Properties 
+
 | Property | Description |
 |:---|:---|
 | `dataProvider` |	Holds all the playlist items |
@@ -93,33 +96,44 @@ The playlistAPI plugin exposes Javascript API that can be used to communicate wi
 | `tabBar.selectedIndex`	| Current playlist index when using multiple playlists |
 
 #### Examples
+
 * Play the second clip of the current playlist: 
+
 ```javascript
 kdp.setKDPAttribute("playlistAPI.dataProvider", "selectedIndex", 1 );
 ```
+
 * To get the currently selected clip index:
+
 ```javascript
 kdp.evaluate( "{playlistAPI.dataProvider.selectedIndex}" ) );
 ```
+
 > Review: [Using Playlist Properties examples](http://player.kaltura.com/modules/KalturaSupport/tests/PlaylistOnPage.qunit.html).
 
 ### Playlist API Methods
+
 | Method | Description |
 |:---|:---|
 | `playlistPlayNext` |	play next clip |
 | `playlistPlayPrevious` |	play previous clip |
 
 #### Examples
+
 * Play the next entry in the play list:
+
 ```javascript
 player.sendNotification("playlistPlayNext");
 ```
+
 * Play the previous entry in the play list: 
+
 ```javascript
 player.sendNotification("playlistPlayPrevious");
 ```
 
 ### Playlist API Events (Hooks)
+
 | Event | Description |
 |:---|:---|
 | `playlistReady` |	playlist is ready to play |
@@ -132,18 +146,23 @@ player.sendNotification("playlistPlayPrevious");
 | `EmptyPlaylistCustomError` |	playlist was loaded without entries |
  
 #### Examples
+
 * Hook to when the next entry in the list will be played: 
+
 ```javascript
 player.kBind("playlistPlayNext", function(){
 	console.log("the next entry will now play");
 });
 ```
+
 * Detect when a faulty playlist loaded: 
+
 ```javascript
 player.kBind("EmptyPlaylistCustomError", function(){
 	console.log("faulty playlist, let's switch playlist and/or report error");
 });
 ```
+
 > Review: [Registering to Playlist Events](http://player.kaltura.com/modules/KalturaSupport/tests/PlaylistEvents.qunit.html).
 
 ## Playing Stitched Video Playlist
