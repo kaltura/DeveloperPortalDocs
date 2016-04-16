@@ -9,6 +9,7 @@ For a full listing of supported locale keys, look here. Setting a local key tran
 > **NOTE:** Not all locales support all of the player UI components. While the basic UI is fully supported, some plugins might not have all the local translations available.
 
 ## Setting the desired player locale
+
 By default, all players fallback to English unless the locale is defined otherwise.  
 
 You can define the required locale using the Flashvar: `localizationCode`. This can be set in the Player Studio UIVars section or on the page using embed Flashvars.
@@ -16,10 +17,13 @@ You can define the required locale using the Flashvar: `localizationCode`. This 
 For example: 
 
 * Setting the locale to German via Player Studio UIVars:
+
 ```
 localizationCode=de
 ```
+
 * Setting the locale to German ("de") via embed Flashvars:
+
 ```javascript
 'flashvars': { 
     'localizationCode':'de' 
@@ -31,10 +35,13 @@ You can also have the player set the locale automatically according to the local
 To have the locale set automatically, set `localizationCode` to `auto`:   
 
 * Browser based automatic locale via Player Studio UIVars:
+
 ```
 localizationCode=auto
 ```
+
 * Browser based automatic locale via embed Flashvars:
+
 ```javascript
 'flashvars': { 
     'localizationCode':'auto' 
@@ -42,6 +49,7 @@ localizationCode=auto
 ```
 
 ## Custom localized strings
+
 You can add missing strings or change existing strings for any locale using the `strings` plugin.   
 The strings plugin defines keys and values for all player labels and tooltips. 
 
@@ -50,6 +58,7 @@ The strings plugin defines keys and values for all player labels and tooltips.
 To override existing key values or define values for keys that are currently not available in your locale, you can configure the strings plugin either in Studio under the Strings section or in your embed code Flashvars.
 
 * Custom localized strings via Player Studio **Strings** (each line is a UIVar key=value pair):
+
 ```
 mwe-embedplayer-play_clip=Click%20to%20play
 es.mwe-embedplayer-play_clip=Reproducir%20clip
@@ -58,6 +67,7 @@ es.mwe-embedplayer-play_clip=Reproducir%20clip
 > **Note:** When using the Strings section in the Player Studio, you only need to specify the language code for languages other than English.
 
 * Custom localized strings via embed Flashvars:
+
 ```javascript
 'flashvars': { 
     "strings":{ 
