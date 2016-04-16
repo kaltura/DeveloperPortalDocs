@@ -16,6 +16,7 @@ Using this method, you define your Flashvars object as a JSON object in your pla
 **NOTE:** Values defined in the Embed code Flashvars objects override any values previously saved using Studio for the same keys.   
 
 ## Considerations for Configuring Players
+
 How should you configure the player, and what to consider when specifying configuration parameters?  
 As a general rule of thumb, you should always prefer to configure flashvars via the Player Studio menus and the "UI Variables" section:  
 
@@ -23,6 +24,7 @@ As a general rule of thumb, you should always prefer to configure flashvars via 
 * Visual and self explanatory interface for the most commonly used player properties and plugins.
 
 ### Use embed code Flashvars in these scenarios:   
+
 > Note that any changes made via flashvars on the embedding page, will require editing these pages to make future changes. 
 
 1. You need to set the Flashvars values dynamically based on you website / app logic.  
@@ -30,9 +32,11 @@ For example, you may need to pass metadata fields that are derived from the spec
 2. You want to inherit all of the player properties defined in Studio but you need to override specific properties for a specific player instance - note that if used across many pages or sites, it will be better practice to create a new player and configure it via the player studio.    
 
 ### Passing config params in embed methods
+
 The Kaltura player can be embedded into webpages in few ways. The embed code Flashvars object is passed in a different way for different embed types. Learn more about embed types.  
 
 #### Config params in JavaScript dynamic embed
+
 For dynamic embeds: Use a JSON object as part of your embed code:  
 
 ```javascript
@@ -52,7 +56,9 @@ kWidget.embed({
     }
 });
 ```
+
 #### Config params in iFrame embed
+
 For auto / iFrame embeds, pass the key / value pairs on the iFrame URL query string, using the flashvars with brackets and dot syntax for nested object attributes, as following:   
 
 * Instead of `flashvars: { autoPlay: true }`, use the following notation: `flashvars[autoPlay]=true` 
@@ -65,6 +71,7 @@ For auto / iFrame embeds, pass the key / value pairs on the iFrame URL query str
 ## Common player configuration scenarios
 
 * Auto start video playback with a muted video, at a start point of 20 seconds:
+
 ```javascript
 'flashvars': {
         'autoPlay': true,
@@ -72,20 +79,26 @@ For auto / iFrame embeds, pass the key / value pairs on the iFrame URL query str
         'mediaProxy.mediaPlayFrom': 20
     }
 ```
+
 * Force a specific streamer type (learn more about streamer types):
+
 ```javascript
 'flashvars': {
         'streamerType': 'hdnetworkmanifest'
     }
 ```
+
 * Lead with HLS playback on all devices:
+
 ```javascript
 'flashvars': {
         'LeadWithHLSOnFlash': true,
         'Kaltura.LeadHLSOnAndroid': true
     }
 ```
+
 * Define a plugin configuration (this example overrides the volume control horizontal layout and sets it to vertical):
+
 ```javascript
 'flashvars': {
         'volumeControl':{
@@ -94,7 +107,9 @@ For auto / iFrame embeds, pass the key / value pairs on the iFrame URL query str
             },
     }
 ```
+
 * Set Flashvars dynamically according to data derived from a server:
+
 ```javascript
 $.ajax({
     method: "POST",
