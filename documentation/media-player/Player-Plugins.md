@@ -391,7 +391,7 @@ Call the destroy function when you no longer want your plugin to perform any log
 
 #### Example: Destroying the plugin when the entry is switched
 
-```javasript
+```javascript
 addBindings: function() {
     var _this = this;
     this.bind('onChangeMedia', function(){
