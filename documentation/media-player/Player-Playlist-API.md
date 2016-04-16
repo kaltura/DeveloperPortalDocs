@@ -18,6 +18,7 @@ The Kaltura player provides a robust playlist plugin allowing rendering a playli
 While you can create a playlist functionality on your page by calling the Kaltura list API and using the Kaltura player `changeMedia` notification, using the player's built-in playlist plugin will shorten your time to launch, simplify the management of your code, and provide better playback control.
 
 ## Playlist Config Parameters
+
 The playlist plugin exposes the following Flashvars configuration parameters to configure the behavior of the playlist:
 
 * `containerPosition`: Sets the playlist position to left, right, top and bottom
@@ -49,9 +50,11 @@ flashvars: {
 ```
 
 ## Common Player Playlist Best Practices
+
 Below you will find common best practices to customize and configure your playlist player.
 
 ### Size Relationship of Player and its Playlist UI
+
 When adding a playlist to your player, the playlist UI will take space from the dimensions of your player. As such, you should set your player dimensions accordingly to accommodate for the added playlist UI dimensions. 
 
 * For vertical playlist on the right or left, add the playlist width to the player width. Default playlist width is 320px.
@@ -59,12 +62,14 @@ When adding a playlist to your player, the playlist UI will take space from the 
 * When using onPage playlists (playlists that render outside of the player iFrame) you don't need to change the player size.
 
 ### Customizing Playlist Item Renderer UI
+
 You can use a custom CSS with your playlist in order to change playlist item CSS definitions such as color and fonts.  
 This is done by setting the playlistAPI `iframeHTML5Css` property to your custom CSS file. 
 
 > Review: [Playlist with custom template and paging](http://player.kaltura.com/modules/KalturaSupport/tests/PlaylistPagingTemplate.html) for a rich example of using custom template to customize the playlist plugin UI and behavior.
 
 ### Customizing Playlist Item Renderer Displayed Data
+
 You can change the data displayed for each clip by setting your own custom template for the playlist item renderer.  
 The custom template overrides the base playlist template and defines which data to show and the HTML markup used to render the data.   
 
@@ -73,6 +78,7 @@ The custom template overrides the base playlist template and defines which data 
 You can override this template with your own template by setting the `playlistAPI.templatePath` property to link to your custom template. 
 
 ### OnPage Playlist (Rendered on the Hosting Page)
+
 You can decide to render the playlist UI on the web page in which the player is embeded. 
 To render the playlist on the hosting page, provide the div element id into which you'd like the playlist to render, by setting the `playlistAPI.clipListTargetId` property. If you don't specify a div element id, the playlist will default to render below the player.
 
@@ -85,6 +91,7 @@ When rendering a playlist on the hosting page, consider the following:
 * If you define a custom CSS for your playlist, by setting the `playlsitAPI.onPageCss1` property and link to your CSS file.
 
 ## Playlist API, Properties, and Events
+
 The playlistAPI plugin exposes Javascript API that can be used to communicate with the playlist using the Kaltura player API. 
 
 ### Playlist API Properties 
@@ -166,6 +173,7 @@ player.kBind("EmptyPlaylistCustomError", function(){
 > Review: [Registering to Playlist Events](http://player.kaltura.com/modules/KalturaSupport/tests/PlaylistEvents.qunit.html).
 
 ## Playing Stitched Video Playlist
+
 The Kaltura backend provides the capability to dynamic stitch a manual playlists the consists of video entries into a single continuos video stream.  
 The Kaltura player, leverages that capability to play stitched playlists as if they were a single video entry.  
 This is an important capability to support use cases of dynamically personalized video experiences.
