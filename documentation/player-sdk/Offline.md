@@ -26,8 +26,10 @@ From the application's point-of-view, there are 3 parts to implementing offline 
 
 ## Integration Points
 &nbsp;
+
 ### Android
 &nbsp;
+
 #### Register
 Immediately after the application finishes downloading the media, it calls `LocalAssetsManager.registerAsset()`, providing:
 
@@ -46,6 +48,7 @@ A possible setup is a download manager class that contains a database of downloa
 
 ### iOS
 &nbsp;
+
 #### Register
 
 Immediately after the application finishes downloading the media, it calls `[KPLocalAssetsManager registerAsset:flavor:path:callback:]`, providing:
@@ -74,6 +77,7 @@ The Custom URL provider is called at the beginning of every playback.
 
 # Download Location Guidelines
 &nbsp;
+
 ## Android
 
 Files can be downloaded to any directory accessible by the application, including the app's directory in the internal storage, and any directory in the external/shared storage.
@@ -87,6 +91,7 @@ For more information, see Apple's [File System Programming Guide > File System B
 
 # Sequence Diagrams
 &nbsp;
+
 ## Register Downloaded Asset
 ![Register](Offline-Register.png)
 
