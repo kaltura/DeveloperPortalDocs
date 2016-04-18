@@ -106,6 +106,7 @@ the playback source. For example:
 {% endplantuml %}
 
 # Download Location Guidelines
+App developers are free to choose download locations - we recommend the following:
 
 ## Android
 Files can be downloaded to any directory accessible by the application, including the application's directory in the internal storage, and any directory in the external/shared storage.
