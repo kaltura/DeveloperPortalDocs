@@ -3,18 +3,18 @@ layout: page
 title: Kaltura Player Look & Feel and Behavior Customization
 ---
 
-The Kaltura player look and feel is derived from its skin and code. The skin consists of CSS classes and graphical assets such as icons and fonts.
+The Kaltura Player look and feel is derived from its skin and code. The skin consists of CSS classes and graphical assets such as icons and fonts.
 Javascript code is used to define user interactions and UI behaviour.   
 
-You can customize the player look and feel in few ways. A lot of customization can be done using the player plugins, player properties and templating mechanism.   
-More advanced customization can be achieved using custom CSS loading, external assets and skin overrides. Custom Javascript code can also be used in order to change the UI behavior.  
+You can customize the Player look-and-feel in a number of ways. A lot of customization can be done using the Player plugins, Player properties, and templating mechanism.   
+More advanced customization can be achieved using custom CSS loading, external assets, and skin overrides. Custom Javascript code can also be used in order to change the UI behavior.  
 
 This article covers these topics from the simplest options to the more advanced and complicated ones.
 
-## Player and plugin properties
+## Player and Plugin Properties
 
-You can set player properties in order to change the player behavior. For example, setting the 'EmbedPlayer.HidePosterOnStart' property to true will show the video first frame instead of the poster image (default thumbnail set on the entry) on start.  
-Many plugins have properties that affect the player look and feel. For example, the controlBarContainer plugin has an "hover" property that defines hovering controls:   
+You can set Player properties in order to change the Player behavior. For example, setting the 'EmbedPlayer.HidePosterOnStart' property to true will show the video first frame instead of the poster image (default thumbnail set on the entry) on start.  
+Many plugins have properties that affect the Player look and feel. For example, the controlBarContainer plugin has an "hover" property that defines hovering controls:   
 
 ```javascript
 'flashvars':{
@@ -27,7 +27,7 @@ Many plugins have properties that affect the player look and feel. For example, 
 
 ## Predefined skin selection
 
-The Kaltura player has 2 available skins you can choose from: "kdark" which is the default skin and "ott" which is a custom skin for OTT products.   
+The Kaltura Player has 2 available skins you can choose from: "kdark" which is the default skin and "ott" which is a custom skin for OTT products.   
 You can select any of these skins or, if you create your own custom skin, you can select it the same way:  
 
 ```javascript
@@ -42,10 +42,10 @@ You can select any of these skins or, if you create your own custom skin, you ca
  
 ## The "theme" plugin
 
-The "theme" plugin allows setting colors and size for all of the player's buttons and basic UI elements such as the scrubber, icons etc.  
+The "theme" plugin allows setting colors and size for all of the Player's buttons and basic UI elements such as the scrubber, icons etc.  
 You can access the theme plugin properties using Studio as explained here. 
-You can also use the embed code flashvars object in order to set a theme plugin properties for a specific player instance.  
-It is highly advised to use the theme plugin when applicable over writing your own custom CSS file in order to prevent redundant assets loading and to boost player performances.  
+You can also use the embed code flashvars object in order to set a theme plugin properties for a specific Player instance.  
+It is highly advised to use the theme plugin when applicable over writing your own custom CSS file in order to prevent redundant assets loading and to boost Player performances.  
 
 ## Plugin Templates
 
@@ -87,7 +87,7 @@ share.templatePath=https://link-to-my-custom-template.com/templatefile.tmpl.html
 
 ## Curly-brackets data binding
 
-Templates work by substituting data bindings against the current player instance data values. Almost all plugin configuration options and data parameters that are displayed on the player UI are exposed as bindable parameters.   
+Templates work by substituting data bindings against the current Player instance data values. Almost all plugin configuration options and data parameters that are displayed on the Player UI are exposed as bindable parameters.   
 
 The example below shows how to display the entry view count on the player's title bar next to the entry name:  
 
@@ -97,7 +97,7 @@ The example below shows how to display the entry view count on the player's titl
 
 > The default value of the title bar text is `"{mediaProxy.entry.name}"`.
 
-So the result is a player where the title bar shows a message like this "My Video Name has 10,000,000 views" (instead of "My Video Name").
+So the result is a Player where the title bar shows a message like this "My Video Name has 10,000,000 views" (instead of "My Video Name").
 
 ### Formatters
 
@@ -113,7 +113,7 @@ You can also add your own custom formatters. [Click here to learn about creating
 
 ## External CSS assets
 
-Many player plugins use private CSS files which target the plugin UI and screens. Such plugins are playlist, chapters, share and many more.  
+Many Player plugins use private CSS files which target the plugin UI and screens. Such plugins are playlist, chapters, share and many more.  
 These CSS files can be overridden by defining the `iframeHTML5Css` property in the plugin configuration and setting it to an external CSS file overriding the internal CSS class names.   
 
 > **NOTE:** When creating and loading external resources such as template files, please consult with the "Managing external assets" section below.
@@ -133,7 +133,7 @@ These CSS files can be overridden by defining the `iframeHTML5Css` property in t
 
 ## Core Player Skin External CSS Overrides
 
-You can load an external CSS file which overrides the player core CSS classes.  
+You can load an external CSS file which overrides the Player core CSS classes.  
 
 In order to override class names defined in the core CSS files, create your external custom CSS with the same class names you wish to override and load it using the `IframeCustomPluginCss1` Flashvar.  
 You can define more than one custom CSS files and name the Flashvars accordingly: `IframeCustomPluginCss1`, `IframeCustomPluginCss2`,  `IframeCustomPluginCss3`, etc.   
@@ -155,26 +155,26 @@ for a rich example of using custom CSS and external resources.
 
 ## Custom Interactivity with Javascript
 
-You can add your own Javascript code which will be loaded and run within the player iframe, by setting the `IframeCustomPluginJs1` Flashvar pointing to your custom JS files.   
-This allows you to register for player events or add custom interactivity to the player without creating a full player plugin.   
+You can add your own Javascript code which will be loaded and run within the Player iframe, by setting the `IframeCustomPluginJs1` Flashvar pointing to your custom JS files.   
+This allows you to register for Player events or add custom interactivity to the Player without creating a full Player plugin.   
 
 > Review: [External Resources Recipe](http://player.kaltura.com/modules/KalturaSupport/tests/ExternalResources.qunit.html) for a rich example of using external Javascript resources.
 
 
 ## Player States CSS
 
-CSS states are CSS classes that are added to the outer most interface element at given player state. These are very useful for quickly building a given look and feel at a given player state, without involving a lot of complicated javascript bindings.   
+CSS states are CSS classes that are added to the outer most interface element at given Player state. These are very useful for quickly building a given look and feel at a given Player state, without involving a lot of complicated javascript bindings.   
 
-* `.fullscreen` - The player in fullscreen
+* `.fullscreen` - The Player in fullscreen
 * `.mobile` - Indicates that we're currently on a mobile device (phones and tablets).
 * `.touch` - Indicates that we're currently on touch device.
-* `.player-out` - The player is focus out ( I use it to hide the control bar ).
-* `.start-state` - The player is on start screen ( before user clicked play ).
-* `.load-state` - The player is in loading state ( on startup, change media ).
-* `.play-state` - The player is playing.
-* `.pause-state` - The player was paused.
-* `.end-state` - The player is on end screen ( video completed )
-* `.adplay-state` - The player is currently playing an ad.
+* `.player-out` - The  is focus out ( I use it to hide the control bar ).
+* `.start-state` - The  is on start screen ( before user clicked play ).
+* `.load-state` - The  is in loading state ( on startup, change media ).
+* `.play-state` - The  is playing.
+* `.pause-state` - The  was paused.
+* `.end-state` - The  is on end screen ( video completed )
+* `.adplay-state` - The  is currently playing an ad.
 * `.disabled` - The current component is "disabled" i.e the click or touch binding for this button is not active. 
 * `.size-tiny` – less than 300px
 * `.size-small` – less than 450px
@@ -201,7 +201,7 @@ Consider we have this on-screen redBox element:
 }
 ```
 
-#### Hiding redBox when mouse cursor over the player 
+#### Hiding redBox when mouse cursor over the  
 
 To the CSS definitions add:
 
@@ -211,7 +211,7 @@ To the CSS definitions add:
 
 As default, have your UI visible, and when it should be hidden use the `.player-out` class to hide the redBox element.
 
-#### Increase redBox size if player enters fullscreen 
+#### Increase redBox size if Player enters fullscreen 
 
 ```css
 .fullscreen .redBox { width: 300px; height: 300px; }
@@ -225,7 +225,7 @@ As default, have your UI visible, and when it should be hidden use the `.player-
 
 #### CSS Animations Between Player States
 
-You can also make use of CSS animations to transition between player states.   
+You can also make use of CSS animations to transition between Player states.   
 For example, to transition the redBox box size transformation when entering fullscreen state:
 
 ```css
@@ -235,10 +235,10 @@ For example, to transition the redBox box size transformation when entering full
 
 ## Managing external assets
 
-External assets such as tmpl.html, CSS, JS, images and font files can be used by the player. When directing the player to load these assets, make sure to consider the following:  
+External assets such as tmpl.html, CSS, JS, images and font files can be used by the Player. When directing the Player to load these assets, make sure to consider the following:  
 
 1. Host the external files on a dedicated server, preferably a CDN for best performance, and ensure your server has [CORS headers](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing) enabling loading assets from other domains
 2. Make sure you set the correct relative links or full paths in your Flashvars settings
-3. Ensure that your assets could be loaded from both http and https, and when directing the player to load the assets, use protocol agnostic URL notation (`://` instead of `http://`). Also ensure that your server has a valid SSL certificate.
+3. Ensure that your assets could be loaded from both http and https, and when directing the Player to load the assets, use protocol agnostic URL notation (`://` instead of `http://`). Also ensure that your server has a valid SSL certificate.
 4. If you need to load more than one icon, consider using an icon font
 5. If you need to load more than one image, use [CSS sprite sheets](https://css-tricks.com/css-sprites/)
