@@ -37,6 +37,7 @@ redcarpet:
 timezone: America/New_York
 lsi: true
 #incremental: true
-#gems:
+gems:
+   - jekyll-plantuml
 #  - jekyll-git_metadata
 #    - jekyll-sitemap
