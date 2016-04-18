@@ -5,7 +5,7 @@ title: iOS Player SDK Getting Started
 
 
 
-I## Getting Started
+## Getting Started
 
 KalturaPlayerSDK can be added to any project (big or small) in a matter of minutes (maybe even seconds if you're super speedy). 
 
