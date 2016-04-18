@@ -37,7 +37,7 @@ The Kaltura Player can be embedded into webpages in a number of ways. The embed 
 
 #### Configure Parameters in JavaScript Dynamic Embed
 
-For dynamic embeds: Use a JSON object as part of your embed code:  
+For dynamic embeds, use a JSON object as part of your embed code:  
 
 ```javascript
 kWidget.embed({
@@ -57,9 +57,9 @@ kWidget.embed({
 });
 ```
 
-#### Config parameters in iFrame Embed
+#### Configure Parameters in iFrame Embed
 
-For auto / iFrame embeds, pass the key / value pairs on the iFrame URL query string, using the flashvars with brackets and dot syntax for nested object attributes, as following:   
+For auto / iFrame embeds, pass the key / value pairs on the iFrame URL query string using the Flashvars with brackets and dot syntax for nested object attributes as follows:   
 
 * Instead of `flashvars: { autoPlay: true }`, use the following notation: `flashvars[autoPlay]=true` 
 * Instead of `flashvars: { share: { plug: true } }`, use the following notation: `flashvars[share.plugin]=true`
@@ -68,7 +68,7 @@ For auto / iFrame embeds, pass the key / value pairs on the iFrame URL query str
 <iframe src="http://cdnapi.kaltura.com/p/1645161/sp/164516100/embedIframeJs/uiconf_id/33752651/partner_id/1645161?iframeembed=true&playerId=kaltura_player&entry_id=1_1josgev8&flashvars[autoPlay]=true&flashvars[share.plugin]=true" width="560" height="395" allowfullscreen webkitallowfullscreen mozAllowFullScreen frameborder="0"></iframe>
 ```
 
-## Common player configuration scenarios
+## Common Player Configuration Scenarios
 
 * Auto start video playback with a muted video, at a start point of 20 seconds:
 
