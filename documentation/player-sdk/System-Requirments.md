@@ -4,7 +4,7 @@ title: Player SDK System Requirements
 ---
 
 
-#iOS System Requirements 
+##iOS System Requirements 
 
 
 ## IDE 
@@ -26,7 +26,7 @@ please refer to Apple device matrix for device compliance.
 ##IDE 
 To Integrate Kaltura android Player SDK it is recomended to use AndroidStudio 2.0+ 
 
-#minimum OS version 
+##minimum OS version 
 Kaltura Android Player SDK supports 4.1+ 
 
 TODO: add a full list of tested devices 
