@@ -6,7 +6,7 @@ The app should handle few background states:
 2. User pressed on power button.
 3. Phone call interuption and more...
 
-#Home button
+#Home button and Phone call interuption
 
 In the onPause() method you should call : `mPlayer.releaseAndSavePosition(boolean shouldRestoreState)`
 Should use `true` if you want to save the state and use `false` if you want to get back in pause state.
@@ -14,7 +14,7 @@ Should use `true` if you want to save the state and use `false` if you want to g
 In the onResume() method you should call : `mPlayer.resumePlayer()`
 
 
-#Power Button and Phone call interuption
+#Power Button
 
 In the onPause() method you should call : `mPlayer.pause()`
 
