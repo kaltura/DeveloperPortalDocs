@@ -25,7 +25,7 @@ From the application's point-of-view, there are 3 parts to implementing offline 
 3. Overriding the streaming playback URL with the downloaded file.
 
 ## Integration Points
-
+&nbsp;
 ### Android
 &nbsp;
 
