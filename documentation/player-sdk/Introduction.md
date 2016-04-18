@@ -1,3 +1,8 @@
+---
+layout: page
+title: Introduction
+---
+
 ## Introduction
 
 Welcome to the **Kaltura Video Platform**. Kaltura is the world's first Open Source Online Video Platform, providing both enterprise level commercial software and services, fully supported and maintained by Kaltura, as well as free open-source community supported solutions, for video publishing, management, syndication and monetization.
