@@ -91,7 +91,22 @@ For more information, see Apple's [File System Programming Guide > File System B
 &nbsp;
 
 ## Register Downloaded Asset
-![Register](Offline-Register.png)
+{% plantuml %}
+
+participant App
+participant "Kaltura LocalAssetsManager" as LAM
+
+note over App: Downloads Media to //localPath//
+
+App->>LAM: registerAsset(entryConfig, flavorId, localPath)
+note over LAM: SDK acquires license
+alt Success
+LAM->>App: Success
+else Failure
+LAM->>App: Failure
+end
+
+{% endplantuml %}
 
 ## Playback Downloaded Asset
 ![Playback](Offline-Playback.png)
