@@ -44,7 +44,7 @@ title: iOS Player SDK Basic embedding
     [self presentViewController:self.player animated:YES completion:nil];
 }
 ```
-![iOS-fullscreen](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/player-sdk/images/iOS-fullscreen-embed.png)
+![iOS-fullscreen](./images/iOS-fullscreen-embed.png)
 
 
 ## To Initialize PlayerViewController for Inline
@@ -76,4 +76,4 @@ title: iOS Player SDK Basic embedding
 }
 ```
 
-![iOS-inline](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/player-sdk/images/iOS-inline-embed.png)
+![iOS-inline](./images/iOS-inline-embed.png)
