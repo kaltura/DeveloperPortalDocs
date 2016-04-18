@@ -11,7 +11,8 @@ The best practice for embeding the player in iOS is to use container view.
 
 Prepare holder view for the player:
 
-[[/setup-guide/images/playerHolder.png]]
+
+[[/images/playerHolder.png]]
 
 ```
 - (void)viewDidAppear:(BOOL)animated {
