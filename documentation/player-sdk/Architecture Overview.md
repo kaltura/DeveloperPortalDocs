@@ -1,14 +1,14 @@
 # Architecture Overview
 
-The Kaltura player architecture design to allow seamless expirence between mutltiple playback engines and platforms.
-The kaltura player wrap the playback engine with the same interface and events and by that allow the same plugin code to work across multiple platofrms including iOS,Android and web.
-Each platform support different types of streaming capabilites and DRM and the player will choose the best streaming technologie and DRM if needed.
+The Kaltura player architecture design to allow seamless expirence between mutltiple playback engines and platforms.  
+The kaltura player wrap the playback engine with the same interface and events and by that allow the same plugin code to work across multiple platofrms including iOS,Android and web.  
+Each platform support different types of streaming capabilites and DRM and the player will choose the best streaming technologie and DRM if needed.  
 Plugins can be with or without UI and can work cross platforms, Some plugins need native support such as chromecast,DRM and Ads.
-The player-sdk provide this features out of the box.
-The Player expose API for all platform, we expose basic API and common. If you're an iOS developer and you already work with AVFoundation you should expect the same API + Kaltura player API.
-The player API support sending notificaition to the player, listen to events and evaulates properties.
-Each player config will include the UICONF object which include the player configuration - which plugins should we load.
-Every componenet of the player is a plugin.
+The player-sdk provide this features out of the box.  
+The Player expose API for all platform, we expose basic API and common. If you're an iOS developer and you already work with AVFoundation you should expect the same API + Kaltura player API.  
+The player API support sending notificaition to the player, listen to events and evaulates properties.  
+Each player config will include the UICONF object which include the player configuration - which plugins should we load.  
+Every componenet of the player is a plugin.  
 
 ### Kaltura Player v2 Toolkit Architecture Diagram
 
@@ -35,7 +35,7 @@ Ads     | Supported without dual buffer | Supported  | Supported without dual bu
 
 ## Version managment
 In order to use the player-sdk you'll need 2 main version - one for the player-sdk and one for the html5 lib.
-The html5 lib is configured in the UICONF object and the best practice here is to use the latest version. you can alwayes upgrade using the player studio.
+The html5 lib is configured in the UICONF object and the best practice here is to use the latest version. you can alwayes upgrade using the player studio.  
 As for the SDK - use the latest tag of the SDK.
 
 
