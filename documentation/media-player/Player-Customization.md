@@ -122,11 +122,11 @@ These CSS files can be overridden by defining the `iframeHTML5Css` property in t
 
 | Plugin | Default CSS file
 |:---|:---|
-| Share	| https://github.com/kaltura/mwEmbed/blob/master/modules/KalturaSupport/components/share/share.css |
-| infoScreen	| https://github.com/kaltura/mwEmbed/blob/master/modules/KalturaSupport/components/info/info.css |
-| related	| https://github.com/kaltura/mwEmbed/blob/master/modules/KalturaSupport/components/related/related.css |
-| playlistAPI	| https://github.com/kaltura/mwEmbed/blob/master/modules/KalturaSupport/components/playlist/playList.css |
-| chapters	| https://github.com/kaltura/mwEmbed/blob/master/modules/KalturaSupport/components/chapters/chapters.css |
+| Share	| [share/share.css](https://github.com/kaltura/mwEmbed/blob/master/modules/KalturaSupport/components/share/share.css) |
+| infoScreen	| [info/info.css](https://github.com/kaltura/mwEmbed/blob/master/modules/KalturaSupport/components/info/info.css) |
+| related	| [related/related.css](https://github.com/kaltura/mwEmbed/blob/master/modules/KalturaSupport/components/related/related.css) |
+| playlistAPI	| [playlist/playList.css](https://github.com/kaltura/mwEmbed/blob/master/modules/KalturaSupport/components/playlist/playList.css) |
+| chapters	| [chapters/chapters.css](https://github.com/kaltura/mwEmbed/blob/master/modules/KalturaSupport/components/chapters/chapters.css) |
 
 > Review: [Playlist with custom template and paging](http://player.kaltura.com/modules/KalturaSupport/tests/PlaylistPagingTemplate.html) for a rich example of using custom template to customize the playlist plugin UI and behavior.
 
@@ -147,8 +147,8 @@ In order to make sure your class definitions override the core definitions, alwa
 
 | Skin name | Core CSS file |
 |:---|:---|
-| kdark	| https://github.com/kaltura/mwEmbed/blob/master/skins/kdark/css/layout.css |
-| ott | 	https://github.com/kaltura/mwEmbed/blob/master/skins/ott/css/layout.css |
+| kdark	| [kdark/css/layout.css](https://github.com/kaltura/mwEmbed/blob/master/skins/kdark/css/layout.css) |
+| ott | 	[ott/css/layout.css](https://github.com/kaltura/mwEmbed/blob/master/skins/ott/css/layout.css) |
 
 > Review: [Kaltura Player External Skin Overrides Recipe](https://developer.kaltura.com/recipes/player_external_skin_overrides/)
 for a rich example of using custom CSS and external resources.
