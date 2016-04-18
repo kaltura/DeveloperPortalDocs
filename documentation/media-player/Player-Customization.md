@@ -3,8 +3,7 @@ layout: page
 title: Kaltura Player Look & Feel and Behavior Customization
 ---
 
-The Kaltura Player look and feel is derived from its skin and code. The skin consists of CSS classes and graphical assets such as icons and fonts.
-Javascript code is used to define user interactions and UI behaviour.   
+The Kaltura Player look-and-feel is derived from its skin and code. The skin consists of CSS classes and graphical assets such as icons and fonts. Javascript code is used to define user interactions and UI behaviour.   
 
 You can customize the Player look-and-feel in a number of ways. A lot of customization can be done using the Player plugins, Player properties, and templating mechanism.   
 More advanced customization can be achieved using custom CSS loading, external assets, and skin overrides. Custom Javascript code can also be used in order to change the UI behavior.  
@@ -71,21 +70,21 @@ share.templatePath=https://link-to-my-custom-template.com/templatefile.tmpl.html
 
 > **NOTE:** When creating and loading external resources such as template files, please consult with the "Managing external assets" section below.
 
-### Plugins that support templates
+### Plugins that support templates:
 
 | Plugin       | Flashvar     | Default template path     |
 |:---|:---|:---|
-| Share             | templatePath            |  https://github.com/kaltura/mwEmbed/blob/master/modules/KalturaSupport/components/share/share.tmpl.html |
-| infoScreen	| templatePath	| https://github.com/kaltura/mwEmbed/blob/master/modules/KalturaSupport/components/info/info.tmpl.html |
-| related	| templatePath	| https://github.com/kaltura/mwEmbed/blob/master/modules/KalturaSupport/components/related/related.tmpl.html |
-| playlistAPI	| templatePath	| https://github.com/kaltura/mwEmbed/blob/master/modules/KalturaSupport/components/playlist/playList.tmpl.html | 
-| chapters	| templatePath	| https://github.com/kaltura/mwEmbed/blob/master/modules/KalturaSupport/components/chapters/chapters.tmpl.html |
-| actionForm	| templatePath	| https://github.com/kaltura/mwEmbed/blob/master/modules/CallToAction/templates/collect-form.tmpl.html |
-| actionButtons	 | templatePath	 | https://github.com/kaltura/mwEmbed/blob/master/modules/CallToAction/templates/action-buttons.tmpl.html |
+| Share             | templatePath            |  [share/share.tmpl.html](https://github.com/kaltura/mwEmbed/blob/master/modules/KalturaSupport/components/share/share.tmpl.html) |
+| infoScreen	| templatePath	| [info/info.tmpl.html](https://github.com/kaltura/mwEmbed/blob/master/modules/KalturaSupport/components/info/info.tmpl.html) |
+| related	| templatePath	| [related/related.tmpl.html](https://github.com/kaltura/mwEmbed/blob/master/modules/KalturaSupport/components/related/related.tmpl.html) |
+| playlistAPI	| templatePath	| [playlist/playList.tmpl.html](https://github.com/kaltura/mwEmbed/blob/master/modules/KalturaSupport/components/playlist/playList.tmpl.html) | 
+| chapters	| templatePath	| [chapters/chapters.tmpl.html](https://github.com/kaltura/mwEmbed/blob/master/modules/KalturaSupport/components/chapters/chapters.tmpl.html) |
+| actionForm	| templatePath	| [CallToAction/templates/collect-form.tmpl.html](https://github.com/kaltura/mwEmbed/blob/master/modules/CallToAction/templates/collect-form.tmpl.html) |
+| actionButtons	 | templatePath	 | [CallToAction/templates/action-buttons.tmpl.html](https://github.com/kaltura/mwEmbed/blob/master/modules/CallToAction/templates/action-buttons.tmpl.html) |
 
 > Review: [Playlist with custom template and paging](http://player.kaltura.com/modules/KalturaSupport/tests/PlaylistPagingTemplate.html) for a rich example of using custom template to customize the playlist plugin UI and behavior.
 
-## Curly-brackets data binding
+## Curly-brackets data binding:
 
 Templates work by substituting data bindings against the current Player instance data values. Almost all plugin configuration options and data parameters that are displayed on the Player UI are exposed as bindable parameters.   
 
@@ -101,7 +100,7 @@ So the result is a Player where the title bar shows a message like this "My Vide
 
 ### Formatters
 
-Note the use of pipe+command ("|numberWithCommasNumber") after the binded parameter name - These are called "formatters", and they provide a means to easily format dates, time, numbers and strings according to known algorithm or by specifying one's custom javascript functions.
+Note the use of pipe+command ("|numberWithCommasNumber") after the binded parameter name. These are called "formatters", and they provide a means of  formatting dates, time, numbers and strings easily according to a known algorithm or by specifying your custom javascript functions.
 
 Default formaters include:
 
