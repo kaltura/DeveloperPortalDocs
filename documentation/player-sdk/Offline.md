@@ -8,6 +8,7 @@ title: Offline Playback - Integration Guide
 The native mobile SDKs (Android and iOS) allow applications to play downloaded content when the device is offline.
 
 
+
 ## Objective
 After reading this document, a developer integrating with Kaltura Player's Native SDKs will know how to configure offline playback and to use downloaded files with the Player.
 
