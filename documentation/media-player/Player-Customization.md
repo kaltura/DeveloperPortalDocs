@@ -13,7 +13,7 @@ This article covers these topics from the simplest options to the more advanced 
 
 ## Player and Plugin Properties
 
-You can set Player properties in order to change the Player behavior. For example, setting the 'EmbedPlayer.HidePosterOnStart' property to true will show the video first frame instead of the poster image (default thumbnail set on the entry) on start.  
+You can set Player properties to change the Player behavior. For example, setting the 'EmbedPlayer.HidePosterOnStart' property to true will show the video first frame instead of the poster image (default thumbnail set on the entry) on start.  
 Many plugins have properties that affect the Player look and feel. For example, the controlBarContainer plugin has an "hover" property that defines hovering controls:   
 
 ```javascript
@@ -27,8 +27,8 @@ Many plugins have properties that affect the Player look and feel. For example, 
 
 ## Predefined skin selection
 
-The Kaltura Player has 2 available skins you can choose from: "kdark" which is the default skin and "ott" which is a custom skin for OTT products.   
-You can select any of these skins or, if you create your own custom skin, you can select it the same way:  
+The Kaltura Player has two available skins: the "kdark" default skin and "ott", which is a custom skin for OTT products.   
+You can choose to use either of these skins or, if you create your own custom skin, select it the same way:  
 
 ```javascript
 'flashvars': {
@@ -38,14 +38,14 @@ You can select any of these skins or, if you create your own custom skin, you ca
 }
 ```
 
-> **NOTE:** The OTT skin is available only for basic configuration players. It doesn't support all of the Kaltura player plugins.
+> **NOTE:** The OTT skin is available only for basic configuration players. It does not support all of the Kaltura Player plugins.
  
-## The "theme" plugin
+## The "Theme" Plugin
 
-The "theme" plugin allows setting colors and size for all of the Player's buttons and basic UI elements such as the scrubber, icons etc.  
+The "theme" plugin allows setting colors and sizes for all of the Player's buttons and basic UI elements, such as the scrubber, icons etc.  
 You can access the theme plugin properties using Studio as explained here. 
-You can also use the embed code flashvars object in order to set a theme plugin properties for a specific Player instance.  
-It is highly advised to use the theme plugin when applicable over writing your own custom CSS file in order to prevent redundant assets loading and to boost Player performances.  
+You can also use the embed code Flashvars object in order to set a theme plugin properties for a specific Player instance.  
+It is highly advised to use the theme plugin, when possible, over writing your own custom CSS file to prevent redundant assets loading and to boost Player performances.  
 
 ## Plugin Templates
 
