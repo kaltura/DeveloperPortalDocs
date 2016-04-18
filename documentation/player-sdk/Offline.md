@@ -25,13 +25,10 @@ From the application's point-of-view, there are 3 parts to implementing offline 
 3. Overriding the streaming playback URL with the downloaded file.
 
 ## Integration Points
-
-
+&nbsp;
 ### Android
-
-
+&nbsp;
 #### Register
-
 Immediately after the application finishes downloading the media, it calls `LocalAssetsManager.registerAsset()`, providing:
 
 1. `entry`: a configured `KPPlayerConfig` object pointing at the asset, with all required parameters as for regular playback of the asset
@@ -48,7 +45,7 @@ To override the playback URL with a downloaded file, the application sets the `c
 A possible setup is a download manager class that contains a database of downloaded assets. `getURL()` provides the entryId of the asset, which can be used for lookup.
 
 ### iOS
-
+&nbsp;
 #### Register
 
 Immediately after the application finishes downloading the media, it calls `[KPLocalAssetsManager registerAsset:flavor:path:callback:]`, providing:
@@ -76,7 +73,7 @@ After the app sets the custom URL provider, it can dynamically change the playba
 The Custom URL provider is called at the beginning of every playback.
 
 # Download Location Guidelines
-
+&nbsp;
 ## Android
 
 Files can be downloaded to any directory accessible by the application, including the app's directory in the internal storage, and any directory in the external/shared storage.
@@ -89,7 +86,7 @@ Per Apple's current recommendation, downloaded video files should be stored in a
 For more information, see Apple's [File System Programming Guide > File System Basics > Where You Should Put Your App’s Files](https://developer.apple.com/library/ios/documentation/FileManagement/Conceptual/FileSystemProgrammingGuide/FileSystemOverview/FileSystemOverview.html#//apple_ref/doc/uid/TP40010672-CH2-SW28).
 
 # Sequence Diagrams
-
+&nbsp;
 ## Register Downloaded Asset
 ![Register](Offline-Register.png)
 
