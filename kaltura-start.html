@@ -118,7 +118,7 @@ layout: default
     <div class="w-container">
       <h1 class="section-headings">Apply for Kaltura Start</h1>
       <div class="w-form">
-        <form id="email-form" name="email-form" data-name="Email Form">
+        <form id="email-form" name="email-form" data-name="Email Form" action="https://vpaas.kaltura.com:8443/kaltura-start.php" method="post">
           <div class="w-row form-row">
             <div class="w-col w-col-6">
               <label for="First-Name" class="form-labels">First Name</label>
@@ -174,21 +174,14 @@ layout: default
           <div class="w-row form-row">
             <div class="w-col w-col-6">
               <label for="Country" class="form-labels">Country</label>
-              <select id="Country" name="Country" data-name="Country" required="required" class="w-select input-light">
-                <option value="">Select one...</option>
-                <option value="First">First Choice</option>
-                <option value="Second">Second Choice</option>
-                <option value="Third">Third Choice</option>
-              </select>
+		<select id="country" name="country" onchange="populateState()" data-name="Country" required="required" class="w-select input-light">
+		</select>
             </div>
             <div class="w-col w-col-6">
               <label for="State" class="form-labels">State</label>
-              <select id="State" name="State" data-name="State" required="required" class="w-select input-light">
-                <option value="">Select one...</option>
-                <option value="First">First Choice</option>
-                <option value="Second">Second Choice</option>
-                <option value="Third">Third Choice</option>
-              </select>
+		<select id="state" name="state" data-name="State" required="required" class="w-select input-light">
+		</select>
+		<script type="text/javascript">initCountry(""); </script>
             </div>
           </div>
           <label for="Application-Description" class="form-labels kstart-last-label">Tell Us About Your Startup</label>
