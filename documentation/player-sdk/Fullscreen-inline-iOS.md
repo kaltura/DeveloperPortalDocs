@@ -1,4 +1,13 @@
-#Default Full Screen
+
+---
+layout: page
+title: Using fullscreen and inline embed of the player in iOS
+---
+
+In this document we'll go over device rotation and fullscreen vs inline.
+
+## Default Full Screen
+The best practice for embeding the player in iOS is to use container view.
 
 Prepare holder view for the player:
 
