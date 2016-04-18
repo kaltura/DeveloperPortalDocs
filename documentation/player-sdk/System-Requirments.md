@@ -1,3 +1,9 @@
+---
+layout: page
+title: Player SDK System Requirements
+---
+
+
 #iOS System Requirements 
 
 
@@ -22,3 +28,5 @@ To Integrate Kaltura android Player SDK it is recomended to use AndroidStudio 2.
 
 #minimum OS version 
 Kaltura Android Player SDK supports 4.1+ 
+
+TODO: add a full list of tested devices 
