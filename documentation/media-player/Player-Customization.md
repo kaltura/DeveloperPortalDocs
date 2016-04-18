@@ -3,8 +3,7 @@ layout: page
 title: Kaltura Player Look & Feel and Behavior Customization
 ---
 
-The Kaltura Player look and feel is derived from its skin and code. The skin consists of CSS classes and graphical assets such as icons and fonts.
-Javascript code is used to define user interactions and UI behaviour.   
+The Kaltura Player look-and-feel is derived from its skin and code. The skin consists of CSS classes and graphical assets such as icons and fonts. Javascript code is used to define user interactions and UI behaviour.   
 
 You can customize the Player look-and-feel in a number of ways. A lot of customization can be done using the Player plugins, Player properties, and templating mechanism.   
 More advanced customization can be achieved using custom CSS loading, external assets, and skin overrides. Custom Javascript code can also be used in order to change the UI behavior.  
@@ -71,7 +70,7 @@ share.templatePath=https://link-to-my-custom-template.com/templatefile.tmpl.html
 
 > **NOTE:** When creating and loading external resources such as template files, please consult with the "Managing external assets" section below.
 
-### Plugins that support templates
+### Plugins that support templates:
 
 | Plugin       | Flashvar     | Default template path     |
 |:---|:---|:---|
@@ -85,7 +84,7 @@ share.templatePath=https://link-to-my-custom-template.com/templatefile.tmpl.html
 
 > Review: [Playlist with custom template and paging](http://player.kaltura.com/modules/KalturaSupport/tests/PlaylistPagingTemplate.html) for a rich example of using custom template to customize the playlist plugin UI and behavior.
 
-## Curly-brackets data binding
+## Curly-brackets data binding:
 
 Templates work by substituting data bindings against the current Player instance data values. Almost all plugin configuration options and data parameters that are displayed on the Player UI are exposed as bindable parameters.   
 
