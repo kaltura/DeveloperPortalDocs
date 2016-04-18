@@ -11,7 +11,7 @@ This document is relevent for both iOS and Android developers.
 ## Basic - how to configure a plugin 
 Plugin - any UI element on the player like Play/Volume/Caption... or non-ui logic like Analytics or Monetization.
 In order to add configuration we use the addConfigKey function, First parameter takes the key name and second the value.
-```Objective-c
+```objective_c
 [config addConfigKey:@"loadingSpinner.plugin" withValue:@"false"];
 ```
 
