@@ -25,7 +25,9 @@ From the application's point-of-view, there are 3 parts to implementing offline 
 3. Overriding the streaming playback URL with the downloaded file.
 
 ## Integration Points
+
 ### Android
+
 #### Register
 
 Immediately after the application finishes downloading the media, it calls `LocalAssetsManager.registerAsset()`, providing:
@@ -44,6 +46,7 @@ To override the playback URL with a downloaded file, the application sets the `c
 A possible setup is a download manager class that contains a database of downloaded assets. `getURL()` provides the entryId of the asset, which can be used for lookup.
 
 ### iOS
+
 #### Register
 
 Immediately after the application finishes downloading the media, it calls `[KPLocalAssetsManager registerAsset:flavor:path:callback:]`, providing:
@@ -57,6 +60,7 @@ In addition a callback block (`kLocalAssetRegistrationBlock`) is required.
 The call to `registerAsset:flavor:path:callback:` is asynchronous, and when it's done the callback block is called. In case of an error, the error parameter is set.
 
 #### Playback
+
 To override the playback URL with a downloaded file, the application sets the `customSourceURLProvider` property in `KPViewController` to an implementation of `KPSourceURLProvider` that returns non-null in its `urlForEntryId:currentURL:` method.
 
 A possible setup is a Download Manager class that contains a database of downloaded assets. `urlForEntryId:currentURL:` provides the entryId of the asset, which can be used for lookup.
@@ -70,6 +74,7 @@ After the app sets the custom URL provider, it can dynamically change the playba
 The Custom URL provider is called at the beginning of every playback.
 
 # Download Location Guidelines
+
 ## Android
 
 Files can be downloaded to any directory accessible by the application, including the app's directory in the internal storage, and any directory in the external/shared storage.
@@ -82,6 +87,7 @@ Per Apple's current recommendation, downloaded video files should be stored in a
 For more information, see Apple's [File System Programming Guide > File System Basics > Where You Should Put Your App’s Files](https://developer.apple.com/library/ios/documentation/FileManagement/Conceptual/FileSystemProgrammingGuide/FileSystemOverview/FileSystemOverview.html#//apple_ref/doc/uid/TP40010672-CH2-SW28).
 
 # Sequence Diagrams
+
 ## Register Downloaded Asset
 ![Register](Offline-Register.png)
 
