@@ -1,3 +1,7 @@
+---
+layout: page
+title: Android Background State Hadling
+---
 ##Background State Hadling
 
 The app should handle few background states:
