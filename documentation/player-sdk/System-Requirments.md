@@ -1,6 +1,6 @@
 ---
 layout: page
-title:iOS Player SDK System Requirements
+title: iOS Player SDK System Requirements
 ---
 
 
