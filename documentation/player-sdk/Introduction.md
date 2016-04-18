@@ -5,14 +5,13 @@ title: Introduction
 
 ## Introduction
 
-Welcome to the **Kaltura Video Platform**. Kaltura is the world's first Open Source Online Video Platform, providing both enterprise level commercial software and services, fully supported and maintained by Kaltura, as well as free open-source community supported solutions, for video publishing, management, syndication and monetization.
+Welcome to the **Kaltura Video Platform**. Kaltura is the world's first Open Source Online Video Platform, providing both enterprise level commercial software and services, fully supported and maintained by Kaltura, as well as free, open-source community-supported solutions, for video publishing, management, syndication and monetization.
 
-This wiki is the main source of documentation for **developers** working with **Kaltura iOS Player SDK** project. Here you will find information you need to get started developing your software using the SDK. The SDK provides tools to help you easily embed the [Kaltura](http://player.kaltura.com/docs/) Player into native environments in your iOS applications.
+This wiki is the main source of documentation for **developers** working with **Kaltura iOS Player SDK** project. Here you will find the information you need to get started developing your software using the SDK. The SDK provides tools to help you easily embed the [Kaltura](http://player.kaltura.com/docs/) Player into native environments in your iOS applications.
 
 If this is your first time hearing about Kaltura, we recommend starting with the [Kaltura website](http://corp.kaltura.com/).
 
 ## Supported Features
-
 The Kaltura Player SDK for iOS supports:  
 
 * DRM  
@@ -25,27 +24,28 @@ The Kaltura Player SDK for iOS supports:
 and more...
 
 # Architecture Overview
+The Kaltura Player architecture design to allow seamless integration experience, enabling you to connect mutltiple playback engines and platforms.  
+The kaltura Player wraps the playback engine with the same interface and events, thereby allowing the same plugin code to work across multiple platforms, including iOS,Android and web.  
 
-The Kaltura player architecture design to allow seamless expirence between mutltiple playback engines and platforms.  
-The kaltura player wrap the playback engine with the same interface and events and by that allow the same plugin code to work across multiple platofrms including iOS,Android and web.  
-Each platform support different types of streaming capabilites and DRM and the player will choose the best streaming technologie and DRM if needed.  
-Plugins can be with or without UI and can work cross platforms, Some plugins need native support such as chromecast,DRM and Ads.
-The player-sdk provide this features out of the box.  
-The Player expose API for all platform, we expose basic API and common. If you're an iOS developer and you already work with AVFoundation you should expect the same API + Kaltura player API.  
-The player API support sending notificaition to the player, listen to events and evaulates properties.  
-Each player config will include the UICONF object which include the player configuration - which plugins should we load.  
-Every componenet of the player is a plugin.  
+Each platform supports different types of streaming capabilites and DRMs, allowing the Player will choose the best streaming technologie and DRM as needed.  
+Plugins can be used with or without the UI and can work cross0platforms. Some plugins require native support, such as Chromecast,DRM and ads.
+
+The Player-SDK provide these features out-of-the-box.  
+The Player expose APIs - both basic API and common - for all platforms. If you are an iOS developer and you have already worked with AVFoundation, you should expect the same API + Kaltura Player API.  
+The Player API supports sending notifications to the Player, listening to events, and evaulating properties.  
+Each Player configuration includes the UICONF object, which includes the Player configuration and indicates which plugins should be loaded.  
+Every componenet of the Player is designed as a plugin.  
 
 ### Kaltura Player v2 Toolkit Architecture Diagram
 
-The following diagram visualizes the architecture of Kaltura Player , and highlights its flexibility and robustness across platforms and devices: 
+The following diagram visualizes the architecture of Kaltura Player, and highlights its flexibility and robust capabilities across platforms and devices: 
 
 ![](https://knowledge.kaltura.com/sites/default/files/styles/large/public/kaltura-player-toolkit.png)
 
 As the diagram outlines, we can leverage native components for [iOS](https://github.com/kaltura/player-sdk-native-ios/) and [Android](https://github.com/kaltura/player-sdk-native-android) in conjunction with the HTML5 runtime and Adobe flash or Microsoft Silverlight plugins, to transcend platform limitations across devices and browsers, while delivering the full Player v2 Toolkit experience. 
 
 ### Why Native?
-What advantages are gained by going native? Here is a feature list that will help explain the advantages of Kaltura Player Toolkit in native environments:
+What advantages are gained by using native? Here is a feature list that will help explain the advantages of using the Kaltura Player Toolkit in native environments:
 
               | iOS WebView              | iOS Native |Android WebView | Android Native |
 ------------- | -----------------        | ---------- | -------------- | ---------------|
@@ -60,8 +60,9 @@ Ads     | Supported without dual buffer | Supported  | Supported without dual bu
 
 
 ## Version Managment
-In order to use the player-sdk you'll need 2 main version - one for the player-sdk and one for the html5 lib.
-The html5 lib is configured in the UICONF object and the best practice here is to use the latest version. you can alwayes upgrade using the player studio.  
-As for the SDK - use the latest tag of the SDK.
+To use the Player-SDK, you will need two main versions - one for the Player-SDK and one for the html5 library (lib).
+The html5 lib is configured in the UICONF object; the best practice in this case is to use the latest version. You can alwayes upgrade using the version using the Player Studio.  
+
+When using the SDK, always use the latest SDK tag.
 
 
