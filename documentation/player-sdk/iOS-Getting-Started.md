@@ -5,7 +5,7 @@ title: iOS Player SDK Getting Started
 
 
 
-## Getting Started
+I## Getting Started
 
 KalturaPlayerSDK can be added to any project (big or small) in a matter of minutes (maybe even seconds if you're super speedy). 
 
@@ -66,3 +66,27 @@ Make sure to add the ```KALTURAPlayerSDK.xcodeproj``` file only, **not the entir
 ![Adding resource bundle](https://camo.githubusercontent.com/bd7958d4ca8e7c7ce8ca1dac1a6b1c1c6c08c078/687474703a2f2f6b6e6f776c656467652e6b616c747572612e636f6d2f73697465732f64656661756c742f66696c65732f7374796c65732f6c617267652f7075626c69632f42756e646c652e706e67)
 
 ** If you click build now, you will see that the PlayerSDK library is built before the main project app, and they are linked together.**
+
+### Required Frameworks
+```
+• SystemConfiguration
+• QuartzCore
+• CoreMedia
+• AVFoundation
+• AudioToolbox
+• AdSupport
+• WebKit
+• Social
+• MediaAccessibility
+• libSystem.dylib
+• libz.dylib
+• libstdc++.dylib
+• libstdc++.6.dylib
+• libstdc++.6.0.9.dylib
+• libxml2.dylib
+• libxml2.2.dylib
+• libc++.dylib
+```
+
+### App Transport Security 
+TODO: add link to ATS page 
