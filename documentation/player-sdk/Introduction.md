@@ -5,14 +5,13 @@ title: Introduction
 
 ## Introduction
 
-Welcome to the **Kaltura Video Platform**. Kaltura is the world's first Open Source Online Video Platform, providing both enterprise level commercial software and services, fully supported and maintained by Kaltura, as well as free open-source community supported solutions, for video publishing, management, syndication and monetization.
+Welcome to the **Kaltura Video Platform**. Kaltura is the world's first Open Source Online Video Platform, providing both enterprise level commercial software and services, fully supported and maintained by Kaltura, as well as free, open-source community-supported solutions, for video publishing, management, syndication and monetization.
 
-This wiki is the main source of documentation for **developers** working with **Kaltura iOS Player SDK** project. Here you will find information you need to get started developing your software using the SDK. The SDK provides tools to help you easily embed the [Kaltura](http://player.kaltura.com/docs/) Player into native environments in your iOS applications.
+This wiki is the main source of documentation for **developers** working with **Kaltura iOS Player SDK** project. Here you will find the information you need to get started developing your software using the SDK. The SDK provides tools to help you easily embed the [Kaltura](http://player.kaltura.com/docs/) Player into native environments in your iOS applications.
 
 If this is your first time hearing about Kaltura, we recommend starting with the [Kaltura website](http://corp.kaltura.com/).
 
 ## Supported Features
-
 The Kaltura Player SDK for iOS supports:  
 
 * DRM  
@@ -24,7 +23,46 @@ The Kaltura Player SDK for iOS supports:
 
 and more...
 
-## Intended Audience
+# Architecture Overview
+The Kaltura Player architecture design to allow seamless integration experience, enabling you to connect mutltiple playback engines and platforms.  
+The kaltura Player wraps the playback engine with the same interface and events, thereby allowing the same plugin code to work across multiple platforms, including iOS,Android and web.  
 
-This guide assumes that you have the necessary Objective C or Swift and iOS development skills to build and compile advanced iOS applications using XCode. It also assumes that you are familiar with online media technologies such as Apple HTTP Live Streaming (HLS), MP4, and H.264/AAC.
+Each platform supports different types of streaming capabilites and DRMs, allowing the Player will choose the best streaming technologie and DRM as needed.  
+Plugins can be used with or without the UI and can work cross0platforms. Some plugins require native support, such as Chromecast,DRM and ads.
+
+The Player-SDK provide these features out-of-the-box.  
+The Player expose APIs - both basic API and common - for all platforms. If you are an iOS developer and you have already worked with AVFoundation, you should expect the same API + Kaltura Player API.  
+The Player API supports sending notifications to the Player, listening to events, and evaulating properties.  
+Each Player configuration includes the UICONF object, which includes the Player configuration and indicates which plugins should be loaded.  
+Every componenet of the Player is designed as a plugin.  
+
+### Kaltura Player v2 Toolkit Architecture Diagram
+
+The following diagram visualizes the architecture of Kaltura Player, and highlights its flexibility and robust capabilities across platforms and devices: 
+
+![](https://knowledge.kaltura.com/sites/default/files/styles/large/public/kaltura-player-toolkit.png)
+
+As the diagram outlines, we can leverage native components for [iOS](https://github.com/kaltura/player-sdk-native-ios/) and [Android](https://github.com/kaltura/player-sdk-native-android) in conjunction with the HTML5 runtime and Adobe flash or Microsoft Silverlight plugins, to transcend platform limitations across devices and browsers, while delivering the full Player v2 Toolkit experience. 
+
+### Why Native?
+What advantages are gained by using native? Here is a feature list that will help explain the advantages of using the Kaltura Player Toolkit in native environments:
+
+              | iOS WebView              | iOS Native |Android WebView | Android Native |
+------------- | -----------------        | ---------- | -------------- | ---------------|
+CSS skin      | Not supported on iPhone  | Supported  | Supported | Supported
+JS Plugins    | Supported                | Supported  | Supported | Supported
+Apple HLS Playback[AES]| Supported            | Supported  | Broken support across fragmented | Supported
+MPEG-Dash     |Unsupported|Supported via partners software players| Supported, with consistent experience across android versions | Supported
+AutoPlay     | Not supported  | Supported  | Not supported  | Supported
+Chromecast     | Not supported  | Supported  | supported  | Supported
+DRM     | Not supported  | Supported  | Not supported  | Supported
+Ads     | Supported without dual buffer | Supported  | Supported without dual buffer   | Supported
+
+
+## Version Managment
+To use the Player-SDK, you will need two main versions - one for the Player-SDK and one for the html5 library (lib).
+The html5 lib is configured in the UICONF object; the best practice in this case is to use the latest version. You can alwayes upgrade using the version using the Player Studio.  
+
+When using the SDK, always use the latest SDK tag.
+
 
