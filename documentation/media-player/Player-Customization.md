@@ -75,13 +75,13 @@ share.templatePath=https://link-to-my-custom-template.com/templatefile.tmpl.html
 
 | Plugin       | Flashvar     | Default template path     |
 |:---|:---|:---|
-| Share             | templatePath            |  https://github.com/kaltura/mwEmbed/blob/master/modules/KalturaSupport/components/share/share.tmpl.html |
-| infoScreen	| templatePath	| https://github.com/kaltura/mwEmbed/blob/master/modules/KalturaSupport/components/info/info.tmpl.html |
-| related	| templatePath	| https://github.com/kaltura/mwEmbed/blob/master/modules/KalturaSupport/components/related/related.tmpl.html |
-| playlistAPI	| templatePath	| https://github.com/kaltura/mwEmbed/blob/master/modules/KalturaSupport/components/playlist/playList.tmpl.html | 
-| chapters	| templatePath	| https://github.com/kaltura/mwEmbed/blob/master/modules/KalturaSupport/components/chapters/chapters.tmpl.html |
-| actionForm	| templatePath	| https://github.com/kaltura/mwEmbed/blob/master/modules/CallToAction/templates/collect-form.tmpl.html |
-| actionButtons	 | templatePath	 | https://github.com/kaltura/mwEmbed/blob/master/modules/CallToAction/templates/action-buttons.tmpl.html |
+| Share             | templatePath            |  [share/share.tmpl.html](https://github.com/kaltura/mwEmbed/blob/master/modules/KalturaSupport/components/share/share.tmpl.html) |
+| infoScreen	| templatePath	| [info/info.tmpl.html](https://github.com/kaltura/mwEmbed/blob/master/modules/KalturaSupport/components/info/info.tmpl.html) |
+| related	| templatePath	| [related/related.tmpl.html](https://github.com/kaltura/mwEmbed/blob/master/modules/KalturaSupport/components/related/related.tmpl.html) |
+| playlistAPI	| templatePath	| [playlist/playList.tmpl.html](https://github.com/kaltura/mwEmbed/blob/master/modules/KalturaSupport/components/playlist/playList.tmpl.html) | 
+| chapters	| templatePath	| [chapters/chapters.tmpl.html](https://github.com/kaltura/mwEmbed/blob/master/modules/KalturaSupport/components/chapters/chapters.tmpl.html) |
+| actionForm	| templatePath	| [CallToAction/templates/collect-form.tmpl.html](https://github.com/kaltura/mwEmbed/blob/master/modules/CallToAction/templates/collect-form.tmpl.html) |
+| actionButtons	 | templatePath	 | [CallToAction/templates/action-buttons.tmpl.html](https://github.com/kaltura/mwEmbed/blob/master/modules/CallToAction/templates/action-buttons.tmpl.html) |
 
 > Review: [Playlist with custom template and paging](http://player.kaltura.com/modules/KalturaSupport/tests/PlaylistPagingTemplate.html) for a rich example of using custom template to customize the playlist plugin UI and behavior.
 
