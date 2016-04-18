@@ -1,3 +1,8 @@
+---
+layout: page
+title: Offline Playback - Integration Guide
+---
+
 # Offline Playback - Integration Guide
 
 The native mobile SDKs (Android and iOS) allow applications to play downloaded content when the device is offline.
