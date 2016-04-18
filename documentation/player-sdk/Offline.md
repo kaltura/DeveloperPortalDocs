@@ -26,7 +26,9 @@ From the application's point-of-view, there are 3 parts to implementing offline 
 
 ## Integration Points
 
+
 ### Android
+
 
 #### Register
 
