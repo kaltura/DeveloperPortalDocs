@@ -3,39 +3,39 @@ layout: page
 title: Kaltura Media Player Configuration and Parameters
 ---
 
-The Kaltura player configuration is determine by a JSON structured configuration object also called Flashvars.  
+The Kaltura player configuration is determined by a JSON structured configuration object, also called Flashvars.  
 The Flashvars config params object defines key / values pairs for player properties as well as a plugins configuration list.   
 
-You can customize the Kaltura player using one of 2 options:
+You can customize the Kaltura player using one of two options:
 
-1. Using Kaltura Universal Studio: The Universal Studio an a part of Kaltura KMC and allows visual configuration of player parameters and plugins.  
-For more info and a full user guide please refer to the Universal Studio Information Guide.  
-2. The Universal Studio saves the Flashvars object for you as part of the player's configuration in the Kaltura database. When using Studio, you do not have to manually define the Flashvars object.  
-Define a Flashvars object as part of your Embed code:  
-Using this method, you define your Flashvars object as a JSON object in your player embed code statement. You can define values for player properties and plugins configuration.  
-**NOTE:** Values defined in the Embed code Flashvars objects override any values previously saved using Studio for the same keys.   
+1. Using Kaltura Universal Studio: The Universal Studio is a part of the Kaltura KMC and allows visual configuration of player parameters and plugins.  
+For more infomation and a full user guide, please refer to the [Universal Studio Information Guide](https://knowledge.kaltura.com/node/1148).  
+2. The Universal Studio saves the Flashvars object for you as part of the player's configuration in the Kaltura database. When using Studio, you do not have to define the Flashvars object manually.  
+Define a Flashvars object as part of your embed code:  
+Using this method, define your Flashvars object as a JSON object in your Player embed code statement. You can define values for Player properties and plugins configuration.  
+**NOTE:** The values defined in the embed code Flashvars objects override any values previously saved using Studio for the same keys.   
 
 ## Considerations for Configuring Players
 
 How should you configure the player, and what to consider when specifying configuration parameters?  
-As a general rule of thumb, you should always prefer to configure flashvars via the Player Studio menus and the "UI Variables" section:  
+As a general rule of thumb, you should always prefer to configure Flashvars via the Studio menus and the "UI Variables" section:  
 
-* Configuration defined in Studio applies to all player instances across web pages and embed codes whereas embed code Flashvars applies only to a specific player instance.
+* The configuration defined in Studio applies to all player instances across web pages and embed codes, whereas embed code Flashvars applies only to a specific player instance.
 * Visual and self explanatory interface for the most commonly used player properties and plugins.
 
 ### Use embed code Flashvars in these scenarios:   
 
 > Note that any changes made via flashvars on the embedding page, will require editing these pages to make future changes. 
 
-1. You need to set the Flashvars values dynamically based on you website / app logic.  
-For example, you may need to pass metadata fields that are derived from the specific view or page at runtime and thus will have to set these values only when rendering the player.
-2. You want to inherit all of the player properties defined in Studio but you need to override specific properties for a specific player instance - note that if used across many pages or sites, it will be better practice to create a new player and configure it via the player studio.    
+1. You need to set the Flashvars values dynamically based on your website / application logic.  
+For example, you may need to pass metadata fields that are derived from the specific view or page at runtime and, therefore, you will have to set these values only when rendering the player.
+2. You want to inherit all of the Player properties defined in Studio but you need to override specific properties for a specific Player instance. Note that if you want to use the configuration across many pages or sites, it is better practice to create a new Player and configure it via the Player Studio.    
 
-### Passing config params in embed methods
+### Passing Configuration Parameters in Embed Methods
 
-The Kaltura player can be embedded into webpages in few ways. The embed code Flashvars object is passed in a different way for different embed types. Learn more about embed types.  
+The Kaltura Player can be embedded into webpages in a number of ways. The embed code Flashvars object is passed in a different way for different embed types. Learn more about embed types.  
 
-#### Config params in JavaScript dynamic embed
+#### Configure Parameters in JavaScript Dynamic Embed
 
 For dynamic embeds: Use a JSON object as part of your embed code:  
 
@@ -57,7 +57,7 @@ kWidget.embed({
 });
 ```
 
-#### Config params in iFrame embed
+#### Config parameters in iFrame Embed
 
 For auto / iFrame embeds, pass the key / value pairs on the iFrame URL query string, using the flashvars with brackets and dot syntax for nested object attributes, as following:   
 
