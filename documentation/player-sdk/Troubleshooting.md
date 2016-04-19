@@ -25,9 +25,10 @@ The most permissive setting is to entirely disable ATS. This is done by setting
 </plist>
 ```
 
-> NOTE: If there's a limited set of domains that have to be accessed without TLS, it is advised to explicitly
+**NOTE**: If there's a known limited set of domains that have to be accessed without TLS, it is advised to explicitly
 whitelist them. For more information about fine-grained control of ATS see:
-https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/plist/info/NSAppTransportSecurity
+* https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/plist/info/NSAppTransportSecurity
+* http://www.neglectedpotential.com/2015/06/working-with-apples-application-transport-security/
 
 ## iOS: Bitcode
 Starting with [Xcode 7](https://developer.apple.com/library/ios/releasenotes/DeveloperTools/RN-Xcode/Chapters/xc7_release_notes.html)
