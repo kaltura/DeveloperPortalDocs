@@ -44,6 +44,7 @@ After you've included the Kaltura player library, the following kWidget API embe
 | parameter       | type        | required         | description           |
 |:---|:---|:---|:---|
 | `targetId` | String | mandatory | The DOM player target id attribute string if not defined as top level param. |
+| `partnerId` | String | mandatory | The id of your Kaltura account (aka partnerId). (Refer to the partner service, or visit the KMC>Settings tab to get your account partnerId). | 
 | `wid` | String | mandatory | The Kaltura widget id. Most commonly, this is set to Kaltura account id (aka partnerId)  prefixed by underscore, e.g. `_8111441`. (Refer to the partner service, or visit the KMC>Settings tab to get your account partnerId). | 
 | `entry_id` | String | mandatory | The entry id of the media item (entry) to play. Can be left empty for a JavaScript based entryId. (Refer to the entry service, or visit the KMC>Content tab for the list of media entries in your account). If this is set to a playlistId, the Kaltura backend will stitch the playlist on the fly, and the player will play back the playlist as if it was a single media entry (Only manual playlists accepted. Refer to the playlist service or visit KMC>Content>Playlists for the list of playlists in your account). |
 | `flashvars` | Object | mandatory | Runtime configuration object to set various player configurations and properties. These settings can override arbitrary UIVars and plugin configurations. |
