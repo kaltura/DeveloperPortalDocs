@@ -3,7 +3,7 @@ layout: page
 title: Events And Listeners
 ---
 
-### Natvie Controls commands
+### Android API Events and Hooks
 
 - KMediaControl
 
@@ -170,15 +170,24 @@ this method receives two parameters:
 
 Examples:
 
-Without parameter:    
+Notification Without Parameter:  
+ 
+``` java 
 getPlayer().sendNotification("doPause", null);
+```
 
-With string parameter
+Notification With String Parameter:
+
+``` java
 getPlayer().sendNotification("doSeek", Double.toString(seconds));
+```
 
-With JSON format parameter:
+Notification With JSON Parameter:
+
+``` java
 String entry = "'{\"entryId\":\"" + entryId + "}'";
 getPlayer().sendNotification("changeMedia", entry); 
+```
                               
 
  
