@@ -1,3 +1,8 @@
+---
+layout: page
+title: Using Google Ads in iOS
+---
+
 #Linking Google Ads
 
 ###With Cocoapods:
