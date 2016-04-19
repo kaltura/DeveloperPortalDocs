@@ -12,7 +12,7 @@ You can access the entire player API through methods that enable:
 * Listening and responding to player events (addJsListener/removeJsListener):
 React to internal player events, such as beginning play and pausing.
 
-```
+```objective_c
 
 /*!
  * @function addEventListener:eventID:handler:
