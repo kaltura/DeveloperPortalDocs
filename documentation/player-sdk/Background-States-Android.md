@@ -2,6 +2,8 @@
 layout: page
 title: Android Background State Hadling
 ---
+
+In this document we'll talk about how to save the player state when the app will move to backgorund, This can be due to home button pressed, power button or phone call.
 ##Background State Hadling
 
 The app should handle few background states:
