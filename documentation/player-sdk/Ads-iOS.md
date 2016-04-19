@@ -36,11 +36,13 @@ Add to your `KPPlayerConfig` these:
 [config addConfigKey:@"doubleClick.adTagUrl" withValue:@"your ad tag URL"];
 ```
 
+And that's it you are ready to use ads.
+
 #Listening to Ad's events
 
 If you should listen to ad's events you can use:
 
-todo link to the kdp api example
+**@todo** link to the kdp api example
 
 [List of commonly used player ad events](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/media-player/Kaltura-Media-Player-API.md#commonly-used-player-ad-events-ad-sequence-events)
 
