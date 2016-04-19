@@ -40,6 +40,37 @@ See [List of supported languages and lexers](https://github.com/jneen/rouge/wiki
 
 For additional reading on the Markdown flavor we use read: [Kramdown](http://kramdown.gettalong.org/documentation.html).
 
+To add a diagram use:
+&#123;% plantuml %&#125;
+
+participant App
+participant "Kaltura Player" as KP
+
+App->KP: setCustomURLProvider(localURLProvider)
+App->KP: setConfig(entryConfig)
+App->KP: play()
+KP->localURLProvider: getURL(entryId)
+localURLProvider-->KP: localPath
+
+note over KP: Plays the downloaded file
+
+&#123;% endplantuml %&#125;
+
+Will render as:
+{% plantuml %}
+participant App
+participant "Kaltura Player" as KP
+
+App->KP: setCustomURLProvider(localURLProvider)
+App->KP: setConfig(entryConfig)
+App->KP: play()
+KP->localURLProvider: getURL(entryId)
+localURLProvider-->KP: localPath
+
+note over KP: Plays the downloaded file
+
+{% endplantuml %}
+
 To add a link to an external site use:
 &#123;% extlink Debian GNU Linux http://debian.org %&#125;
 
