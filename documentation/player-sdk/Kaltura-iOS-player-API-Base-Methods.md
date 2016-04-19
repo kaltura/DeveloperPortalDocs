@@ -3,8 +3,6 @@ layout: page
 title: Kaltura iOS player API Base Methods
 ---
 
-![](http://www.russisches-tv-fernsehen.de/wp-content/uploads/2016/01/ioslogo.png)
-
 [![iOS](https://img.shields.io/badge/iOS-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios)
 
 # Kaltura iOS player API Base Methods
