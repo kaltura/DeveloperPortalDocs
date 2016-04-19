@@ -165,11 +165,25 @@ In case that app is interested in reacting to web events you should add the "mPl
 
 ```
  
-### Sending Notifications
+### Sending Event Notification
 
-In case that app wants to  
+In case that app wants to change current player behavoir it can be done via sendNotification API.
+
+this method receives two parameters:
+  - action name
+  - parameter (string/json)  
+
+Examples:
+
+Without parameter:    
 getPlayer().sendNotification("doPause", null);
- 
+
+With string parameter
+getPlayer().sendNotification("doSeek", Double.toString(seconds));
+
+With JSON format parameter:
+String entry = "'{\"entryId\":\"" + entryId + "}'";
+getPlayer().sendNotification("changeMedia", entry); 
                               
 
  
