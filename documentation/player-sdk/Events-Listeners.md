@@ -3,11 +3,9 @@ layout: page
 title: Events And Listeners
 ---
 
-###Natvie Controls commands
+### Natvie Controls commands
 
 - KMediaControl
-
-###
 
   Kaltura also offeres ability to perform player operation
   via the KMediaControl API
@@ -123,12 +121,9 @@ In some cases user will be interested to wait until ready event is recieved and 
        });
        
        
-``` 
-### Player States Event Listeners
+```       
 
-      
-
-###  Enable/Diable Configuration on runtime
+### Enable/Diable Configuration on runtime
 
 In some cases the app will want to add or remove configuration attributes upon states or event that are received
 
@@ -172,7 +167,7 @@ In case that app is interested in reacting to web events you should add the "mPl
  
 ### Sending Notifications
 
-In case that 
+In case that app wants to  
 getPlayer().sendNotification("doPause", null);
  
                               
