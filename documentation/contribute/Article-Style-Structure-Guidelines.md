@@ -6,19 +6,18 @@ title: Article Style and Structure Guidelines
 The Kaltura VPaaS Developer Site is using [Jekyll engine](http://jekyllrb.com/) and markdown syntax as the basis of the articles.
 To learn about Markdown basics and how to use the format, please read: [GitHub markdown basics](https://help.github.com/articles/markdown-basics/).
 
-The Kaltura VPaaS Developer Site extends the default markdown with Onebox embeds as follow:
 
-## Adding Kaltura videos: 
+## Adding Kaltura videos 
 &#123;% onebox http://www.kaltura.com/tiny/nex76 %&#125;
 
-The above code will be rendered as:
+*Will be rendered as:*
 
 {% onebox http://www.kaltura.com/tiny/nex76 %}
 
-## Adding YouTube videos: 
+## Adding YouTube videos 
 &#123;% onebox https://www.youtube.com/watch?v=Owh8nBt4QSs %&#125;
 
-## Adding syntax highligted code:
+## Adding syntax highligted code
 
 &#123;% highlight c %&#125;
 int hello_world(char *world)  
@@ -27,7 +26,7 @@ int hello_world(char *world)
 }  
 &#123;% endhighlight %&#125;
 
-Will render as:
+*Will render as:*
 
 {% highlight c %}
 int hello_world(char *world)
@@ -39,7 +38,7 @@ int hello_world(char *world)
 See [List of supported languages and lexers](https://github.com/jneen/rouge/wiki/list-of-supported-languages-and-lexers)
 
 
-## Adding diagrams:
+## Adding diagrams
 &#123;% plantuml %&#125;
 
 participant App
@@ -55,7 +54,7 @@ note over KP: Plays the downloaded file
 
 &#123;% endplantuml %&#125;
 
-Will render as:
+*Will render as:*
 {% plantuml %}
 participant App
 participant "Kaltura Player" as KP
