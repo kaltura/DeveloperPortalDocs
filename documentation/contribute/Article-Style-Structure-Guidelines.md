@@ -8,17 +8,17 @@ To learn about Markdown basics and how to use the format, please read: [GitHub m
 
 The Kaltura VPaaS Developer Site extends the default markdown with Onebox embeds as follow:
 
-To add Kaltura videos: 
+## Adding Kaltura videos: 
 &#123;% onebox http://www.kaltura.com/tiny/nex76 %&#125;
 
 The above code will be rendered as:
 
 {% onebox http://www.kaltura.com/tiny/nex76 %}
 
-To add YouTube videos: 
+## Adding YouTube videos: 
 &#123;% onebox https://www.youtube.com/watch?v=Owh8nBt4QSs %&#125;
 
-To add a syntax highligted code:
+## Adding syntax highligted code:
 
 &#123;% highlight c %&#125;
 int hello_world(char *world)  
@@ -38,9 +38,8 @@ int hello_world(char *world)
 
 See [List of supported languages and lexers](https://github.com/jneen/rouge/wiki/list-of-supported-languages-and-lexers)
 
-For additional reading on the Markdown flavor we use read: [Kramdown](http://kramdown.gettalong.org/documentation.html).
 
-To add a diagram use:
+## Adding diagrams:
 &#123;% plantuml %&#125;
 
 participant App
@@ -71,13 +70,15 @@ note over KP: Plays the downloaded file
 
 {% endplantuml %}
 
-To add a link to an external site use:
+## Adding links to an external sites:
 &#123;% extlink Debian GNU Linux http://debian.org %&#125;
 
 Will render as:
 {% extlink Debian GNU Linux http://debian.org %}
 
 A nifty tool to help you to see how your markdown looks as you create it: [dillinger.io](http://dillinger.io/)
+
+For additional reading on the Markdown flavor we use read: [Kramdown](http://kramdown.gettalong.org/documentation.html).
 
 ## Tips for Creating Great Content
 
