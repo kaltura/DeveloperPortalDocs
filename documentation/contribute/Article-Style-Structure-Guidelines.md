@@ -10,7 +10,7 @@ To learn about Markdown basics and how to use the format, please read: [GitHub m
 ## Adding Kaltura videos 
 &#123;% onebox http://www.kaltura.com/tiny/nex76 %&#125;
 
-*Will be rendered as:*
+**Will be rendered as:**
 
 {% onebox http://www.kaltura.com/tiny/nex76 %}
 
@@ -26,7 +26,7 @@ int hello_world(char *world)
 }  
 &#123;% endhighlight %&#125;
 
-*Will render as:*
+**Will render as:**
 
 {% highlight c %}
 int hello_world(char *world)
@@ -54,7 +54,7 @@ note over KP: Plays the downloaded file
 
 &#123;% endplantuml %&#125;
 
-*Will render as:*
+**Will render as:**
 {% plantuml %}
 participant App
 participant "Kaltura Player" as KP
@@ -72,7 +72,7 @@ note over KP: Plays the downloaded file
 ## Adding links to external sites
 &#123;% extlink Debian GNU Linux http://debian.org %&#125;
 
-Will render as:
+**Will render as:**
 {% extlink Debian GNU Linux http://debian.org %}
 
 A nifty tool to help you to see how your markdown looks as you create it: [dillinger.io](http://dillinger.io/)
@@ -81,11 +81,11 @@ For additional reading on the Markdown flavor we use read: [Kramdown](http://kra
 
 ## Tips for Creating Great Content
 
-* Start with an introduction by answering the question “what will be learned in this document”.
+* Start with an introduction by answering the question “what will be learned in this document?”.
 * Think about the steps that will get your reader from A to Z in the fastest way possible while following Kaltura best-practises.
 * Do not add an H1 title (#) to your article, it will be added automatically from the metadata title defined in the ["article header notation"](#header-notation) section
 * All sections should be separated by H2 headings (##), subsections by H3 headings (###) and so on.
-* **Don’t forget to spell check!**
+* **Don't forget to spell check!**
 
 ### Remember that your audience is developer-focused, therefore:
 
