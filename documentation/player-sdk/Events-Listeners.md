@@ -7,35 +7,30 @@ title: Events And Listeners
 
 - KMediaControl
 
-  Kaltura also offeres ability to perform player operation
+  The SDK offeres ability to perform player operation
   via the KMediaControl API
   
   You may send the following operations:
    
- - start() -
-    start playing the media
- - pause() -
-    pause the current playback
- - seek(long milliSeconds) - 
- 	seek to specific time position
- - seek(long milliSeconds, SeekCallback callback) -
-   seek to specific time position, call callback to be called when seek is done.
- - canSeekForward() - 
-   check if seek forward is possible
- - canSeekBackward() - 
-   check if seek backwards is possible 
- - replay() -
-   start over the playback
- - isPlaying() -
-   check if player state is playing
- - canPause() -
-   check if player can be paused
- - getDuration() - 
-   get current media duration 
- - getCurrentPosition()
-   get current media duration
- - state()
-   get current player state
+
+
+| Operation  | Parameters  | Explanation |
+|:------------- |:---------------:| :-------------|
+| start     |  | start playing the media         | 
+| pause     |  | pause the current playback         | 
+| seek     | (long milliSeconds) | seek to specific time position          | 
+| seek     | (long milliSeconds, SeekCallback callback) | seek to specific time position and call callback to be called when seek is done         |
+| canSeekForward     |  | check if seek backwards is possible         |
+| canSeekBackward     |  | check if seek forward is possible          | 
+| replay     |  | start over the playback         |
+| isPlaying     |  | check if player state is playing         |
+| canPause     |  | check if player can be paused         |
+| getDuration     |  | get current media duration         |
+| getCurrentPosition     |  | get current media position         |
+| state     |  | get current player state         |
+
+
+
  
 ***
  Example: Play/Pause Button
