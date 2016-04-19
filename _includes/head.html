@@ -4,9 +4,6 @@ var host = "{{site.domain}}";
 if ((host == window.location.host) && (window.location.protocol != "https:")){
 	window.location.protocol = "https";
 }
-$('.h2,h3,h4,h5,h6').filter('[id]').each(function () {
-    $(this).html('<a href="#'+$(this).attr('id')+'">' + $(this).text() + '</a>');
-});
 </script>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -56,6 +53,11 @@ $('.h2,h3,h4,h5,h6').filter('[id]').each(function () {
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.js"></script>
 <script src="{{ site.url }}/js/country.js"></script>
+<script>
+$('.h2,h3,h4,h5,h6').filter('[id]').each(function () {
+    $(this).html('<a href="#'+$(this).attr('id')+'">' + $(this).text() + '</a>');
+});
+</script>
 </head>
 
 
