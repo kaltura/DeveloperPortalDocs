@@ -69,7 +69,7 @@ note over KP: Plays the downloaded file
 
 {% endplantuml %}
 
-## Adding links to an external sites:
+## Adding links to external sites
 &#123;% extlink Debian GNU Linux http://debian.org %&#125;
 
 Will render as:
