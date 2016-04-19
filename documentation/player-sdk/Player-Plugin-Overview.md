@@ -26,6 +26,7 @@ The following are Kaltura supplied plugins:
 [Kaltura Player Plugins](https://vpaas.kaltura.com/documentation/player-sdk/Player-Plugins-in-the-SDK-Supported-plugins#sthash.3a8Dft10.dpbs)
 
 ### How to enable/create a plugin?
+
 ##### Use of a pre-written plugin
 
 If we want to change/add a plugin the key will start with the plugin name, dot and the plugin attribute.
