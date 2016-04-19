@@ -38,6 +38,7 @@ git clone https://github.com/kaltura/player-sdk-native-ios.git
 ### Add the static library's .xcodeproj to the app's project
 Find the ```KALTURAPlayerSDK.xcodeproj``` from the subproject folder in Finder, and drag it into Xcode’s Navigator tree. Alternatively, add it with Xcode’s Add Files File menu item.
 
+![add xcodeproj](https://camo.githubusercontent.com/1e3d845d0728b62beb23e474ae30d2b8370867db/687474703a2f2f6b6e6f776c656467652e6b616c747572612e636f6d2f73697465732f64656661756c742f66696c65732f7374796c65732f6c617267652f7075626c69632f6164645f66696c65732e706e67)
 
 
 Make sure to add the ```KALTURAPlayerSDK.xcodeproj``` file only, **not the entire directory**. You can’t have the same project open in two different Xcode windows.If you find that you’re unable to navigate around the library project, check that you don’t have it open in another Xcode window. After you’ve added the subproject, it should appear below the main project in the Xcode’s Navigator tree:
