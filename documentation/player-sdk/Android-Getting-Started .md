@@ -18,6 +18,8 @@ project(':googlemediaframework').projectDir=new File('../player-sdk-native-andro
 include ':playerSDK'
 project(':playerSDK').projectDir=new File('../player-sdk-native-android/playerSDK')
 ```
+![settings.gradle](./images/settings.gradle.png)
+
 syncronize project with updated gradle 
 ![SyncProjectWithGradleProject](./images/SyncProjectWithGradleProject.png)
 
