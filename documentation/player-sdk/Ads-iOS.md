@@ -14,9 +14,9 @@ pod 'GoogleAds-IMA-iOS-SDK'
 
 ```
 
-###Traditional way:
+### Traditional way:
 
-###Linking to GoogleInteractiveMediaAds SDK
+### Linking to GoogleInteractiveMediaAds SDK
  1. If you use ads you will have to download **`GoogleMobileAds`** from: [Admob](https://developers.google.com/admob/ios/download) and add it to your project
  2. In addition to the **`GoogleMobileAds`** you should download **`GoogleInteractiveMediaAds`** from: [IMA SDK](https://developers.google.com/interactive-media-ads/docs/sdks/ios/download), if you are going to use **Admob** in addition to the **`IMA SDK`** you should add **GoogleInteractiveMediaAds-GoogleIMA3ForAdMob** to your project and if you are going to use only **`IMA SDK`** you should add **GoogleInteractiveMediaAds-GoogleIMA3** to your project.
  3. Required frameworks for **`GoogleMobileAds`**:
@@ -27,7 +27,7 @@ pod 'GoogleAds-IMA-iOS-SDK'
 	- MessageUI.framework
 
 
-#Configure the player for using Ads
+# Configure the player for using Ads
 
 Add to your `KPPlayerConfig` these:
 
@@ -38,7 +38,7 @@ Add to your `KPPlayerConfig` these:
 
 And that's it you are ready to use ads.
 
-#Listening to Ad's events
+# Listening to Ad's events
 
 If you should listen to ad's events you can use:
 
