@@ -10,8 +10,7 @@ title: Using Google Ads in iOS
 Add these 2 pods to your podfile:
 
 ```
-pod 'Google-Mobile-Ads-SDK'
-pod 'GoogleAds-IMA-iOS-SDK-For-AdMob', '~> 3.0.beta.16'
+pod 'GoogleAds-IMA-iOS-SDK'
 
 ```
 
@@ -28,6 +27,14 @@ pod 'GoogleAds-IMA-iOS-SDK-For-AdMob', '~> 3.0.beta.16'
 	- MessageUI.framework
 
 
+#Configure the player for using Ads
+
+Add to your `KPPlayerConfig` these:
+
+```
+[config addConfigKey:@"doubleClick.plugin" withValue:@"true"];
+[config addConfigKey:@"doubleClick.adTagUrl" withValue:@"your ad tag URL"];
+```
 
 #Listening to Ad's events
 
