@@ -9,7 +9,7 @@ Welcome to the **Kaltura Video Platform**. Kaltura is the world's first Open Sou
 
 This wiki is the main source of documentation for **developers** working with **Kaltura iOS Player SDK** project. Here you will find the information you need to get started developing your software using the SDK. The SDK provides tools to help you easily embed the [Kaltura](http://player.kaltura.com/docs/) Player into native environments in your iOS applications.
 
-If this is your first time hearing about Kaltura, we recommend starting with the [Kaltura website](http://corp.kaltura.com/).
+If this is your first time hearing about Kaltura, we recommend you begin with the [Kaltura website](http://corp.kaltura.com/), which will help you learn more about Kaltura's Video Platform.
 
 ## Supported Features
 The Kaltura Player SDK for iOS supports:  
@@ -24,11 +24,11 @@ The Kaltura Player SDK for iOS supports:
 and more...
 
 # Architecture Overview
-The Kaltura Player architecture design to allow seamless integration experience, enabling you to connect mutltiple playback engines and platforms.  
-The kaltura Player wraps the playback engine with the same interface and events, thereby allowing the same plugin code to work across multiple platforms, including iOS,Android and web.  
+The Kaltura Player's architecture is designed to allow for a seamless integration experience, enabling you to connect mutltiple playback engines and platforms.  
+The kaltura Player wraps the playback engine with the same interface and events, thereby allowing the same plugin code to work across multiple platforms, including iOS, Android, and web.  
 
-Each platform supports different types of streaming capabilites and DRMs, allowing the Player will choose the best streaming technologie and DRM as needed.  
-Plugins can be used with or without the UI and can work cross0platforms. Some plugins require native support, such as Chromecast,DRM and ads.
+Each platform supports different types of streaming capabilites and DRMs, allowing the Player to choose the best streaming technologies and DRM as needed.  
+Plugins can be used with or without the UI, and can work crossplatforms. Some plugins require native support, such as Chromecast,DRM and ads.
 
 The Player-SDK provide these features out-of-the-box.  
 The Player expose APIs - both basic API and common - for all platforms. If you are an iOS developer and you have already worked with AVFoundation, you should expect the same API + Kaltura Player API.  
