@@ -3,12 +3,12 @@ layout: page
 title: Android Background State Handline
 ---
 
-This document describes how to save the Player state when the application moves to the background, which can occur when the end user presses the home button or power button, or as the result of a telephone call.
+This document describes how to save the Player state when the application moves to the background, which can occur when the end user taps the home button, presses the power button, or as the result of a telephone call.
 
 ##Background State Handling
 The application should handle a number of background states:
 
-1. The end user clicked the Home button.
+1. The end user tapped the Home button.
 2. The end user pressed the power button.
 3. Viewing was interrupted by a telephone call or similar interruption.
 
