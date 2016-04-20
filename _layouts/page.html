@@ -133,14 +133,14 @@ $( document ).ready(function() {
 	
 	var newLine, el, title, link;
 	
-	$('.post-content h1, .post-content h2').each(function() {
+	$('.post-content h2, .post-content h3').each(function() {
 	
 	  el = $(this);
 	  title = el.text();
 	  link = "#" + el.attr("id");
 	
 	  newLine =
-	    "<li>" +
+	    "<li class='"+el.localName+"'>" +
 	      "<a href='" + link + "'>" +
 	        title +
 	      "</a>" +
