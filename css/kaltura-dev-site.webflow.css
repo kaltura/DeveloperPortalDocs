@@ -1633,6 +1633,182 @@ td {
   line-height: 33px;
 }
 
+.pricing-header-section {
+  padding-top: 150px;
+  padding-bottom: 150px;
+  background-image: url('../images/Pricing-BK.jpg');
+  background-position: 0px 0px;
+  background-size: 1750px;
+}
+
+.pricing-heading {
+  padding-top: 9px;
+  padding-bottom: 9px;
+  background-color: transparent;
+  font-family: proxima-nova, sans-serif;
+  color: #fff;
+  font-weight: 300;
+  text-align: center;
+  letter-spacing: 0.7px;
+}
+
+.pricing-subheading {
+  font-family: proxima-nova, sans-serif;
+  color: #969696;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0.4px;
+}
+
+.price-breakdown-section {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  background-color: #f7f7f7;
+}
+
+.price-breakdown-container {
+  margin-top: 0px;
+  padding-top: 0px;
+  padding-bottom: 70px;
+  background-color: transparent;
+}
+
+.price-breakdown-div {
+  position: relative;
+  z-index: 1;
+  margin-top: -40px;
+  padding: 20px 50px 54px;
+  background-color: #fff;
+  box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, .08);
+  opacity: 1;
+}
+
+.pricing-details-heading {
+  margin-bottom: 76px;
+  font-family: proxima-nova, sans-serif;
+  font-size: 30px;
+  font-weight: 300;
+  text-align: center;
+  letter-spacing: 0.4px;
+  text-transform: none;
+}
+
+.pricing-details-description {
+  margin-bottom: 50px;
+  font-family: proxima-nova, sans-serif;
+  color: #969696;
+  font-style: italic;
+  text-align: center;
+}
+
+.pricing-btn-div {
+  width: 100%;
+  margin-top: 48px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
+.pricing-columns-row {
+  border-top: 1px none #ccc;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.pricing-column {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-top: 1px dotted #ccc;
+  border-right: 1px none #ccc;
+  border-bottom: 1px none #e7e7e7;
+}
+
+.pricing-column.pricing-first-row {
+  border-top-style: none;
+}
+
+.pricing-column.pricing-last-column {
+  border-right-style: none;
+}
+
+.trusted-by-section {
+  position: relative;
+  left: 0px;
+  bottom: 0px;
+  z-index: -1;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.mobilebtn {
+  display: none;
+}
+
+.success-caption {
+  font-family: proxima-nova, sans-serif;
+  text-align: center;
+}
+
+.success-btn {
+  width: 15%;
+  margin-top: 22px;
+  background-color: #188093;
+  font-family: proxima-nova, sans-serif;
+  text-align: center;
+}
+
+.billable-item {
+  margin-bottom: 0px;
+  font-family: proxima-nova, sans-serif;
+  letter-spacing: 0.2px;
+}
+
+.billable-description {
+  font-family: proxima-nova, sans-serif;
+  color: #969696;
+  letter-spacing: 0.2px;
+}
+
+.billable-pricing {
+  padding-left: 108px;
+  font-family: proxima-nova, sans-serif;
+  color: #188093;
+  letter-spacing: 0.2px;
+}
+
+.pricing-button {
+  padding-right: 60px;
+  padding-left: 60px;
+  background-color: #f7a600;
+  font-family: proxima-nova, sans-serif;
+  letter-spacing: 0.2px;
+}
+
+.trustedby-img {
+  max-width: 85%;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
+.pricing-logo-div {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
+.summary-section {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  background-color: #f7f7f7;
+}
+
+.vpaas-includes-li {
+  margin-bottom: 24px;
+  font-family: proxima-nova, sans-serif;
+  letter-spacing: 0.2px;
+}
+
 /* Signup Scroll on K Start page */
 
 a[ id="ksignupbtn" ]:target ~ #signup {
@@ -1849,6 +2025,10 @@ html.w-mod-js *[data-ix="search-input-hide-on-load"] {
 
     .success-btn {
     width: 25%;
+  }
+
+  .billable-pricing {
+    padding-left: 45px;
   }
 
 }
@@ -2072,6 +2252,41 @@ html.w-mod-js *[data-ix="search-input-hide-on-load"] {
     width: 35%;
   }
 
+  .pricing-header-section {
+    padding-top: 92px;
+    padding-bottom: 92px;
+  }
+  .price-breakdown-div {
+    margin-top: 0px;
+    padding-top: 54px;
+    padding-right: 105px;
+    padding-left: 105px;
+  }
+  .pricing-columns-row {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .pricing-column.pricing-first-row {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+  }
+  .mobilebtn {
+    display: block;
+  }
+  .success-btn {
+    width: 35%;
+  }
+  .billable-pricing {
+    padding-left: 0px;
+  }
+  .trustedby-img {
+    width: 55%;
+  }
+  .vpaas-includes-li {
+    padding-left: 68px;
+  }
+
 }
 
 @media (max-width: 479px) {
@@ -2218,6 +2433,43 @@ html.w-mod-js *[data-ix="search-input-hide-on-load"] {
   .success-btn {
     width: 90%;
   }
+
+ .pricing-header-section {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .pricing-heading {
+    padding-right: 29px;
+    padding-left: 29px;
+  }
+  .price-breakdown-container {
+    padding-bottom: 0px;
+  }
+  .price-breakdown-div {
+    margin-top: 0px;
+    padding-right: 39px;
+    padding-left: 39px;
+  }
+  .pricing-details-heading {
+    margin-bottom: 41px;
+    padding-right: 39px;
+    padding-left: 39px;
+    font-size: 23px;
+    line-height: 34px;
+  }
+
+  .trustedby-img {
+    width: 45%;
+  }
+  .summary-section {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+  .vpaas-includes-li {
+    padding-left: 0px;
+    text-align: center;
+  }
+
 }
 
 @media screen and (max-width: 600px) {
