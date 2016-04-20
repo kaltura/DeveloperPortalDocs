@@ -806,8 +806,8 @@ thead tr th {
   padding: 0 2em;
   margin: 0;
 }
-.table-of-contents ul {
-  padding: 0;
+.post-content .table-of-contents ul {
+  padding: 0 !important;
 }
 .post-content .table-of-contents li {
   font-size: 14px;
