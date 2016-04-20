@@ -51,9 +51,6 @@ config.addConfig("loadingSpinner.plugin", "false");
 To create custome plugin follow:
 [Create Custom Plugin Doc](https://vpaas.kaltura.com/documentation/media-player/Player-Plugins#sthash.gtmiiI7F.dpbs)
 
-### How to work with kaltura player API?
-* [Accessing the iOS player API Base Methods](https://vpaas.kaltura.com/documentation/player-sdk/Kaltura-iOS-player-API-Base-Methods#sthash.ObDzzCgb.spB9h8rA.dpbs)
-
 ### How to detect if configured plugins are loaded?
 
 ##### Open:

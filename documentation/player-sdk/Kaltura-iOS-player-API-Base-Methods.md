@@ -127,4 +127,63 @@ Modify player attributes, such as a label on a player UI.
 
 ## Using the player API's Base Methods
 
+<<<<<<< Updated upstream
 [Player API Using Demo]()
+=======
+```
+/*!
+ @method        play:
+ @abstract      Initiates playback of the current item. (required)
+ 
+ If playback was previously paused, this method resumes playback where it left off; otherwise, this method plays the first available item, from the beginning.
+ If a Kaltura player is not prepared for playback when you call this method, this method first prepares the Kaltura player and then starts playback. To minimize playback delay, call the prepareToPlay method before you call this method.
+ */
+- (void)play;
+```
+
+```
+/*!
+ @method        pause:
+ @abstract      Pauses playback of the current item. (required)
+ 
+ If playback is not currently underway, this method has no effect. To resume playback of the current item from the pause point, call the play method.
+ */
+- (void)pause;
+```
+
+```
+/*!
+ @method        replay:
+ @abstract      replay playback of the current item. (required)
+ 
+ This method initiates playback from the beginning of the current item.
+ */
+- (void)replay;
+
+```
+
+```
+/*!
+ @method        seek:
+ @abstract      Begins seeking through the media content.
+ */
+- (void)seek:(NSTimeInterval)playbackTime;
+```
+
+```
+/*!
+ @method        seek:completionHandler:
+ @abstract      Begins seeking through the media content.
+ */
+- (void)seek:(NSTimeInterval)playbackTime completionHandler:(void(^)())handler;
+```
+
+## Player States
+
+
+
+
+## Demo
+
+[Player API Using Demo]()
+>>>>>>> Stashed changes
