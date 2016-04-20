@@ -4,19 +4,19 @@ title: DRM Support
 ---
 
 # Overview
-The Player SDK seamlessly supports playback of DRM content. Each platform support a slightly different set of DRM schemes and features.
+The Player SDK seamlessly supports playback of DRM content. Each platform supports a slightly different set of DRM schemes and features.
 
-# Android
+# DRM Support in Android Devices
 * Widevine Modular
 	* Supported in Android 4.3 and up
 	* Online playback only
 		* Offline playback will be supported in v2.6.0 of the Player SDK.
 * Widevine Classic
     * Supported in Android 3.0 to 6.0, exclusive
-        * Google no longer requires Widevine Classic support in Android 6.0 devices, but some devices still supported it.
+        * Google no longer requires Widevine Classic support in Android 6.0 devices, but some devices still support it.
     * Online and offline playback
 
-# iOS
+# DRM Support in iOS Devices
 * FairPlay
 	* Supported in iOS versions 8 and up
 	* Online playback only
@@ -29,18 +29,18 @@ The Player SDK seamlessly supports playback of DRM content. Each platform suppor
 * Android:
 	* Widevine Classic files cannot be served over http**s**.
 * iOS:
-	* Widevine Classic requires that iOS ATS is disabled for localhost URLs.
+	* Widevine Classic requires that iOS ATS be disabled for localhost URLs.
 
 # DRM Server
-The Player SDK has to communicate with a license server in order to get the license, for both online
+The Player SDK must communicate with a license server in order to get the license, for both online
 and offline playback. The API between the SDK and the server is a simple http POST, where all required
-identify/authorization params are provided in the query string.
+identify/authorization parameters are provided in the query string.
 
 The license URL is provided to the DRM client by `PlayerViewController`/`KPViewController` in online
 mode (when playback is started), or by `LocalAssetManager`/`KPLocalAssetsManager` in offline mode (during
 asset registration/refresh).
 
-The following are the high level sequence diagrams. Note they are internal to the Player SDK, and are
+The following are the high level sequence diagrams. Please note that they are internal to the Player SDK, and are
 provided here for informational purposes only.
 
 ## Online

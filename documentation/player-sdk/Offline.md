@@ -19,7 +19,7 @@ The SDK **does not** provide the download function or the download URL. This sho
 ### Overview
 From the application's point-of-view, there are three parts to implementing offline playback:
 
-1. Downloading the media files - this includes retrieving the URL of the content and downloading it.
+1. Downloading the media files, including retrieving the URL of the content and downloading it.
 2. Registering the downloaded files with the Player SDK (when the device is still online).
 3. Overriding the streaming playback URL with the downloaded file.
 
@@ -31,7 +31,7 @@ Local Assets are managed in `LocalAssetsManager`/`KPLocalAssetsManager`. The fol
 
 #### Register
 
-The app notifies the SDK about a new downloaded asset. The SDK fetches important metadata and a DRM license,
+The application notifies the SDK about a new downloaded asset. The SDK fetches important metadata and a DRM license,
 if required.
 
 {% plantuml %}
@@ -52,14 +52,14 @@ if required.
 {% endplantuml %}
 
 #### Check Status
-Allows the app to verify that a downloaded asset is still playable. This applies mostly to DRM-protected
+Allows the application to verify that a downloaded asset is still playable. This applies mostly to DRM-protected
 assets.
 
 #### Refresh
 If possible, refresh the metadata obtained in `Register`, including the DRM license.
 
 #### Unregister
-The app notifies the SDK that it has deleted the asset. The SDK cleans up related resources.
+The application notifies the SDK that it has deleted the asset. The SDK cleans up related resources.
 
 #### Arguments
 All methods share the same set of arguments:
@@ -106,7 +106,7 @@ the playback source. For example:
 {% endplantuml %}
 
 # Download Location Guidelines
-App developers are free to choose download locations - we recommend the following:
+Application developers are free to choose download locations; howeer, Kaltura recommends the following locations:
 
 ## Android
 Files can be downloaded to any directory accessible by the application, including the application's directory in the internal storage, and any directory in the external/shared storage.
