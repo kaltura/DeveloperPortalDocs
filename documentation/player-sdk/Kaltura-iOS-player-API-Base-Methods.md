@@ -44,7 +44,7 @@ React to internal player events, such as beginning play and pausing.
 * Invoking player actions (sendNotification):
 Tell the player to do something, such as play or pause.
 
-```
+```objective_c
 
 /*!
  * @function sendNotification:expressionID:forName
@@ -62,7 +62,7 @@ Tell the player to do something, such as play or pause.
 * Retrieving information in runtime (evaluate):
 Find out something about a player, such as the media that is loaded in the player and flashVars that the player passes.
 
-```
+```objective_c
 
 /*!
  * @function asyncEvaluate:expressionID:handler
@@ -81,7 +81,7 @@ Find out something about a player, such as the media that is loaded in the playe
 * Changing player attributes in runtime (setKDPAttribute):
 Modify player attributes, such as a label on a player UI.
 
-```
+```objective_c
 
 /*!
  * @function setKDPAttribute:propertyName:value
@@ -100,9 +100,7 @@ Modify player attributes, such as a label on a player UI.
 
 ## Receiving Notification when the Player API Is Ready
 
-```
-
-
+```objective_c
 /*!
  * @function registerReadyEvent
  *
@@ -127,10 +125,7 @@ Modify player attributes, such as a label on a player UI.
 
 ## Using the player API's Base Methods
 
-<<<<<<< Updated upstream
-[Player API Using Demo]()
-=======
-```
+```objective_c
 /*!
  @method        play:
  @abstract      Initiates playback of the current item. (required)
@@ -141,7 +136,7 @@ Modify player attributes, such as a label on a player UI.
 - (void)play;
 ```
 
-```
+```objective_c
 /*!
  @method        pause:
  @abstract      Pauses playback of the current item. (required)
@@ -151,7 +146,7 @@ Modify player attributes, such as a label on a player UI.
 - (void)pause;
 ```
 
-```
+```objective_c
 /*!
  @method        replay:
  @abstract      replay playback of the current item. (required)
@@ -162,7 +157,7 @@ Modify player attributes, such as a label on a player UI.
 
 ```
 
-```
+```objective_c
 /*!
  @method        seek:
  @abstract      Begins seeking through the media content.
@@ -170,7 +165,7 @@ Modify player attributes, such as a label on a player UI.
 - (void)seek:(NSTimeInterval)playbackTime;
 ```
 
-```
+```objective_c
 /*!
  @method        seek:completionHandler:
  @abstract      Begins seeking through the media content.
@@ -180,10 +175,43 @@ Modify player attributes, such as a label on a player UI.
 
 ## Player States
 
+### KPMediaPlaybackState
+
+```objective_c
+typedef NS_ENUM(NSInteger, KPMediaPlaybackState) {
+    KPMediaPlaybackStateUnknown,
+    KPMediaPlaybackStateLoaded,
+    KPMediaPlaybackStateReady,
+    /* Playback is currently under way. */
+    KPMediaPlaybackStatePlaying,
+    /* Playback is currently paused. */
+    KPMediaPlaybackStatePaused,
+    /* Playback is currently ended. */
+    KPMediaPlaybackStateEnded,
+    ///@todo
+    /* Playback is temporarily interrupted, perhaps because the buffer ran out of content. */
+    KPMediaPlaybackStateInterrupted,
+    /* The movie player is currently seeking towards the end of the movie. */
+    KPMediaPlaybackStateSeekingForward,
+    /* The movie player is currently seeking towards the beginning of the movie. */
+    KPMediaPlaybackStateSeekingBackward
+};
+
+```
+
+### KPMediaLoadState
+
+```objective_c
+typedef NS_OPTIONS(NSUInteger, KPMediaLoadState) {
+    /* The load state is not known. */
+    KPMediaLoadStateUnknown        = 0,
+    /* The buffer has enough data that playback can begin, but it may run out of data before playback finishes. */
+    KPMediaLoadStatePlayable       = 1 << 0,
+    /* Enough data has been buffered for playback to continue uninterrupted. */
+    KPMediaLoadStatePlaythroughOK  = 1 << 1, // Playback will be automatically started in this state when shouldAutoplay is YES
+    /* The buffering of data has stalled. */
+    KPMediaLoadStateStalled        = 1 << 2, // Playback will be automatically paused in this state, if started
+};
+```
 
 
-
-## Demo
-
-[Player API Using Demo]()
->>>>>>> Stashed changes
