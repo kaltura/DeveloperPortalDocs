@@ -124,7 +124,7 @@ $('h2,h3,h4,h5,h6').filter('[id]').each(function () {
 </script-->
 <script>
 $('h1,h2,h3,h4,h5,h6').filter('[id]').each(function () {
-    $(this).html('<a href="#'+$(this).attr('id')+'" class="post-content" aria-hidden="true"></a>'+ $(this).text() );
+    $(this).html('<a href="#'+$(this).attr('id')+'" class="post-content" aria-hidden="true">'+$(this).text()+'</a>');
 });
 </script>
 
