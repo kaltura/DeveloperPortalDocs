@@ -877,9 +877,10 @@ thead tr th {
   line-height: 1.8em;
 }
 
-.post-content ul {
+.post-content ul, .post-content ol {
   margin-top: 0px;
   margin-bottom: 25px;
+  padding-left: 15px;
 }
 
 .post-content code.highlighter-rouge {
