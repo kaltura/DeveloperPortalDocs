@@ -2434,6 +2434,10 @@ html.w-mod-js *[data-ix="search-input-hide-on-load"] {
     width: 90%;
   }
 
+  .fa.fa-check {
+    display: none;
+  }
+
  .pricing-header-section {
     padding-right: 15px;
     padding-left: 15px;
