@@ -802,9 +802,10 @@ thead tr th {
 .table-of-contents {
   float: right;
   width: 40%;
-  background: #E6EAF0;
+  background: none;
+  border-left: solid #118094;
   font-size: 0.8em;
-  padding: 0 2em;
+  padding: 0 1.2em;
   margin: 0;
 }
 .post-content .table-of-contents ul {
