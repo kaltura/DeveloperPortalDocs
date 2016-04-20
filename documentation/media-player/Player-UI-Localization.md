@@ -3,12 +3,12 @@ layout: page
 title: Kaltura Player UI Localization
 ---
 
-The Kaltura player supports localization for most languages by specifying the language corresponding locale key.   
-For a full listing of supported locale keys, look here. Setting a local key translates all UI labels, messages and tooltips to the required language.  
+The Kaltura Player supports localization for most languages, by specifying the language-corresponding locale key.   
+For a full listing of supported locale keys, look here. Setting a locale key translates all UI labels, messages and tooltips to the required language.  
 
-> **NOTE:** Not all locales support all of the player UI components. While the basic UI is fully supported, some plugins might not have all the local translations available.
+> **NOTE:** Not all locales are supported in all of the player UI components. While the basic UI is fully supported, some plugins might not have all the local translations available.
 
-## Setting the desired player locale
+## Setting the Desired Player Locale
 
 By default, all players fallback to English unless the locale is defined otherwise.  
 
@@ -30,9 +30,9 @@ localizationCode=de
 }
 ```
    
-You can also have the player set the locale automatically according to the locale provided by the web browser. This locale will be the same locale defined in the user's operating system.   
+You can also have the Player set the locale automatically according to the locale provided by the web browser. This locale will be the same locale defined in the user's operating system.   
 
-To have the locale set automatically, set `localizationCode` to `auto`:   
+To have the locale set automatically by setting `localizationCode` to `auto`:   
 
 * Browser based automatic locale via Player Studio UIVars:
 
@@ -48,10 +48,10 @@ localizationCode=auto
 }
 ```
 
-## Custom localized strings
+## Custom Localized Strings
 
 You can add missing strings or change existing strings for any locale using the `strings` plugin.   
-The strings plugin defines keys and values for all player labels and tooltips. 
+The strings plugin defines keys and values for all Player labels and tooltips. 
 
 > [Review the complete list of available strings keys and default English values](http://player.kaltura.com/modules/KalturaSupport/tests/StringsLocale.html).  
 
