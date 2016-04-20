@@ -819,6 +819,13 @@ thead tr th {
 .table-of-contents a:active {
   text-decoration: underline;
 }
+.post-content h2:target {
+  animation: highlight 1s ease;
+}
+@keyframes highlight {
+  from { background: #0099FF; }
+  to { background: white; }
+}
 
 .post-content {
   margin-top: 40px;
