@@ -1,27 +1,26 @@
 ---
 layout: page
-title: Android Background State Hadling
+title: Android Background State Handline
 ---
 
-In this document we'll talk about how to save the player state when the app will move to backgorund, This can be due to home button pressed, power button or phone call.
-##Background State Hadling
+This document describes how to save the Player state when the application moves to the background, which can occur when the end user presses the home button or power button, or as the result of a telephone call.
 
-The app should handle few background states:
+##Background State Handling
+The application should handle a number of background states:
 
-1. User clicked on home button.
-2. User pressed on power button.
-3. Phone call interuption and more...
+1. The end user clicked the Home button.
+2. The end user pressed the power button.
+3. Viewing was interrupted by a telephone call or similar interruption.
 
-#Home button and Phone call interuption
+#Home Button and Phone Call Interuption
+In the onPause() method, call: `mPlayer.releaseAndSavePosition(boolean shouldRestoreState)`
 
-In the onPause() method you should call : `mPlayer.releaseAndSavePosition(boolean shouldRestoreState)`
-Should use `true` if you want to save the state and use `false` if you want to get back in pause state.
+Use `true` if you want to save the state and  `false` if you want to go back to the pause state.
 
-In the onResume() method you should call : `mPlayer.resumePlayer()`
+In the onResume() method, call : `mPlayer.resumePlayer()`
 
 
 #Power Button
+In the onPause() method, call : `mPlayer.pause()`
 
-In the onPause() method you should call : `mPlayer.pause()`
-
-In the onResume() method you should call: `play()` or `pause()` depends on the app behaviour.
+In the onResume() method, call: `play()` or `pause()`, depending on the application's behavior.
