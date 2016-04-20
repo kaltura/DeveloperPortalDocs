@@ -173,7 +173,8 @@ Modify player attributes, such as a label on a player UI.
 - (void)seek:(NSTimeInterval)playbackTime completionHandler:(void(^)())handler;
 ```
 
-## Player States
+## Player States  
+
 
 ### KPMediaPlaybackState
 
