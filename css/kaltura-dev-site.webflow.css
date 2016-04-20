@@ -417,7 +417,7 @@ h4 {
 }
 
 .post-content a {
-  display: inline-block;
+  display: inline;
   margin-top: 6px;
   padding-top: 0px;
   font-family: proxima-nova, sans-serif;
@@ -796,7 +796,8 @@ thead tr th {
   text-decoration: none; 
   padding: 0px;
   margin: 0px;
-  margin-left: -16px;
+  margin-left: -22px;
+  padding-right: 6px;
 }
 .table-of-contents {
   float: right;
