@@ -117,14 +117,44 @@ function submit_feedback()
   		</div>
   	</div>
 </article>
-<!--script>
-$('h2,h3,h4,h5,h6').filter('[id]').each(function () {
-    $(this).html('<a href="#'+$(this).attr('id')+'">' + $(this).text() + '</a>');
-});
-</script-->
 <script>
-$('h1,h2,h3,h4,h5,h6').filter('[id]').each(function () {
-    $(this).html('<a href="#'+$(this).attr('id')+'" class="post-content" aria-hidden="true">'+$(this).text()+'</a>');
-});
+//This script turns all heading elments into clickable anchors, and then builds an "on this page" menu.
+$( document ).ready(function() {
+	//turn all headings into clicable anchors:
+	$('.post-content h1, .post-content h2, .post-content h3, .post-content h4, .post-content h5, .post-content h6').filter('[id]').each(function () {
+	    $(this).html('<a href="#'+$(this).attr('id')+'" class="post-content" aria-hidden="true">'+$(this).text()+'</a>');
+	});
+	
+	//build the "on this page" menu:
+	var ToC =
+	  "<nav role='navigation' class='table-of-contents'>" +
+	    "<h2>On this page:</h2>" +
+	    "<ul>";
+	
+	var newLine, el, title, link;
+	
+	$('.post-content h1, .post-content h2').each(function() {
+	
+	  el = $(this);
+	  title = el.text();
+	  link = "#" + el.attr("id");
+	
+	  newLine =
+	    "<li>" +
+	      "<a href='" + link + "'>" +
+	        title +
+	      "</a>" +
+	    "</li>";
+	
+	  ToC += newLine;
+	
+	});
+	
+	ToC +=
+	   "</ul>" +
+	  "</nav>";
+	
+	$("div.post-content").prepend(ToC);
+}
 </script>
 
