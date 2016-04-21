@@ -2,32 +2,30 @@
 layout: page
 title: Events And Listeners
 ---
-
+#Kaltura Android Player API Methods
 ### Android API Events and Hooks
 
 - KMediaControl
 
-  The SDK offeres ability to perform player operation
-  via the KMediaControl API
+  The SDK offeres the ability to perform Player operation via the KMediaControl API.
   
   You may send the following operations:
-   
-
+  
 
 | Operation  | Parameters  | Explanation |
 |:------------- |:---------------:| :-------------|
-| start     |  | start playing the media         | 
-| pause     |  | pause the current playback         | 
-| seek     | (long milliSeconds) | seek to specific time position          | 
-| seek     | (long milliSeconds, SeekCallback callback) | seek to specific time position and call callback to be called when seek is done         |
-| canSeekForward     |  | check if seek backwards is possible         |
-| canSeekBackward     |  | check if seek forward is possible          | 
-| replay     |  | start over the playback         |
-| isPlaying     |  | check if player state is playing         |
-| canPause     |  | check if player can be paused         |
-| getDuration     |  | get current media duration         |
-| getCurrentPosition     |  | get current media position         |
-| state     |  | get current player state         |
+| start     |  | Start playing the media         | 
+| pause     |  | pPause the current playback         | 
+| seek     | (long milliSeconds) | Seek a specific time position          | 
+| seek     | (long milliSeconds, SeekCallback callback) | Seek a specific time position and call callback to be called when seek is done         |
+| canSeekForward     |  | Check if seek backwards is possible         |
+| canSeekBackward     |  | Check if seek forward is possible          | 
+| replay     |  | Start over the playback         |
+| isPlaying     |  | Check if player state is playing         |
+| canPause     |  | Check if player can be paused         |
+| getDuration     |  | Get current media duration         |
+| getCurrentPosition     |  | Get current media position         |
+| state     |  | Get current player state         |
 
 
 
@@ -36,7 +34,7 @@ title: Events And Listeners
  Example: Play/Pause Button
 ***
 
-For each native component listener you should add one of the operations above.
+For each native component listener, add one of the operations above.
 
 ``` java 
     @Override
@@ -56,7 +54,7 @@ For each native component listener you should add one of the operations above.
  Example: Seek
 ***
 
-For each native component listener you should add one of the operations above.
+For each native component listener, add one of the operations above.
 
 ``` java 
     @Override
@@ -73,8 +71,7 @@ For each native component listener you should add one of the operations above.
 
 ### Player States Event Listeners
 
-Kaltura player supports the follwing states which developer can listen and react upon their change 
-
+The Kaltura Player supports the follwing states that the developer can listen and react upon their change:
     
     - LOADED
     - READY
@@ -99,10 +96,8 @@ Kaltura player supports the follwing states which developer can listen and react
     }
 ``` 
 
-### Waiting for READY event
-
-In some cases user will be interested to wait until ready event is recieved and only then to continue 
-
+### Waiting for a READY Event
+In some cases, the end user will want to wait until the ready event is recieved and only then to continue.
 
 - Example: Listen to Ready State Event
 
@@ -118,17 +113,16 @@ In some cases user will be interested to wait until ready event is recieved and 
        
 ```       
 
-### Enable/Diable Configuration on runtime
+### Enable/Diable Configuration on Runtime
+In some cases, the application will want to add or remove configuration attributes upon states or event that are receive.
 
-In some cases the app will want to add or remove configuration attributes upon states or event that are received
-
-The player has an API for enable disable: setKDPAttribute wich receives 3 parameters:
+The Player has an API for enabling and disabling these settings, the setKDPAttribute, wich receives three parameters:
 
     plugin name
     attribute name
     enable/disabe (boolean)
     
-- Example: adding closed caption plugin
+- Example: Adding closed caption plugin
 
 ``` java 
 
@@ -142,8 +136,7 @@ if (state.equals(KPlayerState.PLAYING)){
 
 ### Player Event Listeners
 
-In case that app is interested in reacting to web events you should add the "mPlayerView.addKPlayerEventListener"
-
+If the application is interested in reacting to web events, add the "mPlayerView.addKPlayerEventListener".
 
 [Supported Events] (https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/media-player/Kaltura-Media-Player-API.md#commonly-used-player-events)
 
@@ -160,29 +153,29 @@ In case that app is interested in reacting to web events you should add the "mPl
 
 ```
  
-### Sending Event Notification
+### Sending Event Notifications
 
-In case that app wants to change current player behavoir it can be done via sendNotification API.
+If the application wants to change the current player behavoir, this can be done via the sendNotification API.
 
-this method receives two parameters:
+This method receives two parameters:
   - action name
   - parameter (string/json)  
 
 Examples:
 
-Notification Without Parameter:  
+Notification without parameters:  
  
 ``` java 
 getPlayer().sendNotification("doPause", null);
 ```
 
-Notification With String Parameter:
+Notification With a string parameter:
 
 ``` java
 getPlayer().sendNotification("doSeek", Double.toString(seconds));
 ```
 
-Notification With JSON Parameter:
+Notification With a JSON parameter:
 
 ``` java
 String entry = "'{\"entryId\":\"" + entryId + "}'";
