@@ -22,8 +22,8 @@ The plugins can be developed to:
 * Customize appearance
 
 ## Kaltura Plugins
-The following are Kaltura supplied plugins:
-[Kaltura Player Plugins](https://vpaas.kaltura.com/documentation/player-sdk/Player-Plugins-in-the-SDK-Supported-plugins#sthash.3a8Dft10.dpbs)
+The following are Kaltura supplied plugins that you can implement in your system:
+[Kaltura Player Plugins](https://vpaas.kaltura.com/documentation/player-sdk/Player-Plugins-in-the-SDK-Supported-plugins#sthash.3a8Dft10.dpbs).
 
 ## How to Enable/Create a Plugin
 
