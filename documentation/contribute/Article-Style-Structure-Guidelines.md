@@ -4,7 +4,7 @@ title: Article Style and Structure Guidelines
 ---
 
 The Kaltura VPaaS Developer Site is using {% extlink Jekyll engine http://jekyllrb.com/ %} and markdown syntax as the basis of the articles.
-To learn about Markdown basics and how to use the format, please read: {% GitHub markdown basics https://help.github.com/articles/markdown-basics %}.
+To learn about Markdown basics and how to use the format, please read: {% extlink GitHub markdown basics https://help.github.com/articles/markdown-basics %}.
 
 
 ## Adding Kaltura videos 
@@ -37,7 +37,7 @@ int hello_world(char *world)
 }
 {% endhighlight %}
 
-See [List of supported languages and lexers](https://github.com/jneen/rouge/wiki/list-of-supported-languages-and-lexers)
+See {% extlink List of supported languages and lexers https://github.com/jneen/rouge/wiki/list-of-supported-languages-and-lexers %}
 
 
 ## Adding diagrams
@@ -77,9 +77,9 @@ note over KP: Plays the downloaded file
 **Will render as:**
 {% extlink Debian GNU Linux http://debian.org %}
 
-A nifty tool to help you to see how your markdown looks as you create it: [dillinger.io](http://dillinger.io/)
+A nifty tool to help you to see how your markdown looks as you create it: {% extlink dillinger.io http://dillinger.io %}
 
-For additional reading on the Markdown flavor we use read: [Kramdown](http://kramdown.gettalong.org/documentation.html).
+For additional reading on the Markdown flavor we use read: {% extlink Kramdown http://kramdown.gettalong.org/documentation.html %}.
 
 ## Tips for Creating Great Content
 
