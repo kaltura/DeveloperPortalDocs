@@ -24,7 +24,7 @@ First, prepare the holder view for the player:
 The Player will adjust its size according to the _**`playerHolderView`**_.
 When the Player enters full screen mode, the Player's view will add a subview to the top window. When the Player toggles back to normal mode, the Player's view will add the _**`playerHolderView`**_ as a subview.
 
-#Custom Full Screen
+## Custom Full Screen
 If you want to set the full screen behaviour on your own, you have to set the _**`fullScreenToggeled`**_ **Block**  as follows:
 
 ```
