@@ -21,7 +21,7 @@ In this document you'll learn how to:
 * Attach custom plugins
 * Eliminate the UI and add native controls from the player
 
-*Note:* Before getting started, we recommend you read the follwoing article on Player configuration:
+**Note:** Before getting started, we recommend you read the following article on Player configuration:
 [Kaltura Media Player Configuration] (https://vpaas.kaltura.com/documentation/media-player/Player-Configuration) and verify that at this stage, you should have your Player configured via KMC.
 
 ## How to Work with the Kaltura Player API
@@ -29,7 +29,7 @@ The following article provides a detailed explanation on [accessing the iOS Play
 
 
 ## Using the Kaltura Player Plugin
-To learm about the Kaltura Player plugin and how it helps you customize your Player, refer to the [Player Plugin Overview](https://vpaas.kaltura.com/documentation/player-sdk/Player-Plugin-Overview#sthash.avrM8Tj7.MuWspf6K.dpbs).
+To learm about the Kaltura Player plugin and how it helps you to customize your Player, refer to the [Player Plugin Overview](https://vpaas.kaltura.com/documentation/player-sdk/Player-Plugin-Overview#sthash.avrM8Tj7.MuWspf6K.dpbs).
 
 
 ## How to Remove html5 UI Controls
@@ -40,8 +40,9 @@ Use these commands to remove the html5 UI controls
     [config addConfigKey:@"largePlayBtn.plugin" withValue:@"false"];
     
 ## How to Disable the HTML Spinner and Control it with a Custom Spinner
-To disable the HTML spinner and control it with a customer spinner, you will need to follow these steps:
-*Configurations:*
+To disable the HTML spinner and control it with a customer spinner, you will need to follow these configuration steps:
+
+Configurations:
 
 To disable the HTML spinner: disable "loadingSpinner.plugin" plugin
 
