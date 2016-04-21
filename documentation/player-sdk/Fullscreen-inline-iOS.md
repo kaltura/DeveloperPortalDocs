@@ -2,13 +2,13 @@
 layout: page
 title: Using fullscreen and inline embed of the player in iOS
 ---
-
-In this document we'll go over device rotation and fullscreen vs inline.
+#Using Fullscreen and Inline Embed of the Player in iOS
+In this article we'll go over device rotation and fullscreen vs inline.
 
 ## Default Full Screen
-The best practice for embeding the player in iOS is to use container view.
+The best practice for embeding the player in iOS is to use the container view.
 
-Prepare holder view for the player:
+First, prepare the holder view for the player:
 
 ![Register](images/playerHolder.png)
 
@@ -21,11 +21,11 @@ Prepare holder view for the player:
 }
 ```
 
-The player will adjust its size according to the _**`playerHolderView`**_.
-When the player will enter to full screen mode, the player's view will add as subview to the top window and when the player toggle back to normal mode the player's view will add to the _**`playerHolderView`**_ as subview.
+The Player will adjust its size according to the _**`playerHolderView`**_.
+When the Player enters full screen mode, the Player's view will add a subview to the top window. When the Player toggles back to normal mode, the Player's view will add the _**`playerHolderView`**_ as a subview.
 
 #Custom Full Screen
-If you want to handle the full screen behaviour by your self you have to set the _**`fullScreenToggeled`**_ **Block** :
+If you want to set the full screen behaviour on your own, you have to set the _**`fullScreenToggeled`**_ **Block**  as follows:
 
 ```
 [self.player loadPlayerIntoViewController:self];
