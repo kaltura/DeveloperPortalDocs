@@ -90,4 +90,4 @@ Make sure to add the ```KALTURAPlayerSDK.xcodeproj``` file only, **not the entir
 ```
 
 ### App Transport Security 
-TODO: add link to ATS page 
+For inforamtion about the Application Transport Security, 
