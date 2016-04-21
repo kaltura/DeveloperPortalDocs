@@ -2,11 +2,11 @@
 layout: page
 title: DRM Support
 ---
-
-# Overview
+#DRM Support
+## Overview
 The Player SDK seamlessly supports playback of DRM content. Each platform supports a slightly different set of DRM schemes and features.
 
-# DRM Support in Android Devices
+## DRM Support in Android Devices
 * Widevine Modular
 	* Supported in Android 4.3 and up
 	* Online playback only
@@ -16,7 +16,7 @@ The Player SDK seamlessly supports playback of DRM content. Each platform suppor
         * Google no longer requires Widevine Classic support in Android 6.0 devices, but some devices still support it.
     * Online and offline playback
 
-# DRM Support in iOS Devices
+## DRM Support in iOS Devices
 * FairPlay
 	* Supported in iOS versions 8 and up
 	* Online playback only
@@ -25,13 +25,13 @@ The Player SDK seamlessly supports playback of DRM content. Each platform suppor
 	* Supported in iOS versions up to 10, exclusive
 	* Online and offline playback
 
-# Known Limitations
+## Known Limitations
 * Android:
 	* Widevine Classic files cannot be served over http**s**.
 * iOS:
 	* Widevine Classic requires that iOS ATS be disabled for localhost URLs.
 
-# DRM Server
+## DRM Server
 The Player SDK must communicate with a license server in order to get the license, for both online
 and offline playback. The API between the SDK and the server is a simple http POST, where all required
 identify/authorization parameters are provided in the query string.
@@ -43,7 +43,7 @@ asset registration/refresh).
 The following are the high level sequence diagrams. Please note that they are internal to the Player SDK, and are
 provided here for informational purposes only.
 
-## Online
+### Online
 {% plantuml %}
 
     @startuml
@@ -69,7 +69,7 @@ provided here for informational purposes only.
 
 {% endplantuml %}
 
-## Offline
+### Offline
 {% plantuml %}
 
     @startuml
