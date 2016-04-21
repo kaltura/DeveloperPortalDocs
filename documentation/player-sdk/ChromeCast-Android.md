@@ -1,17 +1,16 @@
-## Google Cast setup
-
-Kaltura supplies Chromecast plugin as default so if you don't need it you should add to your `KPPlayerConfig` :
+# Google Cast Setup
+Kaltura provides the Chromecast plugin as default; if you plan to use it, you should add the following to your `KPPlayerConfig` :
 ```
 config.addConfig("chromecast.plugin", "true");
 ```
-Kaltura player will handle all the cast logic and playback, you should handle the UI of the devices and send to the SDK the selected device.
-In this document we'll show how to use the chromcast plugin in Android
-You can use Chromecast button in 2 ways:
+The Kaltura Player will handle all of the cast logic and playback; you will need to handle the UI of the devices and send the selected device(s) to the SDK.
+
+In this article, we'll show you how to use the Chromecast plugin in Android devices. This can be implemented in one of two ways:
 
 1. **Kaltura's Chromecast icon:**
-	Managed by Kaltura SDK - the icon will be visible only when the first Chromecast device is detected when using the html5 controls.
+	Managed by the Kaltura SDK, the icon will be visible only when the first Chromecast device is detected when using the html5 controls.
 2. **Your own custom button:**
-	If you want the button to be part of the application and not part of the player.
+	Use this option if you want the button to be part of the application and not part of the player.
 	* `mPlayer.getKCastRouterManager().enableKalturaCastButton(false);`
 	* 
 	You can listen to:
@@ -24,8 +23,8 @@ You can use Chromecast button in 2 ways:
 
     }
 	```
-	When devices are in range you'll get notification to add device to your list.
-	Once user clicked on the button you should show the device list and send the selected device using the `connectDevice(mRouterInfos.get(item).getRouterId())` function.
+	When devices are in range, you'll get a notification to add the device to your list.
+	when the end user clicks the button, you should show the device list and send the selected device using the `connectDevice(mRouterInfos.get(item).getRouterId())` function.
 	Code example:
 	
 ```java
