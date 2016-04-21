@@ -1,4 +1,3 @@
-
 ---
 layout: page
 title: Using fullscreen and inline embed of the player in iOS

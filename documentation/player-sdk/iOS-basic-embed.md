@@ -49,5 +49,5 @@ title: iOS Player SDK Basic embedding
 
 ## To Initialize PlayerViewController for Inline
 
-[Inline player](Fullscreen-inline-iOS.md)
+[Inline player](Fullscreen-inline-iOS)
 
