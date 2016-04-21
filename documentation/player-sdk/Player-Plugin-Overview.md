@@ -8,32 +8,29 @@ title: Player Plugin Overview
 
 # Player Plugin Overview 
 
-This guide provides an overview of plugins for the Kaltura player. 
+This article provides an overview of the plugins for the Kaltura Player. 
 
 ## Introduction
-A plugin for the Kaltura player uses a combination of HTML, JavaScript and/or CSS to somehow customize the player. In other words, anything you can do in a web page, you can do in a plugin.
+A plugin for the Kaltura Player uses a combination of HTML, JavaScript and/or CSS to somehow customize the player. In other words, anything you can do in a web page, you can do in a plugin.
 
 At a high level, a plugin integrates with the player by listening and emitting events.
 
-Broadly, plugins can be developed to:
+The plugins can be developed to:
 
 * Modify default behavior
 * Add functionality
 * Customize appearance
 
-## Kaltura plugins
+## Kaltura Plugins
 The following are Kaltura supplied plugins:
 [Kaltura Player Plugins](https://vpaas.kaltura.com/documentation/player-sdk/Player-Plugins-in-the-SDK-Supported-plugins#sthash.3a8Dft10.dpbs)
 
-### How to enable/create a plugin?
+## How to Enable/Create a Plugin
 
-##### Use of a pre-written plugin
+#### Using an Existing Plugin
 
-If we want to change/add a plugin the key will start with the plugin name, dot and the plugin attribute.
-
-Every plugin includes the plugin attirbute which needed in order to enable or disable it.
-
-In order to add plugin we use the addConfigKey ([iOS](https://github.com/kaltura/player-sdk-native-ios/blob/master/KALTURAPlayerSDK/KPPlayerConfig.h#L57) , [Android](https://github.com/kaltura/player-sdk-native-android/blob/master/playerSDK/src/main/java/com/kaltura/playersdk/KPPlayerConfig.java#L86)) function, First parameter takes the key name and second the value.
+1. If you want to change/add a plugin, the key should begin with the plugin name, dot and the plugin attribute. Every plugin includes the plugin attributes required for enabling or disabling the plugin.
+2. In order to add plugin, use the addConfigKey ([iOS](https://github.com/kaltura/player-sdk-native-ios/blob/master/KALTURAPlayerSDK/KPPlayerConfig.h#L57) , [Android](https://github.com/kaltura/player-sdk-native-android/blob/master/playerSDK/src/main/java/com/kaltura/playersdk/KPPlayerConfig.java#L86)) function. Note that the first parameter takes the key name and the second takes the value.
 
 In this example we disabled the loadingSpinner plugin:
 
@@ -46,23 +43,14 @@ In this example we disabled the loadingSpinner plugin:
 config.addConfig("loadingSpinner.plugin", "false");
 ```
 
-##### Custom plugin creation
+#### Creating Custom Plugins
 
-To create custome plugin follow:
-[Create Custom Plugin Doc](https://vpaas.kaltura.com/documentation/media-player/Player-Plugins#sthash.gtmiiI7F.dpbs)
+To create custome plugins, follow the steps in the article [Create Custom Plugin Doc](https://vpaas.kaltura.com/documentation/media-player/Player-Plugins#sthash.gtmiiI7F.dpbs).
 
-### How to detect if configured plugins are loaded?
+### How to Detect if Configured Plugins are Loaded
+1. Open the iOS Player API base by following the steps in the article [Accessing the iOS player API Base Methods](https://vpaas.kaltura.com/documentation/player-sdk/Kaltura-iOS-player-API-Base-Methods#sthash.ObDzzCgb.spB9h8rA.dpbs).
+2. Focus on * "Receiving  Notification when the Player API Is Ready".
 
-##### Open:
-[Accessing the iOS player API Base Methods](https://vpaas.kaltura.com/documentation/player-sdk/Kaltura-iOS-player-API-Base-Methods#sthash.ObDzzCgb.spB9h8rA.dpbs)
-
-##### Focus On: 
-* "Receiving Notification when the Player API Is Ready"
-
-### How to get notified about any player plugin related callbacks?
-
-##### Open:
-[Accessing the iOS player API Base Methods](https://vpaas.kaltura.com/documentation/player-sdk/Kaltura-iOS-player-API-Base-Methods#sthash.ObDzzCgb.spB9h8rA.dpbs)
-
-##### Focus On: 
-* addKPlayerEventListener
+### How to Get Notified about Player Plugin-Related Callbacks
+1. Open the iOS Player API base by following the steps in the article [Accessing the iOS player API Base Methods](https://vpaas.kaltura.com/documentation/player-sdk/Kaltura-iOS-player-API-Base-Methods#sthash.ObDzzCgb.spB9h8rA.dpbs).
+2. Focus on the * addKPlayerEventListener.
