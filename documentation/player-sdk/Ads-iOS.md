@@ -4,17 +4,17 @@ title: Using Google Ads in iOS
 ---
 
 #Linking Google Ads
+There are a number of options for linking Google in iOS:
 
-###With Cocoapods:
-
-Add these 2 pods to your podfile:
+###Using Cocoapods:
+To link using Cocoapods, add these two pods to your podfile:
 
 ```
 pod 'GoogleAds-IMA-iOS-SDK'
 
 ```
 
-### Traditional way:
+###Linking Ads Using the Traditional Way
 
 ### Linking to GoogleInteractiveMediaAds SDK
  1. If you use ads you will have to download **`GoogleMobileAds`** from: [Admob](https://developers.google.com/admob/ios/download) and add it to your project
@@ -27,7 +27,7 @@ pod 'GoogleAds-IMA-iOS-SDK'
 	- MessageUI.framework
 
 
-# Configure the player for using Ads
+# Configuring the Player for Using Ads
 
 Add to your `KPPlayerConfig` these:
 
