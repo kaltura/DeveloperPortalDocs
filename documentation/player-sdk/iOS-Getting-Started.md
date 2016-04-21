@@ -90,4 +90,4 @@ Make sure to add the ```KALTURAPlayerSDK.xcodeproj``` file only, **not the entir
 ```
 
 ### App Transport Security 
-For inforamtion about the Application Transport Security, 
+Detailed information about the Application Transport Security can be found here: [App Transport Security](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/player-sdk/Troubleshooting.md)
