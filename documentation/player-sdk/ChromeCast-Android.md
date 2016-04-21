@@ -10,7 +10,7 @@ In this article, we'll show you how to use the Chromecast plugin in Android devi
 1. **Kaltura's Chromecast icon:**
 	Managed by the Kaltura SDK, the icon will be visible only when the first Chromecast device is detected when using the html5 controls.
 2. **Your own custom button:**
-	Use this option if you want the button to be part of the application and not part of the player.
+	Use this option if you want the button to be part of the application and not part of the Player.
 	* `mPlayer.getKCastRouterManager().enableKalturaCastButton(false);`
 	* 
 	You can listen to:
