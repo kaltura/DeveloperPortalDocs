@@ -21,6 +21,7 @@ function submit_feedback()
 </script>
 <article>
 
+
 <div class="w-section side-nav-section">
     <div class="w-container">
       <a href="#" data-ix="show-temp-page-nav-column" class="w-button w-clearfix mobilebtn">Topics<span class="fa fa-chevron-down" style="null"></span></a>
@@ -30,12 +31,8 @@ function submit_feedback()
     <div class="sidenav-grp-7" id="/{{ cat_hash[1] }}" onClick="show_hide_div('/{{ cat_hash[1] }}')">
 	<a href="#" class="sidenav-cat-links"><h4 class="sidenav-headings grp-heading">{{ cat_hash[0] }}</h4></a>
 	<div class="sidenav-grp-links">
-	{% loop_directory directory:{{cat_hash[1]}} iterator:item filter:*.md sort:descending %}
-	    {% if item != 'categorymeta' %}
-	    <!--a id="/{{ cat_hash[1] }}/{{ item }}.md" href="{{site.url}}/{{ cat_hash[1] }}/{{ item }}" class="sidenav-links">{{item | capitalize| replace: '-',' '}}</a-->
-	    <a id="/{{ cat_hash[1] }}/{{ item }}.md" href="{{site.url}}/{{ cat_hash[1] }}/{{ item }}" class="sidenav-links">{{item | replace: '-',' '|capitalize_all}}</a>
-	    {% endif %}
-	{% endloop_directory %}
+	{% capture dir %}{{ cat_hash[1] }}{% endcapture %}
+	    {% include nav.html context=dir %}
 	</div>
         </div>
 {% endfor %}
@@ -46,7 +43,7 @@ function submit_feedback()
 		$j[$i].style.visibility = 'visible';
 		$j[$i].style.display = 'block';
 		for (var $y = 0, $z = $j[$i].getElementsByTagName('a'); $y < $z.length; $y++) {
-		    if($z[$y].getAttribute('id')==='/{{page.path}}'){
+		    if($z[$y].getAttribute('id')==='{{page.path}}'){
 			$z[$y].setAttribute('class', 'sidenav-links-current');
 			//$z[$y].focus();
 		    }
