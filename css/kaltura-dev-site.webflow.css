@@ -1758,6 +1758,11 @@ td {
   opacity: 1;
 }
 
+.pricing-pg-inline-link {
+    color: #188093;
+    text-decoration: none;
+}
+
 .price-breakdown-div .w-row {
   margin-bottom: 0px;
 }
