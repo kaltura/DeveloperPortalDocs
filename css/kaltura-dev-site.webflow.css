@@ -1708,8 +1708,8 @@ td {
 }
 
 .pricing-header-section {
-  padding-top: 150px;
-  padding-bottom: 150px;
+  padding-top: 75px;
+  padding-bottom: 125px;
   background-image: url('../images/Pricing-BK.jpg');
   background-position: 0px 0px;
   background-size: 1750px;
@@ -1727,11 +1727,12 @@ td {
 }
 
 .pricing-subheading {
-  font-family: proxima-nova, sans-serif;
-  color: #969696;
-  font-size: 18px;
-  text-align: center;
-  letter-spacing: 0.4px;
+    margin-bottom: 13px;
+    font-family: proxima-nova, sans-serif;
+    color: #ccc;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 0.4px;
 }
 
 .price-breakdown-section {
