@@ -1757,6 +1757,10 @@ td {
   opacity: 1;
 }
 
+.price-breakdown-div .w-row {
+  margin-bottom: 0px;
+}
+
 .pricing-details-heading {
   margin-bottom: 76px;
   font-family: proxima-nova, sans-serif;
