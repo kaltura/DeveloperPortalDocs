@@ -1,0 +1,19 @@
+{% capture html %}
+    {% if include.context == "/" %}
+        <li class="{% if page.url == "/" %}active{% endif %}">
+            <a href="{{ site.baseurl }}/">{{ site.title }}</a>
+        </li>
+    {% endif %}
+    {% assign entries = site.pages | sort: "title" %}
+    {% for entry in entries %}
+        {% capture slug    %}{{ entry.url | split: "/"   | last                       }}{% endcapture %}
+        {% capture current %}{{ entry.url | remove: slug | remove: "//" | append: "/" }}{% endcapture %}
+        {% if current contains include.context %}
+	  {% if entry.title %}
+	    <a id="{{ entry.path }}" href="{{ site.baseurl }}{{ entry.url }}" class="sidenav-links">{{ entry.title }}</a>
+                {% include nav.html context=entry.url %}
+	    {% endif %}
+        {% endif %}
+
+    {% endfor %}
+{% endcapture %} {{ html | strip_newlines | replace:'    ','' | replace:'    ','' | replace:'  ',' ' }}
