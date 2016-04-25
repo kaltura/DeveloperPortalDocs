@@ -1839,6 +1839,11 @@ td {
   border-top-style: none;
 }
 
+.pricing-details-description.bottom-description {
+    margin-top: 45px;
+    line-height: 23px;
+}
+
 .pricing-column.pricing-last-column {
   border-right-style: none;
 }
