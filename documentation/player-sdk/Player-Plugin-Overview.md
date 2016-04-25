@@ -6,8 +6,6 @@ title: Player Plugin Overview
 [![iOS](https://img.shields.io/badge/iOS-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios)
 [![Android](https://img.shields.io/badge/Android-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios)
 
-# Player Plugin Overview 
-
 This article provides an overview of the plugins for the Kaltura Player. 
 
 ## Introduction
