@@ -3,7 +3,7 @@ layout: page
 title: Kaltura Player JavaScript API, Events and Hooks
 ---
 
-The Player JavaScript API is a two-way communication channel that lets the player communicate it's current states and parameters and enables the embedding page/app to invoke actions, change and read properties, customize its behavior, design and layout, all while maintaining a continuous, interactive data connection with the Kaltura platform API and seamless end-user experience across devices, browsers and platforms. 
+The Player JavaScript API is a two-way communication channel that lets the Player communicate its current states and parameters and enables the embedding page/app to invoke actions, change and read properties, customize its behavior, design and layout, all while maintaining a continuous, interactive data connection with the Kaltura platform API and seamless end-user experience across devices, browsers and platforms. 
 
 This page provides detailed reference to all of the Kaltura player API methods, events and properties.
 
