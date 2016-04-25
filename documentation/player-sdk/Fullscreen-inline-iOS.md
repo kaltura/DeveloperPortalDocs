@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Using fullscreen and inline embed of the player in iOS
+title: Using Fullscreen and Inline Embed of the Player in iOS
 ---
-#Using Fullscreen and Inline Embed of the Player in iOS
+
 In this article we'll go over device rotation and fullscreen vs inline.
 
 ## Default Full Screen
