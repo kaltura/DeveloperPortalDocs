@@ -1844,6 +1844,11 @@ td {
     line-height: 23px;
 }
 
+.pricing-disclaimer {
+    color: #ccc;
+    font-size: 14px;
+}
+
 .pricing-column.pricing-last-column {
   border-right-style: none;
 }
