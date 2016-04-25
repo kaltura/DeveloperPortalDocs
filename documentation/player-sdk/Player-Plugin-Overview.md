@@ -9,7 +9,7 @@ title: Player Plugin Overview
 This article provides an overview of the plugins for the Kaltura Player. 
 
 ## Introduction
-A plugin for the Kaltura Player uses a combination of HTML, JavaScript and/or CSS to somehow customize the player. In other words, anything you can do in a web page, you can do in a plugin.
+A plugin for the Kaltura Player uses a combination of HTML, JavaScript and/or CSS to customize the Player, enabling you to apply any feautre you can add to web page can be added using a plugin.
 
 At a high level, a plugin integrates with the Player by listening to and emitting events.
 
