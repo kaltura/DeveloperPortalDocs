@@ -686,6 +686,20 @@ h4 {
   letter-spacing: 0.6px;
   text-decoration: none;
 }
+.sidenav-sub-cat-links {
+  display: block;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 15px;
+  background-color: transparent;
+  -webkit-transition: color 200ms ease-in-out;
+  transition: color 200ms ease-in-out;
+  font-family: proxima-nova, sans-serif;
+  color: #505050;
+  font-weight: 400;
+  letter-spacing: 0.6px;
+  text-decoration: none;
+}
 
 .sidenav-cat-links:hover {
   background-color: transparent;
@@ -710,6 +724,21 @@ h4 {
   text-decoration: none;
 }
 
+.sidenav-sub-links {
+  display: block;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 20px;
+  border-bottom: 1px solid #ececec;
+  background-color: transparent;
+  -webkit-transition: color 200ms ease-in-out;
+  transition: color 200ms ease-in-out;
+  font-family: proxima-nova, sans-serif;
+  color: red;
+  font-weight: 400;
+  letter-spacing: 0.6px;
+  text-decoration: none;
+}
 .sidenav-links-current {
   display: block;
   padding-top: 12px;

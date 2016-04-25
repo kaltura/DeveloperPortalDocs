@@ -3,6 +3,18 @@ layout: default
 ---
   <!--link rel="stylesheet" href="{{ site.baseurl }}/site.css"-->
 <script>
+function addRow(cat,subcat,name,link, entry_path) 
+{
+    subcatel=document.getElementById(subcat);
+    if (! subcatel ){
+	var subcatel = document.createElement('div');
+        subcatel.className = 'row';
+	subcatel.id=subcat;
+	subcatel.innerHTML = '<a href="#" class="sidenav-sub-cat-links"><h4 class="sidenav-headings grp-heading">'+subcat+'</h4></a>';
+    }
+    subcatel.innerHTML = subcatel.innerHTML + '<a href='+link + ' class="sidenav-sub-links" id='+entry_path+'>'+name+'</a></br>'  
+    document.getElementById(cat).appendChild(subcatel);
+}  
 function submit_feedback()
 {
 	issue=document.getElementById("Issue-Description").value;
@@ -27,13 +39,14 @@ function submit_feedback()
       <a href="#" data-ix="show-temp-page-nav-column" class="w-button w-clearfix mobilebtn">Topics<span class="fa fa-chevron-down" style="null"></span></a>
       <div class="w-row body-columns">
         <div class="w-col w-col-3 template-page-nav-column">
-{% assign cats = site.cats | sort %}
+    {% assign cats = site.cats | sort %}
 {% for cat_hash in cats %}
     <div class="sidenav-grp-7" id="/{{ cat_hash[1] }}" onClick="show_hide_div('/{{ cat_hash[1] }}')">
 	<a href="#" class="sidenav-cat-links"><h4 class="sidenav-headings grp-heading">{{ cat_hash[0] }}</h4></a>
 	<div class="sidenav-grp-links">
 	{% capture dir %}{{ cat_hash[1] }}{% endcapture %}
-	    {% include nav.html context=dir %}
+	{% capture cat %}{{ cat_hash[0] }}{% endcapture %}
+	    {% include nav.html context=dir catname=cat %}
 	</div>
         </div>
 {% endfor %}
