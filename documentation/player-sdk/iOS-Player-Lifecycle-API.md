@@ -2,9 +2,8 @@
 layout: page
 title: iOS Player Lifecycle API
 ---
-# Player Lifecycle API
 
-When creating a KPViewController instance, you should use following API to manage the lifecycle of this instance.
+This article describes how to use the iOS Player Lifecycle API when creating a KPViewController instance to manage the lifecycle of this instance.
 
 ## How to Create a KPViewController Instance
 After creating the Player, implement the following objective:
