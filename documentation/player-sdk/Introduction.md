@@ -42,7 +42,7 @@ The following diagram visualizes the architecture of Kaltura Player, and highlig
 
 ![](https://knowledge.kaltura.com/sites/default/files/styles/large/public/kaltura-player-toolkit.png)
 
-As the diagram outlines, we can leverage native components for [iOS](https://github.com/kaltura/player-sdk-native-ios/) and [Android](https://github.com/kaltura/player-sdk-native-android) in conjunction with the HTML5 runtime and Adobe flash or Microsoft Silverlight plugins, to transcend platform limitations across devices and browsers, while delivering the full Player v2 Toolkit experience. 
+As the diagram outlines, we can leverage native components for {% extlink iOS https://github.com/kaltura/player-sdk-native-ios/ %} and {% extlink Android https://github.com/kaltura/player-sdk-native-android %} in conjunction with the HTML5 runtime and Adobe flash or Microsoft Silverlight plugins, to transcend platform limitations across devices and browsers, while delivering the full Player v2 Toolkit experience. 
 
 ### Why Native?
 What advantages are gained by using native? Here is a feature list that will help explain the advantages of using the Kaltura Player Toolkit in native environments:
