@@ -42,7 +42,7 @@ To listen to ad events, use the following:
 
 **@todo** link to the kdp api example
 
-[List of commonly used player ad events](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/media-player/Kaltura-Media-Player-API.md#commonly-used-player-ad-events-ad-sequence-events)
+Click here for a [list of commonly used player ad events](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/media-player/Kaltura-Media-Player-API.md#commonly-used-player-ad-events-ad-sequence-events).
 
 ```
 [self.player addKPlayerEventListener:@"adClick"
