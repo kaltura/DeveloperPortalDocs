@@ -1,18 +1,19 @@
 ---
 layout: page
-title: Using Google Ads in Android
+title: Configuring the Player to use Google Ads in Android Devices
 ---
 
-#Configure the Player for Using Ads
-To configure the Player to use ads:
+## Overview
+This article explains how to configure the Player to use Google ads Android devices.
 
+## Configuring the Player
 Add the following to your `KPPlayerConfig`:
 
 ```
 config.addConfig("doubleClick.plugin", "true");
 config.addConfig("doubleClick.adTagUrl", "your ad tag URL");
 ```
-#Listening to Ad Events
+# Listening to Ad Events
 To listen to ad events, you can use the following:
 
 todo link to the kdp api example
