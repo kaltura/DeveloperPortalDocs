@@ -2,6 +2,7 @@
 layout: page
 title: iOS Player SDK Basic Embedding  
 ---
+[![iOS](https://img.shields.io/badge/iOS-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios) 
 
 This article describes how to use the iOS Player SDK basic embedding.
 
