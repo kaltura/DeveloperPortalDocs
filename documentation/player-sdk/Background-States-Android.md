@@ -12,7 +12,7 @@ The application should handle a number of background states:
 2. The end user pressed the power button.
 3. Viewing was interrupted by a telephone call or similar interruption.
 
-#Home Button and Phone Call Interuption
+# Home Button and Phone Call Interuption
 In the onPause() method, call: `mPlayer.releaseAndSavePosition(boolean shouldRestoreState)`
 
 Use `true` if you want to save the state and  `false` if you want to go back to the pause state.
