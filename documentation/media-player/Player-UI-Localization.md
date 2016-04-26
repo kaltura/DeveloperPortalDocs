@@ -4,7 +4,7 @@ title: Kaltura Player UI Localization
 ---
 
 The Kaltura Player supports localization for most languages, by specifying the language-corresponding locale key.   
-For a *full listing of supported locale keys*, look here. Setting a locale key translates all UI labels, messages and tooltips to the required language.  
+For a *full listing of supported locale keys* look here. Setting a locale key translates all UI labels, messages and tooltips to the required language.  
 
 > **NOTE:** Not all locales are supported in all of the player UI components. While the basic UI is fully supported, some plugins might not have all local translations available.
 
