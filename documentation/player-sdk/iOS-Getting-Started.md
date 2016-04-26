@@ -54,7 +54,7 @@ git clone https://github.com/kaltura/player-sdk-native-ios.git
 2. Open the ```Link Binary With Libraries``` section slightly below the ```Target Dependencies``` section, and click ```+``` there as well. 
 3. At the top of the list there should be the ```libKALTURAPlayerSDK.a``` static library that the main project target produces. Choose it and click ```Add```.
 ![Xcode target config2](https://camo.githubusercontent.com/acea3bcfbe47b0cc2e37796807d23c617723822f/687474703a2f2f6b6e6f776c656467652e6b616c747572612e636f6d2f73697465732f64656661756c742f66696c65732f7374796c65732f6c617267652f7075626c69632f6c696e6b546f53444b2e6a7067)
-2. Because we are using Objective-C, you will need to add a couple of linker flags to the main project application’s target to ensure that ObjC static libraries like ours are linked correctly. In the main project target’s ```Build Settings``` find the ```Other Linker Flags``` line, and add ```-ObjC``` 
+2. Because we are using Objective-C, you will need to add a couple of linker flags to the main project application’s target to ensure that ObjC static libraries like ours are linked correctly. In the main project target’s ```Build Settings``` find the ```Other Linker Flags``` line, and add ```-ObjC```.
 ![Xcode objC flag](https://camo.githubusercontent.com/a79c30cac8e6ff20b85c2db05391fb5888706966/687474703a2f2f6b6e6f776c656467652e6b616c747572612e636f6d2f73697465732f64656661756c742f66696c65732f7374796c65732f6c617267652f7075626c69632f616464696e674f626a435f666c61672e6a7067)
 
 ### Step 4: Add a Resources Bundle
@@ -64,7 +64,7 @@ git clone https://github.com/kaltura/player-sdk-native-ios.git
 
 ![Adding resource bundle](https://camo.githubusercontent.com/bd7958d4ca8e7c7ce8ca1dac1a6b1c1c6c08c078/687474703a2f2f6b6e6f776c656467652e6b616c747572612e636f6d2f73697465732f64656661756c742f66696c65732f7374796c65732f6c617267652f7075626c69632f42756e646c652e706e67)
 
-** If you click build now, you will see that the PlayerSDK library is built before the main project app, and that they are linked together.**
+**Note:** If you click build now, you will see that the PlayerSDK library is built before the main project app, and that they are linked together.
 
 ### Required Frameworks
 ```
