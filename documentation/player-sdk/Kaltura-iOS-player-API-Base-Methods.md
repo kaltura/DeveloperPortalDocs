@@ -1,11 +1,12 @@
 ---
 layout: page
 title: Kaltura Player SDK API - Properties, Events, Notifications - iOS
+subcat: iOS
 ---
 
 [![iOS](https://img.shields.io/badge/iOS-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios)
 
-This article describes how to use the iOS Player API base methods to managing properties, events and notifications. 
+This article describes how to use the iOS Player API base methods to manage properties, events, and notifications. 
 
 ## Using the Kaltura iOS player API Base Methods
 You can access the entire Player API through methods that enable the following:
