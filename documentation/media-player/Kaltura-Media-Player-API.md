@@ -5,19 +5,19 @@ title: Kaltura Player JavaScript API, Events and Hooks - Android
 
 [![Android](https://img.shields.io/badge/Android-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios)
 
-This article describes how to use the Player JavaScript API to managing properties, events and notifications.
+This article describes how to use the Player JavaScript API to manage properties, events and notifications.
 
 ## Overview
-The Player JavaScript API is a two-way communication channel that enables the Player communicate its current states and parameters and enables the embedding page/application to invoke actions, change and read properties, and to customize its behavior, design and layout, while maintaining a continuous, interactive data connection with the Kaltura platform API and seamless end-user experience across devices, browsers and platforms. 
+The Player JavaScript API is a two-way communication channel that enables the Player communicate its current states and parameters, and enables the embedding page/application to invoke actions, change and read properties, and to customize its behavior, design and layout, while maintaining a continuous, interactive data connection with the Kaltura platform API and seamless end user experience across devices, browsers and platforms. 
 
 ## Embed and Reference Player Instances
 The Player API is exposed via the Player JavaScript library and is available only when using the JavaScript embed methods (dynamic, thumbnail or auto). 
 
-With iframe embed, communication with the parent DOM is sandboxed and thus requires the use of the postMessage API. If you require the use of iframe embed, and still need to establish an API communication, we recommend using the Kaltura **player.js** adapter, which acts as a postMessage bridge. 
+With iframe embed, communication with the parent DOM is sandboxed and thus requires the use of the postMessage API. If you require the use of an iframe embed, and still need to establish an API communication, we recommend using the Kaltura **player.js** adapter, which acts as a postMessage bridge. 
 If you are using Embed.ly, note that Kaltura.com Players are whitelisted for the embed.ly service.
 
 The Kaltura Player's embed API is the first method you will interact with when using the Kaltura Player. This is the API that allows you to render Players on your page.
-The kWidget API is available after you include the Kaltura Pplayer library in your page. kWidget provides embedding and basic utility functions. 
+The kWidget API is available after you include the Kaltura Player library in your page. kWidget provides embedding and basic utility functions. 
 
 > The Kaltura Player library can also be used inside Native Android and Native iOS applications using the respective Player SDK. See the Kaltura Player Mobile SDK docs for more information about using the Kaltura Player in native mobile apps.
 
@@ -35,18 +35,18 @@ Substitute these tokens:
 After you have included the Kaltura Player library, the following kWidget API embed methods will be available:
 
 * `kWidget.embed(targetId, settings)`: The most commonly used JavaScript embed method, upon DOM load, the Kaltura Player will be rendered against the div whose ID was provided in `targetId`.
-* `kWidget.thumbEmbed(targetId, settings)`: This method will render a thumbnail and play button to the `targetId` DOM element, and only render the full Player when the end user clicks the Play button. Thumbnail embed will pass all of the configuration to the kWidget.embed when the Play button is clicked. The Player context menu can be disabled by setting the `EmbedPlayer.DisableContextMenu` UIVar to true either via flashvars or Player Studio UIVars.
+* `kWidget.thumbEmbed(targetId, settings)`: This method will render a thumbnail and play button to the `targetId` DOM element, and will only render the full Player when the end user clicks the Play button. The thumbnail embed will pass all of the configuration to the kWidget.embed when the Play button is clicked. The Player context menu can be disabled by setting the `EmbedPlayer.DisableContextMenu` UIVar to true either via flashvars or Player Studio UIVars.
 
 #### Embed API Method Parameters
 
-* `targetId`: String - the ID of the DOM element where the player will be rendered (any contents of the element will be removed when the Player is rendered instead of this given element). 
-* [`settings`](#the-kwidget-settings-object): Objec - the object of the settings properties to be used when building and rendering the Player. 
+* `targetId`: String - this is the ID of the DOM element where the Player will be rendered (any contents of the element will be removed when the Player is rendered instead of this given element). 
+* [`settings`](#the-kwidget-settings-object): Objec - this is the object of the settings properties to be used when building and rendering the Player. 
 
 #### kWidget Settings Object
 
 | parameter       | type        | required         | description           |
 |:---|:---|:---|:---|
-| `targetId` | String | mandatory | The DOM Player target ID attribute string if not defined as a top level param. |
+| `targetId` | String | mandatory | The DOM Player target ID attribute strings if not defined as a top level param. |
 | `partnerId` | String | mandatory | The ID of your Kaltura account (aka partnerId) (refer to the partner service, or visit the KMC>Settings tab to get your account partnerId). | 
 | `wid` | String | mandatory | The Kaltura widget ID. Most commonly, this is set to the Kaltura account ID (i.e., the partnerId)  prefixed by an underscore, e.g. `_8111441` (refer to the partner service, or visit the KMC>Settings tab to get your account partnerId). | 
 | `entry_id` | String | mandatory | The entry ID of the media item (entry) to play. This can be left empty for a JavaScript based entryId. Refer to the entry service, or visit the KMC>Content tab for the list of media entries in your account. If this is set to a playlistId, the Kaltura backend will stitch the playlist on the fly, and the Player will play back the playlist as if it was a single media entry (only manual playlists are accepted; refer to the playlist service or visit KMC>Content>Playlists for the list of playlists in your account). |
@@ -56,7 +56,7 @@ After you have included the Kaltura Player library, the following kWidget API em
 | `cache_st` | timestamp | Optional | Only set this in testing or development mode when performance is not required. If set to now+10min will rebuild the Player instead of serving the last instance from cache. Use only for testing while making changes to the player. Do not use this in production. |
 
 ### Obtaining a Reference to the Embedded Player
-In order to communicate with embedded Player instances via the JavaScript API, a reference to the Player instance must be retrieved. To gain a reference to the Player,  you will need to implement the `readyCallback` function. `readyCallback` is called when the Player was successfully rendered to the DOM and is ready to accept API calls. 
+In order to communicate with embedded Player instances via the JavaScript API, a reference to the Player instance must be retrieved. To obtain a reference to the Player,  you will need to implement the `readyCallback` function. `readyCallback` is called when the Player was successfully rendered to the DOM and is ready to accept API calls. 
 
 There are two ways to implement the `readyCallback` function:
 
@@ -116,7 +116,7 @@ Namespaces also provide the ability to un-register all events in the same namesp
 kdp.kUnbind('.myCustomNameSpace');
 ```
 
-> Read more about event namespaces in the [jQuery documentation](https://api.jquery.com/event.namespace/). 
+> Read more about event namespaces in the {% extlink jQuery documentation https://api.jquery.com/event.namespace/ %}. 
 
 ### Registering to the `playerReady` Event
 To ensure that the Player has been rendered and initialized properly before invoking Player methods or modifying Player properties register to the player `playerReady` event.  This event is dispatched once all of the Player UI and plugins are aded and playback is ready to begin playback.
@@ -133,16 +133,16 @@ kWidget.addReadyCallback( function( playerId ){
 ```
 
 ### Commonly Used Player Events
-The following is a list of the most commonly used Player events triggered during typical Player embed and playback. Registering to these events enables to respond to the different states in the Player setup, Player lifecycle and user interactions. 
+The following is a list of the most commonly used Player events triggered during typical Player embed and playback. Registering to these events enables to respond to the different states in the Player setup, Player lifecycle and end user interactions. 
 
 | Event Name                | Parameters              | Description |
 |:---|:---|:---|
 | `layoutBuildDone`                | n/a              | Dispatched when the Player layout is ready and rendered on the screen                                                                                  |
 | `playerReady`                    | n/a              | Dispatches when the Player is ready to play the media. playerReady event is dispatched each time media is changed                                      |
 | `mediaLoaded`                    | n/a              | MediaLoaded is triggered between each content load, i.e., once between every item in a playlist                                                          |
-| `mediaError`                     | errorEvent       | The Player is notified about media error                                                                                                                       |
+| `mediaError`                     | errorEvent       | The Player is notified about media errors                                                                                                                     |
 | `playerStateChange`              | MediaPlayerState | Dispatched when the media Player's state has changed                                                                                                       |
-| `firstPlay`                      | n/a              | Triggered once per content entry when first played. If the user initiates a replay this is a new content playback sequence and will triger firstPlay again |
+| `firstPlay`                      | n/a              | Triggered once per content entry when first played. If the end user initiates a replay this is a new content playback sequence and will triger firstPlay again |
 | `playerPlayed`                   | n/a              | Triggered when the Player enters a play state. This event may be triggered multiple times during a single playback session                                 |
 | `playerPaused`                   | n/a              | The Player is now in a pause state                                                                                                                       |
 | `preSeek`                        | seekTime         | Notifies about a seek activity that is about to begin                                                                                                    |
@@ -187,12 +187,12 @@ kWidget.embed({
 ```
 
 ### Commonly Used Player Ad Events (Ad Sequence Events)
-The Kaltura Player supports all of the major [IAB](http://www.iab.com/) ad standards. The most commonly used Player plugins for playing ads are VAST and Doubleclick.
+The Kaltura Player supports all of the major {% extlink IAB http://www.iab.com/ %} ad standards. The most commonly used Player plugins for playing ads are VAST and Doubleclick.
 When loading and placing ads, the Player dispatches many ad related events that can be used to gain knowledge on when the ad starts, stops, when an ad was clicked or skipped, the ad time (linear, overlay) and more. 
 
 | Event Name                | Parameters              | Description  |
 |:---|:---|:---|
-| `adClick`                   | n/a                    | Dispatched when an ad is clicked by the user |
+| `adClick`                   | n/a                    | Dispatched when an ad is clicked by the end user |
 | `adErrorEvent`              | n/a                    | Dispatched when an ad error occurs            |
 | `AdSupport_EndAdPlayback`   | slotType               | Dispatched when an ad finishes playing         |
 | `AdSupport_StartAdPlayback` | slotType               | Dispatched when an ad starts playing         |
@@ -200,7 +200,7 @@ When loading and placing ads, the Player dispatches many ad related events that 
 | `midSequenceStart`          | n/a                    | Dispatched when an midroll ad starts playing |
 | `onAdComplete`              | Ad ID, Ad current time | Dispatched when ad playback is complete      |
 | `onAdPlay`                  | Ad ID, Ad System, Ad Type, Ad Position, Ad Duration, Ad Pod Position, Ad Pod start time, Ad title, Trafficking Parameters (DoubleClick only) | Dispatched when an ad starts playing and provides ad information. Additional info. |
-| `onAdSkip`                   | n/a | Dispatched when an ad is skipped due to the user clicking the "Skip Ad" button |
+| `onAdSkip`                   | n/a | Dispatched when an ad is skipped due to the end user clicking the "Skip Ad" button |
 | `postSequenceComplete` | n/a | Dispatched when an postroll ad finishes playing |
 | `postSequenceStart`    | n/a | Dispatched when an postroll ad starts playing |
 | `preSequenceComplete`  | n/a | Dispatched when an preroll ad finishes playing  |
