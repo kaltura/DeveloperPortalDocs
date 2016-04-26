@@ -10,7 +10,7 @@ This article describes how to use the Android Player API methods to manage prope
 
 ## Using the Kaltura Android Player API Methods
 ### Android API Events and Hooks
-The Android API supports the following events and hooks:
+The Android API supports the following events and hooks.
 
 ####KMediaControl
 The SDK offeres the ability to perform Player operation via the KMediaControl API.
@@ -33,7 +33,7 @@ You may send the following operations:
 | state     |  | Get the current Player state         |
 
 ***
- Example: Play/Pause Button
+* Example: Play/Pause button
 ***
 
 For each native component listener, add one of the operations above.
@@ -53,7 +53,7 @@ For each native component listener, add one of the operations above.
 ```    
 
 ***
- Example: Seek
+* Example: Seek
 ***
 
 For each native component listener, add one of the operations above.
@@ -73,7 +73,7 @@ For each native component listener, add one of the operations above.
 
 ### Player States Event Listeners
 
-The Kaltura Player supports the follwing states that the developer can listen and react upon their change:
+The Kaltura Player supports the follwing states that the developer can listen to and react upon their change:
     
     - LOADED
     - READY
@@ -85,7 +85,7 @@ The Kaltura Player supports the follwing states that the developer can listen an
     - UNKNOWN
  
  
- - Example: Listen to state changed event
+* Example: Listen to state changed event
     
 ``` java     
     @Override
@@ -101,7 +101,7 @@ The Kaltura Player supports the follwing states that the developer can listen an
 ### Waiting for a READY Event
 In some cases, the end user will want to wait until the ready event is received and only then to continue.
 
-- Example: Listen to Ready State Event
+* Example: Listen to ready state event
 
 ``` java  
  mPlayer.registerReadyEvent(new PlayerViewController.ReadyEventListener() {
@@ -116,15 +116,15 @@ In some cases, the end user will want to wait until the ready event is received 
 ```       
 
 ### Enable/Diable Configuration on Runtime
-In some cases, the application will want to add or remove configuration attributes upon states or event that are receive.
+In some cases, the application will want to add or remove configuration attributes upon states or event that are received.
 
 The Player has an API for enabling and disabling these settings, the setKDPAttribute, wich receives three parameters:
 
-    plugin name
-    attribute name
-    enable/disabe (boolean)
+- plugin name
+- attribute name
+- enable/disabe (boolean)
     
-- Example: Adding closed caption plugin
+* Example: Adding closed caption plugin
 
 ``` java 
 
@@ -138,12 +138,12 @@ if (state.equals(KPlayerState.PLAYING)){
 
 ### Player Event Listeners
 
-If the application is interested in reacting to web events, add the "mPlayerView.addKPlayerEventListener".
+If the application is required to react to web events, add the "mPlayerView.addKPlayerEventListener".
 
 [Supported Events] (https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/media-player/Kaltura-Media-Player-API.md#commonly-used-player-events)
 
 
-- Example: Listen to show play controls event
+* Example: Listen to show play controls event
 
 ``` java
  mPlayerView.addKPlayerEventListener("showPlayerControls", "showPlayerControls", new PlayerViewController.EventListener() {
@@ -157,27 +157,25 @@ If the application is interested in reacting to web events, add the "mPlayerView
  
 ### Sending Event Notifications
 
-If the application wants to change the current player behavoir, this can be done via the sendNotification API.
-
-This method receives two parameters:
+To change the current player behavoir, use the sendNotification API. This method receives two parameters:
   - action name
   - parameter (string/json)  
 
-Examples:
+* Examples:
 
-Notification without parameters:  
+**Notification without parameters:**
  
 ``` java 
 getPlayer().sendNotification("doPause", null);
 ```
 
-Notification With a string parameter:
+**Notification with a string parameter:**
 
 ``` java
 getPlayer().sendNotification("doSeek", Double.toString(seconds));
 ```
 
-Notification With a JSON parameter:
+**Notification with a JSON parameter:**
 
 ``` java
 String entry = "'{\"entryId\":\"" + entryId + "}'";
