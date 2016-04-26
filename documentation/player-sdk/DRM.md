@@ -2,6 +2,10 @@
 layout: page
 title: DRM Support
 ---
+
+[![iOS](https://img.shields.io/badge/iOS-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios) 
+[![Android](https://img.shields.io/badge/Android-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios)
+
 This article describes the available DRM support for Android and iOS devices.
 
 ## Overview
