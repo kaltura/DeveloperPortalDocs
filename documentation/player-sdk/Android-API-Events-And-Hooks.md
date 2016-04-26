@@ -8,9 +8,9 @@ subcat: Android
 
 - KMediaControl
 
-  The SDK offeres the ability to perform Player operation via the KMediaControl API.
+The SDK offeres the ability to perform Player operation via the KMediaControl API.
   
-  You may send the following operations:
+You may send the following operations:
   
 
 | Operation  | Parameters  | Explanation |
@@ -98,7 +98,7 @@ The Kaltura Player supports the follwing states that the developer can listen an
 ``` 
 
 ### Waiting for a READY Event
-In some cases, the end user will want to wait until the ready event is recieved and only then to continue.
+In some cases, the end user will want to wait until the ready event is received and only then to continue.
 
 - Example: Listen to Ready State Event
 
