@@ -11,8 +11,8 @@ This article describes how to use the Player JavaScript API to manage properties
 The Player JavaScript API is a two-way communication channel that: 
 * Enables the Player to communicate its current states and parameters
 * Enables the embedding page/application to invoke actions, change and read properties, and to customize its behavior, design and layout 
-* Maintain a continuous, interactive data connection with the Kaltura Platform API
-* Provide a seamless end user experience across devices, browsers and platforms
+* Maintains a continuous, interactive data connection with the Kaltura Platform API
+* Provides a seamless end user experience across devices, browsers and platforms
 
 ## Embed and Reference Player Instances
 The Player API is exposed via the Player JavaScript library and is available only when using the JavaScript embed methods (dynamic, thumbnail or auto). 
