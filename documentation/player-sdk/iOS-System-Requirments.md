@@ -8,13 +8,13 @@ title: iOS Player SDK System Requirements
 
 
 ## IDE 
-To integrate Kaltura Player iOS SDK minimum System requirments are:
+To integrate the Kaltura Player iOS SDK, the minimum system requirments are:
 OSX with Xcode 7+ 
   
 ## Minimum OS version 
 Player supports iOS 8 and above 
 
-please refer to Apple device matrix for device compliance.  
+Please refer to the Apple device matrix for device compliance.  
 
 
 ## Roadmap: ( TBD consider this section)
