@@ -1,36 +1,37 @@
 ---
 layout: page
-title: Events And Listeners
+title: Kaltura Player SDK API - Properties, Events, Notifications - Android
 subcat: Android
 ---
-#Kaltura Android Player API Methods
+
+[![Android](https://img.shields.io/badge/Android-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios)
+
+This article describes how to use the Android Player API methods to manage properties, events, and notifications. 
+
+## Using the Kaltura Android Player API Methods
 ### Android API Events and Hooks
+The Android API supports the following events and hooks:
 
-- KMediaControl
-
+####KMediaControl
 The SDK offeres the ability to perform Player operation via the KMediaControl API.
-  
 You may send the following operations:
   
 
 | Operation  | Parameters  | Explanation |
 |:------------- |:---------------:| :-------------|
 | start     |  | Start playing the media         | 
-| pause     |  | pPause the current playback         | 
+| pause     |  | Pause the current playback         | 
 | seek     | (long milliSeconds) | Seek a specific time position          | 
 | seek     | (long milliSeconds, SeekCallback callback) | Seek a specific time position and call callback to be called when seek is done         |
 | canSeekForward     |  | Check if seek backwards is possible         |
 | canSeekBackward     |  | Check if seek forward is possible          | 
 | replay     |  | Start over the playback         |
-| isPlaying     |  | Check if player state is playing         |
-| canPause     |  | Check if player can be paused         |
-| getDuration     |  | Get current media duration         |
-| getCurrentPosition     |  | Get current media position         |
-| state     |  | Get current player state         |
+| isPlaying     |  | Check if the Player state is playing         |
+| canPause     |  | Check if the Player can be paused         |
+| getDuration     |  | Get the current media duration         |
+| getCurrentPosition     |  | Get the current media position         |
+| state     |  | Get the current Player state         |
 
-
-
- 
 ***
  Example: Play/Pause Button
 ***
