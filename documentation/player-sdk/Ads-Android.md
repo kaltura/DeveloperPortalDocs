@@ -3,6 +3,8 @@ layout: page
 title: Configuring the Player to use Google Ads in Android Devices
 ---
 
+[![Android](https://img.shields.io/badge/Android-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios)
+
 ## Overview
 This article explains how to configure the Player to use Google ads Android devices.
 
