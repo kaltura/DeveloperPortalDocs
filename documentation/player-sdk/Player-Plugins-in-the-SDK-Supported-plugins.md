@@ -3,7 +3,7 @@ layout: page
 title: Player Plugins in the SDK - Supported plugins, using plugins in the SDK, considerations
 ---
 
-In this document we'll define the supported player plugins on the player-sdk.
+In this article we'll define the supported Player plugins on the Player-SDK.
 
 All plugins can be included using the player studio, edit the uiconf object or changing the configuration in the config object.
 
