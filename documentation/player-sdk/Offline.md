@@ -3,6 +3,9 @@ layout: page
 title: Offline Playback - Integration Guide
 ---
 
+[![iOS](https://img.shields.io/badge/iOS-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios) 
+[![Android](https://img.shields.io/badge/Android-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios)
+
 The native mobile SDKs (Android and iOS) allow applications to play downloaded content when the device is offline. After reading this article, a developer integrating with Kaltura Player's Native SDKs will know how to configure offline playback and to use downloaded files with the Player.
 
 
