@@ -70,7 +70,7 @@ share.templatePath=https://link-to-my-custom-template.com/templatefile.tmpl.html
 
 > **NOTE:** When creating and loading external resources such as template files, please consult with the "Managing external assets" section below.
 
-### Plugins that support templates:
+### Plugins that Support Templates
 
 | Plugin       | Flashvar     | Default template path     |
 |:---|:---|:---|
