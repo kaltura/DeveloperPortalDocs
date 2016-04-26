@@ -3,6 +3,8 @@ layout: page
 title: Picture-in-Picture (PIP) - iOS Plugin
 ---
 
+[![iOS](https://img.shields.io/badge/iOS-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios) 
+
 This article describes how to use the iOS plugin for the PIP feature.
 
 ## How to Enable Background Modes
