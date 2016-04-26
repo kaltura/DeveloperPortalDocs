@@ -104,15 +104,18 @@ the playback source dynamically. For example:
 {% endplantuml %}
 
 ## Download Location Guidelines
-Application developers are free to choose download locations; however, Kaltura recommends the following locations:
+Application developers are free to choose download locations, as allowed by the platform; however, Kaltura recommends
+the following locations:
 
 ### Android
-Files can be downloaded to any directory accessible by the application, including the application's directory in the internal storage, and any directory in the external/shared storage.
-
-It is recommended to store downloaded files in the directory returned by `context.getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS)`. This directory is owned by the application, is deleted on uninstall, and typically resides on a relatively large partition. In addition, starting with `KITKAT`, this directory does not require read/write permissions to the shared storage (`WRITE_EXTERNAL_STORAGE`).
+Store downloaded files in a directory returned by `context.getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS)` (or a subdirectory of it). This directory is owned by the application, is deleted on uninstall, and typically resides on a relatively large partition. In addition, starting with `KITKAT`, this directory does not require read/write permissions to the shared storage (`WRITE_EXTERNAL_STORAGE`).
 
 ### iOS
-Per Apple's current recommendation, downloaded video files should be stored in a subdirectory of the application's *Documents* directory – `[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject]`. The selected subdirectory **must** be excluded from backup.
+Per Apple's current recommendation, downloaded video files should be stored in a subdirectory of the application's *Documents* directory – `[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject]`:
 
-For more information, see Apple's {% extlink File System Programming Guide > File System Basics > Where You Should Put Your App’s Files https://developer.apple.com/library/ios/documentation/FileManagement/Conceptual/FileSystemProgrammingGuide/FileSystemOverview/FileSystemOverview.html#//apple_ref/doc/uid/TP40010672-CH2-SW28 %}.
+> Put user data in Documents/. User data generally includes any files you might want to expose to the user—anything you might want the user to create, import, delete or edit. For a drawing app, user data includes any graphic files the user might create. For a text editor, it includes the text files. **Video and audio apps may even include files that the user has downloaded to watch or listen to later**.
+
+The selected subdirectory **must** be excluded from backup.
+
+For more information, see Apple's guide: {% extlink File System Programming Guide > File System Basics > Where You Should Put Your App’s Files https://developer.apple.com/library/ios/documentation/FileManagement/Conceptual/FileSystemProgrammingGuide/FileSystemOverview/FileSystemOverview.html#//apple_ref/doc/uid/TP40010672-CH2-SW28 %}.
 
