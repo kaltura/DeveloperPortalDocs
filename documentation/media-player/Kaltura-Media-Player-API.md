@@ -149,7 +149,7 @@ The following is a list of the most commonly used Player events triggered during
 | `firstPlay`                      | n/a              | Triggered once per content entry when first played. If the end user initiates a replay this is a new content playback sequence and will triger firstPlay again |
 | `playerPlayed`                   | n/a              | Triggered when the Player enters a play state. This event may be triggered multiple times during a single playback session                                 |
 | `playerPaused`                   | n/a              | The Player is now in a pause state                                                                                                                       |
-| `preSeek`                        | seekTime         | Notifies about a seek activity that is about to begin                                                                                                    |
+| `preSeek`                        | seekTime         | Notifies about a seek activity that is about to start                                                                                                    |
 | `seek`                           | currentTime      | Notifing about a seek activity that has started                                                                                                              |
 | `seeked`                         | seekedTime       | Notifies that the seek activity has completed                                                                                                             |
 | `playerUpdatePlayhead`           | currentTime      | An update event that notifies about the progress in time when playback is running                                                                      |
@@ -158,7 +158,7 @@ The following is a list of the most commonly used Player events triggered during
 | `volumeChanged`                  | newVolume        | Notification about a change in the Player volume                                                                                                       |
 | `mute`                           | n/a              | Notification fired when the Player is muted                                                                                                            |
 | `unmute`                         | n/a              | Notification fired when the Player is unmuted                                                                                                          |
-| `bufferChange`                   | buffering        | Dispatches when the Player begins or stops buffering                                                                                                   |
+| `bufferChange`                   | buffering        | Dispatches when the Player starts or stops buffering                                                                                                   |
 | `KalturaSupport_CuePointReached` | cuePointObject   | Notification fired when the Player reaches a cue point                                                                                                 |
 | `KalturaSupport_AdOpportunity`   | cuePointObject   | Notification fired when the Player reaches an ad cue point (such as midroll or overlay)                                                                |
 | `playerPlayEnd`                  | n/a              | The played media has reached the end of content playback.                                                                                              |
@@ -323,4 +323,4 @@ kdp.setKDPAttribute('related', 'entryList', '0_33vkwid6,1_18leun9q,1_23pqn2nu');
 kdp.setKDPAttribute('scrubber', 'visible', false);
 ```
 
-> **Note:** Some properties are read-only or allow setting values only once during player initialization.
+> **Note:** Some properties are read-only or allow setting values only once during Player initialization.
