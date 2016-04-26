@@ -3,7 +3,7 @@ layout: page
 title: iOS Player SDK System Requirements
 ---
 
-
+[![iOS](https://img.shields.io/badge/iOS-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios)
 ## iOS System Requirements 
 
 
