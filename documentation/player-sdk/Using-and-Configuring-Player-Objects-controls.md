@@ -24,11 +24,11 @@ In this document you'll learn how to:
 [Kaltura Media Player Configuration] (https://vpaas.kaltura.com/documentation/media-player/Player-Configuration) and verify that at this stage, you should have your Player configured via KMC.
 
 ## How to Work with the Kaltura Player API
-The following article provides a detailed explanation on [accessing the iOS Player API base methods](https://vpaas.kaltura.com/documentation/player-sdk/Kaltura-iOS-player-API-Base-Methods#sthash.ObDzzCgb.spB9h8rA.dpbs).
+The following article provides a detailed explanation on {% extlink accessing the iOS Player API base methods https://vpaas.kaltura.com/documentation/player-sdk/Kaltura-iOS-player-API-Base-Methods#sthash.ObDzzCgb.spB9h8rA.dpbs %}.
 
 
 ## Using the Kaltura Player Plugin
-To learm about the Kaltura Player plugin and how it helps you to customize your Player, refer to the [Player Plugin Overview](https://vpaas.kaltura.com/documentation/player-sdk/Player-Plugin-Overview#sthash.avrM8Tj7.MuWspf6K.dpbs).
+To learm about the Kaltura Player plugin and how it helps you to customize your Player, refer to the {% extlink Player Plugin Overview https://vpaas.kaltura.com/documentation/player-sdk/Player-Plugin-Overview#sthash.avrM8Tj7.MuWspf6K.dpbs %}.
 
 
 ## How to Remove html5 UI Controls
