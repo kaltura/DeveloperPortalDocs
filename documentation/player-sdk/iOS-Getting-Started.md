@@ -7,18 +7,17 @@ title: iOS Player SDK Getting Started
 
 ## Getting Started
 
-KalturaPlayerSDK can be added to any project (big or small) in a matter of minutes (maybe even seconds if you're super speedy). 
+KalturaPlayerSDK can be added to any project (big or small) in a matter of minutes (maybe even seconds if you are an advanced user). 
 
-To install Kaltura iOS player SDK there are 2 options:
+## Installing the Kaltura iOS Player SDK
+There are two options for installing the Kaltura iOS Player SDK:
 
-* CocoaPods is fully supported
+* Using fully supported CocoaPods
 
-* SDK Traditional Installation
-
-
+* SDK traditional installation
 
 
-## SDK CocoaPods Installation :
+## SDK CocoaPods Installation
 
 The easiest way to install KalturaPlayerSDK is to use [CocoaPods](https://cocoapods.org/). To do so, simply add the following line to your Podfile:
 
@@ -29,30 +28,30 @@ pod 'KalturaPlayerSDK'
 
 
 
-## SDK Traditional Installation :
-
+## SDK Traditional Installation
+To install the Kaltura iOS Player SDK using the traditional installation, follow these steps:
 ```
 git clone https://github.com/kaltura/player-sdk-native-ios.git
 ```
 
-### Add the static library's .xcodeproj to the app's project
-Find the ```KALTURAPlayerSDK.xcodeproj``` from the subproject folder in Finder, and drag it into Xcode’s Navigator tree. Alternatively, add it with Xcode’s Add Files File menu item.
+### Step 1: Add the static library's .xcodeproj to the application's project
+Find the ```KALTURAPlayerSDK.xcodeproj``` from the subproject folder in Finder, and drag it into the Xcode’s Navigator tree. Alternatively, add it with the Xcode’s Add Files File menu item.
 
 ![add xcodeproj](https://camo.githubusercontent.com/1e3d845d0728b62beb23e474ae30d2b8370867db/687474703a2f2f6b6e6f776c656467652e6b616c747572612e636f6d2f73697465732f64656661756c742f66696c65732f7374796c65732f6c617267652f7075626c69632f6164645f66696c65732e706e67)
 
-
-Make sure to add the ```KALTURAPlayerSDK.xcodeproj``` file only, **not the entire directory**. You can’t have the same project open in two different Xcode windows.If you find that you’re unable to navigate around the library project, check that you don’t have it open in another Xcode window. After you’ve added the subproject, it should appear below the main project in the Xcode’s Navigator tree:
+* Make sure to add the ```KALTURAPlayerSDK.xcodeproj``` file only, **not the entire directory**. You cannot have the same project open in two different Xcode windows. If you find that you are unable to navigate around the library project, verify that you do not have it open in another Xcode window.
+* After you have added the subproject, it should appear below the main project in the Xcode’s Navigator tree:
 ![Xcode navigator tree](https://camo.githubusercontent.com/1f46c83ca7f3e9c76f1509ddc041e3964e63f3c7/687474703a2f2f6b6e6f776c656467652e6b616c747572612e636f6d2f73697465732f64656661756c742f66696c65732f7374796c65732f6c617267652f7075626c69632f78636f6465747265652e706e67)
 
-## Configure the app target to build the static library target.
-
+### Step 2: Configure the application target to build the static library target.
 1. You will need to get the main project to build and link to the ```KALTURAPlayerSDK``` library.
-2. In the main project app’s target settings, find the ```Build Phases``` section. This is where you’ll configure the ```KALTURAPlayerSDK``` target to automatically build and link to the ```KALTURAPlayerSDK ``` library.
-3. After you’ve found the ```Build Phases``` section, open the ```Target Dependencies``` block and click the ```+```button. In the hierarchy presented to you, the ```KALTURAPlayerSDK``` target from the ```KALTURAPlayerSDK``` project should be listed. Select it and click ```add```
+2. In the main project application’s target settings, find the ```Build Phases``` section. This is where you will configure the ```KALTURAPlayerSDK``` target to automatically build and link to the ```KALTURAPlayerSDK ``` library.
+3. After you find the ```Build Phases``` section, open the ```Target Dependencies``` block and click the ```+```button. 
+4. In the hierarchy presented to you, the ```KALTURAPlayerSDK``` target from the ```KALTURAPlayerSDK``` project should be listed. Select it and click ```add```.
 
 ![Xcode target config](https://camo.githubusercontent.com/d35c79ce9a0d01ad3a45a94362da413ed4afa403/687474703a2f2f6b6e6f776c656467652e6b616c747572612e636f6d2f73697465732f64656661756c742f66696c65732f7374796c65732f6c617267652f7075626c69632f616464446570656e64656e6369652e6a7067)
 
-## Configure the app target to link to the static library target.
+### Step 3: Configure the application target to link to the static library target
 1. You will need to set the app to link to the library when it’s built - just like you would a system framework you would want to use. Open the ```Link Binary With Libraries``` section located a bit below the ```Target Dependencies``` section, and click ```+``` in there too. At the top of the list there should be the ```libKALTURAPlayerSDK.a``` static library that the main project target produces. Choose it and click ```Add```.
 ![Xcode target config2](https://camo.githubusercontent.com/acea3bcfbe47b0cc2e37796807d23c617723822f/687474703a2f2f6b6e6f776c656467652e6b616c747572612e636f6d2f73697465732f64656661756c742f66696c65732f7374796c65732f6c617267652f7075626c69632f6c696e6b546f53444b2e6a7067)
 
