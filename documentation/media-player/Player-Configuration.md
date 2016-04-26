@@ -3,7 +3,7 @@ layout: page
 title: Kaltura Media Player Configuration and Parameters
 ---
 
-The Kaltura Player configuration is determined by a JSON structured configuration object, also called **Flashvars**. The Flashvars configuration parameters object defines key / value pairs for Player properties as well as a plugins configuration list.   
+The Kaltura Player configuration is determined by a JSON structured configuration object, which is also called **Flashvars**. The Flashvars configuration parameters object defines key / value pairs for Player properties as well as a plugins configuration list.   
 
 You can customize the Kaltura Player using one of two options:
 
