@@ -19,7 +19,7 @@ There are two options for installing the Kaltura iOS Player SDK:
 
 ## SDK CocoaPods Installation
 
-The easiest way to install KalturaPlayerSDK is to use [CocoaPods](https://cocoapods.org/). To do so, simply add the following line to your Podfile:
+The easiest way to install KalturaPlayerSDK is to use {% extlink CocoaPods https://cocoapods.org/ %}. To do so, simply add the following line to your Podfile:
 
 ```
 pod 'KalturaPlayerSDK'
@@ -89,4 +89,4 @@ git clone https://github.com/kaltura/player-sdk-native-ios.git
 ```
 
 ### App Transport Security 
-Detailed information about the Application Transport Security can be found here: [App Transport Security](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/player-sdk/Troubleshooting.md).
+Detailed information about the Application Transport Security can be found here: {% extlink App Transport Security https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/player-sdk/Troubleshooting.md %}.
