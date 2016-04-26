@@ -5,12 +5,9 @@ title: Kaltura iOS player API Base Methods
 
 [![iOS](https://img.shields.io/badge/iOS-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios)
 
-# Kaltura iOS player API Base Methods
+This article describes how to use the iOS Player API base methods. You can access the entire Player API through methods that enable the following:
 
-You can access the entire player API through methods that enable:
-
-* Listening and responding to player events (addJsListener/removeJsListener):
-React to internal player events, such as beginning play and pausing.
+* Listen and respond to Player events (addJsListener/removeJsListener), which enables you to react to internal player events, such as beginning, playing, and pausing:
 
 ```objective_c
 
@@ -41,8 +38,7 @@ React to internal player events, such as beginning play and pausing.
 
 ```
 
-* Invoking player actions (sendNotification):
-Tell the player to do something, such as play or pause.
+* Invoke player actions (sendNotification), which tell the Player to do something, such as play or pause:
 
 ```objective_c
 
@@ -59,8 +55,7 @@ Tell the player to do something, such as play or pause.
 
 
 ```
-* Retrieving information in runtime (evaluate):
-Find out something about a player, such as the media that is loaded in the player and flashVars that the player passes.
+* Retrieve information in runtime (evaluate), which enables you to find out something about a Player, such as the media that is loaded in the Player and flashVars that the player passes:
 
 ```objective_c
 
@@ -78,8 +73,7 @@ Find out something about a player, such as the media that is loaded in the playe
 
 
 ```
-* Changing player attributes in runtime (setKDPAttribute):
-Modify player attributes, such as a label on a player UI.
+* Change Player attributes in runtime (setKDPAttribute), which modifies Player attributes, such as a label on a Player UI:
 
 ```objective_c
 
@@ -99,6 +93,7 @@ Modify player attributes, such as a label on a player UI.
 ```
 
 ## Receiving Notification when the Player API Is Ready
+To receive a notification when the Player API is ready, use the following objective:
 
 ```objective_c
 /*!
@@ -123,7 +118,8 @@ Modify player attributes, such as a label on a player UI.
 
 ```
 
-## Using the player API's Base Methods
+## Using the Player API's Base Methods
+To use the Player API's base methods, use the following objective:
 
 ```objective_c
 /*!
@@ -131,7 +127,7 @@ Modify player attributes, such as a label on a player UI.
  @abstract      Initiates playback of the current item. (required)
  
  If playback was previously paused, this method resumes playback where it left off; otherwise, this method plays the first available item, from the beginning.
- If a Kaltura player is not prepared for playback when you call this method, this method first prepares the Kaltura player and then starts playback. To minimize playback delay, call the prepareToPlay method before you call this method.
+ If a Kaltura Player is not prepared for playback when you call this method, this method first prepares the Kaltura Player and then starts playback. To minimize playback delay, call the prepareToPlay method before you call this method.
  */
 - (void)play;
 ```
@@ -173,7 +169,8 @@ Modify player attributes, such as a label on a player UI.
 - (void)seek:(NSTimeInterval)playbackTime completionHandler:(void(^)())handler;
 ```
 
-## Player States  
+## Player States
+The following are the available Player states. 
 
 
 ### KPMediaPlaybackState
