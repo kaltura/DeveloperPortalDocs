@@ -5,12 +5,12 @@ title: Android Player SDK System Requirements
 
 [![Android](https://img.shields.io/badge/Android-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios)
 
-## Android system requirments 
+## Android System Requirements 
 
 ## IDE 
-To integrate the Kaltura Android Player SDK, it is recomended to use AndroidStudio 2.0+ 
+To integrate the Kaltura Android Player SDK, it is recomended to use AndroidStudio 2.0+. 
 
 ## Minimum OS version 
-Kaltura Android Player SDK supports 4.1+ 
+Kaltura Android Player SDK supports 4.1+.
 
 TODO: add a full list of tested devices 
