@@ -1,5 +1,10 @@
-# Google Cast Setup
-Kaltura provides the Chromecast plugin as default; if you plan to use it, you should add the following to your `KPPlayerConfig` :
+---
+layout: page
+title: Google Cast Setup
+---
+This article describes how to set up the Google Cast feature.
+
+Note that Kaltura provides the Chromecast plugin as default; if you plan to use it, you should add the following to your `KPPlayerConfig` :
 ```
 config.addConfig("chromecast.plugin", "true");
 ```
