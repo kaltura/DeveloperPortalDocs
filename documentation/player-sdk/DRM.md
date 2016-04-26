@@ -2,11 +2,13 @@
 layout: page
 title: DRM Support
 ---
-#DRM Support
+This article describes the available DRM support for Android and iOS devices.
+
 ## Overview
 The Player SDK seamlessly supports playback of DRM content. Each platform supports a slightly different set of DRM schemes and features.
 
-## DRM Support in Android Devices
+### DRM Support in Android Devices
+The following DRMs are supported in Android devices:
 * Widevine Modular
 	* Supported in Android 4.3 and up
 	* Online playback only
@@ -16,7 +18,8 @@ The Player SDK seamlessly supports playback of DRM content. Each platform suppor
         * Google no longer requires Widevine Classic support in Android 6.0 devices, but some devices still support it.
     * Online and offline playback
 
-## DRM Support in iOS Devices
+### DRM Support in iOS Devices
+The following DRMs are supported in iOS devices:
 * FairPlay
 	* Supported in iOS versions 8 and up
 	* Online playback only
