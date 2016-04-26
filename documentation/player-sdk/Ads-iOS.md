@@ -1,25 +1,25 @@
 ---
 layout: page
-title: Using Google Ads in iOS
+title: Using Google Ads in iOS Devices
 ---
 
-#Linking Google Ads
-There are a number of options for linking Google in iOS:
+This article describes the different options for linking Google in iOS devices for the Kaltura Player.
 
-###Using Cocoapods:
-To link using Cocoapods, add these two pods to your podfile:
+##Using Cocoapods:
+To link Google ads using Cocoapods, add these two pods to your podfile:
 
 ```
 pod 'GoogleAds-IMA-iOS-SDK'
 
 ```
 
-###Linking Ads Using the Traditional Way
-
-### Linking to GoogleInteractiveMediaAds SDK
- 1. If you use ads you will have to download **`GoogleMobileAds`** from: [Admob](https://developers.google.com/admob/ios/download) and add it to your project
- 2. In addition to the **`GoogleMobileAds`** you should download **`GoogleInteractiveMediaAds`** from: [IMA SDK](https://developers.google.com/interactive-media-ads/docs/sdks/ios/download), if you are going to use **Admob** in addition to the **`IMA SDK`** you should add **GoogleInteractiveMediaAds-GoogleIMA3ForAdMob** to your project and if you are going to use only **`IMA SDK`** you should add **GoogleInteractiveMediaAds-GoogleIMA3** to your project.
- 3. Required frameworks for **`GoogleMobileAds`**:
+## Linking to GoogleInteractiveMediaAds SDK
+To link to Google ads using the GoogleInteractiveMediaAds SDK:
+ 1. Download **`GoogleMobileAds`** from: [Admob](https://developers.google.com/admob/ios/download) and add it to your project
+ 2. In addition to the **`GoogleMobileAds`** you will need to download **`GoogleInteractiveMediaAds`** from: [IMA SDK](https://developers.google.com/interactive-media-ads/docs/sdks/ios/download).
+	- If you are going to use **Admob** in addition to the **`IMA SDK`**, add **GoogleInteractiveMediaAds-GoogleIMA3ForAdMob** to your project.
+	- If you are going to use only **`IMA SDK`**, add **GoogleInteractiveMediaAds-GoogleIMA3** to your project.
+ 3. The following are the required frameworks for **`GoogleMobileAds`**:
 	- StoreKit.framework
 	- EventKit.framework
 	- EventKitUI.framework
@@ -27,20 +27,18 @@ pod 'GoogleAds-IMA-iOS-SDK'
 	- MessageUI.framework
 
 
-# Configuring the Player for Using Ads
+## Configuring the Player to use Google Ads
 
-Add to your `KPPlayerConfig` these:
+To configure the Player to use Google ads, add the following configuration to your `KPPlayerConfig`:
 
 ```
 [config addConfigKey:@"doubleClick.plugin" withValue:@"true"];
 [config addConfigKey:@"doubleClick.adTagUrl" withValue:@"your ad tag URL"];
 ```
 
-And that's it you are ready to use ads.
+## Listening to Ad Events
 
-# Listening to Ad's events
-
-If you should listen to ad's events you can use:
+To listen to ad events, use the following:
 
 **@todo** link to the kdp api example
 
