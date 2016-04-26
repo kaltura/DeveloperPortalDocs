@@ -35,12 +35,12 @@ git clone https://github.com/kaltura/player-sdk-native-ios.git
 ```
 
 ### Step 1: Add the Static Library's .xcodeproj to the Application's Project
-Find the ```KALTURAPlayerSDK.xcodeproj``` from the subproject folder in Finder, and drag it into the Xcode’s Navigator tree. Alternatively, add it with the Xcode’s Add Files File menu item.
+1. Locate the ```KALTURAPlayerSDK.xcodeproj``` from the subproject folder in Finder, and drag it into the Xcode’s Navigator tree. Alternatively, add it with the Xcode’s Add Files File menu item. 
 
 ![add xcodeproj](https://camo.githubusercontent.com/1e3d845d0728b62beb23e474ae30d2b8370867db/687474703a2f2f6b6e6f776c656467652e6b616c747572612e636f6d2f73697465732f64656661756c742f66696c65732f7374796c65732f6c617267652f7075626c69632f6164645f66696c65732e706e67)
 
-* Make sure to add the ```KALTURAPlayerSDK.xcodeproj``` file only, **not the entire directory**. You cannot have the same project open in two different Xcode windows. If you find that you are unable to navigate around the library project, verify that you do not have it open in another Xcode window.
-* After you have added the subproject, it should appear below the main project in the Xcode’s Navigator tree:
+2. Make sure to add the ```KALTURAPlayerSDK.xcodeproj``` file only, **not the entire directory**. You cannot have the same project open in two different Xcode windows. If you find that you are unable to navigate around the library project, verify that you do not have it open in another Xcode window.
+3. After you have added the subproject, it should appear below the main project in the Xcode’s Navigator tree:
 ![Xcode navigator tree](https://camo.githubusercontent.com/1f46c83ca7f3e9c76f1509ddc041e3964e63f3c7/687474703a2f2f6b6e6f776c656467652e6b616c747572612e636f6d2f73697465732f64656661756c742f66696c65732f7374796c65732f6c617267652f7075626c69632f78636f6465747265652e706e67)
 
 ### Step 2: Configure the Application Target to Build the Static Library Target
