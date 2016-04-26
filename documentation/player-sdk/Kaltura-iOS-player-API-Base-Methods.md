@@ -1,11 +1,14 @@
 ---
 layout: page
-title: Kaltura iOS player API Base Methods
+title: Kaltura Player SDK API - Properties, Events, Notifications - iOS
 ---
 
 [![iOS](https://img.shields.io/badge/iOS-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios)
 
-This article describes how to use the iOS Player API base methods. You can access the entire Player API through methods that enable the following:
+This article describes how to use the iOS Player API base methods to managing properties, events and notifications. 
+
+## Using the Kaltura iOS player API Base Methods
+You can access the entire Player API through methods that enable the following:
 
 * Listen and respond to Player events (addJsListener/removeJsListener), which enables you to react to internal player events, such as beginning, playing, and pausing:
 
