@@ -21,14 +21,14 @@ The plugins can be developed to:
 
 ## Kaltura Plugins
 The following are the Kaltura-provided plugins that you can implement in your system:
-[Kaltura Player Plugins](https://vpaas.kaltura.com/documentation/player-sdk/Player-Plugins-in-the-SDK-Supported-plugins#sthash.3a8Dft10.dpbs).
+{% extlink Kaltura Player Plugins https://vpaas.kaltura.com/documentation/player-sdk/Player-Plugins-in-the-SDK-Supported-plugins#sthash.3a8Dft10.dpbs %}.
 
 ## How to Enable/Create a Plugin
 
 #### Using an Existing Plugin
 
 1. If you want to change/add a plugin, the key should begin with the plugin name, dot and the plugin attribute. Every plugin includes the plugin attributes required for enabling or disabling the plugin.
-2. In order to add plugin, use the addConfigKey ([iOS](https://github.com/kaltura/player-sdk-native-ios/blob/master/KALTURAPlayerSDK/KPPlayerConfig.h#L57) , [Android](https://github.com/kaltura/player-sdk-native-android/blob/master/playerSDK/src/main/java/com/kaltura/playersdk/KPPlayerConfig.java#L86)) function. Note that the first parameter takes the key name and the second takes the value.
+2. In order to add plugin, use the addConfigKey ({% extlink iOS https://github.com/kaltura/player-sdk-native-ios/blob/master/KALTURAPlayerSDK/KPPlayerConfig.h#L57 %}, {% extlink Android https://github.com/kaltura/player-sdk-native-android/blob/master/playerSDK/src/main/java/com/kaltura/playersdk/KPPlayerConfig.java#L86%}) function. Note that the first parameter takes the key name and the second takes the value.
 
 In this example, the loadingSpinner plugin has been disabled:
 
@@ -43,12 +43,12 @@ config.addConfig("loadingSpinner.plugin", "false");
 
 #### Creating Custom Plugins
 
-To create custome plugins, follow the steps in the article [Extending the Player with Plugins](https://vpaas.kaltura.com/documentation/media-player/Player-Plugins#sthash.gtmiiI7F.dpbs).
+To create custome plugins, follow the steps in the article {% extlink Extending the Player with Plugins https://vpaas.kaltura.com/documentation/media-player/Player-Plugins#sthash.gtmiiI7F.dpbs %}.
 
 ### How to Detect if Configured Plugins are Loaded
-1. Open the iOS Player API base by following the steps in the article [Accessing the iOS player API Base Methods](https://vpaas.kaltura.com/documentation/player-sdk/Kaltura-iOS-player-API-Base-Methods#sthash.ObDzzCgb.spB9h8rA.dpbs).
+1. Open the iOS Player API base by following the steps in the article {% extlink Accessing the iOS player API Base Methods https://vpaas.kaltura.com/documentation/player-sdk/Kaltura-iOS-player-API-Base-Methods#sthash.ObDzzCgb.spB9h8rA.dpbs %}.
 2. Follow the instructions in * "Receiving  Notification when the Player API Is Ready" to detect if configured plugins are loaded.
 
 ### How to Get Notified about Player Plugin-Related Callbacks
-1. Open the iOS Player API base by following the steps in the article [Accessing the iOS player API Base Methods](https://vpaas.kaltura.com/documentation/player-sdk/Kaltura-iOS-player-API-Base-Methods#sthash.ObDzzCgb.spB9h8rA.dpbs).
+1. Open the iOS Player API base by following the steps in the article {% extlink Accessing the iOS player API Base Methods https://vpaas.kaltura.com/documentation/player-sdk/Kaltura-iOS-player-API-Base-Methods#sthash.ObDzzCgb.spB9h8rA.dpbs %}.
 2. Follow the instructions in * addKPlayerEventListener * to receive notifications about Player plugin-related callbacks.
