@@ -1,24 +1,23 @@
 ---
 layout: page
-title: iOS Player SDK Basic embedding  
+title: iOS Player SDK Basic Embedding  
 ---
 
+This article describes how to use the iOS Player SDK basic embedding.
 
-# Using Kaltura player
-
-## Import KPViewController to main project
+## Import KPViewController to the Main Project
 
 ```
 #import <KALTURAPlayerSDK/KPViewController.h>
 ```
 
-## Create KPViewController instance:
+## Create a KPViewController Instance
 
 ```
 @property (retain, nonatomic) KPViewController *player;
 ```
 
-## To Initialize PlayerViewController for Fullscreen:
+## Initialize PlayerViewController for Fullscreen
 
 ``` objc 
 - (KPViewController *)player {
@@ -47,7 +46,6 @@ title: iOS Player SDK Basic embedding
 ![iOS-fullscreen](./images/iOS-fullscreen-embed.png)
 
 
-## To Initialize PlayerViewController for Inline
-
-[Inline player](Fullscreen-inline-iOS)
+## Initialize PlayerViewController for Inline
+Refer to [Inline player](Fullscreen-inline-iOS)
 
