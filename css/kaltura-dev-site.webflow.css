@@ -669,8 +669,9 @@ h4 {
   font-size: 16px;
 }
 
-.sidenav-headings.grp-heading.documentation\/contribute {
-  background-color: red !important;
+.sidenav-headings.grp-heading.documentation\/contribute:before {
+   font-family: FontAwesome;
+   content: "\f09b";
 }
 
 .sidenav-grp-links {
