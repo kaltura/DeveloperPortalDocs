@@ -10,7 +10,7 @@ function addRow(cat,subcat,name,link, entry_path)
 	var subcatel = document.createElement('div');
         subcatel.className = 'row';
 	subcatel.id=subcat;
-	subcatel.innerHTML = '<a class="sidenav-sub-cat-links inactive-link"><h4 class="sidenav-headings grp-heading '+entry_path+'">'+subcat+'</h4></a>';
+	subcatel.innerHTML = '<a href="#" class="sidenav-sub-cat-links inactive-link"><h4 class="sidenav-headings grp-heading '+entry_path+'">'+subcat+'</h4></a>';
     }
     subcatel.innerHTML = subcatel.innerHTML + '<a href='+link + ' class="sidenav-sub-links" id='+entry_path+'>'+name+'</a>';  
     document.getElementById(cat).getElementsByClassName('sidenav-grp-links')[0].appendChild(subcatel);
