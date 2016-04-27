@@ -12,7 +12,7 @@ function addRow(cat,subcat,name,link, entry_path)
 	subcatel.id=subcat;
 	subcatel.innerHTML = '<a href="#" class="sidenav-sub-cat-links"><h4 class="sidenav-headings grp-heading">'+subcat+'</h4></a>';
     }
-    subcatel.innerHTML = subcatel.innerHTML + '<a href='+link + ' class="sidenav-sub-links" id='+entry_path+'>'+name+'</a></br>'  
+    subcatel.innerHTML = subcatel.innerHTML + '<a href='+link + ' class="sidenav-sub-links" id='+entry_path+'>'+name+'</a>';  
     document.getElementById(cat).appendChild(subcatel);
 }  
 function submit_feedback()
