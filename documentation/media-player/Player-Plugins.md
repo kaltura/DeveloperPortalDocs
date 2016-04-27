@@ -37,29 +37,29 @@ Also, pay attention to JS scope when registering to Player events, and the use o
 
 ### Deploying and Sharing Player Plugins
 
-When your plugin code and optional CSS files are ready, you will need to prepare the plugin for deployment. It is recommended to [minify your Javascript and CSS files](https://developers.google.com/speed/docs/insights/MinifyResources) for faster load time. 
-When you deploy the player plugin files on a server to be accessible to the Player, consider the following:
+When your plugin code and optional CSS files are ready, you will need to prepare the plugin for deployment. We recommend that you {% extlink minimize your Javascript and CSS files https://developers.google.com/speed/docs/insights/ %} for faster load time. 
+When you deploy the Player plugin files on a server so that they are accessible to the Player, consider the following:
 
-1. Host the external files on a dedicated server, preferably a CDN for best performance, and ensure your server has [CORS headers](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing) enabling loading assets from other domains
-2. Make sure you set the correct relative links or full paths in your Flashvars settings
-3. Ensure that your assets could be loaded from both http and https, and when directing the Player to load the assets, use protocol agnostic URL notation (`://` instead of `http://`). Also ensure that your server has a valid SSL certificate.
-4. If you need to load more than one icon, consider using an icon font
-5. If you need to load more than one image, use [CSS sprite sheets](https://css-tricks.com/css-sprites/)
+1. Host the external files on a dedicated server, preferably a CDN for best performance, and ensure your server has {% extlink CORS headers https://en.wikipedia.org/wiki/Cross-origin_resource_sharing %} enabling loading assets from other domains.
+2. Make sure you set the correct relative links or full paths in your Flashvars settings.
+3. Verify that your assets can be loaded from both http and https, and when directing the Player to load the assets, use a protocol agnostic URL notation (`://` instead of `http://`). Also make sure that your server has a valid SSL certificate.
+4. If you need to load more than one icon, consider using an icon font.
+5. If you need to load more than one image, use {% extlink CSS sprite sheets https://css-tricks.com/css-sprites/ %}.
 
 ### MediaWiki and jQuery Libraries
 
-The Kaltura Player uses jQuery which means you can use jQuery statements in your code without worrying about loading the jQuery library yourself.   
+The Kaltura Player uses jQuery, which means that you can use jQuery statements in your code without worrying about loading the jQuery library yourself.   
 
-The Player also includes the MediaWiki library that can be referenced anywhere in the code by using the mw global variable.    
-The MediaWiki library provides utility functions to detect browsers and devices, time manipulation, formatters and additional utilities.   
+The Player also includes the MediaWiki library, which can be referenced anywhere in the code by using the mw global variable.    
+The MediaWiki library provides utility functions to detect browsers and devices, time manipulation, formatters, and additional utilities.   
 
-> To learn more about which methods are available via the MediaWiki library, [explore the library code on GitHub](https://github.com/kaltura/mwEmbed/tree/master/modules/MwEmbedSupport/mediawiki). 
+> To learn more about which methods are available via the MediaWiki library, {% extlink check out the library code on GitHub https://github.com/kaltura/mwEmbed/tree/master/modules/MwEmbedSupport/mediawiki %}. 
 
 ## Player Plugins Architecture
 
 ### Loading the Plugin Scripts via Player Embed
 
-In order to load the plugin code in the Kaltura Player, host the plugin files in a server that will be accessible to the Player, and reference the plugin in the embed code Flashvars (or in the Player UIConf using Studio):
+To load the plugin code in the Kaltura Player, host the plugin files in a server that will be accessible to the Player, and reference the plugin in the embed code Flashvars (or in the Player UIConf using Studio) as follows:
 
 ```javascript
 kWidget.embed({
@@ -84,11 +84,11 @@ kWidget.embed({
 
 ### The Plugin Wrapper and Plugin Manager
 
-The code structure of a custom plugin JavaScript file include two important classes: Kaltura plugin wrapper and plugin manager definitions.
+The code structure of a custom plugin JavaScript file includes two important classes: the Kaltura **plugin wrapper** and the **plugin manager definitions**.
 
 When creating a new custom plugin, begin by wrapping your plugin code inside the plugin wrapper. The wrapper takes care of injecting your plugin code to the Player during Player initialization. 
 
-You use the Player's plugin manager to register your plugin, defining your plugin name (always use camelCase naming, no spaces nor underscores) and base class: 
+Use the Player's plugin manager to register your plugin and to define your plugin name (always use camelCase naming, no spaces or underscores) and base class: 
 
 ```javascript
 mw.kalturaPluginWrapper(function(){
@@ -103,9 +103,9 @@ mw.kalturaPluginWrapper(function(){
 
 The second parameter passed to the plugin manager is the plugin code that should extend one of the Player base plugin classes:
 
-* `mw.KBaseComponent`: is the most commonly used class based which includes all the required function for a visual / non-visual plugin
-* `mw.KBaseScreen`: extends the mw.KBaseComponent class and provides the ability to manage screen overlays above the Player using templates
-* `mw.KBaseMediaList`: extends the mw.KBaseComponent class and provides functionality for creating and playing lists of video content 
+* `mw.KBaseComponent`: The most commonly used class base, which includes of all the required function for a visual / non-visual plugin
+* `mw.KBaseScreen`: Extends the mw.KBaseComponent class and provides the ability to manage screen overlays above the Player using templates
+* `mw.KBaseMediaList`: Extends the mw.KBaseComponent class and provides functionality for creating and playing lists of video content 
 
 Most often mw.KBaseComponent will be the best choice of base class to start your plugin from. The examples below will focus mainly on these common scenarios.
 
