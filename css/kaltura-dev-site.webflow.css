@@ -668,6 +668,11 @@ h4 {
   color: #188093;
   font-size: 16px;
 }
+
+.sidenav-headings.grp-heading.documentation\/contribute {
+  background-color: red !important;
+}
+
 .sidenav-grp-links {
   display: none;
   visibility: hidden;
