@@ -1,33 +1,31 @@
 ---
 layout: page
-title: Extending the Player with Plugins
+title: Extending the Kaltura Player Functionality Using Plugins
 ---
 
 The Kaltura Player architecture uses plugins to extend the Player functionality. All Player controls and core functionalities are implemented as plugins. This approach provides a separation of concerns and code isolation when implementing Player features.   
 
-Plugins communicate with the player using its API. Plugins also have direct access to the player core engine and a dedicated interface to access and change the player UI.  
-Plugins can utilize the player ability to communicate with the Kaltura platform API thus gaining access to the Kaltura platform services.    
+Plugins communicate with the Player using the Player's API. Plugins also have direct access to the Player core engine and a dedicated interface to access and change the Player UI. Additionally, plugins can utilize the Player ability to communicate with the Kaltura platform API, thus gaining access to the Kaltura platform services.    
 
-As reference to what you can do with player plugins, you can review the existing core player plugins -  
-
-* You can turn plugins on and off as well as configure plugin properties using the [Player Studio](http://knowledge.kaltura.com/universal-studio-information-guide).
-* You can also view many plugins in action in the [player demo pages](http://player.kaltura.com/docs/chaptersView). 
+To learm more about how to utilize the Player plugins, we recommend reading the following articles about the existing core Player plugins: 
+* Turning plugins on and off and configuring plugin properties using the {% extlink Player Studio http://knowledge.kaltura.com/universal-studio-information-guide &}.
+* Plugins in action in our {% extlink player demo pages http://player.kaltura.com/docs/chaptersView %}. 
 
 
 ## Considerations for Creating Player Plugins
 
-You can create your own custom plugin in order to extend player functionality. Plugins code structure is rather simple but please consider there is much to learn and many best practices to follow in order to develop plugins correctly. This guide provides all the required information. 
+You can create your own custom plugin in order to extend Player functionality. Plugins code structure is fairly simple; however, please consider that the learning curve is quite steep and there are many best practices that you should follow in order to develop plugins correctly. This guide provides all of the required information to develop high-quality Player plugins. 
 
-Please note that a lot can be achieved simply by using the player API without the need to create a custom plugin. 
+Please note that you can achieve a lot of functionality by simply using the Player API without the need to create a custom plugin. 
 
 So when should you consider custom plugin development? If you need to achieve any of the tasks below, you should consider developing a custom plugin:
 
-* You want to reuse your plugin logic across multiple players
-* You need to change player look and feel
-* You need to add visual controls to the player
+* You want to reuse your plugin logic across multiple Players
+* You need to change the Player look-and-feel
+* You need to add visual controls to the Player
 * You need access to the Kaltura platform services
-* You need to use the player templating engine to render data
-* You need direct access to player properties and methods that are not exposed in the player API
+* You need to use the Player templating engine to render data
+* You need direct access to Player properties and methods that are not exposed in the Player API
 * You want to provide an interface to configure your plugin properties
 * You want to expose your plugin API to other developers
 
