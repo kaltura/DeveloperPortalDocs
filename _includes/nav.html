@@ -11,7 +11,7 @@
         {% if current contains include.context %}
 	  {% if entry.subcat %}
 	  <script>
-	      addRow("/{{include.context}}","{{entry.subcat}}","{{ entry.title }}","{{ site.baseurl }}{{ entry.url }}","{{ entry.path}}","{{ entry.icon}}");
+	      addRow("/{{include.context}}","{{entry.subcat}}","{{ entry.title }}","{{ site.baseurl }}{{ entry.url }}","{{ entry.path}}");
       </script>
 	  {% elsif entry.title %}
 	    <a id="{{ entry.path }}" href="{{ site.baseurl }}{{ entry.url }}" class="sidenav-links">{{ entry.title }}</a>
