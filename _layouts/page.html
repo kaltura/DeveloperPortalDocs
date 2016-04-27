@@ -42,7 +42,7 @@ function submit_feedback()
     {% assign cats = site.cats | sort %}
 {% for cat_hash in cats %}
     <div class="sidenav-grp-7" id="/{{ cat_hash[1] }}" onClick="show_hide_div('/{{ cat_hash[1] }}')">
-	<a href="#" class="sidenav-cat-links"><h4 class="sidenav-headings grp-heading {{ cat_hash[2] }}">{{ cat_hash[0] }}</h4></a>
+	<a href="#" class="sidenav-cat-links"><h4 class="sidenav-headings grp-heading {{ cat_hash[0] }}">{{ cat_hash[0] }}</h4></a>
 	<div class="sidenav-grp-links">
 	{% capture dir %}{{ cat_hash[1] }}{% endcapture %}
 	{% capture cat %}{{ cat_hash[0] }}{% endcapture %}
