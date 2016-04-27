@@ -666,7 +666,7 @@ h4 {
 .sidenav-headings.grp-heading {
   border-bottom: 1px dotted #ccc;
   color: #188093;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .sidenav-headings.grp-heading.documentation\/contribute:before {
@@ -707,6 +707,7 @@ h4 {
 
 .sidenav-sub-cat-links .sidenav-headings.grp-heading {
   color: #575756;
+  font-size: 12px;
 }
 
 .sidenav-cat-links:hover {
@@ -777,6 +778,7 @@ h4 {
 
 .template-page-nav-column {
   margin-top: 35px;
+  font-size: 12px;
 }
 
 .template-page-content-column {
