@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Android Player SDK Getting Started 
+subcat: Android
 ---
 
 ## Getting Started 
