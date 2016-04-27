@@ -741,6 +741,11 @@ h4 {
   letter-spacing: 0.6px;
   text-decoration: none;
 }
+
+.sidenav-sub-links:last-child {
+  border-bottom: none !important;
+}
+
 .sidenav-links-current {
   display: block;
   padding-top: 12px;
