@@ -689,7 +689,7 @@ h4 {
 .sidenav-sub-cat-links {
   display: block;
   padding-left: 15px;
-  background-color: #E0E0E0;
+  background-color: #EFEFEF;
   -webkit-transition: color 200ms ease-in-out;
   transition: color 200ms ease-in-out;
   font-family: proxima-nova, sans-serif;
@@ -730,7 +730,7 @@ h4 {
   display: block;
   padding-top: 12px;
   padding-bottom: 12px;
-  padding-left: 20px;
+  padding-left: 25px;
   border-bottom: 1px solid #ececec;
   background-color: transparent;
   -webkit-transition: color 200ms ease-in-out;
