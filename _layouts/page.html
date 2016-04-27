@@ -3,14 +3,14 @@ layout: default
 ---
   <!--link rel="stylesheet" href="{{ site.baseurl }}/site.css"-->
 <script>
-function addRow(cat,subcat,name,link, entry_path) 
+function addRow(cat,subcat,name,link, entry_path,icon) 
 {
     subcatel=document.getElementById(subcat);
     if (! subcatel ){
 	var subcatel = document.createElement('div');
         subcatel.className = 'row';
 	subcatel.id=subcat;
-	subcatel.innerHTML = '<a href="#" class="sidenav-sub-cat-links"><h4 class="sidenav-headings grp-heading">'+subcat+'</h4></a>';
+	subcatel.innerHTML = '<a href="#" class="sidenav-sub-cat-links"><h4 class="sidenav-headings grp-heading '+icon+'">'+subcat+'</h4></a>';
     }
     subcatel.innerHTML = subcatel.innerHTML + '<a href='+link + ' class="sidenav-sub-links" id='+entry_path+'>'+name+'</a>';  
     document.getElementById(cat).appendChild(subcatel);
