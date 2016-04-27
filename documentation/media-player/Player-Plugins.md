@@ -12,9 +12,9 @@ To learm more about how to utilize the Player plugins, we recommend reading the 
 * Plugins in action in our {% extlink player demo pages http://player.kaltura.com/docs/chaptersView %}. 
 
 
-## Considerations for Creating Player Plugins
+## Considerations When Creating Player Plugins
 
-You can create your own custom plugin in order to extend Player functionality. Plugins code structure is fairly simple; however, please consider that the learning curve is quite steep and there are many best practices that you should follow in order to develop plugins correctly. This guide provides all of the required information to develop high-quality Player plugins. 
+You can create your own custom plugin in order to extend Player functionality. The Plugin code structure is fairly simple; however, please bear in mind that there is quite a bit of work involved in creating plugins. Additionally, remember to follow the many best practices required in order to develop plugins correctly. This guide provides all of the required information to develop high-quality Player plugins. 
 
 Please note that you can achieve a lot of functionality by simply using the Player API without the need to create a custom plugin. 
 
