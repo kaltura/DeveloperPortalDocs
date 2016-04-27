@@ -88,7 +88,7 @@ The code structure of a custom plugin JavaScript file includes two important cla
 
 When creating a new custom plugin, begin by wrapping your plugin code inside the plugin wrapper. The wrapper takes care of injecting your plugin code to the Player during Player initialization. 
 
-Use the Player's plugin manager to register your plugin and to define your plugin name (always use camelCase naming, no spaces or underscores) and base class: 
+Use the Player's plugin manager to register your plugin and to define your plugin name (always use camelCase naming and remember not to use spaces or underscores) and base class: 
 
 ```javascript
 mw.kalturaPluginWrapper(function(){
@@ -103,7 +103,7 @@ mw.kalturaPluginWrapper(function(){
 
 The second parameter passed to the plugin manager is the plugin code that should extend one of the Player base plugin classes:
 
-* `mw.KBaseComponent`: The most commonly used class base, which includes of all the required function for a visual / non-visual plugin
+* `mw.KBaseComponent`: The most commonly used class base, this class base includes of all the required function for a visual / non-visual plugin
 * `mw.KBaseScreen`: Extends the mw.KBaseComponent class and provides the ability to manage screen overlays above the Player using templates
 * `mw.KBaseMediaList`: Extends the mw.KBaseComponent class and provides functionality for creating and playing lists of video content 
 
@@ -113,7 +113,7 @@ Most often mw.KBaseComponent will be the best choice of base class to start your
 
 To define public properties for your plugin that can be changed using embed code Flashvars or via Player Studio UIVars, you will need to define a `defaultConfig` JSON object in your plugin code.
  
-For each property you should specify a default value.
+For each property you should specify a default value:
 
 ```javascript
 mw.kalturaPluginWrapper(function(){
@@ -161,10 +161,11 @@ this.getPlayer().getPlayerElement();
 
 
 ## The Player Plugin Lifecycle
+The following section details the methods used in the Player plugin lifecyle.
 
-### isSafeEnviornment
+### isSafeEnviornment Method
 
-This optional method can be declared in order to define cases in which the plugin doesn't load. The method should return a boolean value. true means the plugin should load. false means the plugin should not load.
+This optional method can be declared in order to define cases in which the plugin does not load. The method should return a boolean value: "true" means the plugin should load and "false" means the plugin should not load.
 
 For example, if you want your plugin to load only on mobile devices:  
 
@@ -179,10 +180,10 @@ mw.kalturaPluginWrapper(function(){
 });
 ```
 
-### setup
+### setup Method
 
-The setup method is the first method that is called once the plugin loads. You don't need to call it yourself, you just need to define it.
-It is the entry point fore the plugin code. This is the place to write your initialization code and add event bindings if needed:
+The setup method is the first method that is called when the plugin loads. You do not need to call it yourself, you simply need to define it.
+This is essentially the entry point for the plugin code, and is the place to write your initialization code and add event bindings if needed:
 
 ```javascript
 mw.kalturaPluginWrapper(function(){
@@ -198,10 +199,10 @@ mw.kalturaPluginWrapper(function(){
 
 ### Event Bindings
 
-Your plugin can register to any event triggered by the Player. You register to events using the bind method. 
+Your plugin can register to any event triggered by the Player. Register to events using the **bind** method. 
 
 Syntax:  `this.bind(eventName, callback, once);`
-Where eventName is the name of the event to register to, callback is the callback function to execute and once, when set to true, binds to this event only once. 
+Where eventName is the name of the event to register to, callback is the callback function to execute, and once, when set to true, binds to this event only once. 
 
 ```javascript 
 mw.kalturaPluginWrapper(function(){
@@ -220,38 +221,39 @@ mw.kalturaPluginWrapper(function(){
 });
 ```
 
-unregistering events is done by the unbind method which accepts the event name and remove the listener to it: `this.unbind('playerReady');`
+Unregistering events is done by the unbind method, which accepts the event name and removes the listener: `this.unbind('playerReady');`
 
 #### Namespaces
 
 When you bind events within your plugin, the plugin name is used as a namespace for the event registration automatically.   
-This allows isolation between multiple plugins that register to the same events. Learn more about event name spacing.   
+This allows isolation between multiple plugins that register to the same events. Learn more about event name spacing here.   
 
 Using the unbind method does the same and unbinds the event with the specific plugin namespace only.   
 
-You can also unbind all of the plugin events by not sending an event parameter to the unbind method. This will cause unbinding of all the plugin name space events.
-Such global unbinding should be used when destroying the plugin. 
+You can also unbind all of the plugin events by not sending an event parameter to the unbind method. This will cause the unbinding of all of the plugin name space events.
+This type of global unbinding should be used when destroying the plugin. 
 
 ```javascript
 // remove all of the plugin event listeners using the plugin name space:
 this.unbind(); 
 ```
 
-### getComponent and parent
+### getComponent and parent Method
 
-If your component has visual representation, you will need to define the `getComponent` method. This method should return a jQuery DOM element that is rendered in the Player interface.
+If your component has a visual representation, you will need to define the `getComponent` method. This method should return a jQuery DOM element that is rendered in the Player interface.
 
 The `parent` container in which your component is rendered is defined by the `parent` property, and can be overridden in the embed Flashvars or Studio UIVars definitions. 
 
-#### There are 3 optional parents
+#### Optional Parents
+There are are three optional parents:
 
-* `controlsContainer`: renders the component in the Player bottom control bar
-* `topBarContainer`: renders the component in the Player top control bar
-* `videoHolder`: renders the component over the video itself
+* `controlsContainer`: Renders the component in the Player bottom control bar
+* `topBarContainer`: Renders the component in the Player top control bar
+* `videoHolder`: Renders the component over the video itself
 
-Your `getComponent` method is the place to define your component look and feel as well as its actions. 
+Your `getComponent` method is the place to define your component look-and-feel as well as its actions. 
 
-The returned jQuery object should be created only once (single tone) so best practice is to save it as a plugin property commonly named `$el`:
+The returned jQuery object should be created only once (single tone); therefore, the best practice is to save it as a plugin property commonly named `$el`:
 
 ```javascript
 getComponent: function() {
@@ -273,40 +275,36 @@ getComponent: function() {
 As you can see in the example above, when defining your plugin DOM element CSS classes, you should use the  `this.getCssClass()` method.   
 This method adds some css classes to handle alignment (as defined in the `align` Flashvar property), display importance and more.
 
-Another class name that will be added by this method is a class named by your component name. You can use this class name to add plugin specific CSS rules in your plugin custom CSS file. In our example, your component will get the `myCustomPluginName` class name.
+Another class name that will be added by this method is a class named by your component name. You can use this class name to add plugin-specific CSS rules in your plugin custom CSS file. In our example, your component will get the `myCustomPluginName` class name.
  
 ### onEnable / onDisable
 
-During video playback, you might want to disable your plugin in some scenarios. For example when loading data or when an ad is playing.
-
+During video playback, you may want to disable your plugin in some scenarios, for example, when loading data or when an ad is playing.
 You can "announce" your plugin as disabled or enabled by calling `this.onDisable()` and `this.onEnable()` accordingly. 
 
 Disabling the plugin adds the "disabled" class to the plugin element and sets its `isDisabled` property to `true`. Enabling it removes the class and sets `isDisabled` to `false`.
 
-Note that calling the `onDisable` method doesn't disable the plugin, it just adds the disabled class and set the `isDisabled` property to `true`. 
-It is up to you to add logic to your code and disable any functionality when the `isDisabled` property is `true`. 
+Note that calling the `onDisable` method does not disable the plugin; it simply adds the disabled class and sets the `isDisabled` property to `true`. It is up to you, therefore, to add logic to your code and disable any functionality when the `isDisabled` property is `true`. 
 
 A simple `if (!this.isDisabled)` conditional statement before any functionality should provide a proper disabled state. 
 You can also override your plugin disabled CSS class rules using a plugin custom CSS as explained below.
  
-### show / hide
+### show / hide 
 
-On some cases you might want to completely hide your component element during playback. 
-
-Use `this.hide()` to hide the component and `this.show()` to show it again.
+In some cases you may want to  hide your component element completely during playback. In this case, use `this.hide()` to hide the component and `this.show()` to show it again.
  
 ### Accessing the Player Interface
 
 In order to access the Player controls and interface, you can use jQuery class selectors. The Player also provides methods to access its main DOM elements:
 
-* `getInterface()`: returns a jQuery object representing the entire Player interface
-* `getVideoHolder()`: returns a jQuery object representing the video holder DIV containing the video display and all elements displayed over the video
-* `getVideoDisplay()`: returns a jQuery object representing the DIV holding the video object 
-* `getControlBarContainer()`: returns a jQuery object representing the bottom control bar holding the Player controls
-* `getTopBarContainer()`: returns a jQuery object representing the top control bar
-* `getPlayerPoster()`: returns a jQuery object representing the video poster image
+* `getInterface()`: Returns a jQuery object representing the entire Player interface
+* `getVideoHolder()`: Returns a jQuery object representing the video holder DIV containing the video display and all elements displayed over the video
+* `getVideoDisplay()`: Returns a jQuery object representing the DIV holding the video object 
+* `getControlBarContainer()`: Returns a jQuery object representing the bottom control bar holding the Player controls
+* `getTopBarContainer()`: Returns a jQuery object representing the top control bar
+* `getPlayerPoster()`: Returns a jQuery object representing the video poster image
 
-For example, selecting all the buttons in the bottom control bar:
+For example, to select all of the buttons in the bottom control bar, use:
 
 ```javascript
 this.getPlayer().getControlBarContainer().find('.btn');
@@ -314,14 +312,14 @@ this.getPlayer().getControlBarContainer().find('.btn');
 
 ### Determining Player State and Ads Playback
 
-In many cases you would like to know the Player current state: is it playing, paused, is an ad currently playing etc. Determining the state of the Player can be done in the following ways:
+In many cases you would like to know the Player's current state, i.e., is it playing or paused, is an ad currently playing, etc. Determining the state of the Player can be done in the following ways:
 
-* Events registration: register to Player events such as the `playerStateChange` event. For more information, check the events section in the Player API article.
+* Events registration: Register to Player events such as the `playerStateChange` event. For more information, see the Events section in the [Player API guide](https://vpaas.kaltura.com/documentation/media-player/Kaltura-Media-Player-API#sthash.JFWYb2CM.dpbs).
 * Check Player properties, for example: `this.getPlayer().paused`. 
-* Examine the Player state classes. For more information check the Player state CSS classes in the Player customization article. 
+* Examine the Player state classes. For more information see the Player state CSS classes in the [Player customization article](https://vpaas.kaltura.com/documentation/media-player/Player-Customization#sthash.c5Tw60XR.dpbs). 
 * To determine if an ad is currently playing use: `this.getPlayer().isInSequence()`. `true` indicates an ad is currently playing.
 
-#### Example: disable your plugin during ad playback
+#### Example: Disable Your Plugin During Ad Playback
 
 ```javascript
 addBindings: function() {
@@ -337,28 +335,29 @@ addBindings: function() {
 
 ### Calling Player Methods Using the Player API
 
-While you can call the Player methods directly from your plugin, it is better the use the Player API for that.   
+While you may call the Player methods directly from your plugin, it is better the use the Player API for this purpose.   
 The Player API makes sure your command is executed seamlessly across multiple playback engines and handles possible errors.  
-To call a Player method using the API, use the `sendNotification` method. For more information, check the Player API guide.   
+To call a Player method using the API, use the `sendNotification` method. For more information, see the [Player API guide](https://vpaas.kaltura.com/documentation/media-player/Kaltura-Media-Player-API#sthash.JFWYb2CM.dpbs).   
 
-#### Example: switching the currently playing media
+
+#### Example: Switching the Currently Playing Media
 
 ```javascript
 this.getPlayer().sendNotification("changeMedia", { "entryId" : "0_wm82kqmm" });
 ```
 
-### Event dispatching
+### Event Dispatching
 
-You might want to dispatch events from your plugin to be used by other plugins or as an external API for other developers.  
-Plugins dispatch events using the Player `triggerHelper` method. Try to use descriptive event names for ease of use.  
+You may want to dispatch events from your plugin to be used by other plugins or as an external API for other developers.  
+Plugins dispatch events use the Player `triggerHelper` method. Try to use descriptive event names for ease of use.  
 
-You can also pass additional parameters with your event by passing a parameters array as a second argument to the triggerHelper method:
+You may also pass additional parameters with your event by passing a parameters array as a second argument to the triggerHelper method:
 
 ```javascript
 this.getPlayer().triggerHelper('myCustomEventName', [param1, param2, param3]);
 ```
 
-#### Example: dispatch custom event when a button is clicked
+#### Example: Dispatch a Custom Event upon Button Click
 
 ```javascript
 getComponent: function() {
@@ -379,9 +378,9 @@ fireMyCustomEvent: function(){
 }
 ```
 
-### Destroying the plugin
+### Destroying the Plugin
 
-While the destroy method is not called automatically by the Player, it is highly advised to define it when you need to preform any cleanup.  
+While the destroy method is not called automatically by the Player, it is highly advised to define it for cases where you need to perform any cleanup.  
 Call the destroy function when you no longer want your plugin to perform any logic or when you want to remove it from the Player DOM.  
 
 > **NOTE:** You must call `this._super()` in your destroy function in order to invoke the destroy function in your parent class which unbinds and removes your plugin from the DOM.
@@ -408,8 +407,8 @@ You can define a custom CSS file to be loaded with your custom plugin. In this C
 Important considerations:
 
 * You can also use this file to override other Player CSS classes. Use the `!important` directive to make sure these rules are overridden.   
-* If you need to use external assets such as images and fonts, reference it in your CSS using relative links, and use CSS sprite sheets where applicable.  
-* You can also consider using CSS Data URIs to include inline images and icons or icon fonts for multiple vector icons. [Learn more about icon fonts](http://www.w3schools.com/icons/).
+* If you need to use external assets such as images and fonts, reference them in your CSS using relative links, and use CSS sprite sheets where applicable.  
+* You may also consider using CSS Data URIs to include inline images and icons or icon fonts for multiple vector icons. To learn more about icon fonts click {% extlink here http://www.w3schools.com/icons/ %}.
 
 To define a custom CSS file, use the `iframeHTML5Css` property in your custom plugin parameters:
 
