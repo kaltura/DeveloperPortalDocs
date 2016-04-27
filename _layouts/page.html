@@ -14,8 +14,7 @@ function addRow(cat,subcat,name,link, entry_path)
     }
     subcatel.innerHTML = subcatel.innerHTML + '<a href='+link + ' class="sidenav-sub-links" id='+entry_path+'>'+name+'</a>';  
     //document.getElementById(cat).appendChild(subcatel);
-    $(cat + ' .sidenav-grp-links').append(subcatel);
-    console.log(cat + ' .sidenav-grp-links > ' + subcatel);
+    document.getElementById('/documentation/player-sdk').getElementsByClassName('sidenav-grp-links').appendChild(subcatel);
 }  
 function submit_feedback()
 {
