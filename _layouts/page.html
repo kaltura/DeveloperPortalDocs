@@ -13,8 +13,7 @@ function addRow(cat,subcat,name,link, entry_path)
 	subcatel.innerHTML = '<a class="sidenav-sub-cat-links inactive-link"><h4 class="sidenav-headings grp-heading '+entry_path+'">'+subcat+'</h4></a>';
     }
     subcatel.innerHTML = subcatel.innerHTML + '<a href='+link + ' class="sidenav-sub-links" id='+entry_path+'>'+name+'</a>';  
-    //document.getElementById(cat).appendChild(subcatel);
-    document.getElementById('/documentation/player-sdk').getElementsByClassName('sidenav-grp-links')[0].appendChild(subcatel);
+    document.getElementById(cat).getElementsByClassName('sidenav-grp-links')[0].appendChild(subcatel);
 }  
 function submit_feedback()
 {
