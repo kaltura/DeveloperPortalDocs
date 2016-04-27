@@ -57,7 +57,7 @@ function submit_feedback()
 		$j[$i].style.visibility = 'visible';
 		$j[$i].style.display = 'block';
 		for (var $y = 0, $z = $j[$i].getElementsByTagName('a'); $y < $z.length; $y++) {
-		    if($z[$y].getAttribute('id')==='{{page.path}}'){
+		    if($z[$y].getAttribute('id')==='{{page.path| replace: '/','-'}}'){
 			$z[$y].setAttribute('class', 'sidenav-links-current');
 			//$z[$y].focus();
 		    }
