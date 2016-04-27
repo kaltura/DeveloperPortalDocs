@@ -33,24 +33,24 @@ So when should you consider custom plugin development? If you need to achieve an
 
 As a JavaScript module, your plugin will be defined as a literal object notation, where properties and methods are separated with commas.  
 
-Also, pay attention to JS scope when registering to player events, and the use of "this". The scope within your event handler will not be the overall plugin scope.  
+Also, pay attention to JS scope when registering to Player events, and the use of "this". The scope within your event handler will not be the overall plugin scope.  
 
 ### Deploying and Sharing Player Plugins
 
-Once your plugin code and optional CSS files are ready, you will need to prepare it for deployment. It is recommended to [minify your Javascript and CSS files](https://developers.google.com/speed/docs/insights/MinifyResources) for faster load time. 
-When you deploy the player plugin files on a server to be accessible to the player, consider the following:
+When your plugin code and optional CSS files are ready, you will need to prepare the plugin for deployment. It is recommended to [minify your Javascript and CSS files](https://developers.google.com/speed/docs/insights/MinifyResources) for faster load time. 
+When you deploy the player plugin files on a server to be accessible to the Player, consider the following:
 
 1. Host the external files on a dedicated server, preferably a CDN for best performance, and ensure your server has [CORS headers](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing) enabling loading assets from other domains
 2. Make sure you set the correct relative links or full paths in your Flashvars settings
-3. Ensure that your assets could be loaded from both http and https, and when directing the player to load the assets, use protocol agnostic URL notation (`://` instead of `http://`). Also ensure that your server has a valid SSL certificate.
+3. Ensure that your assets could be loaded from both http and https, and when directing the Player to load the assets, use protocol agnostic URL notation (`://` instead of `http://`). Also ensure that your server has a valid SSL certificate.
 4. If you need to load more than one icon, consider using an icon font
 5. If you need to load more than one image, use [CSS sprite sheets](https://css-tricks.com/css-sprites/)
 
 ### MediaWiki and jQuery Libraries
 
-The Kaltura player uses jQuery which means you can use jQuery statements in your code without worrying about loading the jQuery library yourself.   
+The Kaltura Player uses jQuery which means you can use jQuery statements in your code without worrying about loading the jQuery library yourself.   
 
-The player also includes the MediaWiki library that can be referenced anywhere in the code by using the mw global variable.    
+The Player also includes the MediaWiki library that can be referenced anywhere in the code by using the mw global variable.    
 The MediaWiki library provides utility functions to detect browsers and devices, time manipulation, formatters and additional utilities.   
 
 > To learn more about which methods are available via the MediaWiki library, [explore the library code on GitHub](https://github.com/kaltura/mwEmbed/tree/master/modules/MwEmbedSupport/mediawiki). 
@@ -59,7 +59,7 @@ The MediaWiki library provides utility functions to detect browsers and devices,
 
 ### Loading the Plugin Scripts via Player Embed
 
-In order to load the plugin code in the Kaltura player, host the plugin files in a server that will be accessible to the player, and reference the plugin in the embed code Flashvars (or in the player UIConf using Studio):
+In order to load the plugin code in the Kaltura Player, host the plugin files in a server that will be accessible to the Player, and reference the plugin in the embed code Flashvars (or in the Player UIConf using Studio):
 
 ```javascript
 kWidget.embed({
@@ -86,9 +86,9 @@ kWidget.embed({
 
 The code structure of a custom plugin JavaScript file include two important classes: Kaltura plugin wrapper and plugin manager definitions.
 
-When creating a new custom plugin, begin by wrapping your plugin code inside the plugin wrapper. The wrapper takes care of injecting your plugin code to the player during player initialization. 
+When creating a new custom plugin, begin by wrapping your plugin code inside the plugin wrapper. The wrapper takes care of injecting your plugin code to the Player during Player initialization. 
 
-You use the player's plugin manager to register your plugin, defining your plugin name (always use camelCase naming, no spaces nor underscores) and base class: 
+You use the Player's plugin manager to register your plugin, defining your plugin name (always use camelCase naming, no spaces nor underscores) and base class: 
 
 ```javascript
 mw.kalturaPluginWrapper(function(){
@@ -101,10 +101,10 @@ mw.kalturaPluginWrapper(function(){
 
 ### Plugin Base Inheritance
 
-The second parameter passed to the plugin manager is the plugin code that should extend one of the player base plugin classes:
+The second parameter passed to the plugin manager is the plugin code that should extend one of the Player base plugin classes:
 
 * `mw.KBaseComponent`: is the most commonly used class based which includes all the required function for a visual / non-visual plugin
-* `mw.KBaseScreen`: extends the mw.KBaseComponent class and provides the ability to manage screen overlays above the player using templates
+* `mw.KBaseScreen`: extends the mw.KBaseComponent class and provides the ability to manage screen overlays above the Player using templates
 * `mw.KBaseMediaList`: extends the mw.KBaseComponent class and provides functionality for creating and playing lists of video content 
 
 Most often mw.KBaseComponent will be the best choice of base class to start your plugin from. The examples below will focus mainly on these common scenarios.
@@ -150,10 +150,10 @@ console.log(this.getConfig("myProp"));
 
 ### Reference the Player Element Inside the Plugin Code:
 
-Throughout your custom plugin code, you have direct access to the player by using the `getPlayer` method which returns the `embedPlayer` object. 
-This object exposes all of the player methods and properties (not just the public ones exposed by the player API).   
+Throughout your custom plugin code, you have direct access to the Player by using the `getPlayer` method which returns the `embedPlayer` object. 
+This object exposes all of the Player methods and properties (not just the public ones exposed by the Player API).   
 
-For example, to get a reference to the native video element of the current player you can use:
+For example, to get a reference to the native video element of the current Player you can use:
 
 ```javascript
 this.getPlayer().getPlayerElement();
@@ -198,7 +198,7 @@ mw.kalturaPluginWrapper(function(){
 
 ### Event Bindings
 
-Your plugin can register to any event triggered by the player. You register to events using the bind method. 
+Your plugin can register to any event triggered by the Player. You register to events using the bind method. 
 
 Syntax:  `this.bind(eventName, callback, once);`
 Where eventName is the name of the event to register to, callback is the callback function to execute and once, when set to true, binds to this event only once. 
@@ -239,14 +239,14 @@ this.unbind();
 
 ### getComponent and parent
 
-If your component has visual representation, you will need to define the `getComponent` method. This method should return a jQuery DOM element that is rendered in the player interface.
+If your component has visual representation, you will need to define the `getComponent` method. This method should return a jQuery DOM element that is rendered in the Player interface.
 
 The `parent` container in which your component is rendered is defined by the `parent` property, and can be overridden in the embed Flashvars or Studio UIVars definitions. 
 
 #### There are 3 optional parents
 
-* `controlsContainer`: renders the component in the player bottom control bar
-* `topBarContainer`: renders the component in the player top control bar
+* `controlsContainer`: renders the component in the Player bottom control bar
+* `topBarContainer`: renders the component in the Player top control bar
 * `videoHolder`: renders the component over the video itself
 
 Your `getComponent` method is the place to define your component look and feel as well as its actions. 
@@ -297,12 +297,12 @@ Use `this.hide()` to hide the component and `this.show()` to show it again.
  
 ### Accessing the Player Interface
 
-In order to access the player controls and interface, you can use jQuery class selectors. The player also provides methods to access its main DOM elements:
+In order to access the Player controls and interface, you can use jQuery class selectors. The Player also provides methods to access its main DOM elements:
 
-* `getInterface()`: returns a jQuery object representing the entire player interface
+* `getInterface()`: returns a jQuery object representing the entire Player interface
 * `getVideoHolder()`: returns a jQuery object representing the video holder DIV containing the video display and all elements displayed over the video
 * `getVideoDisplay()`: returns a jQuery object representing the DIV holding the video object 
-* `getControlBarContainer()`: returns a jQuery object representing the bottom control bar holding the player controls
+* `getControlBarContainer()`: returns a jQuery object representing the bottom control bar holding the Player controls
 * `getTopBarContainer()`: returns a jQuery object representing the top control bar
 * `getPlayerPoster()`: returns a jQuery object representing the video poster image
 
@@ -314,11 +314,11 @@ this.getPlayer().getControlBarContainer().find('.btn');
 
 ### Determining Player State and Ads Playback
 
-In many cases you would like to know the player current state: is it playing, paused, is an ad currently playing etc. Determining the state of the player can be done in the following ways:
+In many cases you would like to know the Player current state: is it playing, paused, is an ad currently playing etc. Determining the state of the Player can be done in the following ways:
 
-* Events registration: register to player events such as the `playerStateChange` event. For more information, check the events section in the Player API article.
-* Check player properties, for example: `this.getPlayer().paused`. 
-* Examine the player state classes. For more information check the Player state CSS classes in the player customization article. 
+* Events registration: register to Player events such as the `playerStateChange` event. For more information, check the events section in the Player API article.
+* Check Player properties, for example: `this.getPlayer().paused`. 
+* Examine the Player state classes. For more information check the Player state CSS classes in the Player customization article. 
 * To determine if an ad is currently playing use: `this.getPlayer().isInSequence()`. `true` indicates an ad is currently playing.
 
 #### Example: disable your plugin during ad playback
@@ -337,9 +337,9 @@ addBindings: function() {
 
 ### Calling Player Methods Using the Player API
 
-While you can call the player methods directly from your plugin, it is better the use the player API for that.   
-The player API makes sure your command is executed seamlessly across multiple playback engines and handles possible errors.  
-To call a player method using the API, use the `sendNotification` method. For more information, check the Player API guide.   
+While you can call the Player methods directly from your plugin, it is better the use the Player API for that.   
+The Player API makes sure your command is executed seamlessly across multiple playback engines and handles possible errors.  
+To call a Player method using the API, use the `sendNotification` method. For more information, check the Player API guide.   
 
 #### Example: switching the currently playing media
 
@@ -350,7 +350,7 @@ this.getPlayer().sendNotification("changeMedia", { "entryId" : "0_wm82kqmm" });
 ### Event dispatching
 
 You might want to dispatch events from your plugin to be used by other plugins or as an external API for other developers.  
-Plugins dispatch events using the player `triggerHelper` method. Try to use descriptive event names for ease of use.  
+Plugins dispatch events using the Player `triggerHelper` method. Try to use descriptive event names for ease of use.  
 
 You can also pass additional parameters with your event by passing a parameters array as a second argument to the triggerHelper method:
 
@@ -381,8 +381,8 @@ fireMyCustomEvent: function(){
 
 ### Destroying the plugin
 
-While the destroy method is not called automatically by the player, it is highly advised to define it when you need to preform any cleanup.  
-Call the destroy function when you no longer want your plugin to perform any logic or when you want to remove it from the player DOM.  
+While the destroy method is not called automatically by the Player, it is highly advised to define it when you need to preform any cleanup.  
+Call the destroy function when you no longer want your plugin to perform any logic or when you want to remove it from the Player DOM.  
 
 > **NOTE:** You must call `this._super()` in your destroy function in order to invoke the destroy function in your parent class which unbinds and removes your plugin from the DOM.
 
@@ -407,7 +407,7 @@ You can define a custom CSS file to be loaded with your custom plugin. In this C
 
 Important considerations:
 
-* You can also use this file to override other player CSS classes. Use the `!important` directive to make sure these rules are overridden.   
+* You can also use this file to override other Player CSS classes. Use the `!important` directive to make sure these rules are overridden.   
 * If you need to use external assets such as images and fonts, reference it in your CSS using relative links, and use CSS sprite sheets where applicable.  
 * You can also consider using CSS Data URIs to include inline images and icons or icon fonts for multiple vector icons. [Learn more about icon fonts](http://www.w3schools.com/icons/).
 
