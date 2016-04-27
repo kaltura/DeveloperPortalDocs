@@ -672,6 +672,7 @@ h4 {
 .sidenav-headings.grp-heading.documentation\/contribute:before {
    font-family: FontAwesome;
    content: "\f09b";
+   padding-right: 6px;
 }
 
 .sidenav-grp-links {
