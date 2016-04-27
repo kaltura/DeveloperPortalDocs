@@ -696,7 +696,6 @@ h4 {
 .sidenav-sub-cat-links {
   display: block;
   padding-left: 15px;
-  background-color: #EFEFEF;
   -webkit-transition: color 200ms ease-in-out;
   transition: color 200ms ease-in-out;
   font-family: proxima-nova, sans-serif;
@@ -707,7 +706,6 @@ h4 {
 }
 
 .sidenav-sub-cat-links .sidenav-headings.grp-heading {
-  color: #575756;
   font-size: 12px;
 }
 
