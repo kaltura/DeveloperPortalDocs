@@ -1,19 +1,19 @@
 ---
 layout: page
-title: Kaltura Player Look & Feel and Behavior Customization
+title: Customizing the Kaltura Player's Look-and-Feel and Behavior
 ---
 
 The Kaltura Player look-and-feel is derived from its skin and code. The skin consists of CSS classes and graphical assets such as icons and fonts. Javascript code is used to define user interactions and UI behaviour.   
 
-You can customize the Player look-and-feel in a number of ways. A lot of customization can be done using the Player plugins, Player properties, and templating mechanism.   
-More advanced customization can be achieved using custom CSS loading, external assets, and skin overrides. Custom Javascript code can also be used in order to change the UI behavior.  
+You can customize the Player look-and-feel in a number of ways. A lot of customization can be done using the Player plugins, Player properties, and templating mechanism. More advanced customization can be achieved using custom CSS loading, external assets, and skin overrides. Custom Javascript code can also be used in order to change the UI behavior.  
 
-This article covers these topics from the simplest options to the more advanced and complicated ones.
+This article covers these customization topics - from the simplest options to the more advanced and complex ones.
 
 ## Player and Plugin Properties
 
-You can set Player properties to change the Player behavior. For example, setting the 'EmbedPlayer.HidePosterOnStart' property to true will show the video first frame instead of the poster image (default thumbnail set on the entry) on start.  
-Many plugins have properties that affect the Player look and feel. For example, the controlBarContainer plugin has an "hover" property that defines hovering controls:   
+You can set Player properties to change the Player behavior; for example, setting the 'EmbedPlayer.HidePosterOnStart' property to 'true' will change the behavior of the Player, so that instead of showing the poster image (the default thumbnail set on the entry) on start, the video's first frame will be shown instead.
+
+Many plugins have properties that affect the Player look-and-feel. For example, the controlBarContainer plugin has an "hover" property that defines hovering controls:   
 
 ```javascript
 'flashvars':{
@@ -37,7 +37,7 @@ You can choose to use either of these skins or, if you create your own custom sk
 }
 ```
 
-> **NOTE:** The OTT skin is available only for basic configuration players. It does not support all of the Kaltura Player plugins.
+> **NOTE:** The OTT skin is available only for basic configuration Players. It does not support all of the Kaltura Player plugins.
  
 ## The "Theme" Plugin
 
@@ -48,8 +48,8 @@ It is highly advised to use the theme plugin, when possible, over writing your o
 
 ## Plugin Templates
 
-Some of the player plugins use templates to render its content. You can change this template easily using the plugin properties.  
-You can load external templets to override the default template thus changing both the look and feel and the displayed data.  
+Some of the Player plugins use templates to render its content. You can change this template easily using the plugin properties.  
+You can load external templets to override the default template thus changing both the look-and-feel and the displayed data.  
 This is achieved by overriding the path to the template tmpl.html file of the specific plugin. 
 
 For example, to override the template of the share plugin, create your own tmpl.html file (based on the default template path) and in the Flashvars pass this parameter:
@@ -88,7 +88,7 @@ share.templatePath=https://link-to-my-custom-template.com/templatefile.tmpl.html
 
 Templates work by substituting data bindings against the current Player instance data values. Almost all plugin configuration options and data parameters that are displayed on the Player UI are exposed as bindable parameters.   
 
-The example below shows how to display the entry view count on the player's title bar next to the entry name:  
+The example below shows how to display the entry view count on the Player's title bar next to the entry name:  
 
 ```
 "{mediaProxy.entry.name} has {mediaProxy.entry.views|numberWithCommasNumber} views". 
@@ -162,7 +162,7 @@ This allows you to register for Player events or add custom interactivity to the
 
 ## Player States CSS
 
-CSS states are CSS classes that are added to the outer most interface element at given Player state. These are very useful for quickly building a given look and feel at a given Player state, without involving a lot of complicated javascript bindings.   
+CSS states are CSS classes that are added to the outer most interface element at given Player state. These are very useful for quickly building a given look-and-feel at a given Player state, without involving a lot of complicated javascript bindings.   
 
 * `.fullscreen` - The Player in fullscreen
 * `.mobile` - Indicates that we're currently on a mobile device (phones and tablets).
