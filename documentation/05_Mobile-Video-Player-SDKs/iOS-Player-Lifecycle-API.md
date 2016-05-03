@@ -1,6 +1,7 @@
 ---
 layout: page
 title: iOS Player Lifecycle API
+subcat: iOS
 ---
 
 This article describes how to use the iOS Player Lifecycle API when creating a KPViewController instance to manage the lifecycle of this instance.

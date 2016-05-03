@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Android Background State Handling
+subcat: Android
 ---
 
 This article describes how to save the Player state when the application moves to the background, which can occur when the end user taps the home button, presses the power button, or as the result of a telephone call.
