@@ -9,10 +9,12 @@ subcat: Android
 This article describes how to use the Android Player API methods to manage properties, events, and notifications. 
 
 ## Using the Kaltura Android Player API Methods
+&nbsp;
+
 ### Android API Events and Hooks
 The Android API supports the following events and hooks.
 
-####KMediaControl
+#### KMediaControl
 The SDK offeres the ability to perform Player operation via the KMediaControl API.
 You may send the following operations:
   
