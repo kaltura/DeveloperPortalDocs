@@ -14,7 +14,7 @@ module Jekyll
           site.pages.each do |page|
 	    if page.name === 'categorymeta.md'
 	      cat_name=page.data['catname']
-	      site.config['cats'][cat_name] = File.dirname(page.path.shellescape)
+	      site.config['cats'][File.dirname(page.path.shellescape)] = cat_name
 	    end
           end
         end
