@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Using the Kaltura SDK with Swift
+subcat: iOS
 ---
 
 To use the Kaltura SDK with Swift:
