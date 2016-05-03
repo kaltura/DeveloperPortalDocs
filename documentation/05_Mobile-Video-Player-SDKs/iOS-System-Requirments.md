@@ -6,7 +6,7 @@ subcat: iOS
 
 [![iOS](https://img.shields.io/badge/iOS-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios)
 ## iOS System Requirements 
-
+&nbsp;
 
 ## IDE 
 To integrate the Kaltura Player iOS SDK, the minimum system requirments are:
