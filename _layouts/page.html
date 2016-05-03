@@ -41,11 +41,11 @@ function submit_feedback()
         <div class="w-col w-col-3 template-page-nav-column">
     {% assign cats = site.cats | sort %}
 {% for cat_hash in cats %}
-    <div class="sidenav-grp-7" id="/{{ cat_hash[1] }}">
-	<a href="#" class="sidenav-cat-links" onClick="show_hide_div('/{{ cat_hash[1] }}')"><h4 class="sidenav-headings grp-heading {{ cat_hash[1] }}">{{ cat_hash[0] }}</h4></a>
+    <div class="sidenav-grp-7" id="/{{ cat_hash[0] }}">
+	<a href="#" class="sidenav-cat-links" onClick="show_hide_div('/{{ cat_hash[0] }}')"><h4 class="sidenav-headings grp-heading {{ cat_hash[0] }}">{{ cat_hash[1] }}</h4></a>
 	<div class="sidenav-grp-links" style="visibility: hidden; display: none;">
-	{% capture dir %}{{ cat_hash[1] }}{% endcapture %}
-	{% capture cat %}{{ cat_hash[0] }}{% endcapture %}
+	{% capture dir %}{{ cat_hash[0] }}{% endcapture %}
+	{% capture cat %}{{ cat_hash[1] }}{% endcapture %}
 	    {% include nav.html context=dir catname=cat %}
 	</div>
         </div>
