@@ -3,5 +3,5 @@ layout: page
 title: Kaltura Analytics - Metrics Lexicon
 ---
 
-| Group       | Name     | ID     | Description
-|:---|:---|:---|:---|
+| Name     | ID     | Description
+|:---|:---|:---|
