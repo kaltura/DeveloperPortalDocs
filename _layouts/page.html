@@ -5,15 +5,22 @@ layout: default
 <script>
 function addRow(cat,subcat,name,link, entry_path) 
 {
-    subcatel=document.getElementById(subcat);
-    if (! subcatel ){
-	var subcatel = document.createElement('div');
-        subcatel.className = 'row';
-	subcatel.id=subcat.replace(" ", "");
-	subcatel.innerHTML = '<a href="#" class="sidenav-sub-cat-links inactive-link"><h4 class="sidenav-headings grp-heading '+entry_path+'">'+subcat+'</h4></a>';
+    if (subcat){
+	subcatel=document.getElementById(subcat);
+	if (! subcatel ){
+	    var subcatel = document.createElement('div');
+	    subcatel.className = 'sidenav-grp-7';
+	    subcatel.id=subcat.replace(" ", "");
+	    subcatel.innerHTML = '<a href="#" class="sidenav-sub-cat-links" onClick="show_hide_sub_div(\''+subcatel.id + '\')"><h4 class="sidenav-headings grp-heading '+entry_path+'">'+subcat+'</h4></a>';
+	}
+	subcatel.innerHTML = subcatel.innerHTML + '<a href='+link + ' class="sidenav-sub-links" id='+entry_path+'>'+name+'</a>';  
+        document.getElementById(cat).getElementsByClassName('sidenav-grp-links')[0].appendChild(subcatel);
+    }else{
+	console.log(cat.replace(" ", "")+'-sub');
+	thecat=document.getElementById(cat.replace(" ", "")+'-sub');
+	//thecat.innerHTML = thecat.innerHTML + '<a href='+link + ' class="sidenav-links" id='+entry_path+'>'+name+'</a>';  
+	thecat.innerHTML = '<a href='+link + ' class="sidenav-links" id='+entry_path+'>'+name+'</a>' + thecat.innerHTML;  
     }
-    subcatel.innerHTML = subcatel.innerHTML + '<a href='+link + ' class="sidenav-sub-links" id='+entry_path+'>'+name+'</a>';  
-    document.getElementById(cat).getElementsByClassName('sidenav-grp-links')[0].appendChild(subcatel);
 }  
 function submit_feedback()
 {
@@ -30,6 +37,18 @@ function submit_feedback()
 		  }
 	});
 }
+function show_hide_sub_div(div_id) 
+{
+    for (var $i = 0, $j = document.getElementById(div_id).getElementsByClassName('sidenav-sub-links'); $i < $j.length; $i++) {
+	    if ( $j[$i].style.visibility == 'hidden'){
+		    $j[$i].style.visibility = 'visible';
+		    $j[$i].style.display = 'block';
+	    }else{
+		 $j[$i].style.visibility = 'hidden';
+		 $j[$i].style.display = 'none';
+	    }
+    }
+}
 </script>
 <article>
 
@@ -39,11 +58,11 @@ function submit_feedback()
       <a href="#" data-ix="show-temp-page-nav-column" class="w-button w-clearfix mobilebtn">Topics<span class="fa fa-chevron-down" style="null"></span></a>
       <div class="w-row body-columns">
         <div class="w-col w-col-3 template-page-nav-column">
-    {% assign cats = site.cats | sort %}
+{% assign cats = site.cats | sort %}
 {% for cat_hash in cats %}
     <div class="sidenav-grp-7" id="/{{ cat_hash[0] }}">
 	<a href="#" class="sidenav-cat-links" onClick="show_hide_div('/{{ cat_hash[0] }}')"><h4 class="sidenav-headings grp-heading {{ cat_hash[0] }}">{{ cat_hash[1] }}</h4></a>
-	<div class="sidenav-grp-links" style="visibility: hidden; display: none;">
+	<div class="sidenav-grp-links" id="/{{ cat_hash[0] | replace: ' ','' }}-sub" style="visibility: hidden; display: none;">
 	{% capture dir %}{{ cat_hash[0] }}{% endcapture %}
 	{% capture cat %}{{ cat_hash[1] }}{% endcapture %}
 	    {% include nav.html context=dir catname=cat %}
@@ -79,7 +98,7 @@ function submit_feedback()
 			<table class="lastcommittable">
 
 				<!--tr><td>Created on: {{ page.git.first_commit.commit_date }}, By: {{ page.git.first_commit.author_name }}</td></tr-->
-				<tr><td>Last commit: {{ page.git.last_commit.commit_date }}, By: <span class="commit-author">{{ page.git.last_commit.author_name }}</span></td></tr>
+				<tr><td>Last commit: {{ page.git.last_commit.commit_date }}, By <span class="commit-author">{{ page.git.last_commit.author_name }}</span></td></tr>
 			
 				<!-- {% for contrib in page.git.authors %}
 				
