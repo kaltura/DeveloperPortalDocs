@@ -1,9 +1,7 @@
 ---
 layout: page
-title: Kaltura Player JavaScript API, Events and Hooks - Android
+title: Kaltura Player JavaScript API, Events and Hooks
 ---
-
-[![Android](https://img.shields.io/badge/Android-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios)
 
 This article describes how to use the Player JavaScript API to manage properties, events and notifications.
 
