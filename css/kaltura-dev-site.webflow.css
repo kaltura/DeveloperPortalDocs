@@ -1980,6 +1980,15 @@ a[ id="ksignupbtn" ]:target ~ #signup {
   padding-right: 9px;
 }
 
+.case-study-media-div {
+  display: inline-block;
+  width: 90%;
+  padding-bottom: 20px;
+  float: right;
+  background-color: #fff;
+  box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, .18);
+}
+
 
 .success-subheading {
   color: #969696;
