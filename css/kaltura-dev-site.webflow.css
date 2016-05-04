@@ -1981,6 +1981,256 @@ a[ id="ksignupbtn" ]:target ~ #signup {
 }
 
 
+.success-subheading {
+  color: #969696;
+  font-size: 24px;
+}
+
+.thank-you-h3 {
+  font-family: proxima-nova, sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  letter-spacing: 0.4px;
+}
+
+.thank-you-h3.thank-you-build-block {
+  margin-top: 34px;
+  margin-left: 0px;
+  font-size: 21px;
+  text-align: center;
+}
+
+.thank-you-h4 {
+  padding-left: 0px;
+  border-bottom-style: none;
+  color: #188093;
+  letter-spacing: 0.4px;
+}
+
+.thank-you-p {
+  font-family: proxima-nova, sans-serif;
+  line-height: 23px;
+  letter-spacing: 0.2px;
+}
+
+.thank-you-p.thank-you-pricing-p {
+  text-align: center;
+}
+
+.thank-you-highlight {
+  font-weight: 700;
+}
+
+.code-highlight {
+  padding: 2px 10px;
+  border-radius: 4px;
+  background-color: #e7e7e7;
+}
+
+.thank-you-section {
+  background-color: #f7f7f7;
+}
+
+.use-case-div {
+  margin: 20px;
+  padding: 10px;
+  background-color: #f7f7f7;
+}
+
+.use-case-div.left {
+  margin-right: 10px;
+  margin-bottom: 0px;
+  padding-top: 20px;
+  border: 1px solid #fff;
+  -webkit-transition: border 200ms ease-in-out, background-color 200ms ease-in-out;
+  transition: border 200ms ease-in-out, background-color 200ms ease-in-out;
+}
+
+.use-case-div.left:hover {
+  border: 1px solid #f7a600;
+  background-color: #eee;
+}
+
+.use-case-div.left.mr {
+  cursor: pointer;
+}
+
+.use-case-div.left.media-pub {
+  cursor: pointer;
+}
+
+.use-case-div.left.live-vid-pub {
+  cursor: pointer;
+}
+
+.use-case-div.left.content-distrib {
+  cursor: pointer;
+}
+
+.use-case-div.right {
+  margin-bottom: 0px;
+  margin-left: 10px;
+  padding-top: 20px;
+  border: 1px solid #fff;
+  -webkit-transition: border 200ms ease-in-out, background-color 200ms ease-in-out;
+  transition: border 200ms ease-in-out, background-color 200ms ease-in-out;
+}
+
+.use-case-div.right:hover {
+  border-color: #f7a600;
+  background-color: #eee;
+}
+
+.use-case-div.right.end-u-uploads {
+  cursor: pointer;
+}
+
+.use-case-div.right.learning {
+  cursor: pointer;
+}
+
+.use-case-div.right.surveillance {
+  cursor: pointer;
+}
+
+.use-case-div.right.in-product-vid {
+  cursor: pointer;
+}
+
+.what-building-title {
+  margin-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  font-family: proxima-nova, sans-serif;
+  text-align: center;
+  letter-spacing: 0.2px;
+}
+
+.media-repurpose-div {
+  display: none;
+  opacity: 0;
+  -webkit-transition: opacity 200ms ease;
+  transition: opacity 200ms ease;
+}
+
+.close-button-mr {
+  float: right;
+}
+
+.close-button-mr.fa.fa-times {
+  margin-right: 10px;
+  color: #aaa;
+  cursor: pointer;
+}
+
+.icon-blck {
+  color: #f7a600;
+  text-align: center;
+}
+
+.resources-heading {
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px dashed #ccc;
+  font-family: proxima-nova, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.end-user-uploads-div {
+  display: none;
+  opacity: 0;
+}
+
+.media-publishing-div {
+  display: none;
+  opacity: 0;
+}
+
+.learning-div {
+  display: none;
+  opacity: 1;
+}
+
+.live-video-pub-div {
+  display: none;
+  opacity: 0;
+}
+
+.surveillance-div {
+  display: none;
+  opacity: 0;
+}
+
+.content-distrib-div {
+  display: none;
+  opacity: 0;
+}
+
+.in-product-video-div {
+  display: none;
+  opacity: 0;
+}
+
+.close-button-eu {
+  float: right;
+}
+
+.close-button-eu.fa.fa-times {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.close-button-mp.fa.fa-times {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.close-button-lt.fa.fa-times {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.close-button-lv.fa.fa-times {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.close-button-iot.fa.fa-times {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.close-button-cd.fa.fa-times {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.close-button-iiv.fa.fa-times {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.thank-you-pricing {
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  float: right;
+  text-align: center;
+}
+
+.thank-you-pg-inline-links {
+  color: #188093;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+
+
 html.w-mod-js *[data-ix="hide-on-load"] {
   display: none;
   opacity: 0;
@@ -2176,6 +2426,42 @@ html.w-mod-js *[data-ix="search-input-hide-on-load"] {
 
   .billable-pricing {
     padding-left: 45px;
+  }
+
+  .case-study-header-section {
+    padding-top: 11px;
+    padding-bottom: 11px;
+  }
+  .use-case-div.left.mr {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+  .use-case-div.left.media-pub {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+  .use-case-div.left.live-vid-pub {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+  .use-case-div.left.content-distrib {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+  .use-case-div.right.end-u-uploads {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+  .use-case-div.right.learning {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+  .use-case-div.right.surveillance {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+  .use-case-div.right.in-product-vid {
+    margin-left: 20px;
   }
 
 }
@@ -2433,6 +2719,24 @@ html.w-mod-js *[data-ix="search-input-hide-on-load"] {
   .vpaas-includes-li {
     padding-left: 68px;
   }
+  .case-study-header-container {
+    padding-right: 17px;
+    padding-left: 17px;
+  }
+  .case-study-content-section {
+    padding-right: 17px;
+    padding-left: 17px;
+  }
+  .case-study-media-div {
+    width: 100%;
+    margin-top: 37px;
+  }
+  .case-study-template-column-1 {
+    margin-bottom: 23px;
+  }
+  .thank-you-pricing {
+    width: 100%;
+  }
 
 }
 
@@ -2619,6 +2923,19 @@ html.w-mod-js *[data-ix="search-input-hide-on-load"] {
   .vpaas-includes-li {
     padding-left: 0px;
     text-align: center;
+  }
+  .case-study-heading {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .case-study-logo {
+    max-height: 100px;
+  }
+  .case-study-content-section {
+    padding-top: 17px;
+  }
+  .case-study-template-column-1 {
+    padding-right: 10px;
   }
 
 }
