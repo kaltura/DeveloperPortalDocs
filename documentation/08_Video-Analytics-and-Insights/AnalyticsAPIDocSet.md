@@ -43,10 +43,10 @@ Country: USA
 State: California
 Time: ….
 You can read more about currently supported dimensions here.
-Metrics
 
+##Metrics
 These events provide a basis for measuring metrics, which are later presented in Analytics reports, accessible through the Data Retrieval API. Metrics refer to the data that Kaltura Analytics measures, which are quantitative measurements. These measurements can assess user actions (such as user activities, plays, comments, drop offs, etc.) or resource consumption (such as bandwidth, storage, transcoding, etc.).
-You can read more about the currently supported metrics [here](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/08_Video-Analytics-and-Insights/DimensionsLexicon.md).
+You can read more about the currently supported metrics [here](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/08_Video-Analytics-and-Insights/MetricsLexicon.md).
 
 ##Aggregations
 
@@ -58,7 +58,7 @@ Every report in Analytics is made up of Dimensions, Metrics and Filters. Dimensi
  
 What to read next:
 * **Dimensions dictionary:** Features a list of the dimenstions and their meaning within the Kaltura Analytics project.
-* **Metrics dictionary:** Features a list of the metrics and their meaning within the Kaltura Analytics project.
+* **[Metrics dictionary](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/08_Video-Analytics-and-Insights/MetricsLexicon.md):** Features a list of the metrics and their meaning within the Kaltura Analytics project.
 * **Player events guide:** https://kaltura.atlassian.net/wiki/display/KANAL/kAnalony+Event+Tracking+API - NEED A DIFFERENT LINK - THIS IS THE SAME AS THE EVENT TRACKING API LINK!!!
 * **Supported aggregations:** Features an overview and actual aggregations implemented for the following supported aggregations:
   * Event tracking API
