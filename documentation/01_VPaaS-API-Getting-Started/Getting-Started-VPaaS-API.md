@@ -25,10 +25,14 @@ The Kaltura API is [stateless](https://en.wikipedia.org/wiki/Stateless_protocol)
 
 > Read more about Kaltura Session, its algorithm, guidelines and options in the [Kaltura's API Authentication and Security article](https://knowledge.kaltura.com/node/229).
 
-## Uploading Media to Kaltura
+EMBED Recipe: https://developer.kaltura.com/recipes/authentication
 
-Files are uploaded to Kaltura through [CORS enabled](https://www.w3.org/wiki/CORS_Enabled) REST API.  
-You can implement an upload flow, either completely on your own by calling the API, or by using a Kaltura tested JavaScript widget for chunked upload through web pages. Which method you chose to implement depends on your application needs;  
+## Uploading your media files
+
+Media files are uploaded to Kaltura through [CORS enabled](https://www.w3.org/wiki/CORS_Enabled) REST API.  
+You can implement an upload flow, either completely on your own by calling the API, or by using a Kaltura tested JavaScript widget for chunked upload through web pages. Which method you chose to implement depends on your application needs.
+
+>  Side note: Kaltura manages all forms of media files including video, image, and audio files. It even provides APIs to host, deliver and process document files such as PDF and PPT files to create rich experiences such as synchronized side-by-side video and presentation slides.
 
 ### Upload files using JavaScript with jQuery Upload Widget
 
@@ -39,7 +43,7 @@ TODO: INCLUDE THE RECIPE SHOWING THE USE OF THE JQUERY WIDGET
 
 ### Upload files by calling the API directly
 
-{% onebox https://developer.kaltura.com/recipes/upload %}
+EMBED Recipe: https://developer.kaltura.com/recipes/upload
 
 ## Retrieving your Media Entry details
 
