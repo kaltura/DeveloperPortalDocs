@@ -1929,6 +1929,10 @@ td {
   letter-spacing: 0.2px;
 }
 
+.pricing-button.thank-you-button {
+    margin-bottom: 31px;
+}
+
 .trustedby-img {
   max-width: 85%;
   margin-right: auto;
@@ -1993,10 +1997,22 @@ a[ id="ksignupbtn" ]:target ~ #signup {
   box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, .18);
 }
 
+.case-study-template-li-bullets {
+    margin-bottom: 15px;
+    font-family: proxima-nova, sans-serif;
+    line-height: 23px;
+    letter-spacing: 0.2px;
+}
+
 
 .success-subheading {
   color: #969696;
   font-size: 24px;
+}
+
+.section-headings.success-heading.thank-you-heading {
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .thank-you-h3 {
@@ -2242,6 +2258,8 @@ a[ id="ksignupbtn" ]:target ~ #signup {
   letter-spacing: 0.3px;
   text-transform: uppercase;
 }
+
+
 
 
 html.w-mod-js *[data-ix="hide-on-load"] {
