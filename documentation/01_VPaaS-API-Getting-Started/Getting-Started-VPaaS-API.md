@@ -10,6 +10,7 @@ Before you dive into the details, let's review the foundational building blocks,
 
 In this Getting Started guide, you will learn how to:
 
+0. API Authentication (Creating a Kaltura Session)
 1. Upload a video
 2. Retrieve the video details
 3. Update your video metadata
@@ -17,6 +18,12 @@ In this Getting Started guide, you will learn how to:
 5. Embed your video on a web page
 6. Interact with the Player
 7. Retrieve engagement analytics for your video
+
+## Creating a Kaltura Session
+
+The Kaltura API is [stateless](https://en.wikipedia.org/wiki/Stateless_protocol), that means that every request made to the Kaltura API requires an authenticated session string to be passed, the Kaltura Session (aka KS), identifies the Kaltura account and end-user on which the executed API action is to be carried, as well as other permissions and configurations such as the role of the user, time duration the session is good for and more.
+
+> Read more about Kaltura Session, its algorithm, guidelines and options in the [Kaltura's API Authentication and Security article](https://knowledge.kaltura.com/node/229).
 
 ## Uploading Media to Kaltura
 
@@ -34,3 +41,6 @@ TODO: INCLUDE THE RECIPE SHOWING THE USE OF THE JQUERY WIDGET
 
 {% onebox https://developer.kaltura.com/recipes/upload %}
 
+## Retrieving your Media Entry details
+
+During upload
