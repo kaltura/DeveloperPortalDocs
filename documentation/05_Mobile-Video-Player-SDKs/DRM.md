@@ -13,24 +13,28 @@ The Player SDK seamlessly supports playback of DRM content. Each platform suppor
 
 ### DRM Support in Android Devices
 The following DRM schemes are supported in Android devices:
-* Widevine Modular
-	* Supported in Android 4.3 and up
-	* Online playback only
-		* Offline playback will be supported in v2.6.0 of the Player SDK.
-* Widevine Classic
-    * Supported in Android 3.0 to 6.0, exclusive
-        * Google no longer requires Widevine Classic support in Android 6.0 devices, but some devices still support it.
-    * Online and offline playback
+
+#### Widevine Modular
+* Supported in Android 4.3 and up
+* Online playback only
+    * Offline playback will be supported in v2.6.0 of the Player SDK.
+
+#### Widevine Classic
+* Supported in Android 3.0 to 6.0, exclusive
+    * Google no longer requires Widevine Classic support in Android 6.0 devices, but some devices still support it.
+* Online and offline playback
 
 ### DRM Support in iOS Devices
 The following DRM schemes are supported in iOS devices:
-* FairPlay
-	* Supported in iOS versions 8 and up
-	* Online playback only
-		* A future version of FairPlay/iOS *may* support offline. [No commitment from Apple](https://forums.developer.apple.com/message/18444).
-* Widevine Classic
-	* Supported in iOS versions up to 10, exclusive
-	* Online and offline playback
+
+#### FairPlay
+* Supported in iOS versions 8 and up
+* Online playback only
+    * A future version of FairPlay/iOS *may* support offline. [No commitment from Apple](https://forums.developer.apple.com/message/18444).
+
+#### Widevine Classic
+* Supported in iOS versions up to 10, exclusive
+* Online and offline playback
 
 ## Known Limitations
 * Android:
