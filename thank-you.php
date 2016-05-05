@@ -1,6 +1,9 @@
 ---
 layout: default
 ---
+<?php
+var_dump($_GET);
+?>
 
 <div class="w-section thank-you-section">
     <div class="w-container">
