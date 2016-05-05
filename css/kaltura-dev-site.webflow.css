@@ -1486,7 +1486,7 @@ td {
 }
 
 .vpaas-signup-heading {
-  margin-bottom: 30px;
+  margin-bottom: 0px;
 }
 
 .vpaas-signup-container {
@@ -1588,6 +1588,7 @@ td {
     padding-top: 50px;
     padding-bottom: 50px;
     border-bottom: dashed 1px #ccc;
+    margin-bottom: 50px;
 }
 
 #payment-fields h3 {
