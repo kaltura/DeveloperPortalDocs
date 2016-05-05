@@ -43,8 +43,8 @@ TODO: INCLUDE THE RECIPE SHOWING THE USE OF THE JQUERY WIDGET
 
 ### Upload files by calling the API directly
 
-EMBED Recipe: https://developer.kaltura.com/recipes/upload
+{% onebox https://developer.kaltura.com/recipes/upload/embed#/start %}
 
 ## Retrieving your Media Entry details
 
-During upload
+At the end of the upload flow you have created a KalturaMediaEntry object by calling the [media.add](https://developer.kaltura.com/api-docs/#/media.add) action, and then you've assigned the uploaded file to this media entry by calling the [media.addContent](https://developer.kaltura.com/api-docs/#/media.addContent) action.
