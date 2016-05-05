@@ -123,7 +123,6 @@ h4 {
 .nav-links {
   padding-top: 22px;
   float: left;
-  border-right: 1px solid #ccc;
   -webkit-transition: color 300ms ease;
   transition: color 300ms ease;
   font-family: proxima-nova, sans-serif;
@@ -137,7 +136,6 @@ h4 {
 }
 
 .nav-links.first-nav-link {
-  border-left: 1px solid #ccc;
   font-family: proxima-nova, sans-serif;
 }
 
@@ -183,8 +181,10 @@ h4 {
     border-bottom: none;
     border-top: none;
     border-right: none;
-    border-left: solid #ccc 1px;
+    border-left: none;
     min-width: 550px;
+    background-color: #f7f7f7 !important;
+    border-radius: 0px;
 }
 
 .search-input input:focus {
@@ -598,10 +598,6 @@ h4 {
 
 .body-columns {
   margin-bottom: 70px;
-}
-
-.nav-container {
-  border-left: 1px solid #ccc;
 }
 
 .social-div {
@@ -1279,7 +1275,6 @@ td {
 
 .nav-dropdown {
   padding-top: 22px;
-  border-right: 1px solid #ccc;
   font-family: proxima-nova, sans-serif;
 }
 
