@@ -1584,8 +1584,10 @@ td {
 }
 
 .account-type-div {
-  border-top: dashed 1px #ccc;
-  padding-top: 50px;
+    border-top: dashed 1px #ccc;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-bottom: dashed 1px #ccc;
 }
 
 #payment-fields h3 {
