@@ -14,7 +14,6 @@
 	      addRow("/{{include.context}}","{{entry.subcat}}","{{ entry.title }}","{{ site.baseurl }}{{ entry.url }}","{{ entry.path|replace: '/','-'}}");
       </script>
 	  {% elsif entry.title %}
-	    <!--a id="{{ entry.path | replace: '/','-'}}" href="{{ site.baseurl }}{{ entry.url }}" class="sidenav-links">{{ entry.title }}</a-->
 	  <script>
 	      addRow("/{{include.context}}",null,"{{ entry.title }}","{{ site.baseurl }}{{ entry.url }}","{{ entry.path|replace: '/','-'}}");
       </script>

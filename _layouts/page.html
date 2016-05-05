@@ -16,9 +16,7 @@ function addRow(cat,subcat,name,link, entry_path)
 	subcatel.innerHTML = subcatel.innerHTML + '<a href='+link + ' class="sidenav-sub-links" id='+entry_path+'>'+name+'</a>';  
         document.getElementById(cat).getElementsByClassName('sidenav-grp-links')[0].appendChild(subcatel);
     }else{
-	console.log(cat.replace(" ", "")+'-sub');
 	thecat=document.getElementById(cat.replace(" ", "")+'-sub');
-	//thecat.innerHTML = thecat.innerHTML + '<a href='+link + ' class="sidenav-links" id='+entry_path+'>'+name+'</a>';  
 	thecat.innerHTML = '<a href='+link + ' class="sidenav-links" id='+entry_path+'>'+name+'</a>' + thecat.innerHTML;  
     }
 }  
