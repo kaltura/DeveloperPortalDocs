@@ -2,7 +2,7 @@
 layout: default
 ---
 <?php
-var_dump($_GET);
+//var_dump($_GET);
 ?>
 
 <div class="w-section thank-you-section">
@@ -131,7 +131,7 @@ var_dump($_GET);
               <h4 class="thank-you-h4">Partner ID (PID)</h4>
               <p class="thank-you-p">Your Kaltura Partner ID, or PID, is a unique identifier for your Kaltura account.
                 <br>
-                <br>Your PID: <span class="thank-you-highlight">%PID DATA%</span>
+                <br>Your PID: <span class="thank-you-highlight"><?php echo $_GET['partner_id']?></span>
               </p>
               <h4 class="thank-you-h4">Kaltura Entries</h4>
               <p class="thank-you-p">Each content item ingested into Kaltura is represented by an Entry, and each Entry has a unique identifier called an Entry ID.</p>
@@ -184,7 +184,7 @@ var_dump($_GET);
                   });
                 </script>
               </div>
-              <p class="thank-you-p">uiConf ID: %Player ID here%</p>
+              <p class="thank-you-p">uiConf ID: <?php echo $_GET['ui_conf_id']?></p>
               <h4 class="thank-you-h4">Kaltura Session</h4>
               <p class="thank-you-p">When working with the Kaltura API, a&nbsp;Kaltura Session (KS), represents the validation required to authenticate the user calling/performing an API action.
                 <br>
