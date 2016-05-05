@@ -2254,6 +2254,10 @@ a[ id="ksignupbtn" ]:target ~ #signup {
   text-transform: uppercase;
 }
 
+.success-account-details .w-row {
+  margin-bottom: 0px;
+}
+
 
 
 
