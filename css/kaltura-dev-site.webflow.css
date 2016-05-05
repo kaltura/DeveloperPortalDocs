@@ -1861,6 +1861,7 @@ td {
 .pricing-details-description.bottom-description {
     margin-top: 45px;
     line-height: 23px;
+    font-size: 1.2em;
 }
 
 .pricing-disclaimer {
