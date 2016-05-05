@@ -10,11 +10,27 @@ Before you dive into the details, let's review the foundational building blocks,
 
 In this Getting Started guide, you will learn how to:
 
-* Upload a video
-* Retrieve the video details
-* Update your video metadata
-* Create a player instance
-* Embed your video on your site
-* Interact with the Player
-* Retrieve engagement analytics
+1. Upload a video
+2. Retrieve the video details
+3. Update your video metadata
+4. Create a player instance
+5. Embed your video on a web page
+6. Interact with the Player
+7. Retrieve engagement analytics for your video
+
+## Uploading Media to Kaltura
+
+Files are uploaded to Kaltura through [CORS enabled](https://www.w3.org/wiki/CORS_Enabled) REST API.  
+You can implement an upload flow, either completely on your own by calling the API, or by using a Kaltura tested JavaScript widget for chunked upload through web pages. Which method you chose to implement depends on your application needs;  
+
+### Upload files using JavaScript with jQuery Upload Widget
+
+If your app is HTML5 based, you can implement a reliable and fault tolerant large-files upload with automatic pause-and-resume functionality by simply including and using the Kaltura Upload JavaScript widget.
+The [Kaltura Upload JavaScript widget](https://github.com/kaltura/jQuery-File-Upload) provides a simple JavaScript library that abstracts the use of the Kaltura API, as well as handling of the files locally (such as file chunking, and pause-resume).
+
+TODO: INCLUDE THE RECIPE SHOWING THE USE OF THE JQUERY WIDGET
+
+### Upload files by calling the API directly
+
+{% onebox https://developer.kaltura.com/recipes/upload %}
 
