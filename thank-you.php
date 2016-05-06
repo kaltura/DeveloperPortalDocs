@@ -129,13 +129,14 @@ layout: default
               <p class="thank-you-p">Be sure to check your inbox and confirm the email address used
                 <br />during registration.</p>
               <h4 class="thank-you-h4">Partner ID (PID)</h4>
-              <p class="thank-you-p">Your Kaltura Partner ID, or PID, is a unique identifier for your Kaltura account.
+              <p class="thank-you-p">Your Kaltura Partner ID, or PID, is a unique number identifying your Kaltura account.
                 <br />
-                <br />Your PID: <span class="thank-you-highlight"><?php echo $_GET['partner_id']?></span>
+                <span class="thank-you-highlight">Your Partner ID is: <?php echo $_GET['partner_id']; ?></span>
               </p>
               
               <h4 class="thank-you-h4">Kaltura Session</h4>
-              <p class="thank-you-p">The Kaltura Session (aka KS) is a string that authenticates the user and account when making an API call. You are expected to provide a KS with every API call you make.
+              <input type="text" value="<?php echo $_GET['ks']; ?>" readonly="" style="color: #9D9D9D; background: transparent; font-size: 12px; border: solid 1px #9EB4B7; margin-bottom: 6px; border-radius: 4px; padding: 2px; width: 100%;">
+              <p class="thank-you-p">The string above is a Kaltura Session (aka KS). The KS authenticates the account and current user when making an API call. You are expected to provide a generated KS with every API call you make.
               <br />
               There are three methods for generating a Kaltura Session:</p>
               <ul class="case-study-template-list-wrapper-bullets">
@@ -143,6 +144,7 @@ layout: default
                 <li class="case-study-template-li-bullets">Calling&nbsp;<span class="code-highlight">user.loginByLoginId</span>, providing your Partner ID, a registered user email and its password. This method is recommended for managing registered users in Kaltura, and allowing users to login using email and password.</li>
                 <li class="case-study-template-li-bullets">Using the&nbsp;<span class="code-highlight">appToken</span> service which provides a mechanism to create and manage API keys per integrated applications. This method is recommended for when you are providing access to scripts or applications that are managed by others, and provides tools to manage API tokens per application provider, revoke access, and more.</li>
               </ul>
+              <p>Try it with Code Recipes: <a href="https://developer.kaltura.com/recipes/authentication" target="_blank">session.start and user.loginByLoginId recipe</a>, <a href="https://developer.kaltura.com/recipes/app_tokens" target="_blank">appTokens recipe</a></p>
 
               <h4 class="thank-you-h4">Kaltura Entries</h4>
               <p class="thank-you-p">Each content item ingested into Kaltura is represented by an Entry, and each Entry has a unique identifier called an Entry ID.</p>
@@ -195,7 +197,7 @@ layout: default
                   });
                 </script>
               </div>
-              <p class="thank-you-p">uiConf ID: <?php echo $_GET['ui_conf_id']?></p>
+              <p class="thank-you-p">uiConf ID: <?php echo $_GET['ui_conf_id']; ?></p>
               
               <h4 class="thank-you-h4">Recipes</h4>
               <p class="thank-you-p">Get up and running quickly by using VPaaS recipes generated for specific use-cases.</p>
