@@ -1615,6 +1615,15 @@ td {
   text-transform: uppercase;
 }
 
+legend .form-labels {
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: dashed 1px #ccc;
+  width: 100%;
+  color: #188093;
+  font-weight: 500;
+}
+
 .company-details-heading {
   width: 20%;
   margin-right: auto;
