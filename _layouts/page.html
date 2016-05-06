@@ -91,7 +91,7 @@ function show_hide_sub_div(div_id)
     			<h1 class="post-title">{{ page.title }}</h1>
   			</header>
 
-			{% if page.git %}
+			{% if page.git and page.name != 'index.md' %}
 			
 			<table class="lastcommittable">
 
@@ -153,7 +153,7 @@ $( document ).ready(function() {
 	$('.post-content h1, .post-content h2, .post-content h3, .post-content h4, .post-content h5, .post-content h6').filter('[id]').each(function () {
 	    $(this).html('<a href="#'+$(this).attr('id')+'" class="post-content" aria-hidden="true">'+$(this).text()+'</a>');
 	});
-	
+	{% if page.name != 'index.md' %}	
 	//build the "on this page" menu:
 	var ToC =
 	  "<nav role='navigation' class='table-of-contents'>" +
@@ -184,7 +184,7 @@ $( document ).ready(function() {
 	  "</nav>";
 	
 	$("div.post-content").prepend(ToC);
-	
+    {% endif %}	
 	//back to top
 	if ($('#back-to-top').length) {
     var scrollTrigger = 100, // px
