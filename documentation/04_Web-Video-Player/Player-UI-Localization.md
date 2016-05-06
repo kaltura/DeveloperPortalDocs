@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Kaltura Player UI Localization
+weight: 407
 ---
 
 The Kaltura Player supports localization for most languages, by specifying the language-corresponding locale key.   

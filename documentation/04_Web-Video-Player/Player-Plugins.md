@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Extending the Kaltura Player Functionality Using Plugins
+weight: 406
 ---
 
 The Kaltura Player architecture uses plugins to extend the Player functionality. All Player controls and core functionalities are implemented as plugins. This approach provides a separation of concerns and code isolation when implementing Player features.   

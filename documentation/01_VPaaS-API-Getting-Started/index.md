@@ -1,6 +1,7 @@
 ---
 layout: page
 title: VPaaS API Getting Started
+weight: 101
 ---
 
 {% capture html %}

@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Kaltura Player JavaScript API, Events and Hooks
+weight: 403
 ---
 
 This article describes how to use the Player JavaScript API to manage properties, events and notifications.
