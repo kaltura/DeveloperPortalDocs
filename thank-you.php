@@ -7,7 +7,7 @@ layout: default
 
 <div class="w-section thank-you-section">
     <div class="w-container">
-      <h1 class="section-headings success-heading thank-you-heading">Thank You for Signing Up!<br><span class="success-subheading">Your Kaltura VPaaS Account is Ready</span></h1>
+      <h1 class="section-headings success-heading thank-you-heading">Thank You for Signing Up!<br /><span class="success-subheading">Your Kaltura VPaaS Account is Ready</span></h1>
       <div class="success-account-details">
         <div class="w-row">
           <div class="w-col w-col-6">
@@ -127,12 +127,23 @@ layout: default
               <h3 class="thank-you-h3">Lets Get You Started</h3>
               <h4 class="thank-you-h4">Confirm Your Email</h4>
               <p class="thank-you-p">Be sure to check your inbox and confirm the email address used
-                <br>during registration.</p>
+                <br />during registration.</p>
               <h4 class="thank-you-h4">Partner ID (PID)</h4>
               <p class="thank-you-p">Your Kaltura Partner ID, or PID, is a unique identifier for your Kaltura account.
-                <br>
-                <br>Your PID: <span class="thank-you-highlight"><?php echo $_GET['partner_id']?></span>
+                <br />
+                <br />Your PID: <span class="thank-you-highlight"><?php echo $_GET['partner_id']?></span>
               </p>
+              
+              <h4 class="thank-you-h4">Kaltura Session</h4>
+              <p class="thank-you-p">The Kaltura Session (aka KS) is a string that authenticates the user and account when making an API call. You are expected to provide a KS with every API call you make.
+              <br />
+              There are three methods for generating a Kaltura Session:</p>
+              <ul class="case-study-template-list-wrapper-bullets">
+                <li class="case-study-template-li-bullets">Calling the&nbsp;<span class="code-highlight">session.start</span>&nbsp;action, providing your Partner ID, the API secret key, the type of session to create (Administrator level access or End-User level access) and a user identifier. This method is recommended for scripts and applications that only you run and maintain.</li>
+                <li class="case-study-template-li-bullets">Calling&nbsp;<span class="code-highlight">user.loginByLoginId</span>, providing your Partner ID, a registered user email and its password. This method is recommended for managing registered users in Kaltura, and allowing users to login using email and password.</li>
+                <li class="case-study-template-li-bullets">Using the&nbsp;<span class="code-highlight">appToken</span> service which provides a mechanism to create and manage API keys per integrated applications. This method is recommended for when you are providing access to scripts or applications that are managed by others, and provides tools to manage API tokens per application provider, revoke access, and more.</li>
+              </ul>
+
               <h4 class="thank-you-h4">Kaltura Entries</h4>
               <p class="thank-you-p">Each content item ingested into Kaltura is represented by an Entry, and each Entry has a unique identifier called an Entry ID.</p>
               <div class="w-embed w-iframe w-script media-embed-div">
@@ -159,9 +170,9 @@ layout: default
               </div>
               <h4 class="thank-you-h4">Kaltura Player &amp; uiConf</h4>
               <p class="thank-you-p">Kaltura's HTML5 video library delivers&nbsp;the right player, stream and advertising to the right device anywhere, with just a single embed code.&nbsp;
-                <br>Functionality of both Flash and HTML5 players can be extended with our&nbsp;Unified development API.
-                <br>
-                <br>Each player configuration is represented by a unique identifier called a uiConf.</p>
+                <br />Functionality of both Flash and HTML5 players can be extended with our&nbsp;Unified development API.
+                <br />
+                <br />Each player configuration is represented by a unique identifier called a uiConf.</p>
               <div class="w-embed w-iframe w-script media-embed-div">
                 <!-- Outer div defines maximum space the player can take -->
                 <div style="width: 100%;display: inline-block;position: relative;">
@@ -185,14 +196,7 @@ layout: default
                 </script>
               </div>
               <p class="thank-you-p">uiConf ID: <?php echo $_GET['ui_conf_id']?></p>
-              <h4 class="thank-you-h4">Kaltura Session</h4>
-              <p class="thank-you-p">When working with the Kaltura API, a&nbsp;Kaltura Session (KS), represents the validation required to authenticate the user calling/performing an API action.
-                <br>
-                <br>There are two main methods for creating a Kaltura Session:</p>
-              <ul class="case-study-template-list-wrapper-bullets">
-                <li class="case-study-template-li-bullets">Calling the&nbsp;<span class="code-highlight">session.start</span>&nbsp;action, providing a Partner ID and an Admin secret or User secret.</li>
-                <li class="case-study-template-li-bullets">Calling&nbsp;<span class="code-highlight">user.loginByLoginId</span>, providing a valid user login (email) and its password.</li>
-              </ul><a href="https://knowledge.kaltura.com/kalturas-api-authentication-and-security" target="_blank" class="body-text-link">More info</a>
+              
               <h4 class="thank-you-h4">Recipes</h4>
               <p class="thank-you-p">Get up and running quickly by using VPaaS recipes generated for specific use-cases.</p>
               <ul class="case-study-template-list-wrapper-bullets">
@@ -217,7 +221,7 @@ layout: default
                     <div class="icon-blck"><span class="fa fa-upload fa-2x"></span>
                     </div>
                     <div class="what-building-title">End-User
-                      <br>Uploads</div>
+                      <br />Uploads</div>
                   </div>
                 </div>
               </div>
@@ -227,7 +231,7 @@ layout: default
                     <div class="icon-blck"><span class="fa fa-tablet fa-2x"></span>
                     </div>
                     <div class="what-building-title">Media
-                      <br>Publishing</div>
+                      <br />Publishing</div>
                   </div>
                 </div>
                 <div class="w-col w-col-6 w-col-stack">
@@ -235,7 +239,7 @@ layout: default
                     <div class="icon-blck"><span class="fa fa-graduation-cap fa-2x"></span>
                     </div>
                     <div class="what-building-title">Learning / Training /
-                      <br>Education</div>
+                      <br />Education</div>
                   </div>
                 </div>
               </div>
@@ -245,7 +249,7 @@ layout: default
                     <div class="icon-blck"><span class="fa fa-wifi fa-2x"></span>
                     </div>
                     <div class="what-building-title">Live Video
-                      <br>Publishing</div>
+                      <br />Publishing</div>
                   </div>
                 </div>
                 <div class="w-col w-col-6 w-col-stack">
@@ -262,7 +266,7 @@ layout: default
                     <div class="icon-blck"><span class="fa fa-share-alt fa-2x"></span>
                     </div>
                     <div class="what-building-title">Content
-                      <br>Distribution</div>
+                      <br />Distribution</div>
                   </div>
                 </div>
                 <div class="w-col w-col-6 w-col-stack">
