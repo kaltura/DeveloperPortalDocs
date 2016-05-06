@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Video Analytics and Insights
+title: Video Experiences 
 ---
 
 {% capture html %}

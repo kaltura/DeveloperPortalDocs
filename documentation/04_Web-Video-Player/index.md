@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Video Analytics and Insights
+title: Web Video Player
 ---
 
 {% capture html %}
