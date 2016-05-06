@@ -1615,7 +1615,7 @@ td {
   text-transform: uppercase;
 }
 
-legend .form-labels {
+.billing-address .form-labels {
   padding-bottom: 10px;
   margin-bottom: 10px;
   border-bottom: dashed 1px #ccc;
