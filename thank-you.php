@@ -129,11 +129,10 @@ layout: default
               <p class="thank-you-p">Be sure to check your inbox and confirm the email address used
                 <br />during registration.</p>
               <h4 class="thank-you-h4">Partner ID (PID)</h4>
-              <p class="thank-you-p">Your Kaltura Partner ID, or PID, is a unique number identifying your Kaltura account.
-                <br />
-                <span class="thank-you-highlight">Your Partner ID is: <?php echo $_GET['partner_id']; ?></span>
-              </p>
-              
+              <p class="thank-you-p">
+              <input type="text" value="Your Partner ID: <?php echo $_GET['partner_id']; ?>" readonly="" size="21" style="background: transparent;font-size: 12px;border: solid 1px #9EB4B7;margin-bottom: 6px;border-radius: 4px;padding: 2px;font-weight: bold;padding-left: 6px;">
+              <p>Your Kaltura Partner ID, or PID, is a unique number identifying your Kaltura account.</p>
+
               <h4 class="thank-you-h4">Kaltura Session</h4>
               <input type="text" value="<?php echo $_GET['ks']; ?>" readonly="" style="color: #9D9D9D; background: transparent; font-size: 12px; border: solid 1px #9EB4B7; margin-bottom: 6px; border-radius: 4px; padding: 2px; width: 100%;">
               <p class="thank-you-p">The string above is a Kaltura Session (aka KS). The KS authenticates the account and user when making an API call. You are expected to provide a generated KS with every API call you make.
