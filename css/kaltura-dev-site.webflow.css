@@ -2399,6 +2399,22 @@ html.w-mod-js *[data-ix="search-input-hide-on-load"] {
   display: none;
 }
 
+blockquote.recipes-ref-list {
+   font-size: 12px;
+}
+
+blockquote.recipes-ref-list ul {
+   padding-left: 0;
+}
+
+blockquote.recipes-ref-list ul li {
+   background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRF…JWNQyI4amKoqDCRmMJ3+7t6Pxr9+DcX94h/iv0nYJ/gswAFTwRo4g1gEiAAAAAElFTkSuQmCC');
+   background-repeat: no-repeat;
+   line-height: 16px;
+   padding-left: 20px;
+   list-style-type: none;
+}
+
 @media (max-width: 991px) {
   .nav-logo-img {
     padding-left: 0px;
@@ -3114,3 +3130,4 @@ html.w-mod-js *[data-ix="search-input-hide-on-load"] {
       font-weight: bold;
     }
   }
+
