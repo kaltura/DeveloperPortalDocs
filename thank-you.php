@@ -168,11 +168,26 @@ layout: default
               </blockquote>
               
               <h4 class="thank-you-h4">Kaltura Player &amp; uiConf</h4>
-              <p class="thank-you-p">uiConf ID: <?php echo $_GET['ui_conf_id']; ?></p>
-              <p class="thank-you-p">Kaltura's HTML5 video library delivers&nbsp;the right player, stream and advertising to the right device anywhere, with just a single embed code.&nbsp;
-                <br />Functionality of both Flash and HTML5 players can be extended with our&nbsp;Unified development API.
-                <br />
-                <br />Each player configuration is represented by a unique identifier called a uiConf.</p>
+              <p class="thank-you-p">To simplify playing video across devices, browsers and applications, Kaltura provides a web-standards cross-pltform video player. The player abstracts the complexities around delivery of the video across devices, browsers and native apps as well as the experience around your video including controls UI and branding through in-video quizzes and ads, all with a single embed code.
+              <br />The Kaltura Player's unified JavaScript API for integrations and plugins further simplifies embedding and integrating the player into other applications quickly and at ease without compromising on design or features.</p>
+              <input type="text" value="A Player uiConf Id from your account: <?php echo $_GET['ui_conf_id']; ?>" readonly="" style="background: transparent; font-size: 12px; border: solid 1px #9EB4B7; margin-bottom: 8px; border-radius: 4px; padding: 2px; width: 100%;">
+              <p class="thank-you-p">The id above is called uiConf Id, it represents an instance of a player that is configured on your Kaltura account. This id is used to reference the player instance you wish to use when embedding a video in your pages or app views.</p>
+              <p class="thank-you-p">There are a number of methods to embed players. All methods require these base parameters: <span class="code-highlight">partnerId</span>, <span class="code-highlight">uiConfId</span> and <span class="code-highlight">entryId</span>.
+              <br/>For example, the embed code to render the player you see below, is:</p>
+              
+              <div class="highlighter-rouge">
+                <pre class="highlight"><code>
+                kWidget.embed({
+                    "targetId": "the_div_id_to_render_in",
+                    "wid": "_<?php echo $_GET['partner_id']; ?>",
+                    "uiconf_id": <?php echo $_GET['ui_conf_id']; ?>,
+                    "flashvars": {
+                      // this will ensure we count play per authenticated user. remove if you want anonymous playback.
+                      "ks": "<?php echo $_GET['ks']; ?>"
+                    },
+                    "entry_id": "<?php echo $_GET['entry_id']; ?>"
+                  });
+</code></pre></div>
               
               <div class="w-embed w-iframe w-script media-embed-div">
                 <!-- Outer div defines maximum space the player can take -->
