@@ -128,12 +128,11 @@ layout: default
               <h4 class="thank-you-h4">Confirm Your Email</h4>
               <p class="thank-you-p mail-confirmation">Look for the verification email in your inbox and click the link in the email to activate your new account and create a password.</p>
               <h4 class="thank-you-h4">YOUR Kaltura Account Id (Patrner Id)</h4>
-              <p class="thank-you-p">
-              <input type="text" value="Your partnerId: <?php echo $_GET['partner_id']; ?>" readonly="" size="24" style="background: transparent;font-size: 12px;border: solid 1px #9EB4B7;margin-bottom: 6px;border-radius: 4px;padding: 2px;font-weight: bold;padding-left: 6px;">
+              <input type="text" value="Your partnerId: <?php echo $_GET['partner_id']; ?>" readonly="" size="24" style="background: transparent;font-size: 12px;border: solid 1px #9EB4B7;margin-bottom: 8px;border-radius: 4px;padding: 2px;font-weight: bold;padding-left: 6px;">
               <p>Your Kaltura Partner ID, or PID, is a unique number identifying your Kaltura account.</p>
 
               <h4 class="thank-you-h4">Kaltura Session</h4>
-              <input type="text" value="<?php echo $_GET['ks']; ?>" readonly="" style="color: #9D9D9D; background: transparent; font-size: 12px; border: solid 1px #9EB4B7; margin-bottom: 6px; border-radius: 4px; padding: 2px; width: 100%;">
+              <input type="text" value="<?php echo $_GET['ks']; ?>" readonly="" style="background: transparent; font-size: 12px; border: solid 1px #9EB4B7; margin-bottom: 8px; border-radius: 4px; padding: 2px; width: 100%;">
               <p class="thank-you-p">The string above is a Kaltura Session (aka KS). The KS authenticates the account and user when making an API call. You are expected to provide a generated KS with every API call you make.
               <br />
               There are three methods for generating a Kaltura Session:</p>
@@ -169,6 +168,7 @@ layout: default
               </blockquote>
               
               <h4 class="thank-you-h4">Kaltura Player &amp; uiConf</h4>
+              <p class="thank-you-p">uiConf ID: <?php echo $_GET['ui_conf_id']; ?></p>
               <p class="thank-you-p">Kaltura's HTML5 video library delivers&nbsp;the right player, stream and advertising to the right device anywhere, with just a single embed code.&nbsp;
                 <br />Functionality of both Flash and HTML5 players can be extended with our&nbsp;Unified development API.
                 <br />
@@ -197,14 +197,8 @@ layout: default
                 </script>
               </div>
 
-              <p class="thank-you-p">uiConf ID: <?php echo $_GET['ui_conf_id']; ?></p>
-              
-              <h4 class="thank-you-h4">Recipes</h4>
-              <p class="thank-you-p">Get up and running quickly by using VPaaS recipes generated for specific use-cases.</p>
-              <ul class="case-study-template-list-wrapper-bullets">
-                <li class="case-study-template-li-bullets">Embed and list media into your application using the <span class="code-highlight">Media.get</span> and <span class="code-highlight">List</span> recipes</li>
-                <li class="case-study-template-li-bullets">Upload media to Kaltura from your application using the&nbsp;<span class="code-highlight">Upload</span>&nbsp;recipe</li>
-              </ul>
+              <div id="spacer-bottom" style="width: 10px;height: 40px;"></div>
+
             </div>
           </div>
           <div class="w-col w-col-6 w-clearfix">
