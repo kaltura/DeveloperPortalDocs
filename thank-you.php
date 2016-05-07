@@ -126,9 +126,9 @@ layout: default
             <div class="get-you-started-div">
               <h3 class="thank-you-h3">Lets Get You Started</h3>
               <h4 class="thank-you-h4">Confirm Your Email</h4>
-              <p class="thank-you-p mail-confirmation">Look for the verification email in your inbox and click the link in the email to activate your new account and create a password.</p>
+              <p class="thank-you-p mail-confirmation" style="font-weight: bold;">Look for the verification email in your inbox and click the link in the email to activate your new account and create a password.</p>
               <h4 class="thank-you-h4">YOUR Kaltura Account Id (Patrner Id)</h4>
-              <input type="text" value="Your partnerId: <?php echo $_GET['partner_id']; ?>" readonly="" size="24" style="background: transparent;font-size: 12px;border: solid 1px #9EB4B7;margin-bottom: 8px;border-radius: 4px;padding: 2px;font-weight: bold;padding-left: 6px;">
+              <input type="text" value="Your partnerId: <?php echo $_GET['partner_id']; ?>" readonly="" size="24" style="background: transparent;font-size: 12px;border: solid 1px #9EB4B7;margin-bottom: 8px;border-radius: 4px;padding: 2px;padding-left: 6px;">
               <p>Your Kaltura Partner ID, or PID, is a unique number identifying your Kaltura account.</p>
 
               <h4 class="thank-you-h4">Kaltura Session</h4>
