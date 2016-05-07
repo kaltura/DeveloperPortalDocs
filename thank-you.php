@@ -129,7 +129,7 @@ layout: default
               <p class="thank-you-p mail-confirmation" style="font-weight: bold;">Look for the verification email in your inbox and click the link in the email to activate your new account and create a password.</p>
               <h4 class="thank-you-h4">YOUR Kaltura Account Id (Patrner Id)</h4>
               <input type="text" value="Your partnerId: <?php echo $_GET['partner_id']; ?>" readonly="" size="24" style="background: transparent;font-size: 12px;border: solid 1px #9EB4B7;margin-bottom: 8px;border-radius: 4px;padding: 2px;padding-left: 6px;">
-              <p>Your Kaltura Partner ID, or PID, is a unique number identifying your Kaltura account.</p>
+              <p class="thank-you-p">Your Kaltura Partner ID, or PID, is a unique number identifying your Kaltura account.</p>
 
               <h4 class="thank-you-h4">Kaltura Session</h4>
               <input type="text" value="<?php echo $_GET['ks']; ?>" readonly="" style="background: transparent; font-size: 12px; border: solid 1px #9EB4B7; margin-bottom: 8px; border-radius: 4px; padding: 2px; width: 100%;">
@@ -151,7 +151,7 @@ layout: default
 
               <h4 class="thank-you-h4">Kaltura Entries</h4>
               <p class="thank-you-p">Content assets are called entries in Kaltura. An entry is a logical object representing all aspects of the media asset including its metadata, thumbnails, transcoded flavors, captions, cue-points (timed metadata), and more. Every entry is referenced by its unique identifier, the Entry Id.</p>
-              <input type="text" value="And entryId from your account: <?php echo $_GET['entry_id']; ?>" readonly="" style="background: transparent; font-size: 12px; border: solid 1px #9EB4B7; margin-bottom: 8px; border-radius: 4px; padding: 2px; width: 100%;">
+              <input type="text" value="Entry from your account: <?php echo $_GET['entry_id']; ?>" readonly="" style="background: transparent; font-size: 12px; border: solid 1px #9EB4B7; margin-bottom: 8px; border-radius: 4px; padding: 2px; width: 100%;">
               <p class="thank-you-p">In Kaltura you can manage various types of assets, including on-demand media assets (video, audio, and image files), live stream video or audio broadcasts, as well as playlists, documents and other special data files.</p>
               <p class="thank-you-p">Kaltura entries come with basic metadata fields such as title, description and tags. You can enrich the metadata fields available for your entries by adding your own custom metadata profiles and fields. These metadata fields can then be used for smarter search queries or as rules in processes and workflows.</p>
               <blockquote class="recipes-ref-list">
@@ -169,7 +169,7 @@ layout: default
               <h4 class="thank-you-h4">Kaltura Player &amp; uiConf</h4>
               <p class="thank-you-p">Kaltura also features a web-standards cross-pltform video player library. The player abstracts the complexities around delivery of video across devices, browsers and native apps and the user-experience with your video including controls UI and branding through in-video quizzes and ads, all with a single embed code.
               <br />The Kaltura Player unified JavaScript API for integrations and plugins further simplifies embedding and integrating the player into pages and apps quickly and at ease without compromising on design or features.</p>
-              <input type="text" value="Player instance uiConfId from your account: <?php echo $_GET['ui_conf_id']; ?>" readonly="" style="background: transparent; font-size: 12px; border: solid 1px #9EB4B7; margin-bottom: 8px; border-radius: 4px; padding: 2px; width: 100%;">
+              <input type="text" value="Player instance uiConf from your account: <?php echo $_GET['ui_conf_id']; ?>" readonly="" style="background: transparent; font-size: 12px; border: solid 1px #9EB4B7; margin-bottom: 8px; border-radius: 4px; padding: 2px; width: 100%;">
               <p class="thank-you-p">The id above is called uiConf Id. This id is used to reference the player instance you wish to use when embedding a video in your pages or app views.</p>
               <p class="thank-you-p">There are a number of methods to embed players. All methods require these base parameters: <span class="code-highlight">partnerId</span>, <span class="code-highlight">uiConfId</span> and <span class="code-highlight">entryId</span>.
               <br/>For example, this is player embed of a player and entry from your account:</p>
