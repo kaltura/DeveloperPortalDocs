@@ -143,7 +143,7 @@ layout: default
                 <li class="case-study-template-li-bullets">Calling&nbsp;<span class="code-highlight">user.loginByLoginId</span> action. This method is recommended for managing registered users in Kaltura, and allowing users to login using email and password.</li>
                 <li class="case-study-template-li-bullets">Using the&nbsp;<span class="code-highlight">appToken</span> service. This method is recommended for when you are providing access to scripts or applications that are managed by others, and provides tools to manage API tokens per application provider, revoke access, and more.</li>
               </ul>
-              <blockquote style="font-size: 12px;">
+              <blockquote class="recipes-ref-list">
                 <strong>Try it with Code Recipes:</strong> 
                 <ul>
                   <li><a href="https://developer.kaltura.com/recipes/authentication" target="_blank">using session and users recipe</a></li>
