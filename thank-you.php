@@ -129,7 +129,7 @@ layout: default
               <p class="thank-you-p mail-confirmation">Look for the verification email in your inbox and click the link in the email to activate your new account and create a password.</p>
               <h4 class="thank-you-h4">YOUR Kaltura Account Id (Patrner Id)</h4>
               <p class="thank-you-p">
-              <input type="text" value="Your Partner Id: <?php echo $_GET['partner_id']; ?>" readonly="" size="24" style="background: transparent;font-size: 12px;border: solid 1px #9EB4B7;margin-bottom: 6px;border-radius: 4px;padding: 2px;font-weight: bold;padding-left: 6px;">
+              <input type="text" value="Your partnerId: <?php echo $_GET['partner_id']; ?>" readonly="" size="24" style="background: transparent;font-size: 12px;border: solid 1px #9EB4B7;margin-bottom: 6px;border-radius: 4px;padding: 2px;font-weight: bold;padding-left: 6px;">
               <p>Your Kaltura Partner ID, or PID, is a unique number identifying your Kaltura account.</p>
 
               <h4 class="thank-you-h4">Kaltura Session</h4>
@@ -143,42 +143,38 @@ layout: default
                 <li class="case-study-template-li-bullets">Using the&nbsp;<span class="code-highlight">appToken</span> service. This method is recommended for when you are providing access to scripts or applications that are managed by others, and provides tools to manage API tokens per application provider, revoke access, and more.</li>
               </ul>
               <blockquote class="recipes-ref-list">
-                <strong>Try it with Code Recipes:</strong> 
+                <strong>Learn &amp; explore with Code Recipes:</strong> 
                 <ul>
-                  <li><a href="https://developer.kaltura.com/recipes/authentication" target="_blank">using session and users recipe</a></li>
-                  <li><a href="https://developer.kaltura.com/recipes/app_tokens" target="_blank">appTokens recipe</a></li>
+                  <li><a href="https://developer.kaltura.com/recipes/authentication" target="_blank">Creating KS using session or user services.</a></li>
+                  <li><a href="https://developer.kaltura.com/recipes/app_tokens" target="_blank">Managing applications access with the appTokens service.</a></li>
                 </ul>
               </blockquote>
 
               <h4 class="thank-you-h4">Kaltura Entries</h4>
-              <p class="thank-you-p">Each content item ingested into Kaltura is represented by an Entry, and each Entry has a unique identifier called an Entry ID.</p>
-              <div class="w-embed w-iframe w-script media-embed-div">
-                <!-- Outer div defines maximum space the player can take -->
-                <div style="width: 100%;display: inline-block;position: relative;">
-                  <!--  inner pusher div defines aspect ratio: in this case 16:9 ~ 56.25% -->
-                  <div id="dummy" style="margin-top: 56.25%;"></div>
-                  <!--  the player embed target, set to take up available absolute space   -->
-                  <script src="https://cdnapisec.kaltura.com/p/346/sp/34600/embedIframeJs/uiconf_id/34599271/partner_id/346" style="margin: 0px 0px 0px 0px;"></script>
-                  <div id="kaltura_player_1461185766" style="position:absolute;top:0;left:0;left: 0;right: 0;bottom:0;border:none;"></div>
-                </div>
-                <script>
-                  kWidget.embed({
-                    "targetId": "kaltura_player_1461185766",
-                    "wid": "_346",
-                    "uiconf_id": 34599271,
-                    "flashvars": {
-                      "streamerType": "auto"
-                    },
-                    "cache_st": 1461185766,
-                    "entry_id": "0_dkntmqqu"
-                  });
-                </script>
-              </div>
+              <p class="thank-you-p">Each content item ingested into Kaltura is represented by an Entry, a logical object representing and referencing all aspects of a single media asset including its metadata, thumbnails, transcoded flavors, captions, and more. Every entry is referenced by its unique identifier, the Entry Id. 
+              <br />An entryId normally looks like this: <span class="code-highlight">0_dkntmqqu</span>.</p>
+              <p class="thank-you-p">When an entry is created by calling the <span class="code-highlight">mediaEntry.add</span> action, it is simply an empty object.<br />After ingesting a media file with the <span class="code-highlight">uploadToken</span> service and associating the media file with the entry by calling the <span class="code-highlight">mediaEntry.addContent</span> action – a sequence of processes kicks in analyzing and preparing the media entry for publishing. The Transcoding Profile that was assigned to the entry will determine  when the entry processing is complete, and mark the entry as <span class="code-highlight">READY</span>.</p>
+              <p class="thank-you-p">The <span class="code-highlight">KalturaBaseEntry</span> is the abstract class from which all types of entries are inherited. In Kaltura you can manage various types of assets, including on-demand media assets (video, audio, and image files) using the <span class="code-highlight">media</span> service and <span class="code-highlight">mediaEntry</span> class, live broadcasts using the <span class="code-highlight">liveStream</span> service</p> and <span class="code-highlight">liveStreamEntry</span>, and even playlists, documents and special non-media data files.</p>
+              <p class="thank-you-p">Kaltura entries have base metadata fields such as title, description and tags. And in addition, you can create as many custom metadata profiles and fields as you'd like to manage rich metadata schemas with your content library. These metadata fields can then be used for smart search queries and as rules in processes and workflows. Custom metadata is managed with the <span class="code-highlight">metadata</span> and <span class="code-highlight">metadataProfile</span> services.</p>
+              <p class="thank-you-p">The Kaltura Entry is at the core of media management in VPaaS. As you'll explore it further, you'll learn the many associated services and objects that make Kaltura so flexible and robust, such as working with timed-metadata and in-video-quizzes using the <span class="code-highlight">cuePoint</span> service, managing transcripts and captions with the <span class="code-highlight">captionAsset</span> service, and much more.</p>
+              <blockquote class="recipes-ref-list">
+                <strong>Learn &amp; explore with Code Recipes:</strong> 
+                <ul>
+                  <li><a href="https://developer.kaltura.com/recipes/upload" target="_blank">Create and upload on-demand media files.</a></li>
+                  <li><a href="https://developer.kaltura.com/recipes/live_broadcast" target="_blank">Create live broadcast and stream live from webcam.</a></li>
+                  <li><a href="https://developer.kaltura.com/recipes/video_search" target="_blank">List and search entries.</a></li>
+                  <li><a href="https://developer.kaltura.com/recipes/metadata" target="_blank">Work with custom metadata.</a></li>
+                  <li><a href="https://developer.kaltura.com/recipes/code_cue_points" target="_blank">Timed metadata using cue points.</a></li>
+                  <li><a href="https://developer.kaltura.com/recipes/captions" target="_blank">Upload captions and run in-video search.</a></li>
+                </ul>
+              </blockquote>
+              
               <h4 class="thank-you-h4">Kaltura Player &amp; uiConf</h4>
               <p class="thank-you-p">Kaltura's HTML5 video library delivers&nbsp;the right player, stream and advertising to the right device anywhere, with just a single embed code.&nbsp;
                 <br />Functionality of both Flash and HTML5 players can be extended with our&nbsp;Unified development API.
                 <br />
                 <br />Each player configuration is represented by a unique identifier called a uiConf.</p>
+              
               <div class="w-embed w-iframe w-script media-embed-div">
                 <!-- Outer div defines maximum space the player can take -->
                 <div style="width: 100%;display: inline-block;position: relative;">
@@ -201,6 +197,7 @@ layout: default
                   });
                 </script>
               </div>
+
               <p class="thank-you-p">uiConf ID: <?php echo $_GET['ui_conf_id']; ?></p>
               
               <h4 class="thank-you-h4">Recipes</h4>
