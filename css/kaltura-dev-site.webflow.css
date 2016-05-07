@@ -2413,6 +2413,8 @@ blockquote.recipes-ref-list ul li {
    line-height: 16px;
    padding-left: 20px;
    list-style-type: none;
+   margin-bottom: 4px;
+   margin-top: 4px;
 }
 
 @media (max-width: 991px) {
