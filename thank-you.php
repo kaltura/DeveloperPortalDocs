@@ -150,11 +150,10 @@ layout: default
               </blockquote>
 
               <h4 class="thank-you-h4">Kaltura Entries</h4>
-              <p class="thank-you-p">Content assets are called entries in Kaltura. An entry is a logical object representing all aspects of the media asset including its metadata, thumbnails, transcoded flavors, captions, cue-points (timed metadata), and more. Every entry is referenced by its unique identifier, the Entry Id. 
-              <br />An entryId normally looks like this: <span class="code-highlight">0_dkntmqqu</span>.</p>
-              <p class="thank-you-p">When an on-demand media entry is created it is an empty object. Only after attaching a file to it – a sequence of processes kick in to analyze and prepare the media entry for use.</p>
-              <p class="thank-you-p">The <span class="code-highlight">KalturaBaseEntry</span> is the abstract class from which all types of entries are inherited. In Kaltura you can manage various types of assets, including on-demand media assets (video, audio, and image files) using the <span class="code-highlight">media</span> service, live broadcasts using the <span class="code-highlight">liveStream</span> service, as well as playlists, documents and other special data files.</p>
-              <p class="thank-you-p">Kaltura entries provide base metadata fields such as title, description and tags. You can extend the metadata fields available for your entries by adding your own custom metadata profiles and fields. These metadata fields can then be used for smarter search queries and as rules in processes and workflows.</p>
+              <p class="thank-you-p">Content assets are called entries in Kaltura. An entry is a logical object representing all aspects of the media asset including its metadata, thumbnails, transcoded flavors, captions, cue-points (timed metadata), and more. Every entry is referenced by its unique identifier, the Entry Id.</p>
+              <input type="text" value="And entryId from your account: <?php echo $_GET['entry_id']; ?>" readonly="" style="background: transparent; font-size: 12px; border: solid 1px #9EB4B7; margin-bottom: 8px; border-radius: 4px; padding: 2px; width: 100%;">
+              <p class="thank-you-p">In Kaltura you can manage various types of assets, including on-demand media assets (video, audio, and image files), live stream video or audio broadcasts, as well as playlists, documents and other special data files.</p>
+              <p class="thank-you-p">Kaltura entries come with basic metadata fields such as title, description and tags. You can enrich the metadata fields available for your entries by adding your own custom metadata profiles and fields. These metadata fields can then be used for smarter search queries or as rules in processes and workflows.</p>
               <blockquote class="recipes-ref-list">
                 <strong>Learn &amp; explore with Code Recipes:</strong> 
                 <ul>
@@ -168,25 +167,25 @@ layout: default
               </blockquote>
               
               <h4 class="thank-you-h4">Kaltura Player &amp; uiConf</h4>
-              <p class="thank-you-p">To simplify playing video across devices, browsers and applications, Kaltura provides a web-standards cross-pltform video player. The player abstracts the complexities around delivery of the video across devices, browsers and native apps as well as the experience around your video including controls UI and branding through in-video quizzes and ads, all with a single embed code.
-              <br />The Kaltura Player's unified JavaScript API for integrations and plugins further simplifies embedding and integrating the player into other applications quickly and at ease without compromising on design or features.</p>
-              <input type="text" value="A Player uiConf Id from your account: <?php echo $_GET['ui_conf_id']; ?>" readonly="" style="background: transparent; font-size: 12px; border: solid 1px #9EB4B7; margin-bottom: 8px; border-radius: 4px; padding: 2px; width: 100%;">
-              <p class="thank-you-p">The id above is called uiConf Id, it represents an instance of a player that is configured on your Kaltura account. This id is used to reference the player instance you wish to use when embedding a video in your pages or app views.</p>
+              <p class="thank-you-p">Kaltura also features a web-standards cross-pltform video player library. The player abstracts the complexities around delivery of video across devices, browsers and native apps and the user-experience with your video including controls UI and branding through in-video quizzes and ads, all with a single embed code.
+              <br />The Kaltura Player unified JavaScript API for integrations and plugins further simplifies embedding and integrating the player into pages and apps quickly and at ease without compromising on design or features.</p>
+              <input type="text" value="Player instance uiConfId from your account: <?php echo $_GET['ui_conf_id']; ?>" readonly="" style="background: transparent; font-size: 12px; border: solid 1px #9EB4B7; margin-bottom: 8px; border-radius: 4px; padding: 2px; width: 100%;">
+              <p class="thank-you-p">The id above is called uiConf Id. This id is used to reference the player instance you wish to use when embedding a video in your pages or app views.</p>
               <p class="thank-you-p">There are a number of methods to embed players. All methods require these base parameters: <span class="code-highlight">partnerId</span>, <span class="code-highlight">uiConfId</span> and <span class="code-highlight">entryId</span>.
-              <br/>For example, the embed code to render the player you see below, is:</p>
+              <br/>For example, this is player embed of a player and entry from your account:</p>
               
               <div class="highlighter-rouge">
                 <pre class="highlight"><code>
-                kWidget.embed({
-                    "targetId": "the_div_id_to_render_in",
-                    "wid": "_<?php echo $_GET['partner_id']; ?>",
-                    "uiconf_id": <?php echo $_GET['ui_conf_id']; ?>,
-                    "flashvars": {
-                      // this will ensure we count play per authenticated user. remove if you want anonymous playback.
-                      "ks": "<?php echo $_GET['ks']; ?>"
-                    },
-                    "entry_id": "<?php echo $_GET['entry_id']; ?>"
-                  });
+kWidget.embed({
+    "targetId": "the_div_id_to_render_in",
+    "wid": "_<?php echo $_GET['partner_id']; ?>",
+    "uiconf_id": <?php echo $_GET['ui_conf_id']; ?>,
+    "flashvars": {
+      // this will ensure we count play per authenticated user. remove if you want anonymous playback.
+      "ks": "<?php echo $_GET['ks']; ?>"
+    },
+    "entry_id": "<?php echo $_GET['entry_id']; ?>"
+  });
 </code></pre></div>
               
               <div class="w-embed w-iframe w-script media-embed-div">
@@ -212,6 +211,19 @@ layout: default
                 </script>
               </div>
 
+              <blockquote class="recipes-ref-list">
+                <strong>Learn &amp; explore with Code Recipes:</strong> 
+                <ul>
+                  <li><a href="http://player.kaltura.com/docs/kwidget" target="_blank">JavaScript function for player embed method.</a></li>
+                  <li><a href="http://player.kaltura.com/docs/autoEmbed" target="_blank">JavaScript tag player embed.</a></li>
+                  <li><a href="http://player.kaltura.com/docs/responsive" target="_blank">Example reference for responsive player embed.</a></li>
+                  <li><a href="http://player.kaltura.com/docs/thumb" target="_blank">JavaScript function thmbnail embed (click turns thumbnail to player).</a></li>
+                  <li><a href="http://player.kaltura.com/docs/NativeCallout" target="_blank">Enables a robust web to native bridge.</a></li>
+                  <li><a href="http://player.kaltura.com/docs/thumb" target="_blank">JavaScript function thmbnail embed (click turns thumbnail to player).</a></li>
+                  <li><a href="https://developer.kaltura.com/recipes/player_uiconf" target="_blank">Working with the uiConf service.</a></li>
+                </ul>
+              </blockquote>
+
               <div id="spacer-bottom" style="width: 10px;height: 40px;"></div>
 
             </div>
@@ -224,7 +236,8 @@ layout: default
                   <div data-ix="show-media-repurpose-div" class="use-case-div left mr">
                     <div class="icon-blck"><span class="fa fa-refresh fa-2x"></span>
                     </div>
-                    <div class="what-building-title">Media Repurposing / Transcoding</div>
+                    <div class="what-building-title">Media
+                    <br />Transcoding</div>
                   </div>
                 </div>
                 <div class="w-col w-col-6 w-col-stack">
