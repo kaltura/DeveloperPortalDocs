@@ -90,7 +90,7 @@ git clone https://github.com/kaltura/player-sdk-native-ios.git
 ```
 
 ### App Transport Security 
-Detailed information about the Application Transport Security can be found here: {% extlink App Transport Security https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/player-sdk/Troubleshooting.md %}.
+Detailed information about the Application Transport Security can be found here: [App Transport Security](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/05_Mobile-Video-Player-SDKs/Troubleshooting.md).
 
 
 ## iOS Player SDK Basic Embedding  
@@ -138,4 +138,4 @@ This section describes how to use the iOS Player SDK basic embedding.
 
 
 ### Initialize PlayerViewController for Inline
-To initialize the PlayerViewController for inline, refer to [Inline player](Fullscreen-inline-iOS).
+To initialize the PlayerViewController for inline, refer to [Inline player](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/05_Mobile-Video-Player-SDKs/Fullscreen-inline-iOS.md).
