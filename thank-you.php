@@ -172,7 +172,7 @@ layout: default
               <input type="text" value="Player instance uiConf from your account: <?php echo $_GET['ui_conf_id']; ?>" readonly="" style="background: transparent; font-size: 12px; border: solid 1px #9EB4B7; margin-bottom: 8px; border-radius: 4px; padding: 2px; width: 100%;">
               <p class="thank-you-p">The id above is called uiConf Id. This id is used to reference the player instance you wish to use when embedding a video in your pages or app views.</p>
               <p class="thank-you-p">There are a number of methods to embed players. All methods require these base parameters: <span class="code-highlight">partnerId</span>, <span class="code-highlight">uiConfId</span> and <span class="code-highlight">entryId</span>.
-              <br/>For example, this is player embed of a player and entry from your account:</p>
+              <br/>For example, this is a player embed code of a player and video entry from your account:</p>
               
               <div class="highlighter-rouge"><pre class="highlight"><code><span class="nx">kWidget</span><span class="p">.</span><span class="nx">embed</span><span class="p">({</span>
     <span class="s1">'targetId'</span><span class="p">:</span> <span class="s1">'kaltura_player'</span><span class="p">,</span>
