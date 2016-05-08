@@ -161,7 +161,7 @@ To change the current player behavoir, use the sendNotification API. This method
   - action name
   - parameter (string/json)  
 
-* Examples:
+#### Examples:  
 
 **Notification without parameters:**
  
