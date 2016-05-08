@@ -3,9 +3,9 @@ layout: page
 title: Media Analytics
 ---
 
-## Intro to Media Analytics
+## Introduction to Media Analytics
 
-Kaltura's analytics engine underpins all content-related interactions, covering everything from plays to user-interactions on player pages such as likes and shares. All analytics reports are exposed via the API.
+Kaltura's Analytics Engine underpins all content-related interactions, covering everything from plays to user-interactions on Player pages, such as likes and shares. All analytics reports are exposed via the API.
 
 To get an idea of what data is available to you, take a look at the following article:
 >**Knowledge Article:** [Creating and Tracking Analytics in the KMC](http://knowledge.kaltura.com/creating-and-tracking-analytics-kmc-0#analytics)
