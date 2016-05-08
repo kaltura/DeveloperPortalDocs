@@ -43,7 +43,7 @@ After you have included the Kaltura Player library, the following kWidget API em
 #### Embed API Method Parameters
 
 * `targetId`: String - this is the ID of the DOM element where the Player will be rendered (any contents of the element will be removed when the Player is rendered instead of this given element). 
-* [`settings`](#the-kwidget-settings-object): Objec - this is the object of the settings properties to be used when building and rendering the Player. 
+* [`settings`](#the-kwidget-settings-object): Object - this is the object of the settings properties to be used when building and rendering the Player. 
 
 #### kWidget Settings Object
 
