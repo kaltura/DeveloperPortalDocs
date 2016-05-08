@@ -5,7 +5,7 @@ title: Using and Configuring Player Objects, Native vs HTML5 controls
 
 [![iOS](https://img.shields.io/badge/iOS-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios) [![Android](https://img.shields.io/badge/Android-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios)
 
-One of the key features of the Player-SDK is the ability to use the html/css UI, which can work on all platforms [iOS/ Android/ Web].
+One of the key features of the Player-SDK is the ability to use the HTML/CSS UI, which can work on all platforms [iOS/ Android/ Web].
 
 As a developer you can choose if you want to:
 
