@@ -21,14 +21,14 @@ The plugins can be developed to:
 
 ## Kaltura Plugins
 The following are the Kaltura-provided plugins that you can implement in your system:
-{% extlink Kaltura Player Plugins https://vpaas.kaltura.com/documentation/player-sdk/Player-Plugins-in-the-SDK-Supported-plugins#sthash.3a8Dft10.dpbs %}.
+[Kaltura Player Plugins](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/05_Mobile-Video-Player-SDKs/Player-Plugins-in-the-SDK-Supported-plugins.md#sthash.3a8Dft10.dpbs).
 
 ## How to Enable/Create a Plugin
 
 #### Using an Existing Plugin
 
 1. If you want to change/add a plugin, the key should begin with the plugin name, dot and the plugin attribute. Every plugin includes the plugin attributes required for enabling or disabling the plugin.
-2. In order to add plugin, use the addConfigKey ({% extlink iOS https://github.com/kaltura/player-sdk-native-ios/blob/master/KALTURAPlayerSDK/KPPlayerConfig.h#L57 %}, {% extlink Android https://github.com/kaltura/player-sdk-native-android/blob/master/playerSDK/src/main/java/com/kaltura/playersdk/KPPlayerConfig.java#L86%}) function. Note that the first parameter takes the key name and the second takes the value.
+2. In order to add plugin, use the addConfigKey ([iOS](https://github.com/kaltura/player-sdk-native-ios/blob/master/KALTURAPlayerSDK/KPPlayerConfig.h#L57), [Android](https://github.com/kaltura/player-sdk-native-android/blob/master/playerSDK/src/main/java/com/kaltura/playersdk/KPPlayerConfig.java#L86)) function. Note that the first parameter takes the key name and the second takes the value.
 
 In this example, the loadingSpinner plugin has been disabled:
 
