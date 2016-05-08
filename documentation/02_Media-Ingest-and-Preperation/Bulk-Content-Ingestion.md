@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Bulk Content Ingestion API
-weight: 202
+weight: 302
 ---
 
 Kaltura offers bulk content ingenstion to support scenarios where you need to ingest more than a few to large number of internet accessible files. Bulk upload presents a great advantage to consolidate large amounts of video content in different locations from remote sites.  
@@ -35,7 +35,7 @@ Download the {% extlink Sample CSV Bulk Upload file https://cdnapisec.kaltura.co
 
 ### Bulk upload with CSV
 
-To specify the fields and their order in the CSV file, the first line in the CSV file should start with an ‘*’  (asterisk sign) followed by the list of field names, each new field separated by a commas.   
+To specify the fields and their order in the CSV file, the first line in the CSV file should start with an '\*'  (asterisk sign) followed by the list of field names, each new field separated by a commas.   
 Lines with a ‘#’ (hash sign) are treated as comments, and will not be processed.  
 Each line after the fields definition line (which starts with an ‘*’ sign) represents a Kaltura Entry to be ingested and should include the values of every field defined above.  
 All entry fields are processed according to the definition line and the order of the fields in it.  
