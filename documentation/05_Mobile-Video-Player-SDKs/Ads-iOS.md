@@ -42,7 +42,7 @@ To configure the Player to use Google ads, add the following configuration to yo
 
 To listen to ad events, use the following:
 
-**@todo** link to the kdp api example
+[Ads event test page](http://player.kaltura.com/modules/DoubleClick/tests/DoubleClickAdEvents.qunit.html)  
 
 Click here for a {% extlink list of commonly used Player ad events https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/media-player/Kaltura-Media-Player-API.md#commonly-used-player-ad-events-ad-sequence-events %}.
 
