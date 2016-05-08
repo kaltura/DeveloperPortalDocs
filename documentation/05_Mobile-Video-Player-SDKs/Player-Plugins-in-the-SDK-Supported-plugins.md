@@ -8,7 +8,7 @@ title: Player Plugins in the SDK
 
 In this article you'll find the supported Player plugins in the Player-SDK.
 
-All plugins can be included using the Player studio by simply editing the uiconf object or changing the configuration in the config object.
+All plugins can be included using the Player studio by simply editing the **uiconf** object or changing the configuration in the **config** object.
 
 ---
 
