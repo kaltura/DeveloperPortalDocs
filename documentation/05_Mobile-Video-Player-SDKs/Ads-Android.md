@@ -19,7 +19,8 @@ config.addConfig("doubleClick.adTagUrl", "your ad tag URL");
 # Listening to Ad Events
 To listen to ad events, you can use the following:
 
-[Ad events test page](http://player.kaltura.com/modules/DoubleClick/tests/DoubleClickAdEvents.qunit.html)
+[Ad events test page](http://player.kaltura.com/modules/DoubleClick/tests/DoubleClickAdEvents.qunit.html)  
+
 Click here for a {% extlink list of commonly used Player ad events https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/media-player/Kaltura-Media-Player-API.md#commonly-used-player-ad-events-ad-sequence-events %}.
 
 ```
