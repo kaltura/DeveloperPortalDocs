@@ -11,7 +11,7 @@ http://www.kaltura.com/api_v3/index.php?service=analytics&action=getData
 ### Input
 
 
-| Parameter     | DescriptionD     | Expected Values | Mandatory
+| Parameter     | DescriptionD     | Expected Values | Mandatory |
 |:---|:---|:---|:---|
 |startDate|	 start date from which to fetch the data|	The	date and time with the format yyyyMMdd-HH24:mi:ss| Yes |
 |endDate |	The end date until which to fetch the data	|A date and time with the format yyyyMMdd-HH24:mi:ss | Yes|
