@@ -59,10 +59,10 @@ Every report in Analytics is made up of Dimensions, Metrics and Filters. Dimensi
 What to read next:
 * **[Dimensions dictionary](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/08_Video-Analytics-and-Insights/DimensionsLexicon.md):** Features a list of the dimenstions and their meaning within the Kaltura Analytics project.
 * **[Metrics dictionary](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/08_Video-Analytics-and-Insights/MetricsLexicon.md):** Features a list of the metrics and their meaning within the Kaltura Analytics project.
-* **Player events guide:** https://kaltura.atlassian.net/wiki/display/KANAL/kAnalony+Event+Tracking+API - NEED A DIFFERENT LINK - THIS IS THE SAME AS THE EVENT TRACKING API LINK!!!
+* **[Player events guide](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/08_Video-Analytics-and-Insights/EventTrackingAPI.md):** Details the available Player events.
 * **Supported aggregations:** Features an overview and actual aggregations implemented for the following supported aggregations:
-  * Event tracking API
-  * Data retrieval API
+  * [Event Tracking API](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/08_Video-Analytics-and-Insights/EventTrackingAPI.md)
+  * [Data Retrieval API](https://github.com/kaltura/DeveloperPortalDocs/commit/82f7d413b14506df03a4cb5a0a2ece14b6bd79ea)
   * Kaltura Analytics User Guide:
   * Event Tracking
     * With Kaltura Player
