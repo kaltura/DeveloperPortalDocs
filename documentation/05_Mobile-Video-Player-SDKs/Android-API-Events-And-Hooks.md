@@ -5,11 +5,10 @@ subcat: Android
 ---
 
 [![Android](https://img.shields.io/badge/Android-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios)
+## Using the Kaltura Android Player API Methods  
+&nbsp;
 
 This article describes how to use the Android Player API methods to manage properties, events, and notifications. 
-
-## Using the Kaltura Android Player API Methods
-&nbsp;
 
 ### Android API Events and Hooks
 The Android API supports the following events and hooks.
