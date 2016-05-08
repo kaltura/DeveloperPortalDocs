@@ -62,5 +62,30 @@ url: "http://tbd.kaltura.com/collect?kalsig=1ebb5aea0c5f253fd8c578febe6a752f&cli
 ## Event Parameters Explanation
 | Parameter       | Description
 |:---|:---|
-| Basic | The partner account ID on Kaltura's platform	|
+| eventType	| A number describing the event type specified for each event| 
+| partnerId	| The partner account ID on Kaltura's platform| 
+| entryId	| The delivered content ID on Kaltura's platform| 
+| flavourId	| The ID of the flavour that is currently displayed (for future use, will not be used in aggregations) | 
+| ks| 	The Kaltura encoded session data| 
+| sessionId	| A unique string that identifies a unique viewing session, a page refresh should use different identifier| 
+| eventIndex	| A sequence number that describes the order of events in a viewing session| 
+| bufferTime	| The amount time spent on bufferring from the last viewing event (should be 0 to 10 in view events, and 0 to ∞ for play events)| 
+| actualBitrate	| The bitrate of the displayed flavour in kbps| 
+| preferredBitrate| 	Tthe bitrate of the preferred flavour that was set using the flash var| 
+| referrer	| The url of the page showing the content| 
+| deliveryType| 	The Player's streamerType (i.e. hls, http, smoothStream)| 
+| playbackType	| The type of the current playback (i.e., vod, live, dvr)| 
+| kalsig | The MD5 signature of all the querystring params| 
+| sessionStartTime| 	The timestamp of the first event in the session (in Unix Time format)| 
+| uiConfId| 	The Player ID and configuration the content was played on| 
+| clientVer| 	The Player version| 
+| clientTag| 	?| 
+| position| 	The position of the movie in seconds (this should be 0 on event types 1,2,3)| 
+| playbackContext	| The category id describing the current played context| 
+| customVar1| 	An optional custom parameter that can be used to segment the data| 
+| customVar2	| An optional custom parameter that can be used to segment the data| 
+| customVar3	| An optional custom parameter that can be used to segment the data| 
+| socialNetwrok	| The ID of the social network used for sharing| 
+| reportType	| The type of inappropriate content reported | 
+| targetPosition| 	The position of the movie, in seconds, to which the user requested to change| 
 
