@@ -28,7 +28,9 @@ With Kaltura Analytics you can collect, present and analyze data about system us
 
 The data in Kaltura Analytics can be divided into roughly two groups: Player events and other data.
 
-As a video is played, the Kaltura Player sends Player events related to viewer behavior (such as “Plays”, “Played 25%”, “Stopped”, etc.) to Kaltura Analytics. If you are using Kaltura Player versions XXX or higher, you will get the support for these Player event analytics out-of-the-box. If you are using a non-Kaltura player, you need to make sure all of the relevant events are reported correctly using Kaltura Event Tracking API. To learn how to configure your non-Kaltura player to report relevant events, click *here*.
+As a video is played, the Kaltura Player sends Player events related to viewer behavior (such as “Plays”, “Played 25%”, “Stopped”, etc.) to Kaltura Analytics. If you are using Kaltura Player versions XXX or higher, you will get the support for these Player event analytics out-of-the-box. If you are using a non-Kaltura player, you need to make sure all of the relevant events are reported correctly using Kaltura Event Tracking API. 
+
+To learn how to configure your non-Kaltura player to report relevant events, click *here*.
 
 ## Dimensions
 
@@ -42,6 +44,7 @@ OS: 9.1
 Country: USA
 State: California
 Time: ….
+
 You can read more about currently supported dimensions [here](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/08_Video-Analytics-and-Insights/DimensionsLexicon.md).
 
 ## Metrics
@@ -63,7 +66,7 @@ What to read next:
 * **Supported aggregations:** Features an overview and actual aggregations implemented for the following supported aggregations:
   * [Event Tracking API](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/08_Video-Analytics-and-Insights/EventTrackingAPI.md)
   * [Data Retrieval API](https://github.com/kaltura/DeveloperPortalDocs/commit/82f7d413b14506df03a4cb5a0a2ece14b6bd79ea)
-  * Kaltura Analytics User Guide:
+  * Kaltura Analytics User Guide
   * Event Tracking
     * With Kaltura Player
     * With non-Kaltura Player
