@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Event Tracking API
+title: Kaltura Analytics - Event Tracking API
 ---
 
 ## Overview
