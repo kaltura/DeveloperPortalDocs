@@ -21,14 +21,14 @@ In this document you'll learn how to:
 * Eliminate the UI and add native controls from the player
 
 **Note:** Before getting started, we recommend you read the following article on Player configuration:
-[Kaltura Media Player Configuration] (https://vpaas.kaltura.com/documentation/media-player/Player-Configuration) and verify that at this stage, you should have your Player configured via KMC.
+[Kaltura Media Player Configuration](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/04_Web-Video-Player/Player-Configuration.md) and verify that at this stage, you should have your Player configured via KMC.
 
 ## How to Work with the Kaltura Player API
-The following article provides a detailed explanation on {% extlink accessing the iOS Player API base methods https://vpaas.kaltura.com/documentation/player-sdk/Kaltura-iOS-player-API-Base-Methods#sthash.ObDzzCgb.spB9h8rA.dpbs %}.
+The following article provides a detailed explanation on [accessing the iOS Player API base methods] (https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/05_Mobile-Video-Player-SDKs/Kaltura-iOS-player-API-Base-Methods.md).
 
 
 ## Using the Kaltura Player Plugin
-To learm about the Kaltura Player plugin and how it helps you to customize your Player, refer to the {% extlink Player Plugin Overview https://vpaas.kaltura.com/documentation/player-sdk/Player-Plugin-Overview#sthash.avrM8Tj7.MuWspf6K.dpbs %}.
+To learm about the Kaltura Player plugin and how it helps you to customize your Player, refer to the [Player Plugin Overview]( https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/05_Mobile-Video-Player-SDKs/Player-Plugin-Overview.md).
 
 
 ## How to Remove html5 UI Controls
