@@ -174,19 +174,18 @@ layout: default
               <p class="thank-you-p">There are a number of methods to embed players. All methods require these base parameters: <span class="code-highlight">partnerId</span>, <span class="code-highlight">uiConfId</span> and <span class="code-highlight">entryId</span>.
               <br/>For example, this is player embed of a player and entry from your account:</p>
               
-              <div class="highlighter-rouge">
-                <pre class="highlight"><code>
-kWidget.embed({
-    "targetId": "the_div_id_to_render_in",
-    "wid": "_<?php echo $_GET['partner_id']; ?>",
-    "uiconf_id": <?php echo $_GET['ui_conf_id']; ?>,
-    "flashvars": {
-      // this will ensure we count play per authenticated user. remove if you want anonymous playback.
-      "ks": "<?php echo $_GET['ks']; ?>"
-    },
-    "entry_id": "<?php echo $_GET['entry_id']; ?>"
-  });
-</code></pre></div>
+              <div class="highlighter-rouge"><pre class="highlight"><code><span class="nx">kWidget</span><span class="p">.</span><span class="nx">embed</span><span class="p">({</span>
+    <span class="s1">'targetId'</span><span class="p">:</span> <span class="s1">'kaltura_player'</span><span class="p">,</span>
+    <span class="s1">'wid'</span><span class="p">:</span> <span class="s1">'_<?php echo $_GET['partner_id']; ?>'</span><span class="p">,</span>
+    <span class="s1">'uiconf_id'</span> <span class="p">:</span> <span class="s1">'<?php echo $_GET['ui_conf_id']; ?>'</span><span class="p">,</span>
+    <span class="s1">'entry_id'</span> <span class="p">:</span> <span class="s1">'<?php echo $_GET['entry_id']; ?>'</span><span class="p">,</span>
+    <span class="s1">'flashvars'</span> <span class="p">:</span> <span class="p">{</span>
+        <span class="c1">// adding valid Kaltura Session to your player embeds will ensure Engagement Analytics will be counted per authenticated user ids. Remove the KS, if you desire anonymous playback:</span>
+        <span class="s1">'ks'</span><span class="p">:</span> <span class="s1">'<?php echo $_GET['ks']; ?>'</span><span class="p">,</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+</code></pre>
+</div>
               
               <div class="w-embed w-iframe w-script media-embed-div">
                 <!-- Outer div defines maximum space the player can take -->
