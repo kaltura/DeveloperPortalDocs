@@ -43,12 +43,12 @@ config.addConfig("loadingSpinner.plugin", "false");
 
 #### Creating Custom Plugins
 
-To create custome plugins, follow the steps in the article {% extlink Extending the Player with Plugins https://vpaas.kaltura.com/documentation/media-player/Player-Plugins#sthash.gtmiiI7F.dpbs %}.
+To create custome plugins, follow the steps in the article [Extending the Player with Plugins](https://vpaas.kaltura.com/documentation/media-player/Player-Plugins#sthash.gtmiiI7F.dpbs).
 
 ### How to Detect if Configured Plugins are Loaded
-1. Open the iOS Player API base by following the steps in the article {% extlink Accessing the iOS player API Base Methods https://vpaas.kaltura.com/documentation/player-sdk/Kaltura-iOS-player-API-Base-Methods#sthash.ObDzzCgb.spB9h8rA.dpbs %}.
+1. Open the iOS Player API base by following the steps in the article [Accessing the iOS Player API Base Methods](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/05_Mobile-Video-Player-SDKs/Kaltura-iOS-player-API-Base-Methods.md).
 2. Follow the instructions in * "Receiving  Notification when the Player API Is Ready" to detect if configured plugins are loaded.
 
 ### How to Get Notified about Player Plugin-Related Callbacks
-1. Open the iOS Player API base by following the steps in the article {% extlink Accessing the iOS player API Base Methods https://vpaas.kaltura.com/documentation/player-sdk/Kaltura-iOS-player-API-Base-Methods#sthash.ObDzzCgb.spB9h8rA.dpbs %}.
+1. Open the iOS Player API base by following the steps in the article [Accessing the iOS Player API Base Methods](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/05_Mobile-Video-Player-SDKs/Kaltura-iOS-player-API-Base-Methods.md).
 2. Follow the instructions in * addKPlayerEventListener * to receive notifications about Player plugin-related callbacks.
