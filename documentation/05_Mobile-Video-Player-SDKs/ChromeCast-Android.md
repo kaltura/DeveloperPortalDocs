@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Google Cast Setup
+subcat: Android
 ---
 This article describes how to set up the Google Cast feature.
 
