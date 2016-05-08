@@ -16,8 +16,7 @@ OSX with Xcode 7+
 ### Minimum OS version 
 Player supports iOS 8 and above 
 
-Please refer to the Apple device matrix for device compliance.  
 
-## Roadmap: ( TBD consider this section)
- Apple watch , apple TV   
+
+  
 
