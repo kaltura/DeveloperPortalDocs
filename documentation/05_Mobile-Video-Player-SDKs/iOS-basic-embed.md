@@ -49,5 +49,5 @@ This article describes how to use the iOS Player SDK basic embedding.
 
 
 ## Initialize PlayerViewController for Inline
-To initialize the PlayerViewController for inline, refer to [Inline player](Fullscreen-inline-iOS).
+To initialize the PlayerViewController for inline, refer to [Inline player](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/05_Mobile-Video-Player-SDKs/Fullscreen-inline-iOS.md).
 
