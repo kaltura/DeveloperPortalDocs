@@ -55,8 +55,12 @@ url: "http://tbd.kaltura.com/collect?kalsig=1ebb5aea0c5f253fd8c578febe6a752f&cli
 });'
 
 ## Supported Events
-
+| Group       | Name     | ID     | Description
+|:---|:---|:---|:---|
+| Basic             | Partner            |  partner | The partner account ID on Kaltura's platform	|
 
 ## Event Parameters Explanation
-
+| Parameter       | Description
+|:---|:---|
+| Basic | The partner account ID on Kaltura's platform	|
 
