@@ -22,7 +22,7 @@ All plugins can be included using the Player studio by simply editing the uiconf
 | watermark |        |               V |         V |
 | theme | Custom style for the player - supported only for the web theme, Mobile is TBD       |               V |         V |
 | infoScreen |        |               V |         V |
-| share |  The share uses native capabilites for social networks - TODO:Add link to doc      |               V |         V |
+| share |  The share uses native capabilites for social networks     |               V |         V |
 | youbora |  analytics plugin - add link      |               V |         V |
 | DoubleClick | Ads - Full native support      |               V |         V |
 | multiDrm | To enable DRM you'll need to enable this plugin       |               V |         V |
