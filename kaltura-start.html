@@ -1,7 +1,20 @@
 ---
 layout: default
 ---
+<script>
+function verify_recapcha()
+{
+	var isCaptchaValidated = false;
+	var response = grecaptcha.getResponse();
+	if(response.length == 0) {
+	    isCaptchaValidated = false;
+	    toast('Please verify that you are a Human.');
+	} else {
+	    return true;
+	}
 
+}
+</script>
   <div class="w-section kstart-intro-section">
     <div class="w-container kstart-header-container">
       <div class="kstart-header-div">
@@ -118,7 +131,7 @@ layout: default
     <div class="w-container">
       <h1 class="section-headings">Apply for Kaltura Start</h1>
       <div class="w-form">
-        <form id="email-form" name="email-form" data-name="Email Form" action="https://vpaas.kaltura.com:8443/kaltura-start.php" method="post">
+        <form id="email-form" name="email-form" data-name="Email Form" action="https://vpaas.kaltura.com:8443/kaltura-start.php" method="post" onsubmit="verify_recapcha()">
           <div class="w-row form-row">
             <div class="w-col w-col-6">
               <label for="First-Name" class="form-labels">First Name</label>
