@@ -55,7 +55,7 @@ url: "http://tbd.kaltura.com/collect?kalsig=1ebb5aea0c5f253fd8c578febe6a752f&cli
 });``` 
 
 
-## Supported Events
+## Supported Events  
 | Event       | Event Type      | Beacon sent...     | Required Parameters | Optional Parameters |
 |:---|:---|:---|:---|:---|
 | Player Impression|	1|	When player code is initialized (widget is loaded)|	eventType, partnerId, entryId, flavourId, sessionId, eventIndex|	ks, playbackContext, referrer, deliveryType, playbackType, kalsig, sessionStartTime, uiConfId, clientVer, clientTag, position, customVar1, customVar2, customVar3|
@@ -85,7 +85,7 @@ url: "http://tbd.kaltura.com/collect?kalsig=1ebb5aea0c5f253fd8c578febe6a752f&cli
 | View | 99	| When content is played, every 10 seconds | 	eventType, partnerId, entryId, flavourId, sessionId, eventIndex, bufferTime, actualBitrate, preferredBitrate	|ks, playbackContext, referrer, deliveryType, playbackType, kalsig, sessionStartTime, uiConfId, clientVer, clientTag, position, customVar1, customVar2, customVar3|
 
 
-## Event Parameters Explanation
+## Event Parameters Explanation  
 | Parameter       | Description
 |:---|:---|
 | eventType	| A number describing the event type specified for each event| 
