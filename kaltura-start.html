@@ -4,10 +4,9 @@ layout: default
 <script>
 function verify_recapcha()
 {
-	alert("in");
 	var isCaptchaValidated = false;
 	var response = grecaptcha.getResponse();
-	alert(response.length);
+	console.log(response.length);
 	if(response.length == 0) {
 	    isCaptchaValidated = false;
 	    toast('Please verify that you are a Human.');
