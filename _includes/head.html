@@ -55,7 +55,7 @@ function verify_recapcha()
 	var response = grecaptcha.getResponse();
 	if(response.length == 0) {
 	    isCaptchaValidated = false;
-	    alert('Please verify that you are a Human.');
+	    alert('Please confirm that you are a Human.');
 	    return false;
 	} else {
 	    return true;
