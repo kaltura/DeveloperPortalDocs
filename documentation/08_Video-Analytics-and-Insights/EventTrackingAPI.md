@@ -12,10 +12,10 @@ Each event type has required and optional parameters, which are described below.
 
 ## Examples
 ### cURL
-{% extlink curl http://tbd.analytics.domain/api_v3/index.php?service=analytics&action=trackEvent&kalsig=1ebb5aea0c5f253fd8c578febe6a752f&clientTag=kdp%3Av3%2E9%2E2&sessionId=C90BFCFC%2D2EBF%2D5893%2D892D%2D2121162F414A&eventIndex=3&eventType=2&referrer=http%253A%2F%2Fabc%2Ego%2Ecom%2Fshows%2Fthe%2Dbachelorette%2Fvideo%2Fmost%2Drecent%2FVDKA0%5Flawz79v7&entryId=0_n5nbuy6i&ks=YjdlZTNkMGUzZDYxMzY0OGJjZDVjOTYzOWVkMjFlNTg2ZmMyZDRlOXw1ODUyMzE7NTg1MjMxOzE0MzUxNjA2NzY7MDsxNDM1MDc0Mjc2Ljc2MTk7MDt2aWV3Oiosd2lkZ2V0OjE7Ow%3D%3D&sessionStartTime=1435075182567&uiConfId=23521211&partnerId=585231&position=18&clientVer=3%2E0%3Av3%2E9%2E2&playbackContext=sports&customVar1=Finnance %}
+``` curl http://tbd.analytics.domain/api_v3/index.php?service=analytics&action=trackEvent&kalsig=1ebb5aea0c5f253fd8c578febe6a752f&clientTag=kdp%3Av3%2E9%2E2&sessionId=C90BFCFC%2D2EBF%2D5893%2D892D%2D2121162F414A&eventIndex=3&eventType=2&referrer=http%253A%2F%2Fabc%2Ego%2Ecom%2Fshows%2Fthe%2Dbachelorette%2Fvideo%2Fmost%2Drecent%2FVDKA0%5Flawz79v7&entryId=0_n5nbuy6i&ks=YjdlZTNkMGUzZDYxMzY0OGJjZDVjOTYzOWVkMjFlNTg2ZmMyZDRlOXw1ODUyMzE7NTg1MjMxOzE0MzUxNjA2NzY7MDsxNDM1MDc0Mjc2Ljc2MTk7MDt2aWV3Oiosd2lkZ2V0OjE7Ow%3D%3D&sessionStartTime=1435075182567&uiConfId=23521211&partnerId=585231&position=18&clientVer=3%2E0%3Av3%2E9%2E2&playbackContext=sports&customVar1=Finnance.``` 
 
 ### Vanilla Javascript
-{% extlink var kanalonyTrackUrl http://tbd.kaltura.com/collect?kalsig=1ebb5aea0c5f253fd8c578febe6a752f&clientTag=kdp%3Av3%2E9%2E2&sessionId=C90BFCFC%2D2EBF%2D5893%2D892D%2D2121162F414A&eventIndex=3&eventType=2&referrer=http%253A%2F%2Fabc%2Ego%2Ecom%2Fshows%2Fthe%2Dbachelorette%2Fvideo%2Fmost%2Drecent%2FVDKA0%5Flawz79v7&entryId=0_n5nbuy6i&ks=YjdlZTNkMGUzZDYxMzY0OGJjZDVjOTYzOWVkMjFlNTg2ZmMyZDRlOXw1ODUyMzE7NTg1MjMxOzE0MzUxNjA2NzY7MDsxNDM1MDc0Mjc2Ljc2MTk7MDt2aWV3Oiosd2lkZ2V0OjE7Ow%3D%3D&sessionStartTime=1435075182567&uiConfId=23521211&partnerId=585231&position=18&clientVer=3%2E0%3Av3%2E9%2E2&playbackContext=sports&customVar1=Finnance %}";
+``` var kanalonyTrackUrl http://tbd.kaltura.com/collect?kalsig=1ebb5aea0c5f253fd8c578febe6a752f&clientTag=kdp%3Av3%2E9%2E2&sessionId=C90BFCFC%2D2EBF%2D5893%2D892D%2D2121162F414A&eventIndex=3&eventType=2&referrer=http%253A%2F%2Fabc%2Ego%2Ecom%2Fshows%2Fthe%2Dbachelorette%2Fvideo%2Fmost%2Drecent%2FVDKA0%5Flawz79v7&entryId=0_n5nbuy6i&ks=YjdlZTNkMGUzZDYxMzY0OGJjZDVjOTYzOWVkMjFlNTg2ZmMyZDRlOXw1ODUyMzE7NTg1MjMxOzE0MzUxNjA2NzY7MDsxNDM1MDc0Mjc2Ljc2MTk7MDt2aWV3Oiosd2lkZ2V0OjE7Ow%3D%3D&sessionStartTime=1435075182567&uiConfId=23521211&partnerId=585231&position=18&clientVer=3%2E0%3Av3%2E9%2E2&playbackContext=sports&customVar1=Finnance;``` 
 
     var xmlhttp;
 
@@ -45,14 +45,15 @@ Each event type has required and optional parameters, which are described below.
     xmlhttp.send();'
     
 ### JQuery
-'$.ajax({
+``` $.ajax({
 
 url: "http://tbd.kaltura.com/collect?kalsig=1ebb5aea0c5f253fd8c578febe6a752f&clientTag=kdp%3Av3%2E9%2E2&sessionId=C90BFCFC%2D2EBF%2D5893%2D892D%2D2121162F414A&eventIndex=3&eventType=2&referrer=http%253A%2F%2Fabc%2Ego%2Ecom%2Fshows%2Fthe%2Dbachelorette%2Fvideo%2Fmost%2Drecent%2FVDKA0%5Flawz79v7&entryId=0_n5nbuy6i&ks=YjdlZTNkMGUzZDYxMzY0OGJjZDVjOTYzOWVkMjFlNTg2ZmMyZDRlOXw1ODUyMzE7NTg1MjMxOzE0MzUxNjA2NzY7MDsxNDM1MDc0Mjc2Ljc2MTk7MDt2aWV3Oiosd2lkZ2V0OjE7Ow%3D%3D&sessionStartTime=1435075182567&uiConfId=23521211&partnerId=585231&position=18&clientVer=3%2E0%3Av3%2E9%2E2&playbackContext=sports&customVar1=Finnance",
     context: document.body,
     success: function(){
       alert("tracked!");
     }
-});'
+});``` 
+
 
 ## Supported Events
 | Event       | Event Type      | Beacon sent...     | Required Parameters | Optional Parameters |
