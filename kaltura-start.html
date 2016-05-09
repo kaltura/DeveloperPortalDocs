@@ -4,11 +4,14 @@ layout: default
 <script>
 function verify_recapcha()
 {
+	alert("in");
 	var isCaptchaValidated = false;
 	var response = grecaptcha.getResponse();
 	if(response.length == 0) {
 	    isCaptchaValidated = false;
 	    toast('Please verify that you are a Human.');
+	    console.log('Please verify that you are a Human.');
+	    return false;
 	} else {
 	    return true;
 	}
