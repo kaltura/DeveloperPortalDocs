@@ -1968,12 +1968,20 @@ td {
   color: #188093;
 }
 
-/* Signup Scroll on K Start page */
+/* Signup Scroll on K Start page and case studies on Home page */
 
 a[ id="ksignupbtn" ]:target ~ #signup {
     -webkit-transform: translateY(500px);
     transform: translateY(5000px);
 }
+
+
+a[ id="case_study_link" ]:target ~ #case_study_section {
+    -webkit-transform: translateY(500px);
+    transform: translateY(5000px);
+}
+
+
 
 .success-caption {
   font-family: proxima-nova, sans-serif;
