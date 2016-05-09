@@ -1,4 +1,4 @@
 ---
 layout: nil
-catname: Media Ingest and Preperation
+catname: Media Ingest and Preparation
 ---
