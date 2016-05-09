@@ -2,6 +2,7 @@
 layout: page
 title: iOS Player SDK System Requirements
 subcat: iOS
+weight: 107
 ---
 
 [![iOS](https://img.shields.io/badge/iOS-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios)
@@ -16,8 +17,7 @@ OSX with Xcode 7+
 ### Minimum OS version 
 Player supports iOS 8 and above 
 
-Please refer to the Apple device matrix for device compliance.  
 
-## Roadmap: ( TBD consider this section)
- Apple watch , apple TV   
+
+  
 

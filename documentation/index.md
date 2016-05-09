@@ -1,1 +1,4 @@
-test
+---
+layout: page
+---
+

@@ -1,6 +1,7 @@
 ---
 layout: page
-title: Video Analytics and Insights
+title: Media Management
+weight: 301
 ---
 
 {% capture html %}

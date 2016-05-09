@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Player Plugins in the SDK
+weight: 102
 ---
 
 [![iOS](https://img.shields.io/badge/iOS-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios) 
@@ -8,7 +9,7 @@ title: Player Plugins in the SDK
 
 In this article you'll find the supported Player plugins in the Player-SDK.
 
-All plugins can be included using the Player studio by simply editing the uiconf object or changing the configuration in the config object.
+All plugins can be included using the Player studio by simply editing the **uiconf** object or changing the configuration in the **config** object.
 
 ---
 
@@ -22,7 +23,7 @@ All plugins can be included using the Player studio by simply editing the uiconf
 | watermark |        |               V |         V |
 | theme | Custom style for the player - supported only for the web theme, Mobile is TBD       |               V |         V |
 | infoScreen |        |               V |         V |
-| share |  The share uses native capabilites for social networks - TODO:Add link to doc      |               V |         V |
+| share |  The share uses native capabilites for social networks     |               V |         V |
 | youbora |  analytics plugin - add link      |               V |         V |
 | DoubleClick | Ads - Full native support      |               V |         V |
 | multiDrm | To enable DRM you'll need to enable this plugin       |               V |         V |

@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Get Started with the Kaltura VPaaS API
+weight: 102
 ---
 
 At the most basic level, building video workflows and video experiences consists of ingesting and preparing media files, embedding player instances and playing the media, and finally collecting analytics regrading usage and engagement. But in between there is a world of neuances and needs that your unique use-case may require. Kaltura VPaaS API is built on the principles of atomic services allowing you full control and flexibility over every element and process in the life cycle of your media.   

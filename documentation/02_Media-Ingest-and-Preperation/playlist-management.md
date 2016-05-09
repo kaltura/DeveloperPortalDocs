@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Playlist Management
+weight: 204
 ---
 
 ## Introduction to Playlist Management

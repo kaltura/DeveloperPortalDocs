@@ -1,6 +1,7 @@
 ---
 layout: page
-title: Video Analytics and Insights
+title: VPaaS API Getting Started
+weight: 101
 ---
 
 {% capture html %}

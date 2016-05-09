@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Configuring and Customizing Kaltura Player Playlists
+weight: 405
 ---
 
 The Kaltura Player provides a robust playlist plugin that allows rendering a playlist of entries with many configuration options, such as:   

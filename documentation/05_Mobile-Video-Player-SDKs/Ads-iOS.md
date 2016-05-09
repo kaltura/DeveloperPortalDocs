@@ -1,13 +1,15 @@
 ---
 layout: page
 title: Using Google Ads in iOS Devices
+subcat: iOS
+weight: 112
 ---
 
 [![iOS](https://img.shields.io/badge/iOS-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios) 
 
 This article describes the different options for linking Google in iOS devices for the Kaltura Player.
 
-##Using Cocoapods:
+## Using Cocoapods  
 To link Google ads using Cocoapods, add these two pods to your podfile:
 
 ```
@@ -42,9 +44,9 @@ To configure the Player to use Google ads, add the following configuration to yo
 
 To listen to ad events, use the following:
 
-**@todo** link to the kdp api example
+[Ads event test page](http://player.kaltura.com/modules/DoubleClick/tests/DoubleClickAdEvents.qunit.html)  
 
-Click here for a {% extlink list of commonly used Player ad events https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/media-player/Kaltura-Media-Player-API.md#commonly-used-player-ad-events-ad-sequence-events %}.
+Click here for a [list of commonly used Player ad events](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/04_Web-Video-Player/Kaltura-Media-Player-API.md).
 
 ```
 [self.player addKPlayerEventListener:@"adClick"

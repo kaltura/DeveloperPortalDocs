@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Video Analytics and Insights
+title: Mobile Video Player SDKs
 ---
 
 {% capture html %}

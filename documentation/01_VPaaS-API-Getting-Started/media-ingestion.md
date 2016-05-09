@@ -2,6 +2,7 @@
 layout: page
 title: Media Ingestion and Acquisition
 type: header
+weight: 104
 ---
 
 In order to increase media workflows efficiency and reduce costs, achieve quick processing, and reach a wide global audience,  media content must be uploaded to the Kaltura VPaaS cloud for prepartion, management and archival. Media ingestion is the process through which your media assets (video, audio, image, documents files) are moved from the source (local file system, remote servers, cameras, commercial media repositories and licensors, etc.) to be stored and managed in the Kaltura VPaaS. 

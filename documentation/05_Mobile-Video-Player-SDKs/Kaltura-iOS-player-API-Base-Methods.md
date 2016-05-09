@@ -2,6 +2,7 @@
 layout: page
 title: Kaltura Player SDK API - Properties, Events, Notifications - iOS
 subcat: iOS
+weight: 110
 ---
 
 [![iOS](https://img.shields.io/badge/iOS-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios)

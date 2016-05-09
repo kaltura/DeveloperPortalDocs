@@ -28,9 +28,11 @@ With Kaltura Analytics you can collect, present and analyze data about system us
 
 The data in Kaltura Analytics can be divided into roughly two groups: Player events and other data.
 
-As a video is played, the Kaltura Player sends Player events related to viewer behavior (such as “Plays”, “Played 25%”, “Stopped”, etc.) to Kaltura Analytics. If you are using Kaltura Player versions XXX or higher, you will get the support for these Player event analytics out-of-the-box. If you are using a non-Kaltura player, you need to make sure all of the relevant events are reported correctly using Kaltura Event Tracking API. To learn how to configure your non-Kaltura player to report relevant events, click *here*.
+As a video is played, the Kaltura Player sends Player events related to viewer behavior (such as “Plays”, “Played 25%”, “Stopped”, etc.) to Kaltura Analytics. If you are using Kaltura Player versions XXX or higher, you will get the support for these Player event analytics out-of-the-box. If you are using a non-Kaltura player, you need to make sure all of the relevant events are reported correctly using Kaltura Event Tracking API. 
 
-##Dimensions
+To learn how to configure your non-Kaltura player to report relevant events, click *here*.
+
+## Dimensions
 
 Every player event is related to a specific video asset (a VOD or a live stream) and is triggered by a specific user. Every event has certain pre-defined characteristics (such as time, device, geography, etc.) that are called dimensions.
 
@@ -42,13 +44,14 @@ OS: 9.1
 Country: USA
 State: California
 Time: ….
+
 You can read more about currently supported dimensions [here](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/08_Video-Analytics-and-Insights/DimensionsLexicon.md).
 
-##Metrics
+## Metrics
 These events provide a basis for measuring metrics, which are later presented in Analytics reports, accessible through the Data Retrieval API. Metrics refer to the data that Kaltura Analytics measures, which are quantitative measurements. These measurements can assess user actions (such as user activities, plays, comments, drop offs, etc.) or resource consumption (such as bandwidth, storage, transcoding, etc.).
 You can read more about the currently supported metrics [here](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/08_Video-Analytics-and-Insights/MetricsLexicon.md).
 
-##Aggregations
+## Aggregations
 
 Metrics are stored and presented in an aggregated form. Aggregations are a way to store the huge amount of data in a summarized, pre-computed format that allows fast rendering of reports. The aggregations are designed with your business objectives in mind and anticipate questions you might ask. For example, Kaltura anticipates that you might ask the question “what are the most popular viewing devices in various states?”, so we created an aggregation of device X geography for the play requested metric.
 
@@ -59,11 +62,11 @@ Every report in Analytics is made up of Dimensions, Metrics and Filters. Dimensi
 What to read next:
 * **[Dimensions dictionary](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/08_Video-Analytics-and-Insights/DimensionsLexicon.md):** Features a list of the dimenstions and their meaning within the Kaltura Analytics project.
 * **[Metrics dictionary](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/08_Video-Analytics-and-Insights/MetricsLexicon.md):** Features a list of the metrics and their meaning within the Kaltura Analytics project.
-* **Player events guide:** https://kaltura.atlassian.net/wiki/display/KANAL/kAnalony+Event+Tracking+API - NEED A DIFFERENT LINK - THIS IS THE SAME AS THE EVENT TRACKING API LINK!!!
+* **[Player events guide](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/08_Video-Analytics-and-Insights/EventTrackingAPI.md):** Details the available Player events.
 * **Supported aggregations:** Features an overview and actual aggregations implemented for the following supported aggregations:
-  * Event tracking API
-  * Data retrieval API
-  * Kaltura Analytics User Guide:
+  * [Event Tracking API](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/08_Video-Analytics-and-Insights/EventTrackingAPI.md)
+  * [Data Retrieval API](https://github.com/kaltura/DeveloperPortalDocs/commit/82f7d413b14506df03a4cb5a0a2ece14b6bd79ea)
+  * Kaltura Analytics User Guide
   * Event Tracking
     * With Kaltura Player
     * With non-Kaltura Player

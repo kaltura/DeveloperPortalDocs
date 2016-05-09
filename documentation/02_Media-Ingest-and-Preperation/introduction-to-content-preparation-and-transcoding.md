@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Intro to Content Preparation & Transcoding
+weight: 202
 ---
 
 * Kaltura's cloud transcoding microservices and tools are designed to manage encoding workflows at any scale and quality requirements - for the web, broadcast, studio, or secure internal enterprise applications. 

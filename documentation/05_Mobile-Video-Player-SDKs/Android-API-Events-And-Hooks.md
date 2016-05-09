@@ -2,14 +2,13 @@
 layout: page
 title: Kaltura Player SDK API - Properties, Events, Notifications - Android
 subcat: Android
+weight: 117
 ---
 
 [![Android](https://img.shields.io/badge/Android-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios)
+## Using the Kaltura Android Player API Methods  
 
 This article describes how to use the Android Player API methods to manage properties, events, and notifications. 
-
-## Using the Kaltura Android Player API Methods
-&nbsp;
 
 ### Android API Events and Hooks
 The Android API supports the following events and hooks.
@@ -142,7 +141,7 @@ if (state.equals(KPlayerState.PLAYING)){
 
 If the application is required to react to web events, add the "mPlayerView.addKPlayerEventListener".
 
-See {% extlink Supported Events https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/media-player/Kaltura-Media-Player-API.md#commonly-used-player-events %} for information about the types of supported events.
+See [Supported Events] (https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/04_Web-Video-Player/Kaltura-Media-Player-API.md#commonly-used-player-events) for information about the types of supported events.
 
 
 * Example: Listen to show play controls event
@@ -163,7 +162,7 @@ To change the current player behavoir, use the sendNotification API. This method
   - action name
   - parameter (string/json)  
 
-* Examples:
+#### Examples:  
 
 **Notification without parameters:**
  

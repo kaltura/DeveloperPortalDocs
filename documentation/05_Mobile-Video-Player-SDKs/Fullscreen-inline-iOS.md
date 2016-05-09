@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Using Fullscreen and Inline Embed of the Player in iOS
+subcat: iOS
+weight: 113
 ---
 
 In this article we'll go over device rotation and fullscreen vs inline.

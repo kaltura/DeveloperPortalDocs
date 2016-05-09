@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Customizing the Kaltura Player's Look-and-Feel and Behavior
+weight: 404 
 ---
 
 The Kaltura Player look-and-feel is derived from the Player's skin, which consists of CSS classes and graphical assets such as icons and fonts; and from its Javascript code, which is used to define user interactions and UI behaviour.   
