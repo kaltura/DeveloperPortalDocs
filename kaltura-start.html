@@ -1,23 +1,6 @@
 ---
 layout: default
 ---
-<script>
-function verify_recapcha()
-{
-	var isCaptchaValidated = false;
-	var response = grecaptcha.getResponse();
-	console.log(response.length);
-	if(response.length == 0) {
-	    isCaptchaValidated = false;
-	    alert('Please verify that you are a Human.');
-	    console.log('Please verify that you are a Human.');
-	    return false;
-	} else {
-	    return true;
-	}
-
-}
-</script>
   <div class="w-section kstart-intro-section">
     <div class="w-container kstart-header-container">
       <div class="kstart-header-div">
@@ -202,10 +185,10 @@ function verify_recapcha()
           </div>
           <label for="Application-Description" class="form-labels kstart-last-label">Tell Us About Your Startup</label>
           <textarea id="Application-Description" placeholder="What are you building, tell us about your team, how does video fit in, etc." name="Application-Description" data-name="Application Description" required="required" class="w-input input-light kstart-last-input"></textarea>
+<div class="g-recaptcha" data-sitekey="6Lf2bx8TAAAAAFiXASujAbfTnbBr7H6cqUbHLnnE"></div>
           <div class="button-center-div">
             <input type="submit" value="Apply" data-wait="Please wait..." class="w-button standard-button">
           </div>
-<div class="g-recaptcha" data-sitekey="6Lf2bx8TAAAAAFiXASujAbfTnbBr7H6cqUbHLnnE"></div>
 
         </form>
         <div class="w-form-done">

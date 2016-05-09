@@ -48,6 +48,21 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.js"></script>
 <script src="{{ site.url }}/js/country.js"></script>
 <script src='https://www.google.com/recaptcha/api.js'></script>
+<script>
+function verify_recapcha()
+{
+	var isCaptchaValidated = false;
+	var response = grecaptcha.getResponse();
+	if(response.length == 0) {
+	    isCaptchaValidated = false;
+	    alert('Please verify that you are a Human.');
+	    return false;
+	} else {
+	    return true;
+	}
+
+}
+</script>
 </head>
 
 
