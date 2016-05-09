@@ -9,7 +9,7 @@ function verify_recapcha()
 	console.log(response.length);
 	if(response.length == 0) {
 	    isCaptchaValidated = false;
-	    toast('Please verify that you are a Human.');
+	    alert('Please verify that you are a Human.');
 	    console.log('Please verify that you are a Human.');
 	    return false;
 	} else {
