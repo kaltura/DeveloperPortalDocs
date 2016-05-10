@@ -197,6 +197,17 @@ layout: default
 <div class="w-form-fail"><p>Oops! Something went wrong while submitting the form</p></div>
 <!--script src="https://js.braintreegateway.com/js/braintree-2.21.0.min.js"></script-->
 <script>
+$(document).ready(function () {
+    $("#submitButton").click(function () { 
+            setTimeout(function () { disableButton(); }, 0);
+                });  
+
+            function disableButton() {
+                $("#submitButton").prop('disabled', true);
+                $("#submitButton").prop('value', "We're creating your account, please wait...");
+            }   
+}); 
+
 
 /*$(document).ready(function(){
 	$('#payment-fields').hide();
