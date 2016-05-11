@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Media Analytics
+title: Kaltura's Media Analytics
 ---
 
 ## Introduction to Media Analytics
