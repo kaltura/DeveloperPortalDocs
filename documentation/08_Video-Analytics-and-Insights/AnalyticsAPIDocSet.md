@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Kaltura Analytics API Documentation Set
+title: Kaltura Video Intelligence Overview
 ---
 
 ## Kaltura Analytics Overview
@@ -24,13 +24,13 @@ Kaltura Analytics helps you get precise, actionable insights into various aspect
 * How do I charge back for usage expenses?
 * How do I optimize my budget?
 
+## Events  
 With Kaltura Analytics you can collect, present and analyze data about system usage, viewing behavior, and any other type of user interaction with the Kaltura solution.
 
 The data in Kaltura Analytics can be divided into roughly two groups: Player events and other data.
 
 As a video is played, the Kaltura Player sends Player events related to viewer behavior (such as “Plays”, “Played 25%”, “Stopped”, etc.) to Kaltura Analytics. If you are using Kaltura Player versions XXX or higher, you will get the support for these Player event analytics out-of-the-box. If you are using a non-Kaltura player, you need to make sure all of the relevant events are reported correctly using Kaltura Event Tracking API. 
 
-To learn how to configure your non-Kaltura player to report relevant events, click *here*.
 
 ## Dimensions
 
@@ -65,9 +65,8 @@ What to read next:
 * **[Player events guide](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/08_Video-Analytics-and-Insights/EventTrackingAPI.md):** Details the available Player events.
 * **Supported aggregations:** Features an overview and actual aggregations implemented for the following supported aggregations:
   * [Event Tracking API](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/08_Video-Analytics-and-Insights/EventTrackingAPI.md)
-  * [Data Retrieval API](https://github.com/kaltura/DeveloperPortalDocs/commit/82f7d413b14506df03a4cb5a0a2ece14b6bd79ea)
   * Kaltura Analytics User Guide
   * Event Tracking
     * With Kaltura Player
     * With non-Kaltura Player
-  * Data Retrieval
+  * [Data Retrieval API](https://github.com/kaltura/DeveloperPortalDocs/commit/82f7d413b14506df03a4cb5a0a2ece14b6bd79ea)
