@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Kaltura Analytics - Metrics Lexicon
+title: Kaltura Video Insights - Metrics Lexicon
 ---
 
 | Name     | ID     | Description
