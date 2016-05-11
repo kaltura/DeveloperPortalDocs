@@ -3,8 +3,8 @@ layout: page
 title: Kaltura Video Insights
 ---
 
-## Kaltura Analytics Overview
-Kaltura Analytics helps you get precise, actionable insights into various aspects of your business by answering a wide variety of questions, such as:
+## Kaltura Video Insights Overview
+Kaltura Video Insights helps you get precise, actionable insights into various aspects of your business by answering a wide variety of questions, such as:
 
 **User Behavior Questions:**
 * How are my videos doing?
@@ -25,11 +25,11 @@ Kaltura Analytics helps you get precise, actionable insights into various aspect
 * How do I optimize my budget?
 
 ## Events  
-With Kaltura Analytics you can collect, present and analyze data about system usage, viewing behavior, and any other type of user interaction with the Kaltura solution.
+With Kaltura Video Insights you can collect, present and analyze data about system usage, viewing behavior, and any other type of user interaction with the Kaltura solution.
 
-The data in Kaltura Analytics can be divided into roughly two groups: Player events and other data.
+The data in Kaltura Video Insights can be divided into roughly two groups: Player events and other data.
 
-As a video is played, the Kaltura Player sends Player events related to viewer behavior (such as “Plays”, “Played 25%”, “Stopped”, etc.) to Kaltura Analytics. If you are using Kaltura Player versions XXX or higher, you will get the support for these Player event analytics out-of-the-box. If you are using a non-Kaltura player, you need to make sure all of the relevant events are reported correctly using Kaltura Event Tracking API. 
+As a video is played, the Kaltura Player sends Player events related to viewer behavior (such as “Plays”, “Played 25%”, “Stopped”, etc.) to Kaltura Video Insights. If you are using Kaltura Player versions XXX or higher, you will get the support for these Player event insights out-of-the-box. If you are using a non-Kaltura player, you need to make sure all of the relevant events are reported correctly using Kaltura Event Tracking API. 
 
 
 ## Dimensions
@@ -48,7 +48,7 @@ Time: ….
 You can read more about currently supported dimensions [here](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/08_Video-Analytics-and-Insights/DimensionsLexicon.md).
 
 ## Metrics
-These events provide a basis for measuring metrics, which are later presented in Analytics reports, accessible through the Data Retrieval API. Metrics refer to the data that Kaltura Analytics measures, which are quantitative measurements. These measurements can assess user actions (such as user activities, plays, comments, drop offs, etc.) or resource consumption (such as bandwidth, storage, transcoding, etc.).
+These events provide a basis for measuring metrics, which are later presented in insights reports, accessible through the Data Retrieval API. Metrics refer to the data that Kaltura Video Insights measures, which are quantitative measurements. These measurements can assess user actions (such as user activities, plays, comments, drop offs, etc.) or resource consumption (such as bandwidth, storage, transcoding, etc.).
 You can read more about the currently supported metrics [here](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/08_Video-Analytics-and-Insights/MetricsLexicon.md).
 
 ## Aggregations
@@ -57,15 +57,15 @@ Metrics are stored and presented in an aggregated form. Aggregations are a way t
 
 You can read more about currently supported aggregations [here]().
 
-Every report in Analytics is made up of Dimensions, Metrics and Filters. Dimensions and Metrics are explained above. Filters determine how the data will be filtered. For example, instead of returning all user activity for a particular category, a report can return only data for a certain country.
+Every insight report is comprised of Dimensions, Metrics and Filters. Dimensions and Metrics are explained above. Filters determine how the data will be filtered. For example, instead of returning all user activity for a particular category, a report can return only data for a certain country.
  
 What to read next:
-* **[Dimensions dictionary](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/08_Video-Analytics-and-Insights/DimensionsLexicon.md):** Features a list of the dimenstions and their meaning within the Kaltura Analytics project.
-* **[Metrics dictionary](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/08_Video-Analytics-and-Insights/MetricsLexicon.md):** Features a list of the metrics and their meaning within the Kaltura Analytics project.
+* **[Dimensions dictionary](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/08_Video-Analytics-and-Insights/DimensionsLexicon.md):** Features a list of the dimenstions and their meaning within the Kaltura Video Insights project.
+* **[Metrics dictionary](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/08_Video-Analytics-and-Insights/MetricsLexicon.md):** Features a list of the metrics and their meaning within the Kaltura Video Insights project.
 * **[Player events guide](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/08_Video-Analytics-and-Insights/EventTrackingAPI.md):** Details the available Player events.
 * **Supported aggregations:** Features an overview and actual aggregations implemented for the following supported aggregations:
   * **[Event Tracking API](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/08_Video-Analytics-and-Insights/EventTrackingAPI.md)**
-* **Kaltura Analytics User Guide**
+* **Kaltura Video Insights User Guide**
 * **Event Tracking**
      * With the Kaltura Player
      * With a non-Kaltura Player
