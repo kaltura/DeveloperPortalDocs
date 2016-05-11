@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Kaltura Analytics - Dimensions Lexicon
+title: Kaltura Video Insights - Dimensions Lexicon
 ---
 
 | Group       | Name     | ID     | Description
