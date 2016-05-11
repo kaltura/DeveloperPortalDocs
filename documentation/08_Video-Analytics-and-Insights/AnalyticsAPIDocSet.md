@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Kaltura Video Intelligence Overview
+title: Kaltura Video Insights
 ---
 
 ## Kaltura Analytics Overview
