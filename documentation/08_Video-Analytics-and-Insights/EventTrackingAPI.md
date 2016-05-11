@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Kaltura Analytics - Event Tracking API
+title: Kaltura Video Insights - Event Tracking API
 ---
 
 ## Overview
-The Event Tracking API is an extensible interface for tracking different types of events on the Kaltura Analytics backend, and, eventually, to aggregate them into meaningful and values reports.
+The Event Tracking API is an extensible interface for tracking different types of events on the Kaltura Video Insights backend, and, eventually, to aggregate them into meaningful and values reports.
 
 The API is based on an HTTP GET request that persists the tracked event without validation (at this stage) and returns HTTP code 200 (OK) and a small payload of the Unix timestamp representing the time on the server at the moment of receiving the event (for example: 1459671407).
 
