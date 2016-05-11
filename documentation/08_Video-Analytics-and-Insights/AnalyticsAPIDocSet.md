@@ -65,8 +65,8 @@ What to read next:
 * **[Player events guide](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/08_Video-Analytics-and-Insights/EventTrackingAPI.md):** Details the available Player events.
 * **Supported aggregations:** Features an overview and actual aggregations implemented for the following supported aggregations:
   * [Event Tracking API](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/08_Video-Analytics-and-Insights/EventTrackingAPI.md)
-  * Kaltura Analytics User Guide
-  * Event Tracking
-    * With Kaltura Player
-    * With non-Kaltura Player
-  * [Data Retrieval API](https://github.com/kaltura/DeveloperPortalDocs/commit/82f7d413b14506df03a4cb5a0a2ece14b6bd79ea)
+ * Kaltura Analytics User Guide
+ * Event Tracking
+     * With Kaltura Player
+     * With non-Kaltura Player
+* [Data Retrieval API](https://github.com/kaltura/DeveloperPortalDocs/commit/82f7d413b14506df03a4cb5a0a2ece14b6bd79ea)
