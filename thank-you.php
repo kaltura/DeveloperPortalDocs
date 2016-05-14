@@ -12,12 +12,60 @@ layout: default
         <div class="w-row">
           <div class="w-col w-col-12">
             <div class="get-you-started-div">
-              <h3 class="thank-you-h3">Lets Get You Started</h3>
-              <h4 class="thank-you-h4">Your Kaltura Account Id (Patrner Id)</h4>
+              <h3 class="thank-you-h3">Let's Get You Started</h3>
+              <div>
+                  <div id="toc" class="w-col w-col-3">
+                      <ul>
+                        <li><a href="#partnerid">partnerId (Kaltura Account ID)</a></li>
+                        <li><a href="#ks">ks (Kaltura API Session)</a></li>
+                        <li><a href="#entryid">entryId (Media Asset Id)</a></li>
+                        <li><a href="#uiconfid">uiConfId (Player/Widget Instance Id)</a></li>
+                    </ul>
+                </div>
+                <div id="embedcode" class="w-col w-col-9">
+                      <p class="thank-you-p">All embed methods require these base parameters: <span class="code-highlight">partnerId</span>, <span class="code-highlight">uiConfId</span> and <span class="code-highlight">entryId</span>.
+                  <br/>Below is an example player embed code:</p>
+                  <div class="highlighter-rouge"><pre class="highlight"><code><span class="nx">kWidget</span><span class="p">.</span><span class="nx">embed</span><span class="p">({</span>
+        <span class="s1">'targetId'</span><span class="p">:</span> <span class="s1">'kaltura_player'</span><span class="p">,</span>
+        <span class="s1">'wid'</span><span class="p">:</span> <span class="s1">'_811441'</span><span class="p">,</span>
+        <span class="s1">'uiconf_id'</span> <span class="p">:</span> <span class="s1">34599271</span><span class="p">,</span>
+        <span class="s1">'entry_id'</span> <span class="p">:</span> <span class="s1">'0_4kwzg46z'</span><span class="p">,</span>
+        <span class="s1">'flashvars'</span> <span class="p">:</span> <span class="p">{</span>
+            <span class="c1">// Adding a valid Kaltura Session to your player embeds will ensure secure playback (access control, entitlements, and DRM will all require valid KS to allow playback), and that Engagement Analytics will be counted per authenticated user ids.</span>
+            <span class="s1">'ks'</span><span class="p">:</span> <span class="s1">'djJ8MjEzOTQyMnxLngKd0BRQwS1EWdLV-T_Um8rRCed9mYyBwu_VOcglQ8mHlyvzAD8At9qPm2HgKoYMi5hdw3THj6ZXfAZGZyjE'</span><span class="p">,</span>
+        <span class="p">}</span>
+    <span class="p">});</span>
+    </code></pre>
+    </div>
+                  
+                  <div class="w-embed w-iframe w-script media-embed-div">
+                    <!-- Outer div defines maximum space the player can take -->
+                    <div style="width: 100%;display: inline-block;position: relative;">
+                      <!--  inner pusher div defines aspect ratio: in this case 16:9 ~ 56.25% -->
+                      <div id="dummy" style="margin-top: 56.25%;"></div>
+                      <!--  the player embed target, set to take up available absolute space   -->
+                      <script src="https://cdnapisec.kaltura.com/p/811441/sp/81144100/embedIframeJs/uiconf_id/35015842/partner_id/811441" style="margin: 0px 0px 0px 0px;"></script>
+                      <div id="kaltura_player_1461185766" style="position:absolute;top:0;left:0;left: 0;right: 0;bottom:0;border:none;"></div>
+                    </div>
+                    <script>
+                      kWidget.embed({
+                        "targetId": "kaltura_player_1461185766",
+                        "wid": "_811441",
+                        "uiconf_id": 35015842,
+                        "flashvars": {
+                          "streamerType": "auto"
+                        },
+                        "entry_id": "0_4kwzg46z"
+                      });
+                    </script>
+                  </div>
+                  </div>
+              </div>
+              <h4 class="thank-you-h4" name="partnerid">Your Kaltura Account Id (Patrner Id)</h4>
               <input type="text" value="Your partnerId: <?php echo $_GET['partner_id'] ? $_GET['partner_id'] : '811441'; ?>" readonly="" size="24" style="background: transparent;font-size: 12px;border: solid 1px #9EB4B7;margin-bottom: 8px;border-radius: 4px;padding: 2px;padding-left: 6px;">
               <p class="thank-you-p">Your Kaltura Partner ID, or PID, is a unique number identifying your Kaltura account.<br />You will need to pass the pid paramemter everytime you authenticate with the Kaltura API, or connect with integrated apps.</p>
 
-              <h4 class="thank-you-h4">Kaltura Session</h4>
+              <h4 class="thank-you-h4" name="ks">Kaltura Session</h4>
               <input type="text" value="<?php echo $_GET['ks'] ? $_GET['ks'] : 'djJ8MjEzOTQyMnxLngKd0BRQwS1EWdLV-T_Um8rRCed9mYyBwu_VOcglQ8mHlyvzAD8At9qPm2HgKoYMi5hdw3THj6ZXfAZGZyjE'; ?>" readonly="" style="background: transparent; font-size: 12px; border: solid 1px #9EB4B7; margin-bottom: 8px; border-radius: 4px; padding: 2px; width: 100%;">
               <p class="thank-you-p">The string above is a Kaltura Session (aka KS). The KS authenticates the account and user when making an API call. You are expected to provide a generated KS with every API call you will make.
               <br />
@@ -35,7 +83,7 @@ layout: default
                 </ul>
               </blockquote>
 
-              <h4 class="thank-you-h4">Kaltura Entries</h4>
+              <h4 class="thank-you-h4" name="entryid">Kaltura Entries</h4>
               <input type="text" size="50" value="A Kaltura Entry Id: <?php echo $_GET['entry_id'] ? $_GET['entry_id'] : '0_4kwzg46z'; ?>" readonly="" style="background: transparent; font-size: 12px; border: solid 1px #9EB4B7; margin-bottom: 8px; border-radius: 4px; padding: 2px;">
               <p class="thank-you-p">Content assets are called entries in Kaltura. An entry is a logical object representing all aspects of the media asset including its metadata, thumbnails, transcoded flavors, captions, cue-points (timed metadata), and more.</p>
               <p class="thank-you-p">In Kaltura you can manage various types of assets, including on-demand media assets (video, audio, and image files), live stream video or audio broadcasts, as well as playlists, documents and other special data files.</p>
@@ -53,49 +101,13 @@ layout: default
                 </ul>
               </blockquote>
               
-              <h4 class="thank-you-h4">Kaltura Player &amp; uiConf</h4>
+              <h4 class="thank-you-h4" name="uiconfid">Kaltura Player &amp; uiConf</h4>
               <p class="thank-you-p">A critical piece of every video workflow is the playback and the user-experience while interacting with video.<br />
               The Kaltura Video Player library abstracts the complexities around delivery of video across devices, browsers and native apps and the user-experience with your video. It provides a cross-platform rich UI framework, easy branding and customization features and even in-video quizzes, advertizing integrations, and a robust plugins-framework to create your own unique expeirences.<br />
               <br />The player further simplifies embedding and integrating the player into pages and apps by managing your player instances and configurations in the cloud, and providing the embed code a signle parameter - the uiConf Id.</p>
               <input type="text" value="Player instance uiConf id: <?php echo $_GET['ui_conf_id'] ? $_GET['ui_conf_id'] : '34599271'; ?>" size="50" readonly="" style="background: transparent; font-size: 12px; border: solid 1px #9EB4B7; margin-bottom: 8px; border-radius: 4px; padding: 2px;">
               <p class="thank-you-p">The uiConf Id is used to reference the player instance you wish to render when embedding a video in your pages or app views.</p>
-              <p class="thank-you-p">All embed methods require these base parameters: <span class="code-highlight">partnerId</span>, <span class="code-highlight">uiConfId</span> and <span class="code-highlight">entryId</span>.
-              <br/>Below is an example player embed code:</p>
-              <div class="highlighter-rouge"><pre class="highlight"><code><span class="nx">kWidget</span><span class="p">.</span><span class="nx">embed</span><span class="p">({</span>
-    <span class="s1">'targetId'</span><span class="p">:</span> <span class="s1">'kaltura_player'</span><span class="p">,</span>
-    <span class="s1">'wid'</span><span class="p">:</span> <span class="s1">'_811441'</span><span class="p">,</span>
-    <span class="s1">'uiconf_id'</span> <span class="p">:</span> <span class="s1">34599271</span><span class="p">,</span>
-    <span class="s1">'entry_id'</span> <span class="p">:</span> <span class="s1">'0_4kwzg46z'</span><span class="p">,</span>
-    <span class="s1">'flashvars'</span> <span class="p">:</span> <span class="p">{</span>
-        <span class="c1">// Adding a valid Kaltura Session to your player embeds will ensure secure playback (access control, entitlements, and DRM will all require valid KS to allow playback), and that Engagement Analytics will be counted per authenticated user ids.</span>
-        <span class="s1">'ks'</span><span class="p">:</span> <span class="s1">'djJ8MjEzOTQyMnxLngKd0BRQwS1EWdLV-T_Um8rRCed9mYyBwu_VOcglQ8mHlyvzAD8At9qPm2HgKoYMi5hdw3THj6ZXfAZGZyjE'</span><span class="p">,</span>
-    <span class="p">}</span>
-<span class="p">});</span>
-</code></pre>
-</div>
               
-              <div class="w-embed w-iframe w-script media-embed-div">
-                <!-- Outer div defines maximum space the player can take -->
-                <div style="width: 100%;display: inline-block;position: relative;">
-                  <!--  inner pusher div defines aspect ratio: in this case 16:9 ~ 56.25% -->
-                  <div id="dummy" style="margin-top: 56.25%;"></div>
-                  <!--  the player embed target, set to take up available absolute space   -->
-                  <script src="https://cdnapisec.kaltura.com/p/811441/sp/81144100/embedIframeJs/uiconf_id/35015842/partner_id/811441" style="margin: 0px 0px 0px 0px;"></script>
-                  <div id="kaltura_player_1461185766" style="position:absolute;top:0;left:0;left: 0;right: 0;bottom:0;border:none;"></div>
-                </div>
-                <script>
-                  kWidget.embed({
-                    "targetId": "kaltura_player_1461185766",
-                    "wid": "_811441",
-                    "uiconf_id": 35015842,
-                    "flashvars": {
-                      "streamerType": "auto"
-                    },
-                    "entry_id": "0_4kwzg46z"
-                  });
-                </script>
-              </div>
-
               <blockquote class="recipes-ref-list">
                 <strong>Learn &amp; explore with Code Recipes:</strong> 
                 <ul>
