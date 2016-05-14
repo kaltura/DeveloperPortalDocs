@@ -1942,6 +1942,11 @@ td {
     margin-bottom: 31px;
 }
 
+.get-you-started-div a {
+   font-family: proxima-nova, sans-serif;
+   color: #188093;
+}
+
 .trustedby-img {
   max-width: 85%;
   margin-right: auto;
