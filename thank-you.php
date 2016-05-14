@@ -1,128 +1,12 @@
 ---
 layout: default
 ---
-<?php
-//var_dump($_GET);
-?>
-
 <div class="w-section thank-you-section">
     <div class="w-container">
       <h1 class="section-headings success-heading thank-you-heading">Thank You for Signing Up!<br /><span class="success-subheading">Your Kaltura VPaaS Account is Ready</span></h1>
       <div class="success-account-details">
         <div class="w-row">
-          <div class="w-col w-col-6">
-            <div class="media-repurpose-div">
-              <div class="w-clearfix resources-heading">Media Repurposing / Transcoding <span class="close-button-mr fa fa-times" data-ix="close-media-repurposing-box" style=""></span>
-              </div>
-              <p class="thank-you-p">For typical media repurposing workflows, the following Kaltura APIs are recommended:</p>
-              <h4 class="thank-you-h4">Resources</h4>
-              <ul class="case-study-template-list-wrapper-bullets">
-                <li class="case-study-template-li-bullets">Calling the&nbsp;<span class="code-highlight">session.start</span>&nbsp;action, providing a Partner ID and an Admin secret or User secret.</li>
-                <li class="case-study-template-li-bullets">Calling&nbsp;<span class="code-highlight">user.loginByLoginId</span>, providing a valid user login (email) and its password.</li>
-                <li class="case-study-template-li-bullets">Calling&nbsp;<span class="code-highlight">user.loginByLoginId</span>, providing a valid user login (email) and its password.</li>
-                <li class="case-study-template-li-bullets">Calling&nbsp;<span class="code-highlight">user.loginByLoginId</span>, providing a valid user login (email) and its password.</li>
-                <li class="case-study-template-li-bullets">Calling&nbsp;<span class="code-highlight">user.loginByLoginId</span>, providing a valid user login (email) and its password.</li>
-                <li class="case-study-template-li-bullets">Calling&nbsp;<span class="code-highlight">user.loginByLoginId</span>, providing a valid user login (email) and its password.</li>
-              </ul>
-            </div>
-            <div class="end-user-uploads-div">
-              <div class="w-clearfix resources-heading">End-User Uploads<span class="close-button-eu fa fa-times" data-ix="close-end-user-uploads-div" style=""></span>
-              </div>
-              <p class="thank-you-p">For typical media repurposing workflows, the following Kaltura APIs are recommended:</p>
-              <h4 class="thank-you-h4">Resources</h4>
-              <ul class="case-study-template-list-wrapper-bullets">
-                <li class="case-study-template-li-bullets">Calling the&nbsp;<span class="code-highlight">session.start</span>&nbsp;action, providing a Partner ID and an Admin secret or User secret.</li>
-                <li class="case-study-template-li-bullets">Calling&nbsp;<span class="code-highlight">user.loginByLoginId</span>, providing a valid user login (email) and its password.</li>
-                <li class="case-study-template-li-bullets">Calling&nbsp;<span class="code-highlight">user.loginByLoginId</span>, providing a valid user login (email) and its password.</li>
-                <li class="case-study-template-li-bullets">Calling&nbsp;<span class="code-highlight">user.loginByLoginId</span>, providing a valid user login (email) and its password.</li>
-                <li class="case-study-template-li-bullets">Calling&nbsp;<span class="code-highlight">user.loginByLoginId</span>, providing a valid user login (email) and its password.</li>
-                <li class="case-study-template-li-bullets">Calling&nbsp;<span class="code-highlight">user.loginByLoginId</span>, providing a valid user login (email) and its password.</li>
-              </ul>
-            </div>
-            <div class="media-publishing-div">
-              <div class="w-clearfix resources-heading">Media Publishing<span class="close-button-mp fa fa-times" data-ix="close-mp-div" style=""></span>
-              </div>
-              <p class="thank-you-p">For typical media repurposing workflows, the following Kaltura APIs are recommended:</p>
-              <h4 class="thank-you-h4">Resources</h4>
-              <ul class="case-study-template-list-wrapper-bullets">
-                <li class="case-study-template-li-bullets">Calling the&nbsp;<span class="code-highlight">session.start</span>&nbsp;action, providing a Partner ID and an Admin secret or User secret.</li>
-                <li class="case-study-template-li-bullets">Calling&nbsp;<span class="code-highlight">user.loginByLoginId</span>, providing a valid user login (email) and its password.</li>
-                <li class="case-study-template-li-bullets">Calling&nbsp;<span class="code-highlight">user.loginByLoginId</span>, providing a valid user login (email) and its password.</li>
-                <li class="case-study-template-li-bullets">Calling&nbsp;<span class="code-highlight">user.loginByLoginId</span>, providing a valid user login (email) and its password.</li>
-                <li class="case-study-template-li-bullets">Calling&nbsp;<span class="code-highlight">user.loginByLoginId</span>, providing a valid user login (email) and its password.</li>
-                <li class="case-study-template-li-bullets">Calling&nbsp;<span class="code-highlight">user.loginByLoginId</span>, providing a valid user login (email) and its password.</li>
-              </ul>
-            </div>
-            <div class="learning-div">
-              <div class="w-clearfix resources-heading">Learning / Training / Education<span class="close-button-lt fa fa-times" data-ix="close-learning-div" style=""></span>
-              </div>
-              <p class="thank-you-p">For typical media repurposing workflows, the following Kaltura APIs are recommended:</p>
-              <h4 class="thank-you-h4">Resources</h4>
-              <ul class="case-study-template-list-wrapper-bullets">
-                <li class="case-study-template-li-bullets">Calling the&nbsp;<span class="code-highlight">session.start</span>&nbsp;action, providing a Partner ID and an Admin secret or User secret.</li>
-                <li class="case-study-template-li-bullets">Calling&nbsp;<span class="code-highlight">user.loginByLoginId</span>, providing a valid user login (email) and its password.</li>
-                <li class="case-study-template-li-bullets">Calling&nbsp;<span class="code-highlight">user.loginByLoginId</span>, providing a valid user login (email) and its password.</li>
-                <li class="case-study-template-li-bullets">Calling&nbsp;<span class="code-highlight">user.loginByLoginId</span>, providing a valid user login (email) and its password.</li>
-                <li class="case-study-template-li-bullets">Calling&nbsp;<span class="code-highlight">user.loginByLoginId</span>, providing a valid user login (email) and its password.</li>
-                <li class="case-study-template-li-bullets">Calling&nbsp;<span class="code-highlight">user.loginByLoginId</span>, providing a valid user login (email) and its password.</li>
-              </ul>
-            </div>
-            <div class="live-video-pub-div">
-              <div class="w-clearfix resources-heading">Live Video Publishing <span class="close-button-lv fa fa-times" data-ix="close-live-video-pub-div" style=""></span>
-              </div>
-              <p class="thank-you-p">For typical media repurposing workflows, the following Kaltura APIs are recommended:</p>
-              <h4 class="thank-you-h4">Resources</h4>
-              <ul class="case-study-template-list-wrapper-bullets">
-                <li class="case-study-template-li-bullets">Calling the&nbsp;<span class="code-highlight">session.start</span>&nbsp;action, providing a Partner ID and an Admin secret or User secret.</li>
-                <li class="case-study-template-li-bullets">Calling&nbsp;<span class="code-highlight">user.loginByLoginId</span>, providing a valid user login (email) and its password.</li>
-                <li class="case-study-template-li-bullets">Calling&nbsp;<span class="code-highlight">user.loginByLoginId</span>, providing a valid user login (email) and its password.</li>
-                <li class="case-study-template-li-bullets">Calling&nbsp;<span class="code-highlight">user.loginByLoginId</span>, providing a valid user login (email) and its password.</li>
-                <li class="case-study-template-li-bullets">Calling&nbsp;<span class="code-highlight">user.loginByLoginId</span>, providing a valid user login (email) and its password.</li>
-                <li class="case-study-template-li-bullets">Calling&nbsp;<span class="code-highlight">user.loginByLoginId</span>, providing a valid user login (email) and its password.</li>
-              </ul>
-            </div>
-            <div class="surveillance-div">
-              <div class="w-clearfix resources-heading">Surveillance / Internet-of-Things<span class="close-button-iot fa fa-times" data-ix="close-surveillance-block" style=""></span>
-              </div>
-              <p class="thank-you-p">For typical media repurposing workflows, the following Kaltura APIs are recommended:</p>
-              <h4 class="thank-you-h4">Resources</h4>
-              <ul class="case-study-template-list-wrapper-bullets">
-                <li class="case-study-template-li-bullets">Calling the&nbsp;<span class="code-highlight">session.start</span>&nbsp;action, providing a Partner ID and an Admin secret or User secret.</li>
-                <li class="case-study-template-li-bullets">Calling&nbsp;<span class="code-highlight">user.loginByLoginId</span>, providing a valid user login (email) and its password.</li>
-                <li class="case-study-template-li-bullets">Calling&nbsp;<span class="code-highlight">user.loginByLoginId</span>, providing a valid user login (email) and its password.</li>
-                <li class="case-study-template-li-bullets">Calling&nbsp;<span class="code-highlight">user.loginByLoginId</span>, providing a valid user login (email) and its password.</li>
-                <li class="case-study-template-li-bullets">Calling&nbsp;<span class="code-highlight">user.loginByLoginId</span>, providing a valid user login (email) and its password.</li>
-                <li class="case-study-template-li-bullets">Calling&nbsp;<span class="code-highlight">user.loginByLoginId</span>, providing a valid user login (email) and its password.</li>
-              </ul>
-            </div>
-            <div class="content-distrib-div">
-              <div class="w-clearfix resources-heading">Content Distribution<span class="close-button-cd fa fa-times" data-ix="close-content-distrib-div" style=""></span>
-              </div>
-              <p class="thank-you-p">For typical media repurposing workflows, the following Kaltura APIs are recommended:</p>
-              <h4 class="thank-you-h4">Resources</h4>
-              <ul class="case-study-template-list-wrapper-bullets">
-                <li class="case-study-template-li-bullets">Calling the&nbsp;<span class="code-highlight">session.start</span>&nbsp;action, providing a Partner ID and an Admin secret or User secret.</li>
-                <li class="case-study-template-li-bullets">Calling&nbsp;<span class="code-highlight">user.loginByLoginId</span>, providing a valid user login (email) and its password.</li>
-                <li class="case-study-template-li-bullets">Calling&nbsp;<span class="code-highlight">user.loginByLoginId</span>, providing a valid user login (email) and its password.</li>
-                <li class="case-study-template-li-bullets">Calling&nbsp;<span class="code-highlight">user.loginByLoginId</span>, providing a valid user login (email) and its password.</li>
-                <li class="case-study-template-li-bullets">Calling&nbsp;<span class="code-highlight">user.loginByLoginId</span>, providing a valid user login (email) and its password.</li>
-                <li class="case-study-template-li-bullets">Calling&nbsp;<span class="code-highlight">user.loginByLoginId</span>, providing a valid user login (email) and its password.</li>
-              </ul>
-            </div>
-            <div class="in-product-video-div">
-              <div class="w-clearfix resources-heading">In-Product Integrated Video<span class="close-button-iiv fa fa-times" data-ix="close-in-product-video-div" style=""></span>
-              </div>
-              <p class="thank-you-p">For typical media repurposing workflows, the following Kaltura APIs are recommended:</p>
-              <h4 class="thank-you-h4">Resources</h4>
-              <ul class="case-study-template-list-wrapper-bullets">
-                <li class="case-study-template-li-bullets">Calling the&nbsp;<span class="code-highlight">session.start</span>&nbsp;action, providing a Partner ID and an Admin secret or User secret.</li>
-                <li class="case-study-template-li-bullets">Calling&nbsp;<span class="code-highlight">user.loginByLoginId</span>, providing a valid user login (email) and its password.</li>
-                <li class="case-study-template-li-bullets">Calling&nbsp;<span class="code-highlight">user.loginByLoginId</span>, providing a valid user login (email) and its password.</li>
-                <li class="case-study-template-li-bullets">Calling&nbsp;<span class="code-highlight">user.loginByLoginId</span>, providing a valid user login (email) and its password.</li>
-                <li class="case-study-template-li-bullets">Calling&nbsp;<span class="code-highlight">user.loginByLoginId</span>, providing a valid user login (email) and its password.</li>
-                <li class="case-study-template-li-bullets">Calling&nbsp;<span class="code-highlight">user.loginByLoginId</span>, providing a valid user login (email) and its password.</li>
-              </ul>
-            </div>
+          <div class="w-col w-col-12">
             <div class="get-you-started-div">
               <h3 class="thank-you-h3">Lets Get You Started</h3>
               <h4 class="thank-you-h4">Confirm Your Email</h4>
@@ -227,7 +111,7 @@ layout: default
 
             </div>
           </div>
-          <div class="w-col w-col-6 w-clearfix">
+          <div class="w-col w-col-6 w-clearfix" style="display:none;">
             <div class="case-study-media-div">
               <h3 class="thank-you-h3 thank-you-build-block">What Are You Building?</h3>
               <div class="w-row">
