@@ -29,15 +29,15 @@ $( document ).ready(function() {
                 <p class="thank-you-p">The below example shows the most basic player embed, providing your account id, video id and player widget instance id.<br />In this quick start guide we will review these parameters, and get you started with all the important video experience and media workflow tools available in Kaltura VPaaS to make building video experiences and integrating video natively into your own applications.</p>
                 <div class="w-row">
                     <div id="embedcode" class="w-col w-col-6">
-                        <div class="highlighter-rouge" style="padding-right: 10px;"><pre class="highlight" style="margin: 0;background: none;"><code><span class="c1">kWidget</span><span class="p">.</span><span class="c1">embed</span><span class="p">({</span>
-    <span class="s1">'targetId'</span><span class="p">:</span> <span class="s1">'kaltura_player'</span><span class="p">,</span>
-    <span class="s1">'wid'</span><span class="p">:</span> <span class="s1">'_811441'</span><span class="p">,</span>
-    <span class="s1">'uiconf_id'</span> <span class="p">:</span> <span class="s1">34599271</span><span class="p">,</span>
-    <span class="s1">'entry_id'</span> <span class="p">:</span> <span class="s1">'0_4kwzg46z'</span><span class="p">,</span>
-    <span class="s1">'flashvars'</span> <span class="p">:</span> <span class="p">{</span>
+                        <div class="highlighter-rouge" style="padding-right: 10px;"><pre class="highlight" style="margin: 0;background: none;"><code><span class="c1">kWidget</span><span class="c1">.</span><span class="c1">embed</span><span class="c1">({</span>
+    <span class="s1">'targetId'</span><span class="c1">:</span> <span class="s1">'kaltura_player'</span><span class="c1">,</span>
+    <span class="s1">'wid'</span><span class="c1">:</span> <span class="s1">'_811441'</span><span class="c1">,</span>
+    <span class="s1">'uiconf_id'</span> <span class="c1">:</span> <span class="s1">34599271</span><span class="c1">,</span>
+    <span class="s1">'entry_id'</span> <span class="c1">:</span> <span class="s1">'0_4kwzg46z'</span><span class="c1">,</span>
+    <span class="s1">'flashvars'</span> <span class="c1">:</span> <span class="c1">{</span>
         <span class="nx">// Add dynamic configrations here such as page-specific or user-specific configs.</span>
-    <span class="p">}</span>
-<span class="p">});</span>
+    <span class="c1">}</span>
+<span class="c1">});</span>
 </code></pre>
                         </div>
                     </div>
