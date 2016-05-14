@@ -18,7 +18,7 @@ layout: default
               <p class="thank-you-p">Your Kaltura Partner ID, or PID, is a unique number identifying your Kaltura account.<br />You will need to pass the pid paramemter everytime you authenticate with the Kaltura API, or connect with integrated apps.</p>
 
               <h4 class="thank-you-h4">Kaltura Session</h4>
-              <input type="text" value="<?php echo $_GET['ks']; ?>" readonly="" style="background: transparent; font-size: 12px; border: solid 1px #9EB4B7; margin-bottom: 8px; border-radius: 4px; padding: 2px; width: 100%;">
+              <input type="text" value="<?php echo $_GET['ks'] ? $_GET['ks'] : 'djJ8MjEzOTQyMnxLngKd0BRQwS1EWdLV-T_Um8rRCed9mYyBwu_VOcglQ8mHlyvzAD8At9qPm2HgKoYMi5hdw3THj6ZXfAZGZyjE'; ?>" readonly="" style="background: transparent; font-size: 12px; border: solid 1px #9EB4B7; margin-bottom: 8px; border-radius: 4px; padding: 2px; width: 100%;">
               <p class="thank-you-p">The string above is a Kaltura Session (aka KS). The KS authenticates the account and user when making an API call. You are expected to provide a generated KS with every API call you will make.
               <br />
               There are three methods for generating a Kaltura Session:</p>
@@ -36,10 +36,10 @@ layout: default
               </blockquote>
 
               <h4 class="thank-you-h4">Kaltura Entries</h4>
-              <p class="thank-you-p">Content assets are called entries in Kaltura. An entry is a logical object representing all aspects of the media asset including its metadata, thumbnails, transcoded flavors, captions, cue-points (timed metadata), and more. Every entry is referenced by its unique identifier, the Entry Id.</p>
-              <input type="text" value="Entry from your account: <?php echo $_GET['entry_id']; ?>" readonly="" style="background: transparent; font-size: 12px; border: solid 1px #9EB4B7; margin-bottom: 8px; border-radius: 4px; padding: 2px; width: 100%;">
+              <input type="text" size="50" value="A Kaltura Entry Id: <?php echo $_GET['entry_id'] ? $_GET['entry_id'] : '0_4kwzg46z'; ?>" readonly="" style="background: transparent; font-size: 12px; border: solid 1px #9EB4B7; margin-bottom: 8px; border-radius: 4px; padding: 2px;">
+              <p class="thank-you-p">Content assets are called entries in Kaltura. An entry is a logical object representing all aspects of the media asset including its metadata, thumbnails, transcoded flavors, captions, cue-points (timed metadata), and more.</p>
               <p class="thank-you-p">In Kaltura you can manage various types of assets, including on-demand media assets (video, audio, and image files), live stream video or audio broadcasts, as well as playlists, documents and other special data files.</p>
-              <p class="thank-you-p">Kaltura entries come with basic metadata fields such as title, description and tags. You can enrich the metadata fields available for your entries by adding your own custom metadata profiles and fields. These metadata fields can then be used for smarter search queries or as rules in processes and workflows.</p>
+              <p class="thank-you-p">Kaltura entries come with basic metadata fields such as title, description and tags, and you can enrich the metadata fields available for your entries by adding your own custom metadata profiles and fields. These metadata fields can then be used for smart search queries or as rules in access control, and workflows, and even as backend event triggers.</p>
               <blockquote class="recipes-ref-list">
                 <strong>Learn &amp; explore with Code Recipes:</strong> 
                 <ul>
@@ -49,6 +49,7 @@ layout: default
                   <li><a href="https://developer.kaltura.com/recipes/metadata" target="_blank">Work with custom metadata.</a></li>
                   <li><a href="https://developer.kaltura.com/recipes/code_cue_points" target="_blank">Timed metadata using cue points.</a></li>
                   <li><a href="https://developer.kaltura.com/recipes/captions" target="_blank">Upload captions and run in-video search.</a></li>
+                  <li><a href="https://developer.kaltura.com/recipes/backend_notifications" target="_blank">Working with Backend and Email Notifications.</a></li>
                 </ul>
               </blockquote>
               
