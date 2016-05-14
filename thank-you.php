@@ -3,7 +3,7 @@ layout: default
 ---
 <script>
 $( document ).ready(function() {
-    $('.thank-you-heading').fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200).delay(5000).fadeOut(1000);
+    $('.thank-you-heading').fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200).delay(6000).fadeOut(1000);
 };
 </script>
 <div class="w-section thank-you-section">
