@@ -2416,7 +2416,9 @@ p.mail-confirmation {
    background-repeat: no-repeat;
    background-size: 45px;
    padding-left: 55px;
-   background-position-y: 15px;
+   background-position-y: 4px;
+   min-height: 60px;
+   max-width: 470px;
 }
 
 blockquote.recipes-ref-list {
