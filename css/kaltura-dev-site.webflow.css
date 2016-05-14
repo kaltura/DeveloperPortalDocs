@@ -2066,6 +2066,13 @@ a[ id="case_study_link" ]:target ~ #case_study_section {
   font-weight: 700;
 }
 
+.thank-you-li-bullets {
+    margin-bottom: 0;
+    font-family: proxima-nova, sans-serif;
+    line-height: 23px;
+    letter-spacing: 0.2px;
+}
+
 .code-highlight {
   padding: 2px 10px;
   border-radius: 4px;
