@@ -3,14 +3,16 @@ layout: default
 ---
 <div class="w-section thank-you-section">
     <div class="w-container">
-      <h1 class="section-headings success-heading thank-you-heading">Thank You for Signing Up!<br /><span class="success-subheading">Your Kaltura VPaaS Account is Ready</span></h1>
+        <div class="section-headings success-heading thank-you-heading">
+          <h1>Thank You for Signing Up!</h1>
+          <h2 class="success-subheading" style="font-weight: normal;margin-bottom: 0;">Please Confirm Your Email Address</h2>
+          <p class="thank-you-p mail-confirmation" style="font-weight: bold;font-size: 14px;color: gray;margin: 0 auto;max-width: 470px;font-weight: normal;">Look for the verification email in your inbox and click the link in the email to activate your new account.</p>
+        </div>
       <div class="success-account-details">
         <div class="w-row">
           <div class="w-col w-col-12">
             <div class="get-you-started-div">
               <h3 class="thank-you-h3">Lets Get You Started</h3>
-              <h4 class="thank-you-h4">Confirm Your Email</h4>
-              <p class="thank-you-p mail-confirmation" style="font-weight: bold;">Look for the verification email in your inbox and click the link in the email to activate your new account and create a password.</p>
               <h4 class="thank-you-h4">YOUR Kaltura Account Id (Patrner Id)</h4>
               <input type="text" value="Your partnerId: <?php echo $_GET['partner_id']; ?>" readonly="" size="24" style="background: transparent;font-size: 12px;border: solid 1px #9EB4B7;margin-bottom: 8px;border-radius: 4px;padding: 2px;padding-left: 6px;">
               <p class="thank-you-p">Your Kaltura Partner ID, or PID, is a unique number identifying your Kaltura account.</p>
