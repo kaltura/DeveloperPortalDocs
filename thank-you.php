@@ -19,13 +19,13 @@ layout: default
 
               <h4 class="thank-you-h4">Kaltura Session</h4>
               <input type="text" value="<?php echo $_GET['ks']; ?>" readonly="" style="background: transparent; font-size: 12px; border: solid 1px #9EB4B7; margin-bottom: 8px; border-radius: 4px; padding: 2px; width: 100%;">
-              <p class="thank-you-p">The string above is a Kaltura Session (aka KS). The KS authenticates the account and user when making an API call. You are expected to provide a generated KS with every API call you make.
+              <p class="thank-you-p">The string above is a Kaltura Session (aka KS). The KS authenticates the account and user when making an API call. You are expected to provide a generated KS with every API call you will make.
               <br />
               There are three methods for generating a Kaltura Session:</p>
               <ul class="case-study-template-list-wrapper-bullets">
-                <li class="thank-you-li-bullets">Calling the&nbsp;<span class="code-highlight">session.start</span>&nbsp;action. This method is recommended for scripts and applications that only you run and maintain.</li>
-                <li class="thank-you-li-bullets">Calling&nbsp;<span class="code-highlight">user.loginByLoginId</span> action. This method is recommended for managing registered users in Kaltura, and allowing users to login using email and password.</li>
-                <li class="thank-you-li-bullets">Using the&nbsp;<span class="code-highlight">appToken</span> service. This method is recommended for when you are providing access to scripts or applications that are managed by others, and provides tools to manage API tokens per application provider, revoke access, and more.</li>
+                <li class="thank-you-li-bullets">Calling the&nbsp;<span class="code-highlight"><a href="https://developer.kaltura.com/api-docs/#/session.start" target="_blank">session.start</a></span>&nbsp;action. This method is recommended for scripts and applications that only you will have access to.</li>
+                <li class="thank-you-li-bullets">Calling&nbsp;<span class="code-highlight"><a href="https://developer.kaltura.com/api-docs/#/user.loginByLoginId" target="_blank">user.loginByLoginId</a></span> action. This method is recommended for managing registered users in Kaltura, and allowing users to login using email and password. When you login to the <a href="www.kaltura.com/index.php/kmc" target="_blank">Kaltura Management Console</a>, the KMC app calls the user.loginByLoginId action to authenticate you using your registered email and password.</li>
+                <li class="thank-you-li-bullets">Using the&nbsp;<span class="code-highlight"><a href="https://developer.kaltura.com/api-docs/#/appToken" target="_blank">appToken</a></span> service. This method is recommended for when you are providing access to scripts or applications that are managed by others, and provides tools to manage API tokens per application provider, revoke access to specific applications, and more.</li>
               </ul>
               <blockquote class="recipes-ref-list">
                 <strong>Learn &amp; explore with Code Recipes:</strong> 
