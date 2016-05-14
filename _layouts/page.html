@@ -158,7 +158,8 @@ $( document ).ready(function() {
 	$('.post-content h1, .post-content h2, .post-content h3, .post-content h4, .post-content h5, .post-content h6').filter('[id]').each(function () {
 	    $(this).html('<a href="#'+$(this).attr('id')+'" class="post-content" aria-hidden="true">'+$(this).text()+'</a>');
 	});
-	{% if page.name != 'index.md' and page.name != '404.md' %}	
+	{% if page.name != 'index.md' and page.name != 'search.md' and page.name != '404.md' %}
+
 	//build the "on this page" menu:
 	var ToC =
 	  "<nav role='navigation' class='table-of-contents'>" +
