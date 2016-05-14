@@ -17,7 +17,7 @@ $( document ).ready(function() {
         <div class="w-row">
           <div class="w-col w-col-12">
             <div class="get-you-started-div">
-              <h3 class="thank-you-h3">Let's Get You Started</h3>
+              <h3 class="thank-you-h3">Let&apos;s Get You Started</h3>
                   <ul>
                     <li><a href="#partnerid">partnerId (Kaltura Account ID)</a></li>
                     <li><a href="#ks">ks (Kaltura API Session)</a></li>
