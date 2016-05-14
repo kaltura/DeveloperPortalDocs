@@ -14,7 +14,7 @@ layout: default
             <div class="get-you-started-div">
               <h3 class="thank-you-h3">Let's Get You Started</h3>
               <div>
-                  <div id="toc" class="w-col w-col-3">
+                  <div id="toc" class="w-col w-col-4">
                       <ul>
                         <li><a href="#partnerid">partnerId (Kaltura Account ID)</a></li>
                         <li><a href="#ks">ks (Kaltura API Session)</a></li>
@@ -22,7 +22,7 @@ layout: default
                         <li><a href="#uiconfid">uiConfId (Player/Widget Instance Id)</a></li>
                     </ul>
                 </div>
-                <div id="embedcode" class="w-col w-col-9">
+                    <div id="embedcode" class="w-col w-col-4">
                       <p class="thank-you-p">All embed methods require these base parameters: <span class="code-highlight">partnerId</span>, <span class="code-highlight">uiConfId</span> and <span class="code-highlight">entryId</span>.
                   <br/>Below is an example player embed code:</p>
                   <div class="highlighter-rouge"><pre class="highlight"><code><span class="nx">kWidget</span><span class="p">.</span><span class="nx">embed</span><span class="p">({</span>
@@ -37,7 +37,8 @@ layout: default
     <span class="p">});</span>
     </code></pre>
     </div>
-                  
+    </div>
+                  <div id="embedplayer" class="w-col w-col-4">
                   <div class="w-embed w-iframe w-script media-embed-div">
                     <!-- Outer div defines maximum space the player can take -->
                     <div style="width: 100%;display: inline-block;position: relative;">
