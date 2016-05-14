@@ -15,7 +15,7 @@ layout: default
               <h3 class="thank-you-h3">Lets Get You Started</h3>
               <h4 class="thank-you-h4">Your Kaltura Account Id (Patrner Id)</h4>
               <input type="text" value="Your partnerId: <?php echo $_GET['partner_id']; ?>" readonly="" size="24" style="background: transparent;font-size: 12px;border: solid 1px #9EB4B7;margin-bottom: 8px;border-radius: 4px;padding: 2px;padding-left: 6px;">
-              <p class="thank-you-p">Your Kaltura Partner ID, or PID, is a unique number identifying your Kaltura account.</p>
+              <p class="thank-you-p">Your Kaltura Partner ID, or PID, is a unique number identifying your Kaltura account.<br />You will need to pass the pid paramemter everytime you authenticate with the Kaltura API, or connect with integrated apps.</p>
 
               <h4 class="thank-you-h4">Kaltura Session</h4>
               <input type="text" value="<?php echo $_GET['ks']; ?>" readonly="" style="background: transparent; font-size: 12px; border: solid 1px #9EB4B7; margin-bottom: 8px; border-radius: 4px; padding: 2px; width: 100%;">
@@ -23,9 +23,9 @@ layout: default
               <br />
               There are three methods for generating a Kaltura Session:</p>
               <ul class="case-study-template-list-wrapper-bullets">
-                <li class="case-study-template-li-bullets">Calling the&nbsp;<span class="code-highlight">session.start</span>&nbsp;action. This method is recommended for scripts and applications that only you run and maintain.</li>
-                <li class="case-study-template-li-bullets">Calling&nbsp;<span class="code-highlight">user.loginByLoginId</span> action. This method is recommended for managing registered users in Kaltura, and allowing users to login using email and password.</li>
-                <li class="case-study-template-li-bullets">Using the&nbsp;<span class="code-highlight">appToken</span> service. This method is recommended for when you are providing access to scripts or applications that are managed by others, and provides tools to manage API tokens per application provider, revoke access, and more.</li>
+                <li class="thank-you-li-bullets">Calling the&nbsp;<span class="code-highlight">session.start</span>&nbsp;action. This method is recommended for scripts and applications that only you run and maintain.</li>
+                <li class="thank-you-li-bullets">Calling&nbsp;<span class="code-highlight">user.loginByLoginId</span> action. This method is recommended for managing registered users in Kaltura, and allowing users to login using email and password.</li>
+                <li class="thank-you-li-bullets">Using the&nbsp;<span class="code-highlight">appToken</span> service. This method is recommended for when you are providing access to scripts or applications that are managed by others, and provides tools to manage API tokens per application provider, revoke access, and more.</li>
               </ul>
               <blockquote class="recipes-ref-list">
                 <strong>Learn &amp; explore with Code Recipes:</strong> 
