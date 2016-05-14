@@ -21,8 +21,8 @@ $( document ).ready(function() {
                   <ul>
                     <li><a href="#partnerid">partnerId (Kaltura Account ID)</a></li>
                     <li><a href="#ks">ks (Kaltura API Session)</a></li>
-                    <li><a href="#entryid">entryId (Media Asset Id)</a></li>
-                    <li><a href="#uiconfid">uiConfId (Widget Instance Id)</a></li>
+                    <li><a href="#entryid">entryId (Media Asset ID)</a></li>
+                    <li><a href="#uiconfid">uiConfId (Widget Instance ID)</a></li>
                 </ul>
                 <a name="embedexample"></a>
                 <h4 class="thank-you-h4">Video Player Embed</h4>
@@ -68,7 +68,7 @@ The Kaltura Player is the building block by which you deliver video experiences 
                     </div>
               </div>
               <a name="partnerid"></a>
-              <h4 class="thank-you-h4">Your Kaltura Account Id (Patrner Id)</h4>
+              <h4 class="thank-you-h4">Your Kaltura Account ID (Patrner Id)</h4>
               <input type="text" value="Your partnerId: <?php echo $_GET['partner_id'] ? $_GET['partner_id'] : '811441'; ?>" readonly="" size="24" style="background: transparent;font-size: 12px;border: solid 1px #9EB4B7;margin-bottom: 8px;border-radius: 4px;padding: 2px;padding-left: 6px;">
               <p class="thank-you-p">Your Kaltura Partner ID, or PID, is a unique number identifying your Kaltura account.<br />You will need to pass the pid paramemter everytime you authenticate with the Kaltura API, or connect with integrated apps.</p>
               
@@ -116,7 +116,7 @@ The Kaltura Player is the building block by which you deliver video experiences 
               The Kaltura Video Player library abstracts the complexities around delivery of video across devices, browsers and native apps and the user-experience with your video. It provides a cross-platform rich UI framework, easy branding and customization features and even in-video quizzes, advertizing integrations, and a robust plugins-framework to create your own unique expeirences.<br />
               <br />The player further simplifies embedding and integrating the player into pages and apps by managing your player instances and configurations in the cloud, and providing the embed code a signle parameter - the uiConf Id.</p>
               <input type="text" value="Player instance uiConf id: <?php echo $_GET['ui_conf_id'] ? $_GET['ui_conf_id'] : '34599271'; ?>" size="50" readonly="" style="background: transparent; font-size: 12px; border: solid 1px #9EB4B7; margin-bottom: 8px; border-radius: 4px; padding: 2px;">
-              <p class="thank-you-p">The uiConf Id is used to reference the player instance you wish to render when embedding a video in your pages or app views.</p>
+              <p class="thank-you-p">The uiConf ID is used to reference the player instance you wish to render when embedding a video in your pages or app views.</p>
               
               <blockquote class="recipes-ref-list">
                 <strong>Learn &amp; explore with Code Recipes:</strong> 
