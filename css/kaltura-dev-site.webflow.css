@@ -1942,10 +1942,14 @@ td {
     margin-bottom: 31px;
 }
 
+.get-you-started-div {
+   margin-top: 50px;
+}
+
 .get-you-started-div a {
    font-family: proxima-nova, sans-serif;
    color: #188093;
-   margin-top: 50px;
+   font-size: 14px;
 }
 
 .trustedby-img {
