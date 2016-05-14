@@ -1945,6 +1945,7 @@ td {
 .get-you-started-div a {
    font-family: proxima-nova, sans-serif;
    color: #188093;
+   margin-top: 50px;
 }
 
 .trustedby-img {
@@ -2033,7 +2034,7 @@ a[ id="case_study_link" ]:target ~ #case_study_section {
 
 .section-headings.success-heading.thank-you-heading {
     margin-top: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 0;
 }
 
 .thank-you-h3 {
