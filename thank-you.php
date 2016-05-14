@@ -25,7 +25,7 @@ $( document ).ready(function() {
                     <li><a href="#uiconfid">uiConfId (Widget Instance Id)</a></li>
                 </ul>
                 <h4 class="thank-you-h4" name="embedexample">Video Player Embed</h4>
-                <p class="thank-you-p">Playback is one of the key elements in your video experience. It is how you'll deliver the video to your users, how you interact with users while they watch the video (e.g. in-video quizzes, forms, ads, etc.), it is also how you ensure the right people get to watch your video (e.g. access control, rights management, parental control, and more) and how you will collect viewer engagement analytics about who, when and how they watch your video.</p>
+                <p class="thank-you-p">Playback is one of the key elements in your video experience. It is how you&apos;ll deliver the video to your users, how you interact with users while they watch the video (e.g. in-video quizzes, forms, ads, etc.), it is also how you ensure the right people get to watch your video (e.g. access control, rights management, parental control, and more) and how you will collect viewer engagement analytics about who, when and how they watch your video.</p>
                 <p class="thank-you-p">The below example shows the most basic player embed, providing your account id, video id and player widget instance id.<br />In this quick start guide we will review these parameters, and get you started with all the important video experience and media workflow tools available in Kaltura VPaaS to make building video experiences and integrating video natively into your own applications.</p>
                 <div class="w-row">
                     <div id="embedcode" class="w-col w-col-6">
