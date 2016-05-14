@@ -24,7 +24,8 @@ $( document ).ready(function() {
                     <li><a href="#entryid">entryId (Media Asset Id)</a></li>
                     <li><a href="#uiconfid">uiConfId (Widget Instance Id)</a></li>
                 </ul>
-                <h4 class="thank-you-h4" name="embedexample">Video Player Embed</h4>
+                <a name="embedexample"></a>
+                <h4 class="thank-you-h4">Video Player Embed</h4>
                 <p class="thank-you-p">Playback is one of the key elements in your video experience. It is how you&apos;ll deliver the video to your users, how you interact with users while they watch the video (e.g. in-video quizzes, forms, ads, etc.), it is also how you ensure the right people get to watch your video (e.g. access control, rights management, parental control, and more) and how you will collect viewer engagement analytics about who, when and how they watch your video.</p>
                 <p class="thank-you-p">The below example shows the most basic player embed, providing your account id, video id and player widget instance id.<br />In this quick start guide we will review these parameters, and get you started with all the important video experience and media workflow tools available in Kaltura VPaaS to make building video experiences and integrating video natively into your own applications.</p>
                 <div class="w-row">
@@ -65,10 +66,12 @@ $( document ).ready(function() {
                         </div>
                     </div>
               </div>
-              <h4 class="thank-you-h4" name="partnerid">Your Kaltura Account Id (Patrner Id)</h4>
+              <a name="partnerid"></a>
+              <h4 class="thank-you-h4">Your Kaltura Account Id (Patrner Id)</h4>
               <input type="text" value="Your partnerId: <?php echo $_GET['partner_id'] ? $_GET['partner_id'] : '811441'; ?>" readonly="" size="24" style="background: transparent;font-size: 12px;border: solid 1px #9EB4B7;margin-bottom: 8px;border-radius: 4px;padding: 2px;padding-left: 6px;">
               <p class="thank-you-p">Your Kaltura Partner ID, or PID, is a unique number identifying your Kaltura account.<br />You will need to pass the pid paramemter everytime you authenticate with the Kaltura API, or connect with integrated apps.</p>
-
+              
+              <a name="ks"></a>
               <h4 class="thank-you-h4" name="ks">Kaltura Session</h4>
               <input type="text" value="<?php echo $_GET['ks'] ? $_GET['ks'] : 'djJ8MjEzOTQyMnxLngKd0BRQwS1EWdLV-T_Um8rRCed9mYyBwu_VOcglQ8mHlyvzAD8At9qPm2HgKoYMi5hdw3THj6ZXfAZGZyjE'; ?>" readonly="" style="background: transparent; font-size: 12px; border: solid 1px #9EB4B7; margin-bottom: 8px; border-radius: 4px; padding: 2px; width: 100%;">
               <p class="thank-you-p">The string above is a Kaltura Session (aka KS). The KS authenticates the account and user when making an API call. You are expected to provide a generated KS with every API call you will make.
@@ -86,7 +89,8 @@ $( document ).ready(function() {
                   <li><a href="https://developer.kaltura.com/recipes/app_tokens" target="_blank">Managing applications access with the appTokens service.</a></li>
                 </ul>
               </blockquote>
-
+              
+              <a name="entryid"></a>
               <h4 class="thank-you-h4" name="entryid">Kaltura Entries</h4>
               <input type="text" size="50" value="A Kaltura Entry Id: <?php echo $_GET['entry_id'] ? $_GET['entry_id'] : '0_4kwzg46z'; ?>" readonly="" style="background: transparent; font-size: 12px; border: solid 1px #9EB4B7; margin-bottom: 8px; border-radius: 4px; padding: 2px;">
               <p class="thank-you-p">Content assets are called entries in Kaltura. An entry is a logical object representing all aspects of the media asset including its metadata, thumbnails, transcoded flavors, captions, cue-points (timed metadata), and more.</p>
@@ -105,6 +109,7 @@ $( document ).ready(function() {
                 </ul>
               </blockquote>
               
+              <a name="uiconfid"></a>
               <h4 class="thank-you-h4" name="uiconfid">Kaltura Player &amp; uiConf</h4>
               <p class="thank-you-p">A critical piece of every video workflow is the playback and the user-experience while interacting with video.<br />
               The Kaltura Video Player library abstracts the complexities around delivery of video across devices, browsers and native apps and the user-experience with your video. It provides a cross-platform rich UI framework, easy branding and customization features and even in-video quizzes, advertizing integrations, and a robust plugins-framework to create your own unique expeirences.<br />
