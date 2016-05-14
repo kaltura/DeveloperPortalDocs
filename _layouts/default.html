@@ -4,6 +4,15 @@
   {% include head.html %}
 
   <body>
+{% if page.name == 'register.html' %}
+  <script>
+	dataLayer = [{
+	'pageCategory': 'signup',
+	'visitorType': 'high-value'
+	}];
+</script>
+
+{% endif %}
 <!-- Google Tag Manager -->
 <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-KKRG75"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
