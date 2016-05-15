@@ -3,8 +3,8 @@ layout: page
 title: Article Style and Structure Guidelines
 ---
 
-The Kaltura VPaaS Developer Site is using {% extlink Jekyll engine http://jekyllrb.com/ %} and markdown syntax as the basis of the articles.
-To learn about Markdown basics and how to use the format, please read: {% extlink GitHub markdown basics https://help.github.com/articles/markdown-basics %}.
+The Kaltura VPaaS Developer Site is using [Jekyll engine](http://jekyllrb.com/) and markdown syntax as the basis of the articles.
+To learn about Markdown basics and how to use the format, please read: [GitHub markdown basics](https://help.github.com/articles/markdown-basics).
 
 
 ## Adding Kaltura videos 
@@ -12,10 +12,8 @@ To learn about Markdown basics and how to use the format, please read: {% extlin
 
 **Will be rendered as:**
 
-
 {% onebox http://www.kaltura.com/tiny/nex76 %}
 
-HERE1
 
 {% onebox https://developer.kaltura.com/recipes/upload/embed#/start %}
 
@@ -40,7 +38,7 @@ int hello_world(char *world)
 }
 {% endhighlight %}
 
-See {% extlink List of supported languages and lexers https://github.com/jneen/rouge/wiki/list-of-supported-languages-and-lexers %}
+See [List of supported languages and lexers](https://github.com/jneen/rouge/wiki/list-of-supported-languages-and-lexers).
 
 
 ## Adding diagrams
@@ -74,19 +72,18 @@ note over KP: Plays the downloaded file
 
 {% endplantuml %}
 
-## Adding links to external sites
-&#123;% extlink Debian GNU Linux http://debian.org %&#125;
+## Note about links to external sites
+The VPaaS website will automatically detect if links are using the same domain or different.  
+Links that direct to external domains will automatically be added `target="_blank"' and will be opened in a new tab.
 
-**Will render as:**
-{% extlink Debian GNU Linux http://debian.org %}
 
-A nifty tool to help you to see how your markdown looks as you create it: {% extlink dillinger.io http://dillinger.io %}
+A nifty tool to help you to see how your markdown looks as you create it: [dillinger.io](http://dillinger.io)
 
-For additional reading on the Markdown flavor we use read: {% extlink Kramdown http://kramdown.gettalong.org/documentation.html %}.
+For additional reading on the Markdown flavor we use read: [Kramdown](http://kramdown.gettalong.org/documentation.html).
 
 ## Tips for Creating Great Content
 
-* Start with an introduction by answering the question “what will be learned in this document?”.
+* Start with an introduction by answering the question "what will be learned in this document?".
 * Think about the steps that will get your reader from A to Z in the fastest way possible while following Kaltura best-practises.
 * Do not add an H1 title (#) to your article, it will be added automatically from the metadata title defined in the ["article header notation"](#header-notation) section
 * All sections should be separated by H2 headings (##), subsections by H3 headings (###) and so on.
