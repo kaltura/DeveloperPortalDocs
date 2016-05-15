@@ -15,6 +15,7 @@ var exLink = (function() {
     initialize = function(options) {
 
         var defaults = {
+            parentElementPath: 'body',
             protocols: ['http', 'https'],
             filetypes: ['pdf', 'xls', 'docx', 'doc', 'ppt', 'pptx'],
             hostCompare: false,
@@ -50,7 +51,7 @@ var exLink = (function() {
 
        opts = $.extend({}, defaults, options);
 
-       $('body').on('click','.exLink, .docuLink',function(event){
+       $(parentElementPath).on('click','.exLink, .docuLink',function(event){
             event.preventDefault();
 
             if(event.handled != true) {
