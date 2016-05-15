@@ -13,7 +13,7 @@ To get started, let's review the foundational building blocks of a video experie
 
 The Kaltura API is [stateless](https://en.wikipedia.org/wiki/Stateless_protocol), which means that every request made to the Kaltura API requires an authenticated session string to be passed along with your request. This is the Kaltura Session (aka KS), it identifies the Kaltura account and user for which the executed API action is to be executed. The KS can also specifiy various permissions and configurations such as dynamically setting the role of the user, time duration the session is good for and more. You are expected to provide a generated KS with every API call you will make. 
 
-There are three methods for generating a Kaltura Session:
+### There are three methods for generating a Kaltura Session:
 
 * Calling the [session.start action](https://developer.kaltura.com/api-docs/#/session.start). This method is recommended for scripts and applications that only you will have access to.
 * Calling [user.loginByLoginId action](https://developer.kaltura.com/api-docs/#/user.loginByLoginId). This method is recommended for managing registered users in Kaltura, and allowing users to login using email and password. When you login to the Kaltura Management Console, the KMC app calls the user.loginByLoginId action to authenticate you using your registered email and password.
@@ -56,10 +56,17 @@ Follow the recipe below to get acquinted with the file upload API:
 
 After uploading your file, you will have created a KalturaMediaEntry object by calling the [media.add](https://developer.kaltura.com/api-docs/#/media.add) action, and then assigned the uploaded file to this media entry by calling the [media.addContent](https://developer.kaltura.com/api-docs/#/media.addContent) action.
 
-Now that you have content in your account, you will want to implement a library search in order to create galleries or search for media discovery. The main service you will be working with is the [media service[(https://developer.kaltura.com/api-docs/#/media).
+Now that you have content in your account, you will want to implement a library search in order to create galleries or search for media discovery. The main service you will be working with is the [media service](https://developer.kaltura.com/api-docs/#/media).
 
 ### Searching Entries - media.list
 
+Note that you can combine several filter parameters together to further narrow down your search results. 
+
 {% onebox https://developer.kaltura.com/recipes/video_search/embed#/start %}
 
-### 
+### Retriving Entry Details - media.get
+
+In Kaltura retriving the data of an object by its id is done by calling its `get` action. With media entries, call the [`media.get`](https://developer.kaltura.com/api-docs/#/media.get) action to retrieve the data of a specific entry.
+
+
+
