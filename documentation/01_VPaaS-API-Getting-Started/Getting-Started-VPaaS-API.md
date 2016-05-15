@@ -24,7 +24,13 @@ There are three methods for generating a Kaltura Session:
 ## Uploading your Media Files
 
 Media files are uploaded to Kaltura through [CORS enabled](https://www.w3.org/wiki/CORS_Enabled) REST API.  
-You can implement an upload flow by using a Kaltura tested JavaScript widget for web pages, or by implementing direct calls to the API. Which method you chose to implement depends on your application needs.
+You can implement an upload flow by using a Kaltura tested JavaScript widget for web pages, or by implementing direct calls to the API.  
+Alternatively, Kaltura also provides methods for bulk-ingest and import of content. To learn more, read: [Kaltura Bulk Content Ingestion API](https://vpaas.kaltura.com/documentation/02_Media-Ingest-and-Preperation/Bulk-Content-Ingestion.html).
+
+>  Side note: Kaltura manages all forms of media files including video, image, and audio files. It even provides APIs to host, deliver and process document files such as PDF and PPT files to create rich experiences such as synchronized side-by-side video and presentation slides.
+
+Which method you chose to implement depends on your application needs.  
+Below are the two main methods for uploading files:
 
 ### Upload Files Using JavaScript with the jQuery Upload Widget
 
@@ -36,10 +42,20 @@ To quickly see how it works, simply download the project to your localhost, edit
 
 ### Upload Files by Calling the API Directly
 
-<iframe width="420" height="315" src="https://developer.kaltura.com/recipes/upload/embed#/start" frameborder="0" allowfullscreen></iframe>
+Uploading a file directly via the REST API requires knowledege of handling files in your preferred programming language.  
+The [Kaltura Client Libraries](https://developer.kaltura.com/api-docs/#/Client%20Libraries) simplify constructing the REST API calls to Kaltura and provides a simple API for a simple file upload request.  
+However, if you'd like to support chunked file upload and pause-resume in your application, you will need to handle the file-chunking according to your preferred programming language standards.
 
->  Side note: Kaltura manages all forms of media files including video, image, and audio files. It even provides APIs to host, deliver and process document files such as PDF and PPT files to create rich experiences such as synchronized side-by-side video and presentation slides.
+> If you're using Java, follow the [Chunked Upload in Java reference implementation]() to achieve chunked file upload in your Java application.
+
+Follow the recipe below to get acquinted with the file upload API:
+
+<div class="recipe-container" style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
+	<iframe src="https://developer.kaltura.com/recipes/upload/embed#/start" frameborder="0" allowfullscreen class="recipe-iframe" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+</div>
 
 ## Retrieving Your Media Entry details
 
-At the end of the upload flow you will have created a KalturaMediaEntry object by calling the [media.add](https://developer.kaltura.com/api-docs/#/media.add) action, and then assigned the uploaded file to this media entry by calling the [media.addContent](https://developer.kaltura.com/api-docs/#/media.addContent) action.
+After uploading your file, you will have created a KalturaMediaEntry object by calling the [media.add](https://developer.kaltura.com/api-docs/#/media.add) action, and then assigned the uploaded file to this media entry by calling the [media.addContent](https://developer.kaltura.com/api-docs/#/media.addContent) action.
+
+Next
