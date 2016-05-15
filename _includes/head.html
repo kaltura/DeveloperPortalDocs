@@ -47,11 +47,12 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 <script src="{{ site.url }}/js/country.js"></script>
 
-<script type="text/javascript" src="/js/jQuery.exLink/jquery.exLink.min.js"></script>
-<link rel="stylesheet" type="text/css" href="/js/jQuery.exLink/jquery.exLink.min.css">
+<script type="text/javascript" src="/js/jQuery.exLink/jquery.exLink.js"></script>
+<link rel="stylesheet" type="text/css" href="/js/jQuery.exLink/jquery.exLink.css">
 <script type="text/javascript">
  $( document ).ready(function() {
     exLink.init({
+    	parentElementPath: '.template-page-content-column .post-content',
  	linkWarning: false,
 	hostCompare: true,
 	noFollow: false,

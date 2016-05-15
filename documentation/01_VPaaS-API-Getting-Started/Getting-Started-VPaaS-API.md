@@ -50,13 +50,16 @@ However, if you'd like to support chunked file upload and pause-resume in your a
 
 Follow the recipe below to get acquinted with the file upload API:
 
-<div class="recipe-container" style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
-	<!--iframe src="https://developer.kaltura.com/recipes/upload/embed#/start" frameborder="0" allowfullscreen class="recipe-iframe" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe-->
 {% onebox https://developer.kaltura.com/recipes/upload/embed#/start %}
-</div>
 
-## Retrieving Your Media Entry details
+## Search and Retrieve Kaltura Entries
 
 After uploading your file, you will have created a KalturaMediaEntry object by calling the [media.add](https://developer.kaltura.com/api-docs/#/media.add) action, and then assigned the uploaded file to this media entry by calling the [media.addContent](https://developer.kaltura.com/api-docs/#/media.addContent) action.
 
-Next
+Now that you have content in your account, you will want to implement a library search in order to create galleries or search for media discovery. The main service you will be working with is the [media service[(https://developer.kaltura.com/api-docs/#/media).
+
+### Searching Entries - media.list
+
+{% onebox https://developer.kaltura.com/recipes/video_search/embed#/start %}
+
+### 
