@@ -52,7 +52,7 @@ Follow the recipe below to get acquinted with the file upload API:
 
 {% onebox https://developer.kaltura.com/recipes/upload/embed#/start %}
 
-## Search and Retrieve Kaltura Entries
+## Working with Media Entries
 
 After uploading your file, you will have created a KalturaMediaEntry object by calling the [media.add](https://developer.kaltura.com/api-docs/#/media.add) action, and then assigned the uploaded file to this media entry by calling the [media.addContent](https://developer.kaltura.com/api-docs/#/media.addContent) action.
 
@@ -68,5 +68,15 @@ Note that you can combine several filter parameters together to further narrow d
 
 In Kaltura retriving the data of an object by its id is done by calling its `get` action. With media entries, call the [`media.get`](https://developer.kaltura.com/api-docs/#/media.get) action to retrieve the data of a specific entry.
 
+### Updating Entry Details - media.update
 
+To update any object in Kaltura, use the `update` action. To update media entries, call the [`media.update`](https://developer.kaltura.com/api-docs/#/media.update) action providing an instance of the `KalturaMediaEntry` object.   
 
+Additionally, media entries in Kaltura have several related objects including [captionAsset](https://developer.kaltura.com/api-docs/#/captionAsset) for caption files, [thumbAsset](https://developer.kaltura.com/api-docs/#/thumbAsset) for editorial thumbnails, [access control](https://developer.kaltura.com/api-docs/#/accessControl) profiles to set rules that allow or deny access to the media, [custom metadata](https://developer.kaltura.com/recipes/metadata) profiles to enhance the base fields available in your account, and much more.  
+Keep browsing these guides and review the [Code Recipes](https://developer.kaltura.com/recipes/) to learn more about the many capabilities of Kaltura VPaaS.
+
+## Embed and Customize Your Video Player 
+
+## Dynamic Thumbnails
+
+## Analyze Engagement Analytics
