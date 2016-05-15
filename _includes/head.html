@@ -35,7 +35,7 @@
   </script>
   <script type="text/javascript" src="{{site.url}}/js/buttons.js"></script>
   <script type="text/javascript">
-    stLight.options({publisher: "7acb66da-36ad-4c46-ba0d-f7ede13aa36c", doNotHash: false, doNotCopy: false, hashAddressBar: true});
+    stLight.options({publisher: "7acb66da-36ad-4c46-ba0d-f7ede13aa36c", doNotHash: false, doNotCopy: false, hashAddressBar: false});
   </script>
   <!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent -->
 <script type="text/javascript">
@@ -45,8 +45,25 @@
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
     <!-- End Cookie Consent plugin -->
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.js"></script>
 <script src="{{ site.url }}/js/country.js"></script>
+
+<script type="text/javascript" src="/js/jQuery.exLink/jquery.exLink.min.js"></script>
+<link rel="stylesheet" type="text/css" href="/js/jQuery.exLink/jquery.exLink.min.css">
+<script type="text/javascript">
+ $( document ).ready(function() {
+    exLink.init({
+ 	linkWarning: false,
+	hostCompare: true,
+	noFollow: false,
+	fancyBoxIgnore: true,
+	gaTracking: true,
+	gaTrackLabel: 'External Links',
+	gaTrackOld: false,
+	fileWarning: false
+    });
+ });
+</script>
+
 <script src='https://www.google.com/recaptcha/api.js'></script>
 <script>
 function verify_recapcha()
