@@ -167,9 +167,9 @@ $( document ).ready(function() {
 	    "<ul>";
 	
 	var newLine, el, title, link;
-	
+	var hasHeaders = false;
 	$('.post-content h2').each(function() {
-	
+	  hasHeaders = true;
 	  el = $(this);
 	  title = el.text();
 	  link = "#" + el.attr("id");
@@ -189,7 +189,8 @@ $( document ).ready(function() {
 	   "</ul>" +
 	  "</nav>";
 	
-	$("div.post-content").prepend(ToC);
+	if (hasHeaders) $("div.post-content").prepend(ToC);
+	
     {% endif %}	
 	//back to top
 	if ($('#back-to-top').length) {
