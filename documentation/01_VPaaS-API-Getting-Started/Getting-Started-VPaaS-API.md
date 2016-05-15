@@ -46,7 +46,7 @@ Uploading a file directly via the REST API requires knowledege of handling files
 The [Kaltura Client Libraries](https://developer.kaltura.com/api-docs/#/Client%20Libraries) simplify constructing the REST API calls to Kaltura and provides a simple API for a simple file upload request.  
 However, if you'd like to support chunked file upload and pause-resume in your application, you will need to handle the file-chunking according to your preferred programming language standards.
 
-> If you're using Java, follow the [Chunked Upload in Java reference implementation]() to achieve chunked file upload in your Java application.
+> If you're using Java, follow the [Chunked Upload in Java reference implementation](https://github.com/kaltura/Sample-Kaltura-Chunked-Upload-Java) to achieve chunked file upload in your Java application.
 
 Follow the recipe below to get acquinted with the file upload API:
 
