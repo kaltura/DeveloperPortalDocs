@@ -4,7 +4,7 @@ title: Get Started with the Kaltura VPaaS API
 weight: 102
 ---
 
-At the most basic level, building video workflows and video experiences consists of ingesting and preparing media files, embedding player instances and playing the media, and finally collecting analytics regrading usage and engagement. But in between there is a world of neuances and needs that your unique use-case may require. Kaltura VPaaS API is built on the principles of atomic services allowing you full control and flexibility over every element and process in the life cycle of your media.   
+At the most basic level, building video workflows and video experiences consists of ingesting and preparing media files, embedding player instances and playing the media, and finally collecting analytics regarding usage and engagement. But in between there is a world of nuances and needs that your unique use-case may require. Kaltura VPaaS API is built on the principles of atomic services allowing you full control and flexibility over every element and process in the life cycle of your media.   
 The guides on this site, and the developer tools you'll find under resources will enable you to get a quick start and deep-dive into customizing your own video experience and workflow.  
 
 Before you dive into the details, let's review the foundational building blocks, and learn how to build the most basic workflow. 
@@ -22,7 +22,7 @@ In this Getting Started guide, you will learn how to:
 
 ## Creating a Kaltura Session
 
-The Kaltura API is [stateless](https://en.wikipedia.org/wiki/Stateless_protocol), that means that every request made to the Kaltura API requires an authenticated session string to be passed, the Kaltura Session (aka KS), identifies the Kaltura account and end-user on which the executed API action is to be carried, as well as other permissions and configurations such as the role of the user, time duration the session is good for and more.
+The Kaltura API is [stateless](https://en.wikipedia.org/wiki/Stateless_protocol), which means that every request made to the Kaltura API requires an authenticated session string to be passed, the Kaltura Session (aka KS), identifies the Kaltura account and end-user on which the executed API action is to be carried, as well as other permissions and configurations such as the role of the user, time duration the session is good for and more.
 
 > Read more about Kaltura Session, its algorithm, guidelines and options in the [Kaltura's API Authentication and Security article](https://knowledge.kaltura.com/node/229).
 
