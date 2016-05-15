@@ -14,9 +14,6 @@ To learn about Markdown basics and how to use the format, please read: [GitHub m
 
 {% onebox http://www.kaltura.com/tiny/nex76 %}
 
-THERE
-
-{% onebox https://developer.kaltura.com/recipes/upload/embed#/start %}
 
 ## Adding YouTube videos 
 &#123;% onebox https://www.youtube.com/watch?v=Owh8nBt4QSs %&#125;
