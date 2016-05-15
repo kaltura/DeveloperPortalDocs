@@ -2047,6 +2047,7 @@ a[ id="case_study_link" ]:target ~ #case_study_section {
   font-size: 32px !important;
   font-weight: 400 !important;
   letter-spacing: 0.4px !important;
+  text-decoration: none !important;
 }
 
 .thank-you-h3.thank-you-build-block {
@@ -2062,6 +2063,7 @@ a[ id="case_study_link" ]:target ~ #case_study_section {
   color: #188093 !important;
   letter-spacing: 0.4px !important;
    font-size: 24px !important;
+   text-decoration: none !important;
 }
 
 .thank-you-p {
