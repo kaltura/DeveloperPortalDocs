@@ -5,7 +5,7 @@ weight: 102
 ---
 
 Building video experiences consists of ingesting media files, video playback and  reviewing usage and engagement analytics. In between there is a world of nuances that your unique use-case and app requires. Kaltura VPaaS is built on the principles of atomic services, SDKs and tools allowing you full control and flexibility over every element and process in the life cycle of your media.  
-The guides on this site, and the [Kaltura Developer Tools](https://developer.kaltura.com){:target="_blank"}, will enable you to get started quickly building your own video experiences and workflows and provide everything you need to explore the platform capabilities further and become an expert.  
+The guides on this site, and the [Kaltura Developer Tools](https://developer.kaltura.com), will enable you to get started quickly building your own video experiences and workflows and provide everything you need to explore the platform capabilities further and become an expert.  
 
 To get started, let's review the foundational building blocks of a video experience. 
 
