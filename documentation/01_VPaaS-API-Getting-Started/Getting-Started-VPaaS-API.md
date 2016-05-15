@@ -51,7 +51,8 @@ However, if you'd like to support chunked file upload and pause-resume in your a
 Follow the recipe below to get acquinted with the file upload API:
 
 <div class="recipe-container" style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
-	<iframe src="https://developer.kaltura.com/recipes/upload/embed#/start" frameborder="0" allowfullscreen class="recipe-iframe" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+	<!--iframe src="https://developer.kaltura.com/recipes/upload/embed#/start" frameborder="0" allowfullscreen class="recipe-iframe" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe-->
+{% onebox https://developer.kaltura.com/recipes/upload/embed#/start %}
 </div>
 
 ## Retrieving Your Media Entry details
