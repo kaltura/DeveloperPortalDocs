@@ -4,12 +4,10 @@ title: Get Started with the Kaltura VPaaS API
 weight: 102
 ---
 
-At the most basic level, building video workflows and video experiences consists of ingesting and preparing media files, embedding player instances and playing the media, and finally collecting analytics regarding usage and engagement. In between, there is a world of nuances and needs that your unique use-case may require. Kaltura VPaaS API is built on the principles of atomic services, allowing you full control and flexibility over every element and process in the life cycle of your media.   
-The guides on this site, and the developer tools you will find under resources, will enable you to get a quick start and deep-dive into customizing your own video experience and workflow.  
+Building video experiences consists of ingesting media files, video playback and  reviewing usage and engagement analytics. In between there is a world of nuances that your unique use-case and app requires. Kaltura VPaaS is built on the principles of atomic services, SDKs and tools allowing you full control and flexibility over every element and process in the life cycle of your media.  
+The guides on this site, and the [Kaltura Developer Tools](https://developer.kaltura.com), will enable you to get started quickly building your own video experiences and workflows and provide everything you need to explore the platform capabilities further and become an expert.  
 
-Before you dive into the details, let's review the foundational building blocks, and learn how to build the most basic workflow. 
-
-In this Getting Started guide, you will learn how to:
+To get started, let's review the foundational building blocks of a video experience. In this Getting Started guide, you will learn how to:
 
 0. Authenticate the API (create a Kaltura session)
 1. Upload a video
@@ -22,29 +20,34 @@ In this Getting Started guide, you will learn how to:
 
 ## Creating a Kaltura Session
 
-The Kaltura API is [stateless](https://en.wikipedia.org/wiki/Stateless_protocol), which means that every request made to the Kaltura API requires an authenticated session string to be passed, the Kaltura Session (aka KS), identifies the Kaltura account and end-user on which the executed API action is to be carried, as well as other permissions and configurations such as the role of the user, time duration the session is good for and more.
+The Kaltura API is [stateless](https://en.wikipedia.org/wiki/Stateless_protocol), which means that every request made to the Kaltura API requires an authenticated session string to be passed along with your request. This is the Kaltura Session (aka KS), it identifies the Kaltura account and user for which the executed API action is to be executed. The KS can also specifiy various permissions and configurations such as dynamically setting the role of the user, time duration the session is good for and more. You are expected to provide a generated KS with every API call you will make. 
 
-> Read more about the Kaltura Session, its algorithm, guidelines and options in the [Kaltura's API Authentication and Security article](https://knowledge.kaltura.com/node/229).
+There are three methods for generating a Kaltura Session:
 
-EMBED Recipe: https://developer.kaltura.com/recipes/authentication
+* Calling the [session.start action](https://developer.kaltura.com/api-docs/#/session.start). This method is recommended for scripts and applications that only you will have access to.
+* Calling [user.loginByLoginId action](https://developer.kaltura.com/api-docs/#/user.loginByLoginId). This method is recommended for managing registered users in Kaltura, and allowing users to login using email and password. When you login to the Kaltura Management Console, the KMC app calls the user.loginByLoginId action to authenticate you using your registered email and password.
+* Using the [appToken service](https://developer.kaltura.com/api-docs/#/appToken). This method is recommended for when you are providing access to scripts or applications that are managed by others, and provides tools to manage API tokens per application provider, revoke access to specific applications, and more.
+
+> To learn more about the Kaltura Session, its algorithm, guidelines and options read the [Kaltura's API Authentication and Security article](https://knowledge.kaltura.com/node/229).
 
 ## Uploading your Media Files
 
 Media files are uploaded to Kaltura through [CORS enabled](https://www.w3.org/wiki/CORS_Enabled) REST API.  
-You can implement an upload flow, either completely on your own by calling the API, or by using a Kaltura tested JavaScript widget for chunked upload through web pages. Which method you chose to implement depends on your application needs.
-
->  Side note: Kaltura manages all forms of media files including video, image, and audio files. It even provides APIs to host, deliver and process document files such as PDF and PPT files to create rich experiences such as synchronized side-by-side video and presentation slides.
+You can implement an upload flow by using a Kaltura tested JavaScript widget for web pages, or by implementing direct calls to the API. Which method you chose to implement depends on your application needs.
 
 ### Upload Files Using JavaScript with the jQuery Upload Widget
 
 If your application is HTML5 based, you can implement a reliable and fault tolerant large-files upload with an automatic pause-and-resume functionality by simply including and using the Kaltura Upload JavaScript widget.
-The [Kaltura Upload JavaScript widget](https://github.com/kaltura/jQuery-File-Upload) provides a simple JavaScript library that abstracts the use of the Kaltura API, as well as handling of the files locally (such as file chunking and pause-resume).
+The [Kaltura Upload JavaScript widget](https://github.com/kaltura/chunked-file-upload-jquery) provides a simple JavaScript library that abstracts the use of the Kaltura API, as well as handling of the files locally (such as file chunking and pause-resume).
 
-TODO: INCLUDE THE RECIPE SHOWING THE USE OF THE JQUERY WIDGET
+The [Kaltura Upload jQuery project](https://github.com/kaltura/chunked-file-upload-jquery) can be used as reference or basis to implementing your own reliable chunked file upload to Kaltura.
+To quickly see how it works, simply download the project to your localhost, edit index.php and switch the value of $the_user_ks_to_use to a valid Kaltura Session, then load the page from your localhost, open your browser console and try uploading a file. You'll see all the steps printed to the browser console.
 
 ### Upload Files by Calling the API Directly
 
-{% onebox https://developer.kaltura.com/recipes/upload/embed#/start %}
+<iframe width="420" height="315" src="https://developer.kaltura.com/recipes/upload/embed#/start" frameborder="0" allowfullscreen></iframe>
+
+>  Side note: Kaltura manages all forms of media files including video, image, and audio files. It even provides APIs to host, deliver and process document files such as PDF and PPT files to create rich experiences such as synchronized side-by-side video and presentation slides.
 
 ## Retrieving Your Media Entry details
 
