@@ -24,7 +24,8 @@ The plugins can be developed to:
 The following are the Kaltura-provided plugins that you can implement in your system:
 [Kaltura Player Plugins](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/05_Mobile-Video-Player-SDKs/Player-Plugins-in-the-SDK-Supported-plugins.md#sthash.3a8Dft10.dpbs).
 
-## How to Enable/Create a Plugin
+## How to Enable/Create a Plugin  
+This section describes how to enable existing Kaltura plugins and how to create your own plugins.
 
 #### Using an Existing Plugin
 

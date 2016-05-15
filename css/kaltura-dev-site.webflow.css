@@ -113,6 +113,7 @@ h4 {
 .nav-logo {
   margin-right: 75px;
   margin-top: -2px;
+  z-index: 100000000;
 }
 
 .nav-logo-img {
@@ -2041,11 +2042,12 @@ a[ id="case_study_link" ]:target ~ #case_study_section {
     margin-bottom: 0;
 }
 
-.thank-you-h3 {
-  font-family: proxima-nova, sans-serif;
-  font-size: 32px;
-  font-weight: 400;
-  letter-spacing: 0.4px;
+.thank-you-h3, .thank-you-h3 a {
+  font-family: proxima-nova, sans-serif !important;
+  font-size: 32px !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.4px !important;
+  text-decoration: none !important;
 }
 
 .thank-you-h3.thank-you-build-block {
@@ -2055,12 +2057,13 @@ a[ id="case_study_link" ]:target ~ #case_study_section {
   text-align: center;
 }
 
-.thank-you-h4 {
-  padding-left: 0px;
-  border-bottom-style: none;
-  color: #188093;
-  letter-spacing: 0.4px;
-   font-size: 24px;
+.thank-you-h4, .thank-you-h4 a {
+  padding-left: 0px !important;
+  border-bottom-style: none !important;
+  color: #188093 !important;
+  letter-spacing: 0.4px !important;
+   font-size: 24px !important;
+   text-decoration: none !important;
 }
 
 .thank-you-p {

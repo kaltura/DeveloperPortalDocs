@@ -24,8 +24,7 @@ $( document ).ready(function() {
                     <li><a href="#entryid">entryId (Media Asset ID)</a></li>
                     <li><a href="#uiconfid">uiConfId (Widget Instance ID)</a></li>
                 </ul>
-                <a name="embedexample"></a>
-                <h4 class="thank-you-h4">Video Player Embed</h4>
+                <h4 id="embedexample" class="thank-you-h4">Video Player Embed</h4>
                 <p class="thank-you-p">The below example shows the most basic player embed. Player embed is a JavaScript code that references your <a href="#partnerid">account ID</a>, <a href="entryid">video ID</a> and <a href="uiconfid">player widget instance ID</a>.<br />
 This quick start guide covers these basic Kaltura parameters, and gets you started with all the important Kaltura VPaaS tools for building video experiences and workflows, and integrating video natively into your own applications.<br />
 The Kaltura Player is the building block by which you deliver video experiences to your users. It also collects viewer engagement analytics about who, when and how users interact with your video.</p>
@@ -67,13 +66,11 @@ The Kaltura Player is the building block by which you deliver video experiences 
                         </div>
                     </div>
               </div>
-              <a name="partnerid"></a>
-              <h4 class="thank-you-h4">Your Kaltura Account ID (Patrner Id)</h4>
+              <h4 id="partnerid" class="thank-you-h4">Your Kaltura Account ID (Patrner Id)</h4>
               <input type="text" value="Your partnerId: <?php echo $_GET['partner_id'] ? $_GET['partner_id'] : '811441'; ?>" readonly="" size="24" style="background: transparent;font-size: 12px;border: solid 1px #9EB4B7;margin-bottom: 8px;border-radius: 4px;padding: 2px;padding-left: 6px;">
               <p class="thank-you-p">Your Kaltura Partner ID, or PID, is a unique number identifying your Kaltura account.<br />You will need to pass the pid paramemter everytime you authenticate with the Kaltura API, or connect with integrated apps.</p>
               
-              <a name="ks"></a>
-              <h4 class="thank-you-h4" name="ks">Kaltura Session</h4>
+              <h4 id="ks" class="thank-you-h4">Kaltura Session</h4>
               <input type="text" value="<?php echo $_GET['ks'] ? $_GET['ks'] : 'djJ8MjEzOTQyMnxLngKd0BRQwS1EWdLV-T_Um8rRCed9mYyBwu_VOcglQ8mHlyvzAD8At9qPm2HgKoYMi5hdw3THj6ZXfAZGZyjE'; ?>" readonly="" style="background: transparent; font-size: 12px; border: solid 1px #9EB4B7; margin-bottom: 8px; border-radius: 4px; padding: 2px; width: 100%;">
               <p class="thank-you-p">The string above is a Kaltura Session (aka KS). The KS authenticates the account and user when making an API call. You are expected to provide a generated KS with every API call you will make.
               <br />
@@ -91,8 +88,7 @@ The Kaltura Player is the building block by which you deliver video experiences 
                 </ul>
               </blockquote>
               
-              <a name="entryid"></a>
-              <h4 class="thank-you-h4" name="entryid">Kaltura Entries</h4>
+              <h4 class="thank-you-h4" id="entryid">Kaltura Entries</h4>
               <input type="text" size="50" value="A Kaltura Entry Id: <?php echo $_GET['entry_id'] ? $_GET['entry_id'] : '0_4kwzg46z'; ?>" readonly="" style="background: transparent; font-size: 12px; border: solid 1px #9EB4B7; margin-bottom: 8px; border-radius: 4px; padding: 2px;">
               <p class="thank-you-p">Content assets are called entries in Kaltura. An entry is a logical object representing all aspects of the media asset including its metadata, thumbnails, transcoded flavors, captions, cue-points (timed metadata), and more.</p>
               <p class="thank-you-p">In Kaltura you can manage various types of assets, including on-demand media assets (video, audio, and image files), live stream video or audio broadcasts, as well as playlists, documents and other special data files.</p>
@@ -110,8 +106,7 @@ The Kaltura Player is the building block by which you deliver video experiences 
                 </ul>
               </blockquote>
               
-              <a name="uiconfid"></a>
-              <h4 class="thank-you-h4" name="uiconfid">Kaltura Player &amp; uiConf</h4>
+              <h4 class="thank-you-h4" id="uiconfid">Kaltura Player &amp; uiConf</h4>
               <p class="thank-you-p">A critical piece of every video workflow is the playback and the user-experience while interacting with video.<br />
               The Kaltura Video Player library abstracts the complexities around delivery of video across devices, browsers and native apps and the user-experience with your video. It provides a cross-platform rich UI framework, easy branding and customization features and even in-video quizzes, advertizing integrations, and a robust plugins-framework to create your own unique expeirences.<br />
               <br />The player further simplifies embedding and integrating the player into pages and apps by managing your player instances and configurations in the cloud, and providing the embed code a signle parameter - the uiConf Id.</p>
@@ -139,3 +134,36 @@ The Kaltura Player is the building block by which you deliver video experiences 
       </div>
     </div>
   </div>
+<a href="#" id="back-to-top" title="Back to top">&uarr;</a>
+<script>
+//This script turns all heading elments into clickable anchors, and then builds an "on this page" menu.
+$( document ).ready(function() {
+	//turn all headings into clicable anchors:
+	$('.get-you-started-div h3, .get-you-started-div h4').filter('[id]').each(function () {
+	    $(this).html('<a href="#'+$(this).attr('id')+'" class="post-content" aria-hidden="true">'+$(this).text()+'</a>');
+	});
+	
+	//back to top
+	if ($('#back-to-top').length) {
+    var scrollTrigger = 100, // px
+        backToTop = function () {
+            var scrollTop = $(window).scrollTop();
+            if (scrollTop > scrollTrigger) {
+                $('#back-to-top').addClass('show');
+            } else {
+                $('#back-to-top').removeClass('show');
+            }
+        };
+    backToTop();
+    $(window).on('scroll', function () {
+        backToTop();
+    });
+    $('#back-to-top').on('click', function (e) {
+        e.preventDefault();
+        $('html,body').animate({
+            scrollTop: 0
+        }, 700);
+    });
+}
+});
+</script>
