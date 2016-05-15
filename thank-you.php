@@ -139,3 +139,36 @@ The Kaltura Player is the building block by which you deliver video experiences 
       </div>
     </div>
   </div>
+<a href="#" id="back-to-top" title="Back to top">&uarr;</a>
+<script>
+//This script turns all heading elments into clickable anchors, and then builds an "on this page" menu.
+$( document ).ready(function() {
+	//turn all headings into clicable anchors:
+	$('.get-you-started-div h3, .get-you-started-div h4').filter('[id]').each(function () {
+	    $(this).html('<a href="#'+$(this).attr('id')+'" class="post-content" aria-hidden="true">'+$(this).text()+'</a>');
+	});
+	
+	//back to top
+	if ($('#back-to-top').length) {
+    var scrollTrigger = 100, // px
+        backToTop = function () {
+            var scrollTop = $(window).scrollTop();
+            if (scrollTop > scrollTrigger) {
+                $('#back-to-top').addClass('show');
+            } else {
+                $('#back-to-top').removeClass('show');
+            }
+        };
+    backToTop();
+    $(window).on('scroll', function () {
+        backToTop();
+    });
+    $('#back-to-top').on('click', function (e) {
+        e.preventDefault();
+        $('html,body').animate({
+            scrollTop: 0
+        }, 700);
+    });
+}
+});
+</script>
