@@ -4,18 +4,18 @@ title: Get Started with the Kaltura VPaaS API
 weight: 102
 ---
 
-At the most basic level, building video workflows and video experiences consists of ingesting and preparing media files, embedding player instances and playing the media, and finally collecting analytics regarding usage and engagement. But in between there is a world of nuances and needs that your unique use-case may require. Kaltura VPaaS API is built on the principles of atomic services allowing you full control and flexibility over every element and process in the life cycle of your media.   
-The guides on this site, and the developer tools you'll find under resources will enable you to get a quick start and deep-dive into customizing your own video experience and workflow.  
+At the most basic level, building video workflows and video experiences consists of ingesting and preparing media files, embedding player instances and playing the media, and finally collecting analytics regarding usage and engagement. In between, there is a world of nuances and needs that your unique use-case may require. Kaltura VPaaS API is built on the principles of atomic services, allowing you full control and flexibility over every element and process in the life cycle of your media.   
+The guides on this site, and the developer tools you will find under resources, will enable you to get a quick start and deep-dive into customizing your own video experience and workflow.  
 
 Before you dive into the details, let's review the foundational building blocks, and learn how to build the most basic workflow. 
 
 In this Getting Started guide, you will learn how to:
 
-0. API Authentication (Creating a Kaltura Session)
+0. Authenticate the API (create a Kaltura session)
 1. Upload a video
 2. Retrieve the video details
 3. Update your video metadata
-4. Create a player instance
+4. Create a Player instance
 5. Embed your video on a web page
 6. Interact with the Player
 7. Retrieve engagement analytics for your video
