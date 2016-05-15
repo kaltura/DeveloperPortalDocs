@@ -7,16 +7,7 @@ weight: 102
 Building video experiences consists of ingesting media files, video playback and  reviewing usage and engagement analytics. In between there is a world of nuances that your unique use-case and app requires. Kaltura VPaaS is built on the principles of atomic services, SDKs and tools allowing you full control and flexibility over every element and process in the life cycle of your media.  
 The guides on this site, and the [Kaltura Developer Tools](https://developer.kaltura.com), will enable you to get started quickly building your own video experiences and workflows and provide everything you need to explore the platform capabilities further and become an expert.  
 
-To get started, let's review the foundational building blocks of a video experience. In this Getting Started guide, you will learn how to:
-
-0. Authenticate the API (create a Kaltura session)
-1. Upload a video
-2. Retrieve the video details
-3. Update your video metadata
-4. Create a Player instance
-5. Embed your video on a web page
-6. Interact with the Player
-7. Retrieve engagement analytics for your video
+To get started, let's review the foundational building blocks of a video experience. 
 
 ## Creating a Kaltura Session
 
