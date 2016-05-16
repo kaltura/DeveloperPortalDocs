@@ -127,6 +127,12 @@ h4 {
   font-family: proxima-nova, sans-serif;
 }
 
+.nav-sign-up {
+  float: right;
+  font-weight: 600;
+  color: #f7a600;
+}
+
 .nav-links:hover {
   border-top: 1px none black;
   border-bottom: 5px none #188093;
