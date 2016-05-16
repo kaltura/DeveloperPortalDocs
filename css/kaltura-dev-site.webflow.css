@@ -17,8 +17,9 @@ h4 {
 
 .section-header {
   max-height: 700px;
+  height: 500px;
   background-color: transparent;
-  background-image: url('https://vpaas.kaltura.com/images/header_video_placeholder-lowres.jpg');
+  background-image: url('https://cdnapisec.kaltura.com/p/811441/thumbnail/entry_id/0_cm8rhiwp/width/2000/type/1/quality/100');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -72,7 +73,7 @@ h4 {
   position: absolute;
   top: 0px;
   background-color: transparent;
-  background-image: url('https://vpaas.kaltura.com/images/header_video_placeholder-lowres.jpg');
+  background-image: url('https://cdnapisec.kaltura.com/p/811441/thumbnail/entry_id/0_cm8rhiwp/width/2000/type/1/quality/100');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -91,7 +92,25 @@ h4 {
   transition: all 200ms ease;
   font-family: proxima-nova, sans-serif;
   color: #188093;
+  letter-spacing: 0.05em;
+  box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, .4);
 }
+
+.header-btn.vpaas-btn {
+  margin-top: 7px;
+  padding: 15px 20px;
+  background-color: #f7a600;
+  color: #fff;
+  font-size: 16px;
+  float: right;
+}
+
+/*.vpaas-btn {
+  font-weight: 600;
+  color: #fff;
+  background-color: #188093;
+}
+*/
 
 .header-btn:hover {
   -webkit-transform: scale(0.96);
@@ -114,11 +133,31 @@ h4 {
 
 .nav-links {
   padding-top: 22px;
-  float: left;
   -webkit-transition: color 300ms ease;
   transition: color 300ms ease;
   font-family: proxima-nova, sans-serif;
 }
+
+.nav-sign-up {
+  float: right;
+  font-weight: 600;
+  color: #f7a600;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 1.1em;
+  letter-spacing: 0.04em;
+}
+
+.nav-sign-up:hover {
+  float: right;
+  font-weight: 600 !important;
+  color: #333 !important; 
+  text-decoration: none;
+  font-size: 1.1em;
+  letter-spacing: 0.04em;
+
+}
+
 
 .nav-links:hover {
   border-top: 1px none black;
@@ -1598,6 +1637,7 @@ td {
     padding-bottom: 50px;
     border-bottom: dashed 1px #ccc;
     margin-bottom: 50px;
+    line-height: 1.9em;
 }
 
 #payment-fields h3 {
@@ -1728,6 +1768,7 @@ td {
   font-family: proxima-nova, sans-serif;
   text-align: left;
   letter-spacing: 0.2px;
+  line-height: 1.9em;
 }
 
 .signup-body.success-body {
@@ -2411,6 +2452,40 @@ a[ id="case_study_link" ]:target ~ #case_study_section {
   font-size: 14px;
 }
 
+.about-vpaas-section {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  background-color: #f7f7f7;
+}
+
+.about-vpaas-text-block {
+  font-family: proxima-nova, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.2px;
+}
+
+.about-vpaas-text-block-span {
+  color: #188093;
+  font-weight: 700;
+}
+
+.home-sign-up-section {
+  padding-top: 35px;
+  padding-bottom: 39px;
+  background-color: #188093;
+}
+
+.home-sign-up-cta {
+  display: inline-block;
+  font-family: proxima-nova, sans-serif;
+  color: #fff;
+  font-size: 26px;
+  font-weight: 400;
+  letter-spacing: 0.4px;
+}
+
 
 html.w-mod-js *[data-ix="hide-on-load"] {
   display: none;
@@ -2462,7 +2537,32 @@ blockquote.recipes-ref-list ul li {
    margin-top: 4px;
 }
 
+@media (max-width: 1024px) {
+   
+   .video-parent-container {
+    display: none;
+  }
+
+  .section-header {
+    background: url(/images/video-bk-framegrab.jpg);
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+}
+
 @media (max-width: 991px) {
+   .header-btn.vpaas-btn {
+    margin-top: 12px;
+    margin-right: 14px;
+    padding: 10px 14px;
+    font-size: 15px;
+  }
+
   .nav-logo-img {
     padding-left: 0px;
   }
@@ -2608,6 +2708,11 @@ blockquote.recipes-ref-list ul li {
     padding-top: 25px;
     padding-bottom: 25px;
   }
+
+  .w-button .standard-button .vpaas-signup-btn {
+    width: 20%;
+  }
+
   .company-details-heading {
     width: 30%;
     border-style: none none dashed;
@@ -2667,6 +2772,11 @@ blockquote.recipes-ref-list ul li {
     margin-left: 20px;
   }
 
+  .home-sign-up-cta {
+    margin-left: 13px;
+    font-size: 19px;
+  }
+
 }
 
 @media (max-width: 767px) {
@@ -2686,6 +2796,15 @@ blockquote.recipes-ref-list ul li {
     text-align: center;
     font-size: 16px;
   }
+
+ .header-btn.vpaas-btn {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    float: none;
+    width: 60%;
+  }
+
   .header-text-link {
     margin-left: 30px;
   }
@@ -2850,7 +2969,7 @@ blockquote.recipes-ref-list ul li {
 
   .vpaas-sign-up-section {
     padding-top: 0px;
-    padding-bottom: 0px;
+    padding-bottom: 20px;
   }
   .vpaas-signup-container {
     padding-right: 15px;
@@ -2939,6 +3058,18 @@ blockquote.recipes-ref-list ul li {
   }
   .thank-you-pricing {
     width: 100%;
+  }
+
+  .home-sign-up-section {
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 30px;
+    padding-bottom: 55px;
+  }
+  .home-sign-up-cta {
+    display: block;
+    margin-left: 0px;
+    text-align: center;
   }
 
 }
@@ -3139,6 +3270,19 @@ blockquote.recipes-ref-list ul li {
   }
   .case-study-template-column-1 {
     padding-right: 10px;
+  }
+
+  .about-vpaas-text-block {
+    padding-right: 23px;
+    padding-left: 23px;
+  }
+
+  .home-sign-up-section {
+    padding-top: 10px;
+    padding-bottom: 35px;
+  }
+  .home-sign-up-cta {
+    font-size: 18px;
   }
 
 }
