@@ -14,7 +14,7 @@ To get started, let's review the foundational building blocks of a video experie
 
 The Kaltura API is [stateless](https://en.wikipedia.org/wiki/Stateless_protocol), which means that every request made to the Kaltura API requires an authenticated session string to be passed along with your request. This is the Kaltura Session (aka KS), it identifies the Kaltura account and user for which the executed API action is to be executed. The KS can also specifiy various permissions and configurations such as dynamically setting the role of the user, time duration the session is good for and more. You are expected to provide a generated KS with every API call you will make. 
 
-There are three methods for generating a Kaltura Session:
+### There are three methods for generating a Kaltura Session:
 
 * Calling the [session.start action](https://developer.kaltura.com/api-docs/#/session.start). This method is recommended for scripts and applications that only you will have access to.
 * Calling [user.loginByLoginId action](https://developer.kaltura.com/api-docs/#/user.loginByLoginId). This method is recommended for managing registered users in Kaltura, and allowing users to login using email and password. When you login to the Kaltura Management Console, the KMC app calls the user.loginByLoginId action to authenticate you using your registered email and password.
@@ -53,14 +53,31 @@ Follow the recipe below to get acquinted with the file upload API:
 
 {% onebox https://developer.kaltura.com/recipes/upload/embed#/start %}
 
-## Search and Retrieve Kaltura Entries
+## Working with Media Entries
 
-After uploading your file, you will have created a KalturaMediaEntry object by calling the [media.add](https://developer.kaltura.com/api-docs/#/media.add) action, and then assigned the uploaded file to this media entry by calling the [media.addContent](https://developer.kaltura.com/api-docs/#/media.addContent) action.
+After uploading your file, you will have created a [KalturaMediaEntry](https://developer.kaltura.com/api-docs/#/KalturaMediaEntry) object by calling the [media.add](https://developer.kaltura.com/api-docs/#/media.add) action, and then assigned the uploaded file to this media entry by calling the [media.addContent](https://developer.kaltura.com/api-docs/#/media.addContent) action.
 
-Now that you have content in your account, you will want to implement a library search in order to create galleries or search for media discovery. The main service you will be working with is the [media service[(https://developer.kaltura.com/api-docs/#/media).
+Now that you have content in your account, you will want to implement a library search in order to create galleries or search for media discovery. The main service you will be working with is the [media service](https://developer.kaltura.com/api-docs/#/media).
 
 ### Searching Entries - media.list
 
+Note that you can combine several filter parameters together to further narrow down your search results. 
+
 {% onebox https://developer.kaltura.com/recipes/video_search/embed#/start %}
 
-### 
+### Retriving Entry Details - media.get
+
+In Kaltura retriving the data of an object by its id is done by calling its `get` action. With media entries, call the [`media.get`](https://developer.kaltura.com/api-docs/#/media.get) action to retrieve the data of a specific entry.
+
+### Updating Entry Details - media.update
+
+To update any object in Kaltura, use the `update` action. To update media entries, call the [`media.update`](https://developer.kaltura.com/api-docs/#/media.update) action providing an instance of the `KalturaMediaEntry` object.   
+
+Additionally, media entries in Kaltura have several related objects including [captionAsset](https://developer.kaltura.com/api-docs/#/captionAsset) for caption files, [thumbAsset](https://developer.kaltura.com/api-docs/#/thumbAsset) for editorial thumbnails, [access control](https://developer.kaltura.com/api-docs/#/accessControl) profiles to set rules that allow or deny access to the media, [custom metadata](https://developer.kaltura.com/recipes/metadata) profiles to enhance the base fields available in your account, and much more.  
+Keep browsing these guides and review the [Code Recipes](https://developer.kaltura.com/recipes/) to learn more about the many capabilities of Kaltura VPaaS.
+
+## Embed and Customize Your Video Player 
+
+## Dynamic Thumbnails
+
+## Analyze Engagement Analytics

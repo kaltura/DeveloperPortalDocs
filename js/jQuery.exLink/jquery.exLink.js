@@ -51,7 +51,7 @@ var exLink = (function() {
 
        opts = $.extend({}, defaults, options);
 
-       $(parentElementPath).on('click','.exLink, .docuLink',function(event){
+       $(opts.parentElementPath).on('click','.exLink, .docuLink',function(event){
             event.preventDefault();
 
             if(event.handled != true) {
