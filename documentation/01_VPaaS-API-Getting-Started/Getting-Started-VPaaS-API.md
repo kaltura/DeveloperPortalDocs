@@ -108,12 +108,6 @@ Read more about the [Dynamic Thumbnail API](knowledge.kaltura.com/kaltura-thumbn
 
 The below example shows the most basic player embed. Player embed is a JavaScript code that references your partnerId, entryId and the uiConfId - a player widget instance ID. 
 
-The Kaltura Player is the building block by which you deliver video experiences to your users.  
-The Kaltura Video Player library abstracts the complexities around delivery of video across devices, browsers and native apps and the user-experience with your video. It provides a cross-platform rich UI framework, easy branding and customization features and even in-video quizzes, advertizing integrations, and a robust plugins-framework to create your own unique expeirences.
-
-The player further simplifies embedding and integrating the player into pages and apps by managing your player instances and configurations in the cloud, and providing the embed code a signle parameter - the uiConf Id.
-The uiConfId is used to reference the player instance you wish to render when embedding a video in your pages or app views.
-
 <div class="w-row">
 <div class="w-col w-col-6">
   <div class="highlighter-rouge" style="padding-right: 10px;"><pre class="highlight" style="margin: 0;background: none;"><code><span class="c1">kWidget</span><span class="c1">.</span><span class="c1">embed</span><span class="c1">({</span>
@@ -153,16 +147,21 @@ The uiConfId is used to reference the player instance you wish to render when em
 </div>
 </div>
 
+The Kaltura Player is the building block by which you deliver video experiences to your users. It abstracts the complexities of delivery of video across devices, browsers and native apps. It provides a cross-platform UI framework, easy branding and customization features and even in-video quizzes, advertizing integrations.   
+The player's robust plugins-framework also enables you to create your own unique expeirences. And the uiConf service is what simplifies the management of many such player instances and configurations.
+
+The uiConfId is used to reference the player instance you wish to render when embedding a video in your pages or app views.
+
 ### Creating and Managing Player Widgets - uiConf service
 
 {% onebox https://developer.kaltura.com/recipes/player_uiconf/embed#/start %} 
 
 ### Get started with the player features
 
+* [Responsive player embed](http://player.kaltura.com/docs/responsive).
 * [JavaScript function for player embed method](http://player.kaltura.com/docs/kwidget).
-* [JavaScript tag player embed](http://player.kaltura.com/docs/autoEmbed).
-* [Example reference for responsive player embed](http://player.kaltura.com/docs/responsive).
 * [JavaScript function thmbnail embed (click turns thumbnail to player)](http://player.kaltura.com/docs/thumb).
+* [JavaScript tag player embed](http://player.kaltura.com/docs/autoEmbed).
 * [Enables a robust web to native bridge](http://player.kaltura.com/docs/NativeCallout).
 
 ## Analyze Engagement Analytics
