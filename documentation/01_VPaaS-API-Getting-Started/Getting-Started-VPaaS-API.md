@@ -104,10 +104,15 @@ Read more about the [Dynamic Thumbnail API](knowledge.kaltura.com/kaltura-thumbn
 
 ## Embed and Customize Your Video Player 
 
-The below example shows the most basic player embed. Player embed is a JavaScript code that references your partnerId, entryId and the uiConfId - a player widget instance ID. The Kaltura Player is the building block by which you deliver video experiences to your users. It also collects viewer engagement analytics about who, when and how users interact with your video. 
+The below example shows the most basic player embed. Player embed is a JavaScript code that references your partnerId, entryId and the uiConfId - a player widget instance ID. The Kaltura Player is the building block by which you deliver video experiences to your users. 
+
+The Kaltura Video Player library abstracts the complexities around delivery of video across devices, browsers and native apps and the user-experience with your video. It provides a cross-platform rich UI framework, easy branding and customization features and even in-video quizzes, advertizing integrations, and a robust plugins-framework to create your own unique expeirences.
+
+The player further simplifies embedding and integrating the player into pages and apps by managing your player instances and configurations in the cloud, and providing the embed code a signle parameter - the uiConf Id.
+The uiConfId is used to reference the player instance you wish to render when embedding a video in your pages or app views.
 
 <div class="w-row">
-<div class="w-col w-col-4">
+<div class="w-col w-col-5">
   <div class="highlighter-rouge" style="padding-right: 10px;"><pre class="highlight" style="margin: 0;background: none;"><code><span class="c1">kWidget</span><span class="c1">.</span><span class="c1">embed</span><span class="c1">({</span>
     <span class="s1">'targetId'</span><span class="c1">:</span> <span class="s1">'kaltura_player'</span><span class="c1">,</span>
     <span class="s1">'wid'</span><span class="c1">:</span> <span class="s1">'_811441'</span><span class="c1">,</span>
@@ -120,7 +125,7 @@ The below example shows the most basic player embed. Player embed is a JavaScrip
 </code></pre>
   </div>
 </div>
-<div class="w-col w-col-6">
+<div class="w-col w-col-7">
   <div class="w-embed w-iframe w-script media-embed-div">
       <!-- Outer div defines maximum space the player can take -->
       <div style="width: 100%;display: inline-block;position: relative;">
@@ -144,5 +149,6 @@ The below example shows the most basic player embed. Player embed is a JavaScrip
   </div>
 </div>
 </div>
+
 
 ## Analyze Engagement Analytics
