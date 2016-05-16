@@ -107,20 +107,18 @@ Read more about the [Dynamic Thumbnail API](knowledge.kaltura.com/kaltura-thumbn
 The below example shows the most basic player embed. Player embed is a JavaScript code that references your partnerId, entryId and the uiConfId - a player widget instance ID. The Kaltura Player is the building block by which you deliver video experiences to your users. It also collects viewer engagement analytics about who, when and how users interact with your video. 
 
 <div class="w-row">
-<div class="w-col w-col-3">
-
-```
-kWidget.embed({ 
-  'targetId': 'kaltura_player', 
-  'wid': '_811441', 
-  'uiconf_id' : 34599271, 
-  'entry_id' : '0_4kwzg46z', 
-  'flashvars' : { 
-    // Add dynamic configrations here such as page-specific or user-specific configs. 
-  } 
-});
-```
-
+<div class="w-col w-col-4">
+  <div class="highlighter-rouge" style="padding-right: 10px;"><pre class="highlight" style="margin: 0;background: none;"><code><span class="c1">kWidget</span><span class="c1">.</span><span class="c1">embed</span><span class="c1">({</span>
+    <span class="s1">'targetId'</span><span class="c1">:</span> <span class="s1">'kaltura_player'</span><span class="c1">,</span>
+    <span class="s1">'wid'</span><span class="c1">:</span> <span class="s1">'_811441'</span><span class="c1">,</span>
+    <span class="s1">'uiconf_id'</span> <span class="c1">:</span> <span class="s1">34599271</span><span class="c1">,</span>
+    <span class="s1">'entry_id'</span> <span class="c1">:</span> <span class="s1">'0_4kwzg46z'</span><span class="c1">,</span>
+    <span class="s1">'flashvars'</span> <span class="c1">:</span> <span class="c1">{</span>
+        <span class="nx">// Add dynamic configrations here such as page-specific or user-specific configs.</span>
+    <span class="c1">}</span>
+<span class="c1">});</span>
+</code></pre>
+  </div>
 </div>
 <div class="w-col w-col-6">
   <div class="w-embed w-iframe w-script media-embed-div">
