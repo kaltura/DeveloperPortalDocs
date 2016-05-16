@@ -17,6 +17,7 @@ h4 {
 
 .section-header {
   max-height: 700px;
+  height: 700px;
   background-color: transparent;
   background-image: url('https://vpaas.kaltura.com/images/header_video_placeholder-lowres.jpg');
   background-repeat: no-repeat;
