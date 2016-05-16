@@ -131,7 +131,22 @@ h4 {
   float: right;
   font-weight: 600;
   color: #f7a600;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 1.1em;
+  letter-spacing: 0.04em;
 }
+
+.nav-sign-up:hover {
+  float: right;
+  font-weight: 600;
+  color: #333; 
+  text-decoration: none;
+  font-size: 1.1em;
+  letter-spacing: 0.04em;
+
+}
+
 
 .nav-links:hover {
   border-top: 1px none black;
