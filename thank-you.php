@@ -25,7 +25,7 @@ $( document ).ready(function() {
                     <li><a href="#uiconfid">uiConfId (Widget Instance ID)</a></li>
                 </ul>
                 <h4 id="embedexample" class="thank-you-h4">Video Player Embed</h4>
-                <p class="thank-you-p">The below example shows the most basic player embed. Player embed is a JavaScript code that references your <a href="#partnerid">account ID</a>, <a href="entryid">video ID</a> and <a href="uiconfid">player widget instance ID</a>.<br />
+                <p class="thank-you-p">The below example shows the most basic player embed. Player embed is a JavaScript code that references your <a href="#partnerid">account ID</a>, <a href="#entryid">video ID</a> and <a href="#uiconfid">player widget instance ID</a>.<br />
 This quick start guide covers these basic Kaltura parameters, and gets you started with all the important Kaltura VPaaS tools for building video experiences and workflows, and integrating video natively into your own applications.<br />
 The Kaltura Player is the building block by which you deliver video experiences to your users. It also collects viewer engagement analytics about who, when and how users interact with your video.</p>
                 <div class="w-row">
