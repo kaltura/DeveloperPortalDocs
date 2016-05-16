@@ -7,11 +7,11 @@ weight: 117
 
 ## Getting Started 
 
-* Clone Android SDK make sure it resides in same folder as your app
+1. You will first need to clone the Android SDK and make sure that it resides in the same folder as your application:
 	```
 	git clone https://github.com/kaltura/player-sdk-native-android.git
 	```
-2. Edit ```Setting.gradle``` file 
+2. Edit the ```Setting.gradle``` file as follows:
 
 ```
 include ':googlemediaframework'
@@ -25,13 +25,12 @@ project(':playerSDK').projectDir=new File('../player-sdk-native-android/playerSD
 syncronize project with updated gradle 
 ![SyncProjectWithGradleProject](./images/SyncProjectWithGradleProject.png)
 
-* Make sure that you cloned the ```player-sdk-native-android``` project to the same folder of your project, if you prefer to clone it else where, you should update the ```settings.gradle``` with relevant path.
+3. Make sure that you cloned the ```player-sdk-native-android``` project to the same folder of your project; if you prefer to clone it in another location, remember to update the ```settings.gradle``` with the relevant path.
 
-* Right click on your app folder -> ```Open Module Settings```
+4. Right click your application folder and select ```Open Module Settings```
+![OpenModuleSetting](./images/OpenModuleSetting.png).
 
-![OpenModuleSetting](./images/OpenModuleSetting.png)
+5. Select the ```Dependencies``` tab, click the ```+``` button and then choose the playerSDK as ```module dependency```
 
-* Select ```Dependencies``` tab -> click on the ```+``` button and choose the playerSDK as ```module dependency```
-
-![Dependencies](./images/Dependencies.png)
+![Dependencies](./images/Dependencies.png).
 
