@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Get Started with the Kaltura VPaaS API
+title: Get Started with Kaltura VPaaS
 weight: 102
 ---
 
