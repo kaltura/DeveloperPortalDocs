@@ -93,6 +93,7 @@ h4 {
   font-family: proxima-nova, sans-serif;
   color: #188093;
   letter-spacing: 0.05em;
+  box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, .4);
 }
 
 .header-btn.vpaas-btn {
@@ -2748,7 +2749,7 @@ blockquote.recipes-ref-list ul li {
 
   .home-sign-up-cta {
     margin-left: 13px;
-    font-size: 21px;
+    font-size: 19px;
   }
 
 }
@@ -2775,6 +2776,8 @@ blockquote.recipes-ref-list ul li {
     display: block;
     margin-right: auto;
     margin-left: auto;
+    float: none;
+    width: 60%;
   }
 
   .header-text-link {
