@@ -89,9 +89,10 @@ An important tool of dealing with video and building video experiences are thumb
 2. The [Dynamic Thumbnail API](https://knowledge.kaltura.com/kaltura-thumbnail-api) - provides a simple API for creating thumbnails on-the-fly (in real-time) from the source media (the file originally uploaded).
 
 The images are generated upon demand (with caching on disk and via CDN) by calling the following URL -  
-```
+
+{% highlight plaintext %}
 http://www.kaltura.com/p/{partner_id}/thumbnail/entry_id/{entry_id}/param1/value1/param2/value2/...
-```  
+{% endhighlight %}
 
 The result of the thumbnail API is a JPEG image with one or more of the following features:  
 
