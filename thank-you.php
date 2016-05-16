@@ -121,7 +121,6 @@ The Kaltura Player is the building block by which you deliver video experiences 
                   <li><a href="http://player.kaltura.com/docs/responsive" target="_blank">Example reference for responsive player embed.</a></li>
                   <li><a href="http://player.kaltura.com/docs/thumb" target="_blank">JavaScript function thmbnail embed (click turns thumbnail to player).</a></li>
                   <li><a href="http://player.kaltura.com/docs/NativeCallout" target="_blank">Enables a robust web to native bridge.</a></li>
-                  <li><a href="http://player.kaltura.com/docs/thumb" target="_blank">JavaScript function thmbnail embed (click turns thumbnail to player).</a></li>
                   <li><a href="https://developer.kaltura.com/recipes/player_uiconf" target="_blank">Working with the uiConf service.</a></li>
                 </ul>
               </blockquote>
