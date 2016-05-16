@@ -2424,6 +2424,25 @@ a[ id="case_study_link" ]:target ~ #case_study_section {
   font-size: 14px;
 }
 
+.about-vpaas-section {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  background-color: #f7f7f7;
+}
+
+.about-vpaas-text-block {
+  font-family: proxima-nova, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.2px;
+}
+
+.about-vpaas-text-block-span {
+  color: #188093;
+  font-weight: 700;
+}
+
 
 html.w-mod-js *[data-ix="hide-on-load"] {
   display: none;
@@ -3152,6 +3171,11 @@ blockquote.recipes-ref-list ul li {
   }
   .case-study-template-column-1 {
     padding-right: 10px;
+  }
+
+  .about-vpaas-text-block {
+    padding-right: 23px;
+    padding-left: 23px;
   }
 
 }
