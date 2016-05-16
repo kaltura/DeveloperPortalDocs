@@ -9,8 +9,13 @@ The guides on this site, and the [Kaltura Developer Tools](https://developer.kal
 
 To get started, let's review the foundational building blocks of a video experience. 
 
-## Creating a Kaltura Session
+## Your Kaltura Account ID (partnerId)
 
+Your Kaltura Partner ID, or PID, is a unique number identifying your Kaltura account.  
+You can find your partnerId at any time by visiting the [Account Settings tab in the Kaltura Management Console](https://www.kaltura.com/index.php/kmc/kmc#account|overview).  
+You will need to pass the pid paramemter everytime you authenticate with the Kaltura API, or connect with integrated apps.
+
+## Creating a Kaltura Session
 
 The Kaltura API is [stateless](https://en.wikipedia.org/wiki/Stateless_protocol), which means that every request made to the Kaltura API requires an authenticated session string to be passed along with your request. This is the Kaltura Session (aka KS), it identifies the Kaltura account and user for which the executed API action is to be executed. The KS can also specifiy various permissions and configurations such as dynamically setting the role of the user, time duration the session is good for and more. You are expected to provide a generated KS with every API call you will make. 
 
@@ -76,8 +81,68 @@ To update any object in Kaltura, use the `update` action. To update media entrie
 Additionally, media entries in Kaltura have several related objects including [captionAsset](https://developer.kaltura.com/api-docs/#/captionAsset) for caption files, [thumbAsset](https://developer.kaltura.com/api-docs/#/thumbAsset) for editorial thumbnails, [access control](https://developer.kaltura.com/api-docs/#/accessControl) profiles to set rules that allow or deny access to the media, [custom metadata](https://developer.kaltura.com/recipes/metadata) profiles to enhance the base fields available in your account, and much more.  
 Keep browsing these guides and review the [Code Recipes](https://developer.kaltura.com/recipes/) to learn more about the many capabilities of Kaltura VPaaS.
 
+## Dynamic Thumbnails
+
+An important tool of dealing with video and building video experiences are thumbnails, images that represent your video file. Kaltura provides two methods for creating and handling thumbnails: 
+
+1. The [thumbAsset Service](https://developer.kaltura.com/api-docs/#/thumbAsset) - provides editing, and managing editorial thumbnail assets that are associated with your video.
+2. The [Dynamic Thumbnail API](https://knowledge.kaltura.com/kaltura-thumbnail-api) - provides a simple API for creating thumbnails on-the-fly (in real-time) from the source media (the file originally uploaded).
+
+The images are generated upon demand (with caching on disk and via CDN) by calling the following URL -  
+`http://www.kaltura.com/p/{partner_id}/thumbnail/entry_id/{entry_id}/param1/value1/param2/value2/...`  
+
+The result of the thumbnail API is a JPEG image with one or more of the following features:  
+
+* Re-sized, cropped and/or rotated version of the original.
+* Taking a specific frame from a the video, in real-time.
+* Controling the compression quality of the created thumbnail image. 
+* Preperation of Imahe Stripes for animating thumbnails via CSS.
+* And more.
+
+Read more about the [Dynamic Thumbnail API](knowledge.kaltura.com/kaltura-thumbnail-api) and explore the [Thumbnail Animation with CSS Stripes Code Recipe](https://developer.kaltura.com/recipes/dynamic_thumbnails).
+
+
 ## Embed and Customize Your Video Player 
 
-## Dynamic Thumbnails
+The below example shows the most basic player embed. Player embed is a JavaScript code that references your partnerId, entryId and the uiConfId - a player widget instance ID. The Kaltura Player is the building block by which you deliver video experiences to your users. It also collects viewer engagement analytics about who, when and how users interact with your video. 
+
+<div class="w-row">
+<div class="w-col w-col-3">
+```
+kWidget.embed({ 
+  'targetId': 'kaltura_player', 
+  'wid': '_811441', 
+  'uiconf_id' : 34599271, 
+  'entry_id' : '0_4kwzg46z', 
+  'flashvars' : { 
+    // Add dynamic configrations here such as page-specific or user-specific configs. 
+  } 
+});
+```
+</div>
+<div class="w-col w-col-6">
+  <div class="w-embed w-iframe w-script media-embed-div">
+      <!-- Outer div defines maximum space the player can take -->
+      <div style="width: 100%;display: inline-block;position: relative;">
+        <!--  inner pusher div defines aspect ratio: in this case 16:9 ~ 56.25% -->
+        <div id="dummy" style="margin-top: 56.25%;"></div>
+        <!--  the player embed target, set to take up available absolute space   -->
+        <script src="https://cdnapisec.kaltura.com/p/811441/sp/81144100/embedIframeJs/uiconf_id/35015842/partner_id/811441" style="margin: 0px 0px 0px 0px;"></script>
+        <div id="kaltura_player_1461185766" style="position:absolute;top:0;left:0;left: 0;right: 0;bottom:0;border:none;"></div>
+      </div>
+      <script>
+        kWidget.embed({
+          "targetId": "kaltura_player_1461185766",
+          "wid": "_811441",
+          "uiconf_id": 35015842,
+          "flashvars": {
+            "streamerType": "auto"
+          },
+          "entry_id": "0_4kwzg46z"
+        });
+      </script>
+  </div>
+</div>
+</div>
 
 ## Analyze Engagement Analytics
