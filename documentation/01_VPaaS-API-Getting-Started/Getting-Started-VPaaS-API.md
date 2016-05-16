@@ -89,7 +89,9 @@ An important tool of dealing with video and building video experiences are thumb
 2. The [Dynamic Thumbnail API](https://knowledge.kaltura.com/kaltura-thumbnail-api) - provides a simple API for creating thumbnails on-the-fly (in real-time) from the source media (the file originally uploaded).
 
 The images are generated upon demand (with caching on disk and via CDN) by calling the following URL -  
-`http://www.kaltura.com/p/{partner_id}/thumbnail/entry_id/{entry_id}/param1/value1/param2/value2/...`  
+```
+http://www.kaltura.com/p/{partner_id}/thumbnail/entry_id/{entry_id}/param1/value1/param2/value2/...
+```  
 
 The result of the thumbnail API is a JPEG image with one or more of the following features:  
 
@@ -113,20 +115,20 @@ The player further simplifies embedding and integrating the player into pages an
 The uiConfId is used to reference the player instance you wish to render when embedding a video in your pages or app views.
 
 <div class="w-row">
-<div class="w-col w-col-5">
+<div class="w-col w-col-6">
   <div class="highlighter-rouge" style="padding-right: 10px;"><pre class="highlight" style="margin: 0;background: none;"><code><span class="c1">kWidget</span><span class="c1">.</span><span class="c1">embed</span><span class="c1">({</span>
-    <span class="s1">'targetId'</span><span class="c1">:</span> <span class="s1">'kaltura_player'</span><span class="c1">,</span>
+    <span class="s1">'targetId'</span><span class="c1">:</span> <span class="s1">'playerDivId'</span><span class="c1">,</span>
     <span class="s1">'wid'</span><span class="c1">:</span> <span class="s1">'_811441'</span><span class="c1">,</span>
     <span class="s1">'uiconf_id'</span> <span class="c1">:</span> <span class="s1">34599271</span><span class="c1">,</span>
     <span class="s1">'entry_id'</span> <span class="c1">:</span> <span class="s1">'0_4kwzg46z'</span><span class="c1">,</span>
     <span class="s1">'flashvars'</span> <span class="c1">:</span> <span class="c1">{</span>
-        <span class="nx">// Add dynamic configrations here such as page-specific or user-specific configs.</span>
+        <span class="nx">// Add dynamic configs such as page-specific or user-specific</span>
     <span class="c1">}</span>
 <span class="c1">});</span>
 </code></pre>
   </div>
 </div>
-<div class="w-col w-col-7">
+<div class="w-col w-col-6">
   <div class="w-embed w-iframe w-script media-embed-div">
       <!-- Outer div defines maximum space the player can take -->
       <div style="width: 100%;display: inline-block;position: relative;">
@@ -164,3 +166,4 @@ The uiConfId is used to reference the player instance you wish to render when em
 * [Enables a robust web to native bridge](http://player.kaltura.com/docs/NativeCallout).
 
 ## Analyze Engagement Analytics
+
