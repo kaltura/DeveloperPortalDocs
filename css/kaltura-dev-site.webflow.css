@@ -2691,7 +2691,7 @@ blockquote.recipes-ref-list ul li {
     padding-bottom: 25px;
   }
 
-  input.vpaas-signup-btn {
+  .w-button .standard-button .vpaas-signup-btn {
     width: 20%;
   }
 
