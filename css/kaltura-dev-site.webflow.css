@@ -139,8 +139,8 @@ h4 {
 
 .nav-sign-up:hover {
   float: right;
-  font-weight: 600;
-  color: #333; 
+  font-weight: 600 !important;
+  color: #333 !important; 
   text-decoration: none;
   font-size: 1.1em;
   letter-spacing: 0.04em;
