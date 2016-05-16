@@ -11,6 +11,7 @@ To get started, let's review the foundational building blocks of a video experie
 
 ## Creating a Kaltura Session
 
+
 The Kaltura API is [stateless](https://en.wikipedia.org/wiki/Stateless_protocol), which means that every request made to the Kaltura API requires an authenticated session string to be passed along with your request. This is the Kaltura Session (aka KS), it identifies the Kaltura account and user for which the executed API action is to be executed. The KS can also specifiy various permissions and configurations such as dynamically setting the role of the user, time duration the session is good for and more. You are expected to provide a generated KS with every API call you will make. 
 
 There are three methods for generating a Kaltura Session:
