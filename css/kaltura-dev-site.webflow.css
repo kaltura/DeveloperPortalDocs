@@ -2762,8 +2762,8 @@ blockquote.recipes-ref-list ul li {
   .video-parent-container {
     display: none;
   }
-
-  .w-section .section-header {
+  
+  .section-header {
     background: url(/images/video-bk-framegrab.jpg);
     background-size: cover;
     background-repeat: no-repeat;
