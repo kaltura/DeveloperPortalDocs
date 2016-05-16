@@ -132,7 +132,6 @@ h4 {
 
 .nav-links {
   padding-top: 22px;
-  float: left;
   -webkit-transition: color 300ms ease;
   transition: color 300ms ease;
   font-family: proxima-nova, sans-serif;
