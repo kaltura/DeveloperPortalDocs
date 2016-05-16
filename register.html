@@ -24,7 +24,7 @@ layout: default
 
 <div class="w-form">
 		
-    <form id="register-form" name="register-form" data-name="Register Form" action="https://vpaas.kaltura.com:8443/checkout.php" method="post" onsubmit="return validate()">
+    <form id="register-form" name="register-form" data-name="Register Form" action="https://vpaas.kaltura.com:8443/checkout.php" method="post" onsubmit="return validate(event);">
 <div class="company-details-div">
 <div class="w-row form-row">
 <div class="w-col w-col-6">
@@ -198,19 +198,19 @@ layout: default
 <!--script src="https://js.braintreegateway.com/js/braintree-2.21.0.min.js"></script-->
 <script>
 $(document).ready(function () {
-	$("#submitButton").click(function () { 
-    		if (validate()){
+	/*$("#submitButton").click(function () { 
+    		//if (validate()){
 			setTimeout(function () { disableButton(); }, 0);
-		}
+		//}
 	});  
 
 	function disableButton() {
 	    $("#submitButton").prop('disabled', true);
 	    $("#submitButton").prop('value', "We're creating your account, please wait...");
-	}   
+	} */  
 }); 
 
-function validate()
+function validate(event)
 {
     if (!verify_recapcha()){
 	return false;
@@ -219,11 +219,13 @@ function validate()
 	if ( $(this).val() == '' ){
 	    alert("Please fill all fields.");
 	    $(this).focus();
+	    event.preventDefault();
 	    return false;
 	}
-	return true;
     });  
-    
+	    $("#submitButton").prop('disabled', true);
+	    $("#submitButton").prop('value', "We're creating your account, please wait...");
+	return true;
 }
 
 /*$(document).ready(function(){
