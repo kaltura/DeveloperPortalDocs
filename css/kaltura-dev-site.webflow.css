@@ -2759,6 +2759,16 @@ blockquote.recipes-ref-list ul li {
     font-size: 19px;
   }
 
+  .video-parent-container {
+    display: none;
+  }
+
+  .w-section .section-header {
+    background: url(/images/video-bk-framegrab.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
 }
 
 @media (max-width: 767px) {
