@@ -91,6 +91,13 @@ h4 {
   transition: all 200ms ease;
   font-family: proxima-nova, sans-serif;
   color: #188093;
+  letter-spacing: 0.05em;
+}
+
+.vpaas-btn {
+  font-weight: 600;
+  color: #fff;
+  background-color: 188093;
 }
 
 .header-btn:hover {
