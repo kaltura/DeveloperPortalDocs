@@ -108,6 +108,7 @@ The below example shows the most basic player embed. Player embed is a JavaScrip
 
 <div class="w-row">
 <div class="w-col w-col-3">
+
 ```
 kWidget.embed({ 
   'targetId': 'kaltura_player', 
@@ -119,6 +120,7 @@ kWidget.embed({
   } 
 });
 ```
+
 </div>
 <div class="w-col w-col-6">
   <div class="w-embed w-iframe w-script media-embed-div">
