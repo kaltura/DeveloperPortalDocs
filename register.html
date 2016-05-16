@@ -198,16 +198,16 @@ layout: default
 <!--script src="https://js.braintreegateway.com/js/braintree-2.21.0.min.js"></script-->
 <script>
 $(document).ready(function () {
-    if (validate()){
 	$("#submitButton").click(function () { 
-		setTimeout(function () { disableButton(); }, 0);
+    		if (validate()){
+			setTimeout(function () { disableButton(); }, 0);
+		}
 	});  
 
 	function disableButton() {
 	    $("#submitButton").prop('disabled', true);
 	    $("#submitButton").prop('value', "We're creating your account, please wait...");
 	}   
-    }
 }); 
 
 function validate()
