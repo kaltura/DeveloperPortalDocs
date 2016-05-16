@@ -2537,6 +2537,20 @@ blockquote.recipes-ref-list ul li {
    margin-top: 4px;
 }
 
+@media (max-width: 1024px) {
+   
+   .video-parent-container {
+    display: none;
+  }
+
+  .section-header {
+    background: url(/images/video-bk-framegrab.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+}
+
 @media (max-width: 991px) {
    .header-btn.vpaas-btn {
     margin-top: 12px;
@@ -2757,16 +2771,6 @@ blockquote.recipes-ref-list ul li {
   .home-sign-up-cta {
     margin-left: 13px;
     font-size: 19px;
-  }
-
-  .video-parent-container {
-    display: none;
-  }
-  
-  .section-header {
-    background: url(/images/video-bk-framegrab.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
   }
 
 }
