@@ -166,3 +166,10 @@ The uiConfId is used to reference the player instance you wish to render when em
 
 ## Analyze Engagement Analytics
 
+Make decisions based on data. The Kaltura VPaaS usage and engagement analytics reports provide you with the insight you need to successfully manage your content, reach your audience, and optimize your video workflow. View a quick snapshot of high-level figures, or drill down to user-specific or video-specific information. Use the analytics reports to gain business insights, and understand user trends. Already using an analytics or audience measurement tool? Leverage the Kaltura pre-integrated plugins for all major analytics providers and consolidate your data securely and reliably.
+
+Notable Analytics Partners: Yubora, ComScore, Nielsen, Chartbeat, Google Analytics, Adobe Heartbeat
+make links
+
+{% onebox https://developer.kaltura.com/recipes/analytics/embed %}
+
