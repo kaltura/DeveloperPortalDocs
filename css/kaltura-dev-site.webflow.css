@@ -1637,6 +1637,7 @@ td {
     padding-bottom: 50px;
     border-bottom: dashed 1px #ccc;
     margin-bottom: 50px;
+    line-height: 1.9em;
 }
 
 #payment-fields h3 {
@@ -1767,6 +1768,7 @@ td {
   font-family: proxima-nova, sans-serif;
   text-align: left;
   letter-spacing: 0.2px;
+  line-height: 1.9em;
 }
 
 .signup-body.success-body {
@@ -2688,6 +2690,11 @@ blockquote.recipes-ref-list ul li {
     padding-top: 25px;
     padding-bottom: 25px;
   }
+
+  .vpaas-signup-btn {
+    width: 20%;
+  }
+
   .company-details-heading {
     width: 30%;
     border-style: none none dashed;
