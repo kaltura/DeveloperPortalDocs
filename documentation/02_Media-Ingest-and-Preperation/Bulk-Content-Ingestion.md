@@ -11,6 +11,7 @@ With these options, you can also ingest files from your own FTP server, or any p
 ## Introduction Video
 
 The following video provides a quick walkthrough of the bulk-upload features in KMC - 
+
 {% onebox http://videos.kaltura.com/media/1_kxiv585x %}
 
 ## Bulk Upload Inpur Formats (CSV vs. XML)
@@ -23,12 +24,12 @@ The benefits of using bulk upload to ingest your files:
 
 There are two methods to bulk-upload content:
 
-* The simple method - using a {% extlink CSV (Comma Separated Value) http://en.wikipedia.org/wiki/Comma-separated_values %} file, providing a quick and easy way to submit list of files one can even create in a spreadsheet application like Microsoft Excel or Google Docs. The CSV format may only be used to upload/ingest new files into Kaltura.
-* The robust method - using an {% extlink XML file http://en.wikipedia.org/wiki/XML %}, providing flexible structure to input complex metadata fields and other objects such as caption files, allowing for more flexible ingestion workflows. The XML format supports full CRUD (Create, Read, Update, and Delete) operations with Kaltura Entries.
+* The simple method - using a [CSV (Comma Separated Value)](http://en.wikipedia.org/wiki/Comma-separated_values] file, providing a quick and easy way to submit list of files one can even create in a spreadsheet application like Microsoft Excel or Google Docs. The CSV format may only be used to upload/ingest new files into Kaltura.
+* The robust method - using an [XML file](http://en.wikipedia.org/wiki/XML), providing flexible structure to input complex metadata fields and other objects such as caption files, allowing for more flexible ingestion workflows. The XML format supports full CRUD (Create, Read, Update, and Delete) operations with Kaltura Entries.
 
 ## How to submit bulk upload jobs
 
-Download the {% extlink Sample CSV Bulk Upload file https://cdnapisec.kaltura.com/content/docs/kaltura_batch_upload_falcon.zip %}.  
+Download the [Sample CSV Bulk Upload file](https://cdnapisec.kaltura.com/content/docs/kaltura_batch_upload_falcon.zip).  
 
 * CSV - Review the file named: kaltura_batch_upload_falcon.csv in the downloaded zip.
 * XML - Review the file named: kaltura_batch_upload_falcon.xml in the downloaded zip.
@@ -47,12 +48,12 @@ With XML, you can achieve a simplified integration with other systems (for examp
 
 In the XML format the order the fields is not important (since each field is defined atomically).  
 Additionally, fields with empty value can simply be skipped and not defined in the entry element.  
-The structure and field names respect that of the {% extlink Kaltura Bulk Upload XML Schema https://developer.kaltura.com/api-docs/#/Bulk%20Upload %}.
+The structure and field names respect that of the [Kaltura Bulk Upload XML Schema](https://developer.kaltura.com/api-docs/#/Bulk%20Upload).
 
-If you're comfortable with PHP as a programming language, we recommend reviewing the GitHub project: {% extlink Kaltura's Bulk Upload XML Content Migration Sample Scripts https://github.com/kaltura/kaltura-bulk-upload-migration-samples %}.
+If you're comfortable with PHP as a programming language, we recommend reviewing the GitHub project: [Kaltura's Bulk Upload XML Content Migration Sample Scripts](https://github.com/kaltura/kaltura-bulk-upload-migration-samples).
 
 
 ## The bulk upload job API
 
-After you've created the CSV or XML file you wish to submit for ingestion, call the {% extlink media.bulkUploadAdd action https://developer.kaltura.com/api-docs/#/media.bulkUploadAdd %} to execute the ingestion job.   
-Once submitted, you can use the {% extlink bulk service https://developer.kaltura.com/api-docs/#/bulk %} to review the status of your ingestion job or abort it.   
+After you've created the CSV or XML file you wish to submit for ingestion, call the [media.bulkUploadAdd action](https://developer.kaltura.com/api-docs/#/media.bulkUploadAdd) to execute the ingestion job.   
+Once submitted, you can use the [bulk service](https://developer.kaltura.com/api-docs/#/bulk) to review the status of your ingestion job or abort it.   
