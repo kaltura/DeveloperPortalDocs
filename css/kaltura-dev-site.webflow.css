@@ -2534,6 +2534,13 @@ blockquote.recipes-ref-list ul li {
 }
 
 @media (max-width: 991px) {
+   .header-btn.vpaas-btn {
+    margin-top: 12px;
+    margin-right: 14px;
+    padding: 10px 14px;
+    font-size: 15px;
+  }
+
   .nav-logo-img {
     padding-left: 0px;
   }
@@ -2762,6 +2769,13 @@ blockquote.recipes-ref-list ul li {
     text-align: center;
     font-size: 16px;
   }
+
+ .header-btn.vpaas-btn {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
   .header-text-link {
     margin-left: 30px;
   }
