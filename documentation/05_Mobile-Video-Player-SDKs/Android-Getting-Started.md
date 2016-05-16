@@ -7,7 +7,7 @@ weight: 116
 
 ## Getting Started 
 
-* clone Android SDK make sure it resides in same folder as your app
+* Clone Android SDK make sure it resides in same folder as your app
 	```
 	git clone https://github.com/kaltura/player-sdk-native-android.git
 	```
