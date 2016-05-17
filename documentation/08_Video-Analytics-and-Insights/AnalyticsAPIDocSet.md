@@ -29,7 +29,7 @@ With Kaltura Video Insights you can collect, present and analyze data about syst
 
 The data in Kaltura Video Insights can be divided into roughly two groups: Player events and other data.
 
-As a video is played, the Kaltura Player sends Player events related to viewer behavior (such as “Plays”, “Played 25%”, “Stopped”, etc.) to Kaltura Video Insights. If you are using Kaltura Player versions XXX or higher, you will get the support for these Player event insights out-of-the-box. If you are using a non-Kaltura player, you need to make sure all of the relevant events are reported correctly using Kaltura Event Tracking API. 
+As a video is played, the Kaltura Player sends Player events related to viewer behavior (such as “Plays”, “Played 25%”, “Stopped”, etc.) to Kaltura Video Insights. If you are using Kaltura Player versions 2.43 or higher, you will get the support for these Player event insights out-of-the-box. If you are using a non-Kaltura player, you need to make sure all of the relevant events are reported correctly using Kaltura Event Tracking API. 
 
 
 ## Dimensions
