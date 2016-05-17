@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Player Plugins in the SDK
-weight: 102
+weight: 120
 ---
 
 [![iOS](https://img.shields.io/badge/iOS-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios) 
