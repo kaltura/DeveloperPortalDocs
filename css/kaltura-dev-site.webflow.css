@@ -2784,12 +2784,16 @@ blockquote.recipes-ref-list ul li {
     text-align: left;
     border-bottom: none;
     padding-bottom: 22px;
+    float: none;
+    margin-left: 20px;
   }
 
     .nav-sign-up:hover {
     text-align: left;
     border-bottom: none;
     padding-bottom: 22px;
+    float: none;
+    margin-left: 20px;
   }
 
 
