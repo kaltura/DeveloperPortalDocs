@@ -4,8 +4,8 @@ title: Get Started with Kaltura VPaaS
 weight: 102
 ---
 
-Building video experiences consists of ingesting media files, video playback and  reviewing usage and engagement analytics. In between there is a world of nuances that your unique use-case and app requires. Kaltura VPaaS is built on the principles of atomic services, SDKs and tools allowing you full control and flexibility over every element and process in the life cycle of your media.  
-The guides on this site, and the [Kaltura Developer Tools](https://developer.kaltura.com), will enable you to get started quickly building your own video experiences and workflows and provide everything you need to explore the platform capabilities further and become an expert.  
+Building video experiences consists of ingesting media files, playing back videos, and  reviewing usage and engagement analytics. In between there is a world of nuances that your unique use-case and application requires. Kaltura VPaaS is built on the principles of atomic services, SDKs, and tools that allow you full control and flexibility over every element and process in your media's lifecycle.  
+The guides on this site, together with the [Kaltura Developer Tools](https://developer.kaltura.com), enable you to get started quickly building your own video experiences and workflows, and provide you with everything you need to explore the platform capabilities further and become an expert.  
 
 To get started, let's review the foundational building blocks of a video experience. 
 
@@ -13,13 +13,14 @@ To get started, let's review the foundational building blocks of a video experie
 
 Your Kaltura Partner ID, or PID, is a unique number identifying your Kaltura account.  
 You can find your partnerId at any time by visiting the [Account Settings tab in the Kaltura Management Console](https://www.kaltura.com/index.php/kmc/kmc#account|overview).  
-You will need to pass the pid paramemter everytime you authenticate with the Kaltura API, or connect with integrated apps.
+Remember that you will need to pass the PID paramemter every time you authenticate with the Kaltura API, or connect with integrated applications.
 
 ## Creating a Kaltura Session
 
-The Kaltura API is [stateless](https://en.wikipedia.org/wiki/Stateless_protocol), which means that every request made to the Kaltura API requires an authenticated session string to be passed along with your request. This is the Kaltura Session (aka KS), it identifies the Kaltura account and user for which the executed API action is to be executed. The KS can also specifiy various permissions and configurations such as dynamically setting the role of the user, time duration the session is good for and more. You are expected to provide a generated KS with every API call you will make. 
+The Kaltura API is [stateless](https://en.wikipedia.org/wiki/Stateless_protocol), which means that every request made to the Kaltura API requires an authenticated session string to be passed along with your request. This is the Kaltura Session (aka KS), which identifies the Kaltura account and user for which the executed API action is to be executed. The KS can also specifiy various permissions and configurations, such as setting the role of the user dynamically, setting the time duration for the session, and more. You are expected to provide a generated KS with every API call you will make. 
 
-### There are three methods for generating a Kaltura Session:
+### Methods for Creating a Kaltura Session
+There are three methods for generating a Kaltura Session:
 
 * Calling the [session.start action](https://developer.kaltura.com/api-docs/#/session.start). This method is recommended for scripts and applications that only you will have access to.
 * Calling [user.loginByLoginId action](https://developer.kaltura.com/api-docs/#/user.loginByLoginId). This method is recommended for managing registered users in Kaltura, and allowing users to login using email and password. When you login to the Kaltura Management Console, the KMC app calls the user.loginByLoginId action to authenticate you using your registered email and password.
@@ -169,7 +170,7 @@ The uiConfId is used to reference the player instance you wish to render when em
 
 Make decisions based on data. The Kaltura VPaaS usage and engagement analytics reports provide you with the insight you need to successfully manage your content, reach your audience, and optimize your video workflow. View a quick snapshot of high-level figures, or drill down to user-specific or video-specific information. Use the analytics reports to gain business insights, and understand user trends. Already using an analytics or audience measurement tool? Leverage the Kaltura pre-integrated plugins for all major analytics providers and consolidate your data securely and reliably.
 
-Integrated Analytics Partners - [See configuring Analytics plugins](https://knowledge.kaltura.com/universal-studio-information-guide#configuring_analytics): [Youbora](https://knowledge.kaltura.com/node/1675), [comScore](http://player.kaltura.com/docs/ComscoreAnalytics), [Nielsen](http://player.kaltura.com/docs/NielsenVideoCensus), [Chartbeat](http://support.chartbeat.com/docs/video.html#kaltura), [Google Analytics](https://knowledge.kaltura.com/node/1148#googleanalytics), [Adobe Heartbeat](http://player.kaltura.com/modules/Heartbeat/tests/HeartBeatDemo.html).
+Integrated Analytics Partners - [See Configuring Analytics Plugins](https://knowledge.kaltura.com/universal-studio-information-guide#configuring_analytics): [Youbora](https://knowledge.kaltura.com/node/1675), [comScore](http://player.kaltura.com/docs/ComscoreAnalytics), [Nielsen](http://player.kaltura.com/docs/NielsenVideoCensus), [Chartbeat](http://support.chartbeat.com/docs/video.html#kaltura), [Google Analytics](https://knowledge.kaltura.com/node/1148#googleanalytics), and [Adobe Heartbeat](http://player.kaltura.com/modules/Heartbeat/tests/HeartBeatDemo.html).
 
 Follow the Code Recipe below to get started with the Kaltura Analytics [report service](https://developer.kaltura.com/api-docs/#/report).
 
