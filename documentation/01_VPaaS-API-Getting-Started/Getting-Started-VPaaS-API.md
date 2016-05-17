@@ -5,7 +5,9 @@ weight: 102
 ---
 
 ## Introduction  
-Building video experiences consists of ingesting media files, playing back videos, and  reviewing usage and engagement analytics. In between, there is a world of nuances required for your unique use-case and application. Kaltura VPaaS is built on the principles of atomic services, SDKs, and tools that allow you full control and flexibility over every element and process in your media's lifecycle.  
+Building video experiences consists of ingesting media files, playing back videos, and reviewing usage and engagement analytics. In between, there is a world of nuances required for your unique use-case and application. Kaltura VPaaS is built on the principles of atomic services, SDKs, and tools that allow you full control and flexibility over every element and process in your media's lifecycle.
+
+
 The guides on this site, together with the [Kaltura Developer Tools](https://developer.kaltura.com), enable you to get started building your own video experiences and workflows, and provide you with everything you need to further explore the platform's capabilities and to become an expert.  
 
 To get started, let's review the foundational building blocks of a video experience. 
@@ -14,11 +16,11 @@ To get started, let's review the foundational building blocks of a video experie
 
 Your Kaltura Partner ID, or PID, is a unique number identifying your Kaltura account.  
 Your PID is easily available at any time through the Kaltura Management Console (KMC), by simply clicking the [Account Settings tab](https://www.kaltura.com/index.php/kmc/kmc#account|overview).  
-> Remember: You will need to pass the PID paramemter every time you authenticate with the Kaltura API, or connect with integrated applications.
+> Remember: You will need to pass the PID parameter every time you authenticate with the Kaltura API, or connect with integrated applications.
 
 ## Creating a Kaltura Session
 
-The Kaltura API is [stateless](https://en.wikipedia.org/wiki/Stateless_protocol), which means that every request made to the Kaltura API requires an authenticated session string to be passed along with your request. This is the Kaltura Session (KS), which identifies the Kaltura account and user for which the executed API action is to be executed. The KS can also specifiy various permissions and configurations, such as setting the role of the user dynamically, setting the time duration for the session, and more. 
+The Kaltura API is [stateless](https://en.wikipedia.org/wiki/Stateless_protocol), which means that every request made to the Kaltura API requires an authenticated session string to be passed along with your request. This is the Kaltura Session (KS), which identifies the Kaltura account and user for which the executed API action is to be executed. The KS can also specify various permissions and configurations, such as setting the role of the user dynamically, setting the time duration for the session, and more. 
 > Remember: For every API call you make, you will need to provide a generated KS. 
 
 ### Methods for Creating a Kaltura Session
@@ -52,11 +54,11 @@ For a quick view of how this method works
 
 ### Upload Files by Calling the API Directly
 
-Uploading a file directly via the REST API requires knowledege of handling files in your preferred programming language.  
+Uploading a file directly via the REST API requires knowledge of handling files in your preferred programming language.  
 The [Kaltura Client Libraries](https://developer.kaltura.com/api-docs/#/Client%20Libraries) simplify constructing the REST API calls to Kaltura and provide a simple API for a simple file upload request.  
 However, if you'd like to support chunked file upload and pause-resume in your application, you will need to handle the file-chunking according to your preferred programming language standards.
 
-> If you're using Java, follow the  information in the article on [chunked uploads in the Java reference implementation](https://github.com/kaltura/Sample-Kaltura-Chunked-Upload-Java) to achieve chunked file upload in your Java application.
+> If you're using Java, follow the information in the article on [chunked uploads in the Java reference implementation](https://github.com/kaltura/Sample-Kaltura-Chunked-Upload-Java) to achieve chunked file upload in your Java application.
 
 Follow the recipe below to get learn how to use the file upload API:
 
@@ -89,6 +91,7 @@ Additionally, media entries in Kaltura have several related objects, including:
 * [access control](https://developer.kaltura.com/api-docs/#/accessControl) profiles to set rules that allow or deny access to the media
 * [custom metadata](https://developer.kaltura.com/recipes/metadata) profiles to enhance the base fields available in your account
 * And more
+
 We recommend reading these guides and reviewing the [Code Recipes](https://developer.kaltura.com/recipes/) to learn more about the many capabilities of Kaltura's VPaaS.
 
 ## Dynamic Thumbnails
@@ -108,8 +111,8 @@ The result of the thumbnail API is a JPEG image with one or more of the followin
 
 * Re-sized, cropped and/or rotated version of the original
 * Taking a specific frame from a the video, in real-time
-* Controling the compression quality of the created thumbnail image
-* Preperation of Imahe Stripes for animating thumbnails via CSS
+* Controlling the compression quality of the created thumbnail image
+* Preparation of Imahe Stripes for animating thumbnails via CSS
 * And more.
 
 Read more about the [Dynamic Thumbnail API](knowledge.kaltura.com/kaltura-thumbnail-api) and explore the [Thumbnail Animation with CSS Stripes Code Recipe](https://developer.kaltura.com/recipes/dynamic_thumbnails).
@@ -117,7 +120,7 @@ Read more about the [Dynamic Thumbnail API](knowledge.kaltura.com/kaltura-thumbn
 
 ## Embed and Customize Your Video Player 
 
-The example below shows the most basic Pplayer embed. Player embed is a JavaScript code that references your partnerId, entryId and the uiConfId - a Player widget instance ID. 
+The example below shows the most basic Player embed. Player embed is a JavaScript code that references your partnerId, entryId and the uiConfId - a Player widget instance ID. 
 
 <div class="w-row">
 <div class="w-col w-col-6">
@@ -158,7 +161,7 @@ The example below shows the most basic Pplayer embed. Player embed is a JavaScri
 </div>
 </div>
 
-The Kaltura Player is the building block by which you deliver video experiences to your users. The Player abstracts the complexities of delivery of video across devices, browsers and native applications, and provides a cross-platform UI framework, easy branding and customization features and even in-video quizzes, advertizing integrations.   
+The Kaltura Player is the building block by which you deliver video experiences to your users. The Player abstracts the complexities of delivery of video across devices, browsers and native applications, and provides a cross-platform UI framework, easy branding and customization features and even in-video quizzes, advertising integrations.   
 
 The Player's robust plugins-framework also enables you to create your own unique experiences, while the uiConf service simplifies the management of many such Player instances and configurations.
 
@@ -172,7 +175,7 @@ The uiConfId is used to reference the Player instance you wish to render when em
 
 * [Responsive Player embed](http://player.kaltura.com/docs/responsive).
 * [JavaScript function for the Player embed method](http://player.kaltura.com/docs/kwidget).
-* [JavaScript function thmbnail embed (clicking turns thumbnail to Player)](http://player.kaltura.com/docs/thumb).
+* [JavaScript function thumbnail embed (clicking turns thumbnail to Player)](http://player.kaltura.com/docs/thumb).
 * [JavaScript tag player embed](http://player.kaltura.com/docs/autoEmbed).
 * [Enabling a robust web to native bridge](http://player.kaltura.com/docs/NativeCallout).
 
