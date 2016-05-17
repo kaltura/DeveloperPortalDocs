@@ -152,23 +152,23 @@ The below example shows the most basic player embed. Player embed is a JavaScrip
 The Kaltura Player is the building block by which you deliver video experiences to your users. It abstracts the complexities of delivery of video across devices, browsers and native apps. It provides a cross-platform UI framework, easy branding and customization features and even in-video quizzes, advertizing integrations.   
 The player's robust plugins-framework also enables you to create your own unique expeirences. And the uiConf service is what simplifies the management of many such player instances and configurations.
 
-The uiConfId is used to reference the player instance you wish to render when embedding a video in your pages or app views.
+The uiConfId is used to reference the Player instance you wish to render when embedding a video in your pages or application views.
 
-### Creating and Managing Player Widgets - uiConf service
+### Creating and Managing Player Widgets - uiConf Service
 
 {% onebox https://developer.kaltura.com/recipes/player_uiconf/embed#/start %} 
 
-### Get started with the player features
+### Getting Started with the Player Features
 
-* [Responsive player embed](http://player.kaltura.com/docs/responsive).
-* [JavaScript function for player embed method](http://player.kaltura.com/docs/kwidget).
-* [JavaScript function thmbnail embed (click turns thumbnail to player)](http://player.kaltura.com/docs/thumb).
+* [Responsive Player embed](http://player.kaltura.com/docs/responsive).
+* [JavaScript function for the Player embed method](http://player.kaltura.com/docs/kwidget).
+* [JavaScript function thmbnail embed (clicking turns thumbnail to Player)](http://player.kaltura.com/docs/thumb).
 * [JavaScript tag player embed](http://player.kaltura.com/docs/autoEmbed).
-* [Enables a robust web to native bridge](http://player.kaltura.com/docs/NativeCallout).
+* [Enabling a robust web to native bridge](http://player.kaltura.com/docs/NativeCallout).
 
 ## Analyze Engagement Analytics
 
-Make decisions based on data. The Kaltura VPaaS usage and engagement analytics reports provide you with the insight you need to successfully manage your content, reach your audience, and optimize your video workflow. View a quick snapshot of high-level figures, or drill down to user-specific or video-specific information. Use the analytics reports to gain business insights, and understand user trends. Already using an analytics or audience measurement tool? Leverage the Kaltura pre-integrated plugins for all major analytics providers and consolidate your data securely and reliably.
+Make decisions based on complete data - the Kaltura VPaaS usage and engagement analytics reports provide you with the insight you need to manage your content, reach your audience, and optimize your video workflow. View a quick snapshot of high-level figures, or drill down to user-specific or video-specific information. Use the analytics reports to gain business insights, and understand user trends. Already using an analytics or audience measurement tool? Leverage the Kaltura pre-integrated plugins for all major analytics providers and consolidate your data securely and reliably.
 
 Integrated Analytics Partners - [See Configuring Analytics Plugins](https://knowledge.kaltura.com/universal-studio-information-guide#configuring_analytics): [Youbora](https://knowledge.kaltura.com/node/1675), [comScore](http://player.kaltura.com/docs/ComscoreAnalytics), [Nielsen](http://player.kaltura.com/docs/NielsenVideoCensus), [Chartbeat](http://support.chartbeat.com/docs/video.html#kaltura), [Google Analytics](https://knowledge.kaltura.com/node/1148#googleanalytics), and [Adobe Heartbeat](http://player.kaltura.com/modules/Heartbeat/tests/HeartBeatDemo.html).
 
