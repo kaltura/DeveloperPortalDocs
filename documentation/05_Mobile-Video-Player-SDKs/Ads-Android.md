@@ -2,7 +2,7 @@
 layout: page
 title: Configuring the Player to use Google Ads in Android Devices
 subcat: Android
-weight: 120
+weight: 210
 ---
 
 [![Android](https://img.shields.io/badge/Android-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios)
