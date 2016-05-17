@@ -2,7 +2,7 @@
 layout: page
 title: Android Player SDK Getting Started 
 subcat: Android
-weight: 117
+weight: 180
 ---
 
 ## Getting Started 
