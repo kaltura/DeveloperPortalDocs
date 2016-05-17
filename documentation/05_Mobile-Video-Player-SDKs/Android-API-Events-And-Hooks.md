@@ -1,6 +1,7 @@
 ---
 layout: page
-title: Kaltura Player SDK API - Properties, Events, Notifications - Android
+title: Android Player API - Properties, Events, Notifications
+
 subcat: Android
 weight: 190
 ---
