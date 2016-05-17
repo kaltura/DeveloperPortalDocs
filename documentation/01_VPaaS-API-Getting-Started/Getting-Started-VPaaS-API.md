@@ -4,6 +4,7 @@ title: Get Started with Kaltura VPaaS
 weight: 102
 ---
 
+## Introduction  
 Building video experiences consists of ingesting media files, playing back videos, and  reviewing usage and engagement analytics. In between, there is a world of nuances required for your unique use-case and application. Kaltura VPaaS is built on the principles of atomic services, SDKs, and tools that allow you full control and flexibility over every element and process in your media's lifecycle.  
 The guides on this site, together with the [Kaltura Developer Tools](https://developer.kaltura.com), enable you to get started building your own video experiences and workflows, and provide you with everything you need to further explore the platform's capabilities and to become an expert.  
 
