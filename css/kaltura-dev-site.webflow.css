@@ -2736,6 +2736,11 @@ blockquote.recipes-ref-list ul li {
     padding-left: 45px;
   }
 
+  .billable-item i.fa {
+  margin-left: 10px;
+  color: #136574;
+}
+
   .case-study-header-section {
     padding-top: 11px;
     padding-bottom: 11px;
