@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Using and Configuring Player Objects, Native vs HTML5 controls
-weight: 103
+weight: 130
 ---
 
 [![iOS](https://img.shields.io/badge/iOS-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios) [![Android](https://img.shields.io/badge/Android-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios)
