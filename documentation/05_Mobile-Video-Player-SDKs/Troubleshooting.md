@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Troubleshooting the Kaltura Player SDK
-weight: 106
+weight: 160
 ---
 
 [![iOS](https://img.shields.io/badge/iOS-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios) 
