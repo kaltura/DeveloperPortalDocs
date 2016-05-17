@@ -1336,7 +1336,7 @@ td {
 .nav-dropdown-list.w--open {
   margin-top: 10px;
   background-color: #fff;
-  box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, .22);
+  box-shadow: none;
 }
 
 .dropdown-link {
@@ -2701,7 +2701,7 @@ blockquote.recipes-ref-list ul li {
   }
   .nav-dropdown-list.w--open {
     margin-top: 0px;
-    background-color: #ebebeb;
+    background-color: #efefef;
   }
   .dropdown-link {
     border-bottom: 1px solid #ccc;
@@ -2778,6 +2778,12 @@ blockquote.recipes-ref-list ul li {
   .home-sign-up-cta {
     margin-left: 13px;
     font-size: 19px;
+  }
+
+  .nav-sign-up {
+    text-align: left;
+    border-bottom: none;
+    padding-bottom: 22px;
   }
 
 }
