@@ -37,8 +37,7 @@ Alternatively, Kaltura also provides methods for bulk-ingest and import of conte
 
 >  Note: Kaltura manages all forms of media files, including video, image, and audio files. It even provides APIs to host, deliver and process document files, such as PDF and PPT files, to create rich experiences such as synchronized side-by-side video and presentation slides.
 
-Which method you chose to implement depends on your application needs.  
-Below are the two main methods for uploading files:
+Which method you chose to implement depends on your application needs. The following are the two main methods for uploading files.
 
 ### Upload Files Using JavaScript with the jQuery Upload Widget
 
@@ -80,19 +79,25 @@ To retrieve the data of an object using its ID, call the object's `get` action. 
 
 ### Updating Entry Details - media.update
 
-To update any object in Kaltura, use the `update` action. To update media entries, call the [`media.update`](https://developer.kaltura.com/api-docs/#/media.update) action providing an instance of the `KalturaMediaEntry` object.   
+To update any object in Kaltura's VPaaS, use the `update` action. 
+To update media entries, call the [`media.update`](https://developer.kaltura.com/api-docs/#/media.update) action by providing an instance of the `KalturaMediaEntry` object.   
 
-Additionally, media entries in Kaltura have several related objects including [captionAsset](https://developer.kaltura.com/api-docs/#/captionAsset) for caption files, [thumbAsset](https://developer.kaltura.com/api-docs/#/thumbAsset) for editorial thumbnails, [access control](https://developer.kaltura.com/api-docs/#/accessControl) profiles to set rules that allow or deny access to the media, [custom metadata](https://developer.kaltura.com/recipes/metadata) profiles to enhance the base fields available in your account, and much more.  
-Keep browsing these guides and review the [Code Recipes](https://developer.kaltura.com/recipes/) to learn more about the many capabilities of Kaltura VPaaS.
+Additionally, media entries in Kaltura have several related objects, including: 
+* [captionAsset](https://developer.kaltura.com/api-docs/#/captionAsset) for caption files
+* [thumbAsset](https://developer.kaltura.com/api-docs/#/thumbAsset) for editorial thumbnails
+* [access control](https://developer.kaltura.com/api-docs/#/accessControl) profiles to set rules that allow or deny access to the media
+* [custom metadata](https://developer.kaltura.com/recipes/metadata) profiles to enhance the base fields available in your account
+* And more
+We recommend reading these guides and reviewing the [Code Recipes](https://developer.kaltura.com/recipes/) to learn more about the many capabilities of Kaltura's VPaaS.
 
 ## Dynamic Thumbnails
 
-An important tool of dealing with video and building video experiences are thumbnails, images that represent your video file. Kaltura provides two methods for creating and handling thumbnails: 
+An important tool for dealing with video and building video experiences are thumbnails, images that represent your video file. Kaltura provides two methods for creating and handling thumbnails: 
 
-1. The [thumbAsset Service](https://developer.kaltura.com/api-docs/#/thumbAsset) - provides editing, and managing editorial thumbnail assets that are associated with your video.
-2. The [Dynamic Thumbnail API](https://knowledge.kaltura.com/kaltura-thumbnail-api) - provides a simple API for creating thumbnails on-the-fly (in real-time) from the source media (the file originally uploaded).
+* The [thumbAsset Service](https://developer.kaltura.com/api-docs/#/thumbAsset): Enables you to edit and manage editorial thumbnail assets that are associated with your video.
+* The [Dynamic Thumbnail API](https://knowledge.kaltura.com/kaltura-thumbnail-api): Provides a simple API for creating thumbnails on-the-fly (in real-time) from the source media (the file originally uploaded).
 
-The images are generated upon demand (with caching on disk and via CDN) by calling the following URL -  
+The images are generated on-demand (with caching on disk and via CDN) by calling the following URL:  
 
 {% highlight plaintext %}
 http://www.kaltura.com/p/{partner_id}/thumbnail/entry_id/{entry_id}/param1/value1/param2/value2/...
@@ -100,10 +105,10 @@ http://www.kaltura.com/p/{partner_id}/thumbnail/entry_id/{entry_id}/param1/value
 
 The result of the thumbnail API is a JPEG image with one or more of the following features:  
 
-* Re-sized, cropped and/or rotated version of the original.
-* Taking a specific frame from a the video, in real-time.
-* Controling the compression quality of the created thumbnail image. 
-* Preperation of Imahe Stripes for animating thumbnails via CSS.
+* Re-sized, cropped and/or rotated version of the original
+* Taking a specific frame from a the video, in real-time
+* Controling the compression quality of the created thumbnail image
+* Preperation of Imahe Stripes for animating thumbnails via CSS
 * And more.
 
 Read more about the [Dynamic Thumbnail API](knowledge.kaltura.com/kaltura-thumbnail-api) and explore the [Thumbnail Animation with CSS Stripes Code Recipe](https://developer.kaltura.com/recipes/dynamic_thumbnails).
@@ -111,7 +116,7 @@ Read more about the [Dynamic Thumbnail API](knowledge.kaltura.com/kaltura-thumbn
 
 ## Embed and Customize Your Video Player 
 
-The below example shows the most basic player embed. Player embed is a JavaScript code that references your partnerId, entryId and the uiConfId - a player widget instance ID. 
+The example below shows the most basic Pplayer embed. Player embed is a JavaScript code that references your partnerId, entryId and the uiConfId - a Player widget instance ID. 
 
 <div class="w-row">
 <div class="w-col w-col-6">
@@ -152,8 +157,9 @@ The below example shows the most basic player embed. Player embed is a JavaScrip
 </div>
 </div>
 
-The Kaltura Player is the building block by which you deliver video experiences to your users. It abstracts the complexities of delivery of video across devices, browsers and native apps. It provides a cross-platform UI framework, easy branding and customization features and even in-video quizzes, advertizing integrations.   
-The player's robust plugins-framework also enables you to create your own unique expeirences. And the uiConf service is what simplifies the management of many such player instances and configurations.
+The Kaltura Player is the building block by which you deliver video experiences to your users. The Player abstracts the complexities of delivery of video across devices, browsers and native applications, and provides a cross-platform UI framework, easy branding and customization features and even in-video quizzes, advertizing integrations.   
+
+The Player's robust plugins-framework also enables you to create your own unique experiences, while the uiConf service simplifies the management of many such Player instances and configurations.
 
 The uiConfId is used to reference the Player instance you wish to render when embedding a video in your pages or application views.
 
