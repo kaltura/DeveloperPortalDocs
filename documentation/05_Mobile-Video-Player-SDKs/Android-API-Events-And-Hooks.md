@@ -2,7 +2,7 @@
 layout: page
 title: Kaltura Player SDK API - Properties, Events, Notifications - Android
 subcat: Android
-weight: 118
+weight: 190
 ---
 
 [![Android](https://img.shields.io/badge/Android-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios)
