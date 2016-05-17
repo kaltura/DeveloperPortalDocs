@@ -974,7 +974,7 @@ thead tr th {
 }
 
 .post-content p {
-  margin-bottom: 25px;
+  margin-bottom: 5px;
   font-family: proxima-nova, sans-serif;
   color: #575756;
   letter-spacing: 0.2px;
@@ -990,7 +990,6 @@ thead tr th {
 }
 
 .post-content li {
-  margin-bottom: 13px;
   font-family: proxima-nova, sans-serif;
   color: #575756;
   letter-spacing: 0.2px;
@@ -999,7 +998,6 @@ thead tr th {
 
 .post-content ul, .post-content ol {
   margin-top: 0px;
-  margin-bottom: 25px;
   padding-left: 15px;
 }
 
