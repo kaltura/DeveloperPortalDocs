@@ -2786,6 +2786,14 @@ blockquote.recipes-ref-list ul li {
     padding-bottom: 22px;
   }
 
+    .nav-sign-up:hover {
+    text-align: left;
+    border-bottom: none;
+    padding-bottom: 22px;
+  }
+
+
+
 }
 
 @media (max-width: 767px) {
