@@ -12,7 +12,7 @@ The guides on this site, together with the [Kaltura Developer Tools](https://dev
 
 To get started, let's review the foundational building blocks of a video experience. 
 
-## Your Kaltura Account ID (partnerId)  
+## Your Kaltura Account ID (PartnerId)  
 
 Your Kaltura Partner ID, or PID, is a unique number identifying your Kaltura account.  
 Your PID is easily available at any time through the Kaltura Management Console (KMC), by simply clicking the [Account Settings tab](https://www.kaltura.com/index.php/kmc/kmc#account|overview).  
