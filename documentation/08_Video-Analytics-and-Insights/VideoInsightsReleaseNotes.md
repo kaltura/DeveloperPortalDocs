@@ -9,6 +9,7 @@ weight: 100
 | Kaltura Video Intelligence Platform             | May 2016            | Release Notes for Version 1.0 	|
 
 ## Release Notes for Version 1.0  
+
 ### About This Document  
 This document contains the release notes for version V1.0 of Kaltura Video Intelligence, the new Kaltura Analytics platform.
 
