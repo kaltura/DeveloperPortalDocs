@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Kaltura Video Insights
-weight: 100
+weight: 101
 ---
 
 ## Introduction to Kaltura Video Insights  
