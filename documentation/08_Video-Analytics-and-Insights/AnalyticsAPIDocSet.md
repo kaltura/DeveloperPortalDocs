@@ -46,28 +46,27 @@ Country: USA
 State: California
 Time: ….
 
-You can read more about currently supported dimensions [here](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/08_Video-Analytics-and-Insights/DimensionsLexicon.md).
+You can read more about currently supported dimensions [here](https://vpaas.kaltura.com/documentation/08_Video-Analytics-and-Insights/DimensionsLexicon.html).
 
 ## Metrics  
 These events provide a basis for measuring metrics, which are later presented in insights reports, accessible through the Data Retrieval API. Metrics refer to the data that Kaltura Video Insights measures, which are quantitative measurements. These measurements can assess user actions (such as user activities, plays, comments, drop offs, etc.) or resource consumption (such as bandwidth, storage, transcoding, etc.).
-You can read more about the currently supported metrics [here](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/08_Video-Analytics-and-Insights/MetricsLexicon.md).
+You can read more about the currently supported metrics [here](https://vpaas.kaltura.com/documentation/08_Video-Analytics-and-Insights/MetricsLexicon.html).
 
 ## Aggregations  
 
 Metrics are stored and presented in an aggregated form. Aggregations are a way to store the huge amount of data in a summarized, pre-computed format that allows fast rendering of reports. The aggregations are designed with your business objectives in mind and anticipate questions you might ask. For example, Kaltura anticipates that you might ask the question “what are the most popular viewing devices in various states?”, so we created an aggregation of device X geography for the play requested metric.
 
-You can read more about currently supported aggregations [here]().
+You can read more about the currently supported Event Tracking API aggregations [here](https://vpaas.kaltura.com/documentation/08_Video-Analytics-and-Insights/EventTrackingAPI.html).
 
-Every insight report is comprised of Dimensions, Metrics and Filters. Dimensions and Metrics are explained above. Filters determine how the data will be filtered. For example, instead of returning all user activity for a particular category, a report can return only data for a certain country.
+## About Insight Reports  
+Each insight report is comprised of Dimensions, Metrics and Filters. Dimensions and Metrics are explained above. Filters determine how the data will be filtered. For example, instead of returning all user activity for a particular category, a report can return only data for a certain country.
  
-What to read next:
-* **[Dimensions dictionary](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/08_Video-Analytics-and-Insights/DimensionsLexicon.md):** Features a list of the dimenstions and their meaning within the Kaltura Video Insights project.
-* **[Metrics dictionary](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/08_Video-Analytics-and-Insights/MetricsLexicon.md):** Features a list of the metrics and their meaning within the Kaltura Video Insights project.
-* **[Player events guide](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/08_Video-Analytics-and-Insights/EventTrackingAPI.md):** Details the available Player events.
+## Suggested Reading  
+* **[Dimensions dictionary](https://vpaas.kaltura.com/documentation/08_Video-Analytics-and-Insights/DimensionsLexicon.html):** Features a list of the dimenstions and their meaning within the Kaltura Video Insights project.
+* **[Metrics dictionary](https://vpaas.kaltura.com/documentation/08_Video-Analytics-and-Insights/MetricsLexicon.html):** Features a list of the metrics and their meaning within the Kaltura Video Insights project.
+* **[Player events guide/Event Tracking API](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/08_Video-Analytics-and-Insights/EventTrackingAPI.md):** Details the available Player events.
 * **Supported aggregations:** Features an overview and actual aggregations implemented for the following supported aggregations:
-  * **[Event Tracking API](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/08_Video-Analytics-and-Insights/EventTrackingAPI.md)**
-* **Kaltura Video Insights User Guide**
 * **Event Tracking**
      * With the Kaltura Player
      * With a non-Kaltura Player
-* **[Data Retrieval API](https://github.com/kaltura/DeveloperPortalDocs/commit/82f7d413b14506df03a4cb5a0a2ece14b6bd79ea)**
+* **[Data Retrieval API](https://vpaas.kaltura.com/documentation/08_Video-Analytics-and-Insights/DataRetrievalAPI.html)**
