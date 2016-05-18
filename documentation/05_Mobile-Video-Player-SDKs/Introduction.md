@@ -11,7 +11,7 @@ Welcome to the **Kaltura Video Platform**. Kaltura is the world's first Open Sou
 This wiki is the main source of documentation for **developers** working with **Kaltura iOS and Android Player SDK** project. Here you will find the information you need to get started developing your software using the SDK. The SDK provides tools to help you easily embed the [Kaltura Player](http://player.kaltura.com/docs) into native environments in your iOS or Android applications.
 
 ## Getting Started with Kaltura VPaaS  
-To get started with Kaltura VPaaS, you will first need to [register with Kaltura VPaaS](https://vpaas.kaltura.com/register.html#sthash.vIwDFes1.dpbs).
+To get started, you will first need to [register with Kaltura VPaaS](https://vpaas.kaltura.com/register.html#sthash.vIwDFes1.dpbs).
 
 ## Supported Features
 The Kaltura Player SDK for iOS and Android supports:  
@@ -44,7 +44,7 @@ The following diagram visualizes the architecture of Kaltura Player, and highlig
 
 ![](https://knowledge.kaltura.com/sites/default/files/styles/large/public/kaltura-player-toolkit.png)
 
-As the diagram outlines, we can leverage native components for {% extlink iOS https://github.com/kaltura/player-sdk-native-ios/ %} and {% extlink Android https://github.com/kaltura/player-sdk-native-android %} in conjunction with the HTML5 runtime and Adobe flash or Microsoft Silverlight plugins, to transcend platform limitations across devices and browsers, while delivering the full Player v2 Toolkit experience. 
+As the diagram above show, you can leverage native components for [iOS](https://github.com/kaltura/player-sdk-native-ios/) and [Android](https://github.com/kaltura/player-sdk-native-android) in conjunction with the HTML5 runtime and Adobe flash or Microsoft Silverlight plugins, to transcend platform limitations across devices and browsers, while delivering the full Player v2 Toolkit experience. 
 
 ### Why Native?
 What advantages are gained by using native? Here is a feature list that will help explain the advantages of using the Kaltura Player Toolkit in native environments:
