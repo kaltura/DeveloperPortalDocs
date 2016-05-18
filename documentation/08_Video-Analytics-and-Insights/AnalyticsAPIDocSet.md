@@ -62,10 +62,11 @@ You can read more about the currently supported Event Tracking API aggregations 
 Each insight report is comprised of Dimensions, Metrics and Filters. Dimensions and Metrics are explained above. Filters determine how the data will be filtered. For example, instead of returning all user activity for a particular category, a report can return only data for a certain country.
  
 ## Suggested Reading  
-* **[Dimensions dictionary](https://vpaas.kaltura.com/documentation/08_Video-Analytics-and-Insights/DimensionsLexicon.html):** Features a list of the dimenstions and their meaning within the Kaltura Video Insights project.
-* **[Metrics dictionary](https://vpaas.kaltura.com/documentation/08_Video-Analytics-and-Insights/MetricsLexicon.html):** Features a list of the metrics and their meaning within the Kaltura Video Insights project.
-* **[Player events guide/Event Tracking API](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/08_Video-Analytics-and-Insights/EventTrackingAPI.md):** Details the available Player events.
-* **Supported aggregations:** Features an overview and actual aggregations implemented for the following supported aggregations:
+* **[Media Analytics](https://vpaas.kaltura.com/documentation/08_Video-Analytics-and-Insights/media-analytics.html):** Details the existing Kaltura Analytics platform, which provides data about system usage.
+* **[Dimensions Dictionary](https://vpaas.kaltura.com/documentation/08_Video-Analytics-and-Insights/DimensionsLexicon.html):** Details the dimensions and their meaning within the Kaltura Video Insights project.
+* **[Metrics Dictionary](https://vpaas.kaltura.com/documentation/08_Video-Analytics-and-Insights/MetricsLexicon.html):** Features a list of the metrics and their meaning within the Kaltura Video Insights project.
+* **[Player Events Guide/Event Tracking API](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/08_Video-Analytics-and-Insights/EventTrackingAPI.md):** Details the available Player events.
+* **Supported Aggregations:** Details the aggregations implemented for the supported aggregations.
 * **Event Tracking**
      * With the Kaltura Player
      * With a non-Kaltura Player
