@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Kaltura Video Insights - Dimensions Lexicon
+weight: 120
 ---
 
 | Group       | Name     | ID     | Description
