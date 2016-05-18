@@ -3,6 +3,7 @@ layout: page
 title: Kaltura Video Insights Release Notes
 weight: 100
 ---
+
 ## Release Information  
 | Release       | Date Released     | Details     | 
 |:---|:---|:---|
