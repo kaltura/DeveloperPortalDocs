@@ -3,6 +3,10 @@ layout: page
 title: Kaltura Video Insights Release Notes
 weight: 100
 ---
+## Release Information  
+| Release       | Date Released     | Details     | 
+|:---|:---|:---|
+| Kaltura Video Intelligence Platform             | May 2016            |  	|
 
 ## Release Notes for Version 1.0  
 ### About This Document  
@@ -10,12 +14,6 @@ This document contains the release notes for version V1.0 of Kaltura Video Intel
 
 ### Intended Audience  
 This document is intended for internal and external users of the Kaltura Video Intelligence platform and anyone who is interested in the benefits, features and capabilities of the new Analytics Platform.
-
-### Release Information  
-| Release       | Date Released     | Details     | 
-|:---|:---|:---|
-| Kaltura Video Intelligence Platform             | May 2016            |  	|
-
 
 ### Component Versions  
 | Release       | Version     | 
