@@ -11,7 +11,7 @@ For a *full listing of supported locale keys* look here. Setting a locale key tr
 
 ## Setting the Desired Player Locale
 
-By default, all Players fall back to English unless the locale is defined otherwise.  
+By default, all Players revert to English unless the locale is defined otherwise.  
 
 You can define the required locale using the Flashvar `localizationCode`. This can be set in the Player Studio UIVars section or on the page using embed Flashvars.
 
@@ -49,14 +49,12 @@ localizationCode=auto
 }
 ```
 
-## Custom Localized Strings
+## Custom Localized Strings  
 
 You can add missing strings or change existing strings for any locale using the `strings` plugin.   
 The strings plugin defines keys and values for all Player labels and tooltips. 
 
 > [Review the complete list of available strings keys and default English values](http://player.kaltura.com/modules/KalturaSupport/tests/StringsLocale.html).  
-
-{% extlink Review the complete list of available strings keys and default English values http://player.kaltura.com/modules/KalturaSupport/tests/StringsLocale.html %}
 
 To override existing key values or define values for keys that are currently not available in your locale, configure the strings plugin either in the Player Studio under the Strings section or in your embed code Flashvars.
 
