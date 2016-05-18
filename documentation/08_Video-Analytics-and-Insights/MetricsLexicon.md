@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Kaltura Video Insights - Metrics Lexicon
+weight: 130
 ---
 
 | Name     | ID     | Description
