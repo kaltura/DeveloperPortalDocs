@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Kaltura's Media Analytics
+weight: 110
 ---
 
 ## Introduction to Media Analytics  
