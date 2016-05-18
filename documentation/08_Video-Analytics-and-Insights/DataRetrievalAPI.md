@@ -1,7 +1,9 @@
 ---
 layout: page
 title: Kaltura Video Insights - Data Retrieval API
+weight: 150
 ---
+
 ## Overview
 The Kaltura Video Insights Data Retrieval API provides a simple but powerful tool to query data programmatically using Kaltura API standards, such as authentication, client libraries, etc.
 
