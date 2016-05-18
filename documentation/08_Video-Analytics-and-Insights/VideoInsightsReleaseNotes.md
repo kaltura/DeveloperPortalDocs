@@ -18,6 +18,7 @@ This document contains the release notes for version V1.0 of Kaltura Video Intel
 This document is intended for internal and external users of the Kaltura Video Intelligence platform and anyone who is interested in the benefits, features and capabilities of the new Analytics Platform.
 
 ### Component Versions  
+
 | Release       | Version     | 
 |:---|:---|
 | Kaltura Video Intelligence Platform             | 1.0  	|
