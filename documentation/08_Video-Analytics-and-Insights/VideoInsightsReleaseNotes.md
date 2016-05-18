@@ -6,9 +6,9 @@ weight: 100
 
 ## Release Information  
 
-| Release       | Date Released     | Details     | 
-|:---|:---|:---|
-| Kaltura Video Intelligence Platform             | May 2016            | Release Notes for Version 1.0 	|
+| Release       | Date Released     | Details     
+|:---|:---|:---
+| Kaltura Video Intelligence Platform             | May 2016            | Release Notes for Version 1.0 	
 
 
 ## Release Notes for Version 1.0  
@@ -21,10 +21,10 @@ This document is intended for internal and external users of the Kaltura Video I
 
 ### Component Versions  
 
-| Release       | Version     | 
+| Release       | Version     
 |:---|:---|
-| Kaltura Video Intelligence Platform             | 1.0  	|
-| Player             | 2.43  	|
+| Kaltura Video Intelligence Platform             | 1.0  	
+| Player             | 2.43  	
 
 ### Limitations  
 This first version of the Analytics service for Data Retrieval and Event Collection API is an early preview. The new features are still being stabilized. 
