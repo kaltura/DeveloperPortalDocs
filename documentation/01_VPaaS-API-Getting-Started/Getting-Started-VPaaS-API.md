@@ -12,18 +12,18 @@ The guides on this site, together with the [Kaltura Developer Tools](https://dev
 
 To get started, let's review the foundational building blocks of a video experience. 
 
-## Your Kaltura Account ID (partnerId)
+## Your Kaltura Account ID (partnerId)  
 
 Your Kaltura Partner ID, or PID, is a unique number identifying your Kaltura account.  
 Your PID is easily available at any time through the Kaltura Management Console (KMC), by simply clicking the [Account Settings tab](https://www.kaltura.com/index.php/kmc/kmc#account|overview).  
 > Remember: You will need to pass the PID parameter every time you authenticate with the Kaltura API, or connect with integrated applications.
 
-## Creating a Kaltura Session
+## Creating a Kaltura Session  
 
 The Kaltura API is [stateless](https://en.wikipedia.org/wiki/Stateless_protocol), which means that every request made to the Kaltura API requires an authenticated session string to be passed along with your request. This is the Kaltura Session (KS), which identifies the Kaltura account and user for which the executed API action is to be executed. The KS can also specify various permissions and configurations, such as setting the role of the user dynamically, setting the time duration for the session, and more. 
 > Remember: For every API call you make, you will need to provide a generated KS. 
 
-### Methods for Creating a Kaltura Session
+### Methods for Creating a Kaltura Session  
 There are three methods for generating a Kaltura Session:
 
 * Calling the [session.start action](https://developer.kaltura.com/api-docs/#/session.start): This method is recommended for scripts and applications to which you alone will have access.
@@ -32,7 +32,7 @@ There are three methods for generating a Kaltura Session:
 
 > To learn more about the Kaltura Session, its algorithm, guidelines and options read the [Kaltura API Authentication and Security article](https://knowledge.kaltura.com/node/229).
 
-## Uploading your Media Files
+## Uploading your Media Files  
 
 Media files are uploaded to Kaltura through [CORS enabled](https://www.w3.org/wiki/CORS_Enabled) REST API.  
 You can implement an upload flow by using a Kaltura tested JavaScript widget for web pages, or by implementing direct calls to the API.  
@@ -42,7 +42,7 @@ Alternatively, Kaltura also provides methods for bulk-ingest and import of conte
 
 Which method you chose to implement depends on your application needs. The following are the two main methods for uploading files.
 
-### Upload Files Using JavaScript with the jQuery Upload Widget
+### Upload Files Using JavaScript with the jQuery Upload Widget  
 
 If your application is HTML5 based, you can implement a reliable and fault tolerant large-files upload with an automatic pause-and-resume functionality by simply including and using the Kaltura Upload JavaScript widget.
 The [Kaltura Upload JavaScript widget](https://github.com/kaltura/chunked-file-upload-jquery) provides a simple JavaScript library that abstracts the use of the Kaltura API, as well as handling the files locally (such as file chunking and pause-resume).
@@ -52,7 +52,7 @@ For a quick view of how this method works
 1. Download the project to your localhost, edit the index.php file, and switch the value of $the_user_ks_to_use to a valid Kaltura Session. 
 2. Next, load the page from your localhost, open your browser console and try uploading a file. You'll see all the steps printed to the browser console.
 
-### Upload Files by Calling the API Directly
+### Upload Files by Calling the API Directly  
 
 Uploading a file directly via the REST API requires knowledge of handling files in your preferred programming language.  
 The [Kaltura Client Libraries](https://developer.kaltura.com/api-docs/#/Client%20Libraries) simplify constructing the REST API calls to Kaltura and provide a simple API for a simple file upload request.  
@@ -64,24 +64,21 @@ Follow the recipe below to get learn how to use the file upload API:
 
 {% onebox https://developer.kaltura.com/recipes/upload/embed#/start %}
 
-## Working with Media Entries
+## Working with Media Entries  
 
 After uploading your file, you will have created a [KalturaMediaEntry](https://developer.kaltura.com/api-docs/#/KalturaMediaEntry) object by calling the [media.add](https://developer.kaltura.com/api-docs/#/media.add) action, and then assigned the uploaded file to this media entry by calling the [media.addContent](https://developer.kaltura.com/api-docs/#/media.addContent) action.
 
 Now that you have content in your account, you will want to implement a library search in order to create galleries or search for media discovery. The main service you will be working with is the [media service](https://developer.kaltura.com/api-docs/#/media).
 
-### Searching Entries - media.list
-
+### Searching Entries - media.list  
 Note that you can combine several filter parameters together to further narrow down your search results. 
 
 {% onebox https://developer.kaltura.com/recipes/video_search/embed#/start %}
 
-### Retrieving Entry Details - media.get
-Data retrieval at Kaltura uses
+### Retrieving Entry Details - media.get  
 To retrieve the data of an object using its ID, call the object's `get` action. With media entries, call the [`media.get`](https://developer.kaltura.com/api-docs/#/media.get) action to retrieve the data of a specific entry.
 
-### Updating Entry Details - media.update
-
+### Updating Entry Details - media.update  
 To update any object in Kaltura's VPaaS, use the `update` action. 
 To update media entries, call the [`media.update`](https://developer.kaltura.com/api-docs/#/media.update) action by providing an instance of the `KalturaMediaEntry` object.   
 
@@ -94,7 +91,7 @@ Additionally, media entries in Kaltura have several related objects, including:
 
 We recommend reading these guides and reviewing the [Code Recipes](https://developer.kaltura.com/recipes/) to learn more about the many capabilities of Kaltura's VPaaS.
 
-## Dynamic Thumbnails
+## Dynamic Thumbnails  
 
 An important tool for dealing with video and building video experiences are thumbnails, images that represent your video file. Kaltura provides two methods for creating and handling thumbnails: 
 
@@ -118,7 +115,7 @@ The result of the thumbnail API is a JPEG image with one or more of the followin
 Read more about the [Dynamic Thumbnail API](knowledge.kaltura.com/kaltura-thumbnail-api) and explore the [Thumbnail Animation with CSS Stripes Code Recipe](https://developer.kaltura.com/recipes/dynamic_thumbnails).
 
 
-## Embed and Customize Your Video Player 
+## Embed and Customize Your Video Player  
 
 The example below shows the most basic Player embed. Player embed is a JavaScript code that references your partnerId, entryId and the uiConfId - a Player widget instance ID. 
 
@@ -167,11 +164,11 @@ The Player's robust plugins-framework also enables you to create your own unique
 
 The uiConfId is used to reference the Player instance you wish to render when embedding a video in your pages or application views.
 
-### Creating and Managing Player Widgets - uiConf Service
+### Creating and Managing Player Widgets - uiConf Service  
 
 {% onebox https://developer.kaltura.com/recipes/player_uiconf/embed#/start %} 
 
-### Getting Started with the Player Features
+### Getting Started with the Player Features  
 
 * [Responsive Player embed](http://player.kaltura.com/docs/responsive).
 * [JavaScript function for the Player embed method](http://player.kaltura.com/docs/kwidget).
@@ -179,7 +176,7 @@ The uiConfId is used to reference the Player instance you wish to render when em
 * [JavaScript tag player embed](http://player.kaltura.com/docs/autoEmbed).
 * [Enabling a robust web to native bridge](http://player.kaltura.com/docs/NativeCallout).
 
-## Analyze Engagement Analytics
+## Analyze Engagement Analytics  
 
 Make decisions based on complete data - the Kaltura VPaaS usage and engagement analytics reports provide you with the insight you need to manage your content, reach your audience, and optimize your video workflow. View a quick snapshot of high-level figures, or drill down to user-specific or video-specific information. Use the analytics reports to gain business insights, and understand user trends. Already using an analytics or audience measurement tool? Leverage the Kaltura pre-integrated plugins for all major analytics providers and consolidate your data securely and reliably.
 
