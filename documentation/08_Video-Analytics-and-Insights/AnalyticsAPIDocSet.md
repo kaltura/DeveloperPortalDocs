@@ -1,9 +1,10 @@
 ---
 layout: page
 title: Kaltura Video Insights
+weight: 100
 ---
 
-## Kaltura Video Insights Overview
+## Introduction to Kaltura Video Insights  
 Kaltura Video Insights helps you get precise, actionable insights into various aspects of your business by answering a wide variety of questions, such as:
 
 **User Behavior Questions:**
@@ -32,7 +33,7 @@ The data in Kaltura Video Insights can be divided into roughly two groups: Playe
 As a video is played, the Kaltura Player sends Player events related to viewer behavior (such as “Plays”, “Played 25%”, “Stopped”, etc.) to Kaltura Video Insights. If you are using Kaltura Player versions 2.43 or higher, you will get the support for these Player event insights out-of-the-box. If you are using a non-Kaltura player, you need to make sure all of the relevant events are reported correctly using Kaltura Event Tracking API. 
 
 
-## Dimensions
+## Dimensions  
 
 Every player event is related to a specific video asset (a VOD or a live stream) and is triggered by a specific user. Every event has certain pre-defined characteristics (such as time, device, geography, etc.) that are called dimensions.
 
@@ -47,11 +48,11 @@ Time: ….
 
 You can read more about currently supported dimensions [here](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/08_Video-Analytics-and-Insights/DimensionsLexicon.md).
 
-## Metrics
+## Metrics  
 These events provide a basis for measuring metrics, which are later presented in insights reports, accessible through the Data Retrieval API. Metrics refer to the data that Kaltura Video Insights measures, which are quantitative measurements. These measurements can assess user actions (such as user activities, plays, comments, drop offs, etc.) or resource consumption (such as bandwidth, storage, transcoding, etc.).
 You can read more about the currently supported metrics [here](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/08_Video-Analytics-and-Insights/MetricsLexicon.md).
 
-## Aggregations
+## Aggregations  
 
 Metrics are stored and presented in an aggregated form. Aggregations are a way to store the huge amount of data in a summarized, pre-computed format that allows fast rendering of reports. The aggregations are designed with your business objectives in mind and anticipate questions you might ask. For example, Kaltura anticipates that you might ask the question “what are the most popular viewing devices in various states?”, so we created an aggregation of device X geography for the play requested metric.
 
