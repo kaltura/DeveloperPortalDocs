@@ -86,6 +86,7 @@ Each event type has required and optional parameters, which are described below.
 
 
 ## Event Parameters Explanation  
+
 | Parameter       | Description
 |:---|:---
 | eventType	| A number describing the event type specified for each event
@@ -105,7 +106,7 @@ Each event type has required and optional parameters, which are described below.
 | sessionStartTime| 	The timestamp of the first event in the session (in Unix Time format) 
 | uiConfId| 	The Player ID and configuration the content was played on 
 | clientVer| 	The Player version 
-| clientTag| 	?| 
+| clientTag| 	?
 | position| 	The position of the movie in seconds (this should be 0 on event types 1,2,3)
 | playbackContext	| The category id describing the current played context 
 | customVar1| 	An optional custom parameter that can be used to segment the data 
