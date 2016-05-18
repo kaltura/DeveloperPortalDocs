@@ -158,7 +158,7 @@ The example below shows the most basic Player embed. Player embed is a JavaScrip
 </div>
 </div>
 
-The Kaltura Player is the building block by which you deliver video experiences to your users. The Player abstracts the complexities of delivery of video across devices, browsers and native applications, and provides a cross-platform UI framework, easy branding and customization features and even in-video quizzes, advertising integrations.   
+The Kaltura Player is the building block that enables you to deliver video experiences to your users. The Player abstracts the complexities of delivery of video across devices, browsers and native applications, and provides a cross-platform UI framework, easy branding and customization features and even in-video quizzes, advertising integrations.   
 
 The Player's robust plugins-framework also enables you to create your own unique experiences, while the uiConf service simplifies the management of many such Player instances and configurations.
 
