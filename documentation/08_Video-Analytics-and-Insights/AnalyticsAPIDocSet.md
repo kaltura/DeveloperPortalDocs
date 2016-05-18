@@ -68,7 +68,6 @@ Each insight report is comprised of Dimensions, Metrics and Filters. Dimensions 
 * **[Dimensions Dictionary](https://vpaas.kaltura.com/documentation/08_Video-Analytics-and-Insights/DimensionsLexicon.html):** Details the dimensions and their meaning within the Kaltura Video Insights project.
 * **[Metrics Dictionary](https://vpaas.kaltura.com/documentation/08_Video-Analytics-and-Insights/MetricsLexicon.html):** Features a list of the metrics and their meaning within the Kaltura Video Insights project.
 * **[Player Events Guide/Event Tracking API](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/08_Video-Analytics-and-Insights/EventTrackingAPI.md):** Details the available Player events.
-* **Supported Aggregations:** Details the aggregations implemented for the supported aggregations.
 * **Event Tracking**
      * With the Kaltura Player
      * With a non-Kaltura Player
