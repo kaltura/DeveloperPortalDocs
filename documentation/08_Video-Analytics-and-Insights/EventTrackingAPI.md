@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Kaltura Video Insights - Event Tracking API
+weight: 140
 ---
 
 ## Overview
