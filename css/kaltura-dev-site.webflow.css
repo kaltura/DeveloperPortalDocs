@@ -2785,7 +2785,10 @@ blockquote.recipes-ref-list ul li {
     border-bottom: none;
     padding-bottom: 22px;
     float: none;
-    margin-left: 20px;
+    max-width: 728px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
   }
 
     .nav-sign-up:hover {
@@ -2793,7 +2796,10 @@ blockquote.recipes-ref-list ul li {
     border-bottom: none;
     padding-bottom: 22px;
     float: none;
-    margin-left: 20px;
+    max-width: 728px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
   }
 
 
