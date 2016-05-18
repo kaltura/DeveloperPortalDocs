@@ -5,14 +5,10 @@ weight: 100
 ---
 
 ## Release Information  
+
 | Release       | Date Released     | Details     | 
 |:---|:---|:---|
 | Kaltura Video Intelligence Platform             | May 2016            | Release Notes for Version 1.0 	|
-
-
-| Group       | Name     | ID     | Description
-|:---|:---|:---|:---|
-| Basic             | Partner            |  partner | The partner account ID on Kaltura's platform	|
 
 
 ## Release Notes for Version 1.0  
