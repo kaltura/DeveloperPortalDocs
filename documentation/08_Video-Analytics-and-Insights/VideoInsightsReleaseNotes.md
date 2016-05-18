@@ -15,3 +15,11 @@ This document is intended for internal and external users of the Kaltura Video I
 | Release       | Date Released     | Details     | Description
 |:---|:---|:---|:---|
 | Basic             | Partner            |  partner | The partner account ID on Kaltura's platform	|
+
+### Limitations  
+This first version of the Analytics service for Data Retrieval and Event Collection API is an early preview. The new features are still being stabilized. 
+
+### Summary of the New Features  
+Version V1.0 includes two new sets of APIs:  
+* Event Collection API 
+* Data Retrieval API for player events
