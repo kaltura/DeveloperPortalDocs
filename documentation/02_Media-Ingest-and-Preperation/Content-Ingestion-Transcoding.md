@@ -62,3 +62,12 @@ The default flavors:
 
 
 > Read more: [Kaltura Media Transcoding Services and Technology](http://knowledge.kaltura.com/kaltura-media-transcoding-services-and-technology#transcoding)
+
+## How is Transcoding Usage Measured?
+
+Transcoding usage is defined as the volume in MB of transcoded assets, that are the output of transcoding. Transcoding usage is measured and billed one time per transcode. 
+
+Kaltura only measures and bills for output transcoding usage, the input file is not counted as transcoding usage.  
+Failed transcoding jobs are not counted/billed either. 
+
+You can track your transcoding usage on the [Usage Dashboard](https://kmc.kaltura.com/index.php/kmc/kmc4#usageDashboard|) in the Kaltura Management Console.
