@@ -62,11 +62,11 @@ Metrics are stored and presented in an aggregated form. Aggregations are a way t
 Each insight report is comprised of Dimensions, Metrics and Filters. Dimensions and Metrics are explained above. Filters determine how the data will be filtered. For example, instead of returning all user activity for a particular category, a report can return only data for a certain country.
  
 ## Suggested Reading  
-* **[Kaltura API](http://www.kaltura.com/api_v3/testmeDoc/index.php?page=overview):** The Video Intelligence Data Retrieval API provides a simple but powerful tool to query data programmatically using the Kaltura API standards, such as authentication, client libraries, etc.
+* **[Kaltura API](http://www.kaltura.com/api_v3/testmeDoc/index.php?page=overview):** The Video Insights Data Retrieval API provides a simple but powerful tool to query data programmatically using the Kaltura API standards, such as authentication, client libraries, etc.
 * **[Kaltura API Test Console Application](http://www.kaltura.com/api_v3/testme/index.php):** Another source of assistance in building your application is the Kaltura API Test Console Application. Note that the main service of the Video Insights Data Retrieval API is analytics and the action is **query**.
-* **[Media Analytics](https://vpaas.kaltura.com/documentation/08_Video-Analytics-and-Insights/media-analytics.html):** Details the existing Kaltura Analytics platform, which provides data about system usage.
-* **[Dimensions Dictionary](https://vpaas.kaltura.com/documentation/08_Video-Analytics-and-Insights/DimensionsLexicon.html):** Details the dimensions and their meaning within the Kaltura Video Insights project.
-* **[Metrics Dictionary](https://vpaas.kaltura.com/documentation/08_Video-Analytics-and-Insights/MetricsLexicon.html):** Features a list of the metrics and their meaning within the Kaltura Video Insights project.
+* **[Media Analytics](https://vpaas.kaltura.com/documentation/08_Video-Analytics-and-Insights/media-analytics.html):** Details about the existing Kaltura Analytics platform, which provides data about system usage.
+* **[Dimensions Dictionary](https://vpaas.kaltura.com/documentation/08_Video-Analytics-and-Insights/DimensionsLexicon.html):** Details the dimensions and their meaning within the Kaltura Video Insights Platform.
+* **[Metrics Dictionary](https://vpaas.kaltura.com/documentation/08_Video-Analytics-and-Insights/MetricsLexicon.html):** Features a list of the metrics and their meaning within the Kaltura Video Insights Platform.
 * **[Player Events Guide/Event Tracking API](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/08_Video-Analytics-and-Insights/EventTrackingAPI.md):** Details the available Player events.
 * **Event Tracking**
      * With the Kaltura Player
