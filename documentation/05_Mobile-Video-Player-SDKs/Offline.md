@@ -50,9 +50,7 @@ if required.
 {% endplantuml %}
 
 ##### Local Content ID  
-The `entryConfig` object provided must include an additional field that is not required when streaming: `localContentId`. This
-is a unique string that is used to map registration information to playback. The same unique string must be provided
-for both registration and playback.
+The `entryConfig` object provided must include an additional field that is not used when streaming: `localContentId`. This unique string is used to map registration information to playback. The same unique string must be provided for both registration and playback.
 
 #### Check Status  
 This allows the application to verify that a downloaded asset is still playable. This applies mostly to DRM-protected
