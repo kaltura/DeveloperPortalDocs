@@ -11,10 +11,10 @@ weight: 190
 
 This article describes how to use the Android Player API methods to manage properties, events, and notifications. 
 
-### Android API Events and Hooks
+### Android API Events and Hooks  
 The Android API supports the following events and hooks.
 
-#### KMediaControl
+#### KMediaControl  
 The SDK offeres the ability to perform Player operation via the KMediaControl API.
 You may send the following operations:
   
@@ -73,7 +73,7 @@ For each native component listener, add one of the operations above.
     
 ```    
 
-### Player States Event Listeners
+### Player States Event Listeners  
 
 The Kaltura Player supports the follwing states that the developer can listen to and react upon their change:
     
@@ -100,7 +100,7 @@ The Kaltura Player supports the follwing states that the developer can listen to
     }
 ``` 
 
-### Waiting for a READY Event
+### Waiting for a READY Event  
 In some cases, the end user will want to wait until the ready event is received and only then to continue.
 
 * Example: Listen to ready state event
@@ -117,10 +117,9 @@ In some cases, the end user will want to wait until the ready event is received 
        
 ```       
 
-### Enable/Diable Configuration on Runtime
-In some cases, the application will want to add or remove configuration attributes upon states or event that are received.
-
-The Player has an API for enabling and disabling these settings, the setKDPAttribute, wich receives three parameters:
+### Enable/Diable Configuration on Runtime  
+In some cases, the application will want to add or remove configuration attributes according to states or events that are received.
+The Player provides an API for enabling and disabling these settings, the setKDPAttribute, which receives three parameters:
 
 - plugin name
 - attribute name
@@ -138,11 +137,11 @@ if (state.equals(KPlayerState.PLAYING)){
 
 ```
 
-### Player Event Listeners
+### Player Event Listeners  
 
 If the application is required to react to web events, add the "mPlayerView.addKPlayerEventListener".
 
-See [Supported Events] (https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/04_Web-Video-Player/Kaltura-Media-Player-API.md#commonly-used-player-events) for information about the types of supported events.
+See [Supported Events](https://vpaas.kaltura.com/documentation/04_Web-Video-Player/Kaltura-Media-Player-API.html#commonly-used-player-events) for information about the types of supported events.
 
 
 * Example: Listen to show play controls event
