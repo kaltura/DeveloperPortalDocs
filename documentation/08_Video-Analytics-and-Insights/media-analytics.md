@@ -4,6 +4,8 @@ title: Kaltura's Media Analytics
 weight: 110
 ---
 
+*Pending Kaltura Video Insights Release*
+
 ## Introduction to Media Analytics  
 
 Kaltura's Analytics Engine underpins all content-related interactions, covering everything from plays to user-interactions on Player pages, such as likes and shares. All analytics reports are exposed via the API.
