@@ -22,7 +22,7 @@ project(':playerSDK').projectDir=new File('../player-sdk-native-android/playerSD
 ```
 ![settings.gradle](./images/settings.gradle.png)
 
-syncronize project with updated gradle 
+3. Synchronize the project with the updated gradle:
 ![SyncProjectWithGradleProject](./images/SyncProjectWithGradleProject.png)
 
 3. Make sure that you cloned the ```player-sdk-native-android``` project to the same folder of your project; if you prefer to clone it in another location, remember to update the ```settings.gradle``` with the relevant path.
