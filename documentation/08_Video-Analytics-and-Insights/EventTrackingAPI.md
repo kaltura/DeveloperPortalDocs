@@ -4,6 +4,8 @@ title: Kaltura Video Insights - Event Tracking API
 weight: 140
 ---
 
+*Pending Kaltura Video Insights Release*
+
 ## Overview
 The Event Tracking API is an extensible interface for tracking different types of events on the Kaltura Video Insights backend, and, eventually, to aggregate them into meaningful and values reports.
 
