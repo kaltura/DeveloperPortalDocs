@@ -18,6 +18,10 @@ $( document ).ready(function() {
           <div class="w-col w-col-12">
             <div class="get-you-started-div">
               <h3 class="thank-you-h3">Let&apos;s Get You Started</h3>
+              <p class="thank-you-p">To complete your registration please follow the email verification link in the welcome email you'll recieve shortly.</p>
+              <p class="thank-you-p">This quick guide will get you started with the basics; How to authenticate with the Kaltura API, what are Kaltura entries, and how to embed a video.
+              <br />We also recommend that you visit our <a href="https://vpaas.kaltura.com/documentation/01_VPaaS-API-Getting-Started/Getting-Started-VPaaS-API.html">Get Started with Kaltura VPaaS guide</a> and share it with your team members.
+              </p>
                   <ul>
                     <li><a href="#partnerid">partnerId (Kaltura Account ID)</a></li>
                     <li><a href="#ks">ks (Kaltura API Session)</a></li>
@@ -66,9 +70,9 @@ The Kaltura Player is the building block by which you deliver video experiences 
                         </div>
                     </div>
               </div>
-              <h4 id="partnerid" class="thank-you-h4">Your Kaltura Account ID (Patrner Id)</h4>
-              <input type="text" value="Your partnerId: <?php echo $_GET['partner_id'] ? $_GET['partner_id'] : '811441'; ?>" readonly="" size="24" style="background: transparent;font-size: 12px;border: solid 1px #9EB4B7;margin-bottom: 8px;border-radius: 4px;padding: 2px;padding-left: 6px;">
-              <p class="thank-you-p">Your Kaltura Partner ID, or PID, is a unique number identifying your Kaltura account.<br />You will need to pass the pid paramemter everytime you authenticate with the Kaltura API, or connect with integrated apps.</p>
+              <h4 id="partnerid" class="thank-you-h4">The Kaltura Account ID (Patrner Id)</h4>
+              <input type="text" value="partnerId: <?php echo $_GET['partner_id'] ? $_GET['partner_id'] : '811441'; ?>" readonly="" size="24" style="background: transparent;font-size: 12px;border: solid 1px #9EB4B7;margin-bottom: 8px;border-radius: 4px;padding: 2px;padding-left: 6px;">
+              <p class="thank-you-p">The Kaltura Partner ID, or PID, is a unique number identifying your Kaltura account.<br />You will need to pass the pid paramemter everytime you authenticate with the Kaltura API, or connect with integrated apps.</p>
               
               <h4 id="ks" class="thank-you-h4">Kaltura Session</h4>
               <input type="text" value="<?php echo $_GET['ks'] ? $_GET['ks'] : 'djJ8MjEzOTQyMnxLngKd0BRQwS1EWdLV-T_Um8rRCed9mYyBwu_VOcglQ8mHlyvzAD8At9qPm2HgKoYMi5hdw3THj6ZXfAZGZyjE'; ?>" readonly="" style="background: transparent; font-size: 12px; border: solid 1px #9EB4B7; margin-bottom: 8px; border-radius: 4px; padding: 2px; width: 100%;">
