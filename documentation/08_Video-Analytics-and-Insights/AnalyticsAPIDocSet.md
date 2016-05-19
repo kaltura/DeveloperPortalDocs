@@ -40,14 +40,14 @@ As a video is played, the Kaltura Player sends Player events related to viewer b
 Every player event is related to a specific video asset (a VOD or a live stream) and is triggered by a specific user. Every event has certain pre-defined characteristics (such as time, device, geography, etc.) that are called dimensions.
 
 Let’s take a look at an example.
-Suppose that at 1 pm EST a user in NYC clicked the “play” button on her iPhone device (the device has an IOS 9.1 installed on it) and begins to watch video asset #1234.
+Suppose that at 1 pm on the 1st of February a user in NY clicked the “play” button on her iPhone device (the device has an IOS 9.1 installed on it) and begins to watch video asset #1234.
 In this case the recorded event is “play” and the dimensions are:
 * Device: iPhone
 * OS: 9.1
 * Country: USA
-* State: California
-* Time: 1 pm
-* Offset(from UTC): -4 hours
+* State: NY
+* Time: 02/01/2016 13:00
+* Offset(from UTC): -240
 
 You can read more about currently supported dimensions [here](https://vpaas.kaltura.com/documentation/08_Video-Analytics-and-Insights/DimensionsLexicon.html).
 
