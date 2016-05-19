@@ -52,6 +52,5 @@ To view list of commonly used Player ad events, click [here](https://vpaas.kaltu
             						// Do your stuff here..
         }];
 ```
-
-{% extlink IMAWebOpenerDelegate https://developers.google.com/interactive-media-ads/docs/sdks/ios/v3/api/protocol_i_m_a_web_opener_delegate-p#instance-methods %}
+For the complete IMAWebOpenerDelegate SDK, click [here](https://developers.google.com/interactive-media-ads/docs/sdks/ios/v3/api/protocol_i_m_a_web_opener_delegate-p#instance-methods)
 
