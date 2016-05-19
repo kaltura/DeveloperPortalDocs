@@ -90,8 +90,8 @@ git clone https://github.com/kaltura/player-sdk-native-ios.git
 • libc++.dylib
 ```
 
-### App Transport Security 
-Detailed information about the Application Transport Security can be found here: [App Transport Security](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/05_Mobile-Video-Player-SDKs/Troubleshooting.md).
+### App Transport Security  
+iOS 9 and above include a security feature, Application Transport Security (ATL), which blocks all non-TLS connections. Detailed information about ATL can be found [here](https://vpaas.kaltura.com/documentation/05_Mobile-Video-Player-SDKs/Troubleshooting.html).
 
 
 ## iOS Player SDK Basic Embedding  
@@ -139,4 +139,4 @@ This section describes how to use the iOS Player SDK basic embedding.
 
 
 ### Initialize PlayerViewController for Inline
-To initialize the PlayerViewController for inline, refer to [Inline player](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/05_Mobile-Video-Player-SDKs/Fullscreen-inline-iOS.md).
+To initialize the PlayerViewController for inline, refer to [Inline player](https://vpaas.kaltura.com/documentation/05_Mobile-Video-Player-SDKs/Fullscreen-inline-iOS.html).
