@@ -17,7 +17,7 @@ pod 'GoogleAds-IMA-iOS-SDK'
 
 ```
 
-## Linking to GoogleInteractiveMediaAds SDK
+## Linking to GoogleInteractiveMediaAds SDK  
 To link to Google ads using the GoogleInteractiveMediaAds SDK:
  1. Download **`GoogleMobileAds`** from: {% extlink Admob https://developers.google.com/admob/ios/download %} and add it to your project
  2. In addition to the **`GoogleMobileAds`** you will need to download **`GoogleInteractiveMediaAds`** from: {% extlink IMA SDK https://developers.google.com/interactive-media-ads/docs/sdks/ios/download %}.
@@ -31,7 +31,7 @@ To link to Google ads using the GoogleInteractiveMediaAds SDK:
 	- MessageUI.framework
 
 
-## Configuring the Player to use Google Ads
+## Configuring the Player to use Google Ads  
 
 To configure the Player to use Google ads, add the following configuration to your `KPPlayerConfig`:
 
@@ -40,13 +40,10 @@ To configure the Player to use Google ads, add the following configuration to yo
 [config addConfigKey:@"doubleClick.adTagUrl" withValue:@"your ad tag URL"];
 ```
 
-## Listening to Ad Events
+## Listening to Ad Events  
+To listen to ad events, use the following [Ads event test page](http://player.kaltura.com/modules/DoubleClick/tests/DoubleClickAdEvents.qunit.html).
 
-To listen to ad events, use the following:
-
-[Ads event test page](http://player.kaltura.com/modules/DoubleClick/tests/DoubleClickAdEvents.qunit.html)  
-
-Click here for a [list of commonly used Player ad events](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/04_Web-Video-Player/Kaltura-Media-Player-API.md).
+To view list of commonly used Player ad events, click [here](https://vpaas.kaltura.com/documentation/04_Web-Video-Player/Kaltura-Media-Player-API.html).
 
 ```
 [self.player addKPlayerEventListener:@"adClick"
