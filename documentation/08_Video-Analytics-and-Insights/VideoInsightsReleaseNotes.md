@@ -8,7 +8,7 @@ weight: 100
 
 | Release       | Date Released     | Details     
 |:---|:---|:---
-| Kaltura Video Intelligence Platform             | May 2016            | Release Notes for Version 1.0 	
+| Kaltura Video Insights Platform             | May 2016            | Release Notes for Version 1.0 	
 
 
 ## Release Notes for Version 1.0  
