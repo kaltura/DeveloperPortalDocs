@@ -57,7 +57,6 @@ You can read more about the currently supported metrics [here](https://vpaas.kal
 
 Metrics are stored and presented in an aggregated form. Aggregations are a way to store the huge amount of data in a summarized, pre-computed format that allows fast rendering of reports. The aggregations are designed with your business objectives in mind and anticipate questions you might ask. For example, Kaltura anticipates that you might ask the question “what are the most popular viewing devices in various states?”, so we created an aggregation of the Device dimension and the Geography dimension for the "playRequested" metric.
 
-You can read more about the currently supported Event Tracking API aggregations [here](https://vpaas.kaltura.com/documentation/08_Video-Analytics-and-Insights/EventTrackingAPI.html).
 
 ## About Insight Reports  
 Each insight report is comprised of Dimensions, Metrics and Filters. Dimensions and Metrics are explained above. Filters determine how the data will be filtered. For example, instead of returning all user activity for a particular category, a report can return only data for a certain country.
