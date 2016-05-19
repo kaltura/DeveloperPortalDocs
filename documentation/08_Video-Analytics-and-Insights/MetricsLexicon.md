@@ -4,6 +4,8 @@ title: Kaltura Video Insights - Metrics Lexicon
 weight: 120
 ---
 
+*Pending Kaltura Video Insights Release*
+
 | Name     | ID     | Description
 |:---|:---|:---|
 |Play Impression|	playImpression|	The number of times the video player was loaded.|
