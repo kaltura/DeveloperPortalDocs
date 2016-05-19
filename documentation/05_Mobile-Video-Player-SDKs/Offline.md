@@ -50,6 +50,11 @@ if required.
 
 {% endplantuml %}
 
+##### Local Content Id
+The provided `entryConfig` object must include an additional field that is not required when streaming: `localContentId`. This
+is a unique string that is used to map registration information to playback. The same unique string must be provided
+in both registration and playback.
+
 #### Check Status
 This allows the application to verify that a downloaded asset is still playable. This applies mostly to DRM-protected
 assets.
@@ -63,7 +68,7 @@ The application notifies the SDK that it has deleted the asset. The SDK cleans u
 #### Arguments
 All methods share the same set of arguments:
 
-* `entry`: A configured `KPPlayerConfig` object that points at the asset, with all the parameters required for regular playback of the asset
+* `entry`: A configured `KPPlayerConfig` object that points at the asset, with all the parameters required for regular playback of the asset, in addition to `localContentId`
 * `flavor`: The flavor id of the downloaded file
 * `localPath`: The *absolute* local path to the downloaded file
 
@@ -103,6 +108,8 @@ the playback source dynamically. For example:
 	note over KP: Plays the downloaded file
 
 {% endplantuml %}
+
+As mentioned above, the `entryConfig` object must include the `localContentId` that was used during registraion of the same asset.
 
 ## Download Location Guidelines
 Application developers are free to choose download locations, as allowed by the platform; however, Kaltura recommends
