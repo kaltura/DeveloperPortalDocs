@@ -20,4 +20,4 @@ To attach the 'pipBtn' plugin to your `Config` instance:
 [config addConfigKey:@"pipBtn.plugin" withValue:@"true"];
 ```
 
-**Note:** This feature is available from {% extlink Kaltura Player version 2.38 https://github.com/kaltura/mwEmbed/releases %} and later.
+**Note:** This feature is available from [Kaltura Player version 2.38](https://github.com/kaltura/mwEmbed/releases) and later.
