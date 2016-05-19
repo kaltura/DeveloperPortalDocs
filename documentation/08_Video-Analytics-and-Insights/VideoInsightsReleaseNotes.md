@@ -23,7 +23,7 @@ This document is intended for internal and external users of the Kaltura Video I
 
 | Release       | Version     
 |:---|:---|
-| Kaltura Video Intelligence Platform             | 1.0  	
+| Kaltura Video Insights Platform             | 1.0  	
 | Player             | 2.43  	
 
 ### Limitations  
