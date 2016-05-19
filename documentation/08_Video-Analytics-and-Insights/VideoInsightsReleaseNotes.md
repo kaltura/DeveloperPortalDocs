@@ -4,6 +4,8 @@ title: Kaltura Video Insights Release Notes
 weight: 100
 ---
 
+*Pending Kaltura Video Insights Release*
+
 ## Release Information  
 
 | Release       | Date Released     | Details     
