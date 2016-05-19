@@ -10,7 +10,7 @@ weight: 150
 The Kaltura Video Insights Data Retrieval API provides a simple but powerful tool to query data programmatically using Kaltura API standards, such as authentication, client libraries, etc.
 
 ## Endpoint
-http://www.kaltura.com/api_v3/index.php?service=analytics&action=getData
+http://www.kaltura.com/api_v3/index.php?service=analytics&action=query
 
 ### Input
 
