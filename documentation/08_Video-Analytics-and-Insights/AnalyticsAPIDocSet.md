@@ -40,12 +40,12 @@ Every player event is related to a specific video asset (a VOD or a live stream)
 Let’s take a look at an example.
 Suppose that at 1 pm EST a user in NYC clicked the “play” button on her iPhone device (the device has an IOS 9.1 installed on it) and begins to watch video asset #1234.
 In this case the recorded event is “play” and the dimensions are:
-Device: iPhone
-OS: 9.1
-Country: USA
-State: California
-Time: 1 pm
-Offset(from UTC): -4 hours
+* Device: iPhone
+* OS: 9.1
+* Country: USA
+* State: California
+* Time: 1 pm
+* Offset(from UTC): -4 hours
 
 You can read more about currently supported dimensions [here](https://vpaas.kaltura.com/documentation/08_Video-Analytics-and-Insights/DimensionsLexicon.html).
 
