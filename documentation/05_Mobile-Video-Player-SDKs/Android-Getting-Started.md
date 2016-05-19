@@ -27,10 +27,10 @@ project(':playerSDK').projectDir=new File('../player-sdk-native-android/playerSD
 
 4. Make sure that you cloned the ```player-sdk-native-android``` project to the same folder of your project; if you prefer to clone it in another location, remember to update the ```settings.gradle``` with the relevant path.
 
-5. Right click your application folder and select ```Open Module Settings```
-![OpenModuleSetting](./images/OpenModuleSetting.png).
+5. Right click your application folder and select ```Open Module Settings```.
+![OpenModuleSetting](./images/OpenModuleSetting.png)
 
-6. Select the ```Dependencies``` tab, click the ```+``` button and then choose the playerSDK as ```module dependency```
+6. Select the ```Dependencies``` tab, click the ```+``` button and then choose the playerSDK as ```module dependency```.
 
-![Dependencies](./images/Dependencies.png).
+![Dependencies](./images/Dependencies.png)
 
