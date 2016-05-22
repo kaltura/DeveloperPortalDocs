@@ -62,7 +62,7 @@ function show_hide_sub_div(div_id)
         <div class="w-col w-col-3 template-page-nav-column">
 {% assign cats = site.cats | sort %}
 {% for cat_hash in cats %}
-    <div class="sidenav-grp-7" id="/{{ cat_hash[0] }}">
+    <div class="sidenav-grp-7 heading-close" id="/{{ cat_hash[0] }}">
 	<a href="#" class="sidenav-cat-links" onClick="show_hide_div('/{{ cat_hash[0] }}')"><h4 class="sidenav-headings grp-heading {{ cat_hash[0] }}">{{ cat_hash[1] }}</h4></a>
 	<div class="sidenav-grp-links" id="/{{ cat_hash[0] | replace: ' ','' }}-sub" style="visibility: hidden; display: none;">
 	{% capture dir %}{{ cat_hash[0] }}{% endcapture %}
@@ -74,8 +74,12 @@ function show_hide_sub_div(div_id)
         </div>
 	<script>
 		div_id='{{page.dir}}';
-		var elements = document.getElementById(div_id);
-		$j = elements != null ? elements.getElementsByTagName('div') : null;
+		var el = document.getElementById(div_id);
+		if (el != null) { 
+			addClass(el, 'heading-open');
+			removeClass(el, 'heading-close');
+		}
+		$j = el != null ? el.getElementsByTagName('div') : null;
 		if ($j) {
 			for (var $i = 0; $i < $j.length; $i++) {
 				$j[$i].style.visibility = 'visible';
