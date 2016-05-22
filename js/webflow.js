@@ -4394,15 +4394,43 @@ Webflow.require('ix').init([
 
 function show_hide_div(div_id) 
 {
+    var el = document.getElementById(div_id);
+    if (hasClass(el, 'heading-close')){
+	 	addClass(el, 'heading-open');
+	 	removeClass(el, 'heading-close');
+	 } else {
+		addClass(el, 'heading-close');
+                removeClass(el, 'heading-open');
+     }
     for (var $i = 0, $j = document.getElementById(div_id).getElementsByClassName('sidenav-grp-links'); $i < $j.length; $i++) {
 	    if ( $j[$i].style.visibility == 'hidden'){
 		    $j[$i].style.visibility = 'visible';
 		    $j[$i].style.display = 'block';
-		    $j[$i].setAttribute('class', '');
 	    }else{
 		 $j[$i].style.visibility = 'hidden';
 		 $j[$i].style.display = 'none';
-		 $j[$i].setAttribute('class', '');
 	    }
     }
+}
+
+function hasClass(el, className) {
+  if (el.classList)
+    return el.classList.contains(className)
+  else
+    return !!el.className.match(new RegExp('(\\s|^)' + className + '(\\s|$)'))
+}
+
+function addClass(el, className) {
+  if (el.classList)
+    el.classList.add(className)
+  else if (!hasClass(el, className)) el.className += " " + className
+}
+
+function removeClass(el, className) {
+  if (el.classList)
+    el.classList.remove(className)
+  else if (hasClass(el, className)) {
+    var reg = new RegExp('(\\s|^)' + className + '(\\s|$)')
+    el.className=el.className.replace(reg, ' ')
+  }
 }
