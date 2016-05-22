@@ -4394,13 +4394,20 @@ Webflow.require('ix').init([
 
 function show_hide_div(div_id) 
 {
+    if (document.getElementById(div_id).getAttribute('class').search('heading-close') > -1){
+    	document.getElementById(div_id).setAttribute('class', 'heading-open');
+    } else {
+    	document.getElementById(div_id).setAttribute('class', 'heading-close');
+    }
     for (var $i = 0, $j = document.getElementById(div_id).getElementsByClassName('sidenav-grp-links'); $i < $j.length; $i++) {
 	    if ( $j[$i].style.visibility == 'hidden'){
 		    $j[$i].style.visibility = 'visible';
 		    $j[$i].style.display = 'block';
+		    $j[$i].setAttribute('class', '');
 	    }else{
 		 $j[$i].style.visibility = 'hidden';
 		 $j[$i].style.display = 'none';
+		 $j[$i].setAttribute('class', '');
 	    }
     }
 }
