@@ -718,6 +718,51 @@ h4 {
    content: " -";
 }
 
+.sidenav-headings.grp-heading.documentation\/01_VPaaS-API-Getting-Started:before {
+   font-family: FontAwesome;
+   content: "\f005";
+   padding-right: 6px;
+}
+.sidenav-headings.grp-heading.documentation\/02_Media-Ingest-and-Preperation:before {
+   font-family: FontAwesome;
+   content: "\f0ee";
+   padding-right: 6px;
+}
+.sidenav-headings.grp-heading.documentation\/03_Media-Management:before {
+   font-family: FontAwesome;
+   content: "\f0ae";
+   padding-right: 6px;
+}
+.sidenav-headings.grp-heading.documentation\/04_Web-Video-Player:before {
+   font-family: FontAwesome;
+   content: "\f16a";
+   padding-right: 6px;
+}
+.sidenav-headings.grp-heading.documentation\/05_Mobile-Video-Player-SDKs:before {
+   font-family: FontAwesome;
+   content: "\f10b";
+   padding-right: 6px;
+}
+.sidenav-headings.grp-heading.documentation\/06_Video-Experiences:before {
+   font-family: FontAwesome;
+   content: "\f118";
+   padding-right: 6px;
+}
+.sidenav-headings.grp-heading.documentation\/07_Live-Video-and-Broadcast:before {
+   font-family: FontAwesome;
+   content: "\f03d";
+   padding-right: 6px;
+}
+.sidenav-headings.grp-heading.documentation\/08_Video-Analytics-and-Insights:before {
+   font-family: FontAwesome;
+   content: "\f080";
+   padding-right: 6px;
+}
+.sidenav-headings.grp-heading.documentation\/09_Video-Monetization:before {
+   font-family: FontAwesome;
+   content: "\f155";
+   padding-right: 6px;
+}
 .sidenav-headings.grp-heading.documentation\/10_Contribute:before {
    font-family: FontAwesome;
    content: "\f09b";
