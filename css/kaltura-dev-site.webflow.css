@@ -768,6 +768,16 @@ h4 {
    content: "\f09b";
    padding-right: 6px;
 }
+.documentation-05_Mobile-Video-Player-SDKs-ChromeCast-Android\.md:before {
+   font-family: FontAwesome;
+   content: "\f17b";
+   padding-right: 6px;
+}
+.documentation-05_Mobile-Video-Player-SDKs-Picture-in-Picture-iOS\.md:before {
+   font-family: FontAwesome;
+   content: "\f179";
+   padding-right: 6px;
+}
 
 .sidenav-grp-links {
   display: none;
