@@ -710,7 +710,15 @@ h4 {
   font-size: 14px;
 }
 
-.sidenav-headings.grp-heading.documentation\/contribute:before {
+.sidenav-headings.grp-heading.heading-close:after {
+   content: " +";
+}
+
+.sidenav-headings.grp-heading.heading-open:after {
+   content: " -";
+}
+
+.sidenav-headings.grp-heading.documentation\/10_Contribute:before {
    font-family: FontAwesome;
    content: "\f09b";
    padding-right: 6px;
