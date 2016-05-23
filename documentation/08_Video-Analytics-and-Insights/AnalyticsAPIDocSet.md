@@ -32,14 +32,15 @@ Kaltura Video Insights helps you get precise, actionable insights into various a
 ## Events  
 With Kaltura Video Insights you can collect, present and analyze data about system usage, viewing behavior, and any other type of Kaltura solution user interaction.
 
-The data in Kaltura Video Insights can be divided into roughly two groups: Player events and other data.
+The data in Kaltura Video Insights can be divided into roughly two groups - **Player events** and **other data**.
 
-As a video is played, the Kaltura Player sends Player events related to viewer behavior (such as “Plays”, “Played 25%”, “Stopped”, etc.) to Kaltura Video Insights. If you are using Kaltura Player versions 2.43 or higher, you will get the support for these Player event insights out-of-the-box. If you are using a non-Kaltura player, you need to make sure all of the relevant events are reported correctly using the [Event Tracking API](https://vpaas.kaltura.com/documentation/08_Video-Analytics-and-Insights/EventTrackingAPI.html).
+When a video is played, the Kaltura Player sends Player events that are related to the viewer's behavior, such as “Plays”, “Played 25%”, “Stopped”, etc., to Kaltura Video Insights. If you are using Kaltura Player versions 2.43 or higher, you will get the support for these Player event insights out-of-the-box. However, if you are using a non-Kaltura player, you need to make sure all of the relevant events are reported correctly using the [Event Tracking API](https://vpaas.kaltura.com/documentation/08_Video-Analytics-and-Insights/EventTrackingAPI.html).
 
 
 ## Dimensions  
 
 Every Player event is related to a specific video asset (VOD or live stream) and is triggered by a specific user. Every event has certain pre-defined characteristics (such as time, device, geography, etc.), called *dimensions*.
+
 ### Example  
 Let’s take a look at an example: Suppose that at 1 pm on the 1st of February, a user in NY clicks the “play” button on her iPhone device (the device has an IOS 9.1 installed on it) and begins to watch video asset #1234.
 In this case the recorded event is “play” and the dimensions are:
@@ -68,8 +69,8 @@ Each insight report is comprised of Dimensions, Metrics and Filters. Dimensions 
 ## Suggested Reading  
 * **[Kaltura API](http://www.kaltura.com/api_v3/testmeDoc/index.php?page=overview):** The Video Insights Data Retrieval API provides a simple but powerful tool to query data programmatically using the Kaltura API standards, such as authentication, client libraries, etc.
 * **[Kaltura API Test Console Application](http://www.kaltura.com/api_v3/testme/index.php):** Another source of assistance in building your application is the Kaltura API Test Console Application. Note that the main service of the Video Insights Data Retrieval API is analytics and the action is **query**.
-* **[Media Analytics](https://vpaas.kaltura.com/documentation/08_Video-Analytics-and-Insights/media-analytics.html):** Details about the existing Kaltura Analytics platform, which provides data about system usage.
-* **[Dimensions Dictionary](https://vpaas.kaltura.com/documentation/08_Video-Analytics-and-Insights/DimensionsLexicon.html):** Details the dimensions and their meaning within the Kaltura Video Insights Platform.
-* **[Metrics Dictionary](https://vpaas.kaltura.com/documentation/08_Video-Analytics-and-Insights/MetricsLexicon.html):** Features a list of the metrics and their meaning within the Kaltura Video Insights Platform.
-* **[Player Events Guide/Event Tracking API](https://vpaas.kaltura.com/documentation/08_Video-Analytics-and-Insights/EventTrackingAPI.html):** Details the available Player events.
-* **[Data Retrieval API](https://vpaas.kaltura.com/documentation/08_Video-Analytics-and-Insights/DataRetrievalAPI.html)**
+* **[Media Analytics](https://vpaas.kaltura.com/documentation/08_Video-Analytics-and-Insights/media-analytics.html):** Provides details about the existing Kaltura Analytics platform that is used to provide data about system usage.
+* **[Dimensions Dictionary](https://vpaas.kaltura.com/documentation/08_Video-Analytics-and-Insights/DimensionsLexicon.html):** Provides details about the the analytics dimensions and how to use them in the Kaltura Video Insights Platform.
+* **[Metrics Dictionary](https://vpaas.kaltura.com/documentation/08_Video-Analytics-and-Insights/MetricsLexicon.html):** Provides details about the the analytics metrics and how to use them in the Kaltura Video Insights Platform.
+* **[Player Events Guide/Event Tracking API](https://vpaas.kaltura.com/documentation/08_Video-Analytics-and-Insights/EventTrackingAPI.html):** Explains how to use the Event Tracking API to obtain information about available Player events.
+* **[Data Retrieval API](https://vpaas.kaltura.com/documentation/08_Video-Analytics-and-Insights/DataRetrievalAPI.html)**: Explains how to use the Data Retrieval API.
