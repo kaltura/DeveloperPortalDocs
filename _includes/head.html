@@ -12,16 +12,14 @@
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
 <link rel="sitemap" type="application/xml" title="Sitemap" href="{{ site.url }}/sitemap.xml" />
-  <meta charset="utf-8">
-  <title>Kaltura Dev Site</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="generator" content="Webflow">
-
+  
 <link rel="stylesheet" type="text/css" href="{{ site.url }}/css/normalize.css">
 <link rel="stylesheet" type="text/css" href="{{ site.url }}/css/webflow.css">
 <link rel="stylesheet" type="text/css" href="{{ site.url }}/css/kaltura-dev-site.webflow.css">
 <link rel="stylesheet" type="text/css" href="{{ site.url }}/css/syntax.css">
 <link rel="stylesheet" type="text/css" href="{{ site.url }}/css/opentip.css">
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     
   <script type="text/javascript" src="https://use.typekit.net/rlx4cjm.js"></script>
   <script type="text/javascript">
@@ -45,7 +43,7 @@
 
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
     <!-- End Cookie Consent plugin -->
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  
 <script src="{{ site.url }}/js/country.js"></script>
 
 <script type="text/javascript" src="/js/jQuery.exLink/jquery.exLink.js"></script>
@@ -82,5 +80,7 @@ function verify_recapcha()
 
 }
 </script>
+<script type="text/javascript" src="{{ site.url }}/js/webflow.js"></script>
+<script type="text/javascript" src="{{ site.url }}/js/opentip-jquery.js"></script>
 </head>
 
