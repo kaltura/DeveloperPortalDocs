@@ -16,10 +16,12 @@ Kaltura Video Insights helps you get precise, actionable insights into various a
 * On what devices?
 * What is popular now?
 
+
 **Operational Questions:**
 * What is the quality of service my users are experiencing?
 * Are there any glitches?
 * How can I improve my quality of service?
+
 
 **Budget Questions:**
 * What is my system usage?
@@ -28,20 +30,18 @@ Kaltura Video Insights helps you get precise, actionable insights into various a
 * How do I optimize my budget?
 
 ## Events  
-With Kaltura Video Insights you can collect, present and analyze data about system usage, viewing behavior, and any other type of user interaction with the Kaltura solution.
+With Kaltura Video Insights you can collect, present and analyze data about system usage, viewing behavior, and any other type of Kaltura solution user interaction.
 
 The data in Kaltura Video Insights can be divided into roughly two groups: Player events and other data.
 
-As a video is played, the Kaltura Player sends Player events related to viewer behavior (such as “Plays”, “Played 25%”, “Stopped”, etc.) to Kaltura Video Insights. If you are using Kaltura Player versions 2.43 or higher, you will get the support for these Player event insights out-of-the-box. If you are using a non-Kaltura player, you need to make sure all of the relevant events are reported correctly using 
-[Event Tracking API](https://vpaas.kaltura.com/documentation/08_Video-Analytics-and-Insights/EventTrackingAPI.html).
+As a video is played, the Kaltura Player sends Player events related to viewer behavior (such as “Plays”, “Played 25%”, “Stopped”, etc.) to Kaltura Video Insights. If you are using Kaltura Player versions 2.43 or higher, you will get the support for these Player event insights out-of-the-box. If you are using a non-Kaltura player, you need to make sure all of the relevant events are reported correctly using the [Event Tracking API](https://vpaas.kaltura.com/documentation/08_Video-Analytics-and-Insights/EventTrackingAPI.html).
 
 
 ## Dimensions  
 
-Every player event is related to a specific video asset (a VOD or a live stream) and is triggered by a specific user. Every event has certain pre-defined characteristics (such as time, device, geography, etc.) that are called dimensions.
-
-Let’s take a look at an example.
-Suppose that at 1 pm on the 1st of February a user in NY clicked the “play” button on her iPhone device (the device has an IOS 9.1 installed on it) and begins to watch video asset #1234.
+Every Player event is related to a specific video asset (VOD or live stream) and is triggered by a specific user. Every event has certain pre-defined characteristics (such as time, device, geography, etc.), called *dimensions*.
+### Example  
+Let’s take a look at an example: Suppose that at 1 pm on the 1st of February, a user in NY clicks the “play” button on her iPhone device (the device has an IOS 9.1 installed on it) and begins to watch video asset #1234.
 In this case the recorded event is “play” and the dimensions are:
 * Device: iPhone
 * OS: 9.1
@@ -50,11 +50,12 @@ In this case the recorded event is “play” and the dimensions are:
 * Time: 02/01/2016 13:00
 * Offset(from UTC): -240
 
-You can read more about currently supported dimensions [here](https://vpaas.kaltura.com/documentation/08_Video-Analytics-and-Insights/DimensionsLexicon.html).
+To learn more about supported dimensions, we recommend reading the [Dimensions Dictionary](https://vpaas.kaltura.com/documentation/08_Video-Analytics-and-Insights/DimensionsLexicon.html).
 
 ## Metrics  
 These events provide a basis for creating metrics, which are later presented in insights reports. Metrics refer to the data that Kaltura Video Insights collects, which are quantitative measurements. These measurements can assess user actions (such as user activities, plays, comments, drop offs, etc.), resource consumption (such as bandwidth, storage, transcoding, etc.) or quality of experience characteristics (such as buffering time, average bitrate etc'). The collected and aggregated data is accessible through the Data Retrieval API. Some of these metrics will become available in the upcoming versions. As the Video Insights Platform is being developed, more and more metrics are supported.
-You can read more about the currently supported metrics [here](https://vpaas.kaltura.com/documentation/08_Video-Analytics-and-Insights/MetricsLexicon.html).
+
+To learn more about supported metrics, we recommend reading the [Metrics Dictionary](https://vpaas.kaltura.com/documentation/08_Video-Analytics-and-Insights/MetricsLexicon.html).
 
 ## Aggregations  
 
