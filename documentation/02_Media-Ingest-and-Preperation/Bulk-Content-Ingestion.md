@@ -12,7 +12,7 @@ With these options, you can also ingest files from your own FTP server, or any p
 
 The following video provides a quick walkthrough of the bulk-upload features in KMC - 
 
-{% onebox http://videos.kaltura.com/media/1_kxiv585x %}
+{% onebox http://www.kaltura.com/tiny/yu1ms %}
 
 ## Bulk Upload Inpur Formats (CSV vs. XML)
 
