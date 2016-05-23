@@ -49,7 +49,7 @@ There are 9 flavors that are defined automatically for every new account. These 
 The default flavors:
 
 | Id     	| Name                             	| Description                                 	|
-|--------	|----------------------------------	|---------------------------------------------	|
+|:-------	|:---------------------------------	|:--------------------------------------------	|
 | 0      	| Source                           	| The original file that was uploaded         	|
 | 301991 	| Mobile (3GP)                     	| Support Nokia and Blackberry legacy devices 	|
 | 487041 	| Basic/Small - WEB/MBL (H264/400) 	| Optimized mp4 - modern devices - lowres     	|
