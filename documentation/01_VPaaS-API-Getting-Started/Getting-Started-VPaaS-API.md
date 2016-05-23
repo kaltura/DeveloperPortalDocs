@@ -47,8 +47,9 @@ Which method you chose to implement depends on your application needs. The follo
 If your application is HTML5 based, you can implement a reliable and fault tolerant large-files upload with an automatic pause-and-resume functionality by simply including and using the Kaltura Upload JavaScript widget.
 The [Kaltura Upload JavaScript widget](https://github.com/kaltura/chunked-file-upload-jquery) provides a simple JavaScript library that abstracts the use of the Kaltura API, as well as handling the files locally (such as file chunking and pause-resume).
 
-The [Kaltura Upload jQuery project](https://github.com/kaltura/chunked-file-upload-jquery) can be used as reference or basis to implement your own reliable chunked file upload to Kaltura.
-For a quick view of how this method works
+The [Kaltura Upload jQuery project](https://github.com/kaltura/chunked-file-upload-jquery) can be used as reference or basis to implement your own reliable chunked file upload to Kaltura.  
+For a quick view of how this method works -  
+
 1. Download the project to your localhost, edit the index.php file, and switch the value of $the_user_ks_to_use to a valid Kaltura Session. 
 2. Next, load the page from your localhost, open your browser console and try uploading a file. You'll see all the steps printed to the browser console.
 
