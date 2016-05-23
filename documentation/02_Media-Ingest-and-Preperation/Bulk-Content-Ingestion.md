@@ -24,8 +24,8 @@ The benefits of using bulk upload to ingest your files:
 
 There are two methods to bulk-upload content:
 
-* The simple method - using a [CSV (Comma Separated Value)](http://en.wikipedia.org/wiki/Comma-separated_values] file, providing a quick and easy way to submit list of files one can even create in a spreadsheet application like Microsoft Excel or Google Docs. The CSV format may only be used to upload/ingest new files into Kaltura.
-* The robust method - using an [XML file](http://en.wikipedia.org/wiki/XML), providing flexible structure to input complex metadata fields and other objects such as caption files, allowing for more flexible ingestion workflows. The XML format supports full CRUD (Create, Read, Update, and Delete) operations with Kaltura Entries.
+* The simple method - using a [CSV formatted file](http://en.wikipedia.org/wiki/Comma-separated_values), providing a quick and easy way to submit list of files one can even create in a spreadsheet application like Microsoft Excel or Google Docs. The CSV format may only be used to upload/ingest new files into Kaltura.
+* The robust method - using an [XML formatted file](http://en.wikipedia.org/wiki/XML), providing flexible structure to input complex metadata fields and other objects such as caption files, allowing for more flexible ingestion workflows. The XML format supports full CRUD (Create, Read, Update, and Delete) operations with Kaltura Entries.
 
 ## How to submit bulk upload jobs
 
