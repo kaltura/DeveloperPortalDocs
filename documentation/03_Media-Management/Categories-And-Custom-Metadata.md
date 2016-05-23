@@ -4,10 +4,15 @@ title: Categories and Metadata Management
 type: header
 ---
 
-## Introduction to Categories
+Media entries can be organized in categories. Categories are structured in a tree-like hierarchy where each category can include multiple sub-categories.  
+You can add, remove and edit categories using the [category service](https://developer.kaltura.com/api-docs/#/category). And you can assign a media entry to a specific category using the [categoryEntry service](https://developer.kaltura.com/api-docs/#/categoryEntry).   
+Categories provide a logical structure for your site and assist with content management. You can assign custom metadata to categories. Then using filters you can create robust search and discovery workflows, playlists and more.  
+Categories may also be used for setting content entitlements to end-users in various applications.  
 
-* A category is a metadata field that groups content. 
-* Media entries can be added into categories. 
+In summary:  
+
+* A category is a metadata that groups content. 
+* Media entries can be added into categories. Each entry can be associated with up to 32 categories (If you need more, please [contact us](mailto:vpaas.kaltura.com)).
 * Categories are built in a tree-like hierarchy where each category can include multiple sub-categories.
 * Categories provide a logical taxonomy structure for your site or application and assist with content management. 
 * You can use categories, along with metadata and filters to create manually or dynamically generated playlists.
@@ -43,7 +48,8 @@ In the service examples above, there are several more actions that can be applie
 The [`metadata service`](https://www.kaltura.com/api_v3/testmeDoc/index.php?service=metadata_metadata) provides actions to add, delete, get, update, and index metadata in Kaltura. Be sure to visit the link for a full list of actions.
 
 ### Metadata Recipe
-Generate code for common metadata-centric workflows using the recipe below:
-[RECIPE EMBED](x)
 
-Be sure to check out our full [recipe library](http://developers.kaltura.org) for more workflow tools.
+Generate code for common metadata-centric workflows using the recipe below:
+
+{% onebox https://developer.kaltura.com/recipes/metadata/embed#/start %}
+
