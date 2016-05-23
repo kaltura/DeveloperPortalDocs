@@ -866,10 +866,13 @@ h4 {
   -webkit-transition: color 200ms ease-in-out;
   transition: color 200ms ease-in-out;
   font-family: proxima-nova, sans-serif;
-  color: green;
+  color: #F7A600;
   font-weight: 400;
   letter-spacing: 0.6px;
   text-decoration: none;
+}
+.sidenav-links-current:before {
+    content: "> ";
 }
 
 .sidenav-links:hover {
