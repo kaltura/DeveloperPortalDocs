@@ -9,7 +9,7 @@ You can add, remove and edit categories using the [category service](https://dev
 Categories provide a logical structure for your site and assist with content management. You can assign custom metadata to categories. Then using filters you can create robust search and discovery workflows, playlists and more.  
 Categories may also be used for setting content entitlements to end-users in various applications.  
 
-In summary:  
+### Quick Summary - Categories
 
 * A category is a metadata that groups content. 
 * Media entries can be added into categories. Each entry can be associated with up to 32 categories (If you need more, please [contact us](mailto:vpaas.kaltura.com)).
