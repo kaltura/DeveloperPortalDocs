@@ -61,7 +61,7 @@ However, if you'd like to support chunked file upload and pause-resume in your a
 
 > If you're using Java, follow the information in the article on [chunked uploads in the Java reference implementation](https://github.com/kaltura/Sample-Kaltura-Chunked-Upload-Java) to achieve chunked file upload in your Java application.
 
-Follow the recipe below to get learn how to use the file upload API:
+Follow the recipe below to learn how to use the file upload API:
 
 {% onebox https://developer.kaltura.com/recipes/upload/embed#/start %}
 
