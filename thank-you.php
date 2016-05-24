@@ -1,5 +1,6 @@
 ---
 layout: default
+sitemap: false
 ---
 <script>
 $( document ).ready(function() {

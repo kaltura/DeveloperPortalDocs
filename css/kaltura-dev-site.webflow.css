@@ -1,3 +1,7 @@
+---
+layout: null
+sitemap: false
+---
 .inactive-link {
    pointer-events: none;
    cursor: default;
