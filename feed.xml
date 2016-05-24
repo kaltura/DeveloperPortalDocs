@@ -12,6 +12,7 @@ layout: null
     <pubDate>{{ site.time | date_to_long_string }}</pubDate>
     <generator>Jekyll v{{ jekyll.version }}</generator>
     {% for page in site.pages limit:10 %}
+	{% if page.sitemap != false %}
       <item>
         <title>{{ page.title | xml_escape }}</title>
         <description>{{ page.content | xml_escape }}</description>
@@ -24,6 +25,7 @@ layout: null
         <category>{{ cat | xml_escape }}</category>
         {% endfor %}
       </item>
+	{% endif %}
     {% endfor %}
   </channel>
 </rss>
