@@ -1024,23 +1024,31 @@ thead tr th {
     right: 40px;
     z-index: 9999;
     width: 32px;
-    height: 32px;
+    height: 70px;
     text-align: center;
     line-height: 30px;
-    background: #f5f5f5;
-    color: #444;
-    cursor: pointer;
-    border: 0;
-    border-radius: 2px;
-    text-decoration: none;
-    transition: opacity 0.2s ease-out;
-    opacity: 0;
 }
 #back-to-top:hover {
     background: #e9ebec;
 }
 #back-to-top.show {
     opacity: 1;
+}
+#back-to-top a {
+   width: 32px;
+   height: 32px;
+   display: block;
+   background: #f5f5f5;
+   color: #444;
+   cursor: pointer;
+   border: 1px #111;
+   border-radius: 2px;
+   text-decoration: none;
+   transition: opacity 0.2s ease-out;
+   opacity: 0;
+}
+#back-to-top a:nth-child(n+2) {
+   margin-top: 6px;
 }
 
 .post-content {
