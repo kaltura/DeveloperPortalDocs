@@ -9,7 +9,7 @@ weight: 110
 
 Kaltura Player plugins use a combination of HTML, JavaScript and/or CSS to customize the Player, enabling you to use a plugin to add any feature that can be added to a web page. Plugins integrate with the Player by listening to and emitting events.
 
-You can develop plugsin to:
+You can develop plugins to:
 * Modify default behavior
 * Add functionality
 * Customize appearance
