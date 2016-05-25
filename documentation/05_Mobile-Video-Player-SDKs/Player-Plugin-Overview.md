@@ -7,22 +7,17 @@ weight: 110
 [![iOS](https://img.shields.io/badge/iOS-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios)
 [![Android](https://img.shields.io/badge/Android-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios)
 
-This article provides an overview of the plugins for the Kaltura Player. 
+Kaltura Player plugins use a combination of HTML, JavaScript and/or CSS to customize the Player, enabling you to use a plugin to add any feature that can be added to a web page.
 
-## Introduction
-A plugin for the Kaltura Player uses a combination of HTML, JavaScript and/or CSS to customize the Player, enabling you to apply any feature that can be added to a web page to be be added using a plugin.
+Plugins essentially integrate with the Player by listening to and emitting events.
 
-At a high level, a plugin integrates with the Player by listening to and emitting events.
-
-The plugins can be developed to:
+Plugins can be developed to:
 
 * Modify default behavior
 * Add functionality
 * Customize appearance
 
-## Kaltura Plugins
-The following are the Kaltura-provided plugins that you can implement in your system:
-[Kaltura Player Plugins](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/05_Mobile-Video-Player-SDKs/Player-Plugins-in-the-SDK-Supported-plugins.md#sthash.3a8Dft10.dpbs).
+For a list of Kaltura-provided plugins that you can implement in your system, read the [Kaltura Player Plugins](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/05_Mobile-Video-Player-SDKs/Player-Plugins-in-the-SDK-Supported-plugins.md#sthash.3a8Dft10.dpbs) article.
 
 ## How to Enable/Create a Plugin  
 This section describes how to enable existing Kaltura plugins and how to create your own plugins.
@@ -44,7 +39,6 @@ config.addConfig("loadingSpinner.plugin", "false");
 ```
 
 #### Creating Custom Plugins
-
 To create custome plugins, follow the steps in the article [Extending the Player with Plugins](https://vpaas.kaltura.com/documentation/media-player/Player-Plugins#sthash.gtmiiI7F.dpbs).
 
 ### How to Detect if Configured Plugins are Loaded
