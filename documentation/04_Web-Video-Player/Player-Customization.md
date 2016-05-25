@@ -49,12 +49,13 @@ You can choose to use either of these skins or, if you create your own custom sk
 The "theme" plugin allows setting colors and sizes for all of the Player's buttons and basic UI elements, such as the scrubber, icons etc.  
 You can access the theme plugin properties using Studio as explained below. 
 You can also use the embed code Flashvars object in order to set a theme plugin properties for a specific Player instance.  
-It is highly advised to use the theme plugin, instead of writing your own custom CSS file, to prevent redundant assets loading and to boost Player performances.  
+It is highly advised to use the theme plugin, instead of writing your own custom CSS file, to prevent redundant asset loading and to boost Player performances.  
 
 ## Plugin Templates
 
-Some of the Player plugins use templates to render its content. You can change this template easily using the plugin properties.  
-You can load external templets to override the default template, which changes both the look-and-feel and the data displayed. This is achieved by overriding the path to the template tmpl.html file of the specific plugin. 
+Some of the Player plugins use templates to render the Player's content. You can change this template easily using the plugin properties.  
+
+You can also load external templets to override the default template, which changes both the look-and-feel and the data displayed. This is achieved by overriding the path to the template tmpl.html file of the specific plugin. 
 
 For example, to override the template of the shared plugin, create your own tmpl.html file (based on the default template path), and in the Flashvars, pass this parameter:
 
