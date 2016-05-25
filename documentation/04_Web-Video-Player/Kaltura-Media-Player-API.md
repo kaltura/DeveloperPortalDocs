@@ -24,7 +24,8 @@ The kWidget API is available after you include the Kaltura Player library in you
 
 ### Kaltura Player Embed API Methods  
 
-To get started
+To get started:
+
 1. Include the JavaScript tag to load the Kaltura Player library.
 2. Substitute these tokens: 
 
