@@ -121,7 +121,7 @@ kdp.setKDPAttribute("playlistAPI.dataProvider", "selectedIndex", 1 );
 kdp.evaluate( "{playlistAPI.dataProvider.selectedIndex}" ) );
 ```
 
-> See the article [Using Playlist Properties Examples](http://player.kaltura.com/modules/KalturaSupport/tests/PlaylistOnPage.qunit.html) for for information.
+> See the article [Using Playlist Properties Examples](http://player.kaltura.com/modules/KalturaSupport/tests/PlaylistOnPage.qunit.html) for more information about the Playlist API, properties, and events.
 
 ### Playlist API Methods  
 
