@@ -39,7 +39,7 @@ Media files are uploaded to Kaltura through [CORS-enabled](https://www.w3.org/wi
 You can implement an upload flow by using a Kaltura tested JavaScript widget for web pages, or by implementing direct calls to the API.  
 Alternatively, Kaltura also provides methods for bulk-ingest and import of content. To learn more, read the [Kaltura Bulk Content Ingestion API article](https://vpaas.kaltura.com/documentation/02_Media-Ingest-and-Preperation/Bulk-Content-Ingestion.html).
 
->  Note: Kaltura manages all forms of media files, including video, image, and audio files. It even provides APIs to host, deliver and process document files, such as PDF and PPT files, to create rich experiences such as synchronized side-by-side video and presentation slides.
+> Note: Kaltura manages all forms of media files, including video, image, and audio files. It even provides APIs to host, deliver and process document files, such as PDF and PPT files, to create rich experiences such as synchronized side-by-side video and presentation slides.
 
 Which method you chose to implement depends on your application needs. The following are the two main methods for uploading files.
 
@@ -65,7 +65,7 @@ To learn how to use the file upload API, follow the recipe below:
 
 ## Working with Media Entries  
 
-After uploading your file, you will have created a [KalturaMediaEntry](https://developer.kaltura.com/api-docs/#/KalturaMediaEntry) object by calling the [media.add](https://developer.kaltura.com/api-docs/#/media.add) action, and then assigned the uploaded file to this media entry by calling the [media.addContent](https://developer.kaltura.com/api-docs/#/media.addContent) action.
+Uploading a file creates a [KalturaMediaEntry](https://developer.kaltura.com/api-docs/#/KalturaMediaEntry) object by calling the [media.add](https://developer.kaltura.com/api-docs/#/media.add) action. The uploaded file is then assigned to this media entry by calling the [media.addContent](https://developer.kaltura.com/api-docs/#/media.addContent) action.
 
 Now that you have content in your account, you will want to implement a library search to create galleries or search for media discovery. The main service you will be working with is the [media service](https://developer.kaltura.com/api-docs/#/media).
 
