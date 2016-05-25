@@ -124,3 +124,5 @@ The selected subdirectory **must** be excluded from backup.
 
 For more information, see the Apple guide: {% extlink File System Programming Guide > File System Basics > Where You Should Put Your App’s Files https://developer.apple.com/library/ios/documentation/FileManagement/Conceptual/FileSystemProgrammingGuide/FileSystemOverview/FileSystemOverview.html#//apple_ref/doc/uid/TP40010672-CH2-SW28 %}.
 
+## Known Issues
+* The player must be loaded at least once when the device is online before offline playback can work. This limitation will be resolved in a future version of the Player SDK. That initial online playback can be with any entry.
