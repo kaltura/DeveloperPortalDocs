@@ -49,7 +49,7 @@ You can choose to use either of these skins or, if you create your own custom sk
 The "theme" plugin allows setting colors and sizes for all of the Player's buttons and basic UI elements, such as the scrubber, icons etc.  
 You can access the theme plugin properties using Studio as explained below. 
 You can also use the embed code Flashvars object in order to set a theme plugin properties for a specific Player instance.  
-It is highly advised to use the theme plugin, when possible, instead of writing your own custom CSS file, to prevent redundant assets loading and to boost Player performances.  
+It is highly advised to use the theme plugin, instead of writing your own custom CSS file, to prevent redundant assets loading and to boost Player performances.  
 
 ## Plugin Templates
 
