@@ -9,16 +9,15 @@ The Kaltura Player configuration is determined by a JSON structured configuratio
 You can customize the Kaltura Player using one of two options:
 
 1. **Using Kaltura Universal Studio:** The Universal Studio is a part of the Kaltura KMC and allows visual configuration of Player parameters and plugins.  
-For more infomation and a full user guide, please refer to the {% extlink Universal Studio Information Guide https://knowledge.kaltura.com/node/1148 %}.  
+For more infomation and a full user guide, please refer to the [Universal Studio Information Guide](https://knowledge.kaltura.com/node/1148).  
 The Universal Studio saves the Flashvars object for you as part of the Player's configuration in the Kaltura database. When using Studio, you do not have to define the Flashvars object manually.  
 2. **Define a Flashvars object as part of your embed code:** Using this method, define your Flashvars object as a JSON object in your Player embed code statement. You can define values for Player properties and plugins configuration.  
 
-**NOTE:** The values defined in the embed code Flashvars objects override any values previously saved using Studio for the same keys.   
+>Note: The values defined in the embed code Flashvars objects override any values that were saved previously using the Studio for the same keys.   
 
 ## Considerations for Configuring Players
 
-How should you configure the player, and what to consider when specifying configuration parameters?  
-As a general rule of thumb, you should always prefer to configure Flashvars via the Studio menus and the "UI Variables" section for the following reasons:  
+How should you configure the player, and what to consider when specifying configuration parameters? As a general rule of thumb, you should always prefer to configure Flashvars via the Studio menus and the "UI Variables" section for the following reasons:  
 * The configuration defined in Studio applies to all Player instances across web pages and embed codes, whereas embed code Flashvars applies only to a specific Player instances.
 * The Studio's visual and self explanatory interface makes it easy to implement the most commonly used Player properties and plugins.
 
