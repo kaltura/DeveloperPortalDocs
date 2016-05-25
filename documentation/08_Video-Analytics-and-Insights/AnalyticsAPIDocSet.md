@@ -1,12 +1,11 @@
 ---
 layout: page
-title: Kaltura Video Insights
+title: Introduction to Kaltura Video Insights
 weight: 101
 ---
 
 *Pending Kaltura Video Insights Release*
 
-## Introduction to Kaltura Video Insights  
 Kaltura Video Insights helps you get precise, actionable insights into various aspects of your business by answering a wide variety of questions, such as:
 
 **User Behavior Questions:**
