@@ -1027,6 +1027,7 @@ thead tr th {
     height: 70px;
     text-align: center;
     line-height: 30px;
+    opacity: 0;
 }
 #back-to-top:hover {
     background: #e9ebec;
@@ -1045,7 +1046,6 @@ thead tr th {
    border-radius: 2px;
    text-decoration: none;
    transition: opacity 0.2s ease-out;
-   opacity: 0;
 }
 #back-to-top a:nth-child(n+2) {
    margin-top: 6px;
