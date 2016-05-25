@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Introduction
+title: Kaltura Mobile SDK Introduction
 weight: 100
 ---
 
@@ -30,15 +30,15 @@ Each Player configuration includes the UICONF object, which includes the Player 
 
 ## The Kaltura Player Architecture
 
-The following diagram visualizes the architecture of Kaltura Player, and highlights its flexibility and robust capabilities across platforms and devices: 
+The following diagram visualizes the Kaltura Player architecture, and highlights its flexibility and robust capabilities across platforms and devices: 
 
 ![Kaltura Media Player Architecture Diagram](https://knowledge.kaltura.com/sites/default/files/styles/large/public/kaltura-player-toolkit.png)
 
-As the diagram above illustrates, you can leverage native components for [iOS](https://github.com/kaltura/player-sdk-native-ios/) and [Android](https://github.com/kaltura/player-sdk-native-android) in conjunction with the HTML5 runtime and Adobe flash or Microsoft Silverlight plugins, to transcend platform limitations across devices and browsers, while delivering the full Player v2 Toolkit experience. 
+As the diagram above illustrates, you can leverage native components for [iOS](https://github.com/kaltura/player-sdk-native-ios/) and [Android](https://github.com/kaltura/player-sdk-native-android) in conjunction with HTML5 runtime and Adobe Flash or Microsoft Silverlight plugins, to transcend platform limitations across devices and browsers, while delivering the full Player v2 Toolkit experience. 
 
-## When Should You Use The Native Mobile SDKs?
+## When Should You Use Native Mobile SDKs?
 
-What are the advantages of using native? Here is a feature list that will help explain the advantages of using the Kaltura Player Toolkit in native environments:
+What are the advantages of using native mobile SDKs? Here is a feature list that explains the advantages of using the Kaltura Player Toolkit in native environments:
 
 | Player Feature | iOS WebView | iOS Native |Android WebView | Android Native |  
 |:-------------  |:----------  |:---------- |:-------------- |:-------------- |  
@@ -54,9 +54,9 @@ What are the advantages of using native? Here is a feature list that will help e
 ## Player Version Managment  
 
 The Mobile Video Player SDKs are native iOS and Android wrapper libraries for the [Web Video Player library](https://vpaas.kaltura.com/documentation/04_Web-Video-Player/Player-Configuration.html).  
-We recommend that you will always use the latest version of both the Web Video Player and the native Mobile Player SDKs.  
+We recommend using the latest version of both the Web Video Player and the native Mobile Player SDKs.  
 
-* You can upgrade the version of your Web Video Player by using the [Player Studio](https://knowledge.kaltura.com/node/1148#Updating the Player) and clicking upgrade.  
+* You can upgrade the version of your Web Video Player by using the [Player Studio](https://knowledge.kaltura.com/node/1148#Updating the Player) and clicking **Upgrade**.  
 * To get the latest version of the Mobile Player SDK, always refer to the latest SDK tag on the github repository ([iOS SDK](https://github.com/kaltura/player-sdk-native-ios), [Android SDK](https://github.com/kaltura/player-sdk-native-android)).
 
 
