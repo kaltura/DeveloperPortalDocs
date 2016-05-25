@@ -6,7 +6,6 @@ weight: 140
 
 *Pending Kaltura Video Insights Release*
 
-## Overview
 The Event Tracking API is an extensible interface for tracking different types of events on the Kaltura Video Insights backend, and, eventually, to aggregate them into meaningful and values reports.
 
 The API is based on an HTTP GET request that persists the tracked event without validation (at this stage) and returns HTTP code 200 (OK) and a small payload of the Unix timestamp representing the time on the server at the moment of receiving the event (for example: 1459671407).
@@ -57,6 +56,7 @@ Each event type has required and optional parameters, which are described below.
 });
 
 ## Supported Events  
+The Event Tracking API supports the following events:
 
 | Event       | Event Type      | Beacon sent...     | Required Parameters | Optional Parameters 
 |:---|:---|:---|:---|:---
