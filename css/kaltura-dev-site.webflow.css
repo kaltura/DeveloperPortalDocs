@@ -1028,6 +1028,7 @@ thead tr th {
     text-align: center;
     line-height: 30px;
     opacity: 0;
+    transition: opacity 0.2s ease-out;
 }
 #back-to-top.show {
     opacity: 1;
@@ -1042,7 +1043,6 @@ thead tr th {
    border: 1px #111;
    border-radius: 2px;
    text-decoration: none;
-   transition: opacity 0.2s ease-out;
 }
 #back-to-top a:hover {
     background: #e9ebec;
