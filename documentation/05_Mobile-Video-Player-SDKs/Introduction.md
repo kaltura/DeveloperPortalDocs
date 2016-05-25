@@ -4,7 +4,7 @@ title: Kaltura Mobile SDK Introduction
 weight: 100
 ---
 
-The Kaltura Mobile SDKs for iOS and Android provide the framework and tools to help you easily embed the [Kaltura Video Player](http://player.kaltura.com/) into native environments in your iOS or Android applications without having to build player UI, plugins, or capabilities from scratch. The same web media player, easily customized via HTML5, CSS and JS, along with your plugins and themes loaded natively in your application, and seamlessly switching playback engines based on the best available device media APIs.
+The Kaltura Mobile SDKs for iOS and Android provide the framework and tools to help you easily embed the [Kaltura Video Player](http://player.kaltura.com/) into native environments in your iOS or Android applications, without having to build a Player UI, plugins, or capabilities from scratch. The same web media Player, easily customized via HTML5, CSS and JS, along with your plugins and themes loaded natively in your application, and seamlessly switching playback engines based on the best available device media APIs.
 
 The Kaltura Player SDK for iOS and Android supports:  
 
