@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Intro to Content Preparation & Transcoding
+title: Introduction to Content Preparation & Transcoding
 weight: 202
 ---
 
@@ -15,7 +15,7 @@ weight: 202
 The Kaltura VPaaS offers many ways for ingesting content; a file upload API, bulk files import using CSV or XML, MRSS ingest services, and various widgets you can integrate into your workflows or sites, to allow user contributions and build custom upload interfaces.
 Find the sutiable ingestion methologies for your workflow below:
 
-* [The File Upload and Import REST APIs](https://developer.kaltura.com/recipes/upload)
+* [File Upload and Import REST APIs](https://developer.kaltura.com/recipes/upload)
 	* [Web Upload in JavaScript/jQuery (with chunked parallel pause-resume support)](https://github.com/kaltura/chunked-file-upload-jquery)
 	* [Upload in Java](https://github.com/kaltura/Sample-Kaltura-Chunked-Upload-Java)
 * [Bulk Upload XML and CSV formats](https://vpaas.kaltura.com/documentation/02_Media-Ingest-and-Preperation/Bulk-Content-Ingestion)
@@ -26,8 +26,8 @@ Find the sutiable ingestion methologies for your workflow below:
 
 To make your video accessible and play on any device, Kaltura provides robust API for media transcoding. When transcoding your video, you can control a wide range of parameters, including; output file type, bit-rate, GOP size (keyframe-frequency), frame-rate, frame dimensions, and much more. You can use Kaltura's transcoding services to prepare transcoded videos for optimized playback, download, editing, broadcasting, archive and more.
 
-Flavors are versions of an uploaded source video that was transcoded by Kaltura. You can generate multiple flavors per uploaded file. There is no limit to number of flavors you can define and use in Kaltura. Each flavor is a single output video file on its own. Flavors are represented in Kaltura by the [flavorAsset service](https://developer.kaltura.com/api-docs/#/flavorAsset).  
-Review all the available parameters and options you can set for your transcoded flavors: [KalturaFlavorParams](https://developer.kaltura.com/api-docs/#/KalturaFlavorParams).
+Flavors are versions of an uploaded source video that was transcoded by Kaltura. You can generate multiple flavors per uploaded file. There is no limit to the number of flavors you can define and use in Kaltura. Each flavor is a single output video file on its own. Flavors are represented in Kaltura by the [flavorAsset service](https://developer.kaltura.com/api-docs/#/flavorAsset).  
+For a list of all the available parameters and options you can set for your transcoded flavors see: [KalturaFlavorParams](https://developer.kaltura.com/api-docs/#/KalturaFlavorParams).
 
 Your Kaltura account comes with a default set of flavors preconfigured to seamlessly support any device or browser your users are likely to use. You can choose to enable or disable any of them at any time. To add and configure new flavors to your account use the [flavorParams](http://developer.kaltura.com/api-docs/#/flavorParams) service.
 
@@ -44,11 +44,11 @@ There are three transcoding profiles that are automatically created for new acco
 
 ### Default Account Flavors   
 
-There are 9 flavors that are defined automatically for every new account. These flavors are optimized for delivery of video across all devices and browsers to ensure you can reach your users on any device they use without having to manually configure flavors yourself.  
+There are nine flavors that are defined automatically for every new account. These flavors are optimized for the delivery of video across all devices and browsers to ensure that you can reach your users on any device they use without having to manually configure the flavors yourself.  
 
-The default flavors:
+The default flavors include:
 
-| Id     	| Name                             	| Description                                 	|
+| ID     	| Name                             	| Description                                 	|
 |:-------	|:---------------------------------	|:--------------------------------------------	|
 | 0      	| Source                           	| The original file that was uploaded         	|
 | 301991 	| Mobile (3GP)                     	| Support Nokia and Blackberry legacy devices 	|
@@ -61,13 +61,13 @@ The default flavors:
 | 487111 	| WebM                             	| For devices not supporting h264             	|
 
 
-> Read more: [Kaltura Media Transcoding Services and Technology](http://knowledge.kaltura.com/kaltura-media-transcoding-services-and-technology#transcoding)
+> Read more in the article [Kaltura Media Transcoding Services and Technology](http://knowledge.kaltura.com/kaltura-media-transcoding-services-and-technology#transcoding).
 
 ## How is Transcoding Usage Measured?
 
-Transcoding usage is defined as the volume in MB of transcoded assets, that are the output of transcoding. Transcoding usage is measured and billed one time per transcode. 
+Transcoding usage is defined as the volume in MB of transcoded assets, which are the output of transcoding. Transcoding usage is measured and billed one time per transcode. 
 
-Kaltura only measures and bills for output transcoding usage, the input file is not counted as transcoding usage.  
-Failed transcoding jobs are not counted/billed either. 
+Kaltura measures and bills only for output transcoding usage; the input file is not counted as transcoding usage.  
+Failed transcoding jobs are not counted or billed. 
 
 You can track your transcoding usage on the [Usage Dashboard](https://kmc.kaltura.com/index.php/kmc/kmc4#usageDashboard|) in the Kaltura Management Console.
