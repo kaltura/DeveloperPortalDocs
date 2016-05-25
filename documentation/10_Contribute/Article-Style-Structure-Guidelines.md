@@ -45,23 +45,23 @@ The clean way to add Markdown tables is as follow:
 
 ```
   
-| Header Cell Left Align 	|              Header Cell Middle             	| Header Cell Right Align 	|
-|:-----------------------  	|:-------------------------------------------:	|------------------------:	|
-| Body                   	| Body Inheriting the Middle Align Definition 	| Body                   	|
-| Body                   	| Body - Override Align                       	| Body                   	|
+| HCell | Header Cell Middle | HCell Align-Right |
+|:----- |:------------------:|------------------:|
+| Body  | Body               | Body              |
+| Body  | Body               | Body              |
   
 ```
 
-Note the use of tabs at the end of cells to ensure a clean alignment in edit view.  
+Note the use of spaces at the end of cells to ensure a clean alignment in edit view.  
 Please also always specify the alignment indicator (with `:`) to clearly indicate the alignment of the text.
 Lastly - always ensure that there is a an empty line above and below each table.  
  
 The table above, will be generated as:
 
-| Header Cell Left Align 	|              Header Cell Middle             	| Header Cell Right Align 	|
-|:-----------------------  	|:-------------------------------------------:	|------------------------:	|
-| Body                   	| Body Inheriting the Middle Align Definition 	| Body                   	|
-| Body                   	| Body - Override Align                       	| Body                   	|
+| HCell | Header Cell Middle | HCell Align-Right |
+|:----- |:------------------:|------------------:|
+| Body  | Body               | Body              |
+| Body  | Body               | Body              |
 
 You can also use: [TablesGenerator.com](http://www.tablesgenerator.com/markdown_tables).
 
