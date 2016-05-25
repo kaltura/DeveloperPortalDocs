@@ -6,7 +6,7 @@ title: Article Style and Structure Guidelines
 The Kaltura VPaaS Developer Site is using [Jekyll engine](http://jekyllrb.com/) and markdown syntax as the basis of the articles.
 To learn about Markdown basics and how to use the format, please read: [GitHub markdown basics](https://help.github.com/articles/markdown-basics).
 
-> **Important note**: Please ensure that add new lines before and after every element (heading, table, image, lists, code, embeds, etc).
+> **Important note**: Always add new lines before and after every element (heading, table, image, lists, code, embeds, etc).
 
 
 ## Adding Kaltura videos 
