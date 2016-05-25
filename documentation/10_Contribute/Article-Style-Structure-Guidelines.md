@@ -52,9 +52,9 @@ The clean way to add Markdown tables is as follow:
   
 ```
 
-Note the use of spaces at the end of cells to ensure a clean alignment in edit view.  
-Please also always specify the alignment indicator (with `:`) to clearly indicate the alignment of the text.
-Lastly - always ensure that there is a an empty line above and below each table.  
+Note the use of spaces at the end of cells to ensure a clean alignment in edit view.   
+Please also always specify the alignment indicator (with `:`) to clearly indicate the alignment of the text.   
+Lastly - always ensure that there is a an empty line above and below each table.   
  
 The table above, will be generated as:
 
