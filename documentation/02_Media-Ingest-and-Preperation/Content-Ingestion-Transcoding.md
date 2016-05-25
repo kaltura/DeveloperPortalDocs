@@ -70,4 +70,4 @@ Transcoding usage is defined as the volume in MB of transcoded assets, which are
 Kaltura measures and bills only for output transcoding usage; the input file is not counted as transcoding usage.  
 Failed transcoding jobs are not counted or billed. 
 
-You can track your transcoding usage on the [Usage Dashboard](https://kmc.kaltura.com/index.php/kmc/kmc4#usageDashboard|) in the Kaltura Management Console.
+You can track your transcoding usage on the [Usage Dashboard](https://kmc.kaltura.com/index.php/kmc/kmc4#usageDashboard) in the Kaltura Management Console.
