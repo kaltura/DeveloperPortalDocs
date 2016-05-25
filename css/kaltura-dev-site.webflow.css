@@ -1029,9 +1029,6 @@ thead tr th {
     line-height: 30px;
     opacity: 0;
 }
-#back-to-top:hover {
-    background: #e9ebec;
-}
 #back-to-top.show {
     opacity: 1;
 }
@@ -1046,6 +1043,9 @@ thead tr th {
    border-radius: 2px;
    text-decoration: none;
    transition: opacity 0.2s ease-out;
+}
+#back-to-top a:hover {
+    background: #e9ebec;
 }
 #back-to-top a:nth-child(n+2) {
    margin-top: 6px;
