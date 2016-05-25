@@ -7,9 +7,6 @@ weight: 140
 [![iOS](https://img.shields.io/badge/iOS-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios) 
 [![Android](https://img.shields.io/badge/Android-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-android)
 
-This article describes the available DRM support for Android and iOS devices.
-
-## Overview
 The Player SDK seamlessly supports playback of DRM content. Each platform supports a slightly different set of DRM schemes and features.
 
 ### DRM Support in Android Devices
