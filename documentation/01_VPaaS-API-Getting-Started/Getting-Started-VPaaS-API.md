@@ -4,7 +4,6 @@ title: Get Started with Kaltura VPaaS
 weight: 102
 ---
 
-## Introduction  
 Building video experiences consists of ingesting media files, playing back videos, and reviewing usage and engagement analytics. In between, there is a world of nuances required for your unique use-case and application. Kaltura VPaaS is built on the principles of atomic services, SDKs, and tools that allow you full control and flexibility over every element and process in your media's lifecycle.
 
 
@@ -13,7 +12,6 @@ The guides on this site, together with the [Kaltura Developer Tools](https://dev
 To get started, let's review the foundational building blocks of a video experience. 
 
 ## Your Kaltura Account ID (PartnerId)  
-
 Your Kaltura Partner ID, or PID, is a unique number that identifies your Kaltura account.  
 Your PID is easily available at any time through the Kaltura Management Console (KMC), by simply clicking the [Account Settings tab](https://www.kaltura.com/index.php/kmc/kmc#account|overview).  
 > Remember: You will need to pass the PID parameter every time you authenticate with the Kaltura API, or connect with integrated applications.
@@ -27,7 +25,7 @@ The Kaltura API is [stateless](https://en.wikipedia.org/wiki/Stateless_protocol)
 There are three methods for generating a Kaltura Session:
 
 * Calling the [session.start action](https://developer.kaltura.com/api-docs/#/session.start): This method is recommended for scripts and applications to which you alone will have access.
-* Calling [user.loginByLoginId action](https://developer.kaltura.com/api-docs/#/user.loginByLoginId): This method is recommended for managing registered users in Kaltura, and allowing users to log in using email and password. When you log in to the KMC, the KMC application calls the user.loginByLoginId action to authenticate you using your registered email and password.
+* Calling the [user.loginByLoginId action](https://developer.kaltura.com/api-docs/#/user.loginByLoginId): This method is recommended for managing registered users in Kaltura, and allowing users to log in using email and password. When you log in to the KMC, the KMC application calls the user.loginByLoginId action to authenticate you using your registered email and password.
 * Using the [appToken service](https://developer.kaltura.com/api-docs/#/appToken): This method is recommended when providing access to scripts or applications that are managed by others; this method provides tools to manage API tokens per application provider, revoke access to specific applications, and more.
 
 > To learn more about the Kaltura Session, its algorithm, guidelines and options read the [Kaltura API Authentication and Security article](https://knowledge.kaltura.com/node/229).
@@ -54,21 +52,18 @@ For a quick view of how this method works:
 
 ### Upload Files by Calling the API Directly  
 
-Uploading a file directly via the REST API requires knowledge of handling files in your preferred programming language.  
-The [Kaltura Client Libraries](https://developer.kaltura.com/api-docs/#/Client%20Libraries) simplify constructing the REST API calls to Kaltura and provide a simple API for a simple file upload request.  
-However, if you'd like to support chunked file upload and pause-resume in your application, you will need to handle the file-chunking according to your preferred programming language standards.
+Uploading a file directly via the REST API requires knowledge of handling files in your preferred programming language. The [Kaltura Client Libraries](https://developer.kaltura.com/api-docs/#/Client%20Libraries) simplify constructing the REST API calls to Kaltura and provide a simple API for a simple file upload request. However, if you'd like to support chunked file upload and pause-resume in your application, you will need to handle the file-chunking according to your preferred programming language standards.
 
-> If you're using Java, follow the information in the article on [chunked uploads in the Java reference implementation](https://github.com/kaltura/Sample-Kaltura-Chunked-Upload-Java) to achieve chunked file upload in your Java application.
+> If you're using Java, to achieve a chunked file upload in your Java application follow the information in [chunked uploads in the Java reference implementation](https://github.com/kaltura/Sample-Kaltura-Chunked-Upload-Java).
 
-Follow the recipe below to learn how to use the file upload API:
+To learn how to use the file upload API, follow the recipe below:
 
 {% onebox https://developer.kaltura.com/recipes/upload/embed#/start %}
 
 ## Working with Media Entries  
-
 After uploading your file, you will have created a [KalturaMediaEntry](https://developer.kaltura.com/api-docs/#/KalturaMediaEntry) object by calling the [media.add](https://developer.kaltura.com/api-docs/#/media.add) action, and then assigned the uploaded file to this media entry by calling the [media.addContent](https://developer.kaltura.com/api-docs/#/media.addContent) action.
 
-Now that you have content in your account, you will want to implement a library search in order to create galleries or search for media discovery. The main service you will be working with is the [media service](https://developer.kaltura.com/api-docs/#/media).
+Now that you have content in your account, you will want to implement a library search to create galleries or search for media discovery. The main service you will be working with is the [media service](https://developer.kaltura.com/api-docs/#/media).
 
 ### Searching Entries - media.list  
 Note that you can combine several filter parameters together to further narrow down your search results. 
