@@ -29,7 +29,7 @@ With a category structure in place, use the [`categoryEntry service`](https://ww
 
 When entitlements are used, categories offer control over user-access to content. In this case, use the [`CategoryUser service`](https://www.kaltura.com/api_v3/testmeDoc/index.php?service=categoryUser) to add, delete and move users in and out of categories. 
 
-> Entitlements workflows are covered in detail [here](#)
+> Entitlements workflows are covered in detail [here](#).
 
 In the service examples above, there are several more actions that can be applied, so make sure to take a look at the links for more information.
 
