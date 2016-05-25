@@ -9,8 +9,9 @@ The Kaltura Player architecture uses plugins to extend the Player functionality.
 Plugins communicate with the Player using the Player's API. Plugins also have direct access to the Player core engine and a dedicated interface to access and change the Player UI. Additionally, plugins can utilize the Player ability to communicate with the Kaltura platform API, thus gaining access to the Kaltura platform services.    
 
 To learm more about how to utilize the Player plugins, we recommend reading the following articles about the existing core Player plugins: 
-* Turning plugins on and off and configuring plugin properties using the {% extlink Player Studio http://knowledge.kaltura.com/universal-studio-information-guide &}.
-* Plugins in action in our {% extlink player demo pages http://player.kaltura.com/docs/chaptersView %}. 
+
+* Turning plugins on and off and configuring plugin properties using the [Player Studio](http://knowledge.kaltura.com/universal-studio-information-guide)
+* Viewing plugins in action in our [Player demo pages](http://player.kaltura.com/docs/chaptersView)
 
 
 ## Considerations When Creating Player Plugins
