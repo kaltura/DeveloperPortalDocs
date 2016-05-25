@@ -9,7 +9,7 @@ weight: 260
 
 This article describes how to use the iOS Player API base methods to manage properties, events, and notifications. 
 
-## Using the Kaltura iOS player API Base Methods
+## Using the Kaltura iOS Player API Base Methods
 You can access the entire Player API through methods that enable the following functions.
 
 * Listen and respond to Player events (addJsListener/removeJsListener): Enables you to react to internal player events, such as beginning, playing, and pausing:
@@ -97,7 +97,7 @@ You can access the entire Player API through methods that enable the following f
 
 ```
 
-## Receiving Notification when the Player API Is Ready
+## Receiving a Notification when the Player API is Ready
 To receive a notification when the Player API is ready, use the following objective:
 
 ```objective_c
