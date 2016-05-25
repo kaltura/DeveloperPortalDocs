@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Player Plugin Overview
+title: Using Player Plugin
 weight: 110
 ---
 
