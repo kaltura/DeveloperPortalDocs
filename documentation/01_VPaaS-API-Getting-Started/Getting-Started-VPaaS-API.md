@@ -14,27 +14,27 @@ To get started, let's review the foundational building blocks of a video experie
 
 ## Your Kaltura Account ID (PartnerId)  
 
-Your Kaltura Partner ID, or PID, is a unique number identifying your Kaltura account.  
+Your Kaltura Partner ID, or PID, is a unique number that identifies your Kaltura account.  
 Your PID is easily available at any time through the Kaltura Management Console (KMC), by simply clicking the [Account Settings tab](https://www.kaltura.com/index.php/kmc/kmc#account|overview).  
 > Remember: You will need to pass the PID parameter every time you authenticate with the Kaltura API, or connect with integrated applications.
 
 ## Creating a Kaltura Session  
 
-The Kaltura API is [stateless](https://en.wikipedia.org/wiki/Stateless_protocol), which means that every request made to the Kaltura API requires an authenticated session string to be passed along with your request. This is the Kaltura Session (KS), which identifies the Kaltura account and user for which the executed API action is to be executed. The KS can also specify various permissions and configurations, such as setting the role of the user dynamically, setting the time duration for the session, and more. 
-> Remember: For every API call you make, you will need to provide a generated KS. 
+The Kaltura API is [stateless](https://en.wikipedia.org/wiki/Stateless_protocol), which means that every request made to the Kaltura API requires an authenticated session string to be passed along with your request. This is the Kaltura Session, which identifies the Kaltura account and user for which the executed API action is to be executed. The Kaltura Session can also specify various permissions and configurations, such as setting the role of the user dynamically, setting the time duration for the session, and more. 
+> Remember: For every API call you make, you will need to provide a generated Kaltura Session. 
 
-### Methods for Creating a Kaltura Session  
+### Methods for Generating a Kaltura Session  
 There are three methods for generating a Kaltura Session:
 
 * Calling the [session.start action](https://developer.kaltura.com/api-docs/#/session.start): This method is recommended for scripts and applications to which you alone will have access.
 * Calling [user.loginByLoginId action](https://developer.kaltura.com/api-docs/#/user.loginByLoginId): This method is recommended for managing registered users in Kaltura, and allowing users to log in using email and password. When you log in to the KMC, the KMC application calls the user.loginByLoginId action to authenticate you using your registered email and password.
-* Using the [appToken service](https://developer.kaltura.com/api-docs/#/appToken): This method is recommended providing access to scripts or applications that are managed by others; this method provides tools to manage API tokens per application provider, revoke access to specific applications, and more.
+* Using the [appToken service](https://developer.kaltura.com/api-docs/#/appToken): This method is recommended when providing access to scripts or applications that are managed by others; this method provides tools to manage API tokens per application provider, revoke access to specific applications, and more.
 
 > To learn more about the Kaltura Session, its algorithm, guidelines and options read the [Kaltura API Authentication and Security article](https://knowledge.kaltura.com/node/229).
 
-## Uploading your Media Files  
+## Uploading Your Media Files  
 
-Media files are uploaded to Kaltura through [CORS enabled](https://www.w3.org/wiki/CORS_Enabled) REST API.  
+Media files are uploaded to Kaltura through [CORS-enabled](https://www.w3.org/wiki/CORS_Enabled) REST API.  
 You can implement an upload flow by using a Kaltura tested JavaScript widget for web pages, or by implementing direct calls to the API.  
 Alternatively, Kaltura also provides methods for bulk-ingest and import of content. To learn more, read the [Kaltura Bulk Content Ingestion API article](https://vpaas.kaltura.com/documentation/02_Media-Ingest-and-Preperation/Bulk-Content-Ingestion.html).
 
@@ -44,11 +44,10 @@ Which method you chose to implement depends on your application needs. The follo
 
 ### Upload Files Using JavaScript with the jQuery Upload Widget  
 
-If your application is HTML5 based, you can implement a reliable and fault tolerant large-files upload with an automatic pause-and-resume functionality by simply including and using the Kaltura Upload JavaScript widget.
-The [Kaltura Upload JavaScript widget](https://github.com/kaltura/chunked-file-upload-jquery) provides a simple JavaScript library that abstracts the use of the Kaltura API, as well as handling the files locally (such as file chunking and pause-resume).
+If your application is HTML5 based, you can implement a reliable and fault-tolerant large-files upload with an automatic pause-and-resume functionality, by including the Kaltura Upload JavaScript widget. The [Kaltura Upload JavaScript widget](https://github.com/kaltura/chunked-file-upload-jquery) provides a simple JavaScript library that abstracts the use of the Kaltura API and handles the files locally (such as file chunking and pause-resume).
 
 The [Kaltura Upload jQuery project](https://github.com/kaltura/chunked-file-upload-jquery) can be used as reference or basis to implement your own reliable chunked file upload to Kaltura.  
-For a quick view of how this method works -  
+For a quick view of how this method works:
 
 1. Download the project to your localhost, edit the index.php file, and switch the value of $the_user_ks_to_use to a valid Kaltura Session. 
 2. Next, load the page from your localhost, open your browser console and try uploading a file. You'll see all the steps printed to the browser console.
