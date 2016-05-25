@@ -12,8 +12,10 @@ The guides on this site, together with the [Kaltura Developer Tools](https://dev
 To get started, let's review the foundational building blocks of a video experience. 
 
 ## Your Kaltura Account ID (PartnerId)  
+
 Your Kaltura Partner ID, or PID, is a unique number that identifies your Kaltura account.  
 Your PID is easily available at any time through the Kaltura Management Console (KMC), by simply clicking the [Account Settings tab](https://www.kaltura.com/index.php/kmc/kmc#account|overview).  
+
 > Remember: You will need to pass the PID parameter every time you authenticate with the Kaltura API, or connect with integrated applications.
 
 ## Creating a Kaltura Session  
@@ -22,6 +24,7 @@ The Kaltura API is [stateless](https://en.wikipedia.org/wiki/Stateless_protocol)
 > Remember: For every API call you make, you will need to provide a generated Kaltura Session. 
 
 ### Methods for Generating a Kaltura Session  
+
 There are three methods for generating a Kaltura Session:
 
 * Calling the [session.start action](https://developer.kaltura.com/api-docs/#/session.start): This method is recommended for scripts and applications to which you alone will have access.
@@ -61,23 +64,28 @@ To learn how to use the file upload API, follow the recipe below:
 {% onebox https://developer.kaltura.com/recipes/upload/embed#/start %}
 
 ## Working with Media Entries  
+
 After uploading your file, you will have created a [KalturaMediaEntry](https://developer.kaltura.com/api-docs/#/KalturaMediaEntry) object by calling the [media.add](https://developer.kaltura.com/api-docs/#/media.add) action, and then assigned the uploaded file to this media entry by calling the [media.addContent](https://developer.kaltura.com/api-docs/#/media.addContent) action.
 
 Now that you have content in your account, you will want to implement a library search to create galleries or search for media discovery. The main service you will be working with is the [media service](https://developer.kaltura.com/api-docs/#/media).
 
 ### Searching Entries - media.list  
+
 Note that you can combine several filter parameters together to further narrow down your search results. 
 
 {% onebox https://developer.kaltura.com/recipes/video_search/embed#/start %}
 
 ### Retrieving Entry Details - media.get  
+
 To retrieve the data of an object using its ID, call the object's `get` action. With media entries, call the [`media.get`](https://developer.kaltura.com/api-docs/#/media.get) action to retrieve the data of a specific entry.
 
 ### Updating Entry Details - media.update  
+
 To update any object in Kaltura's VPaaS, use the `update` action. 
 To update media entries, call the [`media.update`](https://developer.kaltura.com/api-docs/#/media.update) action by providing an instance of the `KalturaMediaEntry` object.   
 
 Additionally, media entries in Kaltura have several related objects, including: 
+
 * [captionAsset](https://developer.kaltura.com/api-docs/#/captionAsset) for caption files
 * [thumbAsset](https://developer.kaltura.com/api-docs/#/thumbAsset) for editorial thumbnails
 * [access control](https://developer.kaltura.com/api-docs/#/accessControl) profiles to set rules that allow or deny access to the media
@@ -107,7 +115,7 @@ The result of the thumbnail API is a JPEG image with one or more of the followin
 * Preparation of Imahe Stripes for animating thumbnails via CSS
 * And more.
 
-Read more about the [Dynamic Thumbnail API](knowledge.kaltura.com/kaltura-thumbnail-api) and explore the [Thumbnail Animation with CSS Stripes Code Recipe](https://developer.kaltura.com/recipes/dynamic_thumbnails).
+> Read more about the [Dynamic Thumbnail API](knowledge.kaltura.com/kaltura-thumbnail-api) and explore the [Thumbnail Animation with CSS Stripes Code Recipe](https://developer.kaltura.com/recipes/dynamic_thumbnails).
 
 
 ## Embed and Customize Your Video Player  
