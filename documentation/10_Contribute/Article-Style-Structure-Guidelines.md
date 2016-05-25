@@ -65,6 +65,11 @@ The table above, will be generated as:
 
 You can also use: [TablesGenerator.com](http://www.tablesgenerator.com/markdown_tables).
 
+## Adding Images
+
+Use the standard Markdown notation for images (`![Alt Text](url)`).  
+Please always ensure that a descriptive Alt text is specified on your image to ensure compatability with screen readers and better search indexing.  
+
 ## Adding diagrams
 &#123;% plantuml %&#125;
 
