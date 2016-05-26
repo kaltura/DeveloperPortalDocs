@@ -7,9 +7,15 @@ weight: 280
 
 [![iOS](https://img.shields.io/badge/iOS-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios) 
 
+This article describes the steps required to use Google ads in iOS devices.
+
+## Linking Google to the iOS Device  
+
+To enable Google Ads in iOS devices for the Kaltura Player, you will need to link Google to the iOS devices. To 
 When linking Google in iOS devices for the Kaltura Player, there are a number of different options, which are described below.
 
 ## Using Cocoapods  
+
 To link Google ads using Cocoapods, add these two pods to your podfile:
 
 ```
