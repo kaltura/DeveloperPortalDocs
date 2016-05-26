@@ -7,11 +7,10 @@ weight: 120
 [![iOS](https://img.shields.io/badge/iOS-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios) 
 [![Android](https://img.shields.io/badge/Android-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios)
 
-In this article you'll find the supported Player plugins in the Player-SDK.
+The Player-SDK provides an extensive selection of supported Player plugins. These plugins can be included via the Player studio by simply editing the **uiconf** object or changing the configuration in the **config** object.
 
-All plugins can be included using the Player studio by simply editing the **uiconf** object or changing the configuration in the **config** object.
+The following is a list of supported Player plugins:
 
----
 
 | Plugin  | Desciption | iOS  | Android |
 |:------------- |:------------- |:---------------:| :-------------:|
