@@ -35,10 +35,12 @@ The following DRM schemes are supported in iOS devices:
 * Online and offline playback
 
 ## Known Limitations
-* Android:
-	* Widevine Classic files cannot be served over http**s**.
-* iOS:
-	* Widevine Classic requires that iOS ATS be disabled for localhost URLs.
+* Widevine Classic
+	* Can't play on the iOS Simulator or Android Emulator
+	* iOS: ATS must be disabled for localhost URLs
+	* Android: files can't be served over https (SSL)
+* FairPlay
+	* Can't play on the iOS Simulator
 
 ## DRM Server
 The Player SDK must communicate with a license server in order to get the license, for both online
