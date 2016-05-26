@@ -7,21 +7,22 @@ weight: 190
 ---
 
 [![Android](https://img.shields.io/badge/Android-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios)
-## Using the Kaltura Android Player API Methods  
 
 This article describes how to use the Android Player API methods to manage properties, events, and notifications. 
 
 ### Android API Events and Hooks  
+
 The Android API supports the following events and hooks.
 
 #### KMediaControl  
-The SDK offeres the ability to perform Player operation via the KMediaControl API.
-You may send the following operations:
+
+The SDK offeres the ability to perform Player operations using the KMediaControl API.
+This API enables you to send the following operations:
   
 
-| Operation  | Parameters  | Explanation |
-|:------------- |:---------------:| :-------------|
-| start     |  | Start playing the media         | 
+| Operation | Parameters | Explanation |  
+|:-------------  |:----------  |:---------- |
+|start      |   | Start playing the media  |  
 | pause     |  | Pause the current playback         | 
 | seek     | (long milliSeconds) | Seek a specific time position          | 
 | seek     | (long milliSeconds, SeekCallback callback) | Seek a specific time position and call callback to be called when seek is done         |
@@ -34,9 +35,8 @@ You may send the following operations:
 | getCurrentPosition     |  | Get the current media position         |
 | state     |  | Get the current Player state         |
 
-***
+
 * Example: Play/Pause button
-***
 
 For each native component listener, add one of the operations above.
 
@@ -54,9 +54,8 @@ For each native component listener, add one of the operations above.
     
 ```    
 
-***
+
 * Example: Seek
-***
 
 For each native component listener, add one of the operations above.
 
@@ -75,7 +74,7 @@ For each native component listener, add one of the operations above.
 
 ### Player States Event Listeners  
 
-The Kaltura Player supports the follwing states that the developer can listen to and react upon their change:
+The Kaltura Player supports the following states, to which the developer can listen to and react to changes in the state:
     
     - LOADED
     - READY
@@ -87,7 +86,7 @@ The Kaltura Player supports the follwing states that the developer can listen to
     - UNKNOWN
  
  
-* Example: Listen to state changed event
+* Example: Listening to state change events
     
 ``` java     
     @Override
@@ -101,9 +100,10 @@ The Kaltura Player supports the follwing states that the developer can listen to
 ``` 
 
 ### Waiting for a READY Event  
+
 In some cases, the end user will want to wait until the ready event is received and only then to continue.
 
-* Example: Listen to ready state event
+* Example: Listening to ready state events
 
 ``` java  
  mPlayer.registerReadyEvent(new PlayerViewController.ReadyEventListener() {
@@ -118,6 +118,7 @@ In some cases, the end user will want to wait until the ready event is received 
 ```       
 
 ### Enable/Diable Configuration on Runtime  
+
 In some cases, the application will want to add or remove configuration attributes according to states or events that are received.
 The Player provides an API for enabling and disabling these settings, the setKDPAttribute, which receives three parameters:
 
@@ -125,7 +126,7 @@ The Player provides an API for enabling and disabling these settings, the setKDP
 - attribute name
 - enable/disabe (boolean)
     
-* Example: Adding closed caption plugin
+* Example: Adding a closed caption plugin
 
 ``` java 
 
@@ -139,12 +140,12 @@ if (state.equals(KPlayerState.PLAYING)){
 
 ### Player Event Listeners  
 
-If the application is required to react to web events, add the "mPlayerView.addKPlayerEventListener".
+If you want the application to react to web events, add the function "mPlayerView.addKPlayerEventListener".
 
 See [Supported Events](https://vpaas.kaltura.com/documentation/04_Web-Video-Player/Kaltura-Media-Player-API.html#commonly-used-player-events) for information about the types of supported events.
 
 
-* Example: Listen to show play controls event
+* Example: Listening to a show play controls event
 
 ``` java
  mPlayerView.addKPlayerEventListener("showPlayerControls", "showPlayerControls", new PlayerViewController.EventListener() {
@@ -158,7 +159,7 @@ See [Supported Events](https://vpaas.kaltura.com/documentation/04_Web-Video-Play
  
 ### Sending Event Notifications
 
-To change the current player behavoir, use the sendNotification API. This method receives two parameters:
+To change the current player behavior, use the sendNotification API. This method receives two parameters:
   - action name
   - parameter (string/json)  
 
