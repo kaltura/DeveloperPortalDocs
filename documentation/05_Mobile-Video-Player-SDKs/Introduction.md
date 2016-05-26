@@ -4,7 +4,9 @@ title: Kaltura Mobile SDK Introduction
 weight: 100
 ---
 
-The Kaltura Mobile SDKs for iOS and Android provide the framework and tools to help you easily embed the [Kaltura Video Player](http://player.kaltura.com/) into native environments in your iOS or Android applications, without having to build a Player UI, plugins, or capabilities from scratch. The same web media Player, easily customized via HTML5, CSS and JS, along with your plugins and themes loaded natively in your application, and seamlessly switching playback engines based on the best available device media APIs.
+The Kaltura Mobile SDKs for iOS and Android provide the framework and tools to help you easily embed the [Kaltura Video Player](http://player.kaltura.com/) into native environments in your iOS or Android applications, without having to build a Player UI, plugins, or capabilities from scratch. 
+
+The SDK is essentially a native (i.e., Java or ObjectiveC-based code) wrapper that loads the same Kaltura web Player inside a WebView. This means that the Player is the **same** Player - including all of all the customizations, themes, and plugins that are used on your website or web application - that is also being used in your native mobile application. When the Player loads inside your native application, it automatically (seamlessly) decides which is the best playback engine to leverage for playback (e.g., the native Media API of the device, a DRM provider’s API, etc.). This seamless behavior simplifies how you, the developer, build mobile video applications, by saving you the need to address video playback optimization, security or worry about maintaining the same UI across devices and platforms.
 
 The Kaltura Player SDK for iOS and Android supports:  
 
@@ -17,7 +19,7 @@ The Kaltura Player SDK for iOS and Android supports:
 
 and more...
 
-## The Mobile SDKs Architecture Overview  
+## The Mobile SDK's Architecture Overview  
 The Kaltura Player's architecture is designed to allow for a seamless integration experience, enabling you to connect mutltiple playback engines and platforms. The Player wraps the playback engine with the same interface and events, thereby allowing the same plugin code to work across multiple platforms, including iOS, Android, and web.  
 
 Each platform supports different types of streaming capabilites and DRMs, allowing the Player to choose the best streaming technologies and DRM as needed. Plugins can be used with or without the UI, and can work crossplatform. Some plugins require native support, such as Chromecast, DRM and ads. The Player-SDK provides the DRM, Chromecast, and ads features out-of-the-box.  
