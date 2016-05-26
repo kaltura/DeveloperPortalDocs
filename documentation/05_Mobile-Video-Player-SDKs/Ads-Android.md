@@ -7,11 +7,7 @@ weight: 210
 
 [![Android](https://img.shields.io/badge/Android-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios)
 
-This article explains how to configure the Player to use Google ads Android devices.
-
-## Configuring the Player  
-
-To configure the Player, add the following to your `KPPlayerConfig`:
+To configure the Player to use Google ads Android devices, add the following to your `KPPlayerConfig`:
 
 ```
 config.addConfig("doubleClick.plugin", "true");
