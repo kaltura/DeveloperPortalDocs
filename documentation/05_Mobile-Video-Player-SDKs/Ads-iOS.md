@@ -7,7 +7,7 @@ weight: 280
 
 [![iOS](https://img.shields.io/badge/iOS-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios) 
 
-This article describes the different options for linking Google in iOS devices for the Kaltura Player.
+When linking Google in iOS devices for the Kaltura Player, there are a number of different options, which are described below.
 
 ## Using Cocoapods  
 To link Google ads using Cocoapods, add these two pods to your podfile:
@@ -18,6 +18,7 @@ pod 'GoogleAds-IMA-iOS-SDK'
 ```
 
 ## Linking to GoogleInteractiveMediaAds SDK  
+
 To link to Google ads using the GoogleInteractiveMediaAds SDK:
  1. Download **`GoogleMobileAds`** from: {% extlink Admob https://developers.google.com/admob/ios/download %} and add it to your project
  2. In addition to the **`GoogleMobileAds`** you will need to download **`GoogleInteractiveMediaAds`** from: {% extlink IMA SDK https://developers.google.com/interactive-media-ads/docs/sdks/ios/download %}.
@@ -41,6 +42,7 @@ To configure the Player to use Google ads, add the following configuration to yo
 ```
 
 ## Listening to Ad Events  
+
 To listen to ad events, use the following [Ads event test page](http://player.kaltura.com/modules/DoubleClick/tests/DoubleClickAdEvents.qunit.html).
 
 To view list of commonly used Player ad events, click [here](https://vpaas.kaltura.com/documentation/04_Web-Video-Player/Kaltura-Media-Player-API.html).
