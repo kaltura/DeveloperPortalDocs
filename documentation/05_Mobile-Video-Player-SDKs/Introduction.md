@@ -24,7 +24,7 @@ The Kaltura Player's architecture is designed to allow for a seamless integratio
 
 Each platform supports different types of streaming capabilites and DRMs, allowing the Player to choose the best streaming technologies and DRM as needed. Plugins can be used with or without the UI, and can work crossplatform. Some plugins require native support, such as Chromecast, DRM and ads. The Player-SDK provides the DRM, Chromecast, and ads features out-of-the-box.  
 
-The Player expose APIs - both basic API and common - for all platforms. If you are an iOS developer and you have already worked with AVFoundation, you should expect the same API as if you used the native player API.  
+The Player exposes APIs - both basic APIs and common - for all platforms. If you are an iOS developer and you have already worked with AVFoundation, you should expect the same API as if you used the native player API.  
 
 The Player API supports sending notifications to the Player, listening to events, and evaulating properties. 
 
