@@ -7,11 +7,11 @@ weight: 150
 [![iOS](https://img.shields.io/badge/iOS-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios) 
 [![Android](https://img.shields.io/badge/Android-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-android)
 
-The native mobile SDKs (Android and iOS) allow applications to play downloaded content when the device is offline. n addition, DRM-protected content must be registered with the SDK immediately after download, while the device is still online. Read this article to learn how to configure offline playback and to use downloaded files with the Player.
+The native mobile SDKs (Android and iOS) allow applications to play downloaded content when the device is offline. Read this article to learn how to configure offline playback and to use downloaded files with the Player.
 
 > Note: The SDK **does not** provide the download function or the download URL. This should be provided by the application.
 
-Implementing Offline Playback  
+## Implementing Offline Playback
 
 From the application's point-of-view, there are three parts to implementing offline playback:
 
