@@ -47,10 +47,10 @@ The clean way to add Markdown tables is as follow:
 
 ```
   
-| HCell | Header Cell Middle | HCell Align-Right |
-|:----- |:------------------:|------------------:|
-| Body  | Body               | Body              |
-| Body  | Body               | Body              |
+| HCell        | Header Cell Middle | HCell Align-Right |
+|:------------ |:------------------:|------------------:|
+| 1 line body  | text               | more txt          |
+| 2 line body  | some text          | other txt         |
   
 ```
 
@@ -60,10 +60,10 @@ Lastly - always ensure that there is a an empty line above and below each table.
  
 The table above, will be generated as:
 
-| HCell | Header Cell Middle | HCell Align-Right |
-|:----- |:------------------:|------------------:|
-| Body  | Body               | Body              |
-| Body  | Body               | Body              |
+| HCell        | Header Cell Middle | HCell Align-Right |
+|:------------ |:------------------:|------------------:|
+| 1 line body  | text               | more txt          |
+| 2 line body  | some text          | other txt         |
 
 You can also use: [TablesGenerator.com](http://www.tablesgenerator.com/markdown_tables).
 
