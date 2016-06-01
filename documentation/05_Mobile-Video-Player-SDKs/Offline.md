@@ -52,6 +52,7 @@ if required.
 ##### Local Content ID  
 
 The `entryConfig` object provided must include an additional field that is not used when streaming: `localContentId`. This unique string is used to map registration information to playback. The same unique string must be provided for both registration and playback.
+> Note: localContentId must **not** be set for online playback.
 
 #### Check Status  
 
@@ -62,7 +63,7 @@ assets.
 
 If possible, refresh the metadata obtained in `Register`, including the DRM license.
 
-#### Unregister  
+#### Unregister
 
 The application notifies the SDK that it has deleted the asset. The SDK cleans up related resources.
 
