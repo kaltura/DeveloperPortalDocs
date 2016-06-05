@@ -15,9 +15,9 @@ This article describes how to save the Player state when the application moves t
 
 1. In the onPause() method, call: `mPlayer.releaseAndSavePosition(boolean shouldRestoreState)`. 
 Use `true` if you want to save the state and  `false` if you want to go back to the pause state.
-2. In the onResume() method, call : `mPlayer.resumePlayer()`
+2. In the onResume() method, call : `mPlayer.resumePlayer()`.
 
 ## Background State: Power Button  
 
-1. In the onPause() method, call : `mPlayer.pause()`
+1. In the onPause() method, call : `mPlayer.pause()`.
 2. In the onResume() method, call: `play()` or `pause()`, depending on the application's behavior.
