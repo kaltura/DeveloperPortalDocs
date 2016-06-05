@@ -83,13 +83,13 @@ Additional arguments:
 ### Asset Playback  
 
 To override the default (streaming) playback URL with a downloaded file, the application provides a delegate to the
-player.
+Player.
 
 * Android: Set `CustomSourceURLProvider` in `PlayerViewController` to an implementation of `PlayerViewController.SourceURLProvider`
 * iOS: Set `customSourceURLProvider` in `KPViewController` to an implementation of `KPSourceURLProvider`
 
 The delegate contains a single method that, given an entryId, returns an alternative (local) asset URL. If the method
-returns null, the player uses the default playback URL. The method is meant to be hooked to a Download Manager's
+returns null, the Player uses the default playback URL. The method is meant to be hooked to a Download Manager's
 lookup function.
 
 The Custom URL provider is called at the beginning of every playback. This allows the application to change
@@ -122,17 +122,16 @@ the following locations:
 
 ### Android  
 
-Store downloaded files in a directory returned by `context.getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS)` (or a subdirectory of it). This directory is owned by the application, is deleted on uninstall, and typically resides on a relatively large partition. In addition, starting with `KITKAT`, this directory does not require read/write permissions to the shared storage (`WRITE_EXTERNAL_STORAGE`).
+Store the downloaded files in a directory returned by `context.getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS)` (or in a subdirectory of the directory). This directory is owned by the application, is deleted on uninstall, and typically resides on a relatively large partition. In addition, starting with `KITKAT`, this directory does not require read/write permissions to the shared storage (`WRITE_EXTERNAL_STORAGE`).
 
 ### iOS  
-Per Apple's current recommendation, downloaded video files should be stored in a subdirectory of the application's *Documents* directory – `[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject]`:
+
+As per Apple's current recommendation, downloaded video files should be stored in a subdirectory of the application's *Documents* directory – `[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject]`:
 
 > Put user data in Documents/. User data generally includes any files you might want to expose to the user—anything you might want the user to create, import, delete or edit. For a drawing app, user data includes any graphic files the user might create. For a text editor, it includes the text files. **Video and audio apps may even include files that the user has downloaded to watch or listen to later**.
 
-The selected subdirectory **must** be excluded from backup.
+The selected subdirectory **must** be excluded from the backup.
 
 For more information, see the Apple guide: [File System Programming Guide > File System Basics > Where You Should Put Your App’s Files](https://developer.apple.com/library/ios/documentation/FileManagement/Conceptual/FileSystemProgrammingGuide/FileSystemOverview/FileSystemOverview.html#//apple_ref/doc/uid/TP40010672-CH2-SW28).
 
-## Known Issues  
-
-* The Player must be loaded at least once when the device is online before offline playback can work. This limitation will be resolved in a future version of the Player SDK. The initial online playback can be with any entry.
+> Known issue: The Player must be loaded at least once while the device is *online* before offline playback is enabled. This limitation will be resolved in a future version of the Player-SDK. This initial online playback can be performed with any entry.
