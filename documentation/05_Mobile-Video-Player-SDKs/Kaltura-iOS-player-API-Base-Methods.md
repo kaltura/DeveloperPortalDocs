@@ -9,10 +9,11 @@ weight: 260
 
 This article describes how to use the iOS Player API base methods to manage properties, events, and notifications. 
 
-## Using the Kaltura iOS Player API Base Methods
+## Accessing the Kaltura iOS Player API  
+
 You can access the entire Player API through methods that enable the following functions.
 
-* Listen and respond to Player events (addJsListener/removeJsListener): Enables you to react to internal player events, such as beginning, playing, and pausing:
+* Listen and respond to Player events (addJsListener/removeJsListener): Enables you to react to internal Player events, such as beginning, playing, and pausing.
 
 ```objective_c
 
@@ -43,7 +44,7 @@ You can access the entire Player API through methods that enable the following f
 
 ```
 
-* Invoke player actions (sendNotification): Enables you to tell the Player to do something, such as play or pause:
+* Invoke player actions (sendNotification): Enables you to tell the Player to do something, such as play or pause.
 
 ```objective_c
 
@@ -60,7 +61,7 @@ You can access the entire Player API through methods that enable the following f
 
 
 ```
-* Retrieve information in runtime (evaluate): Enables you to find out something about a Player, such as the media that is loaded in the Player and flashVars that the player passes:
+* Retrieve information in runtime (evaluate): Enables you to obtain information about a Player, such as the media that is loaded in the Player and the flashVars that the Player passes.
 
 ```objective_c
 
@@ -78,7 +79,7 @@ You can access the entire Player API through methods that enable the following f
 
 
 ```
-* Change Player attributes in runtime (setKDPAttribute): Modifies Player attributes, such as a label on a Player UI:
+* Change Player attributes in runtime (setKDPAttribute): Modifies Player attributes, such as a label on a Player UI.
 
 ```objective_c
 
@@ -97,7 +98,8 @@ You can access the entire Player API through methods that enable the following f
 
 ```
 
-## Receiving a Notification when the Player API is Ready
+## Receiving a Notification when the Player API is Ready  
+
 To receive a notification when the Player API is ready, use the following objective:
 
 ```objective_c
@@ -123,8 +125,9 @@ To receive a notification when the Player API is ready, use the following object
 
 ```
 
-## Using the Player API Base Methods
-To use the Player API base methods, use the following objective:
+## Implementing Player API Base Methods  
+
+To implement the Player API base methods, use the following objective:
 
 ```objective_c
 /*!
@@ -174,9 +177,9 @@ To use the Player API base methods, use the following objective:
 - (void)seek:(NSTimeInterval)playbackTime completionHandler:(void(^)())handler;
 ```
 
-## Player States
-The following are the available Player states. 
+## Player States  
 
+The following are the available Player states. 
 
 ### KPMediaPlaybackState
 
