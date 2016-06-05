@@ -8,9 +8,10 @@ weight: 290
 In this article we'll review device rotation and fullscreen versus inline.
 
 ## Default Full Screen  
-The best practice for embeding the Player in iOS is to use the container view.
 
-First, prepare the holder view for the Player as follows:
+The best practice for embedding the Player in iOS is to use the container view.
+
+1. First, prepare the holder view for the Player as follows:
 
 ![Register](images/playerHolder.png)
 
@@ -24,10 +25,12 @@ First, prepare the holder view for the Player as follows:
 ```
 
 The Player will adjust its size according to the _**`playerHolderView`**_. 
-When the Player enters full screen mode, the Player's view will add a subview to the top window. When the Player toggles back to normal mode, the Player's view will add the _**`playerHolderView`**_ as a subview.
+2. When the Player enters full screen mode, the Player's view will add a subview to the top window. 
+3. When the Player toggles back to normal mode, the Player's view will add the _**`playerHolderView`**_ as a subview.
 
-## Custom Full Screen
-If you want to set the full screen behaviour on your own, you will need to set the _**`fullScreenToggeled`**_ **Block**  as follows:
+## Custom Full Screen  
+
+If you want to set the full screen behavior on your own, you will need to set the _**`fullScreenToggeled`**_ **Block**  as follows:
 
 ```
 [self.player loadPlayerIntoViewController:self];
