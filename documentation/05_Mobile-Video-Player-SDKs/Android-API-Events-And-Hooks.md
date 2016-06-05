@@ -10,7 +10,7 @@ weight: 190
 
 This article describes how to use the Android Player API methods to manage properties, events, and notifications. 
 
-### Android API Events and Hooks  
+### API Events and Hooks  
 
 The Android API supports the following events and hooks.
 
