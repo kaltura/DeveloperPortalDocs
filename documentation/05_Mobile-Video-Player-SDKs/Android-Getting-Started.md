@@ -5,7 +5,7 @@ subcat: Android
 weight: 180
 ---
 
-To set up the Player-SDK for Android, you will need to take the following steps:
+To set up the Player-SDK for Android, follow these steps:
 
 1. First, clone the Android SDK and make sure that it resides in the **same** folder as your application:
 	```
