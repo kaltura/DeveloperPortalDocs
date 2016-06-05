@@ -7,34 +7,41 @@ weight: 140
 [![iOS](https://img.shields.io/badge/iOS-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios) 
 [![Android](https://img.shields.io/badge/Android-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-android)
 
-The Player SDK seamlessly supports playback of DRM content. Each platform supports a slightly different set of DRM schemes and features.
+The Player-SDK supports seamless playback of DRM content. Each platform supports a slightly different set of DRM schemes and features, which are detailed as follows.
 
-### DRM Support in Android Devices
+### DRM Support in Android Devices  
+
 The following DRM schemes are supported in Android devices:
 
-#### Widevine Modular
+#### Widevine Modular  
+
 * Supported in Android 4.3 and up
 * Online playback only
     * Offline playback will be supported in v2.6.0 of the Player SDK.
 
-#### Widevine Classic
+#### Widevine Classic  
+
 * Supported in Android 3.0 to 6.0, exclusive
     * Google no longer requires Widevine Classic support in Android 6.0 devices, but some devices still support it.
 * Online and offline playback
 
-### DRM Support in iOS Devices
+### DRM Support in iOS Devices  
+
 The following DRM schemes are supported in iOS devices:
 
-#### FairPlay
+#### FairPlay  
+
 * Supported in iOS versions 8 and up
 * Online playback only
     * A future version of FairPlay/iOS *may* support offline. [No commitment from Apple](https://forums.developer.apple.com/message/18444).
 
-#### Widevine Classic
+#### Widevine Classic  
+
 * Supported in iOS versions up to 10, exclusive
 * Online and offline playback
 
-## Known Limitations
+## Known Limitations  
+
 * Widevine Classic
 	* iOS: ATS must be disabled for localhost URLs
 	* Android: files can't be served over https (SSL)
@@ -45,8 +52,9 @@ The following DRM schemes are supported in iOS devices:
 	* *Widevine Modular* does not work on Android Emulator **with API level below 23**
 		* On emulators with API level 23, it is considered a level-3 (L3) device
 
-## DRM Server
-The Player SDK must communicate with a license server in order to get the license, for both online
+## DRM Server  
+
+The Player-SDK must communicate with a license server in order to get the license, for both online
 and offline playback. The API between the SDK and the server is a simple http POST, where all required
 identify/authorization parameters are provided in the query string.
 
@@ -54,10 +62,11 @@ The license URL is provided to the DRM client by `PlayerViewController`/`KPViewC
 mode (when playback is started), or by `LocalAssetManager`/`KPLocalAssetsManager` in offline mode (during
 asset registration/refresh).
 
-The following are the high level sequence diagrams. Please note that they are internal to the Player SDK, and are
+The following are the high level sequence diagrams. Please note that they are internal to the Player-SDK, and are
 provided here for informational purposes only.
 
-### Online
+### Online  
+
 {% plantuml %}
 
     @startuml
@@ -83,7 +92,8 @@ provided here for informational purposes only.
 
 {% endplantuml %}
 
-### Offline
+### Offline  
+
 {% plantuml %}
 
     @startuml
