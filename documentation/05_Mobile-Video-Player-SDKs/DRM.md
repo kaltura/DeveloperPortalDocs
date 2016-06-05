@@ -94,7 +94,7 @@ provided here for informational purposes only.
 
 ### Offline  
 
-{% plantuml %}
+    {% plantuml %}
 
     @startuml
     participant App
@@ -116,5 +116,5 @@ provided here for informational purposes only.
     LAM->App: registered()
     @enduml
 
-{% endplantuml %}
+    {% endplantuml %}
 
