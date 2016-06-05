@@ -9,15 +9,19 @@ weight: 300
 
 This article describes how to use the iOS plugin for the PIP feature.
 
-## How to Enable Background Modes
-You can enable support for 'Audio, AirPlay and Picture in Picture' from the Background modes section of the Capabilities tab in your Xcode project.
+## Enabling Background Modes  
+
+To enable support for Audio, AirPlay and Picture-in-Picture (PIP):
+
+Use the Background modes section of the Capabilities tab in your Xcode project.
 
 ![](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/Art/4_enablebackgroundmodes_2x.png)
 
-## How to Attach the 'pipBtn' Plugin to your `Config` Instance
+## Attaching the 'pipBtn' Plugin to your `Config` Instance  
+
 To attach the 'pipBtn' plugin to your `Config` instance:
 ```objective_c 
 [config addConfigKey:@"pipBtn.plugin" withValue:@"true"];
 ```
 
-**Note:** This feature is available from [Kaltura Player version 2.38](https://github.com/kaltura/mwEmbed/releases) and later.
+> Note: This feature is available from [Kaltura Player version 2.38](https://github.com/kaltura/mwEmbed/releases) and later.
