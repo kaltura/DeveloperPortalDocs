@@ -6,7 +6,7 @@ weight: 130
 
 [![iOS](https://img.shields.io/badge/iOS-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios) [![Android](https://img.shields.io/badge/Android-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios)
 
-One of the key features of the Player-SDK is the ability to use the HTML/CSS UI, which can work on all platforms [iOS/ Android/ Web].
+One of the key features of the Player-SDK is the ability to use the HTML/CSS UI, which can be used on all platforms - iOS, Android and Web.
 
 As a developer you can choose if you want to:
 
@@ -21,34 +21,33 @@ In this document you'll learn how to:
 * Attach custom plugins
 * Eliminate the UI and add native controls from the player
 
-**Note:** Before getting started, we recommend you read the following article on [configuring the Kaltura Media Player](https://vpaas.kaltura.com/documentation/04_Web-Video-Player/Player-Configuration.html). You should also verify that you have your Player configured via KMC.
+## Before You Begin  
 
-## How to Work with the Kaltura Player API
-The following article provides a detailed explanation on [accessing the iOS Player API base methods](https://vpaas.kaltura.com/documentation/05_Mobile-Video-Player-SDKs/Kaltura-iOS-player-API-Base-Methods.html).
+Before getting started, we recommend you read the following article on [configuring the Kaltura Media Player](https://vpaas.kaltura.com/documentation/04_Web-Video-Player/Player-Configuration.html). You should also verify that you have your Player configured via KMC.
 
+Additionally, the following article provides a detailed explanation on [accessing the iOS Player API base methods](https://vpaas.kaltura.com/documentation/05_Mobile-Video-Player-SDKs/Kaltura-iOS-player-API-Base-Methods.html).
 
-## Using the Kaltura Player Plugin
 To learm more about the Kaltura Player plugin and how it helps you to customize your Player, refer to the [Player Plugin Overview](https://vpaas.kaltura.com/documentation/05_Mobile-Video-Player-SDKs/Player-Plugin-Overview.html).
 
 
-## How to Remove html5 UI Controls
-Use these commands to remove the html5 UI controls
+## Removing html5 UI Controls  
+
+Use these commands to remove the html5 UI controls:
 
     [config addConfigKey:@"controlBarContainer.plugin" withValue:@"false"];
     [config addConfigKey:@"topBarContainer.plugin" withValue:@"false"];
     [config addConfigKey:@"largePlayBtn.plugin" withValue:@"false"];
     
-## How to Disable the HTML Spinner and Control it with a Custom Spinner
-To disable the HTML spinner and control it with a customer spinner, you will need to follow these configuration steps:
+## Disabling the HTML Spinner and Controlling it with a Custom Spinner  
 
-Configurations:
+To disable the HTML Spinner and control it with a customer spinner, you will need to follow these configuration steps:
 
-To disable the HTML spinner: disable "loadingSpinner.plugin" plugin
+* To disable the HTML spinner, use the disable "loadingSpinner.plugin":
 
 ```
 [config addConfigKey:@"loadingSpinner.plugin" withValue:@"false"];
 ```
-To start a buffering event: "onAddPlayerSpinner"
+* To start a buffering event, use "onAddPlayerSpinner":
 
 ```
 [self.player addKPlayerEventListener:@"onAddPlayerSpinner" eventID:@"onAddPlayerSpinner" handler:^(NSString  
@@ -57,7 +56,7 @@ To start a buffering event: "onAddPlayerSpinner"
     }];
 ```
 
-To stop a buffering event: "onRemovePlayerSpinner"
+* To stop a buffering event, use "onRemovePlayerSpinner":
 
 ```
 [self.player addKPlayerEventListener:@"onRemovePlayerSpinner" eventID:@"onRemovePlayerSpinner" 
