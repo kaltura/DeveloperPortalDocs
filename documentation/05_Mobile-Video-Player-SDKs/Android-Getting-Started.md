@@ -5,13 +5,13 @@ subcat: Android
 weight: 180
 ---
 
-## Getting Started 
+To set up the Player-SDK for Android, you will need to take the following steps:
 
-1. You will first need to clone the Android SDK and make sure that it resides in the same folder as your application:
+1. First, clone the Android SDK and make sure that it resides in the **same** folder as your application:
 	```
 	git clone https://github.com/kaltura/player-sdk-native-android.git
 	```
-2. Edit the ```Setting.gradle``` file as follows:
+2. Next, edit the ```Setting.gradle``` file as follows:
 
     ```
     include ':googlemediaframework'
@@ -27,7 +27,7 @@ weight: 180
 
 4. Make sure that you cloned the ```player-sdk-native-android``` project to the same folder of your project; if you prefer to clone it in another location, remember to update the ```settings.gradle``` with the relevant path.
 
-5. Right click your application folder and select ```Open Module Settings```.
+5. Right-click your application folder and select ```Open Module Settings```.
     ![OpenModuleSetting](./images/OpenModuleSetting.png)
 
 6. Select the ```Dependencies``` tab, click the ```+``` button and then choose the playerSDK as ```module dependency```.
