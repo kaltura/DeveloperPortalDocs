@@ -44,7 +44,7 @@ You can access the entire Player API through methods that enable the following f
 
 ```
 
-* Invoke player actions (sendNotification): Enables you to tell the Player to do something, such as play or pause.
+* Invoke player actions (sendNotification): Enables you to tell the Player to perform an action, such as play or pause media.
 
 ```objective_c
 
