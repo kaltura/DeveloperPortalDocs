@@ -130,7 +130,7 @@ As per Apple's current recommendation, downloaded video files should be stored i
 
 > Put user data in Documents/. User data generally includes any files you might want to expose to the user—anything you might want the user to create, import, delete or edit. For a drawing app, user data includes any graphic files the user might create. For a text editor, it includes the text files. **Video and audio apps may even include files that the user has downloaded to watch or listen to later**.
 
-The selected subdirectory **must** be excluded from the backup.
+The selected subdirectory [must be excluded from iCloud backup](https://developer.apple.com/library/ios/qa/qa1719/_index.html).
 
 For more information, see the Apple guide: [File System Programming Guide > File System Basics > Where You Should Put Your App’s Files](https://developer.apple.com/library/ios/documentation/FileManagement/Conceptual/FileSystemProgrammingGuide/FileSystemOverview/FileSystemOverview.html#//apple_ref/doc/uid/TP40010672-CH2-SW28).
 
