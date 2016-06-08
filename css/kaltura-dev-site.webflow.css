@@ -1686,9 +1686,8 @@ td {
 
 .radio-description {
   margin-top: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
   font-family: proxima-nova, sans-serif;
-  font-style: italic;
 }
 
 ._2nd-radio-field {
