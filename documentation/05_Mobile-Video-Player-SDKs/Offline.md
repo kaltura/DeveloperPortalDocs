@@ -115,6 +115,8 @@ the playback source dynamically. For example:
 
 As mentioned above, the `entryConfig` object must include the `localContentId` that was used during the registration of the same asset.
 
+> Note: the player must be loaded at least once while the device is *online* before offline playback is enabled. This limitation will be resolved in a future version of the Player-SDK. This initial online playback can be performed with any entry.
+
 ## Download Location Guidelines  
 
 Application developers are free to choose download locations, as allowed by the platform; however, Kaltura recommends
@@ -133,6 +135,3 @@ As per Apple's current recommendation, downloaded video files should be stored i
 The selected subdirectory [must be excluded from iCloud backup](https://developer.apple.com/library/ios/qa/qa1719/_index.html).
 
 For more information, see the Apple guide: [File System Programming Guide > File System Basics > Where You Should Put Your App’s Files](https://developer.apple.com/library/ios/documentation/FileManagement/Conceptual/FileSystemProgrammingGuide/FileSystemOverview/FileSystemOverview.html#//apple_ref/doc/uid/TP40010672-CH2-SW28).
-
-## Known issue
-* The Player must be loaded at least once while the device is *online* before offline playback is enabled. This limitation will be resolved in a future version of the Player-SDK. This initial online playback can be performed with any entry.
