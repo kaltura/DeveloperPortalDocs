@@ -152,7 +152,8 @@ Another customization option is to load an external CSS file that overrides the 
 
 ### Core Player Skins CSS Files  
 
-The following is a list of core Player skin CSS files:
+The following is a list of core Player skin CSS files:  
+
 | Skin name | Core CSS file |
 |:---|:---|
 | kdark	| https://github.com/kaltura/mwEmbed/blob/master/skins/kdark/css/layout.css |
