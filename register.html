@@ -11,20 +11,13 @@ layout: default
 	       </div>
         </div>
 
-<div class="account-type-div">
+<div >
     <div class="radio-description">Complete API access for all video workflows, player, widgets, SDKs, developer tools, forums &amp; Kaltura University. Create as many VPaaS Accounts as you need with centralized configuration &amp; consolidated billing across all accounts.</div>
-    <ul class="w-list-unstyled">
-        <li class="temp-list"><span class="feature-bullets fa fa-chevron-right"></span>Pay-As-You-Go. For full pricing details, visit our <a class="pricing-pg-inline-link" href="pricing.html">Pricing Page</a>
-        </li>
-        <li class="temp-list"><span class="feature-bullets fa fa-chevron-right"></span>$400/month VPaaS credit for the first 12 months following sign-up (subject to conditions listed on the <a class="pricing-pg-inline-link" href="/pricing.html">Pricing Page</a>)</li>
-        <li class="temp-list"><span class="feature-bullets fa fa-chevron-right"></span>You will be invoiced on a monthly basis for all usage generated via your VPaaS account(s) at the rates specified on the Pricing Page</li>
-        <li class="temp-list"><span class="feature-bullets fa fa-chevron-right"></span>You agree to receive invoices at the e-mail address you enter below</li>
-    </ul>
 </div>
 
 <div class="w-form">
 		
-    <form id="register-form" name="register-form" data-name="Register Form" action="https://vpaas.kaltura.com:8443/checkout2.php" method="post" onsubmit="return validate(event);">
+    <form id="register-form" name="register-form" data-name="Register Form" action="https://vpaas.kaltura.com:8443/post_register.php" method="post" onsubmit="return validate(event);">
 <div class="company-details-div">
 <div class="w-row form-row">
 <div class="w-col w-col-6">
@@ -49,20 +42,9 @@ layout: default
 <div class="w-row form-row">
     <div class="w-col w-col-6">
     <label for="title" class="form-labels">Job Title</label>
-    <input id="jobtitle" type="text"  name="jobtitle" required="required" class="w-input input-light">
+    <input id="jobtitle" type="text" name="jobtitle" class="w-input input-light">
     </div>
     <div class="w-col w-col-6">
-    <label for="Website" class="form-labels">Website</label>
-    <input id="website" type="text"  name="website" required="required" class="w-input input-light">
-    </div>
-</div>
-
-
-
-
-
-<div class="w-row form-row">
-<div class="w-col w-col-6">
 <label for="Industry" class="form-labels">Industry</label>
 <select id="industry" name="industry" required="required" data-name="Industry" class="w-select input-light">
 <option value="">Select one...</option>
@@ -87,92 +69,22 @@ layout: default
 <option value="Cloud, Hosting or Streaming Providers">Cloud, Hosting or Streaming Providers</option>
 <option value="Systems Integrator">Systems Integrator</option>
 </select>
-</div>
-<div class="w-col w-col-6">
-<label for="Contact-Phone" class="form-labels">Contact Phone</label><input id="contact-phone" type="text" placeholder="(XXX) XXX-XXXX" name="contact-phone" required="required" data-name="Contact Phone" class="w-input input-light">
-</div>
-</div>
-  <fieldset>
-      <legend class="billing-address form-labels">Billing Address:</legend>
-<div class="w-row form-row">
-    <div class="w-col w-col-6">
-    <label for="billing-street" class="form-labels">Street</label>
-    <input id="BillingStreet" type="text"  name="BillingStreet" required="required" class="w-input input-light">
-    </div>
-    <div class="w-col w-col-6">
-    <label for="billing-city" class="form-labels">City</label>
-    <input id="BillingCity" type="text"  name="BillingCity" required="required" class="w-input input-light">
     </div>
 </div>
-<div class="w-row form-row">
-    <div class="w-col w-col-6">
-<label for="country" class="form-labels">Country</label>
-<select id="country" name="country" onchange="populateState()" data-name="Country" required="required" class="w-select input-light">
-</select>
-    </div>
-<div class="w-col w-col-6" id="statediv" style="visibility:hidden;">
-    <label for="state" class="form-labels">State</label>
-    <select id="state" name="state" data-name="State" required="required" class="w-select input-light"></select>
-    <script type="text/javascript">initCountry(""); </script>
-</div>
-</div>
-<div class="w-row form-row">
-<div class="w-col w-col-6">
-<!--div class="form-group valid-row country-field">
-<label for="country" class="form-labels">Country</label>
-<select id="country" name="country" onchange="populateState()" data-name="Country" required="required" class="w-select input-light">
-</select>
-</div-->
-
-<div class="w-col w-col-6">
-    <label for="billing-postal" class="form-labels">Zip / Postal Code</label>
-    <input id="BillingPostalCode" type="text"  name="BillingPostalCode" required="required" class="w-input input-light">
-</div>
-
-  </fieldset>
 
 
-</div>
-<div class="w-row form-row">
-<div class="w-col w-col-6">
-<!--label for="Password" class="form-labels">Create a Password</label>
-<input id="Password" type="password" placeholder="**************" name="Password-1" data-name="Password 1" required="required" class="w-input input-light"-->
-</div>
-<div class="w-col w-col-6">
-<!--label for="Password" class="form-labels">Re-Type Your Password</label>
-<input id="Password" type="password" placeholder="**************" name="Password" required="required" data-name="Password" class="w-input input-light"-->
-</div>
-</div>
-<div class="w-row form-row no-column-padding">
-	<div class="g-recaptcha" data-sitekey="6Lf2bx8TAAAAAFiXASujAbfTnbBr7H6cqUbHLnnE"></div>
-</div>
+
+
+
 <div class="w-row form-row no-column-padding">
 <label for="Tel-us-what-you-are-building" class="form-labels">Tell Us About What You Are Building</label>
 <textarea id="description" placeholder="What are you building, tell us about your team, how does video fit into your application, etc." name="description" data-name="Tel us what you are building" required="required" class="w-input input-light"></textarea>
 </div>
+<div class="w-row form-row no-column-padding">
+	<div class="g-recaptcha" data-sitekey="6Lf2bx8TAAAAAFiXASujAbfTnbBr7H6cqUbHLnnE"></div>
+</div>
 </div>
 
-<!-- div class="account-type-div">
-<div class="w-radio w-clearfix">
-<input id="VPaaS Account" type="radio" name="Account-Type" value="VPaaS Account" data-name="Account Type" class="w-radio-input">
-<label for="VPaaS Account" class="w-form-label radio-label">VPaaS Account</label>
-</div>
-<div class="radio-description">Complete API access for all video workflows, player, widgets, SDKs, developer tools, Forums &amp; Kaltura University.</div>
-<ul class="w-list-unstyled">
-<li class="temp-list"><span class="feature-bullets fa fa-chevron-right"></span>Start Free (No Credit Card Required)</li>
-<li class="temp-list"><span class="feature-bullets fa fa-chevron-right"></span>Pay-As-You-Go</li>
-<li class="temp-list"><span class="feature-bullets fa fa-chevron-right"></span>$400 Monthly Credits for the 1st Year</li>
-</ul>
-<div class="w-radio w-clearfix _2nd-radio-field">
-<input id="Multi-Publisher Account" type="radio" name="Account-Type" value="Multi-Publisher Account" data-name="Multi-Publisher Account" class="w-radio-input">
-<label for="Multi-Publisher Account" class="w-form-label radio-label">Multi-Publisher Account</label>
-</div>
-<div class="radio-description">All the features of a VPaaS Account, plus get an API to create as many VPaaS Accounts as you need with centralized configuration &amp; consolidated billing across all accounts.</div>
-<ul class="w-list-unstyled">
-<li class="temp-list"><span class="feature-bullets fa fa-chevron-right"></span>Starting at $1,000 / Month + $33 / Month for Each Sub-Account</li>
-<li class="temp-list"><span class="feature-bullets fa fa-chevron-right"></span>$400 Monthly Credits for the 1st Year, Consolidated Across All Accounts</li>
-</ul>
-</div-->
 
 
 <div>
@@ -181,34 +93,22 @@ layout: default
 <label for="Terms-Checkbox" class="w-form-label">Terms &amp; Conditions</label>
 </div>
 </div>
-<p class="signup-body">By checking the box above, you acknowledge that you have read and that you agree to the Kaltura VPaaS Customer Agreement available at: <a class="terms-link" href="http://vpaas.kaltura.com/Kaltura_VPaaS_Customer_Agreement.pdf">http://vpaas.kaltura.com/Kaltura_VPaaS_Customer_Agreement.pdf</a>, the terms conditions described above, and the terms and conditions described on the Pricing Page.</p>
+    <ul class="w-list-unstyled">
+        <li class="temp-list"><span class="feature-bullets fa fa-chevron-right"></span>Pay-As-You-Go. For full pricing details, visit our <a class="pricing-pg-inline-link" href="pricing.html">Pricing Page</a>
+        </li>
+        <li class="temp-list"><span class="feature-bullets fa fa-chevron-right"></span>$400/month VPaaS credit for the first 12 months following sign-up (subject to conditions listed on the <a class="pricing-pg-inline-link" href="/pricing.html">Pricing Page</a>)</li>
+        <li class="temp-list"><span class="feature-bullets fa fa-chevron-right"></span>You will be invoiced on a monthly basis for all usage generated via your VPaaS account(s) at the rates specified on the Pricing Page</li>
+        <li class="temp-list"><span class="feature-bullets fa fa-chevron-right"></span>You agree to receive invoices at the e-mail address you have provided in the registration form</li>
+    </ul>
+<p class="signup-body">By checking the box above, you acknowledge that you have read and that you agree to the Kaltura VPaaS Customer Agreement available at: <a class="terms-link" href="http://vpaas.kaltura.com/Kaltura_VPaaS_Customer_Agreement.pdf">http://vpaas.kaltura.com/Kaltura_VPaaS_Customer_Agreement.pdf</a>, the terms and conditions described above, and the terms and conditions described on the <a class="pricing-pg-inline-link" href="/pricing.html">Pricing Page.</a></p>
 </div>
-<!--div id="payment-fields">
-</br>
-    <h3>Payment Options</h3>
-    <div id="payment-form"></div>
-</br>
-</div-->
 <div class="button-center-div">
 <input type="submit" id="submitButton" value="Submit" data-wait="Please wait..." data-ix="show-pick-account-type" class="w-button standard-button vpaas-signup-btn">
 </div>
 </form>
 <div class="w-form-done"><p>Thank you! Your submission has been received!</p></div>
 <div class="w-form-fail"><p>Oops! Something went wrong while submitting the form</p></div>
-<!--script src="https://js.braintreegateway.com/js/braintree-2.21.0.min.js"></script-->
 <script>
-$(document).ready(function () {
-	/*$("#submitButton").click(function () { 
-    		//if (validate()){
-			setTimeout(function () { disableButton(); }, 0);
-		//}
-	});  
-
-	function disableButton() {
-	    $("#submitButton").prop('disabled', true);
-	    $("#submitButton").prop('value', "We're creating your account, please wait...");
-	} */  
-}); 
 
 function validate(event)
 {
@@ -227,25 +127,6 @@ function validate(event)
 	    $("#submitButton").prop('value', "We're creating your account, please wait...");
 	return true;
 }
-
-/*$(document).ready(function(){
-	$('#payment-fields').hide();
-	$.ajax({
-	type: "POST",
-	url: "https://vpaas.kaltura.com:8443/get_token.php"
-	}).done(function(token) {
-	clientToken = token;
-		braintree.setup(clientToken, "dropin", {
-			container: "payment-form"
-		});  
-	});
-    $("input[id='Multi-Publisher Account']").change(function(){
-	$('#payment-fields').show();
-    });
-    $("input[id='VPaaS Account']").change(function(){
-	$('#payment-fields').hide();
-    });
-}); */
 
 </script>
 
