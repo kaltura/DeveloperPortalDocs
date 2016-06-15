@@ -24,12 +24,12 @@ Additionally, the following are specific steps you can take to improve your vide
 1.	https://developers.google.com/webmasters/videosearch/sitemaps
 2.	Create your video sitemap using the Syndication tab under Content in the Kaltura Management Console (direct link).
 
-NOTE: It can take up to 3 weeks for Google to index after you’ve made the needed changes. 
-Waiting period of 10 - 15 days before seeing the changes in Google’s search results is not uncommon.
+> Note: It can take up to three weeks for Google to index after you’ve made the needed changes. 
+A waiting period of 10 - 15 days before seeing the changes in Google’s search results is not uncommon.
 
 
-And another small tip for their overall SEO:
+Another small tip for overall SEO:
 * SSL is disabled on their domain; Google favors SSL enabled pages (https://webmasters.googleblog.com/2015/12/indexing-https-pages-by-default.html)
 
 Another tip for their social networks sharing:
-* I would make sure to add the Embed.ly player plugin (via the Player Studio).
+* Make sure to add the Embed.ly player plugin (via the Player Studio).
