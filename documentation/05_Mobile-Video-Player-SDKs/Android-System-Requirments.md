@@ -9,6 +9,7 @@ weight: 170
 
 To integrate the Kaltura Player Android SDK, the minimum system requirements are:
 
-* IDE: To integrate the Kaltura Android Player SDK, it is recomended to use AndroidStudio 2.0+.
-* Minimum OS version: Kaltura Android Player SDK supports 4.1+.
-
+* IDE: Android Studio 2.0 or later (see developer.android.com/sdk)
+* OS version: Android 4.1+.
+* Java JDK 7 or later (see www.oracle.com/downloads)
+* Android SDK and Android SDK Tools (install these from within Android Studio - see this [article](https://vpaas.kaltura.com/documentation/05_Mobile-Video-Player-SDKs/Android-Getting-Started.html) for details).
