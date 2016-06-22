@@ -2,7 +2,7 @@
 layout: page
 title: Android Player SDK System Requirements
 subcat: Android
-weight: 170
+weight: 370
 ---
 
 [![Android](https://img.shields.io/badge/Android-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios)
