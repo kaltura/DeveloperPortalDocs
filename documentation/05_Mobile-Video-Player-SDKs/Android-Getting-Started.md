@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Android Player SDK Getting Started 
+title: Android Player SDK and Environment Setup - Getting Started 
 subcat: Android
 weight: 180
 ---
