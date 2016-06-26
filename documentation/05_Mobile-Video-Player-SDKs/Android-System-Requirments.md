@@ -20,6 +20,6 @@ To integrate the Kaltura Player Android SDK, the minimum system requirements are
 Developers should have some background knowledge and experience with system setup before building Mobile SDK applications. 
 
 The required developer skillsets includes:
-* Familiarity with video delivery formats, ad delivery, DRM (when needed), login and passcode flows (these are essential for designing and debugging Mobile SDK apps).
+* Familiarity with video delivery formats, ad delivery, DRM (when needed), login and passcode flows (these are essential for designing and debugging Mobile SDK applications).
 * At least 1-2 years of experience with the relative coding language Java (for Android development)
 * Hybrid requirement: Proficiency in HTML5 and JavaScript languages.
