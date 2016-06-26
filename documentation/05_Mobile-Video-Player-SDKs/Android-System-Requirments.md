@@ -21,5 +21,5 @@ Developers should have some background knowledge and experience with system setu
 
 The required developer skillsets includes:
 * Familiarity with video delivery formats, ad delivery, DRM (when needed), login and passcode flows (these are essential for designing and debugging Mobile SDK apps).
-* At least 1-2 years of experience with the relative coding language Objective-C (for iOS development)
+* At least 1-2 years of experience with the relative coding language Java (for Android development)
 * Hybrid requirement: Proficiency in HTML5 and JavaScript languages.
