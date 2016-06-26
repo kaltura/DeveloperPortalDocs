@@ -27,4 +27,35 @@ http://www.kaltura.com/api_v3/index.php?service=analytics&action=query
 |sorting |A comma-separated list of sorting fields |Supported dimension/metrics to sort the results by. Each field can be prepended with + or - to denote ascending or descending sorting | No |
 |timezoneOffset	 |The timezone offset from UTC (GMT) |	Any integer value of an offset between UTC-12 and UTC+14 | No |
 
-	
+### Code Example (Java)
+
+KalturaConfiguration config = new KalturaConfiguration();
+
+config.setEndpoint("https://www.kaltura.com/");
+
+KalturaClient client = new KalturaClient(config);
+
+client.setKs("<KS GOES HERE>");
+
+KalturaAnalyticsFilter filter = new KalturaAnalyticsFilter();
+
+filter.from_time = "06/10/2016 00:00";
+
+filter.to_time = "06/12/2016 00:00";
+
+filter.metrics = "play,playRequested,playerImpression";
+
+filter.utcOffset = 0;
+
+filter.dimensions = "entry,hour";
+
+KalturaReportResponse result = client.getAnalyticsService().query(filter);
+
+System.out.println(result.columns);
+
+for (KalturaString ks : result.results) {
+
+    System.out.println(ks.value);
+    
+}
+
