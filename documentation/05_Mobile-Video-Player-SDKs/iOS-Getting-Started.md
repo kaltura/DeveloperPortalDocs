@@ -1,6 +1,6 @@
 ---
 layout: page
-title: iOS Player SDK Getting Started 
+title: iOS Player SDK and Environment Setup - Getting Started 
 subcat: iOS
 weight: 240
 ---
