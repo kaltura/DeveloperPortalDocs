@@ -29,5 +29,27 @@ weight: 130
 |QoS|Preferred Bitrate |	preferredBitrate |The bitrate of the preferred flavour that was set using the flash var.|
 |QoS|UIConfID	|uiConfID	|Which player id and configuration the video was played on.|
 
+### Custom Dimensions 
 
+Video events can be aggregated by custom dimensions, currently 3 levels of hierarchy are supported.
+In case you would like to use custom dimensions, specify their values on the player's embed code under the flashvars section:
+
+
+    kWidget.embed({
+    "targetId": "kaltura_player_1418811966",
+    "wid": "_1091",
+    "uiconf_id": 15190220,
+    "cache_st": 1418811966,
+    "entry_id": "0_f8re4ujs",
+    "flashvars": {
+        "kAnalony": {
+            "plugin":true,
+            "customVar1": "value1",
+            "customVar2": "value2",
+            "customVar3": "{mediaProxy.entryMetadata.metaDataFieldName}" // Data on entry's metadata can be also sent!
+            },                                     
+        "streamerType": "auto",
+        "streamerType": "http"
+        }
+    });
 
