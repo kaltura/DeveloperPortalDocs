@@ -52,34 +52,34 @@ if (Entry is **associated** with \none or more **categories**) then (yes)
 -[#blue]->
     if (On **all** of the entry's categories:\n **privacyContext == null**) then (yes)
     -[#blue]->
-    #DeepSkyBlue:Entry is allowed]
-    detach
-endif
--[#DarkRed]-> no;
-if (**ks.privacycontext**\nequal to one of the\nentry's categories' privacyContext) then (yes)
--[#blue]->
-    #DeepSkyBlue:Entry is allowed]
-    detach
-endif
--[#DarkRed]-> no;
-if (**category.privacy** is set to\n**MEMBERS_ONLY**) then (yes)
--[#blue]->
-    if (**ks.userId** is a\n**member** of the category) then (yes)
-    -[#blue]->
         #DeepSkyBlue:Entry is allowed]
-        detach
-    else (no)
-    -[#DarkRed]->
-        #DarkRed:Entry denied]
         detach
     endif
-else (category.privacy\nset to\nAUTHENTICATED) 
+    -[#DarkRed]-> no;
+    if (**ks.privacycontext**\nequal to one of the\nentry's categories' privacyContext) then (yes)
     -[#blue]->
         #DeepSkyBlue:Entry is allowed]
         detach
-endif
-else (Entry NOT\nassociated\nwith catrgories)
+    endif
+    -[#DarkRed]-> no;
+    if (**category.privacy** is set to\n**MEMBERS_ONLY**) then (yes)
     -[#blue]->
+        if (**ks.userId** is a\n**member** of the category) then (yes)
+        -[#blue]->
+            #DeepSkyBlue:Entry is allowed]
+            detach
+        else (no)
+        -[#DarkRed]->
+            #DarkRed:Entry denied]
+            detach
+        endif
+    else (category.privacy\nset to\nAUTHENTICATED) 
+    -[#blue]->
+        #DeepSkyBlue:Entry is allowed]
+        detach
+    endif
+else (Entry NOT\nassociated\nwith catrgories)
+-[#blue]->
     #DeepSkyBlue:Entry is allowed]
     detach
 endif
