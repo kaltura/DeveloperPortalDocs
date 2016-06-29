@@ -56,7 +56,7 @@ if (Entry is **associated** with \none or more **categories**) then (yes)
         detach
     endif
     -[#DarkRed]-> no;
-    if (**ks.privacycontext**\nequal to one of the\nentry's categories' privacyContext) then (yes)
+    if (**ks.privacycontext**\nequal to privacyContext of one of the\nentry categories) then (yes)
     -[#blue]->
         #DeepSkyBlue:Entry is allowed]
         detach
