@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Content Entitlements Enforcement
+title: Content Entitlements and Privacy Enforcement
 type: header
 ---
 
