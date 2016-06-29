@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Categories Management and Entitlements
+title: Content Categories Management
 weight: 102
 ---
 
