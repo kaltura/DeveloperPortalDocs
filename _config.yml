@@ -41,3 +41,6 @@ gems:
    - jekyll-plantuml
 #  - jekyll-git_metadata
 #    - jekyll-sitemap
+plantuml:
+  plantuml_jar: /usr/bin/plantuml.jar     # path to plantuml jar
+  tmp_folder: _plantuml               # tmp folder to put generated image files
