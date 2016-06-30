@@ -14,6 +14,7 @@ Example use-cases based on content entitlements:
 
 To learn about how to configure and work with Content Entitlements read the [Categories and Content Entitlements article](Categories-and-Content-Entitlements.md).  
 
+
 The following diagram outlines the rules on which Kaltura basis and enforces content entitlements.  
 You can configure the Kaltura system to be more restrictive or open in allowing access to your assets.  
 
