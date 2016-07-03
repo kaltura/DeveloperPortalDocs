@@ -2,7 +2,7 @@
 layout: page
 title: Picture-in-Picture (PIP) - iOS Plugin
 subcat: iOS
-weight: 300
+weight: 230
 ---
 
 [![iOS](https://img.shields.io/badge/iOS-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios) 
