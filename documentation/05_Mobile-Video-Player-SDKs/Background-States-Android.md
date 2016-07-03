@@ -2,7 +2,7 @@
 layout: page
 title: Android Background State Handling
 subcat: Android
-weight: 200
+weight: 330
 ---
 
 This article describes how to save the Player state when the application moves to the background, which can occur in a number of situations. The application is designed to handle a number of background states, including:
