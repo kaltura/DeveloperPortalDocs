@@ -3,7 +3,7 @@ layout: page
 title: Android Player API - Properties, Events, Notifications
 
 subcat: Android
-weight: 190
+weight: 340
 ---
 
 [![Android](https://img.shields.io/badge/Android-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios)
