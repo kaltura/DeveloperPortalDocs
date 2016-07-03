@@ -2,7 +2,7 @@
 layout: page
 title: iOS Player SDK and Environment Setup - Getting Started 
 subcat: iOS
-weight: 240
+weight: 290
 ---
 
 [![iOS](https://img.shields.io/badge/iOS-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios) 
