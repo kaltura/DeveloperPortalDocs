@@ -4,7 +4,7 @@ title: Introduction to Kaltura Video Insights
 weight: 101
 ---
 
-*Pending Kaltura Video Insights Release*
+*Limited preview mode; please contact product manager to activate.*
 
 Kaltura Video Insights helps you get precise, actionable insights into various aspects of your business by answering a wide variety of questions, such as:
 
