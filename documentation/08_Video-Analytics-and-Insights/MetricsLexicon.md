@@ -4,7 +4,7 @@ title: Kaltura Video Insights - Metrics Lexicon
 weight: 120
 ---
 
-*Pending Kaltura Video Insights Release*
+*Limited preview mode; please contact product manager to activate.*
 
 | Name     | ID     | Description
 |:---|:---|:---|
