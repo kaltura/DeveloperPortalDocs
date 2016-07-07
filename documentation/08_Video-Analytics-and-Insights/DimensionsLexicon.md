@@ -4,7 +4,7 @@ title: Kaltura Video Insights - Dimensions Lexicon
 weight: 130
 ---
 
-*Pending Kaltura Video Insights Release*
+*Limited preview mode; please contact product manager to activate.*
 
 | Group       | Name     | ID     | Description
 |:---|:---|:---|:---|
