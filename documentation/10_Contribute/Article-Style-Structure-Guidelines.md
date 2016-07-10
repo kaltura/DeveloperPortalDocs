@@ -16,8 +16,6 @@ To learn about Markdown basics and how to use the format, please read: [GitHub m
 
 {% onebox http://www.kaltura.com/tiny/nex76 %}
 
-{% include images/bcface72e4179d69d514acff022dfa68.svg %}
-
 
 ## Adding YouTube videos 
 &#123;% onebox https://www.youtube.com/watch?v=Owh8nBt4QSs %&#125;
