@@ -1,13 +1,13 @@
 ---
 layout: page
-title: iOS Player SDK and Environment Setup - Getting Started 
+title: iOS Player SDK and Environment Setup - Getting Started
 subcat: iOS
 weight: 290
 ---
 
-[![iOS](https://img.shields.io/badge/iOS-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios) 
+[![iOS](https://img.shields.io/badge/iOS-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios)
 
-The Kaltura Player-SDK can be added to any project, of any size, quickly and easily by following these steps. 
+The Kaltura Player-SDK can be added to any project, of any size, quickly and easily by following these steps.
 
 ## Installing the Kaltura iOS Player SDK  
 
@@ -44,7 +44,7 @@ git clone https://github.com/kaltura/player-sdk-native-ios.git
 You will need to get the main project to build and link to the ```KALTURAPlayerSDK``` library.
 
 1. In the main project application’s target settings, find the ```Build Phases``` section. This is where you will configure the ```KALTURAPlayerSDK``` target to automatically build and link to the ```KALTURAPlayerSDK ``` library.
-2. After you find the ```Build Phases``` section, open the ```Target Dependencies``` block and click the ```+```button. 
+2. After you find the ```Build Phases``` section, open the ```Target Dependencies``` block and click the ```+```button.
 3. In the project hierarchy displayed, the ```KALTURAPlayerSDK``` target from the ```KALTURAPlayerSDK``` project should be listed. Select the project and click ```add```.
 
 ![Xcode target config](https://camo.githubusercontent.com/d35c79ce9a0d01ad3a45a94362da413ed4afa403/687474703a2f2f6b6e6f776c656467652e6b616c747572612e636f6d2f73697465732f64656661756c742f66696c65732f7374796c65732f6c617267652f7075626c69632f616464446570656e64656e6369652e6a7067)
@@ -53,7 +53,7 @@ You will need to get the main project to build and link to the ```KALTURAPlayerS
 
 You will need to set the application to link to the library when it is built - just as you would a system framework you want to use.
 
-1. Open the ```Link Binary With Libraries``` section, located below the ```Target Dependencies``` section, and click ```+```. 
+1. Open the ```Link Binary With Libraries``` section, located below the ```Target Dependencies``` section, and click ```+```.
 2. At the top of the list you should be able to see the ```libKALTURAPlayerSDK.a``` static library that the main project target produces. Choose it and click ```Add```.
 ![Xcode target config2](https://camo.githubusercontent.com/acea3bcfbe47b0cc2e37796807d23c617723822f/687474703a2f2f6b6e6f776c656467652e6b616c747572612e636f6d2f73697465732f64656661756c742f66696c65732f7374796c65732f6c617267652f7075626c69632f6c696e6b546f53444b2e6a7067)
 
@@ -114,20 +114,20 @@ This section describes how to use the iOS Player SDK basic embedding option.
 
 ### Initialize PlayerViewController for Fullscreen
 
-``` objc 
+``` objc
 - (KPViewController *)player {
     if (!_player) {
         // Account Params
         KPPlayerConfig *config = [[KPPlayerConfig alloc] initWithServer:@"http://cdnapi.kaltura.com"
                                                          uiConfID:@"26698911"
                                                          partnerId:@"1831271"];
-        
-        
+
+
         // Video Entry
         config.entryId =  @"1_o426d3i4";
-        
+
         // Setting this property will cache the html pages in the limit size
-        config.cacheSize = 0.8;
+        config.cacheSize = 100; // in MB
         _player = [[KPViewController alloc] initWithConfiguration:config];
     }
     return _player;
