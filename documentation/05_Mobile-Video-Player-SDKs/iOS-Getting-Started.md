@@ -33,7 +33,7 @@ git clone https://github.com/kaltura/player-sdk-native-ios.git
 
 ### Step 1: Add the Static Library's .xcodeproj to the Application's Project  
 
-1. Locate the ```KALTURAPlayerSDK.xcodeproj``` from the subproject folder in Finder, and drag it into the Xcode’s Navigator tree. Alternatively, add the file with the Xcode’s Add Files File menu item. ![add xcodeproj](https://camo.githubusercontent.com/1e3d845d0728b62beb23e474ae30d2b8370867db/687474703a2f2f6b6e6f776c656467652e6b616c747572612e636f6d2f73697465732f64656661756c742f66696c65732f7374796c65732f6c617267652f7075626c69632f6164645f66696c65732e706e67)
+1. Locate the ```KALTURAPlayerSDK.xcodeproj``` from the subproject folder in Finder, and drag it into the Xcode’s Navigator tree. Alternatively, add the file with the Xcode’s Add Files File menu item. ![add xcodeproj](https://camo.githubusercontent.com/1e3d845d0728b62beb23e474ae30d2b8370867db/687474703a2f2f6b6e6f776c656467652e6b616c747572612e636f6d2f73697465732f64656661756c742f66696c65732f7374796c65732f6c617267652f7075626c69632f6164645f66696c65732e706e67).
 
 2. Make sure to add the ```KALTURAPlayerSDK.xcodeproj``` file only, **not the entire directory**. You cannot have the same project open in two different Xcode windows. If you find that you are unable to navigate around the library project, verify that you do not have it open in another Xcode window.
 3. After you have added the subproject, it should appear below the main project in the Xcode’s Navigator tree:
@@ -55,7 +55,7 @@ You will need to set the application to link to the library when it is built - j
 
 1. Open the ```Link Binary With Libraries``` section, located below the ```Target Dependencies``` section, and click ```+```.
 2. At the top of the list you should be able to see the ```libKALTURAPlayerSDK.a``` static library that the main project target produces. Choose it and click ```Add```.
-![Xcode target config2](https://camo.githubusercontent.com/acea3bcfbe47b0cc2e37796807d23c617723822f/687474703a2f2f6b6e6f776c656467652e6b616c747572612e636f6d2f73697465732f64656661756c742f66696c65732f7374796c65732f6c617267652f7075626c69632f6c696e6b546f53444b2e6a7067)
+![Xcode target config2](https://camo.githubusercontent.com/acea3bcfbe47b0cc2e37796807d23c617723822f/687474703a2f2f6b6e6f776c656467652e6b616c747572612e636f6d2f73697465732f64656661756c742f66696c65732f7374796c65732f6c617267652f7075626c69632f6c696e6b546f53444b2e6a7067).
 
 3. Because we are using Objective-C, you will need to add a couple of linker flags to the main project application’s target to ensure that ObjC static libraries like ours are linked correctly. In the main project target’s ```Build Settings``` find the ```Other Linker Flags``` line, and add ```-ObjC```.
 
