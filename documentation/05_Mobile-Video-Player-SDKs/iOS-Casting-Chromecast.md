@@ -38,11 +38,11 @@ To begin casting follow these steps:
             config.entryId = @"1_o426d3i4";
         ```
 2. Add the following to your `config` instance:
-```
+        ```
             [config addConfigKey:@"chromecast.plugin" withValue:@"true"];
             [config addConfigKey:@"chromecast.useKalturaPlayer" withValue:@"true"];
             [config             
-```
+       ```
 3. To begin casting, create a `KCastProvider` object and set its delegate. The delegate must adhere to the `KCastProviderDelegate` protocol and implement its delegate methods.
 
 ```
