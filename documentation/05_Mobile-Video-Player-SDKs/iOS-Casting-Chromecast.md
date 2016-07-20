@@ -18,7 +18,7 @@ Before you begin setting up the Cast feature, make sure you've read the article 
 ## Basic Definitions
 
 * `Sender` - A Cast enabled Kaltura Player running inside of a iOS Application; the Kaltura Player requires a Sender App ID.
-* `Receiver` - A Kaltura Player Receiver App that runs on the Chromecast device (the receiver application). 
+* `Receiver` - A Kaltura Player Receiver App that runs on the Chromecast devicea. 
 
 ## Google Cast Setup  
 
@@ -132,7 +132,7 @@ or
 
 ### Media Remote Control  
 
-The `KCastProvider` has a `KCastMediaRemoteControl` instance that controls the playback of the video being cast. The `KCastMediaRemoteControlDelegate` will provide you with the playback callbacks while casting.
+The `KCastProvider` has a `KCastMediaRemoteControl` instance that controls the playback of the video being cast. The `KCastMediaRemoteControlDelegate` will provide you with playback callbacks while casting.
 For example:
 ```
 // To play the memdia
