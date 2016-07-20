@@ -43,6 +43,7 @@ To begin casting follow these steps:
             [config addConfigKey:@"chromecast.useKalturaPlayer" withValue:@"true"];
             [config             
        ```
+
 3. To begin casting, create a `KCastProvider` object and set its delegate. The delegate must adhere to the `KCastProviderDelegate` protocol and implement its delegate methods.
 
 ```
@@ -62,30 +63,28 @@ To begin casting follow these steps:
 
 1. When your `KCastProvider` is set up, scan for devices by calling the startScan method:
 
-```
-[_castProvider startScan:@"{Application-id}"];
-```
+        ```
+        [_castProvider startScan:@"{Application-id}"];
+        ```
 
 2. When devices become available, the `KCastProviderDelegate` methods will be called:
 
-```
-- (void)castProvider:(KCastProvider *)provider devicesInRange:(BOOL)foundDevices {
-// Enable or Disable Chromecast button 
-}
+        ```
+        - (void)castProvider:(KCastProvider *)provider devicesInRange:(BOOL)foundDevices {
+        // Enable or Disable Chromecast button 
+        }
 
-- (void)castProvider:(KCastProvider *)provider didDeviceComeOnline:(KCastDevice *)device {   
-}
+        - (void)castProvider:(KCastProvider *)provider didDeviceComeOnline:(KCastDevice *)device {   
+        }
 
-- (void)castProvider:(KCastProvider *)provider didDeviceGoOffline:(KCastDevice *)device {
-}
-```
+        - (void)castProvider:(KCastProvider *)provider didDeviceGoOffline:(KCastDevice *)device {
+        }
+        ```
 This provides an array of `KCastDevice`. 
 
-```
-_castProvider.devices;
-```
-
-#### Connecting to Devices
+        ```
+_        castProvider.devices;
+        ```#### Connecting to Devices
 
 1. When a device is selected, connect to the device by calling:
 
