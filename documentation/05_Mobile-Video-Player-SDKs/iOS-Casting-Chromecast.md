@@ -82,22 +82,24 @@ To begin casting follow these steps:
         ```
 This provides an array of `KCastDevice`. 
 
-        ```
-_        castProvider.devices;
-        ```#### Connecting to Devices
+ ```
+castProvider.devices;
+```
+
+#### Connecting to Devices
 
 1. When a device is selected, connect to the device by calling:
 
-```
-[_castProvider connectToDevice:device];
-```
+        ```
+        [_castProvider connectToDevice:device];
+        ```
 
 2. When a connection is established, the `KCastProviderDelegate` will call the following method: 
 
-```
-- (void)didConnectToDevice:(KCastProvider *)provider {
-}
-```
+        ```
+        - (void)didConnectToDevice:(KCastProvider *)provider {
+        }
+        ```
 
 #### Casting Media
 
