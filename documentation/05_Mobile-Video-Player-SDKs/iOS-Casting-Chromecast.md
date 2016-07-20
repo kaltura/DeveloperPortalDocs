@@ -34,14 +34,11 @@ The supported version for Google Cast iOS SDK is version `2.10.4`.
 To begin casting follow these steps:
 
 1. After creating the `KPPlayerConfig *config`: 
-
 ```
 KPPlayerConfig *config = [[KPPlayerConfig alloc] initWithServer:@"{your-server-id}"                                                           uiConfID:@"{your-ui-conf-id}"                                                                  partnerId:@"{your-pqrtner-id}"];
             config.entryId = @"1_o426d3i4";
 ```
-
 2. Add the following to your `config` instance
-
 ```
             [config addConfigKey:@"chromecast.plugin" withValue:@"true"];
             [config addConfigKey:@"chromecast.useKalturaPlayer" withValue:@"true"];
@@ -49,7 +46,6 @@ KPPlayerConfig *config = [[KPPlayerConfig alloc] initWithServer:@"{your-server-i
 ```
 
 3. To begin casting, create a `KCastProvider` object and set its delegate. The delegate must adhere to the `KCastProviderDelegate` protocol and implement its delegate methods.
-
 ```
 @property (nonatomic, strong) KCastProvider *castProvider;
 ```
