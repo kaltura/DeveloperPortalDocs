@@ -13,6 +13,7 @@ To configure the Player to use Google ads in Android devices, add the following 
 config.addConfig("doubleClick.plugin", "true");
 config.addConfig("doubleClick.adTagUrl", "your ad tag URL");
 ```
+
 ## Listening to Ad Events  
 
 To listen to ad events, use the following [ad events test page](http://player.kaltura.com/modules/DoubleClick/tests/DoubleClickAdEvents.qunit.html).
