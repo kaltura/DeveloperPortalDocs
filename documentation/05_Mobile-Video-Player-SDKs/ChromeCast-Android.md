@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Google Cast Setup
+title: Google Cast Setup for Android Devices
 subcat: Android
 weight: 310
 ---
-This article describes how to set up the Google Cast feature.
+This article describes how to set up the Google Cast feature in Android devices.
 
 Note that Kaltura provides the Chromecast plugin as default; if you plan to use it, you should add the following to your `KPPlayerConfig` :
 ```
