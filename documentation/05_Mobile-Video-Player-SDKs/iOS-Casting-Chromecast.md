@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Google Cast Setup
+title: Google Cast Setup for iOS
 subcat: iOS
 weight: 220
 ---
