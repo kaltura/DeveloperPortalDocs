@@ -147,6 +147,6 @@ For example
 
 ### Demo Application
 
-A best practice sample application, which demonstrtes the code that is required for a proper casting experience, can be found on {% https://github.com/kaltura/player-sdk-demo-ios/tree/master/ovp/CCDemo %}. 
+A best practice sample application, which demonstrtes the code that is required for a proper casting experience, can be found in this [demo](https://github.com/kaltura/player-sdk-demo-ios/tree/master/ovp/CCDemo). 
 
 This repository contains several basic best practice applications that use the Kaltura iOS Player SDK.
