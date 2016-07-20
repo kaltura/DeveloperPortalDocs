@@ -1,28 +1,34 @@
 ---
 layout: page
-title: Google Cast Setup 
+title: Google Cast Setup
+subcat: iOS
+weight: 220
 ---
 
-## Introduction
+## Introduction  
 
 The Cast functionality will allow your videos to be cast from a iOS mobile device via the Chromecast plugin directly to a Kaltura Player receiver app on a Chromecast-connected TV.
 
-### Things you should know already
+### Things you should know already  
+
 [iOS Player SDK and Environment Setup - Getting Started](https://vpaas.kaltura.com/documentation/05_Mobile-Video-Player-SDKs/iOS-Getting-Started.html)
 
 ## Basic Definitions
 
-`Sender` - A Cast enabled Kaltura Player running inside of a iOS Application. The Kaltura Player requires a sender App ID.
+`Sender` - A Cast enabled Kaltura Player running inside of a iOS Application. The Kaltura Player requires a Sender App ID.
 
 `Receiver` - A Kaltura Player receiver application that runs on the Chromecast device. The receiver application 
 
-## Google Cast Setup
+## Google Cast Setup  
+
 To enable casting to Chromecast with the Kaltura Player iOS SDK, you must import the Google Cast Framework and its dependent frameworks.
 
-#### Limitation
-Supported Version For Google Cast iOS SDK Is version `2.10.4`
+#### Limitation  
 
-### Get Started
+Supported version for Google Cast iOS SDK is version `2.10.4`
+
+### Get Started  
+
 To begin casting follow these steps:
 
 * After `KPPlayerConfig *config` creation 
@@ -55,7 +61,7 @@ KPPlayerConfig *config = [[KPPlayerConfig alloc] initWithServer:@"{your-server-i
 }
 ```
 
-#### Scan for devices
+#### Scan for Devices
 
 * Once your `KCastProvider` is setup, scan for devices by calling the startScan method
 
@@ -85,13 +91,13 @@ _castProvider.devices;
 
 #### Connect to Device
 
-* When some device was chosen connect to a device by calling
+* When a device was selected to connect to a device by calling the following:
 
 ```
 [_castProvider connectToDevice:device];
 ```
 
-* When connection is established, the `KCastProviderDelegate` will call a method 
+* When a connection is established, the `KCastProviderDelegate` will call the following method: 
 
 ```
 - (void)didConnectToDevice:(KCastProvider *)provider {
@@ -100,7 +106,7 @@ _castProvider.devices;
 
 #### Cast the Media
 
-* To cast, set the `castProvider` property under `KPViewController` with `KCastProvider` object you created.
+To cast, set the `castProvider` property under `KPViewController` with `KCastProvider` as the object you created.
 
 ```
 _player.castProvider = _castProvider;
@@ -108,7 +114,7 @@ _player.castProvider = _castProvider;
 
 #### Disconnect from Device
 
-* To disconnect from a device use
+To disconnect from a device use the following:
 
 ```
 - (void)disconnect {
@@ -128,7 +134,7 @@ or
 
 
 ### Media Remote Control
-The `KCastProvider` has a `KCastMediaRemoteControl` instance that controls the playback of the video being casted, and the `KCastMediaRemoteControlDelegate` will provide you with the playback callbacks while casting.
+The `KCastProvider` has a `KCastMediaRemoteControl` instance that controls the playback of the video being cast. The `KCastMediaRemoteControlDelegate` will provide you with the playback callbacks while casting.
 For example
 
 ```
@@ -141,6 +147,6 @@ For example
 
 ### Demo Application
 
-A best practice sample application demonstrating the code necessary for a proper casting experience can be found on https://github.com/kaltura/player-sdk-demo-ios/tree/master/ovp/CCDemo. 
+A best practice sample application, which demonstrtes the code that is required for a proper casting experience, can be found on {% https://github.com/kaltura/player-sdk-demo-ios/tree/master/ovp/CCDemo %}. 
 
-This repository contains several basic best practice apps that use the Kaltura iOS Player SDK.
+This repository contains several basic best practice applications that use the Kaltura iOS Player SDK.
