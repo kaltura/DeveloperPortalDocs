@@ -842,8 +842,8 @@ h4 {
 
 .sidenav-sub-links {
   display: block;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   padding-left: 25px;
   border-bottom: 1px solid #ececec;
   background-color: transparent;
