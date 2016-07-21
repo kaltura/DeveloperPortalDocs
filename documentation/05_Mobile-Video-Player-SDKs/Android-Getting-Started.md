@@ -2,7 +2,7 @@
 layout: page
 title: Android Player SDK and Environment Setup - Getting Started 
 subcat: Android
-weight: 360
+weight: 330
 ---
 
 To get started using the Android Player SDK, you will first need to install the Android SDK and Android Virtual Device (AVD), and then set up the Player SDK for Android.

@@ -2,7 +2,7 @@
 layout: page
 title: Using Google Ads in iOS Devices
 subcat: iOS
-weight: 250
+weight: 270
 ---
 
 [![iOS](https://img.shields.io/badge/iOS-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios) 

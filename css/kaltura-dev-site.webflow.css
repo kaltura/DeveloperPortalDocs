@@ -865,7 +865,7 @@ h4 {
   padding-top: 12px;
   padding-bottom: 12px;
   padding-left: 15px;
-  border-bottom: 1px solid #ececec;
+  /*border-bottom: 1px solid #ececec;*/
   background-color: transparent;
   -webkit-transition: color 200ms ease-in-out;
   transition: color 200ms ease-in-out;
