@@ -70,10 +70,11 @@ function show_hide_sub_div(div_id)
 
 
 {% for cat_hash in cats %}
-    <div class="sidenav-grp-7 heading-close" id="/{{ cat_hash[0] }}">
-	<a href="#" class="sidenav-cat-links" onClick="show_hide_div('/{{ cat_hash[0] }}')"><h4 class="sidenav-headings grp-heading {{ cat_hash[0] }}">{{ cat_hash[1] }}</h4></a>
-	<div class="sidenav-grp-links" id="/{{ cat_hash[0] | replace: ' ','' }}-sub" style="visibility: hidden; display: none;">
-	{% capture dir %}{{ cat_hash[0] }}{% endcapture %}
+{% assign cats_string = cat_hash[0] | split:"::" %}
+<div class="sidenav-grp-7 heading-close" id="/{{ cats_string[1] }}" weight="{{ cats_string[0] }}">
+	<a href="#" class="sidenav-cat-links" onClick="show_hide_div('/{{ cats_string[1] }}')"><h4 class="sidenav-headings grp-heading {{ cats_string[1] }}">{{ cat_hash[1] }}</h4></a>
+	<div class="sidenav-grp-links" id="/{{ cats_string[1] | replace: ' ','' }}-sub" style="visibility: hidden; display: none;">
+	{% capture dir %}{{ cats_string[1] }}{% endcapture %}
 	{% capture cat %}{{ cat_hash[1] }}{% endcapture %}
 	{% include nav.html context=dir catname=cat %}
 	
