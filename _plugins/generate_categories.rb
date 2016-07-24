@@ -25,7 +25,7 @@ module Jekyll
 	      #else
 		site.config['cats'][weight + '::' +File.dirname(page.path.shellescape)] = cat_name
 	      #end
-	      print weight  + '::' + File.dirname(page.path.shellescape) + "\n"
+	      #print weight  + '::' + File.dirname(page.path.shellescape) + "\n"
 	    end
           end
         end
