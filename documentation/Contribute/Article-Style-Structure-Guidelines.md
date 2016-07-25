@@ -8,7 +8,6 @@ To learn about Markdown basics and how to use the format, please read: [GitHub m
 
 > **Important note**: Always add new lines before and after every element (heading, table, image, lists, code, embeds, etc).
 
-
 ## Adding Kaltura Videos 
 &#123;% onebox http://www.kaltura.com/tiny/nex76 %&#125;
 
