@@ -6,10 +6,10 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Kaltura VPaaS - Video Platform as a Service
+title: VPaaS - Video Platform as a Service | Kaltura
 email: community@kaltura.com
 description: > # this means to ignore newlines until "baseurl:"
-      Cloud video services and SDKs for everything video. All devices; All media workflows; All applications. Powering Any Video Experience. Pay as you go. 
+      VPaaS allows you to build cloud video services, supplies SDKs, and works on all devices, media workflows, and applications. Pay as you go. 
 baseurl: "" # the subpath of your site, e.g. /blog
 domain: "vpaas.kaltura.com"
 url: "https://vpaas.kaltura.com" # the base hostname & protocol for your site
@@ -41,3 +41,6 @@ gems:
    - jekyll-plantuml
 #  - jekyll-git_metadata
 #    - jekyll-sitemap
+plantuml:
+  plantuml_jar: /usr/bin/plantuml.jar     # path to plantuml jar
+  tmp_folder: _plantuml               # tmp folder to put generated image files

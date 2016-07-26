@@ -1,10 +1,20 @@
 <head>
-<script type="text/javascript">
-var host = "{{site.domain}}";
-if ((host == window.location.host) && (window.location.protocol != "https:")){
-	window.location.protocol = "https";
-}
-</script>
+{% if page.name == 'index.html' %}
+<!-- Google Analytics Content Experiment code -->
+<script>function utmx_section(){}function utmx(){}(function(){var
+k='121876908-0',d=document,l=d.location,c=d.cookie;
+if(l.search.indexOf('utm_expid='+k)>0)return;
+function f(n){if(c){var i=c.indexOf(n+'=');if(i>-1){var j=c.
+indexOf(';',i);return escape(c.substring(i+n.length+1,j<0?c.
+length:j))}}}var x=f('__utmx'),xx=f('__utmxx'),h=l.hash;d.write(
+'<sc'+'ript src="'+'http'+(l.protocol=='https:'?'s://ssl':
+'://www')+'.google-analytics.com/ga_exp.js?'+'utmxkey='+k+
+'&utmx='+(x?x:'')+'&utmxx='+(xx?xx:'')+'&utmxtime='+new Date().
+valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
+'" type="text/javascript" charset="utf-8"><\/sc'+'ript>')})();
+</script><script>utmx('url','A/B');</script>
+<!-- End of Google Analytics Content Experiment code -->
+{% endif %}
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,15 +28,14 @@ if ((host == window.location.host) && (window.location.protocol != "https:")){
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
 <link rel="sitemap" type="application/xml" title="Sitemap" href="{{ site.url }}/sitemap.xml" />
-  <meta charset="utf-8">
-  <title>Kaltura Dev Site</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="generator" content="Webflow">
-
+  
 <link rel="stylesheet" type="text/css" href="{{ site.url }}/css/normalize.css">
 <link rel="stylesheet" type="text/css" href="{{ site.url }}/css/webflow.css">
 <link rel="stylesheet" type="text/css" href="{{ site.url }}/css/kaltura-dev-site.webflow.css">
 <link rel="stylesheet" type="text/css" href="{{ site.url }}/css/syntax.css">
+<link rel="stylesheet" type="text/css" href="{{ site.url }}/css/opentip.css">
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     
   <script type="text/javascript" src="https://use.typekit.net/rlx4cjm.js"></script>
   <script type="text/javascript">
@@ -39,10 +48,8 @@ if ((host == window.location.host) && (window.location.protocol != "https:")){
   <script type="text/javascript">
     var switchTo5x=true;
   </script>
-  <script type="text/javascript" src="{{site.url}}/js/buttons.js"></script>
-  <script type="text/javascript">
-    stLight.options({publisher: "7acb66da-36ad-4c46-ba0d-f7ede13aa36c", doNotHash: false, doNotCopy: false, hashAddressBar: true});
-  </script>
+  <script type="text/javascript">var switchTo5x=true;</script>
+
   <!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent -->
 <script type="text/javascript">
         window.cookieconsent_options = {"message":"This website uses cookies to ensure you get the best experience on our website","dismiss":"Got it!","learnMore":"More info","link":null,"theme":"light-bottom"};
@@ -50,24 +57,44 @@ if ((host == window.location.host) && (window.location.protocol != "https:")){
 
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
     <!-- End Cookie Consent plugin -->
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.js"></script>
+  
 <script src="{{ site.url }}/js/country.js"></script>
+
+<script type="text/javascript" src="/js/jQuery.exLink/jquery.exLink.js"></script>
+<link rel="stylesheet" type="text/css" href="/js/jQuery.exLink/jquery.exLink.css">
+<script type="text/javascript">
+ $( document ).ready(function() {
+    exLink.init({
+    	parentElementPath: '.template-page-content-column .post-content',
+ 	linkWarning: false,
+	hostCompare: true,
+	noFollow: false,
+	fancyBoxIgnore: true,
+	gaTracking: true,
+	gaTrackLabel: 'External Links',
+	gaTrackOld: false,
+	fileWarning: false
+    });
+ });
+</script>
+
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<script>
+function verify_recapcha()
+{
+	var isCaptchaValidated = false;
+	var response = grecaptcha.getResponse();
+	if(response.length == 0) {
+	    isCaptchaValidated = false;
+	    alert('Please confirm that you are a Human.');
+	    return false;
+	} else {
+	    return true;
+	}
+
+}
+</script>
+<script type="text/javascript" src="{{ site.url }}/js/webflow.js"></script>
+<script type="text/javascript" src="{{ site.url }}/js/opentip-jquery.js"></script>
 </head>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

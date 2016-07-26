@@ -1,0 +1,25 @@
+{% capture html %}
+    {% if include.context == "/" %}
+        <li class="{% if page.url == "/" %}active{% endif %}">
+            <a href="{{ site.baseurl }}/">{{ site.title }}</a>
+        </li>
+    {% endif %}
+    {% assign entries = site.pages | sort: "weight" %}
+    {% for entry in entries %}
+        {% capture slug    %}{{ entry.url | split: "/"   | last                       }}{% endcapture %}
+        {% capture current %}{{ entry.url | remove: slug | remove: "//" | append: "/" }}{% endcapture %}
+        {% if current contains include.context %}
+	  {% if entry.subcat %}
+	  <script>
+	      addRow("/{{include.context}}","{{entry.subcat}}","{{ entry.title }}","{{ site.baseurl }}{{ entry.url }}","{{ entry.path|replace: '/','-'}}");
+      </script>
+	  {% elsif entry.title %}
+	  <script>
+	      addRow("/{{include.context}}",null,"{{ entry.title }}","{{ site.baseurl }}{{ entry.url }}","{{ entry.path|replace: '/','-'}}");
+      </script>
+                {% include nav.html context=entry.url %}
+	    {% endif %}
+        {% endif %}
+
+    {% endfor %}
+{% endcapture %} {{ html | strip_newlines | replace:'    ','' | replace:'    ','' | replace:'  ',' ' }}

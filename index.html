@@ -13,12 +13,11 @@ layout: default
               "wid": "_811441",
               "uiconf_id": 33241472,
               "flashvars": {
-                "streamerType": "auto",
                 "loop": true,
-                "autoPlay": true
+                "autoPlay": true,
               },
-              "cache_st": 1453968704,
-              "entry_id": "0_4kwzg46z",
+              "cache_st": 1461255232,
+              "entry_id": "0_cm8rhiwp",
               "readyCallback": function( playerId ){
           			var kdp = $( "#" + playerId ).get(0);
           			kdp.kBind( "timeupdate.showvid", function(){
@@ -26,7 +25,7 @@ layout: default
           			  $(".video-cover").fadeOut();
           			  kdp.kUnbind( ".showvid" );
               	});
-              	
+
               	//header title and body
                 $('h1.header-headings').on( "click", function () {
                   $('p.header-body').animate({'opacity': 1});
@@ -38,59 +37,78 @@ layout: default
         </div>
     </div>
     <div class="w-container header-container" style="position:relative;z-index:2">
-      <h1 class="header-headings" style="cursor: pointer;">Kaltura Video Platform as a Service &lt;VPaaS&gt;</h1>
+      <!--h1 class="header-headings" style="cursor: pointer;">Kaltura Video Platform as a Service &lt;VPaaS&gt;</h1>
       <p class="header-body">Cloud video services and SDKs for everything video. All devices; All media workflows; All applications. Powering Any Video Experience. Pay as you go.</p>
-      <a href="#" class="w-button header-btn"><span class="sign-in-icon fa fa-sign-in fa-lg"></span>Get a VPaaS Account</a>
-      <a href="#" class="w-button header-btn"><span class="get-inspired-icon fa fa-lightbulb-o fa-lg"></span>Join Kaltura's Startup Program</a>
+      <a href="/register" class="w-button header-btn vpaas-btn"><span class="sign-in-icon fa fa-sign-in fa-lg"></span>Sign Up for a VPaaS Account</a>
+      <a href="/kaltura-start" class="w-button header-btn"><span class="get-inspired-icon fa fa-lightbulb-o fa-lg"></span>Join Kaltura's Startup Program</a-->
     </div>
   </div>
+
+  <div class="w-section home-sign-up-section">
+    <div class="w-container">
+      <h3 class="home-sign-up-cta">Kaltura Video Platform as a Service &lt;VPaaS&gt;</h3><a href="/register" class="w-button header-btn vpaas-btn"><span class="sign-in-icon fa fa-sign-in fa-lg"></span>Create a Free Account</a>
+    </div>
+  </div>
+
+  <div class="w-section about-vpaas-section">
+    <div class="w-container">
+      <div class="about-vpaas-text-block">
+        Kaltura VPaaS (Video Platform as a Service) allows you to build any video experience or workflow, and to integrate rich video experiences into existing applications, business workflows and environments. <br />
+        Kaltura VPaaS eliminates all complexities involved in handling video at scale: ingestion, transcoding, metadata, playback, distribution, analytics, accessibility, monetization, security, search, interactivity and more.
+        <br /><br />
+        Available as an open API, with a set of SDKs, developer tools and dozens of code recipes, we’re making the video experience creation process as easy as it gets.
+      <br /><br /><a href="/register" class="free-for-12-months-link"><span class="about-vpaas-text-block-span">Free Tier for Your First 12 Months</span></a>
+      </div>
+    </div>
+  </div>
+
   <div class="w-section w-hidden-medium w-hidden-small w-hidden-tiny summary-icon-section">
     <div class="w-container container">
       <div class="w-row columns">
         <div class="w-col w-col-2">
-          <div class="column-div"><img src="images/player icon 2.svg" class="summary-icon-img">
+          <a class="home-icon-links" href="https://vpaas.kaltura.com/documentation/04_Web-Video-Player"><div class="column-div"><img src="images/player icon 2.svg" class="summary-icon-img">
             <h2 class="summary-heading">Video Player</h2>
             <div class="summary-description">HTML5 Toolkit, Plugins &amp; API</div>
-          </div>
+          </div></a>
         </div>
         <div class="w-col w-col-2">
-          <div class="column-div"><img src="images/API icon.svg" class="summary-icon-img">
+          <a class="home-icon-links" href="https://vpaas.kaltura.com/documentation/01_VPaaS-API-Getting-Started"><div class="column-div"><img src="images/API icon.svg" class="summary-icon-img">
             <h2 class="summary-heading">Video API</h2>
             <div class="summary-description">API Infrastructure for Core Video Services</div>
-          </div>
+          </div></a>
         </div>
         <div class="w-col w-col-2">
-          <div class="column-div"><img src="images/media w icon.svg" class="summary-icon-img">
+          <a class="home-icon-links" href="https://vpaas.kaltura.com/documentation/02_Media-Ingest-and-Preperation"><div class="column-div"><img src="images/media w icon.svg" class="summary-icon-img">
             <h2 class="summary-heading">Media Workflows</h2>
             <div class="summary-description">Tools for Video Workflows &amp; Experiences</div>
-          </div>
+          </div></a>
         </div>
         <div class="w-col w-col-2">
-          <div class="column-div"><img src="images/analytics icon.svg" class="summary-icon-img">
+          <a class="home-icon-links" href="https://vpaas.kaltura.com/documentation/08_Video-Analytics-and-Insights"><div class="column-div"><img src="images/analytics icon.svg" class="summary-icon-img">
             <h2 class="summary-heading">Analytics</h2>
             <div class="summary-description">Direct Access to Content &amp; User Data</div>
-          </div>
+          </div></a>
         </div>
         <div class="w-col w-col-2">
-          <div class="column-div"><img src="images/mobile icon.svg" class="summary-icon-img">
+          <a class="home-icon-links" href="https://vpaas.kaltura.com/documentation/05_Mobile-Video-Player-SDKs"><div class="column-div"><img src="images/mobile icon.svg" class="summary-icon-img">
             <h2 class="summary-heading">Mobile Video</h2>
             <div class="summary-description">SDKs for All Native Video Workflows</div>
-          </div>
+          </div></a>
         </div>
         <div class="w-col w-col-2">
-          <div class="column-div"><img src="images/live_video_icon.png" class="summary-icon-img">
+          <a class="home-icon-links" href="https://vpaas.kaltura.com/documentation/07_Live_Video_and_Broadcast"><div class="column-div"><img src="images/live_video_icon.png" class="summary-icon-img">
             <h2 class="summary-heading">Live Video</h2>
             <div class="summary-description">Create, Manage, Deliver &amp; Record</div>
-          </div>
+          </div></a>
         </div>
       </div>
     </div>
   </div>
-  <div class="w-section tabbed-section">
+  <!--div class="w-section tabbed-section">
     <div class="w-hidden-medium w-hidden-small w-hidden-tiny tabs-bk"></div>
     <div class="w-container container tabs-container">
       <div data-duration-in="300" data-duration-out="100" class="w-tabs tabs-wrapper">
-       <div class="w-tab-menu w-clearfix tabs-menu"><a data-w-tab="Tab 1" class="w-tab-link w-inline-block tab-links first-tab-link"><div>API</div></a><a data-w-tab="Tab 2" class="w-tab-link w-inline-block tab-links"><div>Player</div></a><a data-w-tab="Tab 3" class="w-tab-link w-inline-block tab-links"><div>Flows &amp; Experience</div></a><a data-w-tab="Tab 4" class="w-tab-link w-inline-block tab-links"><div>Live &amp; Media Prep</div></a><a data-w-tab="Tab 5" class="w-tab-link w-inline-block tab-links"><div>Analytics</div></a><a data-w-tab="Tab 6" class="w-tab-link w-inline-block tab-links"><div>Monetization</div></a><a data-w-tab="Tab 7" class="w-tab-link w--current w-inline-block tab-links last-tab-link"><div>Mobile</div></a></div> 
+       <div class="w-tab-menu w-clearfix tabs-menu"><a data-w-tab="Tab 1" class="w-tab-link w-inline-block tab-links first-tab-link"><div>API</div></a><a data-w-tab="Tab 2" class="w-tab-link w-inline-block tab-links"><div>Player</div></a><a data-w-tab="Tab 3" class="w-tab-link w-inline-block tab-links"><div>Flows &amp; Experience</div></a><a data-w-tab="Tab 4" class="w-tab-link w-inline-block tab-links"><div>Live &amp; Media Prep</div></a><a data-w-tab="Tab 5" class="w-tab-link w-inline-block tab-links"><div>Analytics</div></a><a data-w-tab="Tab 6" class="w-tab-link w-inline-block tab-links"><div>Monetization</div></a><a data-w-tab="Tab 7" class="w-tab-link w--current w-inline-block tab-links last-tab-link"><div>Mobile</div></a></div>
         <div class="w-tab-content">
           <div data-w-tab="Tab 1" class="w-tab-pane tabbed-pane">
             <div class="w-row tabbed-column-row first-row">
@@ -656,8 +674,8 @@ layout: default
         </div>
       </div>
     </div>
-  </div>
-  <div class="w-section case-study-section">
+  </div-->
+  <div class="w-section case-study-section" id="case_study_section">
     <div class="w-container">
       <div class="case-study-heading-div">
         <div class="sml-caps-header">CASE STUDIES</div>
@@ -666,18 +684,18 @@ layout: default
       <div class="case-study-div">
         <div class="w-row">
           <div class="w-col w-col-4 case-study-columns">
-            <div class="case-study-column-div"><img width="376" src="images/logo-lakana.png" class="case-study-img">
-              <div class="case-study-description">Lakana built a web video publishing, management and distribution platform servicing over 125 local news broadcasters, while also exposing APIs and mobile SDKs as an OEM.</div><a href="#" class="readmore-text-link">read more</a>
+            <div class="case-study-column-div"><img width="376" src="images/2u_logo_home_pg.jpg" class="case-study-img">
+              <div class="case-study-description">2U built a personalized distance learning platform providing full degrees from leading accredited universities, merging synchronized Live and VOD experiences for one-on-one and collaborative group learning.</div><a href="https://vpaas.kaltura.com/2u-case-study#sthash.Ln1hwE4E.dpbs" class="readmore-text-link">read more</a>
             </div>
           </div>
           <div class="w-col w-col-4">
             <div class="case-study-column-div"><img width="376" src="images/gogo-logo.png" class="case-study-img">
-              <div class="case-study-description">GoGo built an inflight Paid TV service connecting inflight video rental and on-land mobile enabled video catch-up experience on Delta and American Airlines flights in the US.</div><a href="#" class="readmore-text-link">read more</a>
+              <div class="case-study-description">GoGo built an inflight Paid TV service connecting inflight video rental and on-land mobile enabled video catch-up experience on Delta and American Airlines flights in the US.</div><a href="https://vpaas.kaltura.com/gogo-case-study.html#sthash.8ybT3bVT.dpbs" class="readmore-text-link">read more</a>
             </div>
           </div>
           <div class="w-col w-col-4">
-            <div class="case-study-column-div"><img width="376" src="images/reuters.png" class="case-study-img">
-              <div class="case-study-description">Thompson Reuters built an end-to-end media platform featuring contextual, time-sensitive video news distribution and discovery for financial institutions and trading desks.&nbsp;</div><a href="#" class="readmore-text-link">read more</a>
+            <div class="case-study-column-div"><img width="376" src="images/skyword_hdid__logo_home_pg.jpg" class="case-study-img">
+              <div class="case-study-description">How Did I Do built an online platform to automatically analyze speaker communication skills and impact, and Skyword built a video marketplace and workflow management platform for enterprises.</div><a href="https://vpaas.kaltura.com/how-did-i-do_skyword-case-study#sthash.vTWrQMDC.DFVtYSJY.dpbs" class="readmore-text-link">read more</a>
             </div>
           </div>
         </div>
@@ -692,11 +710,21 @@ layout: default
           <div class="news-wrapper">
             <div class="news-item">
               <div class="w-row">
+                <div class="w-col w-col-4 w-col-small-6"><img width="176" src="images/jam.jpg" class="news-item-img">
+                </div>
+                <div class="w-col w-col-8 w-col-small-6">
+                  <h3 class="blog-headings">JaM: PHP App Monitoring Made Easy</h3>
+                  <p class="news-item-description">A few months back, we, at Kaltura, held an internal hackathon, this post will cover my hackathon project: a PHP monitoring system called JaM.</p><a href="https://blog.kaltura.com/7867-2/" class="readmore-text-link" target="_blank">READ MORE</a>
+                </div>
+              </div>
+            </div>
+            <div class="news-item">
+              <div class="w-row">
                 <div class="w-col w-col-4 w-col-small-6"><img width="176" src="images/source.jpg" class="news-item-img">
                 </div>
                 <div class="w-col w-col-8 w-col-small-6">
                   <h3 class="blog-headings">Kaltura Hackathon 2015</h3>
-                  <p class="news-item-description">Some of the things we pride ourselves on at Kaltura are collaboration, openness, and creativity. So at the end of the year, we ran our annual internal Kaltura Hackathon in Tel Aviv, with remote participants from New York and London.</p><a href="#" class="readmore-text-link">READ MORE</a>
+                  <p class="news-item-description">Some of the things we pride ourselves on at Kaltura are collaboration, openness, and creativity. So at the end of the year, we ran our annual internal Kaltura Hackathon in Tel Aviv, with remote participants from New York and London.</p><a href="https://blog.kaltura.com/hackathon-2015/" class="readmore-text-link">READ MORE</a>
                 </div>
               </div>
             </div>
@@ -706,7 +734,7 @@ layout: default
                 </div>
                 <div class="w-col w-col-8 w-col-small-6">
                   <h3 class="blog-headings">FOSDEM Open Media devroom</h3>
-                  <p class="news-item-description">If you’re interested in Open Source Media projects, be sure to hit the Open Media devroom at FOSDEM next week. The conference is happening in Brussels on January 30 and 31. We’re proud to be organizing this particular developer room along with the European Broadcasting Union.</p><a href="#" class="readmore-text-link">READ MORE</a>
+                  <p class="news-item-description">If you’re interested in Open Source Media projects, be sure to hit the Open Media devroom at FOSDEM next week. The conference is happening in Brussels on January 30 and 31. We’re proud to be organizing this particular developer room along with the European Broadcasting Union.</p><a href="https://blog.kaltura.com/fosdem-open-media-devroom/" class="readmore-text-link">READ MORE</a>
                 </div>
               </div>
             </div>
@@ -716,7 +744,7 @@ layout: default
                 </div>
                 <div class="w-col w-col-8 w-col-small-6">
                   <h3 class="blog-headings">Announcing: Kaltura support for PHP7</h3>
-                  <p class="news-item-description">PHP 7 was officially released by the PHP team on Dec 3rd, 2015. This post is meant to be a general guide for people who wish to know what PHP 7 is about and what to expect when porting their code from PHP 5.5 to PHP 7.</p><a href="#" class="readmore-text-link">READ MORE</a>
+                  <p class="news-item-description">PHP 7 was officially released by the PHP team on Dec 3rd, 2015. This post is meant to be a general guide for people who wish to know what PHP 7 is about and what to expect when porting their code from PHP 5.5 to PHP 7.</p><a href="https://blog.kaltura.com/announcing-kaltura-support-for-php7/" class="readmore-text-link">READ MORE</a>
                 </div>
               </div>
             </div>

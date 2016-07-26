@@ -2,6 +2,7 @@
 layout: null
 ---
 <?xml version="1.0" encoding="UTF-8"?>
+
 <?xml-stylesheet type="text/css" href="{{ site.url}}/css/kaltura-dev-site.webflow.css" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
@@ -12,6 +13,7 @@ layout: null
     <pubDate>{{ site.time | date_to_long_string }}</pubDate>
     <generator>Jekyll v{{ jekyll.version }}</generator>
     {% for page in site.pages limit:10 %}
+	{% if page.sitemap != false %}
       <item>
         <title>{{ page.title | xml_escape }}</title>
         <description>{{ page.content | xml_escape }}</description>
@@ -24,6 +26,7 @@ layout: null
         <category>{{ cat | xml_escape }}</category>
         {% endfor %}
       </item>
+	{% endif %}
     {% endfor %}
   </channel>
 </rss>

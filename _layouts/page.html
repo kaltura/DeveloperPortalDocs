@@ -3,57 +3,107 @@ layout: default
 ---
   <!--link rel="stylesheet" href="{{ site.baseurl }}/site.css"-->
 <script>
+function addRow(cat,subcat,name,link, entry_path) 
+{
+    if (subcat){
+	// subcat handle
+	subcatel=document.getElementById(subcat);
+	// if there isn't one
+	if (! subcatel ){
+	    var subcatel = document.createElement('div');
+	    subcatel.className = 'sidenav-grp-7';
+	    subcatel.id=subcat.replace(" ", "");
+	    subcatel.innerHTML = '<a href="#" class="sidenav-sub-cat-links" onClick="show_hide_sub_div(\''+subcatel.id + '\')"><h4 class="sidenav-headings grp-heading '+entry_path+'">'+subcat+'</h4></a>';
+	}
+	//subcatel.innerHTML = subcatel.innerHTML + '<a href='+link + ' class="sidenav-sub-links" id='+entry_path+'>'+name+'</a>';  
+	var new_elem = document.createElement('div');
+	new_elem.className = 'sidenav-sub-links';
+	new_elem.innerHTML = '<a href='+link + ' class="sidenav-sub-links" id='+entry_path+'>'+name+'</a>'
+        subcatel.appendChild(new_elem);
+        document.getElementById(cat).getElementsByClassName('sidenav-grp-links')[0].appendChild(subcatel);
+    }else{
+	thecat=document.getElementById(cat.replace(" ", "")+'-sub');
+	thecat.innerHTML = thecat.innerHTML + '<a href='+link + ' class="sidenav-links" id='+entry_path+'>'+name+'</a>' ;  
+    }
+}  
 function submit_feedback()
 {
+	if (!verify_recapcha()){
+		return false;
+	}
 	issue=document.getElementById("Issue-Description").value;
 	email=document.getElementById("email").value;
 	name=document.getElementById("name").value;
+	grecaptcharesponse=document.getElementById("g-recaptcha-response").value;
         $.ajax({
-                  type: 'GET',
+                  type: 'POST',
                   url: '{{ site.url }}:8443/mailme.php',
-                  data: {'issue': issue, 'email':email,'name':name},
+                  data: {'issue': issue, 'email':email,'name':name, 'g-recaptcha-response':grecaptcharesponse},
                   success: function(data){
 			post_message=document.getElementById("post_message");
 			post_message.innerHTML='<p>'+data+'</p>';
 		  }
 	});
 }
+function show_hide_sub_div(div_id) 
+{
+    for (var $i = 0, $j = document.getElementById(div_id).getElementsByClassName('sidenav-sub-links'); $i < $j.length; $i++) {
+	    if ( $j[$i].style.visibility == 'hidden'){
+		    $j[$i].style.visibility = 'visible';
+		    $j[$i].style.display = 'block';
+	    }else{
+		 $j[$i].style.visibility = 'hidden';
+		 $j[$i].style.display = 'none';
+	    }
+    }
+}
 </script>
 <article>
+
 
 <div class="w-section side-nav-section">
     <div class="w-container">
       <a href="#" data-ix="show-temp-page-nav-column" class="w-button w-clearfix mobilebtn">Topics<span class="fa fa-chevron-down" style="null"></span></a>
       <div class="w-row body-columns">
         <div class="w-col w-col-3 template-page-nav-column">
-{% for cat_hash in site.cats %}
-    <div class="sidenav-grp-7" id="/{{ cat_hash[1] }}" onClick="show_hide_div('/{{ cat_hash[1] }}')">
-	<a href="#" class="sidenav-cat-links"><h4 class="sidenav-headings grp-heading">{{ cat_hash[0] }}</h4></a>
-	<div class="sidenav-grp-links">
-	{% loop_directory directory:{{cat_hash[1]}} iterator:item filter:*.md sort:descending %}
-	    {% if item != 'categorymeta' %}
-	    <!--a id="/{{ cat_hash[1] }}/{{ item }}.md" href="{{site.url}}/{{ cat_hash[1] }}/{{ item }}" class="sidenav-links">{{item | capitalize| replace: '-',' '}}</a-->
-	    <a id="/{{ cat_hash[1] }}/{{ item }}.md" href="{{site.url}}/{{ cat_hash[1] }}/{{ item }}" class="sidenav-links">{{item | replace: '-',' '|capitalize_all}}</a>
-	    {% endif %}
-	{% endloop_directory %}
+{% assign cats = site.cats | sort %}
+
+
+{% for cat_hash in cats %}
+{% assign cats_string = cat_hash[0] | split:"::" %}
+<div class="sidenav-grp-7 heading-close" id="/{{ cats_string[1] }}" weight="{{ cats_string[0] }}">
+	<a href="#" class="sidenav-cat-links" onClick="show_hide_div('/{{ cats_string[1] }}')"><h4 class="sidenav-headings grp-heading {{ cats_string[1] }}">{{ cat_hash[1] }}</h4></a>
+	<div class="sidenav-grp-links" id="/{{ cats_string[1] | replace: ' ','' }}-sub" style="visibility: hidden; display: none;">
+	{% capture dir %}{{ cats_string[1] }}{% endcapture %}
+	{% capture cat %}{{ cat_hash[1] }}{% endcapture %}
+	{% include nav.html context=dir catname=cat %}
+	
 	</div>
         </div>
 {% endfor %}
         </div>
 	<script>
-	div_id='{{page.dir}}';
-	for (var $i = 0, $j = document.getElementById(div_id).getElementsByTagName('div'); $i < $j.length; $i++) {
-		$j[$i].style.visibility = 'visible';
-		$j[$i].style.display = 'block';
-		for (var $y = 0, $z = $j[$i].getElementsByTagName('a'); $y < $z.length; $y++) {
-		    if($z[$y].getAttribute('id')==='/{{page.path}}'){
-			$z[$y].setAttribute('class', 'sidenav-links-current');
-			//$z[$y].focus();
-		    }
-
+		div_id='{{page.dir}}';
+		var el = document.getElementById(div_id);
+		if (el != null) { 
+			addClass(el, 'heading-open');
+			removeClass(el, 'heading-close');
 		}
-	}
-    </script>
+		$j = el != null ? el.getElementsByTagName('div') : null;
+		if ($j) {
+			for (var $i = 0; $i < $j.length; $i++) {
+				$j[$i].style.visibility = 'visible';
+				$j[$i].style.display = 'block';
+				for (var $y = 0, $z = $j[$i].getElementsByTagName('a'); $y < $z.length; $y++) {
+				    if($z[$y].getAttribute('id')==='{{page.path| replace: '/','-'}}'){
+					$z[$y].setAttribute('class', 'sidenav-links-current');
+					//$z[$y].focus();
+				    }
+		
+				}
+			}
+		}
+    	</script>
         <div class="w-col w-col-9 template-page-content-column">
           <div class="post-header">
 
@@ -63,12 +113,12 @@ function submit_feedback()
     			<h1 class="post-title">{{ page.title }}</h1>
   			</header>
 
-			{% if page.git %}
+			{% if page.git and page.name != 'index.md' and page.name != '404.md' %}
 			
 			<table class="lastcommittable">
 
 				<!--tr><td>Created on: {{ page.git.first_commit.commit_date }}, By: {{ page.git.first_commit.author_name }}</td></tr-->
-				<tr><td>Last commit: {{ page.git.last_commit.commit_date }}, By: <span class="commit-author">{{ page.git.last_commit.author_name }}</span></td></tr>
+				<tr><td>Last commit: {{ page.git.last_commit.commit_date }}, By <span class="commit-author">{{ page.git.last_commit.author_name }}</span></td></tr>
 			
 				<!-- {% for contrib in page.git.authors %}
 				
@@ -89,25 +139,27 @@ function submit_feedback()
             <div class="post-content" data-swiftype-index="true">
     		
     		{{ content }}
+		
+		<div class="addthis_recommended_horizontal"></div>
 
-				<div class="social-bug-wrapper"> <!-- take this out of .post content -->
-            		<div class="w-embed social-embed"><span class="st_facebook_large" displaytext="Facebook"></span>
-              		<span class="st_twitter_large" displaytext="Tweet"></span>
-              		<span class="st_linkedin_large" displaytext="LinkedIn"></span>
-              		<span class="st_email_large" displaytext="Email"></span>
-            	</div>
-            	<div class="bug-button-wrapper"><a href="#" data-ix="bug-report-form-show-hide" class="w-button standard-button">Report an Issue</a></div>
+		<div class="social-bug-wrapper">
+			<div class="w-embed social-embed">
+				<div class="addthis_sharing_toolbox"></div>
+	            	</div>
+	
+	            	<!--div class="bug-button-wrapper"><a href="#" data-ix="bug-report-form-show-hide" class="w-button standard-button">Report an Issue</a></div-->
 
-          		<div data-ix="bug-form-hide-on-page-load" class="bug-form-wrapper">
+          		<div class="bug-form-wrapper">
             		<div class="w-form form-wrapper">
               			<form id="email-form" name="email-form" data-name="Email Form" class="report-issue-form" onsubmit="javascript:submit_feedback()" >
                 			<label for="name" class="form-labels">Name</label>
                 			<input id="name" type="text" placeholder="Enter your name" name="name" data-name="Name" required="required" class="w-input form-fields">
                 			<label for="email-label" class="form-labels">Email Address</label>
                 			<input id="email" type="email" placeholder="Enter your email address" name="email" data-name="Email" required="required" class="w-input form-fields">
-                			<label for="Issue-Description-label" class="form-labels">Issue Description</label>
+                			<label for="Issue-Description-label" class="form-labels">Share feedback on this page</label>
                 			<textarea id="Issue-Description" placeholder="Describe the issue in as much detail as possible" name="Issue-Description" data-name="Issue Description" required="required" class="w-input form-fields"></textarea>
-					<input type="submit" value="Submit" data-wait="Please wait..." class="w-button standard-button">
+<div class="g-recaptcha" data-sitekey="6Lf2bx8TAAAAAFiXASujAbfTnbBr7H6cqUbHLnnE"></div>
+					<input type="submit" value="Submit Feedback" data-wait="Please wait..." class="w-button standard-button">
               			</form>
               			<div class="w-form-done" id="post_message">
              			</div>
@@ -117,3 +169,73 @@ function submit_feedback()
   		</div>
   	</div>
 </article>
+<div id="back-to-top">
+	<a href="#" title="Back to top">&uarr;</a>
+	<a href="/register" title="Sign Up for a FREE VPaaS Account!"><i class="fa fa-sign-in" aria-hidden="true"></i></a>
+</div>
+<script>
+//This script turns all heading elments into clickable anchors, and then builds an "on this page" menu.
+$( document ).ready(function() {
+	//turn all headings into clicable anchors:
+	$('.post-content h1, .post-content h2, .post-content h3, .post-content h4, .post-content h5, .post-content h6').filter('[id]').each(function () {
+	    $(this).html('<a href="#'+$(this).attr('id')+'" class="post-content" aria-hidden="true">'+$(this).text()+'</a>');
+	});
+	{% if page.name != 'index.md' and page.name != 'search.md' and page.name != '404.md' %}
+
+	//build the "on this page" menu:
+	var ToC =
+	  "<nav role='navigation' class='table-of-contents'>" +
+	    "<h2>On this page:</h2>" +
+	    "<ul>";
+	
+	var newLine, el, title, link;
+	var hasHeaders = false;
+	$('.post-content h2').each(function() {
+	  hasHeaders = true;
+	  el = $(this);
+	  title = el.text();
+	  link = "#" + el.attr("id");
+	
+	  newLine =
+	    "<li>" +
+	      "<a href='" + link + "'>" +
+	        title +
+	      "</a>" +
+	    "</li>";
+	
+	  ToC += newLine;
+	
+	});
+	
+	ToC +=
+	   "</ul>" +
+	  "</nav>";
+	
+	if (hasHeaders) $("div.post-content").prepend(ToC);
+	
+    {% endif %}	
+	//back to top
+	if ($('#back-to-top').length) {
+    		var scrollTrigger = 100, // px
+	        backToTop = function () {
+	            var scrollTop = $(window).scrollTop();
+	            if (scrollTop > scrollTrigger) {
+	                $('#back-to-top').addClass('show');
+	            } else {
+	                $('#back-to-top').removeClass('show');
+	            }
+	        };
+	    backToTop();
+	    $(window).on('scroll', function () {
+	        backToTop();
+	    });
+	    $('#back-to-top a:first-child').on('click', function (e) {
+	        e.preventDefault();
+	        $('html,body').animate({
+	            scrollTop: 0
+	        }, 700);
+	    });
+	}
+});
+</script>
+

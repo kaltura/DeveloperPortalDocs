@@ -11,10 +11,21 @@ module Jekyll
 
         Dir.chdir(site.source) do
 	  site.config['cats'] ||= {}
+	  site.config['subcats'] ||= {}
           site.pages.each do |page|
 	    if page.name === 'categorymeta.md'
 	      cat_name=page.data['catname']
-	      site.config['cats'][cat_name] = File.dirname(page.path.shellescape)
+	      if page.data['catweight']
+		weight = page.data['catweight']
+	      else
+		weight = 999
+	      end
+	      #if page.data['subcats']
+	      #	site.config['cats'][File.dirname(page.path.shellescape)] = cat_name + '::' + page.data['subcats']
+	      #else
+		site.config['cats'][weight + '::' +File.dirname(page.path.shellescape)] = cat_name
+	      #end
+	      #print weight  + '::' + File.dirname(page.path.shellescape) + "\n"
 	    end
           end
         end

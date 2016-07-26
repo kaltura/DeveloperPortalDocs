@@ -16,7 +16,7 @@ module Jekyll
 	#url ="http://videos.kaltura.com/media/1_is3qd1az"
       # oembed look up
       preview = Onebox.preview(url) 
-      "<div>#{preview}</div>"
+      "#{preview}"
 
     end
   end
