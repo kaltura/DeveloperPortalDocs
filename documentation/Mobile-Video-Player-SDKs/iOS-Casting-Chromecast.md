@@ -2,7 +2,7 @@
 layout: page
 title: Google Cast Setup for iOS Devices
 subcat: iOS
-weight: 290
+weight: 300
 ---
 
 This article describes how to set up the Google Cast feature in iOS devices.
