@@ -2,7 +2,7 @@
 layout: page
 title: Android TracksManager
 subcat: Android
-weight: 330
+weight: 355
 ---
 
 ## This article describes how to select different tracks in the stream.
@@ -87,7 +87,7 @@ config.addConfig("closedCaptions.showEmbeddedCaptions", "true");
 - void              switchTrack(TrackType trackType, int newIndex);
 
 
-##  Getting tracks:
+##  Getting Tracks
 
 	for (TrackFormat track : mPlayer.getTrackManager().getAudioTrackList()) {
           Log.d(TAG, track.toString());
@@ -107,17 +107,16 @@ config.addConfig("closedCaptions.showEmbeddedCaptions", "true");
   	mPlayer.getTrackManager().switchTrack(TrackType.TYPE_TEXT,index);
 
 
-## Getting Current Track index by track type
+## Getting the Current Track Iindex by Track Type
 
 	mPlayer.getTrackManager().getCurrentTrack(TrackType.VIDEO).index);
 	mPlayer.getTrackManager().getCurrentTrack(TrackType.VIDEO).index);
 	mPlayer.getTrackManager().getCurrentTrack(TrackType.VIDEO).index);
 
 
-##  Starting the player with preferred bitrate
+##  Starting the Player with a Preferred Bitrate  
 
-User may want to start the playback with specific bitrate
-this can be acheived using the following code in the player init or change configuration process:
+The user may want to start the playback with a specific bitrate. This can be acheived using the following code in the player init or in the change configuration process:
 
 	String prefferedBitrateMbit = "600";
 	config.addConfig("mediaProxy.preferredFlavorBR", prefferedBitrateMbit);
