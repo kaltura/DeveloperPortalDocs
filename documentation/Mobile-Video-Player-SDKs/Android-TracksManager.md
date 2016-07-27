@@ -66,7 +66,7 @@ There are two options for working with tracks in the SDK:
 
 ## Enabling the Tracks Feature  
 
-To enable the Tracks feature, you may tun on the Tracks plugins as follows:
+To enable the Tracks feature, run the Tracks plugins as follows:
 
 ### Video Tracks  
 
@@ -123,7 +123,7 @@ The following are the available operations when using the KTracksManager:
 
 ##  Starting the Player with a Preferred Bitrate  
 
-The user may want to start the playback with a specific bitrate. This can be acheived using the following code in the player init or in the change configuration process:
+The user may want to start the playback with a specific bitrate. This can be achieved using the following code in the player init or in the change configuration process:
 
 	String prefferedBitrateMbit = "600";
 	config.addConfig("mediaProxy.preferredFlavorBR", prefferedBitrateMbit);
