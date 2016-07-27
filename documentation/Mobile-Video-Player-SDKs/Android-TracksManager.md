@@ -1,35 +1,37 @@
 ---
 layout: page
-title: Android TracksManager
+title: Android Tracks Manager
 subcat: Android
 weight: 380
 ---
 
-## This article describes how to select different tracks in the stream.
+This article describes how to select different tracks in the stream.
 
-- There are 3 TrackTypes defined
-	* VIDEO
-	* AUDIO
-	* TEXT
+## Track Types  
 
-## There are 2 options to work with the Tracks in the SDK
+There are three types of defined track types:
+* VIDEO
+* AUDIO
+* TEXT
 
-1. Using the HTML5 web view menus:
-	In this case the selection is done from the web layer using the tracks plugins
+## Working with Tracks in the SDK  
 
-2. Using native menus:
-   In this case it is possible implement 
+There are two options for working with tracks in the SDK:
+
+* Using the HTML5 web view menus: In this case selection is done from the web layer using the tracks plugins.
+* Using native menus: In this case it is possible implement the following:
      * KTrackActions.EventListener
      * KTrackActions.VideoTrackEventListener
      * KTrackActions.AudioTrackEventListener
      * KTrackActions.TextTrackEventListener
     
-## Adding/Removing Listeners 
+## Adding/Removing Listeners  
      
- In player creation phase need to add a call to  set/removed for each event listenesr that you wish to receive on runtime:
+1. At the Player creation phase, you will need to add a call to set/removed for each event listener that you wish to receive during runtime:
+2. For each listener, you will need to implement the following:
    
    	 //Add
-   	 mPlayer.setTracksEventListener(this); // for a change in the tracks list om media switching
+   	 mPlayer.setTracksEventListener(this); // for a change in the tracks list upon media switching
    	 mPlayer.setVideoTrackEventListener(this); for a change in the video track index
    	 mPlayer.setAudioTrackEventListener(this); for a change in the audio tracks index
    	 mPlayer.setTextTrackEventListener(this);  for a change in the text track index
@@ -42,7 +44,7 @@ weight: 380
    	 mPlayer.removeVideoTrackEventListener();
    	 
             
-  For each Listener you will add you will implemet
+2. For each listener, you will need to implement the following:
 
     @Override
     public void onTracksUpdate(KTrackActions tracksManager) {
@@ -62,32 +64,37 @@ weight: 380
     }
   
 
+## Enabling the Tracks Feature  
 
+To enable the Tracks feature, you may tun on the Tracks plugins as follows:
 
-In order to enable the Tracks feature you may tun on the Tracks plugins:
+### Video Tracks  
 
-##Video Tracks:
 config.addConfig("sourceSelector.plugin", "true");
 config.addConfig("sourceSelector.displayMode", "bitrate");
 
-##Audio Tracks:
+### Audio Tracks  
+
 config.addConfig("audioSelector.plugin", "true");
 
-##Text Tracks:
+### Text Tracks  
+
 config.addConfig("closedCaptions.plugin", "true");
 config.addConfig("closedCaptions.showEmbeddedCaptions", "true");
 
 
-## Available operations using the KTracksManager:
+## KTracksManager Available Operations  
 
-- List<TrackFormat> getAudioTrackList();
-- List<TrackFormat> getTextTrackList();
-- List<TrackFormat> getVideoTrackList();
-- TrackFormat       getCurrentTrack(TrackType trackType);
-- void              switchTrack(TrackType trackType, int newIndex);
+The following are the available operations when using the KTracksManager:
+
+* List<TrackFormat> getAudioTrackList();
+* List<TrackFormat> getTextTrackList();
+* List<TrackFormat> getVideoTrackList();
+* TrackFormat       getCurrentTrack(TrackType trackType);
+* void              switchTrack(TrackType trackType, int newIndex);
 
 
-##  Getting Tracks
+###  Getting Tracks  
 
 	for (TrackFormat track : mPlayer.getTrackManager().getAudioTrackList()) {
           Log.d(TAG, track.toString());
@@ -99,7 +106,7 @@ config.addConfig("closedCaptions.showEmbeddedCaptions", "true");
           Log.d(TAG, track.toString());
     }
 
-##  Switching tracks
+###  Switching Tracks  
 
 
   	mPlayer.getTrackManager().switchTrack(TrackType.TYPE_VIDEO,index);
@@ -107,7 +114,7 @@ config.addConfig("closedCaptions.showEmbeddedCaptions", "true");
   	mPlayer.getTrackManager().switchTrack(TrackType.TYPE_TEXT,index);
 
 
-## Getting the Current Track Iindex by Track Type
+###  Getting the Current Track Index by Track Type  
 
 	mPlayer.getTrackManager().getCurrentTrack(TrackType.VIDEO).index);
 	mPlayer.getTrackManager().getCurrentTrack(TrackType.VIDEO).index);
