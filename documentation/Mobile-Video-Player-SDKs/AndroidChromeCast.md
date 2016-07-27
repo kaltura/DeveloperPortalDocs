@@ -28,7 +28,8 @@ To begin casting, follow these steps:
         KPPlayerConfig config = new KPPlayerConfig("{your-server-id}", "{your-ui-conf-id}", "{your-pqrtner-id}").setEntryId("{your-entry_id}");
         ```
 2. Next, add the following to your `config` instance:
-        ```
+
+```
           config.addConfig("chromecast.plugin", "true");
 config.addConfig("chromecast.useKalturaPlayer", "true");             
 ```
@@ -84,6 +85,7 @@ mCastProvider.setKCastProviderListener(new KCastProvider.KCastProviderListener()
 
 After selecting a detected device, connect to the device by calling the following:
 
+
 ```
 private void presentCCDevices() {
         final ArrayList<KCastDevice> devices = mCastProvider.getDevices();
@@ -105,6 +107,7 @@ private void presentCCDevices() {
     }
 ```
 
+
 #### Casting Media
 
 To cast media, set the `mCastProvider` property under `PlayerViewController` with the `KCastProvider` object you created as follows:
@@ -112,6 +115,7 @@ To cast media, set the `mCastProvider` property under `PlayerViewController` wit
 ```
 mPlayer.setCastProvider(mCastProvider);
 ```
+
 
 #### Disconnecting from a Device
 
