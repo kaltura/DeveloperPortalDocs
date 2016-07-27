@@ -18,7 +18,7 @@ Before you begin setting up the Cast feature, make sure you've read the article 
 ## Basic Definitions
 
 * `Sender` - A Cast enabled Kaltura Player running inside of a iOS Application; the Kaltura Player requires a Sender App ID.
-* `Receiver` - A Kaltura Player Receiver App that runs on the Chromecast devicea. 
+* `Receiver` - A Kaltura Player Receiver App that runs on the Chromecast device. 
 
 ## Google Cast Setup  
 
@@ -30,14 +30,14 @@ The supported version for Google Cast iOS SDK is version `2.10.4`.
 
 ### Getting Started  
 
-To begin casting follow these steps:
+To begin casting, follow these steps:
 
-1. After creating the `KPPlayerConfig *config`:
+1. Create the `KPPlayerConfig *config`as follows:
         ```
         KPPlayerConfig *config = [[KPPlayerConfig alloc] initWithServer:@"{your-server-id}"                                                           uiConfID:@"{your-ui-conf-id}"                                                                  partnerId:@"{your-pqrtner-id}"];
             config.entryId = @"1_o426d3i4";
         ```
-2. Add the following to your `config` instance:
+2. Next, add the following to your `config` instance:
         ```
             [config addConfigKey:@"chromecast.plugin" withValue:@"true"];
             [config addConfigKey:@"chromecast.useKalturaPlayer" withValue:@"true"];
@@ -80,7 +80,7 @@ To begin casting follow these steps:
         - (void)castProvider:(KCastProvider *)provider didDeviceGoOffline:(KCastDevice *)device {
         }
         ```
-This provides an array of `KCastDevice`. 
+This provides a list of `KCastDevice`: 
 
  ```
 castProvider.devices;
@@ -132,10 +132,11 @@ or
 
 ### Media Remote Control  
 
-The `KCastProvider` has a `KCastMediaRemoteControl` instance that controls the playback of the video being cast. The `KCastMediaRemoteControlDelegate` will provide you with playback callbacks while casting.
+The `KCastProvider` includes a `KCastMediaRemoteControl` instance that controls the playback of the video being cast. The `KCastMediaRemoteControlDelegate` will provide you with playback callbacks while casting.
+
 For example:
 ```
-// To play the memdia
+// To play the media
 [_castProvider.mediaRemoteControl play];
 
 // Delegate method, called when player is ready to play
