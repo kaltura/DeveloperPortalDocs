@@ -1,38 +1,41 @@
 ---
 layout: page
-title: Google Cast Setup 
+title: Google Cast Setup
+subcat: Android
+weight: 310
 ---
 
 ## Introduction
 
-The Cast functionality will allow your videos to be cast from a Android mobile device via the Chromecast plugin directly to a Kaltura Player receiver app on a Chromecast-connected TV.
+The Cast functionality allows your videos to be cast from a Android mobile device, via the Chromecast plugin, directly to a Kaltura Player receiver app on a Chromecast-connected TV.
+
+### Before You Begin  
+
+Before you begin setting up the Cast feature, make sure you've read the article [Android Player SDK and Environment Setup - Getting Started](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/Android-Getting-Started.html).
 
 ## Basic Definitions
 
-`Sender` - A Cast enabled Kaltura Player running inside of an Android Application. The Kaltura Player requires a sender App ID.
+* `Sender` - A Cast enabled Kaltura Player running inside of a iOS Application; the Kaltura Player requires a Sender App ID.
+* `Receiver` - A Kaltura Player Receiver App that runs on the Chromecast device.
 
-`Receiver` - A Kaltura Player receiver application that runs on the Chromecast device. The receiver application 
 
+### Getting Started  
 
-### Get Started
-To begin casting follow these steps:
+To begin casting, follow these steps:
 
-* After `KPPlayerConfig config` creation 
-
-```
-KPPlayerConfig config = new KPPlayerConfig("{your-server-id}", "{your-ui-conf-id}", "{your-pqrtner-id}").setEntryId("{your-entry_id}");
-```
-
-* Add the following to your `config` instance
-
-```
-config.addConfig("chromecast.plugin", "true");
+1. Create the `KPPlayerConfig config` as follows:
+        ```
+        KPPlayerConfig config = new KPPlayerConfig("{your-server-id}", "{your-ui-conf-id}", "{your-pqrtner-id}").setEntryId("{your-entry_id}");
+        ```
+2. Next, add the following to your `config` instance:
+        ```
+          config.addConfig("chromecast.plugin", "true");
 config.addConfig("chromecast.useKalturaPlayer", "true");             
 ```
 
+#### Scanning for Devices  
 
-#### Scan for devices
-
+To scan for devices, use the following:
 
 ```
 mCastProvider = KCastFactory.createCastProvider();
@@ -77,12 +80,9 @@ mCastProvider.setKCastProviderListener(new KCastProvider.KCastProviderListener()
         
 ```
 
+#### Connecting to Devices
 
-        
-#### Connect to Device
-
-* When some device was chosen connect to a device by calling
-
+After selecting a detected device, connect to the device by calling the following:
 
 ```
 private void presentCCDevices() {
@@ -105,30 +105,30 @@ private void presentCCDevices() {
     }
 ```
 
+#### Casting Media
 
-#### Cast the Media
-
-* To cast, set the `mCastProvider` property under `PlayerViewController` with `KCastProvider` object you created.
+To cast media, set the `mCastProvider` property under `PlayerViewController` with the `KCastProvider` object you created as follows:
 
 ```
 mPlayer.setCastProvider(mCastProvider);
 ```
 
-#### Disconnect from Device
+#### Disconnecting from a Device
 
-* To disconnect from a device use
+To disconnect from a device use the following:
 
 ```
 mCastProvider.disconnectFromDevcie();
 ```
 
+### Using the Media Remote Control  
 
-### Media Remote Control
-The `KCastProvider` has a `KCastMediaRemoteControl` instance that controls the playback of the video being casted, and the `KCastMediaRemoteControlDelegate` will provide you with the playback callbacks while casting.
-For example
+The `KCastProvider` includes a `KCastMediaRemoteControl` instance that controls the playback of the video being cast; using the  `KCastMediaRemoteControlDelegate` will provide you with the playback callbacks while casting.
+
+For example:
 
 ```
-// To play the memdia
+// To play the media
 mCastProvider.getCastMediaRemoteControl().play();
 
 mCastProvider.setKCastProviderListener(new KCastProvider.KCastProviderListener() {
@@ -148,8 +148,8 @@ mCastProvider.setKCastProviderListener(new KCastProvider.KCastProviderListener()
             }
 ```
 
-### Demo Application
+### Demo Application  
 
-A best practice sample application demonstrating the code necessary for a proper casting experience can be found on https://github.com/kaltura/player-sdk-demo-ios/tree/master/ovp/CCDemo. 
+A best practice sample application, which demonstrates the code that is required for a proper casting experience, can be found in this [demo](https://github.com/kaltura/player-sdk-demo-ios/tree/master/ovp/CCDemo). 
 
-This repository contains several basic best practice apps that use the Kaltura iOS Player SDK.
+This repository contains several basic best practice applications that use the Kaltura iOS Player SDK.
