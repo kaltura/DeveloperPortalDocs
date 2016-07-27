@@ -2,7 +2,7 @@
 layout: page
 title: Google Cast Setup
 subcat: Android
-weight: 310
+weight: 380
 ---
 
 ## Introduction
