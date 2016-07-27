@@ -2,7 +2,7 @@
 layout: page
 title: Android TracksManager
 subcat: Android
-weight: 355
+weight: 380
 ---
 
 ## This article describes how to select different tracks in the stream.
