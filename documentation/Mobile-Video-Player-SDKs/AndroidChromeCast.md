@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Android Google Cast Setup
+title: Google Cast Setup for Android Devices
 subcat: Android
 weight: 370
 ---
