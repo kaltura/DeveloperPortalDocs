@@ -154,6 +154,10 @@ mCastProvider.setKCastProviderListener(new KCastProvider.KCastProviderListener()
 
 ### Demo Application  
 
-A best practice sample application, which demonstrates the code that is required for a proper casting experience, can be found in this [demo](https://github.com/kaltura/player-sdk-demo-ios/tree/master/ovp/CCDemo). 
+A best practice sample application, which demonstrates the code that is required for a proper casting experience, can be found in this 
+[demo Android](https://github.com/kaltura/player-sdk-native-android/tree/develop/KalturaDemos/CCPlayerDemo). 
+
+You may also find a reference in:
+[demo iOS](https://github.com/kaltura/player-sdk-demo-ios/tree/master/ovp/CCDemo). 
 
 This repository contains several basic best practice applications that use the Kaltura iOS Player SDK.
