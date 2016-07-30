@@ -16,7 +16,7 @@ The following video provides a quick walkthrough of the bulk-upload features in 
 
 {% onebox http://videos.kaltura.com/media/1_kxiv585x %}
 
-## Bulk Upload Inpur Formats (CSV vs. XML)  
+## Bulk Upload Input Formats (CSV vs. XML)  
 
 The benefits of using bulk upload to ingest your files include:
 
