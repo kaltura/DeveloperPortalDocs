@@ -44,8 +44,6 @@ a#logo {
     padding: 0;
     margin: 0;
     float: left;
-    position: absolute;
-    left: 40px;
 }
 a #logoimg {
 	height: 26px;
