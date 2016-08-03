@@ -25,6 +25,13 @@ The following DRM schemes are supported in Android devices:
     * Google no longer requires Widevine Classic support in Android 6.0 devices, but some devices still support it.
 * Online and offline playback
 
+#### Device Info:
+
+In case you have problems with playing DRM content on specific devices
+you may install the Kaltura Device Info App in order to verify that your device has WV Modular/Classic DRM capabilities.
+
+[Kaltura Device Info App](https://play.google.com/store/apps/details?id=com.kaltura.kalturadeviceinfo) 
+
 ### DRM Support in iOS Devices  
 
 The following DRM schemes are supported in iOS devices:
