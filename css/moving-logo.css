@@ -34,17 +34,19 @@ a#logo:before {
 	height: 26px;
 	content: " ";
 	position: absolute;
-    left: -32px;
-    top: 0px;
+	left: -32px;
+	top: 0px;
 }
 a#logo {
 	z-index: 1;
 	background: url("../images/VPaaS-logo-text.png") no-repeat;
 	background-size: contain;
-    padding: 0;
-    margin: 0;
-    float: left;
-    top: 20px;
+	padding: 0;
+	margin: 0;
+	float: left;
+	left: 40px;
+	top: 20px;
+	margin-right: 60px;
 }
 a #logoimg {
 	height: 26px;
