@@ -32,7 +32,7 @@ you may install the Kaltura Device Info App in order to verify that your device 
 
 [Kaltura Device Info App](https://play.google.com/store/apps/details?id=com.kaltura.kalturadeviceinfo) 
 
-### DRM Support in iOS Devices  
+### DRM Support in iOS Devices
 
 The following DRM schemes are supported in iOS devices:
 
@@ -40,7 +40,7 @@ The following DRM schemes are supported in iOS devices:
 
 * Supported in iOS versions 8 and up
 * Online playback only
-    * A future version of FairPlay/iOS *may* support offline. [No commitment from Apple](https://forums.developer.apple.com/message/18444).
+    * iOS 10, due in September 2016, supports offline. A future version of the Player SDK will support it.
 
 #### Widevine Classic  
 
