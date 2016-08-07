@@ -11,6 +11,16 @@ The native mobile SDKs (Android and iOS) allow applications to play downloaded c
 
 > Note: The SDK **does not** provide the download function or the download URL. This should be provided by the application.
 
+## Supported Use Case
+
+This is the general supported use case for offline playback. Starting with a just-installed app, the following should work:
+1. Play any video while online
+2. Download and register any (the same one that was played in step 1 or another) video
+3. Go offline
+4. Play the video that was downloaded in step 2.
+
+> The requirement to play any video while online (step 1) is a limitation that will be fixed in a future version of the Player SDK.
+
 ## Implementing Offline Playback
 
 From the application's point-of-view, there are three parts to implementing offline playback:
@@ -114,8 +124,6 @@ the playback source dynamically. For example:
 {% endplantuml %}
 
 As mentioned above, the `entryConfig` object must include the `localContentId` that was used during the registration of the same asset.
-
-> Note: the player must be loaded at least once while the device is *online* before offline playback is enabled. This limitation will be resolved in a future version of the Player-SDK. This initial online playback can be performed with any entry.
 
 ## Download Location Guidelines  
 
