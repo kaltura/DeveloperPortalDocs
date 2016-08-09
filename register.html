@@ -17,7 +17,7 @@ layout: default
 
 <div class="w-form">
 		
-    <form id="register-form" name="register-form" data-name="Register Form" action="https://vpaas.kaltura.com:8443/post_register.php" method="post" onsubmit="return validate(event);">
+    <form id="register-form" name="register-form" data-name="Register Form" action="https://vpaas.kaltura.com1:8443/post_register.php" method="post" onsubmit="return validate(event);">
 <div class="company-details-div">
 <div class="w-row form-row">
 <div class="w-col w-col-6">
@@ -123,7 +123,20 @@ function validate(event)
     if (!verify_recapcha()){
 	return false;
     }
+    // this is needed only for browsers that do not support the HTML5 'required' attribute. AKA - Safari.
     $('[required]').each(function() {
+	if ( this.id == 'email' ){
+	    var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;  
+	    if(! $(this).val().match(mailformat)){
+		alert("Please input a valid email address");  
+		$(this).focus();
+		event.preventDefault();
+		return false;
+	    }else{
+		alert("email is valid");
+	    }
+	}
+
 	if ( $(this).val() == '' ){
 	    alert("Please fill all fields.");
 	    $(this).focus();
