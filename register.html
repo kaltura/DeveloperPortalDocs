@@ -17,7 +17,7 @@ layout: default
 
 <div class="w-form">
 		
-    <form id="register-form" name="register-form" data-name="Register Form" action="https://vpaas.kaltura.com1:8443/post_register.php" method="post" onsubmit="return validate(event);">
+    <form id="register-form" name="register-form" data-name="Register Form" action="https://vpaas.kaltura.com:8443/post_register.php" method="post" onsubmit="return validate(event);">
 <div class="company-details-div">
 <div class="w-row form-row">
 <div class="w-col w-col-6">
@@ -132,8 +132,6 @@ function validate(event)
 		$(this).focus();
 		event.preventDefault();
 		return false;
-	    }else{
-		alert("email is valid");
 	    }
 	}
 
