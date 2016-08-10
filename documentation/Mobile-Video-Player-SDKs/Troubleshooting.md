@@ -45,4 +45,18 @@ bitcode is enabled by default. However, building an application with bitcode req
 The Widevine Classic library (`libWViPhoneAPI.a`) included with the Kaltura SDK is not built with bitcode; as a result,
 your application will need to disable bitcode in its own linker settings.
 
+## Android: Device Info
 
+Use Kaltura Device Info app to generate a report of device capabilities with regards to media playback and DRM. 
+- Source: https://github.com/kaltura/kaltura-device-info-android
+- Play Store: https://play.google.com/store/apps/details?id=com.kaltura.kalturadeviceinfo
+
+Install and execute the application. After the report (in JSON format) is shown, tap the share button to share the report with Kaltura (preferably via email).
+
+## Android: ExoPlayer Demo
+
+Another way to diagnose DRM and playback issues on Android is by using the ExoPlayer Demo app. This app is provided in source by Google, and it allows playing some Google-provided streams.
+We have built a version of the app, available as an APK:
+https://dl.dropboxusercontent.com/u/125871244/apps/testapps/drm/exoplayer/exoplayer-demo-v1.5.7.apk
+
+Install and execute the application, then run all tests in the "Widevine DASH Policy Tests" section. Note that we **don't** expect all tests to pass, as some require specialized hardware and security features.
