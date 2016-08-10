@@ -42,9 +42,8 @@ The Widevine Classic library (`libWViPhoneAPI.a`) included with the Kaltura SDK 
 
 ## Android: Device Info
 
-Use Kaltura Device Info app to generate a report of device capabilities with regards to media playback and DRM. 
-- Source: https://github.com/kaltura/kaltura-device-info-android
-- Play Store: https://play.google.com/store/apps/details?id=com.kaltura.kalturadeviceinfo
+Use Kaltura Device Info app to generate a report of device capabilities with regards to media playback and DRM.
+Get the app here: [source](https://github.com/kaltura/kaltura-device-info-android) | [Google Play](https://play.google.com/store/apps/details?id=com.kaltura.kalturadeviceinfo).
 
 Install and execute the application. After the report (in JSON format) is shown, tap the share button to share the report with Kaltura (preferably via email).
 
