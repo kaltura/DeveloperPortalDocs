@@ -1,6 +1,7 @@
 ---
 layout: page
 title: iOS Disable Widevine
+subcat: iOS
 weight: 150
 ---
 
@@ -15,7 +16,7 @@ Split our podspec to 2 subspecs - Core and Widevine.
 `Widevine` - contains the Widevine library and a preprocessor macro WIDEVINE_ENABLED=1.
 
 ## How To Use
-By Defualt Entire SDK is enabled.
+By defualt, the entire SDK is enabled.
 
 ### Entire SDK
 
