@@ -74,6 +74,76 @@ For each native component listener, add one of the operations above.
 
 ### Player States Event Listeners  
 
+#####The SDK Support implementation of the following Listeners:
+
+
+  - KTrackActions.VideoTrackEventListener - getting informed on VideoTrack selected
+  - KTrackActions.AudioTrackEventListener - getting informed on AudioTrack selected
+  - KTrackActions.TextTrackEventListener  - getting informed on TextTrack selected
+  - KTrackActions.EventListener - getting informed on update in track manager on playback Ready state  
+  - KPErrorEventListener - getting informed about errors
+  - KPPlayheadUpdateEventListener - getting informed about playback progress
+  - KPStateChangedEventListener - getting informed about player state changes
+  - KPFullScreenToggledEventListener - getting informed about user selected full screen icon for implementing your full screen logic.
+
+  
+ 
+ #####Addind Listeners in the app:
+       - mPlayer.setTracksEventListener(this);
+       -  mPlayer.setVideoTrackEventListener(this);
+       - mPlayer.setTextTrackEventListener(this);
+       - mPlayer.setAudioTrackEventListener(this);
+       - mPlayer.setOnKPErrorEventListener(this);
+       - mPlayer.setOnKPPlayheadUpdateEventListener(this);
+       - mPlayer.setOnKPFullScreenToggeledEventListener(this);
+       - mPlayer.setOnKPStateChangedEventListener(this);
+
+       
+ #####Removing Listeners in the app:
+ 
+        Need to call to the same api with null as parameter
+ 
+  
+
+###Example:
+
+``` java
+    @Override
+    public void onKPlayerStateChanged(PlayerViewController playerViewController, KPlayerState state) {
+        if (state == KPlayerState.PAUSED) {
+            mPlayPauseButton.setText("Play");
+        } else if (state == KPlayerState.PLAYING) {
+            mPlayPauseButton.setText("Pause");
+        }
+    }
+
+    @Override
+    public void onKPlayerError(PlayerViewController playerViewController, KPError error) {
+        LOGD(TAG, "onKPlayerError Error Received:" + error.getErrorMsg());
+    }
+
+
+    @Override
+    public void onKPlayerFullScreenToggeled(PlayerViewController playerViewController, boolean isFullscreen) {
+        LOGD(TAG, "onKPlayerFullScreenToggeled isFullscreen " + isFullscreen);
+   }
+
+
+    @Override
+    public void onKPlayerPlayheadUpdate(PlayerViewController playerViewController, long currentTime) {
+        long currentSeconds = (int) (currentTime / 1000);
+        long totalSeconds = (int) (playerViewController.getDurationSec());
+
+        double percentage = 0;
+        if (totalSeconds > 0) {
+            percentage = (((double) currentSeconds) / totalSeconds) * 100;
+        }
+        LOGD(TAG, "onKPlayerPlayheadUpdate " +  currentSeconds + "/" + totalSeconds + " => " + (int)percentage + "%");
+        mSeekBar.setProgress((int)percentage);
+    }
+
+```
+
 The Kaltura Player supports the following states, to which the developer can listen to and react to changes in the state:
     
     - LOADED
