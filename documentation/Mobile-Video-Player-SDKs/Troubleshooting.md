@@ -53,3 +53,10 @@ Another way to diagnose DRM and playback issues on Android is by using the ExoPl
 We have built a version of the app, [available as an APK](https://dl.dropboxusercontent.com/u/125871244/apps/testapps/drm/exoplayer/exoplayer-demo-v1.5.7.apk).
 
 Install and execute the application, then run all tests in the "Widevine DASH Policy Tests" section. Note that we **don't** expect all tests to pass, as some require specialized hardware and security features. Keep note of the passing and failing tests.
+
+---
+note: hello
+---
+
+| Note | fsdfgsdfgsdfgsd fg sdf g sdf gsdfg sdfgsdfg sdg |
+|------|-------------------------------------------------|
