@@ -45,30 +45,8 @@ layout: default
     <input id="jobtitle" type="text" name="jobtitle" class="w-input input-light">
     </div-->
     <div class="w-col w-col-6">
-<label for="Industry" class="form-labels">Industry</label>
-<select id="industry" name="industry" required="required" data-name="Industry" class="w-select input-light">
-<option value="">Select one...</option>
-<option value="Education or EdTech">Education or EdTech</option>
-<option value="Media Owners &amp; Creators">Media Owners &amp; Creators</option>
-<option value="Broadcasting">Broadcasting</option>
-<option value="IPTV and Telcos">IPTV and Telcos</option>
-<option value="AdTech / Advertising Agency">AdTech / Advertising Agency</option>
-<option value="Health Care">Health Care</option>
-<option value="Insurance">Insurance</option>
-<option value="Retail / eCommerce">Retail / eCommerce</option>
-<option value="FinTech / Investing / Banking">FinTech / Investing / Banking</option>
-<option value="Real Estate">Real Estate</option>
-<option value="Video Surveillance / Public Safety">Video Surveillance / Public Safety</option>
-<option value="IoT / Smart Cities">IoT / Smart Cities</option>
-<option value="Manufacturing">Manufacturing</option>
-<option value="Construction">Construction</option>
-<option value="Transportation / Utilities / Energy">Transportation / Utilities / Energy</option>
-<option value="Government">Government</option>
-<option value="Registered Not Profit Org">Registered Not for Profit Organization</option>
-<option value="Software Provider / ISV">Software Provider / ISV</option>
-<option value="Cloud, Hosting or Streaming Providers">Cloud, Hosting or Streaming Providers</option>
-<option value="Systems Integrator">Systems Integrator</option>
-</select>
+    <label for="Phone" class="form-labels">Phone</label>
+    <input id="phone" type="text" placeholder="" name="phone" required="required" data-name="Phone" class="w-input input-light">
     </div>
     <div class="w-col w-col-6">
     <!--label for="title" class="form-labels">Job Title</label>
