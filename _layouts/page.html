@@ -6,18 +6,24 @@ layout: default
 function addRow(cat,subcat,name,link, entry_path) 
 {
     if (subcat){
+	// subcat handle
 	subcatel=document.getElementById(subcat);
+	// if there isn't one
 	if (! subcatel ){
 	    var subcatel = document.createElement('div');
 	    subcatel.className = 'sidenav-grp-7';
 	    subcatel.id=subcat.replace(" ", "");
 	    subcatel.innerHTML = '<a href="#" class="sidenav-sub-cat-links" onClick="show_hide_sub_div(\''+subcatel.id + '\')"><h4 class="sidenav-headings grp-heading '+entry_path+'">'+subcat+'</h4></a>';
 	}
-	subcatel.innerHTML = subcatel.innerHTML + '<a href='+link + ' class="sidenav-sub-links" id='+entry_path+'>'+name+'</a>';  
+	//subcatel.innerHTML = subcatel.innerHTML + '<a href='+link + ' class="sidenav-sub-links" id='+entry_path+'>'+name+'</a>';  
+	var new_elem = document.createElement('div');
+	new_elem.className = 'sidenav-sub-links';
+	new_elem.innerHTML = '<a href='+link + ' class="sidenav-sub-links" id='+entry_path+'>'+name+'</a>'
+        subcatel.appendChild(new_elem);
         document.getElementById(cat).getElementsByClassName('sidenav-grp-links')[0].appendChild(subcatel);
     }else{
 	thecat=document.getElementById(cat.replace(" ", "")+'-sub');
-	thecat.innerHTML = '<a href='+link + ' class="sidenav-links" id='+entry_path+'>'+name+'</a>' + thecat.innerHTML;  
+	thecat.innerHTML = thecat.innerHTML + '<a href='+link + ' class="sidenav-links" id='+entry_path+'>'+name+'</a>' ;  
     }
 }  
 function submit_feedback()
@@ -61,13 +67,17 @@ function show_hide_sub_div(div_id)
       <div class="w-row body-columns">
         <div class="w-col w-col-3 template-page-nav-column">
 {% assign cats = site.cats | sort %}
+
+
 {% for cat_hash in cats %}
-    <div class="sidenav-grp-7 heading-close" id="/{{ cat_hash[0] }}">
-	<a href="#" class="sidenav-cat-links" onClick="show_hide_div('/{{ cat_hash[0] }}')"><h4 class="sidenav-headings grp-heading {{ cat_hash[0] }}">{{ cat_hash[1] }}</h4></a>
-	<div class="sidenav-grp-links" id="/{{ cat_hash[0] | replace: ' ','' }}-sub" style="visibility: hidden; display: none;">
-	{% capture dir %}{{ cat_hash[0] }}{% endcapture %}
+{% assign cats_string = cat_hash[0] | split:"::" %}
+<div class="sidenav-grp-7 heading-close" id="/{{ cats_string[1] }}" weight="{{ cats_string[0] }}">
+	<a href="#" class="sidenav-cat-links" onClick="show_hide_div('/{{ cats_string[1] }}')"><h4 class="sidenav-headings grp-heading {{ cats_string[1] }}">{{ cat_hash[1] }}</h4></a>
+	<div class="sidenav-grp-links" id="/{{ cats_string[1] | replace: ' ','' }}-sub" style="visibility: hidden; display: none;">
+	{% capture dir %}{{ cats_string[1] }}{% endcapture %}
 	{% capture cat %}{{ cat_hash[1] }}{% endcapture %}
-	    {% include nav.html context=dir catname=cat %}
+	{% include nav.html context=dir catname=cat %}
+	
 	</div>
         </div>
 {% endfor %}
@@ -146,7 +156,7 @@ function show_hide_sub_div(div_id)
                 			<input id="name" type="text" placeholder="Enter your name" name="name" data-name="Name" required="required" class="w-input form-fields">
                 			<label for="email-label" class="form-labels">Email Address</label>
                 			<input id="email" type="email" placeholder="Enter your email address" name="email" data-name="Email" required="required" class="w-input form-fields">
-                			<label for="Issue-Description-label" class="form-labels">Issue Description</label>
+                			<label for="Issue-Description-label" class="form-labels">Share feedback on this page</label>
                 			<textarea id="Issue-Description" placeholder="Describe the issue in as much detail as possible" name="Issue-Description" data-name="Issue Description" required="required" class="w-input form-fields"></textarea>
 <div class="g-recaptcha" data-sitekey="6Lf2bx8TAAAAAFiXASujAbfTnbBr7H6cqUbHLnnE"></div>
 					<input type="submit" value="Submit Feedback" data-wait="Please wait..." class="w-button standard-button">
