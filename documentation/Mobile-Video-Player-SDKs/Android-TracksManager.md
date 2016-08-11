@@ -113,6 +113,14 @@ The following are the available operations when using the KTracksManager:
   	mPlayer.getTrackManager().switchTrack(TrackType.TYPE_AUDIO,index);
   	mPlayer.getTrackManager().switchTrack(TrackType.TYPE_TEXT,index);
 
+###  Disable Video/Audio/Text Tracks  
+
+
+  	mPlayer.getTrackManager().switchTrack(TrackType.TYPE_VIDEO,-1);
+  	mPlayer.getTrackManager().switchTrack(TrackType.TYPE_AUDIO,-1);
+  	mPlayer.getTrackManager().switchTrack(TrackType.TYPE_TEXT, -1);
+
+
 
 ###  Getting the Current Track Index by Track Type  
 
