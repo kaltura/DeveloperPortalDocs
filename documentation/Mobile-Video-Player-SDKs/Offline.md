@@ -14,8 +14,9 @@ The native mobile SDKs (Android and iOS) allow applications to play downloaded c
 ## Supported Use Case
 
 This is the general supported use case for offline playback. Starting with a just-installed app, the following should work:
+
 1. Play any video while online
-2. Download and register any (the same one that was played in step 1 or another) video
+2. Download and register another video
 3. Go offline
 4. Play the video that was downloaded in step 2.
 
