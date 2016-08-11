@@ -29,8 +29,8 @@ The most permissive setting is to disable ATS entirely. This is done by setting 
 </plist>
 ```
 
-> Note: If there's a known limited set of domains that must to be accessed without TLS, it is advised to 
-whitelist them explicitly. For more information about fine-grained control of ATS see:
+> Note: If there's a known limited set of domains that must to be accessed without TLS, it is advised to whitelist them explicitly. 
+For more information about fine-grained control of ATS see:
 * [Cocoa Keys - App Transport Security]( https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/plist/info/NSAppTransportSecurity)
 * [Working with Apple’s App Transport Security]( http://www.neglectedpotential.com/2015/06/working-with-apples-application-transport-security/)
 
@@ -52,9 +52,5 @@ Install and execute the application. After the report (in JSON format) is shown,
 Another way to diagnose DRM and playback issues on Android is by using the ExoPlayer Demo app. This app is provided in source by Google, and it allows playing some Google-provided streams.
 We have built a version of the app, [available as an APK](https://dl.dropboxusercontent.com/u/125871244/apps/testapps/drm/exoplayer/exoplayer-demo-v1.5.7.apk).
 
-Install and execute the application, then run all tests in the "Widevine DASH Policy Tests" section. Note that . Keep note of the passing and failing tests.
-
-
-| Note |
-| ---- |
-| We **don't** expect all tests to pass, as some require specialized hardware and security features. |
+Install and execute the application, then run all tests in the "Widevine DASH Policy Tests" section. Keep note of the passing and failing tests.
+> Note: **Don't** expect all tests to pass, as some require specialized hardware and security features.
