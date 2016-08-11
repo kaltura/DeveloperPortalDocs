@@ -22,7 +22,7 @@ if (isset($_GET['company'])){
 
 <div class="w-section vpaas-sign-up-section">
     <div class="w-container vpaas-signup-container">
-	<h1 class="section-headings vpaas-signup-heading">Complete Registration &nbsp;<span class="divider-span">|</span> &nbsp;<span class="teal-span">Kaltura VPaaS</span></h1>
+	<h1 class="section-headings vpaas-signup-heading">Schedule a free consultation with our expert</h1>
         <div class="sml-circle-row-wrapper">
 	       <div class="w-row sml-circle-row">
 	           <div class="w-col w-col-3 sml-circle-column"></div>
@@ -30,7 +30,7 @@ if (isset($_GET['company'])){
         </div>
 
 <div >
-    <div class="radio-description">To improve your experience with Kaltura VPaaS, please tell us more about yourself, and we’ll contact you for a free consulting session on how to best implement your project with Kaltura VPaaS.</div>
+    <div class="radio-description">To improve your experience with Kaltura VPaaS, please tell us more about yourself.</br>We'll contact you for a free consulting session on how to best implement your project.</div>
 </div>
 
 <div class="w-form">
@@ -38,30 +38,9 @@ if (isset($_GET['company'])){
     <form id="register-form" name="register-form" data-name="Register Form" action="https://vpaas.kaltura.com:8443/post_completeregistration.php" method="post" onsubmit="return validate(event);">
  <legend class="form-labels"><b>About you</b></legend><hr>
     <input id="email" type="hidden" value="<?php echo $email;?>"  name="email" >
-<!--div class="w-row form-row">
-<div class="w-col w-col-6">
-    <label for="First-Name" class="form-labels">First Name</label>
-    <input id="first-name" type="text" value="<?php echo $firstname;?>" name="first-name" data-name="First Name" required="required" class="w-input input-light">
-    </div>
-    <div class="w-col w-col-6">
-    <label for="Last-Name" class="form-labels">Last Name</label>
-    <input id="last-name" type="text" value="<?php echo $lastname;?>"  name="last-name" required="required" data-name="Last Name" class="w-input input-light">
-    </div>
-</div>
-<div class="w-row form-row">
-    <div class="w-col w-col-6">
-    <label for="email" class="form-labels">Work Email Address</label>
-    <input id="email" type="email" value="<?php echo $email;?>"  name="email" data-name="Email" required="required" class="w-input input-light">
-    </div>
-    <div class="w-col w-col-6">
-    <label for="Company" class="form-labels">Company</label>
-    <input id="company" type="text" value="<?php echo $company;?>"  name="company" required="required" data-name="Company" class="w-input input-light">
-    </div>
-</div-->
-    <!--div class="w-col w-col-6">
-    <label for="title" class="form-labels">Job Title</label>
-    <input id="jobtitle" type="text" name="jobtitle" class="w-input input-light">
-    </div-->
+    <input id="firstname" type="hidden" value="<?php echo $firstname;?>"  name="firstname" >
+    <input id="lastname" type="hidden" value="<?php echo $lastname;?>"  name="lastname" >
+    <input id="company" type="hidden" value="<?php echo $company;?>"  name="company" >
 <div class="w-row form-row">
     <div class="w-col w-col-6">
 <label for="country" class="form-labels">Country</label>
@@ -80,8 +59,6 @@ if (isset($_GET['company'])){
     <input id="jobtitle" type="text" name="jobtitle" class="w-input input-light">
     </div>
 
-<!--label for="Tel-us-what-you-are-building" class="form-labels">Tell Us About What You Are Building</label>
-    <input id="description" type="text" name="description" class="w-input input-light"-->
 
 </div>
 
@@ -96,6 +73,12 @@ if (isset($_GET['company'])){
     <textarea id="specific-features" name="specific-features" class="w-input input-light"></textarea>
     </div>
 </div>
+<div class="w-row form-row">
+    <div class="w-col w-col-6">
+    <label for="what-are-you-building" class="form-labels">What are you building?</label>
+    <textarea id="what-are-you-building" name="what-are-you-building" data-name="" class="w-input input-light"></textarea>
+    </div>
+</div>
 
  <legend class="form-labels"><b>Help us be better</b></legend><hr>
 <div class="w-row form-row">
@@ -104,17 +87,12 @@ if (isset($_GET['company'])){
     <input id="how-did-you-hear-about-us" type="text" placeholder="" name="how-did-you-hear-about-us" data-name="" class="w-input input-light">
     </div>
     <div class="w-col w-col-6">
-    <label for="additional-questions" class="form-labels">Anything else you would like us to know?</label>
+    <label for="additional-questions" class="form-labels">Any suggestions or comments about Kaltura VPaaS?</label>
     <input id="additional-questions" type="text" name="additional-questions" class="w-input input-light">
     </div>
 </div>
 
 
-
-<!--div class="w-row form-row no-column-padding">
-<label for="Tel-us-what-you-are-building" class="form-labels">Tell Us About What You Are Building</label>
-<textarea id="description" placeholder="What are you building, tell us about your team, how does video fit into your application, etc." name="description" data-name="Tel us what you are building" required="required" class="w-input input-light"></textarea>
-</div-->
 <div class="w-row form-row no-column-padding">
 	<div class="g-recaptcha" data-sitekey="6Lf2bx8TAAAAAFiXASujAbfTnbBr7H6cqUbHLnnE"></div>
 </div>
@@ -122,12 +100,6 @@ if (isset($_GET['company'])){
 
 
 
-<!--div>
-<div class="w-checkbox terms-checkbox">
-<input id="Terms-Checkbox" type="checkbox" name="Terms-Checkbox" data-name="Terms Checkbox" required="required" class="w-checkbox-input">
-<label for="Terms-Checkbox" class="w-form-label">Terms &amp; Conditions</label>
-</div>
-</div-->
 </div>
 <div class="button-center-div">
 <input type="submit" id="submitButton" value="Submit" data-wait="Please wait..." data-ix="show-pick-account-type" class="w-button standard-button vpaas-signup-btn">
