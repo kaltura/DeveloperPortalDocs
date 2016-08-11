@@ -54,6 +54,8 @@ We have built a version of the app, [available as an APK](https://dl.dropboxuser
 
 Install and execute the application, then run all tests in the "Widevine DASH Policy Tests" section. Note that we **don't** expect all tests to pass, as some require specialized hardware and security features. Keep note of the passing and failing tests.
 
+---
 
-| Note | Testing |
-|------|-------------------------------------------------|
+| First Header  | Second Header |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
