@@ -30,7 +30,7 @@ if (isset($_GET['company'])){
         </div>
 
 <div >
-    <div class="radio-description">To improve your experience with Kaltura VPaaS, please tell us more about yourself.</br>We'll contact you for a free consulting session on how to best implement your project.</div>
+    <div class="radio-description">Hello <?php echo $firstname;?>,</br>To improve your experience with Kaltura VPaaS, please tell us more about yourself.</br>We'll contact you for a free consulting session on how to best implement your project.</div>
 </div>
 
 <div class="w-form">
@@ -65,18 +65,12 @@ if (isset($_GET['company'])){
  <legend class="form-labels"><b>About your project</b></legend><hr>
 <div class="w-row form-row">
     <div class="w-col w-col-6">
-    <label for="other-platform" class="form-labels">Is there any other video platform you are using currently?</label>
-    <textarea id="other-platform" name="other-platform" data-name="" class="w-input input-light"></textarea>
+    <label for="what-are-you-building" class="form-labels">Please tell us about your project in as many details as possible</label>
+    <textarea id="what-are-you-building" name="what-are-you-building" data-name="" class="w-input input-light"></textarea>
     </div>
     <div class="w-col w-col-6">
     <label for="specific-features" class="form-labels">Any specific features you are interested in?</label>
     <textarea id="specific-features" name="specific-features" class="w-input input-light"></textarea>
-    </div>
-</div>
-<div class="w-row form-row">
-    <div class="w-col w-col-6">
-    <label for="what-are-you-building" class="form-labels">What are you building?</label>
-    <textarea id="what-are-you-building" name="what-are-you-building" data-name="" class="w-input input-light"></textarea>
     </div>
 </div>
 
