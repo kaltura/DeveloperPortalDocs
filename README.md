@@ -1,4 +1,4 @@
-# Name of the Project here
+# Kaltura VPaaS
 
 The Kaltura VPaaS Developer Site is using [Jekyll engine](http://jekyllrb.com/) and markdown syntax as the basis of the articles. To learn about Markdown basics and how to use the format, please read: [GitHub markdown basics](https://help.github.com/articles/markdown-basics). 
 Visit the site at: https://vpaas.kaltura.com
