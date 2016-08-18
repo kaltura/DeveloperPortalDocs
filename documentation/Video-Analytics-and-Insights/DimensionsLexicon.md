@@ -4,7 +4,9 @@ title: Kaltura Video Insights - Dimensions Lexicon
 weight: 130
 ---
 
-*Limited preview mode; please contact product manager to activate.*
+*The below dimensions are part of Kaltura's new analytics platform.*
+*It is available by request, as it is currently released as an Early Preview.*
+*Please write to maya.schnaidman@kaltura.com to request activation.*
 
 | Group       | Name     | ID     | Description
 |:---|:---|:---|:---|
