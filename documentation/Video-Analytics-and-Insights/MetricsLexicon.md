@@ -4,7 +4,9 @@ title: Kaltura Video Insights - Metrics Lexicon
 weight: 120
 ---
 
-*Limited preview mode; please contact product manager to activate.*
+*The below metrics are part of Kaltura's new analytics platform.*
+*It is available by request, as it is currently released as an Early Preview.*
+*Please write to maya.schnaidman@kaltura.com to request activation.*
 
 | Name     | ID     | Description
 |:---|:---|:---|
