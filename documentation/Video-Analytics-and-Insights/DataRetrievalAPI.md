@@ -4,7 +4,9 @@ title: Kaltura Video Insights - Data Retrieval API
 weight: 150
 ---
 
-*Limited preview mode; please contact product manager to activate.*
+*This API is a part of Kaltura's new analytics platform.*
+*It is available by request, as it is currently released as an Early Preview.*
+*Please write to maya.schnaidman@kaltura.com to request activation.*
 
 The Kaltura Video Insights Data Retrieval API provides a simple but powerful tool to query data programmatically using Kaltura API standards, such as authentication, client libraries, etc.
 
