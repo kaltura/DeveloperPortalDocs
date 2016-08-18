@@ -4,7 +4,9 @@ title: Introduction to Kaltura Video Insights
 weight: 101
 ---
 
-*Limited preview mode; please contact product manager to activate.*
+*Described below is Kaltura's new analytics platform.*
+*It is available by request, as it is currently released as an Early Preview.*
+*Please write to maya.schnaidman@kaltura.com to request activation.*
 
 Kaltura Video Insights helps you get precise, actionable insights into various aspects of your business by answering a wide variety of questions, such as:
 
