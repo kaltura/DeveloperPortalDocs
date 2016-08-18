@@ -15,7 +15,6 @@ To learm more about the type data reported by Media Analytics, we recommend you 
 Kaltura data is exposed via the [`report service`](https://developer.kaltura.com/api-docs/#/report). 
 A number of actions within this service will enable you to pull data against a specific set of filters.
 
-The data can be pulled 
  
 
  
