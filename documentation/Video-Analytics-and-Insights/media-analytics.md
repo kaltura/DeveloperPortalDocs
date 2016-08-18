@@ -12,10 +12,10 @@ To learm more about the type data reported by Media Analytics, we recommend you 
 >**Knowledge Article:** [Creating and Tracking Analytics in the KMC](http://knowledge.kaltura.com/creating-and-tracking-analytics-kmc-0#analytics)
 
 ## Quick Start  
-Kaltura data is exposed via the [`report service`](https://www.kaltura.com/api_v3/testmeDoc/index.php?service=report). A number of actions within this service will enable you to pull data against a specific set of filters.
+Kaltura data is exposed via the [`report service`](https://developer.kaltura.com/api-docs/#/report). 
+A number of actions within this service will enable you to pull data against a specific set of filters.
 
-Need a detailed description of what each action does on the report service - its very unclear.
+The data can be pulled 
+ 
 
-Insert code recipe here for Analytics and Leaderboard
-
-Need to inset live reports and live stats service info here also.
+ 
