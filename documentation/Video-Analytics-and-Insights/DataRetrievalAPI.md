@@ -19,8 +19,8 @@ http://www.kaltura.com/api_v3/index.php?service=analytics&action=query
 
 | Parameter     | DescriptionD     | Expected Values | Mandatory |
 |:---|:---|:---|:---|
-|startDate|	 start date from which to fetch the data|	The	date and time with the format yyyyMMdd-HH24:mi:ss| Yes |
-|endDate |	The end date until which to fetch the data	|A date and time with the format yyyyMMdd-HH24:mi:ss | Yes|
+|startDate|	 start date from which to fetch the data|	The	date and time with the format MM/dd/yyyy HH:mi| Yes |
+|endDate |	The end date until which to fetch the data	|A date and time with the format MM/dd/yyyy HH:mi | Yes|
 |partnerId |	The ID of the partner who owns the data	| A valid partner ID (an integer) |Yes|
 |metrics |	A comma separated list of metrics | playImpression,playRequested,play,estimatedMinutesWatched, averageViewDuration,playThrough25,playThrough50, playThrough75,playThrough100,playRatio,averageViewDropOff, segmentsWatched,percentageWatched,uniqueKnownUsers, uniquePlayerSessionId,uniqueVideos,view,dvrView,peakView, peakDvrView,bufferingTime,averageActualBitrate, loadToPlayTime | Yes|
 |dimensions| 	A comma-separated list of dimensions |partner, entry, knownUserId, device, operatingSystem, browser, country, city, syndicationDomain, syndicationURL, application, category, playbackContext, day, hour, minute, 10sec, streamingProtocol, expectedQuality, uiConfID. The following dimension combinations are supported: application-playbackContext; country-browser; country-OS; country-OS-browser; device-OS; OS-browser; entry-application; entry-application-playbackContext; entry-browser; entry-category; entry-country; entry-city;  entry-device;  entry-device-OS;  entry-customVar; entry-domain; entry-domain-referrer; entry-OS; entry-OS-browser; entry-playbackContext    |No|
