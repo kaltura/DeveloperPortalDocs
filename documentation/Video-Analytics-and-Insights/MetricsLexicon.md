@@ -2,7 +2,7 @@
 layout: page
 title: Kaltura Video Insights - Metrics Lexicon
 weight: 120
-subcat: Limited-Alpha
+subcat: Analytics API - Limited Alpha
 ---
 
 *The below metrics are part of Kaltura's new analytics platform.*

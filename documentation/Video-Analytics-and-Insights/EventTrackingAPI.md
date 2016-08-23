@@ -2,7 +2,7 @@
 layout: page
 title: Kaltura Video Insights - Event Tracking API
 weight: 140
-subcat: Limited-Alpha
+subcat: Analytics API - Limited Alpha
 ---
 
 *This API is a part of Kaltura's new analytics platform.*

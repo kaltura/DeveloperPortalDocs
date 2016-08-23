@@ -2,7 +2,7 @@
 layout: page
 title: Kaltura Video Insights - Dimensions Lexicon
 weight: 130
-subcat: Limited-Alpha
+subcat: Analytics API - Limited Alpha
 ---
 
 *The below dimensions are part of Kaltura's new analytics platform.*

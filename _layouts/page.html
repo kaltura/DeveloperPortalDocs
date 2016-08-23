@@ -7,7 +7,8 @@ function addRow(cat,subcat,name,link, entry_path)
 {
     if (subcat){
 	// subcat handle
-	subcatel=document.getElementById(subcat);
+	sid=subcat.replace(" ", "");
+	subcatel=document.getElementById(sid);
 	// if there isn't one
 	if (! subcatel ){
 	    var subcatel = document.createElement('div');
