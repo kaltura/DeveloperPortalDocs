@@ -5,6 +5,7 @@ weight: 140
 ---
 
 *This API is a part of Kaltura's new analytics platform.*
+
 *It is available by request, as it is currently released as an Early Preview.*
 *Please write to maya.schnaidman@kaltura.com to request activation.*
 
