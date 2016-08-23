@@ -88,14 +88,14 @@ For each native component listener, add one of the operations above.
   
 #### Adding Listeners in the app:  
  * Example:
-       - mPlayer.setTracksEventListener(this);
-       - mPlayer.setVideoTrackEventListener(this);
-       - mPlayer.setTextTrackEventListener(this);
-       - mPlayer.setAudioTrackEventListener(this);
-       - mPlayer.setOnKPErrorEventListener(this);
-       - mPlayer.setOnKPPlayheadUpdateEventListener(this);
-       - mPlayer.setOnKPFullScreenToggeledEventListener(this);
-       - mPlayer.setOnKPStateChangedEventListener(this);
+      - mPlayer.setTracksEventListener(this);
+      - mPlayer.setVideoTrackEventListener(this);
+      - mPlayer.setTextTrackEventListener(this);
+      - mPlayer.setAudioTrackEventListener(this);
+      - mPlayer.setOnKPErrorEventListener(this);
+      - mPlayer.setOnKPPlayheadUpdateEventListener(this);
+      - mPlayer.setOnKPFullScreenToggeledEventListener(this); 
+      - mPlayer.setOnKPStateChangedEventListener(this);
 
 #### Removing Listeners from the app:
  
