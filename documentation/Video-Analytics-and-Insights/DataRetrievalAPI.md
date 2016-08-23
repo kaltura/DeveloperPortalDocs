@@ -2,6 +2,7 @@
 layout: page
 title: Kaltura Video Insights - Data Retrieval API
 weight: 150
+subcat: Limited-Alpha
 ---
 
 *This API is a part of Kaltura's new analytics platform.*

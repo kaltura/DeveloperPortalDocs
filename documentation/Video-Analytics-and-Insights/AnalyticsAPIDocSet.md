@@ -2,6 +2,7 @@
 layout: page
 title: Introduction to Kaltura Video Insights
 weight: 101
+subcat: Limited-Alpha
 ---
 
 *Described below is Kaltura's new analytics platform.*
