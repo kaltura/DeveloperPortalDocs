@@ -8,7 +8,7 @@ Make decisions based on complete data - the Kaltura VPaaS usage and engagement a
 
 ## Quick Start  
 
-Kaltura analytics data is exposed via the [`report service`](https://developer.kaltura.com/api-docs/#/report). 
+Kaltura analytics data is exposed via the [`report service`](https://developer.kaltura.com/api-docs/#/report).   
 A number of actions within this service will enable you to pull data against a specific set of filters.
 
 Follow the Code Recipe below to get started:.
