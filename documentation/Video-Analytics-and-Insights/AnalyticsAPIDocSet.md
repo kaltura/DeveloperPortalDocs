@@ -5,9 +5,9 @@ weight: 101
 subcat: Analytics API - Limited Alpha
 ---
 
-*Described below is Kaltura's new analytics platform.*
-*It is available by request, as it is currently released as an Early Preview.*
-*Please write to maya.schnaidman@kaltura.com to request activation.*
+*This new analytics service is in limited alpha version.*
+*Access to this service is available by request, as it is currently released as an Early Preview.*
+*Please write to VPaaS@kaltura.com to request activation.*
 
 Kaltura Video Insights helps you get precise, actionable insights into various aspects of your business by answering a wide variety of questions, such as:
 
