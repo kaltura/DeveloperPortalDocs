@@ -34,7 +34,7 @@ layout: default
                     $(".video-iframe").removeClass("visuallyhidden");
                     $(".video-cover").css('background-image', 'none');
                     $(".section-header").css('cursor', 'pointer');
-                    $('.section-header').click(popoverVideo);
+                    $('.section-header').on('click touchstart', popoverVideo);
                 });
 
               	//header title and body
