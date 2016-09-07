@@ -1,6 +1,6 @@
 # Open Source 3rd-party components in this project
 
-* [Jekyl engin](https://github.com/jekyll/jekyll): [MIT license](https://github.com/jekyll/jekyll/blob/master/LICENSE)
+* [Jekyl engine](https://github.com/jekyll/jekyll): [MIT license](https://github.com/jekyll/jekyll/blob/master/LICENSE)
 * [jquery](https://github.com/jquery/jquery) - [MIT License](https://jquery.org/license/)
 * [normalize.css](https://github.com/necolas/normalize.css/) - [MIT License](https://github.com/necolas/normalize.css/blob/master/LICENSE.md)
 * [opentip](https://github.com/enyo/opentip) - [MIT License](https://github.com/enyo/opentip#license)
