@@ -18,6 +18,14 @@ layout: default
                     $(document).off('lity:close');
                 });
             };
+            $( document ).ready(function() {
+                var isMobile = window.matchMedia("only screen and (max-width: 1024px)");
+                if (isMobile.matches) {
+                  $(".video-cover").css('background-image', 'none');
+                  $(".section-header").css('cursor', 'pointer');
+                  $('.section-header').on('click touchstart', popoverVideo);
+                }
+             });
             kWidget.embed({
               "targetId": "kaltura_player_1453968704",
               "wid": "_811441",
