@@ -56,6 +56,15 @@ To disable the HTML Spinner and control it with a customer spinner, you will nee
     }];
 ```
 
+* To stop a buffering event, use "onRemovePlayerSpinner":
+
+```
+[self.player addKPlayerEventListener:@"onRemovePlayerSpinner" eventID:@"onRemovePlayerSpinner" 
+ handler:^(NSString *eventName, NSString *params) {
+        //your code
+    }];
+```
+
 ## Disabling thumbnails
 
 We can disable the loading of assets by setting uiconf:
@@ -67,13 +76,4 @@ We can disable the loading of assets by setting uiconf:
 
 These settings will prevent loading the thumbnails assets.
 Set this on your own discretion, as it is dependent of application usage (weather it uses web component scrubber or not, or if it needs poster on start or not).
-
-* To stop a buffering event, use "onRemovePlayerSpinner":
-
-```
-[self.player addKPlayerEventListener:@"onRemovePlayerSpinner" eventID:@"onRemovePlayerSpinner" 
- handler:^(NSString *eventName, NSString *params) {
-        //your code
-    }];
-```
 
