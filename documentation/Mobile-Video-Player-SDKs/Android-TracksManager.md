@@ -93,6 +93,7 @@ The following are the available operations when using the KTracksManager:
 * TrackFormat       getCurrentTrack(TrackType trackType);
 * void              switchTrack(TrackType trackType, int newIndex);
 
+#### Attention! : the TracksManger is available only after PLAYING state is received in the activity. If you register to the onTracksUpdate will be able to have it right after it is populated
 
 ###  Getting Tracks  
 
