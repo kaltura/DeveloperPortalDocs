@@ -65,3 +65,15 @@ To disable the HTML Spinner and control it with a customer spinner, you will nee
     }];
 ```
 
+## Disabling thumbnails
+
+We can disable the loading of assets by setting uiconf:
+
+```
+[config addConfigKey:@"EmbedPlayer.HidePosterOnStart" withValue:@"true"];
+[config addConfigKey:@"scrubber.sliderPreview" withValue:@"false"];
+``` 
+
+These settings will prevent loading the thumbnails assets.
+Set this on your own discretion, as it is dependent of application usage (weather it uses web component scrubber or not, or if it needs poster on start or not).
+

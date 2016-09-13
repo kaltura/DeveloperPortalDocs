@@ -188,6 +188,8 @@ The Kaltura Player leverages the ability to play stitched playlists as if they w
 This is an important capability that supports use cases of dynamic personalized video experiences.
 To play a stitched playlist, simply pass the ID of the manual playlist you would like to stitch as the entryId parameter.
 
+Important note: in the case of a stitched playlist, use the `entry.msDuration` property to get the accurate milliseconds duration of the stitched playlist video instead of the `duration` property.  
+
 For example, if the playlist ID `0_kh14ze3t` consists of six entrie, instead of loading it as a playlist player, where the end user loads each video on its own, you can stitch the videos and play them as one instead. To achieve this option, simply pass the ID of the playlist (`0_kh14ze3t`) in the entryId parameter of the embed code as follows:
 
 ```javascript

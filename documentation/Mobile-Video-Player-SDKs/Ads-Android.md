@@ -12,6 +12,10 @@ To configure the Player to use Google ads in Android devices, add the following 
 ```
 config.addConfig("doubleClick.plugin", "true");
 config.addConfig("doubleClick.adTagUrl", "your ad tag URL");
+
+#Ability to Force IMA SDK to use HLS format to play AD with preferred bitrate (MBit)
+config.setAdMimeType(KMediaFormat.hls_clear.mimeType);
+config.setAdPreferredBitrate(1000000);
 ```
 
 ## Listening to Ad Events  

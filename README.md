@@ -1,4 +1,4 @@
-# Name of the Project here
+# Kaltura VPaaS
 
 The Kaltura VPaaS Developer Site is using [Jekyll engine](http://jekyllrb.com/) and markdown syntax as the basis of the articles. To learn about Markdown basics and how to use the format, please read: [GitHub markdown basics](https://help.github.com/articles/markdown-basics). 
 Visit the site at: https://vpaas.kaltura.com
@@ -36,7 +36,7 @@ We'd love to hear from you!
 All code in this project is released under the [AGPLv3 license](http://www.gnu.org/licenses/agpl-3.0.html) unless a different license for a particular library is specified in the applicable library path.   
 
 Copyright © Kaltura Inc. All rights reserved.   
-Authors and contributors: See [GitHub contributors list](https://github.com/kaltura/mwEmbed/graphs/contributors).  
+Authors and contributors: See [GitHub contributors list](https://github.com/kaltura/DeveloperPortalDocs/graphs/contributors).  
 
 ### Open Source Libraries
 

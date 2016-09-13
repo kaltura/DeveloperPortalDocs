@@ -74,9 +74,8 @@ For each native component listener, add one of the operations above.
 
 ### Player States Event Listeners  
 
-#####The SDK Support implementation of the following Listeners:
-
-
+#### The SDK Support implementation of the following Listeners:
+ * Example:
   - KTrackActions.VideoTrackEventListener - getting informed on VideoTrack selected
   - KTrackActions.AudioTrackEventListener - getting informed on AudioTrack selected
   - KTrackActions.TextTrackEventListener  - getting informed on TextTrack selected
@@ -87,25 +86,23 @@ For each native component listener, add one of the operations above.
   - KPFullScreenToggledEventListener - getting informed about user selected full screen icon for implementing your full screen logic.
 
   
- 
- #####Addind Listeners in the app:
-       - mPlayer.setTracksEventListener(this);
-       -  mPlayer.setVideoTrackEventListener(this);
-       - mPlayer.setTextTrackEventListener(this);
-       - mPlayer.setAudioTrackEventListener(this);
-       - mPlayer.setOnKPErrorEventListener(this);
-       - mPlayer.setOnKPPlayheadUpdateEventListener(this);
-       - mPlayer.setOnKPFullScreenToggeledEventListener(this);
-       - mPlayer.setOnKPStateChangedEventListener(this);
+#### Adding Listeners in the app:  
+ * Example:
+      - mPlayer.setTracksEventListener(this);
+      - mPlayer.setVideoTrackEventListener(this);
+      - mPlayer.setTextTrackEventListener(this);
+      - mPlayer.setAudioTrackEventListener(this);
+      - mPlayer.setOnKPErrorEventListener(this);
+      - mPlayer.setOnKPPlayheadUpdateEventListener(this);
+      - mPlayer.setOnKPFullScreenToggeledEventListener(this); 
+      - mPlayer.setOnKPStateChangedEventListener(this);
 
-       
- #####Removing Listeners in the app:
+#### Removing Listeners from the app:
  
-        Need to call to the same api with null as parameter
+        Need to call to the same API with null as parameter
  
-  
 
-###Example:
+###Implementation Example:
 
 ``` java
     @Override

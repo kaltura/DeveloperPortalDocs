@@ -8,6 +8,24 @@ layout: default
           <script src="https://cdnapisec.kaltura.com/p/811441/sp/81144100/embedIframeJs/uiconf_id/33241472/partner_id/811441"></script>
           <div id="kaltura_player_1453968704" class="video-iframe visuallyhidden" width="100%" height="100%" style="height:100%;width:100%;"></div>
           <script>
+            var kdp;
+            var lightbox = lity();
+            var popoverVideo = function (e) {
+                document.kdp.sendNotification('doPause');
+                lightbox('https://cdnapisec.kaltura.com/p/811441/sp/81144100/embedIframeJs/uiconf_id/35813321/partner_id/811441?iframeembed=true&playerId=kaltura_player_1473229681&entry_id=0_cm8rhiwp&flashvars[autoPlay]=true');
+                $(document).on('lity:close', function(event, lightbox) {
+                    document.kdp.sendNotification('doPlay');
+                    $(document).off('lity:close');
+                });
+            };
+            $( document ).ready(function() {
+                var isMobile = window.matchMedia("only screen and (max-width: 1024px)");
+                if (isMobile.matches) {
+                  $(".video-cover").css('background-image', 'none');
+                  $(".section-header").css('cursor', 'pointer');
+                  $('.section-header').on('click touchstart', popoverVideo);
+                }
+             });
             kWidget.embed({
               "targetId": "kaltura_player_1453968704",
               "wid": "_811441",
@@ -16,15 +34,16 @@ layout: default
                 "loop": true,
                 "autoPlay": true,
               },
-              "cache_st": 1461255232,
               "entry_id": "0_cm8rhiwp",
               "readyCallback": function( playerId ){
-          			var kdp = $( "#" + playerId ).get(0);
-          			kdp.kBind( "timeupdate.showvid", function(){
-          			  $(".video-iframe").removeClass("visuallyhidden");
-          			  $(".video-cover").fadeOut();
-          			  kdp.kUnbind( ".showvid" );
-              	});
+          			document.kdp = $( "#" + playerId ).get(0);
+                document.kdp.kBind( "timeupdate.showvid", function(){
+                    document.kdp.kUnbind( ".showvid" );
+                    $(".video-iframe").removeClass("visuallyhidden");
+                    $(".video-cover").css('background-image', 'none');
+                    $(".section-header").css('cursor', 'pointer');
+                    $('.section-header').on('click touchstart', popoverVideo);
+                });
 
               	//header title and body
                 $('h1.header-headings').on( "click", function () {

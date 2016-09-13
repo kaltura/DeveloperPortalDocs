@@ -93,6 +93,7 @@ The following are the available operations when using the KTracksManager:
 * TrackFormat       getCurrentTrack(TrackType trackType);
 * void              switchTrack(TrackType trackType, int newIndex);
 
+#### Attention! : the TracksManger is available only after PLAYING state is received in the activity. If you register to the onTracksUpdate will be able to have it right after it is populated
 
 ###  Getting Tracks  
 
@@ -112,6 +113,14 @@ The following are the available operations when using the KTracksManager:
   	mPlayer.getTrackManager().switchTrack(TrackType.TYPE_VIDEO,index);
   	mPlayer.getTrackManager().switchTrack(TrackType.TYPE_AUDIO,index);
   	mPlayer.getTrackManager().switchTrack(TrackType.TYPE_TEXT,index);
+
+###  Disable Video/Audio/Text Tracks  
+
+
+  	mPlayer.getTrackManager().switchTrack(TrackType.TYPE_VIDEO,-1);
+  	mPlayer.getTrackManager().switchTrack(TrackType.TYPE_AUDIO,-1);
+  	mPlayer.getTrackManager().switchTrack(TrackType.TYPE_TEXT, -1);
+
 
 
 ###  Getting the Current Track Index by Track Type  

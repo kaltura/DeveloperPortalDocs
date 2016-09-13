@@ -263,6 +263,7 @@ Beyond basic Player properties such as "playerVersion" or "duration", the Kaltur
 ### Commonly Used Data Objects  
 
 The following are commonly used data objects:
+
 | Object           | Description | 
 |:---|:---|
 | `configProxy`      | The Player configuration object. Allows access to all UI vars and plugin properties   |

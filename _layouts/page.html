@@ -7,7 +7,8 @@ function addRow(cat,subcat,name,link, entry_path)
 {
     if (subcat){
 	// subcat handle
-	subcatel=document.getElementById(subcat);
+	sid=subcat.replace(" ", "");
+	subcatel=document.getElementById(sid);
 	// if there isn't one
 	if (! subcatel ){
 	    var subcatel = document.createElement('div');
@@ -130,7 +131,7 @@ function show_hide_sub_div(div_id)
 
 			</table>
 
-			<a class="editgithub" href="{{ page.git.github_url }}" target="_blank">Edit on Github</a>
+			<a class="editgithub" href="{{ page.git.github_url }}" target="_blank">Contribute to this page</a>
 
 			{% endif %}
 

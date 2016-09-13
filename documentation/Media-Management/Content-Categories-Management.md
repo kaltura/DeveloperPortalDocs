@@ -19,7 +19,7 @@ Categories may also be used to set content entitlements for end-users in various
 * You can use categories, along with metadata and filters to create manually or dynamically generated playlists.
 * Categories can be used for setting content entitlements for end-users, regulating access to content and functionality.
 
-> **Backward Compatability** - The [KalturaBaseEntry](https://developer.kaltura.com/api-docs/#/KalturaBaseEntry) exposes the two properties `categories` and `categoriesIds`. These properties can only be used when your categories are not configured with Entitlement settings. It is always best to rely on the `categoryEntry` service to retrieve a full list of categories per Entry. Avoid using the `categories` and `categoriesIds` properties.
+> **Backward Compatibility** - The [KalturaBaseEntry](https://developer.kaltura.com/api-docs/#/KalturaBaseEntry) exposes the two properties `categories` and `categoriesIds`. These properties can only be used when your categories are not configured with Entitlement settings. It is always best to rely on the `categoryEntry` service to retrieve a full list of categories per Entry. Avoid using the `categories` and `categoriesIds` properties.
 
 ## Creating and Managing Categories
 
