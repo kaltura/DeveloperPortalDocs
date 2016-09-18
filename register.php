@@ -12,12 +12,25 @@ layout: default
         </div>
 
 <div >
+<?php
+require_once('/var/www/html/IP2Location-PHP-Module/IP2Location.php');
+$signer_ip=$_SERVER['REMOTE_ADDR'];
+$db = new \IP2Location\Database('/etc/IP2LOCATION-LITE-DB1.BIN', \IP2Location\Database::FILE_IO);
+$excluded_countries=array('IR','SY','SD','CU','KP');
+$records = $db->lookup($signer_ip, \IP2Location\Database::ALL);
+
+if(in_array($records['countryCode'],$excluded_countries)){
+    $msg='ERROR: In compliance with U.S and applicable Export laws we are unable to process your request. Please contact legal@kaltura.com if you believe this to be an error.';
+    die($msg);
+}
+?>
     <div class="radio-description">Complete API access for all video workflows, player, widgets, SDKs, developer tools, forums &amp; Kaltura University. Create as many VPaaS Accounts as you need with centralized configuration &amp; consolidated billing across all accounts.</div>
 </div>
 
 <div class="w-form">
 		
     <form id="register-form" name="register-form" data-name="Register Form" action="https://vpaas.kaltura.com:8443/post_register.php" method="post" onsubmit="return validate(event);">
+<input type="hidden" id="ip" value="<?php echo $_SERVER['REMOTE_ADDR'];?>">
 <div class="company-details-div">
 <div class="w-row form-row">
 <div class="w-col w-col-6">
