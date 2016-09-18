@@ -20,8 +20,8 @@ $excluded_countries=array('IR','SY','SD','CU','KP');
 $records = $db->lookup($signer_ip, \IP2Location\Database::ALL);
 
 if(in_array($records['countryCode'],$excluded_countries)){
-    $msg='ERROR: In compliance with U.S and applicable Export laws we are unable to process your request. Please contact legal@kaltura.com if you believe this to be an error.';
-    die($msg);
+    $msg='In compliance with U.S and applicable Export laws we are unable to process your request. Please contact legal@kaltura.com if you believe this to be an error.';
+    die('<div class="radio-description">'.$msg.'</div>');
 }
 ?>
     <div class="radio-description">Complete API access for all video workflows, player, widgets, SDKs, developer tools, forums &amp; Kaltura University. Create as many VPaaS Accounts as you need with centralized configuration &amp; consolidated billing across all accounts.</div>
