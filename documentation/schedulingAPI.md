@@ -34,17 +34,12 @@ A basic scheduling flow includes the following:
 
 ## Uploading a Recording to Kaltura  
 
-When uploading a recording to Kaltura that's a result of a scheduled event, certain information from the event itself should be used. 
-The partner ID must be used to create a KS for upload. In addition, the event includes the X-KALTURA-TEMPLATE-ENTRY-ID parameter that must be set during entry creation (see iCal parameters above).
+When uploading a recording to Kaltura that is the result of a scheduled event, certain information from the event itself should be used. 
+The partner ID must be used to create a KS for upload. In addition, the event includes the X-KALTURA-TEMPLATE-ENTRY-ID parameter that must be set during entry creation (see iCal parameters above). Use one of the following options:
 
-### Via XML/CSV  
+* **Via XML/CSV:** The templateEntryId can be set via [XML bulk](http://www.kaltura.com/api_v3/xsdDoc/index.php?type=bulkUploadXml.bulkUploadXML)
 
-The templateEntryId can be set via XML bulk upload using the following: http://www.kaltura.com/api_v3/xsdDoc/index.php?type=bulkUploadXml.bulkUploadXML
-
-### Via API  
-
-The templateEntryId can be set via the API as follows:
-http://www.kaltura.com/api_v3/testmeDoc/?object=KalturaBaseEntry
+* **Via API:** The templateEntryId can be set via [API](http://www.kaltura.com/api_v3/testmeDoc/?object=KalturaBaseEntry).
 
 ### Publishing Permissions  
 
@@ -54,14 +49,16 @@ The recommended option is to use an app-token, which requires partner preparatio
 #### Partner Preparation  
 
 Perform the following preparation steps:
+
 1. Create an app-token for the partner (appToken.add) using the following:
-sessionType – user
-sessionPrivileges – disableentitlement,setrole:CAPTURE_DEVICE_ROLE
+ * sessionType – user
+ * sessionPrivileges – disableentitlement,setrole:CAPTURE_DEVICE_ROLE
 2. Configure the ID and token of the created app-token on the device.
 
 #### Device Upload APIs  
 
 Follow these steps to use the device upload APIs:
+
 1. Create a weak widget KS (session.startWidgetSession).
 2. Create a strong KS (appToken.startSession).
 3. Create an upload-token (uploadToken.add).
@@ -75,10 +72,7 @@ iCal export is supported via HTTPS or FTP.
 
 ### FTP  
 
-FTP can be used to retrieve a list of events as follows: 
-ftp://api.kaltura.com/format/ical/schedule_scheduleevent/filter:objectType/KalturaScheduleEventFilter/
-
-The maxiumum number of returned results is 10,000 (500 max per page, 20 pages max). Partners can use the FTP list to identify which files have changed or are new, and then sync only the delta. 
+FTP can be used to retrieve [a list of events](ftp://api.kaltura.com/format/ical/schedule_scheduleevent/filter:objectType/KalturaScheduleEventFilter/). The maxiumum number of returned results is 10,000 (500 max per page, 20 pages max). Partners can use the FTP list to identify which files have changed or are new, and then sync only the delta. 
 
 The results can be filtered on any of the parameters. For example: 
 ftp://api.kaltura.com/format/ical/schedule_scheduleevent/filter:objectType/KalturaScheduleEventFilter/filter:resourceIdsLike/RESOURCE-ID 
@@ -87,12 +81,10 @@ To use FTP, the credentials must be a KMC user. A user with limited permissions 
 
 ### HTTP/S  
 
-You may download files via HTTP/S as follows: 
-http://www.kaltura.com/api_v3/service/schedule_scheduleevent/action/list/format/ical/filter:objectType/KalturaScheduleEventFilter/
-The maximum number of returned results is X. Partners will need to use a KS in order to request a list of events.  
+You may download files via [HTTP/S](http://www.kaltura.com/api_v3/service/schedule_scheduleevent/action/list/format/ical/filter:objectType/KalturaScheduleEventFilter/). The maximum number of returned results is X. Partners will need to use a KS in order to request a list of events.  
 The results can be filtered on any of the parameters. For example: 
-http://www.kaltura.com/api_v3/service/schedule_scheduleevent/action/list/format/ical/filter:objectType/KalturaScheduleEventFilter/filter:resourceIdsLike/RESOURCE-ID
-http://www.kaltura.com/api_v3/service/schedule_scheduleevent/action/list/format/ical/filter:objectType/KalturaScheduleEventBaseFilter/filter:startDateGreaterThanOrEqual/0
+* http://www.kaltura.com/api_v3/service/schedule_scheduleevent/action/list/format/ical/filter:objectType/KalturaScheduleEventFilter/filter:resourceIdsLike/RESOURCE-ID
+* http://www.kaltura.com/api_v3/service/schedule_scheduleevent/action/list/format/ical/filter:objectType/KalturaScheduleEventBaseFilter/filter:startDateGreaterThanOrEqual/0
 
 ### Filtering and Pagination of Results  
 
@@ -114,7 +106,7 @@ For example, the request
  
 ## Configuring Resources on Kaltura  
 
-Our CSV format supports mixed order, and not all fields are required, the fields are defined by the user using asterisk at the beginning of the line.
+Our CSV format supports mixed order, and not all fields are required; the fields are defined by the user using an asterisk at the beginning of the line.
 For example:
 *action,name,type,systemName,description,tags,parentType,parentSystemName
 1,my resource name,camera,my-camera1,my example camera,"tag1,tag2",location,my-parent1
