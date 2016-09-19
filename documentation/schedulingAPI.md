@@ -26,7 +26,6 @@ A basic scheduling flow includes the following:
 | X-KALTURA-STATUS  | Status of the event in Kaltura         | int         |
 |X-KALTURA-CATEGORY-IDS  | The list of categories to which the event belongs           |  Unlimited, comma-separated integers        |
 |X-KALTURA-ENTRY-IDS  | The Entry IDs related to this event               |   Unlimited, comma separated integers; each string is exactly 10 ASCII characters (0-1, a-z and underscore).     |
-
 |X-KALTURA-RESOURCE-IDS  | The Kaltura resource ID for the resources used in the event |   Unlimited, comma-separated integers    |
 |X-KALTURA-TAGS  | Metadata tags for the event |  An unlimited number of unlimited, comma-separated strings.; all tags combined, including the commas, should be less than 65k.    |
 |X-KALTURA-TEMPLATE-ENTRY-ID  | Template entry to be used for entries created based on this event. The template entry will define the recording owner, categories for the recorded entry, co-editors, etc.  |   Exactly 10 ASCII characters (0-1, a-z and underscore)      |
@@ -36,7 +35,7 @@ A basic scheduling flow includes the following:
 ## Uploading a Recording to Kaltura  
 
 When uploading a recording to Kaltura that's a result of a scheduled event, certain information from the event itself should be used. 
-The partner ID must be used to create a KS for upload. In addition, the event includes the X-KALTURA-TEMPLATE-ENTRY-ID parameter that must be set during entry creation.
+The partner ID must be used to create a KS for upload. In addition, the event includes the X-KALTURA-TEMPLATE-ENTRY-ID parameter that must be set during entry creation (see iCal parameters above).
 
 ### Via XML/CSV  
 
