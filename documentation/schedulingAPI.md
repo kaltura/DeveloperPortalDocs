@@ -5,37 +5,52 @@ title: Kaltura Scheduling API for Partners
 ---
 
 
-Scheduling via Kaltura enables partner devices to use an iCal file managed by Kaltura for scheduling events for each device, and to use information from those events to ingest recorded content back to Kaltura with additional metadata. A basic scheduling flow would include the following: 
+Scheduling via Kaltura enables partner devices to use an iCal file managed by Kaltura for scheduling events for each device, and to use information from those events to ingest recorded content back to Kaltura with additional metadata. 
+
+A basic scheduling flow includes the following: 
+
 1. The administrator configures an event via Kaltura for a future date. The admin sets the recording device as the resource and provides an entry template that includes metadata on the entry resulting from the scheduled recording. The entry template will include information on how to publish the entry, co-editors, description/title, etc. 
 2. The device is configured to sync the internal calendar with the Kaltura calendar periodically. The device will pick up the relevant events via HTTP request or FTP and will parse the events for those relating to that device. 
 3. The device will record at the pre-set time and store the recording locally. 
 4. The device will upload the recording to Kaltura, setting the relevant parameters on the entry itself, including the entry template and any additional metadata. 
 5. The user will be able to view the recording in their course as part of the Kaltura building block or in KMS. 
 
-Uploading a recording to Kaltura
+## Uploading a Recording to Kaltura  
+
 When uploading a recording to Kaltura that's a result of a scheduled event, certain information from the event itself should be used. 
 The partner ID must be used to create a KS for upload. In addition, the event includes the X-KALTURA-TEMPLATE-ENTRY-ID parameter that must be set during entry creation.
-Via XML/CSV
-templateEntryId can be set via XML bulk upload:
+
+### Via XML/CSV  
+
+The templateEntryId can be set via XML bulk upload using the following:
 http://www.kaltura.com/api_v3/xsdDoc/index.php?type=bulkUploadXml.bulkUploadXML
-Via API
-templateEntryId can be set via API
+
+### Via API  
+
+The templateEntryId can be set via the API as follows:
+
 http://www.kaltura.com/api_v3/testmeDoc/?object=KalturaBaseEntry
-Publishing Permissions
-In order to enable the device to use an entry template that includes publishing to specific categories or channels, the device must use the right entitlements when uploading. One option is for the device to use an admin secret and upload all recordings as an admin. However, this is not recommended since it requires exposing the admin secret on every device. 
-The recommended option will be to use an app-token. Using an app-token requires partner preparation and using app token APIs to upload from the device. 
-Partner preparation
+
+## Publishing Permissions  
+
+To enable the device to use an entry template that includes publishing to specific categories or channels, the device must use the correct entitlements when uploading. One option is for the device to use an admin secret and to upload all recordings as an administrator. However, this option is not recommended because it requires exposing the admin secret on every device. 
+The recommended option is to use an app-token, which requires partner preparation and using app token APIs to upload from the device.
+
+### Partner Preparation  
+
 1. Create an app-token for the partner (appToken.add):
 sessionType – user
 sessionPrivileges – disableentitlement,setrole:CAPTURE_DEVICE_ROLE
-2. The id and token of the created app-token should be configured on the device
-Device upload APIs
-Create weak widget KS (session.startWidgetSession)
-Create strong KS (appToken.startSession)
-Create upload-token (uploadToken.add)
-Upload the media (uploadToken.upload)
-Create new entry with template-entry id (media.add)
-Associate the entry with the uploaded media (media.addContent)
+2. Configure the ID and token of the created app-token on the device
+
+#### Device Upload APIs  
+Follow these steps to use the device upload APIs:
+1. Create a weak widget KS (session.startWidgetSession)
+2. Create a strong KS (appToken.startSession)
+3. Create an upload-token (uploadToken.add)
+4. Upload the media (uploadToken.upload)
+5. Create a new entry with the template-entry id (media.add)
+6. Associate the entry with the uploaded media (media.addContent)
 
 ## iCal Sync from Kaltura  
 
