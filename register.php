@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+<!--This site includes IP2Location LITE data available from http://lite.ip2location.com-->
 
 <div class="w-section vpaas-sign-up-section">
     <div class="w-container vpaas-signup-container">
