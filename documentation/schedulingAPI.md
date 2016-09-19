@@ -18,21 +18,19 @@ A basic scheduling flow includes the following:
 
 ## iCal Kaltura Specific Parameters  
 
-Markdown tables can become messy. Please write clean tables so it will be simple for contributors after you to edit and enahance your work.  
-The clean way to add Markdown tables is as follows:
-
-```
-  
 | Name       | Description | Format |
 |:------------ |:------------------:|------------------:|
 |X-KALTURA-ID  | Event ID in Kaltura               |   int        |
 | X-KALTURA-PARTNER-ID  | Kaltura partner ID          | int         | 
 | X-KALTURA-PARENT-ID  | If a single occurrence as part of a series (recurring event), the parent ID will be the recurring event.          | int         | 
-| X-KALTURA-STATUS  | Status of the event in Kaltura         | int         | 
+| X-KALTURA-STATUS  | Status of the event in Kaltura         | int         |
+|X-KALTURA-CATEGORY-IDS  | The list of categories to which the event belongs           |  Unlimited, comma-separated integers        |
+|X-KALTURA-ENTRY-IDS  | The Entry IDs related to this event               |   Unlimited, comma separated integers; each string is exactly 10 ASCII characters (0-1, a-z and underscore).     |
 
-  
-```
-
+|X-KALTURA-RESOURCE-IDS  | The Kaltura resource ID for the resources used in the event |   Unlimited, comma-separated integers    |
+|X-KALTURA-TAGS  | Metadata tags for the event |  An unlimited number of unlimited, comma-separated strings.; all tags combined, including the commas, should be less than 65k.    |
+|X-KALTURA-TEMPLATE-ENTRY-ID  | Template entry to be used for entries created based on this event. The template entry will define the recording owner, categories for the recorded entry, co-editors, etc.  |   Exactly 10 ASCII characters (0-1, a-z and underscore)      |
+|X-KALTURA-TYPE  | Defines the type of entry required by this event: live or VOD.               |   1 – recording; 2 – live-stream  |
 
 
 ## Uploading a Recording to Kaltura  
