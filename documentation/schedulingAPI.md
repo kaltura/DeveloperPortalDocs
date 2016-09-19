@@ -39,13 +39,11 @@ The partner ID must be used to create a KS for upload. In addition, the event in
 
 ### Via XML/CSV  
 
-The templateEntryId can be set via XML bulk upload using the following:
-{% http://www.kaltura.com/api_v3/xsdDoc/index.php?type=bulkUploadXml.bulkUploadXML %}
+The templateEntryId can be set via XML bulk upload using the following: http://www.kaltura.com/api_v3/xsdDoc/index.php?type=bulkUploadXml.bulkUploadXML
 
 ### Via API  
 
 The templateEntryId can be set via the API as follows:
-
 http://www.kaltura.com/api_v3/testmeDoc/?object=KalturaBaseEntry
 
 ### Publishing Permissions  
@@ -55,19 +53,21 @@ The recommended option is to use an app-token, which requires partner preparatio
 
 #### Partner Preparation  
 
-1. Create an app-token for the partner (appToken.add):
+Perform the following preparation steps:
+1. Create an app-token for the partner (appToken.add) using the following:
 sessionType – user
 sessionPrivileges – disableentitlement,setrole:CAPTURE_DEVICE_ROLE
-2. Configure the ID and token of the created app-token on the device
+2. Configure the ID and token of the created app-token on the device.
 
 #### Device Upload APIs  
+
 Follow these steps to use the device upload APIs:
-1. Create a weak widget KS (session.startWidgetSession)
-2. Create a strong KS (appToken.startSession)
-3. Create an upload-token (uploadToken.add)
-4. Upload the media (uploadToken.upload)
-5. Create a new entry with the template-entry id (media.add)
-6. Associate the entry with the uploaded media (media.addContent)
+1. Create a weak widget KS (session.startWidgetSession).
+2. Create a strong KS (appToken.startSession).
+3. Create an upload-token (uploadToken.add).
+4. Upload the media (uploadToken.upload).
+5. Create a new entry with the template-entry id (media.add).
+6. Associate the entry with the uploaded media (media.addContent).
 
 ## iCal Sync from Kaltura  
 
@@ -118,16 +118,19 @@ Our CSV format supports mixed order, and not all fields are required, the fields
 For example:
 *action,name,type,systemName,description,tags,parentType,parentSystemName
 1,my resource name,camera,my-camera1,my example camera,"tag1,tag2",location,my-parent1
+
 These are the defaults if a field is missing:
-action - add/update/delete. For update and delete actions, resourceId could be used instead of systemName.
-name - required with no default
-type - location/camera
-systemName - null
-description - null
-tags - null
-parentType - location
-parentSystemName - null
-Resources can have a hierarchy (e.g. room with cameras), parent type and name are used to define this hierarchy. 
+ action - add/update/delete. For update and delete actions, resourceId could be used instead of systemName.
+ name - required with no default
+ type - location/camera
+ systemName - null
+ description - null
+ tags - null
+ parentType - location
+ parentSystemName - null
+
+Resources can have a hierarchy (e.g., a room with cameras); the parent type and name are used to define this hierarchy. 
+
 Here is an example of the API call to create resources (type camera):
 http://www.kaltura.com/api_v3/service/schedule_scheduleresource/action/add?scheduleResource:objectType=KalturaCameraScheduleResource&scheduleResource:name=Camera 5&scheduleResource:streamUrl=rtmp://xxx&ks=djJ8MTc5NDk2MXy6mzPyYqfHU8nF5UqEiFF-2iLuI_OSVFO0Ad-KqArJ-w70X9ZLVRpO8FvF4K_l5f7Gga1S9fTcXuxM_fETaXtWAj_-63w1rfyNVrrDuNx7xog3aoe3TpbtkKeO2NhSP5sR8xaWdhA4qV84IQjUicDj 
 
