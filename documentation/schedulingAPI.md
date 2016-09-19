@@ -40,7 +40,7 @@ The partner ID must be used to create a KS for upload. In addition, the event in
 ### Via XML/CSV  
 
 The templateEntryId can be set via XML bulk upload using the following:
-http://www.kaltura.com/api_v3/xsdDoc/index.php?type=bulkUploadXml.bulkUploadXML
+{% http://www.kaltura.com/api_v3/xsdDoc/index.php?type=bulkUploadXml.bulkUploadXML %}
 
 ### Via API  
 
@@ -48,12 +48,12 @@ The templateEntryId can be set via the API as follows:
 
 http://www.kaltura.com/api_v3/testmeDoc/?object=KalturaBaseEntry
 
-## Publishing Permissions  
+### Publishing Permissions  
 
 To enable the device to use an entry template that includes publishing to specific categories or channels, the device must use the correct entitlements when uploading. One option is for the device to use an admin secret and to upload all recordings as an administrator. However, this option is not recommended because it requires exposing the admin secret on every device. 
 The recommended option is to use an app-token, which requires partner preparation and using app token APIs to upload from the device.
 
-### Partner Preparation  
+#### Partner Preparation  
 
 1. Create an app-token for the partner (appToken.add):
 sessionType – user
@@ -72,10 +72,12 @@ Follow these steps to use the device upload APIs:
 ## iCal Sync from Kaltura  
 
 iCal export is supported via HTTPS or FTP. 
+
 ### FTP  
 
-Can be used to retrieve a list of events: 
+FTP can be used to retrieve a list of events as follows: 
 ftp://api.kaltura.com/format/ical/schedule_scheduleevent/filter:objectType/KalturaScheduleEventFilter/
+
 The maxiumum number of returned results is 10,000 (500 max per page, 20 pages max). Partners can use the FTP list to identify which files have changed or are new, and then sync only the delta. 
 
 The results can be filtered on any of the parameters. For example: 
@@ -85,7 +87,7 @@ To use FTP, the credentials must be a KMC user. A user with limited permissions 
 
 ### HTTP/S  
 
-Download of the files can be done via HTTP/S: 
+You may download files via HTTP/S as follows: 
 http://www.kaltura.com/api_v3/service/schedule_scheduleevent/action/list/format/ical/filter:objectType/KalturaScheduleEventFilter/
 The maximum number of returned results is X. Partners will need to use a KS in order to request a list of events.  
 The results can be filtered on any of the parameters. For example: 
