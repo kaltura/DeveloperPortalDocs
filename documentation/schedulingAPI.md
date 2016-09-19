@@ -15,6 +15,26 @@ A basic scheduling flow includes the following:
 4. The device will upload the recording to Kaltura, setting the relevant parameters on the entry itself, including the entry template and any additional metadata. 
 5. The user will be able to view the recording in their course as part of the Kaltura building block or in KMS. 
 
+
+## iCal Kaltura Specific Parameters  
+
+Markdown tables can become messy. Please write clean tables so it will be simple for contributors after you to edit and enahance your work.  
+The clean way to add Markdown tables is as follows:
+
+```
+  
+| Name       | Description | Format |
+|:------------ |:------------------:|------------------:|
+|X-KALTURA-ID  | Event ID in Kaltura               |   int        |
+| X-KALTURA-PARTNER-ID  | Kaltura partner ID          | int         | 
+| X-KALTURA-PARENT-ID  | If a single occurrence as part of a series (recurring event), the parent ID will be the recurring event.          | int         | 
+| X-KALTURA-STATUS  | Status of the event in Kaltura         | int         | 
+
+  
+```
+
+
+
 ## Uploading a Recording to Kaltura  
 
 When uploading a recording to Kaltura that's a result of a scheduled event, certain information from the event itself should be used. 
