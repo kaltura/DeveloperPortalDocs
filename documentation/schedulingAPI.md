@@ -120,21 +120,21 @@ For example:
 1,my resource name,camera,my-camera1,my example camera,"tag1,tag2",location,my-parent1
 
 These are the defaults if a field is missing:
- action - add/update/delete. For update and delete actions, resourceId could be used instead of systemName.
- name - required with no default
- type - location/camera
- systemName - null
- description - null
- tags - null
- parentType - location
- parentSystemName - null
 
-Resources can have a hierarchy (e.g., a room with cameras); the parent type and name are used to define this hierarchy. 
+| Field       | Description / Default | 
+|:------------ |:------------------:|
+| action - add/update/delete  |  For the update and delete actions, resourceId can be used instead of systemName. |  
+| name  |  Required with no default. |  
+| type  |  Location/camera |  
+| systemName  |  Null |  
+| description  |  Null |  
+| tags  |  Null |  
+| parentType  |  Location |  
+| parentSystemName  |  Null |  
 
-Here is an example of the API call to create resources (type camera):
-http://www.kaltura.com/api_v3/service/schedule_scheduleresource/action/add?scheduleResource:objectType=KalturaCameraScheduleResource&scheduleResource:name=Camera 5&scheduleResource:streamUrl=rtmp://xxx&ks=djJ8MTc5NDk2MXy6mzPyYqfHU8nF5UqEiFF-2iLuI_OSVFO0Ad-KqArJ-w70X9ZLVRpO8FvF4K_l5f7Gga1S9fTcXuxM_fETaXtWAj_-63w1rfyNVrrDuNx7xog3aoe3TpbtkKeO2NhSP5sR8xaWdhA4qV84IQjUicDj 
+Note that resources can have a hierarchy (e.g., a room with cameras), which is defined using the the parent type and name. Click [here](http://www.kaltura.com/api_v3/service/schedule_scheduleresource/action/add?scheduleResource:objectType=KalturaCameraScheduleResource&scheduleResource:name=Camera 5&scheduleResource:streamUrl=rtmp://xxx&ks=djJ8MTc5NDk2MXy6mzPyYqfHU8nF5UqEiFF-2iLuI_OSVFO0Ad-KqArJ-w70X9ZLVRpO8FvF4K_l5f7Gga1S9fTcXuxM_fETaXtWAj_-63w1rfyNVrrDuNx7xog3aoe3TpbtkKeO2NhSP5sR8xaWdhA4qV84IQjUicDj) for an example of the API call to create resources (type camera).
 
 ## Other Considerations  
 
 * Conflicting events: Currently Kaltura does not prevent conflicting events. The user will need to ensure there's no resource conflict when scheduling the event. Devices should be able to handle resource conflicts and ensure operation in this case. 
-* Recurring events: When using HTTP/S or FTP, both the series and the breakdown of each occurrence will be provided. Devices can filter based on event type (e.g. http://www.kaltura.com/api_v3/testmeDoc/index.php?object=KalturaScheduleEventRecurrenceType) to receive only the series and single events, or receive single events and breakdown of series. The choice between the options depends on the capability of the device. 
+* Recurring events: When using HTTP/S or FTP, both the series and the breakdown of each occurrence will be provided. Devices can filter based on [event type](http://www.kaltura.com/api_v3/testmeDoc/index.php?object=KalturaScheduleEventRecurrenceType) to receive only the series and single events, or receive single events and breakdown of series. The choice between the options depends on the capability of the device. 
