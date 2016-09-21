@@ -134,5 +134,5 @@ The following are the available operations when using the KTracksManager:
 
 The user may want to start the playback with a specific bitrate. This can be achieved using the following code in the player init or in the change configuration process:
 
-	String prefferedBitrateMbit = "600";
-	config.addConfig("mediaProxy.preferredFlavorBR", prefferedBitrateMbit);
+	String preferredBitrateMbit = "600";
+	config.addConfig("mediaProxy.preferredFlavorBR", preferredBitrateMbit);
