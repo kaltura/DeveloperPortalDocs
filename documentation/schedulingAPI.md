@@ -4,6 +4,7 @@ layout: page
 title: Kaltura Scheduling API for Partners
 ---
 
+--add to the folder: Media Ingest and Preparation--
 
 Scheduling via Kaltura enables partner devices to use an iCal file managed by Kaltura for scheduling events for each device, and to use information from those events to ingest recorded content back to Kaltura with additional metadata. 
 
