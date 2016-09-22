@@ -44,7 +44,7 @@ The application notifies the SDK about a new downloaded asset. The SDK fetches i
 if required.
 
 {% plantuml %}
-
+    @startuml
 	participant App
 	participant "Kaltura LocalAssetsManager" as LAM
 
@@ -57,7 +57,7 @@ if required.
 	else Failure
 	LAM->>App: Failure
 	end
-
+    @enduml
 {% endplantuml %}
 
 ##### Local Content ID  
