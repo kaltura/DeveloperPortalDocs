@@ -6,8 +6,13 @@ title: Kaltura Scheduling API for Partners
 
 --add to the folder: Media Ingest and Preparation--
 
-Scheduling via Kaltura enables partner devices to use an iCal file managed by Kaltura for scheduling events for each device, and to use information from those events to ingest recorded content back to Kaltura with additional metadata. 
+Kaltura's Scheduling service enables partner devices to use an iCal file managed by Kaltura for scheduling events for each device, and to use information from those events to ingest recorded content back to Kaltura with additional metadata. 
 
+## Quick Start  
+
+To use Kaltura's Scheduling API, follow these steps:
+1. Configure an event for a future date.
+2. Set the recording device as the resource and provides an entry template that includes metadata on the entry resulting from the scheduled recordin
 A basic scheduling flow includes the following: 
 
 1. The administrator configures an event via Kaltura for a future date. The admin sets the recording device as the resource and provides an entry template that includes metadata on the entry resulting from the scheduled recording. The entry template will include information on how to publish the entry, co-editors, description/title, etc. 
