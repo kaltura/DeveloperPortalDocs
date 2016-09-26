@@ -40,8 +40,7 @@ Local assets are managed in `LocalAssetsManager`/`KPLocalAssetsManager`. The fol
 
 #### Register  
 
-The application notifies the SDK about a new downloaded asset. The SDK fetches important metadata and a DRM license,
-if required.
+The application notifies the SDK about a new downloaded asset. The SDK fetches important metadata and a DRM license, if required.
 
 {% plantuml %}
     @startuml
@@ -67,8 +66,7 @@ The `entryConfig` object provided must include an additional field that is not u
 
 #### Check Status  
 
-This allows the application to verify that a downloaded asset is still playable. This applies mostly to DRM-protected
-assets.
+This allows the application to verify that a downloaded asset is still playable. This applies mostly to DRM-protected assets.
 
 #### Refresh  
 
@@ -93,18 +91,14 @@ Additional arguments:
 
 ### Asset Playback  
 
-To override the default (streaming) playback URL with a downloaded file, the application provides a delegate to the
-Player.
+To override the default (streaming) playback URL with a downloaded file, the application provides a delegate to the Player.
 
 * Android: Set `CustomSourceURLProvider` in `PlayerViewController` to an implementation of `PlayerViewController.SourceURLProvider`
 * iOS: Set `customSourceURLProvider` in `KPViewController` to an implementation of `KPSourceURLProvider`
 
-The delegate contains a single method that, given an entryId, returns an alternative (local) asset URL. If the method
-returns null, the Player uses the default playback URL. The method is meant to be hooked to a Download Manager's
-lookup function.
+The delegate contains a single method that, given an entryId, returns an alternative (local) asset URL. If the method returns null, the Player uses the default playback URL. The method is meant to be hooked to a Download Manager's lookup function.
 
-The Custom URL provider is called at the beginning of every playback. This allows the application to change
-the playback source dynamically. For example:
+The Custom URL provider is called at the beginning of every playback. This allows the application to change the playback source dynamically. For example:
 
 * Download files for the highest available quality, play downloaded files even when online
 * Download files for medium quality (to save storage space), but when online, play ABR to get better quality.
@@ -128,8 +122,7 @@ As mentioned above, the `entryConfig` object must include the `localContentId` t
 
 ## Download Location Guidelines  
 
-Application developers are free to choose download locations, as allowed by the platform; however, Kaltura recommends
-the following locations:
+Application developers are free to choose download locations, as allowed by the platform; however, Kaltura recommends the following locations:
 
 ### Android  
 
