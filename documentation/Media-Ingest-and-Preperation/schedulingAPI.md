@@ -1,18 +1,42 @@
 temp
 ---
-layout: page
-title: Kaltura Scheduling API for Partners
+layout: pageonly
+title: Kaltura's Scheduling API Service
 ---
 
---add to the folder: Media Ingest and Preparation--
-
-Kaltura's Scheduling service enables partner devices to use an iCal file managed by Kaltura for scheduling events for each device, and to use information from those events to ingest recorded content back to Kaltura with additional metadata. 
+Kaltura's Scheduling service enables partner devices to use an iCal file, managed by Kaltura, to schedule events for each device, and to use information from those events to ingest recorded content back to Kaltura with additional metadata. The automated recording schedule is managed through Kaltura's solution and through the recording itself (via partners). The interface used between Kaltura and the partner devices is iCal. This service provides backend support for calendar definition, including importing and exporting using the iCal standard. Note that currently this solution is implemented for VOD only.
 
 ## Quick Start  
 
 To use Kaltura's Scheduling API, follow these steps:
+
 1. Configure an event for a future date.
-2. Set the recording device as the resource and provides an entry template that includes metadata on the entry resulting from the scheduled recordin
+2. Set the recording device as the resource and provide an entry template that includes metadata on the entry resulting from the scheduled recording. The device is configured to sync the internal calendar with the Kaltura calendar periodically using HTTP request or via FTP (in which case the events relating to that device will be parsed).
+3. The device will record at the pre-set time and store the recording locally.
+4. The device will upload the recording to Kaltura, setting the relevant parameters on the entry itself, including the entry template and any additional metadata.
+5. The user will be able to view the recording in their course as part of the Kaltura building block or in KMS.
+
+
+## Implementation  
+
+Scheduling is implemented as a server plugin that defines new object types for schedule-events and schedule-resources.
+
+### Pull Request  
+
+The Pull request can be implemented via HTTP or FTP:
+
+* **HTTP**: The schedule can be pulled using the API through XML, JSON or iCal.
+* **FTP**: The schedule can be pulled using an abstract FTP server that will log in using the Kaltura API user and will display events as files.
+
+### Push Request  
+
+The schedule can be pushed via XML, JSON and iCal using Local, FTP, SFTP and S3.
+
+### Ingest  
+
+The schedule can be defined using KMS and APIs or by using an iCal drop-folder.
+
+
 A basic scheduling flow includes the following: 
 
 1. The administrator configures an event via Kaltura for a future date. The admin sets the recording device as the resource and provides an entry template that includes metadata on the entry resulting from the scheduled recording. The entry template will include information on how to publish the entry, co-editors, description/title, etc. 
