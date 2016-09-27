@@ -4,18 +4,23 @@ layout: pageonly
 title: Kaltura's Scheduling API Service
 ---
 
-Kaltura's Scheduling service enables partner devices to use an iCal file, managed by Kaltura, to schedule events for each device, and to use information from those events to ingest recorded content back to Kaltura with additional metadata. The automated recording schedule is managed through Kaltura's solution and through the recording itself (via partners). The interface used between Kaltura and the partner devices is iCal. This service provides backend support for calendar definition, including importing and exporting using the iCal standard. Note that currently this solution is implemented for VOD only.
+Kaltura's Scheduling service enables partner devices to use an iCal file, managed by Kaltura, to schedule events for each device, and to use information from those events to ingest recorded content back to Kaltura with additional metadata. This provides the option of managing automated recording schedules for organizations such as educational institutions.
+
+The automated recording schedule is managed through Kaltura's solution and through the recording itself (via partners). The interface used between Kaltura and the partner devices is iCal. This service provides backend support for calendar definition, including importing and exporting using the iCal standard. 
+
+Note that currently this solution is implemented for VOD only.
 
 ## Quick Start  
 
-To use Kaltura's Scheduling API, follow these steps:
+To use Kaltura's Scheduling API, the administrator should follow these steps basic scheduling steps:
 
 1. Configure an event for a future date.
-2. Set the recording device as the resource and provide an entry template that includes metadata on the entry resulting from the scheduled recording. The device is configured to sync the internal calendar with the Kaltura calendar periodically using HTTP request or via FTP (in which case the events relating to that device will be parsed).
-3. The device will record at the pre-set time and store the recording locally.
-4. The device will upload the recording to Kaltura, setting the relevant parameters on the entry itself, including the entry template and any additional metadata.
+2. Set the recording device as the resource.
+3. Provide an entry template that includes metadata on the entry resulting from the scheduled recording (this should include information on how to publish the entry, co-editors, description/title, etc.). 
+4. Configure the device to sync the internal calendar with the Kaltura calendar periodically using HTTP request or via FTP (in which case the events relating to that device will be parsed).
+4. The device will record at the pre-set time and store the recording locally.
+5. The device will upload the recording to Kaltura, setting the relevant parameters on the entry itself, including the entry template and any additional metadata.
 5. The user will be able to view the recording in their course as part of the Kaltura building block or in KMS.
-
 
 ## Implementation  
 
@@ -34,17 +39,7 @@ The schedule can be pushed via XML, JSON and iCal using Local, FTP, SFTP and S3.
 
 ### Ingest  
 
-The schedule can be defined using KMS and APIs or by using an iCal drop-folder.
-
-
-A basic scheduling flow includes the following: 
-
-1. The administrator configures an event via Kaltura for a future date. The admin sets the recording device as the resource and provides an entry template that includes metadata on the entry resulting from the scheduled recording. The entry template will include information on how to publish the entry, co-editors, description/title, etc. 
-2. The device is configured to sync the internal calendar with the Kaltura calendar periodically. The device will pick up the relevant events via HTTP request or FTP and will parse the events for those relating to that device. 
-3. The device will record at the pre-set time and store the recording locally. 
-4. The device will upload the recording to Kaltura, setting the relevant parameters on the entry itself, including the entry template and any additional metadata. 
-5. The user will be able to view the recording in their course as part of the Kaltura building block or in KMS. 
-
+The schedule can be defined using KMS and APIs, or by using an iCal drop-folder.
 
 ## iCal Kaltura Specific Parameters  
 
@@ -64,11 +59,14 @@ A basic scheduling flow includes the following:
 
 ## Uploading a Recording to Kaltura  
 
-When uploading a recording to Kaltura that is the result of a scheduled event, certain information from the event itself should be used. 
-The partner ID must be used to create a KS for upload. In addition, the event includes the X-KALTURA-TEMPLATE-ENTRY-ID parameter that must be set during entry creation (see iCal parameters above). Use one of the following options:
+When uploading a scheduled event recording to Kaltura, certain information from the event itself should be used:
+
+* The partner ID must be used to create a KS for upload. 
+* The event must include the X-KALTURA-TEMPLATE-ENTRY-ID parameter, which must be set during entry creation (see iCal parameters above). 
+
+Use one of the following options:
 
 * **Via XML/CSV:** The templateEntryId can be set via [XML bulk](http://www.kaltura.com/api_v3/xsdDoc/index.php?type=bulkUploadXml.bulkUploadXML)
-
 * **Via API:** The templateEntryId can be set via [API](http://www.kaltura.com/api_v3/testmeDoc/?object=KalturaBaseEntry).
 
 ### Publishing Permissions  
