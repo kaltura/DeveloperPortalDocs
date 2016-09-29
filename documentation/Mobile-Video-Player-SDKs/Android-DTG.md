@@ -1,14 +1,13 @@
 ---
 layout: page
 title: Android Download-to-Go Library
-
 subcat: Android
 weight: 500
+
 ---
 
-# DRAFT: Download to Go - Android
 
-> Note: this document is still a draft.
+# Download to Go - Android
 
 Download to Go (DTG) is an Android library facilitating the download of video assets, with emphasis on DASH and HLS.
 
@@ -31,7 +30,7 @@ The library is external to the Player SDK, and is added separately by the applic
 
 The simplest way to get up and running is by using JitPack's Maven repository.
 
-1. Add JitPack's repository to the top-level build.gradle:
+1) Add JitPack's repository to the top-level build.gradle:
 
 ```
 	allprojects {
@@ -42,7 +41,7 @@ The simplest way to get up and running is by using JitPack's Maven repository.
 	}
 ```
 
-2. Add the dependency:
+2) Add the dependency:
 
 ```
 	dependencies {
@@ -50,21 +49,22 @@ The simplest way to get up and running is by using JitPack's Maven repository.
 	}
 ```
 
-Replace v2.0.0 with the latest release (see https://github.com/kaltura/playkit-dtg-android/releases).
+Replace `v2.0.0` with the [latest release](https://github.com/kaltura/playkit-dtg-android/releases).
 
-For more JitPack options and information, see https://jitpack.io/#kaltura/playkit-dtg-android. 
+JitPack provides more [options and information](https://jitpack.io/#kaltura/playkit-dtg-android). 
 
+### Alternative Setup
 
 As with any Open Source library, you can also [clone the repository from GitHub](https://github.com/kaltura/playkit-dtg-android/) and add it to your project:
 
-1. Add a reference to the project in settings.gradle:
+1) Add a reference to the project in settings.gradle:
 
 ```
     include ':dtglib'
     project(':dtglib').projectDir = file('../../playkit-dtg-android/dtglib')
 ```
 
-2. Add the local dependency in build.gradle:
+2) Add the local dependency in build.gradle:
 
 ```
     dependencies {
@@ -72,7 +72,7 @@ As with any Open Source library, you can also [clone the repository from GitHub]
     }
 ```
 
-
+Now when you build your own project, DTGLib gets built as well. However, this setup should only be used when you want to contribute to DTGLib development.
 
 ## Usage
 
@@ -88,8 +88,7 @@ The following classes/interfaces are the public API of the library:
  
 Please see their Javadoc comments.
 
-Following are some basic sequence diagrams. More will be added soon. 
-
+Following are some basic sequence diagrams.
 
 ### Start and Stop the Service
 
