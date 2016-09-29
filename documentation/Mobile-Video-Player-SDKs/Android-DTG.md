@@ -10,7 +10,7 @@ weight: 500
 
 > Note: this document is still a draft.
 
-Download to Go (DTG) is an Android library facilitating the download of ABR assets - in particular, DASH and HLS.
+Download to Go (DTG) is an Android library facilitating the download of video assets, with emphasis on DASH and HLS.
 
 The library is external to the Player SDK, and is added separately by the application.
 
@@ -27,19 +27,93 @@ The library is external to the Player SDK, and is added separately by the applic
     - Must be single-bitrate for proper playback
 - MP4
 
+## Project Setup
+
+The simplest way to get up and running is by using JitPack's Maven repository.
+
+1. Add JitPack's repository to the top-level build.gradle:
+
+```
+	allprojects {
+		repositories {
+			...
+			maven { url "https://jitpack.io" }
+		}
+	}
+```
+
+2. Add the dependency:
+
+```
+	dependencies {
+	    compile 'com.github.kaltura:playkit-dtg-android:v2.0.0'
+	}
+```
+
+Replace v2.0.0 with the latest release (see https://github.com/kaltura/playkit-dtg-android/releases).
+
+For more JitPack options and information, see https://jitpack.io/#kaltura/playkit-dtg-android. 
+
+
+As with any Open Source library, you can also [clone the repository from GitHub](https://github.com/kaltura/playkit-dtg-android/) and add it to your project:
+
+1. Add a reference to the project in settings.gradle:
+
+```
+    include ':dtglib'
+    project(':dtglib').projectDir = file('../../playkit-dtg-android/dtglib')
+```
+
+2. Add the local dependency in build.gradle:
+
+```
+    dependencies {
+        compile project(":dtglib");
+    }
+```
+
+
+
 ## Usage
 
 The following classes/interfaces are the public API of the library:
 
+```
     com.kaltura.dtg.
         - ContentManager
         - DownloadItem
         - DownloadState
         - DownloadStateListener
+```
  
 Please see their Javadoc comments.
 
 Following are some basic sequence diagrams. More will be added soon. 
+
+
+### Start and Stop the Service
+
+{% plantuml %}
+
+    @startuml
+    
+    participant "ContentManager class" as ContentManager
+    participant "app: Application" as app
+    participant "cm: ContentManager" as cm
+    
+    app->ContentManager: getInstance(context)
+    ContentManager->app: cm
+    app->cm: addDownloadStateListener(this)
+    app->cm: start()
+    
+    ...
+    
+    app->cm: stop()
+
+    @enduml
+
+{% endplantuml %}
+   
 
 ### New Download Sequence
 
