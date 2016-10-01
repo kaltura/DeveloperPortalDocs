@@ -40,17 +40,17 @@ if (isset($_GET['company'])){
 <div class="w-row form-row">
     <div class="w-col w-col-6">
 <label for="firstname" class="form-labels">First Name</label>
-    <input id="firstname" type="text" value="<?php echo $firstname;?>"  name="firstname" class="w-input input-light">
+    <input id="firstname" type="text" value="<?php echo $firstname;?>"  name="firstname" class="w-input input-light" data-name="First Name" required="required">
     </div>
     <div class="w-col w-col-6">
 <label for="lastname" class="form-labels">Last Name</label>
-    <input id="lastname" type="text" value="<?php echo $lastname;?>"  name="lastname" class="w-input input-light">
+    <input id="lastname" type="text" value="<?php echo $lastname;?>"  name="lastname" class="w-input input-light" data-name="Last Name" required="required">
     </div>
     </div>
 <div class="w-row form-row">
     <div class="w-col w-col-6">
 <label for="email" class="form-labels">Email</label>
-    <input id="email" type="text" value="<?php echo $email;?>"  name="email" class="w-input input-light">
+    <input id="email" type="text" value="<?php echo $email;?>"  name="email" class="w-input input-light" data-name="Email" required="required">
     </div>
     <div class="w-col w-col-6">
     <label for="title" class="form-labels">Job Title</label>
