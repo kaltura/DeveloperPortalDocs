@@ -37,10 +37,26 @@ if (isset($_GET['company'])){
 		
     <form id="register-form" name="register-form" data-name="Register Form" action="https://vpaas.kaltura.com:8443/post_completeregistration.php" method="post" onsubmit="return validate(event);">
  <legend class="form-labels"><b>About you</b></legend><hr>
-    <input id="email" type="hidden" value="<?php echo $email;?>"  name="email" >
-    <input id="firstname" type="hidden" value="<?php echo $firstname;?>"  name="firstname" >
-    <input id="lastname" type="hidden" value="<?php echo $lastname;?>"  name="lastname" >
-    <input id="company" type="hidden" value="<?php echo $company;?>"  name="company" >
+<div class="w-row form-row">
+    <div class="w-col w-col-6">
+<label for="firstname" class="form-labels">First Name</label>
+    <input id="firstname" type="text" value="<?php echo $firstname;?>"  name="firstname" class="w-input input-light">
+    </div>
+    <div class="w-col w-col-6">
+<label for="lastname" class="form-labels">Last Name</label>
+    <input id="lastname" type="text" value="<?php echo $lastname;?>"  name="lastname" class="w-input input-light">
+    </div>
+    </div>
+<div class="w-row form-row">
+    <div class="w-col w-col-6">
+<label for="email" class="form-labels">Email</label>
+    <input id="email" type="text" value="<?php echo $email;?>"  name="email" class="w-input input-light">
+    </div>
+    <div class="w-col w-col-6">
+<label for="company" class="form-labels">Company</label>
+    <input id="company" type="text" value="<?php echo $company;?>"  name="company" class="w-input input-light">
+    </div>
+    </div>
 <div class="w-row form-row">
     <div class="w-col w-col-6">
 <label for="country" class="form-labels">Country</label>
