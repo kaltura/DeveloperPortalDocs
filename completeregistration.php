@@ -53,8 +53,8 @@ if (isset($_GET['company'])){
     <input id="email" type="text" value="<?php echo $email;?>"  name="email" class="w-input input-light">
     </div>
     <div class="w-col w-col-6">
-<label for="company" class="form-labels">Company</label>
-    <input id="company" type="text" value="<?php echo $company;?>"  name="company" class="w-input input-light">
+    <label for="title" class="form-labels">Job Title</label>
+    <input id="jobtitle" type="text" name="jobtitle" class="w-input input-light">
     </div>
     </div>
 <div class="w-row form-row">
@@ -68,11 +68,6 @@ if (isset($_GET['company'])){
     <div class="w-col w-col-6">
     <label for="Phone" class="form-labels">Phone</label>
     <input id="phone" type="text" placeholder="" name="phone" required="required" data-name="Phone" class="w-input input-light">
-    </div>
-<div class="w-row form-row">
-    <div class="w-col w-col-6">
-    <label for="title" class="form-labels">Job Title</label>
-    <input id="jobtitle" type="text" name="jobtitle" class="w-input input-light">
     </div>
 
 
