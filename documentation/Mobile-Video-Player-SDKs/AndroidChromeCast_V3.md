@@ -130,10 +130,13 @@ mPlayer.changeMedia("Entry ID");
 #####OTT
 
 ```
+String URL = "Your thumbnail url";
 //if proxy data for CC has to be different than the player
 mPlayer.setKDPAttribute("chromecast","proxyData",getChromecatProxyDataJson(entryID));
 //for changing the thumbnail of the minicontroller for current media id 
-mPlayer.setKDPAttribute("chromecast","defaultThumbnail","URL");
+mPlayer.setKDPAttribute("chromecast","defaultThumbnail","'" + URL + "'");  
+//for updating mini controller png
+mPlayer.getConfig().addConfig("chromecast.defaultThumbnail", URL);
 mPlayer.changeMedia(proxyData JSON Object);
 ```
 
