@@ -16,8 +16,7 @@ The following DRM schemes are supported in Android devices:
 #### Widevine Modular  
 
 * Supported in Android 4.3 and up
-* Online playback only
-    * Offline playback will be supported in v2.6.0 of the Player SDK.
+* Online and offline playback
 
 #### Widevine Classic  
 
@@ -117,3 +116,4 @@ The following are the high level sequence diagrams. Please note that they are in
 
 {% endplantuml %}
 
+[More about offline playback](Offline).
