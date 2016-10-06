@@ -18,9 +18,9 @@ To use Kaltura's Scheduling API, the administrator should follow these steps bas
 2. Set the recording device as the resource.
 3. Provide an entry template that includes metadata on the entry resulting from the scheduled recording (this should include information on how to publish the entry, co-editors, description/title, etc.). 
 4. Configure the device to sync the internal calendar with the Kaltura calendar periodically using HTTP request or via FTP (in which case the events relating to that device will be parsed).
-4. The device will record at the pre-set time and store the recording locally.
-5. The device will upload the recording to Kaltura, setting the relevant parameters on the entry itself, including the entry template and any additional metadata.
-5. The user will be able to view the recording in their course as part of the Kaltura building block or in KMS.
+The device will record at the pre-set time and store the recording locally.
+The device will upload the recording to Kaltura, setting the relevant parameters on the entry itself, including the entry template and any additional metadata.
+The user will be able to view the recording in their course as part of the Kaltura building block or in KMS.
 
 ## Implementation  
 
@@ -138,6 +138,16 @@ Kaltura's CSV format supports mixed orders, and not all fields are required; the
 For example:
 *action,name,type,systemName,description,tags,parentType,parentSystemName
 1,my resource name,camera,my-camera1,my example camera,"tag1,tag2",location,my-parent1
+
+To modify the resources list use the following actions:
+
+* 1- add(default)
+* 2- update
+* 3- delete
+* 6- add or update
+* Default = add
+
+Be certain to modify the action column accordingly to modify the resources list.
 
 These are the defaults if a field is missing:
 
