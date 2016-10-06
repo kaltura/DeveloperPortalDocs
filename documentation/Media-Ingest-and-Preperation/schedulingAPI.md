@@ -61,7 +61,7 @@ The schedule can be defined using KMS and APIs, or by using an iCal drop-folder.
 
 When uploading a scheduled event recording to Kaltura, certain information from the event itself should be used:
 
-* The partner ID must be used to create a KS for upload. 
+* The partner ID must be used to create a Kaltura Session (KS) for upload. 
 * The event must include the X-KALTURA-TEMPLATE-ENTRY-ID parameter, which must be set during entry creation (see iCal parameters above). 
 
 Use one of the following options:
@@ -109,7 +109,7 @@ To use FTP, you will need to use KC user credentials. A user with limited permis
 
 ### HTTP/S  
 
-You may download files via [HTTP/S](http://www.kaltura.com/api_v3/service/schedule_scheduleevent/action/list/format/ical/filter:objectType/KalturaScheduleEventFilter/). The maximum number of returned results is X. Partners will need to use a Kaltura Session (KS) in order to request a list of events. 
+You may download files via [HTTP/S](http://www.kaltura.com/api_v3/service/schedule_scheduleevent/action/list/format/ical/filter:objectType/KalturaScheduleEventFilter/). The maximum number of returned results is X. Partners will need to use a KS to request a list of events. 
 
 The results can be filtered on any of the parameters. For example: 
 * http://www.kaltura.com/api_v3/service/schedule_scheduleevent/action/list/format/ical/filter:objectType/KalturaScheduleEventFilter/filter:resourceIdsLike/RESOURCE-ID
