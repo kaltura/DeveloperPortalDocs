@@ -135,6 +135,7 @@ For example, the request http://www.kaltura.com/service/schedule_scheduleevent/a
 ## Configuring Resources on Kaltura  
 
 Kaltura's CSV format supports mixed orders, and not all fields are required; the fields are defined by the user using an asterisk at the beginning of the line.
+
 For example:
 *action,name,type,systemName,description,tags,parentType,parentSystemName
 1,my resource name,camera,my-camera1,my example camera,"tag1,tag2",location,my-parent1
@@ -147,7 +148,9 @@ To modify the resources list use the following actions:
 * 6- add or update
 * Default = add
 
-Be certain to modify the action column accordingly to modify the resources list.
+Be certain to modify the action column accordingly.
+
+The APIs can be found under the [Integration, Scheduling and Hooks](https://developer.kaltura.com/api-docs/#/Integration,%20Scheduling%20and%20Hooks) section in the developer.kaltura.com site.
 
 These are the defaults if a field is missing:
 
