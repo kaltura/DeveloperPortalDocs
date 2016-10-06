@@ -199,7 +199,12 @@ The Player provides an API for enabling and disabling these settings, the setKDP
 
 if (state.equals(KPlayerState.PLAYING)){
    Log.d(TAG, "Playing state");
-   mPlayer.setKDPAttribute("closedCaptions","displayCaptions",true);
+   mPlayer.setKDPAttribute("closedCaptions","displayCaptions", "'" + "true" + "'");
+  }
+  
+  if (state.equals(KPlayerState.PLAYING)){
+   Log.d(TAG, "Playing state");
+   mPlayer.setStringKDPAttribute("closedCaptions","displayCaptions","true");
   }
 
 
