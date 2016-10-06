@@ -1,7 +1,7 @@
-temp
 ---
-layout: pageonly
+layout: page
 title: Kaltura's Scheduling API Service
+weight: 303
 ---
 
 Kaltura's Scheduling service enables partner devices to schedule events for each device, and to use information from those events to ingest recorded content back to Kaltura with additional metadata. This provides the option of managing automated recording schedules for organizations such as educational institutions.
