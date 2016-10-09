@@ -6,7 +6,7 @@ weight: 303
 
 Kaltura's Scheduling service enables partner devices to schedule events for each device, and to use information from those events to ingest recorded content back to Kaltura with additional metadata. This provides the option of managing automated recording schedules for organizations such as educational institutions.
 
-The automated recording schedule is managed through Kaltura's solution and through the recording itself (via partners). The interface used between Kaltura and the partner devices is iCal. This service provides backend support for calendar definition, including importing and exporting using the iCal standard. 
+The automated recording schedule is managed through Kaltura's solution and through the recording itself (via partners). The interface used between Kaltura and the partner devices is the Kaltura API which is exposed in iCal format for scheduled events. This service provides backend support for calendar definition, including importing and exporting using the iCal standard. Importing into the Kaltura server is done either though bulk-upload or drop-folders. 
 
 Note that currently this solution is implemented for VOD only.
 
@@ -16,8 +16,7 @@ To use Kaltura's Scheduling API, the administrator should follow these steps bas
 
 1. Configure an event for a future date.
 2. Set the recording device as the resource.
-3. Provide an entry template that includes metadata on the entry resulting from the scheduled recording (this should include information on how to publish the entry, co-editors, description/title, etc.). 
-4. Configure the device to sync the internal calendar with the Kaltura calendar periodically using HTTP request or via FTP (in which case the events relating to that device will be parsed).
+3. Configure the device to sync the internal calendar with the Kaltura calendar periodically using a HTTP/HTTPS request or via FTP (in which case the events relating to that device will be parsed). FTP supports the same formats as the HTTP, JSON, XML and iCal.
 The device will record at the pre-set time and store the recording locally.
 The device will upload the recording to Kaltura, setting the relevant parameters on the entry itself, including the entry template and any additional metadata.
 The user will be able to view the recording in their course as part of the Kaltura building block or in KMS.
@@ -28,14 +27,14 @@ Scheduling is implemented as a server plugin that defines new object types for s
 
 ### Pull Request  
 
-The pull request can be implemented via HTTP or FTP:
+The pull request can be implemented via HTTP/HTTPS or FTP:
 
-* **HTTP**: The schedule can be pulled using the API through XML, JSON or iCal.
+* **HTTP(S)**: The schedule can be pulled using the API through XML, JSON or iCal.
 * **FTP**: The schedule can be pulled using an abstract FTP server that will log in using the Kaltura API user and will display events as files.
 
 ### Push Request  
 
-The schedule can be pushed via XML, JSON and iCal using Local, FTP, SFTP and S3.
+The schedule can be pushed via the Kaltura API or as iCal using Kaltura drop-folders that may be accessed using FTP, SFTP or Aspera. If the drop-folder is located on the partner data-center, the Kaltura server can pull the files using FTP, SFTP and S3, iCal format may also be ingested directly using the Kaltura bulk-upload APIs.
 
 ### Ingest  
 
@@ -61,12 +60,11 @@ The schedule can be defined using KMS and APIs, or by using an iCal drop-folder.
 
 When uploading a scheduled event recording to Kaltura, certain information from the event itself should be used:
 
-* The partner ID must be used to create a Kaltura Session (KS) for upload. 
-* The event must include the X-KALTURA-TEMPLATE-ENTRY-ID parameter, which must be set during entry creation (see iCal parameters above). 
+* The partner ID must be used to create a Kaltura Session (KS) for upload.  
 
 Use one of the following options:
 
-* **Via XML/CSV:** The templateEntryId can be set via [XML bulk](http://www.kaltura.com/api_v3/xsdDoc/index.php?type=bulkUploadXml.bulkUploadXML)
+* **Via XML/CSV:** The templateEntryId can be set via [XML bulk](http://www.kaltura.com/api_v3/xsdDoc/index.php?type=bulkUploadXml.bulkUploadXML). The templateEntryId is also supported in CSV.
 * **Via API:** The templateEntryId can be set via [API](http://www.kaltura.com/api_v3/testmeDoc/?object=KalturaBaseEntry).
 
 ### Publishing Permissions  
@@ -96,7 +94,7 @@ Follow these steps to use the device upload APIs:
 
 ## iCal Sync from Kaltura  
 
-iCal export is supported via HTTPS or FTP. 
+iCal export is supported via HTTP/HTTPS or FTP. 
 
 ### FTP  
 
@@ -105,7 +103,7 @@ FTP can be used to retrieve [a list of events](ftp://api.kaltura.com/format/ical
 The results can be filtered on any of the parameters. For example: 
 ftp://api.kaltura.com/format/ical/schedule_scheduleevent/filter:objectType/KalturaScheduleEventFilter/filter:resourceIdsLike/RESOURCE-ID. 
 
-To use FTP, you will need to use KC user credentials. A user with limited permissions should be created for this purpose only. The username should be structured as <partner ID>/<user ID>.
+To use FTP, you will need to use KMC user credentials. A user with limited permissions should be created for this purpose only. The username should be structured as [partner ID]/[user ID].
 
 ### HTTP/S  
 
