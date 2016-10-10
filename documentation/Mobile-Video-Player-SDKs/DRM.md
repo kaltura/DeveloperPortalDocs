@@ -16,8 +16,7 @@ The following DRM schemes are supported in Android devices:
 #### Widevine Modular  
 
 * Supported in Android 4.3 and up
-* Online playback only
-    * Offline playback will be supported in v2.6.0 of the Player SDK.
+* Online and offline playback
 
 #### Widevine Classic  
 
@@ -25,12 +24,9 @@ The following DRM schemes are supported in Android devices:
     * Google no longer requires Widevine Classic support in Android 6.0 devices, but some devices still support it.
 * Online and offline playback
 
-#### Device Info:
+#### Device Info
 
-In case you have problems with playing DRM content on specific devices
-you may install the Kaltura Device Info App in order to verify that your device has WV Modular/Classic DRM capabilities.
-
-[Kaltura Device Info App](https://play.google.com/store/apps/details?id=com.kaltura.kalturadeviceinfo) 
+[Kaltura Device Info App](https://play.google.com/store/apps/details?id=com.kaltura.kalturadeviceinfo) can help diagnosing DRM and Media-related problems.
 
 ### DRM Support in iOS Devices
 
@@ -61,16 +57,11 @@ The following DRM schemes are supported in iOS devices:
 
 ## DRM Server  
 
-The Player-SDK must communicate with a license server in order to get the license, for both online
-and offline playback. The API between the SDK and the server is a simple http POST, where all required
-identify/authorization parameters are provided in the query string.
+The Player-SDK must communicate with a license server in order to get the license, for both online and offline playback. The API between the SDK and the server is a simple http POST, where all required identify/authorization parameters are provided in the query string.
 
-The license URL is provided to the DRM client by `PlayerViewController`/`KPViewController` in online
-mode (when playback is started), or by `LocalAssetManager`/`KPLocalAssetsManager` in offline mode (during
-asset registration/refresh).
+The license URL is provided to the DRM client by `PlayerViewController`/`KPViewController` in online mode (when playback is started), or by `LocalAssetManager`/`KPLocalAssetsManager` in offline mode (during asset registration/refresh).
 
-The following are the high level sequence diagrams. Please note that they are internal to the Player-SDK, and are
-provided here for informational purposes only.
+The following are the high level sequence diagrams. Please note that they are internal to the Player-SDK, and are provided here for informational purposes only.
 
 ### Online  
 
@@ -125,3 +116,4 @@ provided here for informational purposes only.
 
 {% endplantuml %}
 
+[More about offline playback](Offline).
