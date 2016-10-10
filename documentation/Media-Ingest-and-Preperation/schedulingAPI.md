@@ -129,8 +129,9 @@ To use FTP, you will need to use KMC user credentials. A user with limited permi
 You may download files via HTTP/S. The maximum number of returned results is X. Partners will need to use a KS to request a list of events. 
 
 The results can be filtered on any of the parameters. For example: 
-* http://www.kaltura.com/api_v3/service/schedule_scheduleevent/action/list/format/ical/filter:objectType/KalturaScheduleEventFilter/filter:resourceIdsLike/RESOURCE-ID
-* http://www.kaltura.com/api_v3/service/schedule_scheduleevent/action/list/format/ical/filter:objectType/KalturaScheduleEventBaseFilter/filter:startDateGreaterThanOrEqual/0
+http://www.kaltura.com/api_v3/service/schedule_scheduleevent/action/list/format/ical/filter:objectType/KalturaScheduleEventFilter/filter:resourceIdsLike/RESOURCE-ID
+
+http://www.kaltura.com/api_v3/service/schedule_scheduleevent/action/list/format/ical/filter:objectType/KalturaScheduleEventBaseFilter/filter:startDateGreaterThanOrEqual/0
  
 ## Configuring Resources on Kaltura  
 
