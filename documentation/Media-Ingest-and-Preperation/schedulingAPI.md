@@ -12,18 +12,21 @@ Note that currently this solution is implemented for VOD only.
 
 ## Quick Start  
 
-To use Kaltura's Scheduling API, the administrator should follow these steps basic scheduling steps:
+To use Kaltura's Scheduling API, the administrator should follow these basic scheduling steps:
 
 1. Configure an event for a future date.
-2. Set the recording device as the resource.
-3. Configure the device to sync the internal calendar with the Kaltura calendar periodically using a HTTP/HTTPS request or via FTP (in which case the events relating to that device will be parsed). FTP supports the same formats as the HTTP, JSON, XML and iCal.
+2. Set the recording device as the resource for the event.
+3. Define an entry template for the event that includes metadata on the entry resulting from the scheduled event (this should include information on how to publish the entry, co-editors, description/title, etc.).
+4. Configure the device to sync the internal calendar with the Kaltura calendar periodically using a HTTP/HTTPS request or via FTP (in which case the events relating to that device will be parsed). FTP supports the same formats as the HTTP, JSON, XML and iCal.
 The device will record at the pre-set time and store the recording locally.
-The device will upload the recording to Kaltura, setting the relevant parameters on the entry itself, including the entry template and any additional metadata.
-The user will be able to view the recording in their course as part of the Kaltura building block or in KMS.
+The device will upload the recording to Kaltura, setting the relevant parameters on the entry itself, including the entry template and any additional metadata. Configuration of the device depends on manufacturer documentation and settings.
+The user will be able to view the created recording in the KMC. 
+
+The Scheduling Module in KMS or KAF can be used to view and create events. If the recording was published to a course or category, it will appear there for all users with permissions to access it. 
 
 ## Implementation  
 
-Scheduling is implemented as a server plugin that defines new object types for schedule-events and schedule-resources.
+Scheduling is implemented as a service that defines new object types for schedule-events and schedule-resources.
 
 ### Pull Request  
 
@@ -96,6 +99,22 @@ Follow these steps to use the device upload APIs:
 
 iCal export is supported via HTTP/HTTPS or FTP. 
 
+### Filtering and Pagination of Results  
+
+All Kaltura list actions, including [scheduleEvent.list](https://developer.kaltura.com/api-docs/#/scheduleEvent.list), accept the [KalturaFilterPager](https://developer.kaltura.com/api-docs/#/KalturaFilterPager). For example:
+http://www.kaltura.com/api_v3/service/schedule_scheduleevent/action/list/format/ical/filter:objectType/KalturaScheduleEventFilter/filter:resourceIdsLike/33/pager:pageSize/30/pager:pageIndex/2
+ftp://api.kaltura.com/format/ical/schedule_scheduleevent/filter:objectType/KalturaScheduleEventFilter/filter:resourceIdsLike/33/pager:pageSize/30/pager:pageIndex/2.
+ 
+For a list of filters see: http://www.kaltura.com/api_v3/testmeDoc/index.php?object=KalturaScheduleEventFilter. 
+Note that more than one filter can be applied to each request. 
+Time attributes support both absolute and relative times. The time is measured in seconds since 1970, also known as a UNIX timestamp; however, if you specify a time that is smaller than 1980 (in seconds since 1970), e.g., 0, 60, or -60, Kaltura will calculate the past value as a relative time, for example:
+0 = now.
+60 = now + 60 seconds – which is 60 seconds from now.
+-60 = now - 60 seconds – which is 60 seconds ago.
+
+For example, the request  http://www.kaltura.com/service/schedule_scheduleevent/action/list/format/ical/filter:objectType/KalturaScheduleEventBaseFilter/filter:startDateGreaterThanOrEqual/0
+ will return events that start now or in the future. 
+
 ### FTP  
 
 FTP can be used to retrieve [a list of events](ftp://api.kaltura.com/format/ical/schedule_scheduleevent/filter:objectType/KalturaScheduleEventFilter/). The maxiumum number of returned results is 10,000 (500 max per page, 20 pages max). Partners can use the FTP list to identify which files have changed or are new, and then sync only the delta. 
@@ -107,32 +126,16 @@ To use FTP, you will need to use KMC user credentials. A user with limited permi
 
 ### HTTP/S  
 
-You may download files via [HTTP/S](http://www.kaltura.com/api_v3/service/schedule_scheduleevent/action/list/format/ical/filter:objectType/KalturaScheduleEventFilter/). The maximum number of returned results is X. Partners will need to use a KS to request a list of events. 
+You may download files via HTTP/S. The maximum number of returned results is X. Partners will need to use a KS to request a list of events. 
 
 The results can be filtered on any of the parameters. For example: 
 * http://www.kaltura.com/api_v3/service/schedule_scheduleevent/action/list/format/ical/filter:objectType/KalturaScheduleEventFilter/filter:resourceIdsLike/RESOURCE-ID
 * http://www.kaltura.com/api_v3/service/schedule_scheduleevent/action/list/format/ical/filter:objectType/KalturaScheduleEventBaseFilter/filter:startDateGreaterThanOrEqual/0
-
-### Filtering and Pagination of Results  
-
-All Kaltura list actions, including scheduleEvent.list, accept the KalturaFilterPager. For example:
-http://www.kaltura.com/api_v3/service/schedule_scheduleevent/action/list/format/ical/filter:objectType/KalturaScheduleEventFilter/filter:resourceIdsLike/33/pager:pageSize/30/pager:pageIndex/2
-ftp://api.kaltura.com/format/ical/schedule_scheduleevent/filter:objectType/KalturaScheduleEventFilter/filter:resourceIdsLike/33/pager:pageSize/30/pager:pageIndex/2.
- 
-For a list of filters see: http://www.kaltura.com/api_v3/testmeDoc/index.php?object=KalturaScheduleEventFilter. 
-Note that more than one filter can be applied to each request. 
-
-In the Kaltura API, time attributes support both absolute and relative times. The time is measured in seconds since 1970, also known as a UNIX timestamp; however, if you specify a time that is smaller than 1980 (in seconds since 1970), e.g., 0, 60, or -60, Kaltura will calculate the past value as a relative time, for example:
-0 = now.
-60 = now + 60 seconds – which is 60 seconds from now.
--60 = now - 60 seconds – which is 60 seconds ago.
-
-For example, the request http://www.kaltura.com/service/schedule_scheduleevent/action/list/format/ical/filter:objectType/KalturaScheduleEventBaseFilter/filter:startDateGreaterThanOrEqual/0
- will return events that start now or in the future. 
  
 ## Configuring Resources on Kaltura  
 
-Kaltura's CSV format supports mixed orders, and not all fields are required; the fields are defined by the user using an asterisk at the beginning of the line.
+Capture devices can be mapped to resource objects in Kaltura. This is similar to booking a conference room using a calendar application. Multiple resources can be defined for an event. Resources can be added using the API (e.g. automatic creation of a matching resource by the device itself) or bulk uploaded in advance using .csv format. 
+Kaltura's .csv format supports mixed orders, and not all fields are required; the fields are defined by the user using an asterisk at the beginning of the line.
 
 For example:
 *action,name,type,systemName,description,tags,parentType,parentSystemName
@@ -144,7 +147,6 @@ To modify the resources list use the following actions:
 * 2- update
 * 3- delete
 * 6- add or update
-* Default = add
 
 Be certain to modify the action column accordingly.
 
@@ -163,9 +165,9 @@ These are the defaults if a field is missing:
 | parentType  |  Location |  
 | parentSystemName  |  Null |  
 
-Note that resources can have a hierarchy (e.g., a room with cameras), which is defined using the the parent type and name. For an example of the API call to create a resource, in this case of type camera, click [here](http://www.kaltura.com/api_v3/service/schedule_scheduleresource/action/add?scheduleResource:objectType=KalturaCameraScheduleResource&scheduleResource:name=Camera 5&scheduleResource:streamUrl=rtmp://xxx&ks=djJ8MTc5NDk2MXy6mzPyYqfHU8nF5UqEiFF-2iLuI_OSVFO0Ad-KqArJ-w70X9ZLVRpO8FvF4K_l5f7Gga1S9fTcXuxM_fETaXtWAj_-63w1rfyNVrrDuNx7xog3aoe3TpbtkKeO2NhSP5sR8xaWdhA4qV84IQjUicDj).
+Note that resources can have a hierarchy (e.g., a room with cameras), which is defined using the parent type and name. For an example of the API call to create a resource, in this case of type camera, click here.
 
 ## Other Considerations  
 
 * Conflicting events: At present, Kaltura does not prevent conflicting events. The user will need to ensure that there is no resource conflict when scheduling the event. Devices should be able to handle resource conflicts and ensure operations in this case. 
-* Recurring events: When using HTTP/S or FTP, both the series and the breakdown of each occurrence will be provided. Devices can filter based on [event type](http://www.kaltura.com/api_v3/testmeDoc/index.php?object=KalturaScheduleEventRecurrenceType) to receive only the series and single events, or to receive single events and breakdown of series. The choice between the options depends on the capability of the device. 
+* Recurring events: When using HTTP/S or FTP, both the series and the breakdown of each occurrence will be provided. Devices can filter based on [event type](https://www.kaltura.com/api_v3/testmeDoc/objects/KalturaScheduleEventRecurrence.html) to receive only the series and single events, or to receive single events and breakdown of series. The choice between the options depends on the capability of the device. 
