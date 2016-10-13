@@ -26,7 +26,7 @@ The Scheduling Module in KMS or KAF can be used to view and create events. If th
 
 ## Implementation  
 
-Scheduling is implemented as a service that defines new object types for schedule-events and schedule-resources.
+Scheduling is implemented as a plugin that defines new object types for schedule-events and schedule-resources.
 
 ### Pull Request  
 
@@ -68,7 +68,7 @@ When uploading a scheduled event recording to Kaltura, certain information from 
 Use one of the following options:
 
 * **Via XML/CSV:** The templateEntryId can be set via [XML bulk](http://www.kaltura.com/api_v3/xsdDoc/index.php?type=bulkUploadXml.bulkUploadXML). The templateEntryId is also supported in CSV.
-* **Via API:** The templateEntryId can be set via [API](http://www.kaltura.com/api_v3/testmeDoc/?object=KalturaBaseEntry).
+* **Via API:** The templateEntryId can be set via [API](https://developer.kaltura.com/api-docs/#/KalturaBaseEntry).
 
 ### Publishing Permissions  
 
@@ -105,7 +105,7 @@ All Kaltura list actions, including [scheduleEvent.list](https://developer.kaltu
 http://www.kaltura.com/api_v3/service/schedule_scheduleevent/action/list/format/ical/filter:objectType/KalturaScheduleEventFilter/filter:resourceIdsLike/33/pager:pageSize/30/pager:pageIndex/2
 ftp://api.kaltura.com/format/ical/schedule_scheduleevent/filter:objectType/KalturaScheduleEventFilter/filter:resourceIdsLike/33/pager:pageSize/30/pager:pageIndex/2.
  
-For a list of filters see: http://www.kaltura.com/api_v3/testmeDoc/index.php?object=KalturaScheduleEventFilter. 
+For a list of filters see: [KalturaScheduleEventFilter](https://developer.kaltura.com/api-docs/#/KalturaScheduleEventFilter). 
 Note that more than one filter can be applied to each request. 
 Time attributes support both absolute and relative times. The time is measured in seconds since 1970, also known as a UNIX timestamp; however, if you specify a time that is smaller than 1980 (in seconds since 1970), e.g., 0, 60, or -60, Kaltura will calculate the past value as a relative time, for example:
 0 = now.
@@ -126,7 +126,7 @@ To use FTP, you will need to use KMC user credentials. A user with limited permi
 
 ### HTTP/S  
 
-You may download files via HTTP/S. The maximum number of returned results is X. Partners will need to use a KS to request a list of events. 
+You may download files via HTTP/S. The maximum number of returned results is 500 per page and 10,000 total. To filter the next 10,000 you will need to add a filter, for example: [createdAtGreaterThanOrEqual](https://developer.kaltura.com/api-docs/#/KalturaAccessControlBaseFilter). Partners will need to use a KS to request a list of events. 
 
 The results can be filtered on any of the parameters. For example: 
 http://www.kaltura.com/api_v3/service/schedule_scheduleevent/action/list/format/ical/filter:objectType/KalturaScheduleEventFilter/filter:resourceIdsLike/RESOURCE-ID
