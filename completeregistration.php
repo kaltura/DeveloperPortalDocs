@@ -77,11 +77,11 @@ if (isset($_GET['company'])){
 <div class="w-row form-row">
     <div class="w-col w-col-6">
     <label for="what-are-you-building" class="form-labels">Please tell us about your project in as many details as possible</label>
-    <textarea id="what-are-you-building" name="what-are-you-building" data-name="" class="w-input input-light"></textarea>
+    <textarea id="what-are-you-building" name="what-are-you-building" data-name="" class="w-input input-light" required="required"></textarea>
     </div>
     <div class="w-col w-col-6">
     <label for="specific-features" class="form-labels">Any specific features you are interested in?</label>
-    <textarea id="specific-features" name="specific-features" class="w-input input-light"></textarea>
+    <textarea id="specific-features" name="specific-features" class="w-input input-light" required="required"></textarea>
     </div>
 </div>
 
