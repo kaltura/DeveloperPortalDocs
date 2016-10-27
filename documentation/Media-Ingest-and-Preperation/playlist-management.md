@@ -5,10 +5,10 @@ weight: 204
 ---
 
 Playlists are a useful tool in a variety of different scenarios:
-* To string a number of entries together, to play back one entry after another
+* To string a number of entries together or to play back one entry after another
 * To power sections of the application UI, with content lists that are made easy to order or even created automatically.
 
-Kaltura supports two differnet types of playlists:
+Kaltura supports two different types of playlists:
 * Manual Playlists: Content is added manually and sorted
 * Rule-Based/Conditional Playlists: Content is added based on a set of filters and sorted based on selected criteria
 
