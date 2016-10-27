@@ -103,8 +103,8 @@ expiry	No
 Returns	A privileged Kaltura Session that can be used to make other API calls.
 
 
+## Security Considerations  
 
-Security Considerations
-The Application Token and all of its attributes must be securely stored on your backend. It must never be coded into an end-user application.
-The Application Token must never be sent to the Kaltura API. Instead, send the authorization bundle, which includes the Application Token hashed with a salt.
-If the Application Token is compromised, notify your technical account representative right away. The Application Token can be deactivated, which will also deactivate any KS tokens it was used to generate.
+* The Application Token and all of its attributes must be securely stored on your backend. It must never be coded into an end-user application.
+* The Application Token must never be sent to the Kaltura API. Instead, send the authorization bundle, which includes the Application Token hashed with a salt.
+* If the Application Token is compromised, notify your technical account representative right away. The Application Token can be deactivated, which will also deactivate any KS tokens it was used to generate.
