@@ -20,9 +20,10 @@ Your technical account representative will provide you with an Application Token
 
 Customers who wish to implement the Application Token will need to have their Kaltura technical account representative set up a user in the Backend with Operator (or higher) roles. You will not be able to proceed until you have a user with these roles.
 
-## Setting Application Token for Applications  
+## Setting Application Tokens for Applications  
 
 To set the Application Token for applications requires both technical account representative and customer functions, which are detailed in the next sections.
+
 ### Technical Account Representative Steps  
 
 1.	Using the Kaltura API for creating users (api_v3/service/ottuser/action/register), create a user that represents the application.
