@@ -1,5 +1,9 @@
 test
-
+---
+layout: page
+title: Generating Kaltura Sessions with Application Tokens
+weight: 303
+---
 
 ## Overview  
 
