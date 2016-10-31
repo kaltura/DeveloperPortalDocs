@@ -7,7 +7,7 @@ weight: 303
 
 ## Overview  
 
-The Application Token is used to enable applications to acquire a valid Kaltura Session (KS). The valide KS must be passed with each call to Kaltura's API. The session context embedded into a KS identifies your application, content access permissions, and API access permissions (it also contains other internal session data). This information is securely encrypted and hashed, preventing unauthorized manipulation of the session context.
+The Application Token is used to enable applications to acquire a valid Kaltura Session (KS). The valid KS must be passed with each call to Kaltura's API. The session context embedded into a KS identifies your application, content access permissions, and API access permissions (it also contains other internal session data). This information is securely encrypted and hashed, preventing unauthorized manipulation of the session context.
 
 Your application will use permanent Application Tokens to generate temporary KS tokens. The Application Token is never sent between your server and the API, minimizing the risk of security breaches. In addition, you may generate a KS with fewer privileges than the Application Secret used to generate it, limiting its use to potential attackers.
 
