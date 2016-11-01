@@ -28,9 +28,7 @@ subcat: Analytics API - Limited Alpha
 |Time |Hour	|hour|	Date (rounded to the beginning of hour) of playback, for example: 30/03/2013 16:00:00|
 |Time |Minute	|minute	|Date (rounded to the beginning of minute) of playback, for example: 30/03/2013 16:43:00|
 |Time |10 Seconds	|tenSeconds	|Date (rounded to the beginning of 10 seconds) of playback, for example: 30/03/2013 16:43:40|
-|QoS|Streaming Protocol	|streamingProtocol	|The media streaming protocol that was used|
-|QoS|Preferred Bitrate |	preferredBitrate |The bitrate of the preferred flavour that was set using the flash var.|
-|QoS|UIConfID	|uiConfID	|Which player id and configuration the video was played on.|
+
 
 ### Custom Dimensions 
 
