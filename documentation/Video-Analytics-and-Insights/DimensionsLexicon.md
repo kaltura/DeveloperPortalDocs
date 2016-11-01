@@ -20,14 +20,14 @@ subcat: Analytics API - Limited Alpha
 |Geo | Country  |	country	 |Which country the video was played from. Available values: TBD  |
 |Geo | City	| city|	Which city the video was played from.|
 |Syndication & Attribution|Syndication Domain	|syndicationDomain|	The domain of the video publisher/syndicator|
-|Syndication & Attribution|Syndication URL|	syndicationURL|	The canonical URL of the video publisher/syndicator. Canonical URL means lowercased, stripped querystring URL.|
+|Syndication & Attribution|Syndication URL|	referrer|	The canonical URL of the video publisher/syndicator. Canonical URL means lowercased, stripped querystring URL.|
 |Syndication & Attribution|Application|	application|The name of the application on which the playback was delivered|
 |Syndication & Attribution|Category	|category	|The categories which were assigned to the entry during playback|
 |Syndication & Attribution|Playback Context	|playbackContext|	A specific category that was provided (using the embed code) to player during playback|
 |Time |Day|	day	|Date (rounded to the beginning of day) of playback, for example: 30/03/2013 00:00:00|
 |Time |Hour	|hour|	Date (rounded to the beginning of hour) of playback, for example: 30/03/2013 16:00:00|
 |Time |Minute	|minute	|Date (rounded to the beginning of minute) of playback, for example: 30/03/2013 16:43:00|
-|Time |10 Seconds	|10sec	|Date (rounded to the beginning of 10 seconds) of playback, for example: 30/03/2013 16:43:40|
+|Time |10 Seconds	|tenSeconds	|Date (rounded to the beginning of 10 seconds) of playback, for example: 30/03/2013 16:43:40|
 |QoS|Streaming Protocol	|streamingProtocol	|The media streaming protocol that was used|
 |QoS|Preferred Bitrate |	preferredBitrate |The bitrate of the preferred flavour that was set using the flash var.|
 |QoS|UIConfID	|uiConfID	|Which player id and configuration the video was played on.|
