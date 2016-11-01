@@ -62,7 +62,7 @@ To learn more about supported metrics, we recommend reading the [Metrics Diction
 
 ## Aggregations  
 
-Metrics are stored and presented in an aggregated form. Aggregations are a way to store the huge amount of data in a summarized, pre-computed format that allows fast rendering of reports. The aggregations are designed with your business objectives in mind and anticipate questions you might ask. For example, Kaltura anticipates that you might ask the question “what are the most popular viewing devices in various states?”, so we created an aggregation of the Device dimension and the Geography dimension for the "playRequested" metric.
+Metrics are stored and presented in an aggregated form. Aggregations are a way to store the huge amount of data in a summarized, pre-computed format that allows fast rendering of reports. The aggregations are designed with your business objectives in mind and anticipate questions you might ask. For example, Kaltura anticipates that you might ask the question “what are the most popular viewing browsers (or operating systems) in various states?”, so we created an aggregation of the Browser dimension and the Geography dimension for the "playRequested" metric.
 
 
 ## About Insight Reports  
