@@ -3,7 +3,7 @@ test
 layout: page
 title: Authorizing with an Application Token
 subcat: AppToken Steps
-weight: 150
+weight: 151
 ---
 
 This article details how to build a KS token from an Application Token. The relevant API call details are provided in Tables 1 and 2 below.
