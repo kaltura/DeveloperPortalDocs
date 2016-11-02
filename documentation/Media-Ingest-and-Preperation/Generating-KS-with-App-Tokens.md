@@ -15,9 +15,10 @@ The Application Token will need to be created by an administrator (or Kaltura pr
 
 It is preconfigured with a maximum session length, a set of content entitlements (Channel access permissions), and API access privileges. The temporary session tokens that the Application Token is used for generating will inherit these preconfigured properties. You will also be told which hash function to use when working with the Application Token (the default is SHA1, but MD5, SHA-256, and others are also available).
 
-Once the Application Token user has been created, your developer can then build a KS token from an Application Token. See the next articles for details.
+Once the Application Token user has been created, your developer can then build a KS token from an Application Token. See the next articles for details:
 
-<add links to both articles here when they are ready>
+* [Creating an Application Token User](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/Media-Ingest-and-Preperation/Account-Representative-Steps.md)
+* [Authorizing with an Application Token](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/Media-Ingest-and-Preperation/Authorizing-With-Application-Token.md)
 
 ## Security Considerations  
 
