@@ -1,12 +1,12 @@
 test
 ---
 layout: page
-title: Generating Kaltura Sessions with Application Tokens
-weight: 100
+title: Creating an Application Token User
+subcat: AppToken Steps
+weight: 150
 ---
 
-Customers who wish to implement the Application Token will need to have their administrator (or Kaltura professional services provider) createin the Backend with Operator (or higher) roles. You will not be able to proceed until you have a user with these roles.
-The following steps detail the process of creating a user that represents the application. This can be done by an administrator or by Kaltura's professional services.
+Customers who wish to implement the Application Token will need to have their administrator (or Kaltura professional services provider) create a user with Operator (or higher) roles in the Backend.
 
 1.	Using the Kaltura API for creating users (api_v3/service/ottuser/action/register), create a user that represents the application.
 2.	Next, associate the user with a role that has the required application permissions (or create a new role if none exists) using the addRole API: api_v3/service/ottuser/action/addRole.
