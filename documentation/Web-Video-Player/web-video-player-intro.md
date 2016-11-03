@@ -5,7 +5,7 @@ temp
 
 ## Introduction  
 
-The Kaltura Player Toolkit enables users to lead video delivery with HTML5 and provide the fastest viewing experience on any device, while maintaining all the same features and a consistent CSS/HTML player design. Kaltura Players v2 enable delivery of HTML5 with Chromeless components for Flash, iOS and Android.
+The Kaltura Player Toolkit enables users to lead video delivery with HTML5 and provide the fastest viewing experience on any device, while maintaining all the same features and a consistent CSS/HTML player design. The Kaltura Player enables delivery of HTML5 with Chromeless components for Flash, iOS and Android.
 
 The key advantages of the Kaltura Player are:
 
@@ -45,9 +45,9 @@ The key advantages of the Kaltura Player are:
    * Uses HTML for controls: offers more integrated accessible features than Flash players
    * iOS, Android, HTML, Flash all in One
 
-Maximize ROI on your distribution strategy across native apps and web views. 
-Architecture for reusable plugins and configuration across platforms
-Seamlessly integrate advanced live broadcasts streaming and DRM 
+* Maximize ROI on your distribution strategy across native apps and web views. 
+* Architecture for reusable plugins and configuration across platforms
+* Seamlessly integrate advanced live broadcasts streaming and DRM 
 
 
 Use these as good examples:
