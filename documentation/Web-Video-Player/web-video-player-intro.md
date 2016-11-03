@@ -4,6 +4,61 @@ temp
 
 1.	Add page: Introduction – get from here:
 https://knowledge.kaltura.com/kaltura-player-toolkit - without the images – embed the player directly.
+
+The Kaltura Player Toolkit enables users to lead video delivery with HTML5 and provide the fastest viewing experience on any device, while maintaining all the same features and a consistent CSS/HTML player design. Kaltura Players v2 enable delivery of HTML5 with Chromeless components for Flash, iOS and Android.
+
+The key advantages of the Kaltura Player are:
+
+* High performance full featured lead with HTML5
+* Most players display in 1 second or less.
+* Skins configured once with standard HTML / CSS
+* Better support for additional platforms; iOS and Android player components.
+* Support for all features across multiple platforms: See player.kaltura.com.
+
+**Additional Advantages**
+* Mouse Over Scrubber: Thumbnails display on playhead scrubbing on mouse-over.
+* Responsive Player Layout includes:
+  * Thumb up/down rating
+  * Smaller players / screens keep important controls. 
+* Improved Related Videos Experience
+  * Enhanced related videos interface
+  * Flexible options for related video fulfillment
+  * Events for tracking conversion/retainment
+
+Playlists and Chapters
+
+Flexible HTML plugins for playlists and chapters with support for inheriting site styles
+
+Improved Adaptive Streaming Support
+
+Chromeless Flash HLS
+Supports HLS on desktop browsers for simplified live broadcast ad stitching workflows
+MPEG-DASH
+Encrypted Media Extension support web delivery of DRM and content control
+Multi-track audio
+More detailed analytics on quality of services metrics
+Note: The browsers that are projected to support MPEG DASH: IE 11 (Windows, Xbox, phone;) Chrome (Desktop & Android), Firefox (Desktop)
+
+Improved Share Interface In Player or On Page
+
+Robust Configurable Share Options
+Support for sharing specific time offsets
+iframe or Flash object embed options
+Deep linking to specific URLs for each video: (example: myDomain.com/videos/{entryid}
+ 
+Improved Accessibility: 508 and WebVTT
+
+Industry leading 508 support
+508 by default – all new framework players include 508 compliant features
+Integrated framework for making all new plugins accessible
+Uses HTML for controls: offers more integrated accessible features than Flash players
+iOS, Android, HTML, Flash all in One
+
+Maximize ROI on your distribution strategy across native apps and web views. 
+Architecture for reusable plugins and configuration across platforms
+Seamlessly integrate advanced live broadcasts streaming and DRM 
+
+
 Use these as good examples:
 https://wistia.com/doc/new-player
 https://wistia.com/product/player
