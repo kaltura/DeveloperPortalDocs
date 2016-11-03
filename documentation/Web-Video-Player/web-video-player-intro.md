@@ -2,8 +2,9 @@ temp
 
 
 
-1.	Add page: Introduction – get from here:
-https://knowledge.kaltura.com/kaltura-player-toolkit - without the images – embed the player directly.
+1.	Introduction – embed the player directly.
+
+## Introduction  
 
 The Kaltura Player Toolkit enables users to lead video delivery with HTML5 and provide the fastest viewing experience on any device, while maintaining all the same features and a consistent CSS/HTML player design. Kaltura Players v2 enable delivery of HTML5 with Chromeless components for Flash, iOS and Android.
 
@@ -15,7 +16,7 @@ The key advantages of the Kaltura Player are:
 * Better support for additional platforms; iOS and Android player components.
 * Support for all features across multiple platforms: See player.kaltura.com.
 
-**Additional Advantages**
+### Additional Advantages  
 
 * Mouse Over Scrubber: Thumbnails display on playhead scrubbing on mouse-over.
 * Responsive Player Layout includes:
@@ -53,6 +54,8 @@ Seamlessly integrate advanced live broadcasts streaming and DRM
 Use these as good examples:
 https://wistia.com/doc/new-player
 https://wistia.com/product/player
+
+## Embedding   
 
 2.	Add page - Embedding – get from here:
 http://player.kaltura.com/docs/PlayerRules - including only the following embeds: 
