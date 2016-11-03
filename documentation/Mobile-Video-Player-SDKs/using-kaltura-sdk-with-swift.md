@@ -2,7 +2,7 @@
 layout: page
 title: Using the Kaltura SDK with Swift
 subcat: iOS
-weight: 310
+weight: 320
 ---
 
 Swift is a programming language developed by Apple Inc. to work with existing Objective-C code that was written for Apple products.
