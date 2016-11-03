@@ -1,8 +1,7 @@
 temp
 
 
-
-1.	Introduction – embed the player directly.
+**Remember to embed the player directly.**
 
 ## Introduction  
 
