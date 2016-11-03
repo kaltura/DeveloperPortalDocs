@@ -2,7 +2,7 @@
 layout: page
 title: iOS Disable Widevine
 subcat: iOS
-weight: 150
+weight: 330
 ---
 
 [![iOS](https://img.shields.io/badge/iOS-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios) 
