@@ -16,6 +16,7 @@ The key advantages of the Kaltura Player are:
 * Support for all features across multiple platforms: See player.kaltura.com.
 
 **Additional Advantages**
+
 * Mouse Over Scrubber: Thumbnails display on playhead scrubbing on mouse-over.
 * Responsive Player Layout includes:
   * Thumb up/down rating
@@ -24,35 +25,25 @@ The key advantages of the Kaltura Player are:
   * Enhanced related videos interface
   * Flexible options for related video fulfillment
   * Events for tracking conversion/retainment
-
-Playlists and Chapters
-
-Flexible HTML plugins for playlists and chapters with support for inheriting site styles
-
-Improved Adaptive Streaming Support
-
-Chromeless Flash HLS
-Supports HLS on desktop browsers for simplified live broadcast ad stitching workflows
-MPEG-DASH
-Encrypted Media Extension support web delivery of DRM and content control
-Multi-track audio
-More detailed analytics on quality of services metrics
-Note: The browsers that are projected to support MPEG DASH: IE 11 (Windows, Xbox, phone;) Chrome (Desktop & Android), Firefox (Desktop)
-
-Improved Share Interface In Player or On Page
-
-Robust Configurable Share Options
-Support for sharing specific time offsets
-iframe or Flash object embed options
-Deep linking to specific URLs for each video: (example: myDomain.com/videos/{entryid}
- 
-Improved Accessibility: 508 and WebVTT
-
-Industry leading 508 support
-508 by default – all new framework players include 508 compliant features
-Integrated framework for making all new plugins accessible
-Uses HTML for controls: offers more integrated accessible features than Flash players
-iOS, Android, HTML, Flash all in One
+* Playlists and Chapters: Flexible HTML plugins for playlists and chapters with support for inheriting site styles
+* Improved Adaptive Streaming Support
+ * Chromeless Flash HLS - Supports HLS on desktop browsers for simplified live broadcast ad stitching workflows
+ * MPEG-DASH: 
+   * Encrypted Media Extension support web delivery of DRM and content control
+   * Multi-track audio
+   * More detailed analytics on quality of services metrics
+ Note: The browsers that are projected to support MPEG DASH: IE 11 (Windows, Xbox, phone;) Chrome (Desktop & Android), Firefox (Desktop)
+* Improved Share Interface In Player or On Page
+ * Robust Configurable Share Options
+   * Support for sharing specific time offsets
+   * iframe or Flash object embed options
+   * Deep linking to specific URLs for each video: (example: myDomain.com/videos/{entryid}
+* Improved Accessibility: 508 and WebVTT
+* Industry leading 508 support
+   * 508 by default – all new framework players include 508 compliant features
+   * Integrated framework for making all new plugins accessible
+   * Uses HTML for controls: offers more integrated accessible features than Flash players
+   * iOS, Android, HTML, Flash all in One
 
 Maximize ROI on your distribution strategy across native apps and web views. 
 Architecture for reusable plugins and configuration across platforms
