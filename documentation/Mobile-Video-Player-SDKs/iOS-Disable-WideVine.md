@@ -7,9 +7,7 @@ weight: 330
 
 [![iOS](https://img.shields.io/badge/iOS-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios) 
 
-## Description
-
-Split our podspec to 2 subspecs - Core and Widevine.
+This article details the process of disabling Widevine on iOS.
 
 `Core` - contains all source files, INCLUDING Widevine-related files.
 
