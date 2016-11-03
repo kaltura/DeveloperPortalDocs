@@ -14,7 +14,7 @@ This article details the process of disabling Widevine on iOS.
 `Widevine` - contains the Widevine library and a preprocessor macro WIDEVINE_ENABLED=1.
 
 ## How To Use
-By defualt, the entire SDK is enabled.
+By default, the entire SDK is enabled.
 
 ### Entire SDK
 
