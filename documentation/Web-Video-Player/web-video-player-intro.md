@@ -5,7 +5,41 @@ temp
 
 ## Introduction  
 
-The Kaltura Player Toolkit enables users to lead video delivery with HTML5 and provide the fastest viewing experience on any device, while maintaining all the same features and a consistent CSS/HTML player design. The Kaltura Player enables delivery of HTML5 with Chromeless components for Flash, iOS and Android.
+Kaltura's Player is an industry leader in flexibility, customization ease, plug-in offerings, and loading speed. Every feature of the player is supported for both both HTML5 and Flash with the same configuration, which makes it easy for you to integrate features across platforms. Kaltura's Player lets you  features provided by the player for both tablets and mobile devicevast feature set of the Kaltura Player on your Tablets and Mobile Devices, and use the HTML5 / Flash player switch tool present on almost all feature pages. 
+
+http://player.kaltura.com/docs/
+
+r is optimized to provide the best viewer experience even before you press play. With support for high resolution videos and adaptive streaming with HLS, we prioritize viewer engagement and delivering the best quality for any environment and connection speed.
+Easy to implement
+Adding videos to your website is super easy with Wistia’s lightweight embed codes. We keep the code snippets small, so they’re easy to embed and load lightning fast.
+
+Responsive
+Our responsive video player scales to fit any screen size. Whether you’re watching on desktop or mobile, the player keeps controls out of the way on smaller screens, to keep the focus on your message.
+
+Customizable
+Increase engagement by tailoring the player to match your brand colors and selecting the most compelling thumbnail with our Customize tools. Once you've caught a viewer's attention, add an Annotation Link or a CTA to direct them to more content.
+
+
+Adaptable
+
+Wistia lets your audience choose how they want to watch your content. Viewers can take control of their viewing experience with options to change playback speed and video quality—all the way up to 4K.
+apis
+
+Flexible
+Our Player API allows you to customize the video player for any environment. Change the appearance and controls to suit your needs. Make the player your own.
+
+Interactive
+Timeline Actions allow you to make your videos interactive. Use Turnstile, Calls to Action, or Annotation Links to collect leads, build relationships, and keep viewers engaged.
+
+
+
+Built-in social sharing
+Post your Wistia videos to any social network, and they will play seamlessly. You can also enable social sharing within the player, so your viewers can easily share your content with their own networks.
+
+A focus on accessibility
+The Wistia player is fully compatible with screen readers. Viewers can use keyboard shortcuts, like tabbing, to control the player. Your video will be accessible to everyone.
+
+The Kaltura Web Video Player Toolkit enables users to lead video delivery with HTML5 and provide the fastest viewing experience on any device, while maintaining all the same features and a consistent CSS/HTML player design. The Kaltura Player enables delivery of HTML5 with Chromeless components for Flash, iOS and Android.
 
 The key advantages of the Kaltura Player are:
 
