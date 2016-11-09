@@ -49,45 +49,50 @@ Your final results on this step are:
 
 
 1 . Create the `KPPlayerConfig *config`as follows:
-        ```
+
+      
         KPPlayerConfig *config = [[KPPlayerConfig alloc] initWithServer:@"{your-server-id}"                                                           uiConfID:@"{your-ui-conf-id}"                                                                  partnerId:@"{your-pqrtner-id}"];
             config.entryId = @"1_o426d3i4";
-        ```
+        
 
 2 . Next, add the following to your `config` instance:
-        ```
+
+        
             [config addConfigKey:@"chromecast.plugin" withValue:@"true"];
             [config addConfigKey:@"chromecast.useKalturaPlayer" withValue:@"true"];
             [config             
-```
+        
 
 3 . Import the following classes:
 
-```
-#import <GoogleCast/GoogleCast.h>
-#import <KalturaPlayerSDK/GoogleCastProvider.h>
-```
+
+       
+        #import <GoogleCast/GoogleCast.h>
+        #import <KalturaPlayerSDK/GoogleCastProvider.h>
+        
 
 4 . Create `castProvider` property:
 
-```
-@property (nonatomic, strong) GoogleCastProvider *castProvider;
-```
+
+        @property (nonatomic, strong) GoogleCastProvider *castProvider;
+
 
 5 . Before loading the player do
 
-```
-_castProvider = [[GoogleCastProvider alloc] init];
-```
+
+        _castProvider = [[GoogleCastProvider alloc] init];
+
 
 #### Casting Media
 
 To cast, set the `castProvider` property under `KPViewController` with `GoogleCastProvider` as the object you created:
 
-```
-_player.castProvider = _castProvider;
-```
+
+        _player.castProvider = _castProvider;
+
+
 on this step the result is casting your media via chromecast device.
+
 
 #### Disconnecting from a Device
 
@@ -97,14 +102,13 @@ This works out of the box.
 
 Attach below code to your start casting implimentation
 
-````
+
     if ([GCKCastContext sharedInstance].sessionManager.currentSession.
         remoteMediaClient.mediaStatus) {
         // Here you have to call to change media method under KPViewController
         [_playerViewController changeMedia:{your_value}];
     }
 
-````
 
 ### Mini Controllers  
 
