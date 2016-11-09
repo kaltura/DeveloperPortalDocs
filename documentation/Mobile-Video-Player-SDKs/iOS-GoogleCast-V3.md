@@ -93,6 +93,18 @@ on this step the result is casting your media via chromecast device.
 
 This works out of the box.
 
+### Reconnect to active session with different media
+
+Attach below code to your start casting implimentation
+
+````
+    if ([GCKCastContext sharedInstance].sessionManager.currentSession.
+        remoteMediaClient.mediaStatus) {
+        // Here you have to call to change media method under KPViewController
+        [_playerViewController changeMedia:{your_value}];
+    }
+
+````
 
 ### Mini Controllers  
 
