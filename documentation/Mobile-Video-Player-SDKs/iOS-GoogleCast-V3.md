@@ -47,15 +47,21 @@ Your final results on this step are:
 
 #### Setup Kaltura Environment 
 
-
-1 . Create the `KPPlayerConfig *config`as follows:
-
+1 . Please import the GoogleCastprovider module: 
       
+      #import <KalturaPlayerSDK/GoogleCastProvider.h>
+      
+2 . Configure a GoogleCastprovider shared instance, typically in your application's application:didFinishLaunchingWithOptions: method:
+
+       [GoogleCastProvider sharedInstance];
+       
+3 . Create the `KPPlayerConfig *config`as follows:
+
         KPPlayerConfig *config = [[KPPlayerConfig alloc] initWithServer:@"{your-server-id}"                                                           uiConfID:@"{your-ui-conf-id}"                                                                  partnerId:@"{your-pqrtner-id}"];
             config.entryId = @"1_o426d3i4";
         
 
-2 . Next, add the following to your `config` instance:
+4 . Next, add the following to your `config` instance:
 
         
             [config addConfigKey:@"chromecast.plugin" withValue:@"true"];
@@ -63,7 +69,7 @@ Your final results on this step are:
             [config             
         
 
-3 . Import the following classes:
+5 . Import the following classes:
 
 
        
@@ -71,16 +77,15 @@ Your final results on this step are:
         #import <KalturaPlayerSDK/GoogleCastProvider.h>
         
 
-4 . Create `castProvider` property:
+6 . Create `castProvider` property:
 
 
         @property (nonatomic, strong) GoogleCastProvider *castProvider;
 
 
-5 . Before loading the player do
+7 . Before loading the player do
 
-
-        _castProvider = [[GoogleCastProvider alloc] init];
+        _castProvider = [GoogleCastProvider sharedInstance]; 
 
 
 #### Casting Media
@@ -115,9 +120,3 @@ Attach below code to your start casting implimentation
 If you are interested in mini controllers please follow this url:
 
 https://developers.google.com/cast/docs/ios_sender_integrate#add_mini_controllers
-
-### Demo Application
-
-will be updated soon.
-
-This repository contains several basic best practice applications that use the Kaltura iOS Player SDK.
