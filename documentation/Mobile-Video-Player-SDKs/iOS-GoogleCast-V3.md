@@ -125,3 +125,12 @@ To set logo please use
 If you are interested in mini controllers please follow this url:
 
 https://developers.google.com/cast/docs/ios_sender_integrate#add_mini_controllers
+
+
+### Recommendations
+
+During cast we advise to use `mini/extended controls` over the player UI, to see a sample please use our sample below.
+
+### Sample
+
+https://github.com/kaltura/player-sdk-demo-ios/tree/master/ovp/CCV3Demo
