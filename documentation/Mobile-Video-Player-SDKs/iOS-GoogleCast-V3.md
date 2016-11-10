@@ -7,8 +7,6 @@ weight: 300
 
 This article describes how to set up the Google Cast V3 feature in iOS devices.
 
-# This feature is Pre-released
-
 ## Introduction  
 
 The Cast functionality allows your videos to be cast from a iOS mobile device, via the Chromecast plugin, directly to a Kaltura Player Receiver App on a Chromecast-connected TV.
