@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Google Cast V3 Setup for iOS Devices (Pre-released)
+title: Google Cast V3 Setup for iOS Devices
 subcat: iOS
 weight: 300
 ---
@@ -49,31 +49,27 @@ Your final results on this step are:
       
       #import <KalturaPlayerSDK/GoogleCastProvider.h>
       
-2 . Configure a `GoogleCastprovider` shared instance, typically in your application's `application:didFinishLaunchingWithOptions:` method, in `AppDelegate` class:
+2 . Configure a `GoogleCastProvider` shared instance, typically in your application's `application:didFinishLaunchingWithOptions:` method, in `AppDelegate` class:
 
        [GoogleCastProvider sharedInstance];
        
 3 . Create the `KPPlayerConfig *config`as follows:
-
-        KPPlayerConfig *config = [[KPPlayerConfig alloc] initWithServer:@"{your-server-id}"                                                           uiConfID:@"{your-ui-conf-id}"                                                                  partnerId:@"{your-pqrtner-id}"];
-            config.entryId = @"1_o426d3i4";
-        
+            
+            KPPlayerConfig *config = [[KPPlayerConfig alloc] initWithServer: @"{your-server-id}"
+                                                                   uiConfID: @"{your-ui-conf-id}"
+                                                                  partnerId: @"{your-pqrtner-id}"];
+            config.entryId = @"{your-entry-id}";
 
 4 . Next, add the following to your `config` instance:
 
         
             [config addConfigKey:@"chromecast.plugin" withValue:@"true"];
-            [config addConfigKey:@"chromecast.useKalturaPlayer" withValue:@"true"];
-            [config             
-        
+            [config addConfigKey:@"chromecast.useKalturaPlayer" withValue:@"true"];           
 
 5 . Import the following classes:
 
-
-       
         #import <GoogleCast/GoogleCast.h>
         #import <KalturaPlayerSDK/GoogleCastProvider.h>
-        
 
 6 . Create `castProvider` property:
 
@@ -83,7 +79,7 @@ Your final results on this step are:
 
 7 . Before loading the player do
 
-        _castProvider = [GoogleCastProvider sharedInstance]; 
+        self.castProvider = [GoogleCastProvider sharedInstance]; 
 
 
 #### Casting Media
@@ -108,7 +104,7 @@ Attach below code to your start casting implimentation
     if ([GCKCastContext sharedInstance].sessionManager.currentSession.
         remoteMediaClient.mediaStatus) {
         // Here you have to call to change media method under KPViewController
-        [_playerViewController changeMedia:{your_value}];
+        [_playerViewController changeMedia:{current-entry-id}];
     }
 
 ### Change Media
