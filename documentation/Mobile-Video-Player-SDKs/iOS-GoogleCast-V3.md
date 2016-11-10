@@ -51,7 +51,7 @@ Your final results on this step are:
       
       #import <KalturaPlayerSDK/GoogleCastProvider.h>
       
-2 . Configure a GoogleCastprovider shared instance, typically in your application's application:didFinishLaunchingWithOptions: method:
+2 . Configure a `GoogleCastprovider` shared instance, typically in your application's `application:didFinishLaunchingWithOptions:` method, in `AppDelegate` class:
 
        [GoogleCastProvider sharedInstance];
        
@@ -103,10 +103,9 @@ on this step the result is casting your media via chromecast device.
 
 This works out of the box.
 
-### Reconnect to active session with different media
+### Reconnect to active session 
 
 Attach below code to your start casting implimentation
-
 
     if ([GCKCastContext sharedInstance].sessionManager.currentSession.
         remoteMediaClient.mediaStatus) {
@@ -114,6 +113,18 @@ Attach below code to your start casting implimentation
         [_playerViewController changeMedia:{your_value}];
     }
 
+### Change Media
+
+To change media please use `changeMedia:` method under `KPViewController`
+
+      [_playerViewController changeMedia:{your_value}];
+
+### Set Custom Logo
+
+To set logo please use
+
+      [self.castProvider setLogo:{custom_logo_image_url}];
+      
 
 ### Mini Controllers  
 
