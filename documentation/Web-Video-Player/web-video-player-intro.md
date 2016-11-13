@@ -7,6 +7,8 @@ temp
 
 Kaltura's Player is an industry leader in flexibility, customization ease, plug-in offerings, and loading speed. Every feature of the player is supported for both both HTML5 and Flash with the same configuration, which makes it easy for you to integrate features across platforms. Kaltura's Player is designed to be implemented on both tablets and mobile devices, both iOS and Android, allowing for maximum flexibility.
 
+### Key Advantages of the Kaltura Player  
+
 Here are the key advantages provided by the Kaltura Player:
 
 * High performance full featured lead with HTML5.
