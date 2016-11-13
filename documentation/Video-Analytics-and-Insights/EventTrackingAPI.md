@@ -17,7 +17,7 @@ Each event type has required and optional parameters, which are described below.
 
 ## Examples  
 
-Here are some examples different event types.
+Here are some examples of different event types.
 
 ### cURL Example  
 
