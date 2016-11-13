@@ -5,34 +5,38 @@ temp
 
 ## Introduction  
 
-Kaltura's Player is an industry leader in flexibility, customization ease, plug-in offerings, and loading speed. Every feature of the player is supported for both both HTML5 and Flash with the same configuration, which makes it easy for you to integrate features across platforms. Kaltura's Player is designed to be implemented on both tablets and mobile devices, both iOS and Android, allowing for maximum flexibility.
+The Kaltura Player leads the industry in flexibility, ease of customization, plug-in offerings and loading speed (most players display in 1 second or less). Every feature is supported for both HTML5 and Flash with the same configuration, bringing unparalleled ease of feature integration across platforms. 
 
-### Key Advantages of the Kaltura Player  
+### Ease of Integration  
 
-Here are the key advantages provided by the Kaltura Player:
+Multi-platform support ensures easy integration for iOS and Android player components on both mobile devices and tables, allowing for maximum flexibility, while the player architecture enables you to reuse plugins and configurations across platform.
 
-* High performance full featured lead with HTML5.
-* Most players display in 1 second or less.
-* Skins configured once with standard HTML / CSS.
-* Multi-platform support for both iOS and Android player components.
-* Support for all features across multiple platforms.
-* Unparalleled robust performance.
-* Built-in advertising and anlytics support for a wide range of video ad formats and integrated plugins.
-* Customized cross-browser/cross-device players that can be created in the Kaltura Player Studio from a variety of player templates.
-* Lightweight embed codes enable you to add videos to your website quickly and easily.
-* A Universal DRM (Digital Rights Management) module that enables media companies, content rights owners and OTT providers to stream premium content without needing to worry about which browser, device or platform is being used.
-* Improved related videos experience including an enhanced related videos interface, flexible options for related video fulfillment, and events for tracking conversion/retainment
-* Responsive Player layout.
-* Flexible HTML plugins for playlists and chapters with support for inheriting site styles.
-* Improved adaptive streaming support.
-* Improved share interface in the player or on the page.
-* Robust configurable share options.
-* Improved accessibility: 508 and WebVTT and industry leading 508 support.
-* Architecture for reusable plugins and configuration across platforms
-* Seamless integratation of advanced live broadcasts streaming and DRM.
-* Full accessibility features, including full screen reader support, audio description tracks, captions (VTT, DFXP, SRT), tab index for all user interactive components, aria-labels for all controls, full keyboard shortcuts, language overrides and easy UI translation, text transcripts for reading aids, and video in video playback for sign-language side-video.
+## Key Advantages  
 
-To learn more, visit [Kaltura's Player site](player.kaltura.com).
+Here are some of the key advantages of the Kaltura Player:
+
+### Customizable  
+
+The player is customizable, enabling you to configure skins once using standard HTML / CSS. In addition, you can create customized cross-browser/cross-device players in the Kaltura Player Studio from a variety of easy-to-configure player templates.
+
+### Built-in Advertising and Analytics  
+
+The player’s built-in advertising and analytics provides support for a wide range of video ad formats and integrated plugins. In addition, the related videos experience includes an enhanced related video interface, flexible options for related video fulfillment, and events for tracking conversion and retainment.
+
+### Universal Digital Rights Management (DRM)  
+
+Our Universal DRM module enables media companies, content rights owners and OTT providers to stream premium content without needing to worry about which browser, device or platform is being used. 
+
+### Advanced Live Broadcast Streaming and DRM  
+
+Kaltura Player is designed to ensure seamless integration of advanced live broadcasts streaming and DRM.
+
+### Embedding  
+
+Our lightweight embed codes enable you to add videos to your website quickly and easily
+
+
+To learn more, visit [Kaltura's Player site](http://player.kaltura.com/docs/).
 
 
 Use these as good examples:
