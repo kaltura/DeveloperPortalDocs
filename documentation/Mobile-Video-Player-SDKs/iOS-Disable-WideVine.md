@@ -7,18 +7,18 @@ weight: 330
 
 [![iOS](https://img.shields.io/badge/iOS-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios) 
 
-This article details the process of disabling Widevine on iOS.
+This article details the process of disabling Widevine on iOS:
 
-`Core` - contains all source files, INCLUDING Widevine-related files.
+* `Core` - Contains all source files, **including** Widevine-related files.
+* `Widevine` - Contains the Widevine library and a preprocessor macro WIDEVINE_ENABLED=1.
 
-`Widevine` - contains the Widevine library and a preprocessor macro WIDEVINE_ENABLED=1.
+## How to Use  
 
-## How To Use
 By default, the entire SDK is enabled.
 
-### Entire SDK
+### Entire SDK  
 
-To use the entire SDK, a client app has to use, as before:
+To use the entire SDK, the client app must use the following:
 
 ```
 pod 'KalturaPlayerSDK'
