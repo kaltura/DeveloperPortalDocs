@@ -40,8 +40,8 @@ https://developers.google.com/cast/docs/ios_sender_integrate
 
 Your final results on this step should be: 
 
-1. You will see a Chromecast icon on your application.
-2. You can choose and connect/ disconnect to the Chromecast device.
+* You will see a Chromecast icon on your application.
+* You can choose and connect/ disconnect to the Chromecast device.
 
 #### Set up the Kaltura Environment 
 
@@ -128,4 +128,5 @@ During casting, we advise using `mini/extended controls` over the player UI; see
 ### Sample  
 
 The following is a sample of using the mini/extended control:
+
 https://github.com/kaltura/player-sdk-demo-ios/tree/master/ovp/CCV3Demo
