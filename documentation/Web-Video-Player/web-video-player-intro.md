@@ -7,13 +7,11 @@ temp
 
 The Kaltura Player leads the industry in flexibility, ease of customization, plug-in offerings and loading speed (most players display in 1 second or less). Every feature is supported for both HTML5 and Flash with the same configuration, bringing unparalleled ease of feature integration across platforms. 
 
+Here are some of the key advantages of the Kaltura Player:
+
 ### Ease of Integration  
 
 Multi-platform support ensures easy integration for iOS and Android player components on both mobile devices and tables, allowing for maximum flexibility, while the player architecture enables you to reuse plugins and configurations across platform.
-
-## Key Advantages  
-
-Here are some of the key advantages of the Kaltura Player:
 
 ### Customizable  
 
@@ -33,7 +31,7 @@ Kaltura Player is designed to ensure seamless integration of advanced live broad
 
 ### Embedding  
 
-Our lightweight embed codes enable you to add videos to your website quickly and easily
+Our lightweight embed codes enable you to add videos to your website quickly and easily.
 
 
 To learn more, visit [Kaltura's Player site](http://player.kaltura.com/docs/).
