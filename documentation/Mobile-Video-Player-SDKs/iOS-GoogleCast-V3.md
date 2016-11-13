@@ -9,7 +9,7 @@ This article describes how to set up the Google Cast V3 feature in iOS devices.
 
 ## Introduction  
 
-The Cast functionality allows your videos to be cast from a iOS mobile device, via the Chromecast plugin, directly to a Kaltura Player Receiver App on a Chromecast-connected TV.
+The Cast functionality allows your videos to be cast from an iOS mobile device, via the Chromecast plugin, directly to a Kaltura Player Receiver App on a Chromecast-connected TV.
 
 ### Before You Begin  
 
@@ -34,72 +34,66 @@ To begin casting, follow these steps:
 
 #### Connecting to Device
 
-Please Folow the below url to initialize cast context:
+Follow the url below to initialize cast context:
 
 https://developers.google.com/cast/docs/ios_sender_integrate
 
-Your final results on this step are: 
+Your final results on this step should be: 
 
-1. You see chromecast icon on your application.
-2. You can choose & connect/ disconnect to chromecast device.
+1. You will see a Chromecast icon on your application.
+2. You can choose and connect/ disconnect to the Chromecast device.
 
-#### Setup Kaltura Environment 
+#### Set up the Kaltura Environment 
 
-1 . Please import the GoogleCastprovider module: 
-      
+1. Import the GoogleCastprovider module: 
       #import <KalturaPlayerSDK/GoogleCastProvider.h>
-      
-2 . Configure a `GoogleCastProvider` shared instance, typically in your application's `application:didFinishLaunchingWithOptions:` method, in `AppDelegate` class:
+2. Configure a `GoogleCastProvider` shared instance, typically in your application's `application:didFinishLaunchingWithOptions:` method, in `AppDelegate` class:
 
        [GoogleCastProvider sharedInstance];
        
-3 . Create the `KPPlayerConfig *config`as follows:
+3. Create the `KPPlayerConfig *config`as follows:
             
             KPPlayerConfig *config = [[KPPlayerConfig alloc] initWithServer: @"{your-server-id}"
                                                                    uiConfID: @"{your-ui-conf-id}"
                                                                   partnerId: @"{your-pqrtner-id}"];
             config.entryId = @"{your-entry-id}";
 
-4 . Next, add the following to your `config` instance:
+4. Next, add the following to your `config` instance:
 
-        
             [config addConfigKey:@"chromecast.plugin" withValue:@"true"];
             [config addConfigKey:@"chromecast.useKalturaPlayer" withValue:@"true"];           
 
-5 . Import the following classes:
+5. Import the following classes:
 
         #import <GoogleCast/GoogleCast.h>
         #import <KalturaPlayerSDK/GoogleCastProvider.h>
 
-6 . Create `castProvider` property:
-
+6. Create a `castProvider` property:
 
         @property (nonatomic, strong) GoogleCastProvider *castProvider;
 
 
-7 . Before loading the player do
+7 . Before loading the player, perform the following:
 
         self.castProvider = [GoogleCastProvider sharedInstance]; 
 
 
-#### Casting Media
+#### Casting Media  
 
 To cast, set the `castProvider` property under `KPViewController` with `GoogleCastProvider` as the object you created:
-
 
         _player.castProvider = _castProvider;
 
 
-on this step the result is casting your media via chromecast device.
+The result for this step will cast your media via the Chromecast device.
 
+#### Disconnecting from a Device  
 
-#### Disconnecting from a Device
+This process works out-of-the-box and doesn't require configuration.
 
-This works out of the box.
+### Reconnect to the Active Session  
 
-### Reconnect to active session 
-
-Attach below code to your start casting implimentation
+Attach the code below to your Start Casting implimentation:
 
     if ([GCKCastContext sharedInstance].sessionManager.currentSession.
         remoteMediaClient.mediaStatus) {
@@ -107,30 +101,31 @@ Attach below code to your start casting implimentation
         [_playerViewController changeMedia:{current-entry-id}];
     }
 
-### Change Media
+### Change Media  
 
-To change media please use `changeMedia:` method under `KPViewController`
+To change media, use the `changeMedia:` method under `KPViewController`:
 
       [_playerViewController changeMedia:{your_value}];
 
-### Set Custom Logo
+### Set Custom Logo  
 
-To set logo please use
+To set a logo use the following:
 
       [self.castProvider setLogo:{custom_logo_image_url}];
       
 
 ### Mini Controllers  
 
-If you are interested in mini controllers please follow this url:
+If you wish to use mini controllers, see this url for details:
 
 https://developers.google.com/cast/docs/ios_sender_integrate#add_mini_controllers
 
 
-### Recommendations
+### Recommendations  
 
-During cast we advise to use `mini/extended controls` over the player UI, to see a sample please use our sample below.
+During casting, we advise using `mini/extended controls` over the player UI; see the sample below.
 
-### Sample
+### Sample  
 
+The following is a sample of using the mini/extended control:
 https://github.com/kaltura/player-sdk-demo-ios/tree/master/ovp/CCV3Demo
