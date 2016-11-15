@@ -7,7 +7,7 @@ weight: 340
 
 [![iOS](https://img.shields.io/badge/iOS-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios) 
 
-This article describes how to get fired when headphones are plugged/ unplugged.
+This article describes how to trigger when headphones are plugged/ unplugged.
 
 These steps should be implemented on the application side.
 
