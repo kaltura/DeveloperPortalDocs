@@ -12,6 +12,16 @@ Kaltura's Web Player leads the industry in flexibility, ease of customization, p
 
 <iframe src="http://cdnapi.kaltura.com/p/243342/sp/24334200/embedIframeJs/uiconf_id/20540612/partner_id/243342?iframeembed=true&playerId=kaltura_player&entry_id=1_sf5ovm7u&flashvars[streamerType]=auto" width="560" height="395" allowfullscreen webkitallowfullscreen mozAllowFullScreen frameborder="0"></iframe>
 
+kWidget.embed({
+    'targetId': 'playerDivId',
+    'wid': '_811441',
+    'uiconf_id' : 34599271,
+    'entry_id' : '0_4kwzg46z',
+    'flashvars' : {
+        // Add dynamic configs such as page-specific or user-specific
+    }
+});
+
 Here are some of the key advantages of the Kaltura Web Player:
 
 ### Easy to Implement  
