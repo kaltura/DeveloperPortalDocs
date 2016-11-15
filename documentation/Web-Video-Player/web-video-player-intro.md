@@ -1,13 +1,17 @@
-temp
+---
+layout: page
+title: Introduction to Kaltura's Web Player
+weight: 401
+---
 
 
-## Introduction  
+## Overvew  
 
-The Kaltura Player leads the industry in flexibility, ease of customization, plug-in offerings and loading speed (most players display in 1 second or less). All features are supported for both HTML5 and Flash with the same configuration, which makes feature intergration across platforms simple and easy. 
+Kaltura's Web Player leads the industry in flexibility, ease of customization, plug-in offerings and loading speed (most players display in 1 second or less). All features are supported for both HTML5 and Flash with the same configuration, which makes feature intergration across platforms simple and easy. 
 
 <iframe src="http://cdnapi.kaltura.com/p/243342/sp/24334200/embedIframeJs/uiconf_id/20540612/partner_id/243342?iframeembed=true&playerId=kaltura_player&entry_id=1_sf5ovm7u&flashvars[streamerType]=auto" width="560" height="395" allowfullscreen webkitallowfullscreen mozAllowFullScreen frameborder="0"></iframe>
 
-Here are some of the key advantages of the Kaltura Player:
+Here are some of the key advantages of the Kaltura Web Player:
 
 ### Easy to Implement  
 
@@ -31,7 +35,7 @@ Our Universal DRM module enables media companies, content rights owners and OTT 
 
 ### Advanced Live Broadcast Streaming and DRM  
 
-Kaltura Player is designed to ensure seamless integration of advanced live broadcasts streaming and DRM.
+Kaltura's Web Player is designed to ensure seamless integration of advanced live broadcasts streaming and DRM.
 
 To learn more, visit [Kaltura's Player site](http://player.kaltura.com/docs/).
 
