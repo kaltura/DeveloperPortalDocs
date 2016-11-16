@@ -6,8 +6,8 @@ subcat: Analytics API - Limited Alpha
 ---
 
 *The below metrics are part of Kaltura's new analytics platform.*
-*It is available by request, as it is currently released as an Early Preview.*
-*Please write to maya.schnaidman@kaltura.com to request activation.*
+*This service is still being stabilized.*
+*If you have any questions or encounter any issues, please write to VPaaS@kaltura.com.*
 
 | Name     | ID     | Description
 |:---|:---|:---|
