@@ -5,9 +5,8 @@ weight: 140
 subcat: Analytics API - Limited Alpha
 ---
 
-*This new analytics service is in limited alpha version.*
-*Access to this service is available by request, as it is currently released as an Early Preview.*
-*Please write to VPaaS@kaltura.com to request activation.*
+*This service is still being stabilized.*
+*If you have any questions or encounter any issues, please write to VPaaS@kaltura.com.*
 
 The Event Tracking API is an extensible interface for tracking different types of events on the Kaltura Video Insights backend, and, eventually, to aggregate them into meaningful and values reports.
 
