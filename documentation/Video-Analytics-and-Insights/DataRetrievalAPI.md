@@ -5,9 +5,8 @@ weight: 150
 subcat: Analytics API - Limited Alpha
 ---
 
-*This new analytics service is in limited alpha version.*
-*Access to this service is available by request, as it is currently released as an Early Preview.*
-*Please write to VPaaS@kaltura.com to request activation.*
+*This service is still being stabilized.*
+*If you have any questions or encounter any issues, please write to VPaaS@kaltura.com.*
 
 The Kaltura Video Insights Data Retrieval API provides a simple but powerful tool to query data programmatically using Kaltura API standards, such as authentication, client libraries, etc.
 
