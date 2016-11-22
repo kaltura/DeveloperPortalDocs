@@ -21,6 +21,8 @@ Three attributes are built into the Application Token:
 
 2. **An API privileges "role":** The role determines the set of API actions that this Application Token will be allowed to perform. Common role permissions are listed in Table X below. It is recommended to create a role for each type of Application Token. This way, roles may be changed independently later without affecting other system components or other Tokens.
 
+[Change #2 to KMC screen and explanation - KMC doesn't show the ID Of the role still need the Role API to get the ID...}
+
 3. **A hashing function:** The default and recommended hashing function associated with an Application Token is SHA1. This type of hash function is available to all developers. Because Application Token hashes are salted, it does not pose a security risk. Clients with specific security requirements may select MD5, SHA-256, and SHA-512 functions.
 
 After deciding about these three issues, you're ready to call the API.
@@ -30,13 +32,11 @@ After deciding about these three issues, you're ready to call the API.
 3.	Create an Application Token for the user by using the following API: /api/service/appToken/action/add.
 4.	Supply the customer with the ID, the value of the token, and hashType as per the following tables.
 
-|Role Type|permissionNames|
-|Content Read-only|PLAYLIST_BASE,WIDGET_SESSION_PERMISSION|
-|Content Read and Publish|XXX,XXX|
-|Content Read-write|XXX,XXX|
-
+FIX THIS LAYOUT
 |sessionPrivileges|
 |list:*,enableentitlement,privacycontext:MediaSpace_privacy_context,setrole:role_id|
+
+THIS ROLE Dictates the use case - tells the API which role to call...
 
 **Note:** The required permissions depend on the application for which the Application Token is being created. For an administrative application, you may want to use of the Operator, Manager, or Administrator roles, which include permissions to all methods. If you are creating a custom limited role, you may want to remove the ‘User’ role that is associated automatically with the user when the user is created (in step 1 above).
 
