@@ -2,6 +2,7 @@
 ## Thinking about Live Content  
 
 Live content needs to be thought about a little differently from on-demand content. The main differences are:
+
 * The production and management workflows are different.
 * The objective is to deliver content that has time relevancy, for example sport, news, weather, executive announcements, etc. Due to the nature of relevancy, the margin for error on live content is extremely low.
 * Live content needs to consistently hold attention, therefore, much thought needs to be put into how content is packaged to make it interesting and relevant to watch. There is a cost associated with this approach.
@@ -11,19 +12,17 @@ Live content needs to be thought about a little differently from on-demand conte
 
 The following displays a high level Live Streaming workflow that is built from 5 main elements:
 
-Capture
-A video/audio source (Camera, microphone, etc.) acquired by a capture device, which is a platform in the form of hardware, software, web app or phone app, that enables capturing video and/or audio from various devices.
-Encode
-The input video and audio are encoded (compressed) in real-time prior to being processed for streaming. Examples of encoder platforms include:
-Software solutions, such as FMLE (Flash Media Live Encoder), Telestream Wirecast and OBS (Open Broadcaster Software), etc.
-Appliances such as NewTek TriCaster, Niagara, TeraDek, VidiU, etc.
-Rack mounted HW encoders such as Harmonic, Elemental and Envivio
-Process
-Processing involves ingesting the live stream from the encoder,  converting the video into multiple display qualities for adaptive streaming, packaging the stream into an adaptive bitrate streaming protocol (such as HLS, MPEG-DASH, MSS), optionally encrypting the content and delivering the packaged content to the consumption device/player typically via a CDN (Content Delivery Network) .
-Deliver
-Delivery of the processed video fragments to the end users can be challenging from a scaling perspective. CDNs such as Akamai and CloudFront are used to distribute the content to virtually any number of users globally using caching servers spread in multiple points of presence.
-Consume
-Almost every device is video capable today. The video is displayed within a video player on multiple platforms such as laptops, desktops, smartphones, tablets, game consols and TVs. 
+(![Typical Live Streaming Workflow](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/Live-Video-and-Broadcast/livestreamingworkflow.png)). 
+
+1. **Capture:** A video/audio source (Camera, microphone, etc.) acquired by a capture device, which is a platform in the form of hardware, software, web app or phone app, that enables capturing video and/or audio from various devices.
+2. **Encode:** The input video and audio are encoded (compressed) in real-time prior to being processed for streaming. Examples of encoder platforms include:
+ * Software solutions, such as FMLE (Flash Media Live Encoder), Telestream Wirecast and OBS (Open Broadcaster Software), etc.
+ * Appliances such as NewTek TriCaster, Niagara, TeraDek, VidiU, etc.
+ * Rack mounted HW encoders such as Harmonic, Elemental and Envivio
+3. **Process:** Processing involves ingesting the live stream from the encoder,  converting the video into multiple display qualities for adaptive streaming, packaging the stream into an adaptive bitrate streaming protocol (such as HLS, MPEG-DASH, MSS), optionally encrypting the content and delivering the packaged content to the consumption device/player typically via a CDN (Content Delivery Network) .
+4. **Deliver:** Delivery of the processed video fragments to the end users can be challenging from a scaling perspective. CDNs such as Akamai and CloudFront are used to distribute the content to virtually any number of users globally using caching servers spread in multiple points of presence.
+5. **Consume:** Almost every device is video capable today. The video is displayed within a video player on multiple platforms such as laptops, desktops, smartphones, tablets, game consols and TVs. 
+
 If you would like to learn more about live streaming terminology, concepts and technology, you can have a look at this video.
 
 ## Adaptive Bitrate (ABR) Streaming  
@@ -57,3 +56,5 @@ Pass through - Supports multi-bitrate RTMP streams ingest, processing and delive
 Live Recording and Live to VOD — Records your live broadcast for instant VOD access once the live event is complete via the same embed code.
 DVR window - Allows your viewers to seek back through the live event and see parts they've missed.
 To start your first live stream with Kaltura Live, refer to Getting started with Kaltura Live Streaming.
+
+
