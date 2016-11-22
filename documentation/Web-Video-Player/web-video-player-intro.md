@@ -6,7 +6,7 @@ weight: 401
 ---
 
 
-## Overvew  
+## Overview  
 
 Kaltura's Web Player leads the industry in flexibility, ease of customization, plug-in offerings and loading speed (most players display in 1 second or less). All features are supported for both HTML5 and Flash with the same configuration, which makes feature intergration across platforms simple and easy. 
 
