@@ -14,6 +14,8 @@ Kaltura's Web Player leads the industry in flexibility, ease of customization, p
 
 <iframe src="http://cdnapi.kaltura.com/p/243342/sp/24334200/embedIframeJs/uiconf_id/20540612/partner_id/243342?iframeembed=true&playerId=kaltura_player&entry_id=1_sf5ovm7u&flashvars[streamerType]=auto" width="560" height="395" allowfullscreen webkitallowfullscreen mozAllowFullScreen frameborder="0"></iframe>
 
+The easiest way to use Kaltura's Web Player is to build a player using [Kaltura's Universal Studio](https://knowledge.kaltura.com/node/1148), which provides a user-friendly UI for building and customizing the player. 
+
 Here are some of the key advantages of the Kaltura Web Player:
 
 ### Easy to Implement  
@@ -22,7 +24,7 @@ Our lightweight embed codes enable you to add videos to your website quickly and
 
 ### Easy to Integrate  
 
-Our multi-platform support ensures easy integration for iOS and Android player components on both mobile devices and tables. This provides maximum flexibility, while the player architecture enables you to reuse plugins and configurations across platform.
+Our multi-platform support ensures easy integration for iOS and Android player components on both mobile devices and tables, providing maximum flexibility, while the player architecture enables you to reuse plugins and configurations across platforms.
 
 ### Customizable  
 
@@ -49,7 +51,7 @@ Adding video on your website is a great way to interact with your audience. To a
 
 ### Preparing Your Videos  
 
-First thing's first: prepare and customize your video (although you can customize the video after you embed it), then upload it.
+First thing's first: prepare and customize your video (although you can customize the video after you embed it, using the Universal Player Studio), then upload it.
 
 ### Generate an Embed Code  
 
