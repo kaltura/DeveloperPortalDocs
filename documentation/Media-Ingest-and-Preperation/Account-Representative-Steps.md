@@ -44,9 +44,9 @@ After deciding about these three issues, you're ready to call the API.
 | Name        | Type | Writable | Description|
 |:------------ |:------------------:|------------------:|------------------:|
 | id  | strng | X         |The ID of the application token (this ID is not writable; it is returned when the token is completed).  | 
-| expiry  | int | V         |	The application token expiration. This must be provided in a UNIX timestamp format. | 
+| expiry  | int | V         |	The application token expiration. This must be provided in a UNIX timestamp format. This field is mandatory and should be set when creating the application token. | 
 | partnerId  | int | X         |	The partner identifier; this is parameter is not writable and not passed. | 
-| sessionDuration  | int | V         |	Expiry duration of KS that was created using the current token (in seconds). The standard is 24-hours (86,400 seconds); however, for best practice purposes, you may want to set this to 90,000 so that the token doesn't expire in exactly 24 hours but has a safety interval. | 
+| sessionDuration  | int | V         |	Expiry duration of KS that was created using the current token (in seconds). The standard is 72-hours (259,200 seconds). | 
 | hashType  | string | V         |	The hashType, which can be one of the following:	MD5, SHA1 (default), SHA256, SHA512| 
 | sessionPrivileges  | string | V         |	Comma separated privileges, which are defined according to the role that is assigned, and applied to a KS that was created using the current token. |
 | sessionType  | int | V         |	The type of Kaltura Session (KS) that was created using the current token, which can be: User = 0, Admin = 2. Nte that nearly all session types will be of type *user* while a small percentage will be of type *admin*.|
