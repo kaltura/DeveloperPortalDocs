@@ -6,14 +6,14 @@ subcat: AppToken Steps
 weight: 150
 ---
 
-==Overview==
+## Overview  
 
 An Application Token enables clients to provide their development partners or internal technical teams with restricted access to the Kaltura API. Each Application Token restricts the API methods that may be called by its users, and can allow restricted content access for clients who use entitlements (e.g. restricted access to MediaSpace content).
 
 Developers who are provided with an Application Token will use it to create temporary Kaltura Session (KS) tokens, which they will then use to access API functions. These KS tokens will have the restrictions of their originating Application Token. The documentation for how to create a KS from an Application Token can be found here: XXXXXXX.
 
 
-==Application Token Design==
+### Application Token Design  
 
 Three attributes are built into the Application Token:
 
@@ -40,6 +40,15 @@ THIS ROLE Dictates the use case - tells the API which role to call...
 
 **Note:** The required permissions depend on the application for which the Application Token is being created. For an administrative application, you may want to use of the Operator, Manager, or Administrator roles, which include permissions to all methods. If you are creating a custom limited role, you may want to remove the ‘User’ role that is associated automatically with the user when the user is created (in step 1 above).
 
+### Relevant Roles  
+
+The most likely relevant roles to assign to users of the application Token are:
+
+* Content ingestion
+* Content management
+* Custom metadata
+
+Note that roles can be either for viewing alone (read-only) or for editing as well.
 
 | Name        | Type | Writable | Description|
 |:------------ |:------------------:|------------------:|------------------:|
