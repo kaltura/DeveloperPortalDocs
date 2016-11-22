@@ -65,7 +65,6 @@ Which kinds of embedding can you use? Kaltura's Player supports these embed code
 * **Auto:** This type of embed is best for sites where SEO is already covered by other data in the page. This concise Auto embed code is good for quickly getting a player or widget onto the page without any runtime customisations.
 * **Thumbnail:** The thumbnail embed method takes the same arguments as "kWidget.embed".This embed will pass all configurations to the kWidget embed when the user "clicks" the play button. The player context menu can be disabled by setting the "EmbedPlayer.DisableContextMenu" UIVar to true.
 * **Responsive:** This embed ensures that the video ratio on the screen responds to sizing changes. The minimal RWD self contained maintains a 16/9 ratio, even when you resize the browser window.
-* **Native callout:** This embed supports replacing the player "play button" with a callout to the native player, for Mobile Devices.
 * **Reference Id:** The reference ID is used for setting a custom ID for Kaltura entry.
 * **kWidget playlist:** kWidgets make it easy to embed playlists, by simply passing along playlist plugin configuration as flashvars.
 
