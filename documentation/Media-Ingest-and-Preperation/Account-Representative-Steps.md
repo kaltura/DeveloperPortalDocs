@@ -31,11 +31,11 @@ The role determines the allowed actions that this Application Token user will be
 
 **Note:** This role dictates the use case, since it tells the API which role to call; therefore, verify that you've set up the role according to your current needs.
 
-To set the roles, select a **User Role** from the drop-down menu. To create a custom role, **Add Role**, enter the role name and description, then and select the relevant set of permissions in the Add Role window. You can select which KMC functionalities are available to users with the defined role. Clicking the checkmark next to each permission group name will toggle the permission level for the specific KMC functionality to the following modes:
+To set the roles, select a **User Role** from the drop-down menu. To create a custom role, **Add Role**, enter the role name and description, then and select the relevant set of permissions in the Add Role window. You can select which KMC functionalities are available to users with the defined role. Clicking the checkmark next to each permission group name will toggle the permission level for the specific KMC functionality according to the following modes:
 
 * Full Permission (checked) – Grants access to all KMC functionalities listed under the permission group.
-* View-Only Permission (partially checked) –Only part of the functionality listed in the group is selected.
-* No Permission (unchecked) – No access to the KMC pages that are relevant to the KMC functionalities listed under the permission group.
+* View-Only Permission (partially checked) – Only part of the functionality listed in the group is selected.
+* No Permission (cleared) – No access to the KMC pages that are relevant to the KMC functionalities listed under the permission group.
 
 **Note:** To view the ID of the role created, you'll need to use the userRole API.
 
