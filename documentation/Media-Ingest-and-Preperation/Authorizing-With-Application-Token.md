@@ -22,10 +22,11 @@ This article details how to build a KS token from an Application Token. The rele
 
 This table shows the parameters for the **session** service and the **startWidgetSession** action:
 
-| Parameter Name  | Required | Default Value | Notes|
-|:------------ |:------------------:|------------------:|------------------:| 
-|widgetId |Yes |N/A  |Provide the value _PID (inncluding the leading underscore), where PID is your Kaltura Partner ID. |
-|expiry |No | 84600 |The expiry for an unprivileged session is 24 hours (86400 seconds). Do not adjust this value. |
+| Parameter Name | Required | Default Value | Notes                                                                                             |
+|----------------|----------|---------------|---------------------------------------------------------------------------------------------------|
+| widgetId       | Yes      | N/A           | Provide the value _PID (inncluding the leading underscore), where PID is your Kaltura Partner ID. |
+| expiry         | No       | 84600         | The expiry for an unprivileged session is 24 hours (86400 seconds). Do not adjust this value.     |
+
 **This action returns an unprivileged widget session that can be used to invoke an appToken.startSession.**
 
 ### Table 2. appToken.startSession  
