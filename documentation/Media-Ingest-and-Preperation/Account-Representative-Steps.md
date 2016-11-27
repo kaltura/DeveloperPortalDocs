@@ -26,7 +26,7 @@ To create the user, open the KMC, go to the Administration tab, select the Users
 
  (![Add User Window](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/Media-Ingest-and-Preperation/adduser.PNG)). 
 
-## Role with the Required Privileges  
+### Role with the Required Privileges  
 
 The role determines the allowed actions that this Application Token user will be allowed to perform. Common role permissions are listed in the table under the **Relevant Roles** section below. It is recommended to create a role for each type of Application Token. This way, roles may be changed independently later without affecting other system components or other Tokens.
 
@@ -61,7 +61,7 @@ sessionPrivileges: list:*,enableentitlement,privacycontext:MediaSpace_privacy_co
 
 **Note:** The required permissions depend on the application for which the Application Token is being created. For an administrative application, you may want to use of the Operator, Manager, or Administrator roles, which include permissions to all methods. If you are creating a custom limited role, you may want to remove the ‘User’ role that is associated automatically with the user when the user is created (in step 1 above).
 
-### Relevant Roles  
+## Relevant Roles  
 
 The most likely relevant roles to assign to users of the application Token are:
 
