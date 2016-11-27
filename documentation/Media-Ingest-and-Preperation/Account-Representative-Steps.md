@@ -2,7 +2,7 @@ test
 ---
 layout: page
 title: Creating an Application Token User
-subcat: AppToken Steps
+subcat: Application Token Steps
 weight: 150
 ---
 
@@ -17,14 +17,31 @@ Developers who are provided with an Application Token will use it to create temp
 
 The following three attributes are built into the Application Token:
 
-1. **A user with the desired content permissions:** Accounts with entitlements may use a "service user" to restrict the content access permissions of the Appliation Token. You may create a new user, or use an existing user entity (such as a MediaSpace user). This user entity must be correctly permissioned with entitlements to the Channels or categories that you want to provide your development partners. *Do not use a KMC user for this purpose, as a KMC user has unrestricted content access.*
+**A user with the desired content permissions** 
 
-2. **An API privileges "role":** The role determines the set of API actions that this Application Token will be allowed to perform. Common role permissions are listed in Table X below. It is recommended to create a role for each type of Application Token. This way, roles may be changed independently later without affecting other system components or other Tokens.
+Accounts with entitlements may use a "service user" to restrict the content access permissions of the Appliation Token. You may create a new user, or use an existing user entity (such as a MediaSpace user). This user entity must be correctly permissioned with entitlements to the Channels or categories that you want to provide your development partners.
 
-[Change #2 to KMC screen and explanation 
+**Note:** Do not use a KMC user for this purpose, because a KMC user has unrestricted content access.
+
+To create the user, open the KMC, go to the Administration tab, select the Users tab, click **Add User**, and fill in the details in the Add User window.
+
+**A role with required privileges**
+
+The role determines the allowed actions that this Application Token user will be allowed to perform. Common role permissions are listed in the table under the **Relevant Roles** section below. It is recommended to create a role for each type of Application Token. This way, roles may be changed independently later without affecting other system components or other Tokens. To create
+
+**Note:** This role dictates the use case, since it tells the API which role to call; therefore, verify that you've set up the role according to your current needs.
+
+To set the roles, select a **User Role** from the drop-down menu. To create a custom role, **Add Role**, enter the role name and description, then and select the relevant set of permissions in the Add Role window. You can select which KMC functionalities are available to users with the defined role. Clicking the checkmark next to each permission group name will toggle the permission level for the specific KMC functionality to the following modes:
+
+* Full Permission (checked) – Grants access to all KMC functionalities listed under the permission group.
+* View-Only Permission (partially checked) –Only part of the functionality listed in the group is selected.
+* No Permission (unchecked) – No access to the KMC pages that are relevant to the KMC functionalities listed under the permission group.
+
 **Note:** To view the ID of the role created, you'll need to use the userRole API.
 
-3. **A hashing function:** The default and recommended hashing function associated with an Application Token is SHA1. This type of hash function is available to all developers. Because Application Token hashes are salted, it does not pose a security risk. Clients with specific security requirements may select MD5, SHA-256, and SHA-512 functions.
+**A hashing function** 
+
+The default and recommended hashing function associated with an Application Token is SHA1. This type of hash function is available to all developers. Because Application Token hashes are salted, it does not pose a security risk. Clients with specific security requirements may select MD5, SHA-256, and SHA-512 functions.
 
 After deciding about these three issues, you're ready to call the API.
 
@@ -34,8 +51,6 @@ After deciding about these three issues, you're ready to call the API.
 4.	Supply the customer with the ID, the value of the token, and hashType as per the following information:
 
 sessionPrivileges: list:*,enableentitlement,privacycontext:MediaSpace_privacy_context,setrole:role_id.
-
-THIS ROLE Dictates the use case - tells the API which role to call...
 
 **Note:** The required permissions depend on the application for which the Application Token is being created. For an administrative application, you may want to use of the Operator, Manager, or Administrator roles, which include permissions to all methods. If you are creating a custom limited role, you may want to remove the ‘User’ role that is associated automatically with the user when the user is created (in step 1 above).
 
@@ -61,4 +76,3 @@ Note that roles can be either for viewing alone (read-only) or for editing as we
 | status  | int | X         | The Application Token status, which can be: Disabled =1, Active = 2, Deleted = 3 |
 | token  | string | X         |	The application token generated by the system. | 
 | sessionUserId  | string | V         |	User ID of the KS that was created using the current token  | 
-
