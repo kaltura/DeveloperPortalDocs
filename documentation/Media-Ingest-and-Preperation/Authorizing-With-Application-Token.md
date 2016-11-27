@@ -1,3 +1,4 @@
+test
 ---
 layout: page
 title: Authorizing with an Application Token
@@ -14,7 +15,8 @@ This article details how to build a KS token from an Application Token. The rele
 3. Request a privileged KS token by passing the authorization bundle to the appToken.startSession API call (see Table 2 below). This will return a privileged KS that you can use to make other API calls.
 4. Use the KS to make other API calls.
 
-(![Application Token Authorization Workflow](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/Media-Ingest-and-Preperation/application_token.png)). 
+(![Application Token Authorization Workflow](./Media-Ingest-and-Preperation/application_token.png)
+(https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/Media-Ingest-and-Preperation/application_token.png)). 
  
 ### Table 1. session.startWidgetSession  
 
