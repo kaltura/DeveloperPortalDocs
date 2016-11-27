@@ -36,9 +36,9 @@ The role determines the allowed actions that this Application Token user will be
 2. Enter the role name and description, then and select the relevant set of permissions in the Add Role window. You can select which KMC functionalities are available to users with the defined role. 
 3. Clicking the checkmark next to each permission group name will toggle the permission level for the specific KMC functionality according to the following modes:
 
-* Full Permission (checked) – Grants access to all KMC functionalities listed under the permission group.
-* View-Only Permission (partially checked) – Only part of the functionality listed in the group is selected.
-* No Permission (cleared) – No access to the KMC pages that are relevant to the KMC functionalities listed under the permission group.
+ * Full Permission (checked) – Grants access to all KMC functionalities listed under the permission group.
+ * View-Only Permission (partially checked) – Only part of the functionality listed in the group is selected.
+ * No Permission (cleared) – No access to the KMC pages that are relevant to the KMC functionalities listed under the permission group.
 
 (![Setting Role Permissions](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/Media-Ingest-and-Preperation/roles2.PNG)).
 
