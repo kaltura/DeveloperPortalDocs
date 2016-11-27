@@ -10,14 +10,13 @@ weight: 150
 
 An Application Token enables clients to provide their development partners or internal technical teams with restricted access to the Kaltura API. Each Application Token restricts the API methods that may be called by its users, and can allow restricted content access for clients who use entitlements (e.g., restricted access to MediaSpace content).
 
-Developers who are provided with an Application Token will use it to create temporary Kaltura Session (KS) tokens, which they will then use to access API functions. These KS tokens will have the restrictions of their originating Application Token. The documentation for how to create a KS from an Application Token can be found in this [article](https://knowledge.kaltura.com/node/1280).
+Developers who are provided with an Application Token use it to create temporary Kaltura Session (KS) tokens, which they will then use to access API functions. These KS tokens will have the restrictions of their originating Application Token. The documentation for how to create a KS from an Application Token can be found in this [article](https://knowledge.kaltura.com/node/1280)
 
-
-### Application Token Design  
+## Application Token Design  
 
 The following three attributes are built into the Application Token:
 
-**A user with the desired content permissions** 
+### User with the Desired Content Permissions   
 
 Accounts with entitlements may use a "service user" to restrict the content access permissions of the Appliation Token. You may create a new user, or use an existing user entity (such as a MediaSpace user). This user entity must be correctly permissioned with entitlements to the Channels or categories that you want to provide your development partners.
 
@@ -27,16 +26,13 @@ To create the user, open the KMC, go to the Administration tab, select the Users
 
  (![Add User Window](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/Media-Ingest-and-Preperation/adduser.PNG)). 
 
-**A role with required privileges**
+## Role with the Required Privileges  
 
-The role determines the allowed actions that this Application Token user will be allowed to perform. Common role permissions are listed in the table under the **Relevant Roles** section below. It is recommended to create a role for each type of Application Token. This way, roles may be changed independently later without affecting other system components or other Tokens. To create
+The role determines the allowed actions that this Application Token user will be allowed to perform. Common role permissions are listed in the table under the **Relevant Roles** section below. It is recommended to create a role for each type of Application Token. This way, roles may be changed independently later without affecting other system components or other Tokens.
 
 **Note:** This role dictates the use case, since it tells the API which role to call; therefore, verify that you've set up the role according to your current needs.
 
-1. To set the role, in the Add User window, select **Add Role**. 
-
-(![Add Role](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/Media-Ingest-and-Preperation/roles1.PNG)). 
-
+1. To set the role, in the Add User window, select **Add Role**. (![Add Role](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/Media-Ingest-and-Preperation/roles1.PNG)). 
 2. Enter the role name and description, then and select the relevant set of permissions in the Add Role window. You can select which KMC functionalities are available to users with the defined role. 
 3. Clicking the checkmark next to each permission group name will toggle the permission level for the specific KMC functionality according to the following modes:
 
@@ -44,13 +40,13 @@ The role determines the allowed actions that this Application Token user will be
 * View-Only Permission (partially checked) – Only part of the functionality listed in the group is selected.
 * No Permission (cleared) – No access to the KMC pages that are relevant to the KMC functionalities listed under the permission group.
 
- (![Setting Role Permissions](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/Media-Ingest-and-Preperation/roles2.PNG)).
- 
-4. When done, save your changes.
+(![Setting Role Permissions](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/Media-Ingest-and-Preperation/roles2.PNG)).
+
+When done, save your changes.
 
 **Note:** To view the ID of the role created, you'll need to use the userRole API.
 
-**A hashing function** 
+### Hashing Function  
 
 The default and recommended hashing function associated with an Application Token is SHA1. This type of hash function is available to all developers. Because Application Token hashes are salted, it does not pose a security risk. Clients with specific security requirements may select MD5, SHA-256, and SHA-512 functions.
 
