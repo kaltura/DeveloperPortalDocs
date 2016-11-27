@@ -8,9 +8,9 @@ weight: 150
 
 ## Overview  
 
-An Application Token enables clients to provide their development partners or internal technical teams with restricted access to the Kaltura API. Each Application Token restricts the API methods that may be called by its users, and can allow restricted content access for clients who use entitlements (e.g. restricted access to MediaSpace content).
+An Application Token enables clients to provide their development partners or internal technical teams with restricted access to the Kaltura API. Each Application Token restricts the API methods that may be called by its users, and can allow restricted content access for clients who use entitlements (e.g., restricted access to MediaSpace content).
 
-Developers who are provided with an Application Token will use it to create temporary Kaltura Session (KS) tokens, which they will then use to access API functions. These KS tokens will have the restrictions of their originating Application Token. The documentation for how to create a KS from an Application Token can be found here: XXXXXXX.
+Developers who are provided with an Application Token will use it to create temporary Kaltura Session (KS) tokens, which they will then use to access API functions. These KS tokens will have the restrictions of their originating Application Token. The documentation for how to create a KS from an Application Token can be found in this [article](https://knowledge.kaltura.com/node/1280).
 
 
 ### Application Token Design  
@@ -30,11 +30,8 @@ After deciding about these three issues, you're ready to call the API.
 1.	Using the Kaltura API for creating users (api_v3/service/user/action/register), create a user that represents the application.
 2.	Next, associate the user with a role that has the required application permissions (or create a new role if none exists) using the addRole API (api_v3/service/user/action/addRole). See role considerations above for more information about role association.
 3.	Create an Application Token for the user by using the following API: /api/service/appToken/action/add.
-4.	Supply the customer with the ID, the value of the token, and hashType as per the following tables.
-
-FIX THIS LAYOUT
-|sessionPrivileges|
-|list:*,enableentitlement,privacycontext:MediaSpace_privacy_context,setrole:role_id|
+4.	Supply the customer with the ID, the value of the token, and hashType as per the following information:
+sessionPrivileges: list:*,enableentitlement,privacycontext:MediaSpace_privacy_context,setrole:role_id.
 
 THIS ROLE Dictates the use case - tells the API which role to call...
 
