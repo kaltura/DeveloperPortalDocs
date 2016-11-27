@@ -15,13 +15,14 @@ Developers who are provided with an Application Token will use it to create temp
 
 ### Application Token Design  
 
-Three attributes are built into the Application Token:
+The following three attributes are built into the Application Token:
 
 1. **A user with the desired content permissions:** Accounts with entitlements may use a "service user" to restrict the content access permissions of the Appliation Token. You may create a new user, or use an existing user entity (such as a MediaSpace user). This user entity must be correctly permissioned with entitlements to the Channels or categories that you want to provide your development partners. *Do not use a KMC user for this purpose, as a KMC user has unrestricted content access.*
 
 2. **An API privileges "role":** The role determines the set of API actions that this Application Token will be allowed to perform. Common role permissions are listed in Table X below. It is recommended to create a role for each type of Application Token. This way, roles may be changed independently later without affecting other system components or other Tokens.
 
-[Change #2 to KMC screen and explanation - KMC doesn't show the ID Of the role still need the Role API to get the ID...}
+[Change #2 to KMC screen and explanation 
+**Note:** To view the ID of the role created, you'll need to use the userRole API.
 
 3. **A hashing function:** The default and recommended hashing function associated with an Application Token is SHA1. This type of hash function is available to all developers. Because Application Token hashes are salted, it does not pose a security risk. Clients with specific security requirements may select MD5, SHA-256, and SHA-512 functions.
 
@@ -31,6 +32,7 @@ After deciding about these three issues, you're ready to call the API.
 2.	Next, associate the user with a role that has the required application permissions (or create a new role if none exists) using the addRole API (api_v3/service/user/action/addRole). See role considerations above for more information about role association.
 3.	Create an Application Token for the user by using the following API: /api/service/appToken/action/add.
 4.	Supply the customer with the ID, the value of the token, and hashType as per the following information:
+
 sessionPrivileges: list:*,enableentitlement,privacycontext:MediaSpace_privacy_context,setrole:role_id.
 
 THIS ROLE Dictates the use case - tells the API which role to call...
