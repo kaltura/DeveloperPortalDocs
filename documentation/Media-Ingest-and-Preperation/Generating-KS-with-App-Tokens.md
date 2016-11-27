@@ -1,4 +1,3 @@
-test
 ---
 layout: page
 title: Generating Kaltura Sessions with Application Tokens
@@ -11,11 +10,11 @@ Your application will use permanent Application Tokens to generate temporary KS 
 
 ## How to Create an Application Token  
 
-The Application Token will need to be created by an administrator (or Kaltura professional services provider), which you'll then use to generate temporary Kaltura Sessions. The Application Token is comprised of an its ID (ApplicationToken.id) and token (ApplicationToken.token). 
+The Application Token will need to be created by an administrator (or Kaltura professional services provider), which you'll then use to generate temporary KSs. The Application Token is comprised of an ID (ApplicationToken.id) and token (ApplicationToken.token). 
 
-It is preconfigured with a maximum session length, a set of content entitlements (Channel access permissions), and API access privileges. The temporary session tokens that the Application Token is used for generating will inherit these preconfigured properties. You will also be told which hash function to use when working with the Application Token (the default is SHA1, but MD5, SHA-256, and others are also available).
+The Application Token is preconfigured with a maximum session length, a set of content entitlements (Channel access permissions), and API access privileges. The temporary session tokens generated using the Application Token will inherit these preconfigured properties. You'll also be told which hash function to use when working with the Application Token (the default is SHA1, but MD5, SHA-256, and others are also available).
 
-Once the Application Token user has been created, your developer can then build a KS token from an Application Token. See the next articles for details:
+After creating the Application Token user, your developer can then build a KS token from an Application Token. See the next articles for details:
 
 * [Creating an Application Token User](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/Media-Ingest-and-Preperation/Account-Representative-Steps.md)
 * [Authorizing with an Application Token](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/Media-Ingest-and-Preperation/Authorizing-With-Application-Token.md)
@@ -24,4 +23,4 @@ Once the Application Token user has been created, your developer can then build 
 
 * The Application Token and all of its attributes must be securely stored on your backend. It must never be coded into an end-user application.
 * The Application Token must never be sent to the Kaltura API. Instead, send the authorization bundle, which includes the Application Token hashed with a salt.
-* If the Application Token is compromised, notify your technical account representative right away. The Application Token can be deactivated, which will also deactivate any KS tokens it was used to generate.
+* If the Application Token is compromised, notify your Kaltura technical account representative right away. The Application Token can be deactivated, which will also deactivate any KS tokens it was used to generate.
