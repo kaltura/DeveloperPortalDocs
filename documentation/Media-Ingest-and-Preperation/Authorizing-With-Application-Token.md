@@ -1,4 +1,3 @@
-test
 ---
 layout: page
 title: Authorizing with an Application Token
