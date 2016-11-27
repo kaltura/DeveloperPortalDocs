@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Authorizing with an Application Token
-subcat: AppToken Steps
+subcat: Application Token Steps
 weight: 151
 ---
 
