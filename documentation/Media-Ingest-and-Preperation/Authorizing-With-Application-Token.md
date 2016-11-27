@@ -8,9 +8,11 @@ weight: 151
 
 This article details how to build a KS token from an Application Token. The relevant API call details are provided in Tables 1 and 2 below.
 
-1. Request an unprivileged KS token ("widget session") using session.getWidgetSession API call (see Table 1). This will return an unprivileged widget session to use in Step 2.
-2. Create an authorization bundle by concatenating the widget session and the Application Token's token and then performing a hash of the resulting string: HASH(widgetSession + ApplicationToken.token).
-3. Request a privileged KS token by passing the authorization bundle to the appToken.startSession API call (see Table 2). This will return a privileged KS that you can use to make other API calls.
+**Required Steps**
+
+1. Request an unprivileged KS token ("widget session") using the session.getWidgetSession API call (see Table 1 below). This will return an unprivileged widget session to use in Step 2.
+2. Next, create an authorization bundle by concatenating the widget session and the Application Token's token and then performing a hash of the resulting string: HASH(widgetSession + ApplicationToken.token).
+3. Request a privileged KS token by passing the authorization bundle to the appToken.startSession API call (see Table 2 below). This will return a privileged KS that you can use to make other API calls.
 4. Use the KS to make other API calls.
 
 **Figure 1. Application Token Authorization Workflow**
