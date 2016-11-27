@@ -25,17 +25,28 @@ Accounts with entitlements may use a "service user" to restrict the content acce
 
 To create the user, open the KMC, go to the Administration tab, select the Users tab, click **Add User**, and fill in the details in the Add User window.
 
+ (![Add User Window](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/Media-Ingest-and-Preperation/adduser.PNG)). 
+
 **A role with required privileges**
 
 The role determines the allowed actions that this Application Token user will be allowed to perform. Common role permissions are listed in the table under the **Relevant Roles** section below. It is recommended to create a role for each type of Application Token. This way, roles may be changed independently later without affecting other system components or other Tokens. To create
 
 **Note:** This role dictates the use case, since it tells the API which role to call; therefore, verify that you've set up the role according to your current needs.
 
-To set the roles, select a **User Role** from the drop-down menu. To create a custom role, **Add Role**, enter the role name and description, then and select the relevant set of permissions in the Add Role window. You can select which KMC functionalities are available to users with the defined role. Clicking the checkmark next to each permission group name will toggle the permission level for the specific KMC functionality according to the following modes:
+1. To set the role, in the Add User window, select **Add Role**. 
+
+(![Add Role](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/Media-Ingest-and-Preperation/roles1.PNG)). 
+
+2. Enter the role name and description, then and select the relevant set of permissions in the Add Role window. You can select which KMC functionalities are available to users with the defined role. 
+3. Clicking the checkmark next to each permission group name will toggle the permission level for the specific KMC functionality according to the following modes:
 
 * Full Permission (checked) – Grants access to all KMC functionalities listed under the permission group.
 * View-Only Permission (partially checked) – Only part of the functionality listed in the group is selected.
 * No Permission (cleared) – No access to the KMC pages that are relevant to the KMC functionalities listed under the permission group.
+
+ (![Setting Role Permissions](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/Media-Ingest-and-Preperation/roles2.PNG)).
+ 
+4. When done, save your changes.
 
 **Note:** To view the ID of the role created, you'll need to use the userRole API.
 
