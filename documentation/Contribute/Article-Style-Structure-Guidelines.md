@@ -76,8 +76,16 @@ You can also use: [TablesGenerator.com](http://www.tablesgenerator.com/markdown_
 
 ## Adding Images
 
-Use the standard Markdown notation for images (`![Alt Text](url)`).  
+Use the standard Markdown notation for images (`![Alt Text](url)`), for example: ![settings.gradle](./images/settings.gradle.png).  
 Please always ensure that a descriptive Alt text is specified on your image to ensure compatability with screen readers and better search indexing.  
+
+### Adding an Image Folder
+
+1. Go to the folder inside which you want to create another folder.
+2. Add a new file.
+3. In the text field for the file name, first write the folder name you want to create and then type / , to create the folder.
+4. Commit the new file.
+
 
 ## Adding Diagrams
 &#123;% plantuml %&#125;
