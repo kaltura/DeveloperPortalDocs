@@ -16,8 +16,8 @@ The Application Token is preconfigured with a maximum session length, a set of c
 
 After creating the Application Token user, your developer can then build a KS token from an Application Token. See the next articles for details:
 
-* [Creating an Application Token User](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/Media-Ingest-and-Preperation/Account-Representative-Steps.md)
-* [Authorizing with an Application Token](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/Media-Ingest-and-Preperation/Authorizing-With-Application-Token.md)
+* [Creating an Application Token User](https://vpaas.kaltura.com/documentation/Media-Ingest-and-Preperation/Account-Representative-Steps.html)
+* [Authorizing with an Application Token](https://vpaas.kaltura.com/documentation/Media-Ingest-and-Preperation/Authorizing-With-Application-Token.html)
 
 ## Security Considerations  
 
