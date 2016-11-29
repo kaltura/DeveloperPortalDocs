@@ -1,4 +1,3 @@
-test
 ---
 layout: page
 title: Creating an Application Token User
