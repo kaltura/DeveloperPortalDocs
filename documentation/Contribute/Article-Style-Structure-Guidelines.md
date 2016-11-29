@@ -76,7 +76,7 @@ You can also use: [TablesGenerator.com](http://www.tablesgenerator.com/markdown_
 
 ## Adding Images
 
-Use the standard Markdown notation for images (`![Alt Text](url)`), for example: ![settings.gradle](./images/settings.gradle.png).  
+Use the standard Markdown notation for images (`![Alt Text](url)`).  
 Please always ensure that a descriptive Alt text is specified on your image to ensure compatability with screen readers and better search indexing.  
 
 ### Adding an Image Folder
