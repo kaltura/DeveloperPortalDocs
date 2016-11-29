@@ -24,7 +24,8 @@ Accounts with entitlements may use a "service user" to restrict the content acce
 
 To create the user, open the KMC, go to the Administration tab, select the Users tab, click **Add User**, and fill in the details in the Add User window.
 
- (![Add User Window](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/Media-Ingest-and-Preperation/adduser.PNG)). 
+![Add User Window](./images/adduser.PNG)
+
 
 ### Role with the Required Privileges  
 
@@ -32,7 +33,8 @@ The role determines the allowed actions that this Application Token user will be
 
 **Note:** This role dictates the use case, since it tells the API which role to call; therefore, verify that you've set up the role according to your current needs.
 
-1. To set the role, in the Add User window, select **Add Role**. (![Add Role](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/Media-Ingest-and-Preperation/roles1.PNG)). 
+1. To set the role, in the Add User window, select **Add Role**. 
+ ![Add Role](./images/roles1.PNG)
 2. Enter the role name and description, then and select the relevant set of permissions in the Add Role window. You can select which KMC functionalities are available to users with the defined role. 
 3. Clicking the checkmark next to each permission group name will toggle the permission level for the specific KMC functionality according to the following modes:
 
@@ -40,7 +42,8 @@ The role determines the allowed actions that this Application Token user will be
  * View-Only Permission (partially checked) – Only part of the functionality listed in the group is selected.
  * No Permission (cleared) – No access to the KMC pages that are relevant to the KMC functionalities listed under the permission group.
 
-(![Setting Role Permissions](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/Media-Ingest-and-Preperation/roles2.PNG)).
+ ![Setting Role Permissions](./images/roles2.PNG)
+
 
 When done, save your changes.
 
@@ -72,7 +75,7 @@ The most likely relevant roles to assign to users of the application Token are:
 Note that roles can be either for viewing alone (read-only) or for editing as well.
 
 | Name        | Type | Writable | Description|
-|:------------ |:------------------:|------------------:|------------------:|
+|:------------ |:------------------|:------------------|:------------------|
 | id  | strng | X         |The ID of the application token (this ID is not writable; it is returned when the token is completed).  | 
 | expiry  | int | V         |	The application token expiration. This must be provided in a UNIX timestamp format. This field is mandatory and should be set when creating the application token. | 
 | partnerId  | int | X         |	The partner identifier; this is parameter is not writable and not passed. | 
