@@ -65,3 +65,99 @@ Our Universal DRM module enables media companies, content rights owners and OTT 
 
 
 
+The Kaltura Player leads the industry in flexibility, ease of customization, plug-in offerings and loading speed. 
+
+Every feature is supported for both both HTML5 and Flash with the same configuration, bringing unparalleled ease of feature integration across platforms. We invite to explore the vast feature set of the Kaltura Player on your Tablets and Mobile Devices, and use the HTML5 / Flash player switch tool present on almost all feature pages. 
+
+Note this site does not represent every feature available for the Kalura player. 
+
+Multi-Platform Support
+Our HTML5 video library provides you with the most advanced mobile delivery technology stack available today. Our smart-player technology delivers the right player, stream, and advertising to the right device anywhere, with just a single embed code. 
+
+You can extend the functionality of both Flash and HTML5 players with our Unified development API.
+
+Check out the detailed feature chart for what features are supported in what platforms.
+
+Unparalleled Robust Performance
+Our player library features an advanced resource loader developed in collaboration with Wikimedia Foundation. The resource loader supports dynamically packing of modules, features and player metadata. It minimizes, gizpis and packages, CSS, images, HTML, JavaScript, metadata, and per player features into a single non-blocking payload. This, combined with Kaltura's AutoEmbed embed code, enables the player rendering to take full advantage fetch ahead parallel JavaScript resource loading in modern browsers. This delivers fast player rendering even on sites with many other active script includes. 
+
+This means you get best in class performance of all your features, with out the delays in traditional feature rich player build out.
+
+Advertising and Analytics
+Kalturas flexible player platform integrates with all the major Ad networks and Analytics providers. Kaltura supports a wide range of video ad formats including VAST 3.0, and integrated plugins for numerous video ad networks, such as Google DoubleClick DFP,FreeWheel, Ad Tech, Eye Wonder, AdapTV, Tremor Video and more. This enables you to target viewers with ads on VOD or live videos, across multiple devices including mobile, PC’s, and set-top-boxes. 
+
+Every Kaltura account includes analytics fully integrated into the Kaltura platform. Additionally Kaltura supports integrations with numerous analytics providers such as Google Analytics, Nielsen Video Census, Nielsen Combined, Comscore and Omniture SiteCatalyst 15. 
+
+Kalturas robust set of partners shortens time to market on integrating with your Ad and Anlytics partners. See a high level overview of Ad features
+
+Player Studio & Templates
+You can easily create customized cross browser/cross device players in the Kaltura player Studio from a variety of great looking, light-weight video player templates.
+See working template examples »
+More technical users can leverage the player APIs, or even modify the fully open source framework directly.
+See the player developer resources section.
+
+ 
+Customer Player Samples
+The KDP can be modified with the Studio, with the UIconf or with the API. See examples of how our customers have themselves (or in collaboration with Kaltura) made their player unique to their brand and business.
+Read more »
+
+ 
+ 
+ 
+Introducing the Player Toolkit
+The Kaltura Player Toolkit enables users to lead video delivery with HTML5 and provide the fastest viewing experience on any device, while maintaining all the same features and a consistent CSS/HTML player design. Kaltura Players v2 enable delivery of HTML5 with Chromeless components for Flash, iOS and Android.
+ 
+The key advantages of the Kaltura Players v2 are:
+•	High performance full featured lead with HTML5
+Most players display in 1 second or less.
+•	Skins configured once with standard HTML / CSS
+•	Better support for additional platforms; iOS and Android player components.
+•	Support for all features across multiple platforms: See player.kaltura.com.
+Technical Overview
+ 
+Basic Look and Feel of the Kaltura Player v2
+The following illustrates the basic look and feel of the Kaltura Player v2.
+ 
+Mouse Over Scrubber
+•	Thumbnails display on playhead scrubbing on mouse over.
+ 
+Responsive Player Layout
+•	Thumb up/down rating
+•	Smaller players / screens keep important controls. 
+ 
+Improved Related Videos Experience
+•	Enhanced related videos interface
+•	Flexible options for related video fulfillment
+•	Events for tracking conversion/retainment
+ 
+Playlists and Chapters
+•	Flexible HTML plugins for playlists and chapters with support for inheriting site styles
+ 
+Improved Adaptive Streaming Support
+•	Chromeless Flash HLS
+o	Supports HLS on desktop browsers for simplified live broadcast ad stitching workflows
+•	MPEG-DASH
+o	Encrypted Media Extension support web delivery of DRM and content control
+o	Multi-track audio
+o	More detailed analytics on quality of services metrics
+o	Note: The browsers that are projected to support MPEG DASH: IE 11 (Windows, Xbox, phone;) Chrome (Desktop & Android), Firefox (Desktop)
+ 
+Improved Share Interface In Player or On Page
+•	Robust Configurable Share Options
+o	Support for sharing specific time offsets
+o	iframe or Flash object embed options
+o	Deep linking to specific URLs for each video: (example: myDomain.com/videos/{entryid}
+  
+Improved Accessibility: 508 and WebVTT
+•	Industry leading 508 support
+•	508 by default – all new framework players include 508 compliant features
+•	Integrated framework for making all new plugins accessible
+•	Uses HTML for controls: offers more integrated accessible features than Flash players
+iOS, Android, HTML, Flash all in One
+•	Maximize ROI on your distribution strategy across native apps and web views. 
+•	Architecture for reusable plugins and configuration across platforms
+•	Seamlessly integrate advanced live broadcasts streaming and DRM 
+ 
+
+
+
