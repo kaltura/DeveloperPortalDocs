@@ -22,6 +22,10 @@ Here are some of the key advantages of the Kaltura Web Player:
 
 Adding video to your website is a great way to interact with your audience. Our lightweight embed codes enable you to add videos to your website quickly and easily; simply prepare the videos, generate the embed code, and then embed them into your website using Kaltura's embedding capabilities. 
 
+To learn more about embedding, read [this](https://knowledge.kaltura.com/node/219) article.
+
+### Embed Code Types  
+
 Kaltura's Web Player supports the following embed code types:
 
 * **Dynamic:** Dynamic embed has many benefits over object tag or Flash library rewrites; it's fast, doesn't have to wait for DOM, and ready to output the Flash or HTML5 player. This embed is also clean, uses json embed config for flashvars and params dynamic, better supports dynamic html5 and flash embed methods, responsive web design, and css inheritance.
@@ -31,7 +35,7 @@ Kaltura's Web Player supports the following embed code types:
 * **Reference Id:** The reference ID is used for setting a custom ID for Kaltura entry.
 * **kWidget playlist:** kWidgets make it easy to embed playlists, by simply passing along playlist plugin configuration as flashvars.
 
-To learn more about how to embed videos, read [this](http://player.kaltura.com/docs/PlayerRules) article.
+To learn more about supported embed types, read [this](http://player.kaltura.com/docs/PlayerRules) article.
 
 ### Easy to Integrate  
 
