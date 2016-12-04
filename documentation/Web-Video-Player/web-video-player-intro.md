@@ -16,6 +16,8 @@ Kaltura's Web Player leads the industry in flexibility, ease of customization, p
 
 The easiest way to use Kaltura's Web Player is to build a player using [Kaltura's Universal Studio](https://knowledge.kaltura.com/node/1148), which provides a user-friendly UI for building and customizing the player. 
 
+2.	I think the order should be turned around… things like DRM should be last, Embed should be first… and also there’s a whole doc about Embed, so just link to it.
+
 Here are some of the key advantages of the Kaltura Web Player:
 
 ### Easy to Implement  
@@ -30,19 +32,23 @@ Our multi-platform support ensures easy integration for iOS and Android player c
 
 The player is easily customized, enabling you to configure skins once using standard HTML / CSS. In addition, you can create customized cross-browser/cross-device players in the Kaltura Player Studio from a variety of easy-to-configure player templates.
 
-### Built-in Advertising and Analytics  
+### Built-in Advertising Support  
 
-The player’s built-in advertising and analytics provides support for a wide range of video ad formats and integrated plugins. In addition, the related videos experience includes an enhanced related video interface, flexible options for related video fulfillment, and events for tracking conversion and retainment.
+The player’s built-in advertising provides support for a wide range of video ad formats and integrated plugins. In addition, the related videos experience includes an enhanced related video interface and flexible options for related video fulfillment.
 
-### Universal Digital Rights Management (DRM)  
+### Enhanced Analytics Capabilities  
 
-Our Universal DRM module enables media companies, content rights owners and OTT providers to stream premium content without needing to worry about which browser, device or platform is being used. 
+The player's analytics capabilities provide you with the  insight you need to manage your content, reach your audience, and optimize your workflow, as well as the ability to track conversion and retainment.
 
 ### Advanced Live Broadcast Streaming and DRM  
 
 Kaltura's Web Player is designed to ensure seamless integration of advanced live broadcasts streaming and DRM.
 
 To learn more, visit [Kaltura's Player site](http://player.kaltura.com/docs/).
+
+### Universal Digital Rights Management (DRM)  
+
+Our Universal DRM module enables media companies, content rights owners and OTT providers to stream premium content without needing to worry about which browser, device or platform is being used. 
 
 
 ## Embedding Video on Your Website  
