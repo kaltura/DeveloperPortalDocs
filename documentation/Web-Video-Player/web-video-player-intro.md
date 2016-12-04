@@ -16,13 +16,22 @@ Kaltura's Web Player leads the industry in flexibility, ease of customization, p
 
 The easiest way to use Kaltura's Web Player is to build a player using [Kaltura's Universal Studio](https://knowledge.kaltura.com/node/1148), which provides a user-friendly UI for building and customizing the player. 
 
-2.	I think the order should be turned around… things like DRM should be last, Embed should be first… and also there’s a whole doc about Embed, so just link to it.
-
 Here are some of the key advantages of the Kaltura Web Player:
 
-### Easy to Implement  
+## Easy to Implement Video Embedding    
 
-Our lightweight embed codes enable you to add videos to your website quickly and easily.
+Adding video to your website is a great way to interact with your audience. Our lightweight embed codes enable you to add videos to your website quickly and easily; simply prepare the videos, generate the embed code, and then embed them into your website using Kaltura's embedding capabilities. 
+
+Kaltura's Web Player supports the following embed code types:
+
+* **Dynamic:** Dynamic embed has many benefits over object tag or Flash library rewrites; it's fast, doesn't have to wait for DOM, and ready to output the Flash or HTML5 player. This embed is also clean, uses json embed config for flashvars and params dynamic, better supports dynamic html5 and flash embed methods, responsive web design, and css inheritance.
+* **Auto:** This type of embed is best for sites where SEO is already covered by other data in the page. This concise Auto embed code is good for quickly getting a player or widget onto the page without any runtime customisations.
+* **Thumbnail:** The thumbnail embed method takes the same arguments as "kWidget.embed".This embed will pass all configurations to the kWidget embed when the user "clicks" the play button. The player context menu can be disabled by setting the "EmbedPlayer.DisableContextMenu" UIVar to true.
+* **Responsive:** This embed ensures that the video ratio on the screen responds to sizing changes. The minimal RWD self contained maintains a 16/9 ratio, even when you resize the browser window.
+* **Reference Id:** The reference ID is used for setting a custom ID for Kaltura entry.
+* **kWidget playlist:** kWidgets make it easy to embed playlists, by simply passing along playlist plugin configuration as flashvars.
+
+To learn more about how to embed videos, read [this](http://player.kaltura.com/docs/PlayerRules) article.
 
 ### Easy to Integrate  
 
@@ -51,27 +60,4 @@ To learn more, visit [Kaltura's Player site](http://player.kaltura.com/docs/).
 Our Universal DRM module enables media companies, content rights owners and OTT providers to stream premium content without needing to worry about which browser, device or platform is being used. 
 
 
-## Embedding Video on Your Website  
 
-Adding video on your website is a great way to interact with your audience. To add videos, you'll need to embed them into your website using Kaltura's embedding capabilities.
-
-### Preparing Your Videos  
-
-First thing's first: prepare and customize your video (although you can customize the video after you embed it, using the Universal Player Studio), then upload it.
-
-### Generate an Embed Code  
-
-The embed code is simply a piece of code that you can use to add content to your site. To generate an embed code, copy the embed code for the video (or the URL) by choosing the Embed button and copying the iframe code. If you're using KMC, use the **Preview & Embed** function from the *Select Action* list. Then, click **Copy** to copy the code, or select the URL and copy it.
-
-### Embed Code Types  
-
-Which kinds of embedding can you use? Kaltura's Player supports these embed code types:
-
-* **Dynamic:** Dynamic embed has many benefits over object tag or Flash library rewrites; it's fast, doesn't have to wait for DOM, and ready to output the Flash or HTML5 player. This embed is also clean, uses json embed config for flashvars and params dynamic, better supports dynamic html5 and flash embed methods, responsive web design, and css inheritance.
-* **Auto:** This type of embed is best for sites where SEO is already covered by other data in the page. This concise Auto embed code is good for quickly getting a player or widget onto the page without any runtime customisations.
-* **Thumbnail:** The thumbnail embed method takes the same arguments as "kWidget.embed".This embed will pass all configurations to the kWidget embed when the user "clicks" the play button. The player context menu can be disabled by setting the "EmbedPlayer.DisableContextMenu" UIVar to true.
-* **Responsive:** This embed ensures that the video ratio on the screen responds to sizing changes. The minimal RWD self contained maintains a 16/9 ratio, even when you resize the browser window.
-* **Reference Id:** The reference ID is used for setting a custom ID for Kaltura entry.
-* **kWidget playlist:** kWidgets make it easy to embed playlists, by simply passing along playlist plugin configuration as flashvars.
-
-To learn more about how to embed videos, read [this](http://player.kaltura.com/docs/PlayerRules) article.
