@@ -64,17 +64,10 @@ To learn more, visit [Kaltura's Player site](http://player.kaltura.com/docs/).
 Our Universal DRM module enables media companies, content rights owners and OTT providers to stream premium content without needing to worry about which browser, device or platform is being used. 
 
 
-
-The Kaltura Player leads the industry in flexibility, ease of customization, plug-in offerings and loading speed. 
-
-Every feature is supported for both both HTML5 and Flash with the same configuration, bringing unparalleled ease of feature integration across platforms. We invite to explore the vast feature set of the Kaltura Player on your Tablets and Mobile Devices, and use the HTML5 / Flash player switch tool present on almost all feature pages. 
-
-Note this site does not represent every feature available for the Kalura player. 
-
 Multi-Platform Support
 Our HTML5 video library provides you with the most advanced mobile delivery technology stack available today. Our smart-player technology delivers the right player, stream, and advertising to the right device anywhere, with just a single embed code. 
 
-You can extend the functionality of both Flash and HTML5 players with our Unified development API.
+In addition, you can extend the functionality of both Flash and HTML5 players with our Unified development API.
 
 Check out the detailed feature chart for what features are supported in what platforms.
 
