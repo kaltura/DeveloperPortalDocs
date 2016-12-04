@@ -22,7 +22,7 @@ Here are some of the key advantages of the Kaltura Web Player:
 
 Adding video to your website is a great way to interact with your audience. Our lightweight embed codes enable you to add videos to your website quickly and easily; simply prepare the videos, generate the embed code, and then embed them into your website using Kaltura's embedding capabilities. 
 
-To learn more about embedding, read [this](https://knowledge.kaltura.com/node/219) article.
+To learn more about embedding, read [this](https://knowledge.kaltura.com/node/1148) article.
 
 ### Embed Code Types  
 
