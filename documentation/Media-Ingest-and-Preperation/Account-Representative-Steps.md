@@ -23,7 +23,7 @@ Accounts with entitlements may use a "service user" to restrict the content acce
 
 To create the user, open MediaSpace Admin, select the Manage Users tab, and click **Add User**. Fill in the details in the Add User window (the service user will never need to login, so use the Password Generator to create a difficult password for it). Once the user is created, give it permission to Channels and Galleries (or categories) using MediaSpace Channel Manager, or KMC Entitlements Manager. These permissions will be passedd to the Application Token.
 
-![Add User Window](./images/adduser.png)
+![Add User Window](./images/adduser1.png)
 
 
 ### Role with the Required API Permissions  
