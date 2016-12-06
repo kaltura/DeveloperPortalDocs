@@ -28,4 +28,4 @@ After creating the Application Token user, your developer can then build a KS to
 ## Learn More  
 
 * To learn more about creating Application Tokens, check out [this](https://developer.kaltura.com/recipes/app_tokens#/start) code recipe.
-* To learn about creating Application Tokens with Kaltura API, see (https://developer.kaltura.com/api-docs/#/appToken).
+* To learn about creating Application Tokens with Kaltura API, see https://developer.kaltura.com/api-docs/#/appToken.
