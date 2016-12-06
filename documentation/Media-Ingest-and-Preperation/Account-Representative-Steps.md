@@ -21,67 +21,78 @@ Accounts with entitlements may use a "service user" to restrict the content acce
 
 **Note:** Do not use a KMC user for this purpose, because a KMC user has unrestricted content access.
 
-To create the user, open the KMC, go to the Administration tab, select the Users tab, click **Add User**, and fill in the details in the Add User window.
+To create the user, open MediaSpace Admin, select the Manage Users tab, and click **Add User**. Fill in the details in the Add User window (the service user will never need to login, so use the Password Generator to create a difficult password for it). Once the user is created, give it permission to Channels and Galleries (or categories) using MediaSpace Channel Manager, or KMC Entitlements Manager. These permissions will be passedd to the Application Token.
 
 ![Add User Window](./images/adduser.PNG)
 
 
 ### Role with the Required Privileges  
 
-The role determines the allowed actions that this Application Token user will be allowed to perform. Common role permissions are listed in the table under the **Relevant Roles** section below. It is recommended to create a role for each type of Application Token. This way, roles may be changed independently later without affecting other system components or other Tokens.
+The role determines the allowed API actions that this Application Token will be allowed to perform. Common role permissions are listed in the table under the **Relevant Roles** section below. Roles may be changed later to add or remove actions from the Application Token.
 
 **Note:** This role dictates the use case, since it tells the API which role to call; therefore, verify that you've set up the role according to your current needs.
 
 1. To set the role, in the Add User window, select **Add Role**. 
  ![Add Role](./images/roles1.PNG)
-2. Enter the role name and description, then and select the relevant set of permissions in the Add Role window. You can select which KMC functionalities are available to users with the defined role. 
-3. Clicking the checkmark next to each permission group name will toggle the permission level for the specific KMC functionality according to the following modes:
+2. Enter the role name and description, then and select the relevant set of permissions in the Add Role window. You can select which functions are available to the role. 
+3. Clicking the checkmark next to each permission group name will toggle the permission level for the specific function, according to the following modes:
 
- * Full Permission (checked) – Grants access to all KMC functionalities listed under the permission group.
- * View-Only Permission (partially checked) – Only part of the functionality listed in the group is selected.
- * No Permission (cleared) – No access to the KMC pages that are relevant to the KMC functionalities listed under the permission group.
+ * Full Permission (checked) – Grants read-write access to the specified functionality. Includes the add/update/delete/list/get API actions for the relevant API service(s).
+ * View-Only Permission (partially checked) – Read-only (get/list) functions will be allowed. Write actions will be blocked.
+ * No Permission (cleared) – No access to the API service(s) assocaited with the listed functions.
 
  ![Setting Role Permissions](./images/roles2.PNG)
 
 
 When done, save your changes.
 
-**Note:** To view the ID of the role created, you'll need to use the userRole API.
+**Note:** You will need the ID of the newly-created role. Retrieve it using the userRole.list API action, or contact your Kaltura representative for assistance.
+
+### Permissions Line
+
+After creating the Role and Service User, you will construct the KS privileges of the Application Token.
+
+For an Application Token ***without*** MediaSpace-based permissions (or other entitlement-based permissions), use a privileges line in the form: **list:*,setrole:ROLE_ID**
+
+For an Application Token with MediaSpace-based permissions (or other entitlement-based permissions), use a privileges line in the form: **list:*,setrole:ROLE_ID,enableentitlement,privacycontext:PRIVACY_CONTEXT**. Your Privacy Context is listed in MediaSpace Admin, under the Application settings.
+
+### Expiration Date
+
+Every token will have a hardcoded expiration date. For short-lived projects, this date can be set only a few months or years into the future. It's also possible to create long-lived Application Tokens that will remain active decades into the future. Note that it's always possible to de-activate an Application Token.
+
+The Expiration Date will be set using UNIX timestamp format (Epoch time).
+
+### Session Expiration
+
+The KS generated from an Application Token has a default expiration of 24 hours. It's possible to adjust this during the creation of the Application Token to create longer- or shorter-lived sessions.
 
 ### Hashing Function  
 
 The default and recommended hashing function associated with an Application Token is SHA1. This type of hash function is available to all developers. Because Application Token hashes are salted, it does not pose a security risk. Clients with specific security requirements may select MD5, SHA-256, and SHA-512 functions.
 
-After deciding about these three issues, you're ready to call the API.
+## Application Token Creation
 
-1.	Using the Kaltura API for creating users (api_v3/service/user/action/register), create a user that represents the application.
-2.	Next, associate the user with a role that has the required application permissions (or create a new role if none exists) using the addRole API (api_v3/service/user/action/addRole). See role considerations above for more information about role association.
-3.	Create an Application Token for the user by using the following API: /api/service/appToken/action/add.
-4.	Supply the customer with the ID, the value of the token, and hashType as per the following information:
+Create the new Application Token by invoking the **add** action of the **appToken** API service. You must have an Administrator-level KS to successfully invoke the service. Based on the information above, the following parameters for the call should be prepared:
+* Permissions line (includes API restrictions via 'setrole' directive)
+* Service user (required for restricting content access)
+* Hashing function (default=SHA-1)
+* Expiration 
 
-sessionPrivileges: list:*,enableentitlement,privacycontext:MediaSpace_privacy_context,setrole:role_id.
-
-**Note:** The required permissions depend on the application for which the Application Token is being created. For an administrative application, you may want to use of the Operator, Manager, or Administrator roles, which include permissions to all methods. If you are creating a custom limited role, you may want to remove the ‘User’ role that is associated automatically with the user when the user is created (in step 1 above).
-
-## Relevant Roles  
-
-The most likely relevant roles to assign to users of the application Token are:
-
-* Content ingestion
-* Content management
-* Custom metadata
-
-Note that roles can be either for viewing alone (read-only) or for editing as well.
+Perform the call with the following parameter:
 
 | Name        | Type | Writable | Description|
 |:------------ |:------------------|:------------------|:------------------|
-| id  | strng | X         |The ID of the application token (this ID is not writable; it is returned when the token is completed).  | 
-| expiry  | int | V         |	The application token expiration. This must be provided in a UNIX timestamp format. This field is mandatory and should be set when creating the application token. | 
-| partnerId  | int | X         |	The partner identifier; this is parameter is not writable and not passed. | 
-| sessionDuration  | int | V         |	Expiry duration of KS that was created using the current token (in seconds). The standard is 72-hours (259,200 seconds). | 
-| hashType  | string | V         |	The hashType, which can be one of the following:	MD5, SHA1 (default), SHA256, SHA512| 
-| sessionPrivileges  | string | V         |	Comma separated privileges, which are defined according to the role that is assigned, and applied to a KS that was created using the current token. |
-| sessionType  | int | V         |	The type of Kaltura Session (KS) that was created using the current token, which can be: User = 0, Admin = 2. Nte that nearly all session types will be of type *user* while a small percentage will be of type *admin*.|
-| status  | int | X         | The Application Token status, which can be: Disabled =1, Active = 2, Deleted = 3 |
-| token  | string | X         |	The application token generated by the system. | 
-| sessionUserId  | string | V         |	User ID of the KS that was created using the current token  | 
+| sessionType  | int | V         |	The type of Kaltura Session (KS) that was created using the current token.This value should be set to 0 (USER-level KS) for most use cases. Use 2 (ADMIN-level KS) only for testing or advanced use cases. |
+| sessionDuration  | int | V         |	Length of time for which the KS created from this Application Token will be valid. The default is 24-hours (86400 seconds). | 
+| sessionPrivileges  | string | V         |	The privileges that will be imparted to KS generated with this Application token. |
+| sessionUserId  | string | V         |	ID of the Service User that will provide entitlements for the KS created using this Application Token.  | 
+| expiry  | int | V         |	The date and time when this Application Token will expire. This must be provided in a UNIX timestamp format (Epoch time). This field is mandatory and should be set when creating the application token. | 
+| hashType  | string | V         |	One of the following:	MD5, SHA1 (default), SHA256, SHA512| 
+
+A successful call will return a new Application Token. Make note of the following response values:
+
+| Name        | Type  | Description|
+|:------------ |:------------------|:------------------|
+| id  | string | The ID of the new Application Token.  | 
+| token  | string |	The Token value of the Application Token. | 
+| status  | int | The Application Token status, which can be: Disabled =1, Active = 2, Deleted = 3 |
