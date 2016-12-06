@@ -56,5 +56,5 @@ $widgetSession = $client->session->startWidgetSession('_PARTNER_ID'); // Note th
 $client->setKs($widgetSession->ks);
 $session = $client->appToken->startSession('INSERT_APP_TOKEN_ID', sha1($widgetSession->ks . 'INSERT_APP_TOKEN_SECRET'));
 $client->setKs($session->ks);
-// END EXAMPLE 0
+// END EXAMPLE 0```
 
