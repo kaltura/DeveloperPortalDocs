@@ -42,3 +42,19 @@ The table shows the parameters for the **startSession** action of the **appToken
 |expiry |No |N/A |This value is already set in your Application Token. Do not pass this parameter. |
  
 **This action returns	a privileged KS. Change your application's KS to this new value to make other API calls.**
+
+### Sample PHP Code  
+
+```require_once('php5/KalturaClient.php');
+$config = new KalturaConfiguration();
+$config->serviceUrl = 'https://www.kaltura.com';
+$config->method = 'GET';
+$client = new KalturaClient($config);
+
+// EXAMPLE 0 - Generate and set a KS from an App Token
+$widgetSession = $client->session->startWidgetSession('_PARTNER_ID'); // Note the leading underscore (_)
+$client->setKs($widgetSession->ks);
+$session = $client->appToken->startSession('INSERT_APP_TOKEN_ID', sha1($widgetSession->ks . 'INSERT_APP_TOKEN_SECRET'));
+$client->setKs($session->ks);
+// END EXAMPLE 0```
+
