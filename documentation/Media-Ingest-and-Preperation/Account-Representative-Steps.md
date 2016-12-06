@@ -62,7 +62,7 @@ To learn more about KS privileges, check out [this](https://knowledge.kaltura.co
 
 Every token will have a hardcoded expiration date. For short-lived projects, this date can be set only a few months or years into the future. It's also possible to create long-lived Application Tokens that will remain active decades into the future. Note that it's always possible to de-activate an Application Token.
 
-The Expiration Date will be set using UNIX timestamp format (Epoch time).
+The expiration date is set using a UNIX timestamp format (Epoch time).
 
 ### Session Expiration
 
@@ -75,12 +75,13 @@ The default and recommended hashing function associated with an Application Toke
 ## Application Token Creation
 
 Create the new Application Token by invoking the **add** action of the **appToken** API service. You must have an Administrator-level KS to successfully invoke the service. Based on the information above, the following parameters for the call should be prepared:
+
 * Permissions line (includes API restrictions via 'setrole' directive)
 * Service user (required for restricting content access)
 * Hashing function (default=SHA-1)
 * Expiration 
 
-Perform the call with the following parameter:
+Perform the call with the following parameters:
 
 | Name        | Type | Writable | Description|
 |:------------ |:------------------|:------------------|:------------------|
@@ -91,7 +92,7 @@ Perform the call with the following parameter:
 | expiry  | int | V         |	The date and time when this Application Token will expire. This must be provided in a UNIX timestamp format (Epoch time). This field is mandatory and should be set when creating the application token. | 
 | hashType  | string | V         |	One of the following:	MD5, SHA1 (default), SHA256, SHA512| 
 
-A successful call will return a new Application Token. Make note of the following response values:
+A successful call will return a new Application Token. Note the following response values:
 
 | Name        | Type  | Description|
 |:------------ |:------------------|:------------------|
