@@ -1,8 +1,8 @@
 ---
 layout: page
 title: Creating an Application Token User
-subcat: Application Token Steps
-weight: 150
+subcat: Working with AppTokens
+weight: 103
 ---
 
 ## Overview  
