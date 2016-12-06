@@ -26,7 +26,7 @@ To create the user, open MediaSpace Admin, select the Manage Users tab, and clic
 ![Add User Window](./images/adduser.PNG)
 
 
-### Role with the Required Privileges  
+### Role with the Required API Permissions  
 
 The role determines the allowed API actions that this Application Token will be allowed to perform. Common role permissions are listed in the table under the **Relevant Roles** section below. Roles may be changed later to add or remove actions from the Application Token.
 
@@ -43,18 +43,20 @@ The role determines the allowed API actions that this Application Token will be 
 
  ![Setting Role Permissions](./images/roles2.PNG)
 
-
 When done, save your changes.
 
 **Note:** You will need the ID of the newly-created role. Retrieve it using the userRole.list API action, or contact your Kaltura representative for assistance.
 
-### Permissions Line
+### Privileges Line
 
 After creating the Role and Service User, you will construct the KS privileges of the Application Token.
 
-For an Application Token ***without*** MediaSpace-based permissions (or other entitlement-based permissions), use a privileges line in the form: **list:*,setrole:ROLE_ID**
+For an Application Token *without* MediaSpace-based permissions (or other entitlement-based permissions), use a privileges line in the form: **list:\*,setrole:ROLE_ID**
 
-For an Application Token with MediaSpace-based permissions (or other entitlement-based permissions), use a privileges line in the form: **list:*,setrole:ROLE_ID,enableentitlement,privacycontext:PRIVACY_CONTEXT**. Your Privacy Context is listed in MediaSpace Admin, under the Application settings.
+For an Application Token with MediaSpace-based permissions (or other entitlement-based permissions), use a privileges line in the form: **list:\*,setrole:ROLE_ID,enableentitlement,privacycontext:PRIVACY_CONTEXT**. Your Privacy Context is listed in MediaSpace Admin, under the Application settings.
+
+To learn more about KS privileges, check out [this](https://knowledge.kaltura.com/kalturas-api-authentication-and-security) article.
+
 
 ### Expiration Date
 
