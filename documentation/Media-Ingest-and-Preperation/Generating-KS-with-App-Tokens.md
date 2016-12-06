@@ -24,3 +24,8 @@ After creating the Application Token user, your developer can then build a KS to
 * The Application Token and all of its attributes must be securely stored on your backend. It must never be coded into an end-user application.
 * The Application Token must never be sent to the Kaltura API. Instead, send the authorization bundle, which includes the Application Token hashed with a salt.
 * If the Application Token is compromised, notify your Kaltura technical account representative right away. The Application Token can be deactivated, which will also deactivate any KS tokens it was used to generate.
+
+## Learn More  
+
+* To learn more about creating Application Tokens, check out [this](https://developer.kaltura.com/recipes/app_tokens#/start) code recipe.
+* To learn about creating Application Tokens with Kaltura API, see (https://developer.kaltura.com/api-docs/#/appToken).
