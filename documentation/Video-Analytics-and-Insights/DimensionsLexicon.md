@@ -27,6 +27,34 @@ subcat: Analytics API - Limited Alpha
 |Time |Minute	|minute	|Date (rounded to the beginning of minute) of playback, for example: 30/03/2013 16:43:00|
 |Time |10 Seconds	|tenSeconds	|Date (rounded to the beginning of 10 seconds) of playback, for example: 30/03/2013 16:43:40|
 
+### Combinations of Dimensions
+
+Some of the dimensions mentioned above can be used in combinations.
+Supported combinations for the Day, Hour and Minute time resolutions are:
+
+* Application - PlaybackContext
+* Country - Browser
+* Country - OS
+* Country - OS - Browser
+* Device - OS
+* OS - Browser
+* Entry - Application
+* Entry - Application - PlaybackContext
+* Entry - Browser	
+* Entry - Category		
+* Entry - Country
+* Entry - City	
+* Entry - Custom Var	
+* Entry - Device	
+* Entry - Device - OS		
+* Entry - Domain	
+* Entry - Referrer	
+* Entry - OS	
+* Entry - OS - Browser		
+* Entry - PlaybackContext	
+
+
+
 
 ### Custom Dimensions 
 
