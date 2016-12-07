@@ -30,6 +30,7 @@ subcat: Analytics API - Limited Alpha
 ### Combinations of Dimensions
 
 Some of the dimensions mentioned above can be used in combinations.
+
 Supported combinations for the Day, Hour and Minute time resolutions are:
 
 * Application - PlaybackContext
