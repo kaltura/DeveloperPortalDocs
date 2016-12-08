@@ -4,7 +4,7 @@ The following overview describes the authntication and security model of Kaltura
 
 ## Authentication and Security  
 
-To establish communication with the Kaltura servers, a client app must have a secret (one of 2 types) coupled with a unique account ID and a set of permissions.
+To establish communication with the Kaltura servers, the client application must have a secret (one of 2 types) coupled with a unique account ID and a set of permissions.
 A valid Kaltura Session (aka KS) is required to interact with the Kaltura API; displaying content, upload media, delete, update or list.
 The KS expiry can be set at session initiation to range from 1 second to 10 years.
 
@@ -250,7 +250,8 @@ Kaltura’s integrated DRM solutions seamlessly plug in to its existing infrastr
 Encrypted video files are generated as additional “flavors” of original asset using Kaltura’s transcoding farm and based on selected vendor and license policy. 
 
 NOTE: Due to licensing requirements, DRM solutions are only available for commercial Kaltura editions (SaaS and On Prem) and are at additional cost. For more information about DRM and the available DRM solutions, please contact us or contact your Kaltura Account Manager.
-Important Considerations For Application Developers
+## Important Considerations For Application Developers  
+
 When not applications are not developer with security in mind, a malicious user can use:
 A compromised secret to create a KS at will
 A compromised admin KS to cause irreversible harm to your account (such as deleting all content)
@@ -266,16 +267,21 @@ Your API Secret Keys (ADMIN and USER) are generated when you create am account. 
 * Prefer User Login over session.start when local KS generation is not possible.
 * When calling the session.start API request - Make sure the connection between your client and the Kaltura server is encryoted and secured.
 * NEVER keep your secret keys in a front-end application (such as Flash or JavaScript). A KS should always be generated on the server side and then passed to the front-end.
-* Keep the secret keys in a seperated file with strict file permissions.
+* Keep the secret keys in a separate file with strict file permissions.
 
-Use Admin KS with care
+### Use the Admin KS with Caution  
+
 A compromised Admin KS will allow a malicious user to gain full access to the publisher account, leading way to harm.
 Use Admin KS in between servers and with secured communication channel.
-Prefer Login of Users with Defined Roles and Permissions over Generic Admin KS
+
+### Prefer Login of Users with Defined Roles and Permissions over a Generic Admin KS  
+
 Kaltura Users can be assigned a fine grained level of permissions. This allows applications developers to provide a stronger login and authentication mechanism while not exposing the account secret keys.
 Use user.loginByLoginId providing user credentials and your account Id. 
-Use Widget KS for Anonynous Public Content Playback
+
+### Use the Widget KS for Anonynous Public Content Playback  
 
 The session.startWidgetSession provides an anonymous simple and light KS generation mechanism that does not require a secret. This type of session can be used to perform READ operations only and only on content that is defined as publicly available with no Access Control or special permissions.
+
 The Widget KS is perfect for cases where public content needs to be accessed freely and without secured authentication. 
  
