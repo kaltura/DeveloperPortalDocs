@@ -12,7 +12,7 @@ Example use-cases based on content entitlements:
 - group collaboration based on channel membership
 - premium content - get access to channels/categories based on a paid subscription 
 
-To learn about how to configure and work with Content Entitlements read the [Categories and Content Entitlements article](Categories-and-Content-Entitlements.md).  
+To learn about how to configure and work with Content Entitlements read the [Categories and Content Entitlements article](Content-Categories-Management.html).  
 
 
 The following diagram outlines the rules on which Kaltura bases and enforces content entitlements.  
