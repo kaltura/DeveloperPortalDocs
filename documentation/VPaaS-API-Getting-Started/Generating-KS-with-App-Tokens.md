@@ -2,7 +2,7 @@
 layout: page
 title: Generating Kaltura Sessions with Application Tokens
 subcat: Working with AppTokens
-weight: 102
+weight: 101
 ---
 
 The Application Token is used to enable applications to acquire a valid Kaltura Session (KS). The valid KS must be passed with each call to Kaltura's API. The session context embedded into a KS identifies your application, content access permissions, and API access permissions (it also contains other internal session data). This information is securely encrypted and hashed, preventing unauthorized manipulation of the session context.
