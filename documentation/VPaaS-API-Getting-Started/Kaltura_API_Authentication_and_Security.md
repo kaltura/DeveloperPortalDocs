@@ -53,16 +53,19 @@ The KS is a string composed of the following details:
 * Random number – A time based random number to make every KS string unique.
 * ksdata - An arbitrary data that will be overlooked by Kaltura and can be used to pass additional information on the KS for custom application use.
 * Signature – The KS is cryptographically signed (one-way MD5 hashing algorithm), by hashing all the above with a secret key shared between Kaltura and the publisher.
+
 The information above is then combined with either Admin or User Secret (depending on the KS type desired), and then compiled using SHA1 algorithm. To generate the KS that is sent through the API: combine the SHA1 hash (in lowercase) and the above parameters in plain-text seperated by semi-colons (i.e. ';'), in Base64.
-Kaltura Session version 2:
-Since October 14, 2012 - Kaltura introduced a second version to the KS format that includes encryption of the fields for protecting the user privacy.
+
+###  Kaltura Session Version 2  
+In October 2012, Kaltura introduced a second version to the KS format that includes encryption of the fields for protecting the user privacy.
 Version 1 (the original format) will continue to be maintained for backward compatibility - the Kaltura server accepts both version 1 and 2. The Kaltura server generates version 2 by default for publisher accounts created after Oct 2012. Implementations that generate a KS locally are encouraged to use KS version 2 as well.
 
 Since the new KS format requires encryption of the fields, performing base64 decode on the KS will not reveal its fields (as was the case with KS version 1). 
 To decode a KS v2, IT admins and developers who operate self hosted Kaltura servers can use the admin console developer tools page: https://[KalturaServerURL]/admin_console/index.php/plugin/KalturaInternalToolsPluginSystemHelperAction
+
 The steps for generating a KSv2 are:
 
-Gather all the different KS fields and their values: 
+1. Gather all the different KS fields and their values: 
 _e – expiry (unix timestamp)
 _u – user
 _t – type (KalturaSessionType)
