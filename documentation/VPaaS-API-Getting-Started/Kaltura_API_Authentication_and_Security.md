@@ -23,33 +23,36 @@ There are many possible layers of security that can be deployed within Kaltura�
 
 Publishers can configure the level of required security for their end users - these security layers work in coordination with the site’s user authentication methods as well. Specifically, Publishers can control access to each media asset and restrict user access to assets based on each of the following or a combination of several criteria:
 
-* Authorized domains – i.e. Solutions can restrict access to media based on a predefined list of approved domains.
-* Geo-location – i.e. Solutions can restrict access to media based on the origin on the user. This is set using the user's IP. For example, a publisher in Spain can restrict access to their media to all users outside of Spain, allowing users with Spanish IPs only to access the site's media.
+* Authorized domains –Solutions can restrict access to media based on a predefined list of approved domains.
+* Geo-location – Solutions can restrict access to media based on the origin on the user. This is set using the user's IP. For example, a publisher in Spain can restrict access to their media to all users outside of Spain, allowing users with Spanish IPs only to access the site's media.
 * IP - Limit access to media only from a specific IP Address or range of IP address.
-* Time limit - i.e. Solutions can allow access to media for a specified time period only. For example, allowing users to access certain media for 7 days only.
+* Time limit - Solutions can allow access to media for a specified time period only. For example, allowing users to access certain media for 7 days only.
 * Session limit - "Anonymous" users will be restricted and every access to the data will be required by a valid Kaltura Session with specific permissions to the desired entry id. The Publisher application is then responsible to determine whether a user has access to the a specific content, and if valid, generate and pass a valid KS with the request to the content.
 
 
 ## The Kaltura Session  
 
-Every Kaltura Session is limitted by one or more of the following components
-Expiry time – Can be set to a short period (1 second) up to 10 years. 
-NOTE: The player has to perform all Kaltura API calls before the user hits play, so setting this too short for player sessions may break the playback experience. About 30 minutes is reasonable for just playback, or you could extend the player to re-negotiate for a session if it was expired.
-Number of API calls - e.g. no more than 5 API calls allowed on the KS. 
-NOTE: The number of needed API calls may not be an expected number, especially if you use 3rd party plugins in the player. When using this limitation, make sure all API calling components in your app are known and counted in number of API calls.
-Specific entry playback - When limited by an Access Control Profile, approved entries must be specifically stated by passing the privilege sview:entryId.
-Specific IP address - Limit access to the API from a specific IP or range of IPs by passing privilege iprestrict:IPADDRESS.
-The KS Components
+Every Kaltura Session is limited by one or more of the following components:
+
+* Expiry time – Can be set to a short period (1 second) up to 10 years. 
+  NOTE: The player has to perform all Kaltura API calls before the user hits play, so setting this too short for player sessions may break the playback experience. About 30 minutes is reasonable for just playback, or you could extend the player to re-negotiate for a session if it was expired.
+* Number of API calls - e.g. no more than 5 API calls allowed on the KS. 
+  NOTE: The number of needed API calls may not be an expected number, especially if you use 3rd party plugins in the player. When using this limitation, make sure all API calling components in your app are known and counted in number of API calls.
+* Specific entry playback - When limited by an Access Control Profile, approved entries must be specifically stated by passing the privilege sview:entryId.
+* Specific IP address - Limit access to the API from a specific IP or range of IPs by passing privilege **iprestrict:IPADDRESS**.
+
+### KS Components   
 
 The KS is a string composed of the following details:
-Publisher ID – A unique identifier allocated to every Kaltura account. The partner Id can be retrieved from the KMC Integration Settings tab.
-User ID – The id of the user within the publisher account performing the API call. This id is the end-user id on the publisher's system.
-KS Type (admin / user) – An admin KS can access all the content of the publisher account and call management APIs, while a user KS can only access content items owned by the specific user.
-Expiry time - Can be set to a short period (1 second) up to 10 years. In Seconds. Integer.
-Action limit – Maximum number of API calls allowed using this KS. Integer.
-Random number – A time based random number to make every KS string unique.
-ksdata - An arbitrary data that will be overlooked by Kaltura and can be used to pass additional information on the KS for custom application use.
-Signature – The KS is cryptographically signed (one-way MD5 hashing algorithm), by hashing all the above with a secret key shared between Kaltura and the publisher.
+
+* Publisher ID – A unique identifier allocated to every Kaltura account. The partner Id can be retrieved from the KMC Integration Settings tab.
+* User ID – The id of the user within the publisher account performing the API call. This id is the end-user id on the publisher's system.
+* KS Type (admin / user) – An admin KS can access all the content of the publisher account and call management APIs, while a user KS can only access content items owned by the specific user.
+* Expiry time - Can be set to a short period (1 second) up to 10 years. In Seconds. Integer.
+* Action limit – Maximum number of API calls allowed using this KS. Integer.
+* Random number – A time based random number to make every KS string unique.
+* ksdata - An arbitrary data that will be overlooked by Kaltura and can be used to pass additional information on the KS for custom application use.
+* Signature – The KS is cryptographically signed (one-way MD5 hashing algorithm), by hashing all the above with a secret key shared between Kaltura and the publisher.
 The information above is then combined with either Admin or User Secret (depending on the KS type desired), and then compiled using SHA1 algorithm. To generate the KS that is sent through the API: combine the SHA1 hash (in lowercase) and the above parameters in plain-text seperated by semi-colons (i.e. ';'), in Base64.
 Kaltura Session version 2:
 Since October 14, 2012 - Kaltura introduced a second version to the KS format that includes encryption of the fields for protecting the user privacy.
@@ -252,13 +255,16 @@ In this section, we highlight a number of common and important practices to cons
 Authenticated User Privileges override the User Type KS
 
 When you generate a user session KS and specify an ID of a Kaltura Admin User, the KS will allow all the actions included in the user’s role.
-Always Protect your API Secret Keys
+
+### Always Protect your API Secret Keys  
+
 Your API Secret Keys (ADMIN and USER) are generated when you create am account. These keys hold global access permissions to your account and thus should always be kept in secret.
-Always prefer local session generation over server session.start.
-Prefer User Login over session.start when local KS generation is not possible.
-When calling the session.start API request - Make sure the connection between your client and the Kaltura server is encryoted and secured.
-NEVER keep your secret keys in a front-end application (such as Flash or JavaScript). A KS should always be generated on the server side and then passed to the front-end.
-Keep the secret keys in a seperated file with strict file permissions.
+* Always prefer local session generation over server session.start.
+* Prefer User Login over session.start when local KS generation is not possible.
+* When calling the session.start API request - Make sure the connection between your client and the Kaltura server is encryoted and secured.
+* NEVER keep your secret keys in a front-end application (such as Flash or JavaScript). A KS should always be generated on the server side and then passed to the front-end.
+* Keep the secret keys in a seperated file with strict file permissions.
+
 Use Admin KS with care
 A compromised Admin KS will allow a malicious user to gain full access to the publisher account, leading way to harm.
 Use Admin KS in between servers and with secured communication channel.
