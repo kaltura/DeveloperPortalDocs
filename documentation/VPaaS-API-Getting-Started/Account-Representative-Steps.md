@@ -13,17 +13,6 @@ Developers who are provided with an Application Token use it to create temporary
 
 The following attributes are built into the Application Token:
 
-### User with the Desired Content Permissions   
-
-If you're using entitlements or MediaSpace, you may use a "service user" to restrict the content access permissions of the Appliation Token. You may create a new user, or use an existing user entity (such as a MediaSpace user). This user entity must be correctly permissioned with entitlements to the Channels or categories that you want to provide your development partners.
-
-**Note:** Do not use a KMC user for this purpose, because a KMC user has unrestricted content access.
-
-To create the user, open MediaSpace Admin, select the Manage Users tab, and click **Add User**. Fill in the details in the Add User window (the service user will never need to login, so use the Password Generator to create a difficult password for it). Once the user is created, give it permission to Channels and Galleries (or categories) using MediaSpace Channel Manager, or KMC Entitlements Manager. These permissions will be passedd to the Application Token.
-
-![Add User Window](./images/adduser1.png)
-
-
 ### Role with the Required API Permissions  
 
 The role determines the allowed API actions that this Application Token will be allowed to perform. Common role permissions are listed in the table under the **Relevant Roles** section below. Roles may be changed later to add or remove actions from the Application Token.
@@ -45,6 +34,17 @@ When done, save your changes.
 
 **Note:** You will need the ID of the newly-created role. Retrieve it using the userRole.list API action, or contact your Kaltura representative for assistance.
 
+### User with the Desired Content Permissions   
+
+If you're using entitlements or MediaSpace, you may use a "service user" to restrict the content access permissions of the Appliation Token. You may create a new user, or use an existing user entity (such as a MediaSpace user). This user entity must be correctly permissioned with entitlements to the Channels or categories that you want to provide your development partners.
+
+**Note:** Do not use a KMC user for this purpose, because a KMC user has unrestricted content access.
+
+To create the user, open MediaSpace Admin, select the Manage Users tab, and click **Add User**. Fill in the details in the Add User window (the service user will never need to login, so use the Password Generator to create a difficult password for it). Once the user is created, give it permission to Channels and Galleries (or categories) using MediaSpace Channel Manager, or KMC Entitlements Manager. These permissions will be passedd to the Application Token.
+
+![Add User Window](./images/adduser1.png)
+
+
 ### Privileges Line
 
 After creating the Role and Service User, you will construct the KS privileges of the Application Token.
@@ -53,8 +53,7 @@ For an Application Token *without* MediaSpace-based permissions (or other entitl
 
 For an Application Token with MediaSpace-based permissions (or other entitlement-based permissions), use a privileges line in the form: **list:\*,setrole:ROLE_ID,enableentitlement,privacycontext:PRIVACY_CONTEXT**. Your Privacy Context is listed in MediaSpace Admin, under the Application settings.
 
-To learn more about KS privileges, check out [this](https://knowledge.kaltura.com/kalturas-api-authentication-and-security) article.
-
+To learn more about KS privileges, check out [this](https://github.com/kaltura/DeveloperPortalDocs/edit/master/documentation/VPaaS-API-Getting-Started/Kaltura_API_Authentication_and_Security.md) article.
 
 ### Expiration Date
 
