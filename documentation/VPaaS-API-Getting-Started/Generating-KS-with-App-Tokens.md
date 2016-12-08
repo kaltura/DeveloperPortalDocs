@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Generating Kaltura Sessions with Application Tokens
-subcat: Working with AppTokens
+subcat: Working with Application Tokens
 weight: 101
 ---
 
