@@ -7,7 +7,7 @@ weight: 102
 
 An Application Token enables clients to provide their development partners or internal technical teams with restricted access to the Kaltura API. Each Application Token restricts the API methods that may be called by its users, and can allow restricted content access for clients who use entitlements (e.g., restricted access to MediaSpace content).
 
-Developers who are provided with an Application Token use it to create temporary Kaltura Session (KS) tokens, which they will then use to access API functions. These KS tokens will have the restrictions of their originating Application Token. Additional details about how to create a KS can be found in the [Get Started with Kaltura VPaaS}(https://vpaas.kaltura.com/documentation/VPaaS-API-Getting-Started/Getting-Started-VPaaS-API.html) article. 
+Developers who are provided with an Application Token use it to create temporary Kaltura Session (KS) tokens, which they will then use to access API functions. These KS tokens will have the restrictions of their originating Application Token. Additional details about how to create a KS can be found in the [Get Started with Kaltura VPaaS](https://vpaas.kaltura.com/documentation/VPaaS-API-Getting-Started/Getting-Started-VPaaS-API.html) article. 
 
 ## Application Token Design  
 
