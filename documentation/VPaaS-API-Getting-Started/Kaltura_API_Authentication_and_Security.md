@@ -5,7 +5,7 @@ The following overview describes the authntication and security model of Kaltura
 ## Authentication and Security  
 
 To establish communication with the Kaltura servers, the client application must have a secret (one of 2 types) coupled with a unique account ID and a set of permissions.
-A valid Kaltura Session (aka KS) is required to interact with the Kaltura API; displaying content, upload media, delete, update or list.
+A valid Kaltura Session (KS) is required to interact with the Kaltura API; displaying content, upload media, delete, update or list.
 The KS expiry can be set at session initiation to range from 1 second to 10 years.
 
 Once the KS is acquired, it can be used to interact with content by users for specific pre-set actions, such as uploading, deletion, updating and listing.
@@ -250,15 +250,19 @@ Kaltura’s integrated DRM solutions seamlessly plug in to its existing infrastr
 Encrypted video files are generated as additional “flavors” of original asset using Kaltura’s transcoding farm and based on selected vendor and license policy. 
 
 NOTE: Due to licensing requirements, DRM solutions are only available for commercial Kaltura editions (SaaS and On Prem) and are at additional cost. For more information about DRM and the available DRM solutions, please contact us or contact your Kaltura Account Manager.
+
 ## Important Considerations For Application Developers  
 
-When not applications are not developer with security in mind, a malicious user can use:
-A compromised secret to create a KS at will
-A compromised admin KS to cause irreversible harm to your account (such as deleting all content)
-In this section, we highlight a number of common and important practices to consider when creating applications that interact with the Kaltura API.
-Authenticated User Privileges override the User Type KS
+When an applications without security in mind, a malicious user can use:
 
-When you generate a user session KS and specify an ID of a Kaltura Admin User, the KS will allow all the actions included in the user’s role.
+* A compromised secret to create a KS at will
+* A compromised admin KS to cause irreversible harm to your account (such as deleting all content)
+
+In this section, we highlight a number of common and important practices to consider when creating applications that interact with the Kaltura API.
+
+### Authenticated User Privileges override the User Type KS  
+
+When you generate a user session KS and specify the ID of a Kaltura Admin User, the KS will allow all the actions included in the user’s role.
 
 ### Always Protect your API Secret Keys  
 
