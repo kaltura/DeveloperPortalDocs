@@ -2,10 +2,8 @@
 layout: page
 title: Creating an Application Token User
 subcat: Working with AppTokens
-weight: 103
+weight: 102
 ---
-
-## Overview  
 
 An Application Token enables clients to provide their development partners or internal technical teams with restricted access to the Kaltura API. Each Application Token restricts the API methods that may be called by its users, and can allow restricted content access for clients who use entitlements (e.g., restricted access to MediaSpace content).
 
