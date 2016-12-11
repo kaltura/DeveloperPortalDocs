@@ -53,7 +53,7 @@ For an Application Token *without* MediaSpace-based permissions (or other entitl
 
 For an Application Token with MediaSpace-based permissions (or other entitlement-based permissions), use a privileges line in the form: **list:\*,setrole:ROLE_ID,enableentitlement,privacycontext:PRIVACY_CONTEXT**. Your Privacy Context is listed in MediaSpace Admin, under the Application settings.
 
-To learn more about KS privileges, check out [this](https://github.com/kaltura/DeveloperPortalDocs/edit/master/documentation/VPaaS-API-Getting-Started/Kaltura_API_Authentication_and_Security.md) article.
+To learn more about KS privileges, see the [Kaltura API Authentication and Security](https://vpaas.kaltura.com/documentation/VPaaS-API-Getting-Started/Kaltura_API_Authentication_and_Security.html) article.
 
 ### Expiration Date
 
