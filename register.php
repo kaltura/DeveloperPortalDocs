@@ -15,7 +15,7 @@ layout: default
 <div >
 <?php
 require_once('/var/www/html/IP2Location-PHP-Module/IP2Location.php');
-$signer_ip=$_SERVER['REMOTE_ADDR'];
+$signer_ip=$_SERVER['HTTP_X_FORWARDED_FOR'];
 $db = new \IP2Location\Database('/etc/IP2LOCATION-LITE-DB1.BIN', \IP2Location\Database::FILE_IO);
 $excluded_countries=array('IR','SY','SD','CU','KP');
 $records = $db->lookup($signer_ip, \IP2Location\Database::ALL);
@@ -31,7 +31,8 @@ if(in_array($records['countryCode'],$excluded_countries)){
 <div class="w-form">
 		
     <form id="register-form" name="register-form" data-name="Register Form" action="https://vpaas.kaltura.com:8443/post_register.php" method="post" onsubmit="return validate(event);">
-<input type="hidden" id="ip" value="<?php echo $_SERVER['REMOTE_ADDR'];?>">
+<input type="hidden" id="ip" value="<?php echo $signer_ip;?>">
+<input type="hidden" id="country" value="<?php echo $records['countryCode'];?>">
 <div class="company-details-div">
 <div class="w-row form-row">
 <div class="w-col w-col-6">
