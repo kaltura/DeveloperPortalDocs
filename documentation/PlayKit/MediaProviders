@@ -1,14 +1,13 @@
 Media Providers:
 
-provides a tool to create a well known media object with the relevant data needed for the player.
+Provides a tool for creating a well known media object with the relevant data needed for the Video Player.
 
-The providers are configured with the relevant parameters, and when activated "load", sends requests 
+The providers are configured with the relevant parameters, and when activated using "load", will send requests 
 to the relevant data source to gather the data needed for the play. The data is parsed and the providers 
-outputs a PKMediaEntry object.
+will output a PKMediaEntry object.
 
-Currently there are 3 implementation:
-1. MockMediaProvider
+There are three implementation options currently available:
 
-2. PhoenixMediaProvider
-
-3. KalturaOvpMediaProvider
+* MockMediaProvider
+* PhoenixMediaProvider
+* KalturaOvpMediaProvider
