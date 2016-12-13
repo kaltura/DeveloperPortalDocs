@@ -17,6 +17,12 @@ To enable IMA Plugin in iOS devices for the Kaltura Player, add following line t
 pod 'PlayKit/IMAPlugin'
 ```
 
+Register IMA Plugin inside your app:
+
+```
+PlayKitManager.sharedInstance.registerPlugin(IMAPlugin.self)
+```
+
 ## Configuring the Player to use IMA Plugin  
 
 To configure the Player to use IMA Plugin, add the following configuration to your `PlayerConfig`:
