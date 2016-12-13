@@ -1,71 +1,90 @@
 ---
 layout: page
-title: Using Google Ads in iOS Devices
+title: Using IMA Plugin
 subcat: iOS
 weight: 290
 ---
 
 [![iOS](https://img.shields.io/badge/iOS-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios) 
 
-This article describes the steps required to use Google ads in iOS devices.
+This article describes the steps required to use IMA Plugin in iOS devices.
 
-## Linking Google to the iOS Device  
+## Enabling IMA Plugin for the Kaltura Player  
 
-To enable Google Ads in iOS devices for the Kaltura Player, you will need to link Google to the iOS devices. To 
-When linking Google in iOS devices for the Kaltura Player, there are a number of different options, which are described below.
-
-## Using Cocoapods  
-
-### To link Google ads using Cocoapods, add these two pods to your podfile:
+To enable IMA Plugin in iOS devices for the Kaltura Player, add following line to your Podfile:
 
 ```
-pod 'GoogleAds-IMA-iOS-SDK’ , '~> 3.2.1’
-
+pod 'PlayKit/IMAPlugin'
 ```
 
-### For AdMob Ignore the above line & Use the following:
+## Configuring the Player to use IMA Plugin  
+
+To configure the Player to use IMA Plugin, add the following configuration to your `PlayerConfig`:
 
 ```
-pod 'GoogleAds-IMA-iOS-SDK-For-AdMob’ , '~> 3.2.1’
-
+let adsConfig = AdsConfig()
+adsConfig.set(adTagUrl: 'your ad tag url')
+playerConfig.plugins[IMAPlugin.pluginName] = adsConfig
 ```
 
-## Linking to GoogleInteractiveMediaAds SDK  
+## Configuring clickthrough 
 
-To link to Google ads using the GoogleInteractiveMediaAds SDK:
- 1. Download **`GoogleMobileAds`** from: {% extlink Admob https://developers.google.com/admob/ios/download %} and add it to your project
- 2. In addition to the **`GoogleMobileAds`** you will need to download **`GoogleInteractiveMediaAds`** from: {% extlink IMA SDK https://developers.google.com/interactive-media-ads/docs/sdks/ios/download %}.
-	- If you are going to use **Admob** in addition to the **`IMA SDK`**, add **GoogleInteractiveMediaAds-GoogleIMA3ForAdMob** to your project.
-	- If you are going to use only **`IMA SDK`**, add **GoogleInteractiveMediaAds-GoogleIMA3** to your project.
- 3. The following are the required frameworks for **`GoogleMobileAds`**:
-	- StoreKit.framework
-	- EventKit.framework
-	- EventKitUI.framework
-	- CoreTelephony.framework
-	- MessageUI.framework
-
-
-## Configuring the Player to use Google Ads  
-
-To configure the Player to use Google ads, add the following configuration to your `KPPlayerConfig`:
+The IMA Plugin offers two options for opening ad landing pages—via an in-app browser, or via Safari. By default, the plugin will open pages using Safari. To update the plugin to use an in-app browser, you’ll need to set webOpenerPresentingController value in AdsConfig object:
 
 ```
-[config addConfigKey:@"doubleClick.plugin" withValue:@"true"];
-[config addConfigKey:@"doubleClick.adTagUrl" withValue:@"your ad tag URL"];
+adsConfig.set(webOpenerPresentingController: webOpenerPresentingController)
+```
+
+## Adding Companion Ads
+
+In order to see companion Ad, you should 
+	1. Have an ad tag configured to return a companion ad
+	2. Supply companion ad container to the plugin as following (make sure the size of the companion being returned is the same size as the UIView in which you’re trying to display it):
+
+```
+adsConfig.set(companionView: companionView)
+```
+
+## Specifying desired bitrate and video formats
+
+The IMA Plugin allows you to specify the video formats and bitrate, configure it as following:
+
+```
+adsConfig.set(videoMimeTypes: ["video/mp4", "application/x-mpegURL"])
+adsConfig.set(videoBitrate: 1024)
+```
+
+## Specifying language
+
+The IMA Plugin allows you to specify the language to be used to localize ads and the player UI controls. To do so, set the language parameter of AdsConfig to the appropriate language code (https://developers.google.com/interactive-media-ads/docs/sdks/ios/ads#languagecodes)
+
+```
+adsConfig.set(language: "en")
+```
+
+## Controlling Ads playing
+
+In order to control ads playing during runtime implement following player delegate method:  
+
+```
+func playerShouldPlayAd(_ player: Player) -> Bool
 ```
 
 ## Listening to Ad Events  
 
-To listen to ad events, use the following [Ads event test page](http://player.kaltura.com/modules/DoubleClick/tests/DoubleClickAdEvents.qunit.html).
-
-To view list of commonly used Player ad events, click [here](https://vpaas.kaltura.com/documentation/04_Web-Video-Player/Kaltura-Media-Player-API.html).
-
 ```
-[self.player addKPlayerEventListener:@"adClick"
-                             eventID:@"some_id"
-                             handler:^(NSString *eventName, NSString *params) {
-            						// Do your stuff here..
-        }];
+let events: [PKEvent.Type] = [AdEvents.adDidRequestPause.self, AdEvents.adDidRequestResume.self, AdEvents.adResumed.self, AdEvents.adTapped.self]
+
+player.addObserver(self, events: events, block: { (event: Any) -> Void in
+            if event is AdEvents.adDidRequestResume {
+  
+            } else if event is AdEvents.adDidRequestPause {
+ 
+            } else if event is AdEvents.adTapped {
+
+            } else if event is AdEvents.adResumed {
+  
+            }
+        })
 ```
-For the complete IMAWebOpenerDelegate SDK, click [here](https://developers.google.com/interactive-media-ads/docs/sdks/ios/v3/api/protocol_i_m_a_web_opener_delegate-p#instance-methods)
 
