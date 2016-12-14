@@ -81,6 +81,7 @@ plugins.setPluginConfig("Youbora", converterYoubora.toJson());
 ## Analyzing the Youbora Plugin requests
 
 The correct flow of events when Youbora Plugin is activated and you play media using Kaltur aPlayer - 
+
 1. Data request event - /data
 The response will contain the URL all other events will be send to.
 '''
