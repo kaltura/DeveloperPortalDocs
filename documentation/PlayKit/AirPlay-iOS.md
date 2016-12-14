@@ -15,7 +15,7 @@ This article describes the steps required to add support for AirPlay in iOS devi
 then under Capabilities > Background Modes, enable "Audio, Airplay and Picture in Picture".
 
 
-2. Create MPVolumeView (you should import MediaPlayer) and add it to your view
+2. Create MPVolumeView (you should import MediaPlayer) and add it to your view:
 
 ```
 let airPlayBtn = MPVolumeView(frame: CGRect(x: 0, y: 0, width: 44, height: 44))
