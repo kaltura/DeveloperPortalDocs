@@ -1,4 +1,3 @@
-
 ---
 layout: page
 title: Configuring the Player to use Youbora Plugin in Android Devices
@@ -99,5 +98,11 @@ After media started playing
 '''
 http://test-nqs-lw2.nice264.com/joinTime?timemark=1481719912435&eventTime=0.0&mediaDuration=15.0&time=3&code=V_19210_apk0b5rp2e5bq0gm_0
 '''
+
+4. Ping event /ping     
+Every 5 seconds
+
+5. Stop event /stop
+After media finished playing
 
 
