@@ -81,7 +81,7 @@ plugins.setPluginConfig("Youbora", converterYoubora.toJson());
 ## Analyzing the Youbora Plugin requests
 
 The correct flow of events when Youbora Plugin is activated and you play media using Kaltur aPlayer - 
-1. Initial data request - /data
+1. Data request event - /data
 The response will contain the URL all other events will be send to.
 '''
 http://nqs.nice264.com/data?system=kalturatest&pluginName=playkit%2Fandroid-0.0.3&timemark=1481719756186&pluginVersion=5.3.0-playkit%2Fandroid-0.0.3&outputformat=jsonp
