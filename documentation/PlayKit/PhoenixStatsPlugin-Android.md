@@ -48,14 +48,23 @@ plugins.setPluginConfig("PhoenixAnalytics" , converterPlugin.toJson());
 ## Supported events in the plugin
 PhoenixActionType{
  HIT, //outputs every interval time
+ 
  PLAY, 
+ 
  STOP,
+ 
  PAUSE,
+ 
  FIRST_PLAY,
+ 
  LOAD,
+ 
  FINISH,
+ 
  BITRATE_CHANGE,
+ 
  ERROR
+
 }
 
 
