@@ -46,7 +46,6 @@ plugins.setPluginConfig("PhoenixAnalytics" , converterPlugin.toJson());
 ```
 
 ## Supported events in the plugin
-'''
 PhoenixActionType{
  HIT, //outputs every interval time
  PLAY, 
@@ -58,6 +57,6 @@ PhoenixActionType{
  BITRATE_CHANGE,
  ERROR
 }
-'''
+
 
 
