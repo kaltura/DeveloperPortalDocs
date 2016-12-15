@@ -12,21 +12,27 @@ Kaltura's Web Video Player leads the industry in flexibility, ease of customizat
 <iframe src="http://cdnapi.kaltura.com/p/243342/sp/24334200/embedIframeJs/uiconf_id/20540612/partner_id/243342?iframeembed=true&playerId=kaltura_player&entry_id=1_sf5ovm7u&flashvars[streamerType]=auto" width="560" height="395" allowfullscreen webkitallowfullscreen mozAllowFullScreen frameborder="0"></iframe>
 
 The easiest way to use Kaltura's Web Video Player is to build a player using [Kaltura's Universal Studio](https://knowledge.kaltura.com/node/1148), which provides a user-friendly UI for building and customizing the player. 
-## About the Web Video Player SDK  
-The Kaltura Web Video Player SDK enables users to lead video delivery with HTML5 and provide the fastest viewing experience on any device, while maintaining all the same features and a consistent CSS/HTML player design. Kaltura Players v2 enable delivery of HTML5 with Chromeless components for Flash, iOS and Android.
-## Key Advantages of the Kaltura Web Video Player  
-The key advantages of the Kaltura Players v2 are:
-•	High performance full featured lead with HTML5
-Most players display in 1 second or less.
-•	Skins configured once with standard HTML / CSS
-•	Better support for additional platforms; iOS and Android player components.
-•	Support for all features across multiple platforms: See player.kaltura.com.
 
+## About the Web Video Player SDK  
+
+The Kaltura Web Video Player SDK enables users to lead video delivery with HTML5 and provide the fastest viewing experience on any device, while maintaining all the same features and a consistent CSS/HTML player design. Kaltura Players v2 enable delivery of HTML5 with Chromeless components for Flash, iOS and Android.
+
+## Key Advantages of the Kaltura Web Video Player  
+
+The key advantages of the Kaltura Players v2 are:
+
+•	High performance full-featured lead with HTML5
+* Most players display in 1 second or less
+•	Skins configured once with standard HTML / CSS
+•	Better support for additional platforms; iOS and Android player components
+•	Support for all features across multiple platforms
+
+Here are some Video Player's main advantages at-a-glance:
 
 | Feature     | Description  |
 |--------- |--- |
-| Updated Design  | -Unified flat design <br>-Easier to customize |
-| Refactored Components  | -Improved configuration mechanism (skin components are more plugin-based)<br>-Cleaner separation of uiEvents from core embedPlayer<br>-Unified JSON-based configuration <br> -HTML5 first; Flash fallback is Chromeless (write plugins once for HTML5) |  
+| Design  | -Unified flat design <br>-Easy to customize |
+| Refactored Components  | -Enhanced configuration mechanism; skin components are plugin-based<br>-Clean separation of uiEvents from core embedPlayer<br>-Unified JSON-based configuration <br> -HTML5 first; Flash fallback is Chromeless (write plugins once for HTML5) |  
 | Standard Features | -Info tab<br>-Share tab<br>-Play head frame seek preview<br>-Related videos<br>-Flavor selector, adaptive streaming<br>-Unified 508-compliant player |
 | Cross-Platform HTML5, Native, and Flash  | -Single player framework wraps, Flash, native iOS, native Android, and HTML5<br>-Enables you to deliver features such as DRM, offline viewing, adaptive streaming, via native or plugin components, while still leveraging single unified configuration and the same player platform cross-devices<br>-Minimizes costs in cross-platform feature delivery  |
 
