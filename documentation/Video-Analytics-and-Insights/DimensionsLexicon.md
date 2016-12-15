@@ -30,8 +30,14 @@ subcat: Analytics API - Limited Alpha
 ### Combinations of Dimensions
 
 Some of the dimensions mentioned above can be used in combinations.
+In order to get a report with two dimensions, one of them needs to be fixed as a filter.
+For example, for a report of all the plays by country and browser, two following steps should be performed: 
 
-Supported combinations for the Day, Hour and Minute time resolutions are:
+1.	Get the list of all the countries in the required timeframe by calling the "analytics.query" service and setting dimension = country.
+2.	Loop through the resulting countries and make the "analytics.query" request with dimensions = country, browser and filter = SpecificCountry.
+
+
+Supported combinations for the Day, Hour and Minute time resolutions are below.
 
 * Application - PlaybackContext
 * Country - Browser
