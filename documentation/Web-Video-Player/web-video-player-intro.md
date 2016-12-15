@@ -24,13 +24,11 @@ Most players display in 1 second or less.
 
 
 | Feature     | Description  |
-|---------|------------------------------------------------------------------------------|
-| Updated Design                                                                                                                                                                                                    | Unified flat design         Easier to customize                                                |
-| "                                                                                                                                                                                              |                                                                              |
-| Refactored Components                                                                                                                                                                                             | "Improved configuration mechanism (skin components are more plugin-based)    |
-| Cleaner separation of uiEvents from core embedPlayer                                                                                                                                                              |                                                                              |
-| Unified JSON-based configuration                                                                                                                                                                                  |                                                                              |
-| HTML5 first; Flash fallback is Chromeless (write plugins once for HTML5)"                                                                                                                                         |                                                                              |
+|--------- |--- |
+| Updated Design  | Unified flat design         Easier to customize |
+| Refactored Components  | Improved configuration mechanism (skin components are more plugin-based)    |
+| Cleaner separation of uiEvents from core embedPlayer  |                                                                              |
+| Unified JSON-based configuration                                                                                                        | HTML5 first; Flash fallback is Chromeless (write plugins once for HTML5)"                                                                                                                                         |                                                                              |
 | Standard Features                                                                                                                                                                                                 | "Info tab                                                                    |
 | Share tab                                                                                                                                                                                                         |                                                                              |
 | Play head frame seek preview                                                                                                                                                                                      |                                                                              |
@@ -39,7 +37,7 @@ Most players display in 1 second or less.
 | Unified 508-compliant player"                                                                                                                                                                                     |                                                                              |
 | Cross-Platform HTML5, Native, and Flash                                                                                                                                                                           | "Single player framework wraps, Flash, native iOS, native Android, and HTML5 |
 | Enables you to deliver features such as DRM, offline viewing, adaptive streaming, via native or plugin components, while still leveraging single unified configuration and the same player platform cross-devices |                                                                              |
-| Minimizes costs in cross-platform feature delivery"                                                                                                                                                               |                                                                              |
+| Minimizes costs in cross-platform feature delivery  |                                                                              |
 
 ### Multi-Platform Support  
 Our HTML5 video library provides you with the most advanced mobile delivery technology stack available today. Our smart-player technology delivers the right player, stream, and advertising to the right device anywhere, with just a single embed code. 
