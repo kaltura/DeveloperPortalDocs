@@ -36,12 +36,16 @@ Here are some Video Player's main advantages at-a-glance:
 | Standard Features | -Info tab<br>-Share tab<br>-Play head frame seek preview<br>-Related videos<br>-Flavor selector, adaptive streaming<br>-Unified 508-compliant player |
 | Cross-Platform HTML5, Native, and Flash  | -Single player framework wraps, Flash, native iOS, native Android, and HTML5<br>-Enables you to deliver features such as DRM, offline viewing, adaptive streaming, via native or plugin components, while still leveraging single unified configuration and the same player platform cross-devices<br>-Minimizes costs in cross-platform feature delivery  |
 
+## About the Web Video Player
+
 ### Multi-Platform Support  
+
 Our HTML5 video library provides you with the most advanced mobile delivery technology stack available today. Our smart-player technology delivers the right player, stream, and advertising to the right device anywhere, with just a single embed code. 
 
 You can extend the functionality of both Flash and HTML5 players with our Unified development API.
 
 Check out the detailed feature chart for what features are supported in what platforms.
+
 ### Easy to Implement Video Embedding    
 
 Adding video to your website is a great way to interact with your audience. Our lightweight embed codes enable you to add videos to your website quickly and easily; simply prepare the videos, generate the embed code, and then embed them into your website using Kaltura's embedding capabilities. 
@@ -61,10 +65,12 @@ Kaltura's Web Video Player supports the following embed code types:
 
 To learn more about supported embed types, read [this](http://player.kaltura.com/docs/PlayerRules) article.
 
-### Unparalleled Robust Performance
+### Unparalleled Robust Performance  
+
 Our Web Video Player library features an advanced resource loader developed in collaboration with Wikimedia Foundation. The resource loader supports dynamically packing of modules, features and player metadata. It minimizes, gizpis and packages, CSS, images, HTML, JavaScript, metadata, and per player features into a single non-blocking payload. This, combined with Kaltura's AutoEmbed embed code, enables the player rendering to take full advantage fetch ahead parallel JavaScript resource loading in modern browsers. This delivers fast player rendering even on sites with many other active scripts includes. 
 
 This means you get best in class performance of all your features, without the delays in traditional feature rich player build out.
+
 ### Easy to Integrate  
 
 Our multi-platform support ensures easy integration for iOS and Android player components on both mobile devices and tables, providing maximum flexibility, while the player architecture enables you to reuse plugins and configurations across platforms.
@@ -73,7 +79,8 @@ Our multi-platform support ensures easy integration for iOS and Android player c
 
 The Web Video Player is easily customized, enabling you to configure skins once using standard HTML / CSS. In addition, you can create customized cross-browser/cross-device players in the Kaltura Player Studio from a variety of easy-to-configure player templates.
 
-#### Customer Player Samples
+#### Customer Player Samples  
+
 The KDP can be modified with the Studio, with the UIconf or with the API. See examples of how our customers have themselves (or in collaboration with Kaltura) made their player unique to their brand and business.
  
  
@@ -84,7 +91,8 @@ The Web Video Player’s built-in advertising provides support for a wide range 
 ### Enhanced Analytics Capabilities  
 
 The Web Video Player's analytics capabilities provide you with the insight you need to manage your content, reach your audience, and optimize your workflow, as well as the ability to track conversion and retainment.
-Every Kaltura account includes analytics fully integrated into the Kaltura platform. Additionally Kaltura supports integrations with numerous analytics providers such as Google Analytics, Nielsen Video Census, Nielsen Combined, Comscore and Omniture SiteCatalyst 15. 
+Every Kaltura account includes analytics fully integrated into the Kaltura platform. Additionally Kaltura supports integrations with numerous analytics providers such as Google Analytics, Nielsen Video Census, Nielsen Combined, Comscore and Omniture SiteCatalyst 15.
+
 ### Advanced Live Broadcast Streaming  
 
 Kaltura's Web Video Player is designed to ensure seamless integration of advanced live broadcasts streaming. To learn more, visit [Kaltura's Player site](http://player.kaltura.com/docs/).
@@ -95,24 +103,30 @@ Our Universal DRM module enables media companies, content rights owners and OTT 
 
  
 ## Basic Look and Feel of the Kaltura Web Video Player  
+
 The following illustrates the basic look and feel of the Kaltura Web Video Player.
  
 ### Mouse Over Scrubber
+
 •	Thumbnails display on playhead scrubbing on mouse over.
  
 ### Responsive Player Layout
+
 •	Thumb up/down rating
 •	Smaller players / screens keep important controls. 
  
 ### Improved Related Videos Experience
+
 •	Enhanced related videos interface
 •	Flexible options for related video fulfillment
 •	Events for tracking conversion/retainment
  
 ### Playlists and Chapters
+
 •	Flexible HTML plugins for playlists and chapters with support for inheriting site styles
  
 ### Improved Adaptive Streaming Support
+
 •	Chromeless Flash HLS
 o	Supports HLS on desktop browsers for simplified live broadcast ad stitching workflows
 •	MPEG-DASH
