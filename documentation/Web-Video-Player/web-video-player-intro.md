@@ -4,17 +4,11 @@ layout: page
 title: Introduction to Kaltura's Web Video Player
 weight: 401
 ---
-Kaltura's Web Video Player leads the industry in flexibility, ease of customization, plug-in offerings and loading speed (most players display in 1 second or less). All features are supported for both HTML5 and Flash with the same configuration, which makes feature integration across platforms simple and easy. 
+Kaltura's Web Video Player leads the industry in flexibility, ease of customization, plug-in offerings and loading speed. All features are supported for both HTML5 and Flash with the same configuration, which makes feature integration across platforms simple and easy. 
 
 {% onebox http://cdnapi.kaltura.com/p/243342/sp/24334200/embedIframeJs/uiconf_id/20540612/partner_id/243342?iframeembed=true&playerId=kaltura_player&entry_id=1_sf5ovm7u&flashvars[streamerType]=auto %}
 
-<iframe src="http://cdnapi.kaltura.com/p/243342/sp/24334200/embedIframeJs/uiconf_id/20540612/partner_id/243342?iframeembed=true&playerId=kaltura_player&entry_id=1_sf5ovm7u&flashvars[streamerType]=auto" width="560" height="395" allowfullscreen webkitallowfullscreen mozAllowFullScreen frameborder="0"></iframe>
-
 Note that the easiest way to use Kaltura's Web Video Player is to build a player using [Kaltura's Universal Studio](https://knowledge.kaltura.com/node/1148), which provides a user-friendly UI for building and customizing the player. 
-
-## About the Web Video Player SDK  
-
-The Kaltura Web Video Player SDK enables users to lead video delivery with HTML5 and provide the fastest viewing experience on any device, while maintaining all the same features and a consistent CSS/HTML player design. Kaltura Players v2 enable delivery of HTML5 with Chromeless components for Flash, iOS and Android.
 
 ## Key Advantages of the Kaltura Web Video Player  
 
@@ -26,7 +20,7 @@ The key advantages of the Kaltura Players v2 are:
 * Better support for additional platforms; iOS and Android player components
 * Support for all features across multiple platforms
 
-Here are some Video Player's main advantages at-a-glance:
+Here are some of the Video Player's main advantages at-a-glance:
 
 | Feature     | Description  |
 |--------- |--- |
@@ -152,3 +146,8 @@ o	Note: The browsers that are projected to support MPEG DASH: IE 11 (Windows, Xb
 •	Maximize ROI on your distribution strategy across native apps and web views. 
 •	Architecture for reusable plugins and configuration across platforms
 •	Seamlessly integrate advanced live broadcasts streaming and DRM
+
+
+### Web Video Player SDK  
+
+The Kaltura Web Video Player SDK enables users to lead video delivery with HTML5 and provide the fastest viewing experience on any device, while maintaining all the same features and a consistent CSS/HTML player design. Kaltura Players v2 enable delivery of HTML5 with Chromeless components for Flash, iOS and Android.
