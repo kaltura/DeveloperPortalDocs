@@ -46,6 +46,7 @@ plugins.setPluginConfig("TVPAPIAnalytics" , converterPlugin.toJson());
 
 ## Supported events in the plugin
 TVPAPI action Types{
+
  MediaHit, //outputs every interval time
  
  MediaMark //Outputs in the following events - {PLAY,STOP,PAUSE,FIRST_PLAY,LOAD,FINISH,BITRATE_CHANGE,ERROR}
