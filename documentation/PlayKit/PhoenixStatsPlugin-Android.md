@@ -42,7 +42,7 @@ the plugin config you created -
 ```
 PlayerConfig config = new PlayerConfig();
 PlayerConfig.Plugins plugins = config.plugins;
-plugins.setPluginConfig("PhoenixAnalytics" , converterPlugin.toJson()); 
+plugins.setPluginConfig("PhoenixAnalytics" , phoenixConfigEntry.toJson()); 
 ```
 
 ## Supported events in the plugin
