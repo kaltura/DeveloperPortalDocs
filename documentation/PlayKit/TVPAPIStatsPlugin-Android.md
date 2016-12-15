@@ -26,11 +26,11 @@ To configure the Plugin, add the following configuration to your `pluginConfig`:
 
 ```
 private void configureTVPAPIPlugin(PlayerConfig pluginConfig) {
-        JsonObject phoenixConfigEntry = new JsonObject();
-        phoenixConfigEntry.addProperty("fileId", "fileId");
-        phoenixConfigEntry.addProperty("baseUrl", "base url");
-        phoenixConfigEntry.addProperty("timerInterval", timer value for HIT events - in millisecondes);//Default value - 30000
-        phoenixConfigEntry.add("initObj", initObj); // must be a valid initObj of TVPAPI
+        JsonObject TVPAPIConfigEntry = new JsonObject();
+        TVPAPIConfigEntry.addProperty("fileId", "fileId");
+        TVPAPIConfigEntry.addProperty("baseUrl", "base url");
+        TVPAPIConfigEntry.addProperty("timerInterval", timer value for HIT events - in millisecondes);//Default value - 30000
+        TVPAPIConfigEntry.add("initObj", initObj); // must be a valid initObj of TVPAPI
 ```
 
 ## Setting the plugin config to the Plugin
@@ -41,7 +41,7 @@ the plugin config you created -
 ```
 PlayerConfig config = new PlayerConfig();
 PlayerConfig.Plugins plugins = config.plugins;
-plugins.setPluginConfig("TVPAPIAnalytics" , converterPlugin.toJson()); 
+plugins.setPluginConfig("TVPAPIAnalytics" , TVPAPIConfigEntry.toJson()); 
 ```
 
 ## Supported events in the plugin
