@@ -4,7 +4,6 @@ layout: page
 title: Introduction to Kaltura's Web Video Player
 weight: 401
 ---
-## Overview  
 Kaltura's Web Video Player leads the industry in flexibility, ease of customization, plug-in offerings and loading speed (most players display in 1 second or less). All features are supported for both HTML5 and Flash with the same configuration, which makes feature integration across platforms simple and easy. 
 
 {% onebox http://cdnapi.kaltura.com/p/243342/sp/24334200/embedIframeJs/uiconf_id/20540612/partner_id/243342?iframeembed=true&playerId=kaltura_player&entry_id=1_sf5ovm7u&flashvars[streamerType]=auto %}
@@ -35,8 +34,6 @@ Here are some Video Player's main advantages at-a-glance:
 | Refactored Components  | -Enhanced configuration mechanism; skin components are plugin-based<br>-Clean separation of uiEvents from core embedPlayer<br>-Unified JSON-based configuration <br> -HTML5 first; Flash fallback is Chromeless (write plugins once for HTML5) |  
 | Standard Features | -Info tab<br>-Share tab<br>-Play head frame seek preview<br>-Related videos<br>-Flavor selector, adaptive streaming<br>-Unified 508-compliant player |
 | Cross-Platform HTML5, Native, and Flash  | -Single player framework wraps, Flash, native iOS, native Android, and HTML5<br>-Enables you to deliver features such as DRM, offline viewing, adaptive streaming, via native or plugin components, while still leveraging single unified configuration and the same player platform cross-devices<br>-Minimizes costs in cross-platform feature delivery  |
-
-## About the Web Video Player
 
 ### Multi-Platform Support  
 
@@ -155,15 +152,3 @@ o	Note: The browsers that are projected to support MPEG DASH: IE 11 (Windows, Xb
 •	Maximize ROI on your distribution strategy across native apps and web views. 
 •	Architecture for reusable plugins and configuration across platforms
 •	Seamlessly integrate advanced live broadcasts streaming and DRM
-
-
-
-
-
-
-
-
- 
-
-
-
