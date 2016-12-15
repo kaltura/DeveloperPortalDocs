@@ -20,11 +20,11 @@ The Kaltura Web Video Player SDK enables users to lead video delivery with HTML5
 
 The key advantages of the Kaltura Players v2 are:
 
-•	High performance full-featured lead with HTML5
+* High performance full-featured lead with HTML5
 * Most players display in 1 second or less
-•	Skins configured once with standard HTML / CSS
-•	Better support for additional platforms; iOS and Android player components
-•	Support for all features across multiple platforms
+* Skins configured once with standard HTML / CSS
+* Better support for additional platforms; iOS and Android player components
+* Support for all features across multiple platforms
 
 Here are some Video Player's main advantages at-a-glance:
 
