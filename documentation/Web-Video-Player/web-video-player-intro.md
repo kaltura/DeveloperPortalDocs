@@ -11,7 +11,7 @@ Kaltura's Web Video Player leads the industry in flexibility, ease of customizat
 
 <iframe src="http://cdnapi.kaltura.com/p/243342/sp/24334200/embedIframeJs/uiconf_id/20540612/partner_id/243342?iframeembed=true&playerId=kaltura_player&entry_id=1_sf5ovm7u&flashvars[streamerType]=auto" width="560" height="395" allowfullscreen webkitallowfullscreen mozAllowFullScreen frameborder="0"></iframe>
 
-The easiest way to use Kaltura's Web Video Player is to build a player using [Kaltura's Universal Studio](https://knowledge.kaltura.com/node/1148), which provides a user-friendly UI for building and customizing the player. 
+Note that the easiest way to use Kaltura's Web Video Player is to build a player using [Kaltura's Universal Studio](https://knowledge.kaltura.com/node/1148), which provides a user-friendly UI for building and customizing the player. 
 
 ## About the Web Video Player SDK  
 
@@ -125,7 +125,7 @@ The following illustrates the basic look and feel of the Kaltura Web Video Playe
 
 •	Flexible HTML plugins for playlists and chapters with support for inheriting site styles
  
-### Improved Adaptive Streaming Support
+### Adaptive Streaming Support
 
 •	Chromeless Flash HLS
 o	Supports HLS on desktop browsers for simplified live broadcast ad stitching workflows
@@ -135,15 +135,14 @@ o	Multi-track audio
 o	More detailed analytics on quality of services metrics
 o	Note: The browsers that are projected to support MPEG DASH: IE 11 (Windows, Xbox, phone;) Chrome (Desktop & Android), Firefox (Desktop)
  
-### Improved Share Interface In Player or On Page  
+### Share Interface In Player or On Page  
 
 •	Robust Configurable Share Options
-o	Support for sharing specific time offsets
-o	iframe or Flash object embed options
-o	Deep linking to specific URLs for each video: (example: myDomain.com/videos/{entryid}
+ o	Support for sharing specific time offsets
+ o	iframe or Flash object embed options
+ o	Deep linking to specific URLs for each video: (example: myDomain.com/videos/{entryid}
   
-
-### Improved Accessibility: 508 and WebVTT  
+### Enhanced Accessibility: 508 and WebVTT  
 
 •	Industry leading 508 support
 •	508 by default – all new framework players include 508 compliant features
