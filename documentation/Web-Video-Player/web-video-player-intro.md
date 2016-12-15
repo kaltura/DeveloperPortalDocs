@@ -25,7 +25,8 @@ Most players display in 1 second or less.
 
 | Feature     | Description  |
 |--------- |--- |
-| Updated Design  | Unified flat design         Easier to customize |
+| Updated Design  | Unified flat design         
+Easier to customize |
 | Refactored Components  | Improved configuration mechanism (skin components are more plugin-based)    |
 | Cleaner separation of uiEvents from core embedPlayer  |                                                                              |
 | Unified JSON-based configuration                                                                                                        | HTML5 first; Flash fallback is Chromeless (write plugins once for HTML5)"                                                                                                                                         |                                                                              |
