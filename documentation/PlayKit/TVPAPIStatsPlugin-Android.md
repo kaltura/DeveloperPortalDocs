@@ -53,3 +53,18 @@ TVPAPI action Types{
  
 }
 
+## Concurrency handler 
+In order to receive Concurrency events from the TVPAPI Stats plugin you need to
+add listener to the following event:
+
+```
+messageBus.listen(new PKEvent.Listener() {
+                        @Override
+                        public void onEvent(PKEvent event) {
+                            if (event instanceof OttEvent){
+                                \\Handle concurrency events
+                            }
+                        }
+                    }, OttEvent.OttEventType.Concurrency);
+                    
+```
