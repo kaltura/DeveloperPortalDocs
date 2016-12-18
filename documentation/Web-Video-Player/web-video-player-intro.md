@@ -4,7 +4,9 @@ layout: page
 title: Introduction to Kaltura's Web Video Player
 weight: 401
 ---
-Kaltura's Web Video Player leads the industry in flexibility, ease of customization, plug-in offerings and loading speed. All of the Web Video Player features are supported on both HTML5 and Flash using the same configuration, which makes feature integration across platforms simple and easy. 
+Kaltura's Web Video Player is an easy-to-use, powerful, flexible video platform, which is designed enable you to deliver videos on your website quickly and easily, allowing you to reach viewers, engage them, and maximize your revenue. Moreover, the Web Video Player technology is designed to ensure that the videos on your site will start quickly and stream smoothl. 
+
+In addition, Kaltura's Web Video Player leads the industry in flexibility, ease of customization, plug-in offerings and loading speed. All of the Web Video Player features are supported on both HTML5 and Flash using the same configuration, which makes feature integration across platforms simple and easy. 
 
 {% onebox http://cdnapi.kaltura.com/p/243342/sp/24334200/embedIframeJs/uiconf_id/20540612/partner_id/243342?iframeembed=true&playerId=kaltura_player&entry_id=1_sf5ovm7u&flashvars[streamerType]=auto %}
 
@@ -80,7 +82,7 @@ Kaltura's Web Video Player is designed to ensure seamless integration of advance
 Our Universal DRM module enables media companies, content rights owners and OTT providers to stream premium content without needing to worry about which browser, device or platform is being used. 
 
  
-## Basic Look and Feel of the Kaltura Web Video Player  
+## Basic Look and Feel of the Kaltura Web Video Player  {Debbie should I even leave this section in???}
 
 The following illustrates the basic look and feel of the Kaltura Web Video Player.
  
@@ -135,6 +137,6 @@ o	Note: The browsers that are projected to support MPEG DASH: IE 11 (Windows, Xb
 •	Seamlessly integrate advanced live broadcasts streaming and DRM
 
 
-## Web Video Player SDK  
+## Web Video Player SDK  {Debbie: Rereading this I'm not sure it adds anything to the discussion - tell me if you agree and perhaps I should remove it...}  
 
 The Kaltura Web Video Player SDK enables users to lead video delivery with HTML5 and provide the fastest viewing experience on any device, while maintaining all the same features and a consistent CSS/HTML player design. Kaltura Players v2 enable delivery of HTML5 with Chromeless components for Flash, iOS and Android.
