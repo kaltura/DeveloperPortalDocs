@@ -43,12 +43,16 @@ To learn more abou the different layers of security, see [The Kaltura Media Acc
 
 ## The Kaltura Session  
 
-Every Kaltura Session is limited by one or more of the following components:
+Every KS is limited by one or more of the following components:
 
 * Expiry time – Can be set to a short period (1 second) up to 10 years. 
-  NOTE: The player has to perform all Kaltura API calls before the user hits play, so setting this too short for player sessions may break the playback experience. About 30 minutes is reasonable for just playback, or you could extend the player to re-negotiate for a session if it was expired.
-* Number of API calls - e.g. no more than 5 API calls allowed on the KS. 
-  NOTE: The number of needed API calls may not be an expected number, especially if you use 3rd party plugins in the player. When using this limitation, make sure all API calling components in your app are known and counted in number of API calls.
+
+**NOTE:** The player must perform all Kaltura API calls before the user hits play, so setting this too short for player sessions may break the playback experience. About 30 minutes is reasonable for just playback, or you could extend the player to re-negotiate for a session if it expires.
+
+* Number of API calls - E.g., no more than 5 API calls allowed on the KS.
+
+**NOTE:** The number of needed API calls may not be an expected number, especially if you use 3rd party plugins in the player. When using this limitation, make sure all API calling components in your application are known and counted into the number of API calls specified.
+
 * Specific entry playback - When limited by an Access Control Profile, approved entries must be specifically stated by passing the privilege sview:entryId.
 * Specific IP address - Limit access to the API from a specific IP or range of IPs by passing privilege **iprestrict:IPADDRESS**.
 
@@ -56,27 +60,30 @@ Every Kaltura Session is limited by one or more of the following components:
 
 The KS is a string composed of the following details:
 
-* Publisher ID – A unique identifier allocated to every Kaltura account. The partner Id can be retrieved from the KMC Integration Settings tab.
-* User ID – The id of the user within the publisher account performing the API call. This id is the end-user id on the publisher's system.
+* Publisher ID – A unique identifier allocated to every Kaltura account. The partner ID can be retrieved from the KMC Integration Settings tab.
+* User ID – The id of the user within the publisher account performing the API call. This ID is the end-user's ID on the publisher's system.
 * KS Type (admin / user) – An admin KS can access all the content of the publisher account and call management APIs, while a user KS can only access content items owned by the specific user.
-* Expiry time - Can be set to a short period (1 second) up to 10 years. In Seconds. Integer.
-* Action limit – Maximum number of API calls allowed using this KS. Integer.
-* Random number – A time based random number to make every KS string unique.
-* ksdata - An arbitrary data that will be overlooked by Kaltura and can be used to pass additional information on the KS for custom application use.
-* Signature – The KS is cryptographically signed (one-way MD5 hashing algorithm), by hashing all the above with a secret key shared between Kaltura and the publisher.
+* Expiry time - Can be set to a short period (1 second) up to 10 years; set in seconds (integer).
+* Action limit – The maximum number of API calls allowed using this KS (integer).
+* Random number – A time based on random number to make every KS string unique.
+* ksdata - Arbitrary data that will be overlooked by Kaltura and can be used to pass additional information on the KS for custom application use.
+* Signature – The KS is cryptographically signed (one-way MD5 hashing algorithm), by hashing all of the above with a secret key shared between Kaltura and the publisher.
 
-The information above is then combined with either Admin or User Secret (depending on the KS type desired), and then compiled using SHA1 algorithm. To generate the KS that is sent through the API: combine the SHA1 hash (in lowercase) and the above parameters in plain-text seperated by semi-colons (i.e. ';'), in Base64.
+The information above is then combined with either an Admin or User Secret (depending on the KS type desired), and then compiled using SHA1 algorithm. To generate the KS that is sent through the API: combine the SHA1 hash (in lowercase) and the above parameters in plain-text seperated by semi-colons (i.e. ';'), in Base64.
 
-###  Kaltura Session Version 2  
+###  Field Encryption to Protect User Privacy  
 
-Since October 14, 2012 - Kaltura introduced a second version to the KS format that includes encryption of the fields for protecting the user privacy.
+Kaltura Session Version 2 (introduced in October 2012) includes field encryption to protect user privacy.
 
 <p class="mce-note-graphic">
-  Version 1 (the original format) will continue to be maintained for backward compatibility - the Kaltura server accepts both version 1 and 2. The Kaltura server generates version 2 by default for publisher accounts created after Oct 2012. <strong>Implementations that generate a KS locally are encouraged to use KS version 2 as well.</strong>
+
+Version 1 (the original format) is maintained for backward compatibility - the Kaltura server accepts both version 1 and 2. The Kaltura server generates version 2 by default for publisher accounts created after Oct 2012. <strong>Implementations that generate a KS locally are encouraged to use KS version 2 as well.</strong>
 </p>
 
 <p class="p1">
-  Since the new KS format requires encryption of the fields, performing base64 decode on the KS will not reveal its fields (as was the case with KS version 1). <br />To decode a KS v2, IT admins and developers who operate self hosted Kaltura servers can use the admin console developer tools page: https://[KalturaServerURL]/admin_console/index.php/plugin/KalturaInternalToolsPluginSystemHelperAction
+Because the new KS format requires encryption of the fields, performing a base64 decode on the KS will not reveal its fields (as was the case with KS version 1). 
+
+To decode a KS v2, IT admins and developers who operate self hosted Kaltura servers can use the admin console developer tools page: https://[KalturaServerURL]/admin_console/index.php/plugin/KalturaInternalToolsPluginSystemHelperAction
 </p>
 
 <p class="p1 mce-sub-heading">
@@ -125,25 +132,19 @@ Since October 14, 2012 - Kaltura introduced a second version to the KS format th
   </li>
 </ol>
 
-To see an implementation of the KS generation algorithm, refer to the GenerateSession function in [the client library of your choice][2].
+To see an implementation of the KS generation algorithm, refer to the GenerateSession function below.
 
- [2]: http://www.kaltura.com/api_v3/testme/client-libs.php
-
-<p class="mce-heading-3">
-  <a name="methods"></a>Methods for generating a valid Kaltura Session:
-</p>
+## Methods for Generating a Valid KS  
 
 *   **Generate Session Locally** - Combine all the above details, and sign them using the shared secret key. This method is great for reducing callbacks to the server and enhanced security, since the session is generated locally and the secret key is kept private.
 *   **Call session.start** - Calling the Kaltura Session.start API to generate a session on the server.  
     <span class="mce-note-graphic">Note: Using the session.start API is discouraged unless secure connection (SSL) is enabled on the account and there are specific reasons to generate the KS on the server side, using short expiry time that requires synchronizing to the server time.</span>
 *   **Call user.loginByLoginId - **This method is using Kaltura Users and their Password instead of partner id and secret key.   
-    <span class="mce-note-graphic">NOTE: This method is should be preferred in most cases. <br />1. It is easier to remember user name and password.<br />2. Users can be limited to specific roles and permissions (e.g. enabling only upload).<br />3. Users can be deleted, password changed or demoted in permissions, while the secret keys can't be easily modified. </span>
+    <span class="mce-note-graphic">NOTE: This method is should be preferred in most cases. <br />1. It is easier to remember ua ser name and password.<br />2. Users can be limited to specific roles and permissions (e.g. enabling only upload).<br />3. Users can be deleted, passwords changed or demoted in permissions, while the secret keys can't be modified easily. </span>
 
-<p class="mce-heading-3">
-  KS Types
-</p>
+###  KS Types  
 
-<span class="mce-sub-heading">User KS <span> (Non-Authenticated User Session)</span></span>
+**User KS (Non-Authenticated User Session)**
 
 *   A User KS is generated using the USER SECRET.
 *   USER type can only use a subset of the available services that are relevant for a user in the system.
