@@ -4,8 +4,8 @@ title: Kaltura Player JavaScript API, Events and Hooks
 weight: 403
 ---
 
-The Player JavaScript API is a two-way communication channel that enables you to manage properties, event and notifications, including: 
-* Enabling the Player to communicate its current states and parameters
+The Web Video Player JavaScript API is a two-way communication channel that enables you to manage properties, event and notifications, including: 
+* Enabling the player to communicate its current states and parameters
 * Enabling the embedding page/application to invoke actions, change and read properties, and to customize its behavior, design and layout 
 * Maintaining a continuous, interactive data connection with the Kaltura Platform API
 * Providing a seamless end user experience across devices, browsers and platforms
@@ -15,18 +15,20 @@ The Player JavaScript API is a two-way communication channel that enables you to
 The Player API is exposed via the Player JavaScript library and is only available when using the JavaScript embed methods (dynamic, thumbnail or auto). 
 
 With iframe embed, communication with the parent DOM is sandboxed and thus requires the use of the postMessage API. If you require the use of an iframe embed, but need to establish an API communication, we recommend using the Kaltura **player.js** adapter, which acts as a postMessage bridge. 
+
 If you are using Embed.ly, note that Kaltura.com Players are whitelisted for the embed.ly service.
 
-The Kaltura Player's embed API is the first method you will interact with when using the Kaltura Player. This is the API that allows you to render Players on your page.
-The kWidget API is available after you include the Kaltura Player library in your page. kWidget provides embedding and basic utility functions. 
+The player's embed API is the first method you will interact with when using the Kaltura Player. This is the API that allows you to render players on your page.
 
-> The Kaltura Player library can also be used inside Native Android and Native iOS applications using the respective Player SDK. See the [Kaltura Player Mobile SDK](https://vpaas.kaltura.com/documentation/05_Mobile-Video-Player-SDKs/Introduction.html) docs for more information about using the Kaltura Player in native mobile applications.
+The kWidget API is available after you include the Kaltura Web Video Player library in your page. kWidget provides embedding and basic utility functions. 
 
-### Kaltura Player Embed API Methods  
+> The Kaltura Web Video Player library can also be used inside Native Android and Native iOS applications using the respective player SDK. See the [Kaltura Player Mobile SDK](https://vpaas.kaltura.com/documentation/05_Mobile-Video-Player-SDKs/Introduction.html) documents for more information about using the Kaltura Video Player in native mobile applications.
+
+### Kaltura Web Video Player Embed API Methods  
 
 To get started:
 
-1. Include the JavaScript tag to load the Kaltura Player library.
+1. Include the JavaScript tag to load the Kaltura Web Video Player library.
 2. Substitute these tokens: 
 
   * {partner_id} - your Kaltura partner id (retrieved from KMC>Settings tab)
@@ -35,10 +37,10 @@ To get started:
 ```html
 <script src="//cdnapisec.kaltura.com/p/{partner_id}/sp/{partnerId}00/embedIframeJs/uiconf_id/{uiconf_id}/partner_id/{partnerId}"></script>
 ```
-After you have included the Kaltura Player library, the following kWidget API embed methods will be available:
+After you have included the Kaltura Web Video Player library, the following kWidget API embed methods will be available:
 
 * `kWidget.embed(targetId, settings)`: The most commonly used JavaScript embed method, after loading the DOM, the Kaltura Player will be rendered against the div whose ID was provided in `targetId`.
-* `kWidget.thumbEmbed(targetId, settings)`: This method will render a thumbnail and play button to the `targetId` DOM element, and will only render the full Player when the end user clicks the Play button. The thumbnail embed will pass all of the configurations to the kWidget.embed when the Play button is clicked. The Player context menu can be disabled by setting the `EmbedPlayer.DisableContextMenu` UIVar to *true* using the flashvars or the Player Studio UIVars.
+* `kWidget.thumbEmbed(targetId, settings)`: This method will render a thumbnail and play button to the `targetId` DOM element, and will only render the full player when the end user clicks the Play button. The thumbnail embed will pass all of the configurations to the kWidget.embed when the Play button is clicked. The player context menu can be disabled by setting the `EmbedPlayer.DisableContextMenu` UIVar to *true* using the flashvars or the Player Studio UIVars.
 
 #### Embed API Method Parameters
 
@@ -60,7 +62,7 @@ After you have included the Kaltura Player library, the following kWidget API em
 
 ### Obtaining a Reference to the Embedded Player
 
-To communicate with embedded Player instances via the JavaScript API, you will need to retrieve a reference to the Player instance. To obtain a reference to the Player,  you will need to implement the `readyCallback` function. `readyCallback` is called when the Player was successfully rendered to the DOM and is ready to accept API calls. 
+To communicate with embedded player instances via the JavaScript API, you will need to retrieve a reference to the player instance. To obtain a reference to the player,  you will need to implement the `readyCallback` function. `readyCallback` is called when the player was rendered successfully to the DOM and is ready to accept API calls. 
 
 There are two ways to implement the `readyCallback` function, which are described below.
 
@@ -72,7 +74,7 @@ kWidget.addReadyCallback( function( playerId ){
     // kdp var now holds the player reference
 });
 ``` 
-This will register a global function that will be called once for every Player instance that will be rendered on the page. 
+This will register a global function that will be called once for every player instance that will be rendered on the page. 
 
 #### Passing the Handler Function to Each Individual Embed Call  
 
@@ -109,7 +111,7 @@ kWidget.addReadyCallback( function( playerId ){
 
 ### Using Event Namespaces  
 
-It is highly recommended to define your own event namespaces when registering to Player events. This will prevent overriding event handlers when registering and unregistering events with multiple Player embeds on the same page. 
+It is highly recommended to define your own event namespaces when registering to player events. This will prevent overriding event handlers when registering and unregistering events with multiple player embeds on the same page. 
 
 To use namespaces, postfix the event name with a dot and some alphanumeric string. 
 For example: 
