@@ -5,38 +5,41 @@ subcat: Working with Application Tokens
 weight: 104
 ---
 Kaltura's API is a REST-based web service accessed over HTTP. REST APIs provide a simple and easy interface for communication between applications and the Kaltura server. However, this approach can undermine your application's security, if you overlook proper security and authentication when designing your applications.
+
 Kaltura was designed with privacy and security standards in mind, while at the same time providing the openness of Kaltura’s technology as an open source platform and providing flexible integration models for open and free applications as well as highly secured and limitted applications.
-The following overview describes the authntication and security model of Kaltura’s API, and how to put it to practice when implementing Kaltura applications.
+
+The following overview describes the authentication and security model of Kaltura’s API, and how to put it to practice when implementing Kaltura's applications.
 
 ## Authentication and Security  
 
 To establish communication with the Kaltura servers, the client application must have a secret (one of 2 types) coupled with a unique account ID and a set of permissions.
 
-A valid Kaltura Session (KS) is required to interact with the Kaltura API; displaying content, upload media, delete, update or list.
-The KS expiry can be set at session initiation to range from 1 second to 10 years.
+A valid Kaltura Session (KS) is required to interact with the Kaltura API; displaying content, uploading media, deleting, updating or listing. The KS expiry can be set at session initiation to range from 1 second to 10 years.
 
 Once the KS is acquired, it can be used to interact with content by users for specific pre-set actions, such as uploading, deletion, updating and listing.
 
 Securing application content is done by leveraging one or more of the following methods:
+
 * Data: 
   * The Kaltura Session
   * The channel communication (e.g., HTTPS)
 * Video Delivery:
   * Delivery methods and obfuscation (segmentation, url obfuscation, expired urls)
-  * DRM.
+  * DRM
  
 ## Media Access Control  
 
-There are many possible layers of security that can be deployed within Kaltura’s system. To learn more, see [The Kaltura Media Access Control Model](http://knowledge.kaltura.com/node/447).
+There are many possible layers of security that can be deployed within Kaltura’s system. 
 
-Publishers can configure the level of required security for their end users - these security layers work in coordination with the site’s user authentication methods as well. Specifically, Publishers can control access to each media asset and restrict user access to assets based on each of the following or a combination of several criteria:
+Publishers can configure the level of required security for their end users - these security layers work in coordination with the site’s user authentication methods as well. Specifically, publishers can control access to each media asset and restrict user access to assets based on each of the following or a combination of several criteria:
 
-* Authorized domains –Solutions can restrict access to media based on a predefined list of approved domains.
+* Authorized domains – Solutions can restrict access to media based on a predefined list of approved domains.
 * Geo-location – Solutions can restrict access to media based on the origin on the user. This is set using the user's IP. For example, a publisher in Spain can restrict access to their media to all users outside of Spain, allowing users with Spanish IPs only to access the site's media.
 * IP - Limit access to media only from a specific IP Address or range of IP address.
-* Time limit - Solutions can allow access to media for a specified time period only. For example, allowing users to access certain media for 7 days only.
-* Session limit - "Anonymous" users will be restricted and every access to the data will be required by a valid Kaltura Session with specific permissions to the desired entry id. The Publisher application is then responsible to determine whether a user has access to the a specific content, and if valid, generate and pass a valid KS with the request to the content.
+* Time limit - Solutions can allow access to media for a specified time period only, for example, allowing users to access certain media for 7 days only.
+* Session limit - "Anonymous" users will be restricted and all access to the data will require a valid KS with specific permissions to the desired entry id. The publisher application is then responsible for determining whether a user has access to the a specific content, and if valid, generate and pass a valid KS with the request to the content.
 
+To learn more abou the different layers of security, see [The Kaltura Media Access Control Model](http://knowledge.kaltura.com/node/447).
 
 ## The Kaltura Session  
 
