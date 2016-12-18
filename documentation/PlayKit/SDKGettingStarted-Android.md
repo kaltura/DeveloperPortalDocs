@@ -8,64 +8,68 @@ weight: 291
 [![Android](https://img.shields.io/badge/Android-Supported-green.svg)](https://github.com/kaltura/playkit-android)
 
 
-This article describes the steps required to use Youbora Plugin in Android devices.
+This article describes the steps required to integrate PlakitSDK into your App.
 
-## Enabling Youbora Plugin for the Kaltura Player  
+## Integrating SDK to your App settings 
 
-To enable Youbora Plugin in Android devices for the Kaltura Player do the following steps:
+Clone the SDK  from https://github.com/kaltura/playkit-android and locate it next to your app code 
 
-Register Youbora Plugin inside your app:
+In setting.gradle add the SDK projet settings:
 
-```
-PlayKitManager.registerPlugins(YouboraPlugin.factory);
-```
-
-## Configuring the plugin config object for Youbora Plugin  
-
-To configure the Youbora Plugin, add the following configuration to your `pluginConfig`:
 
 ```
-private void configureYouboraPlugin(PlayerConfig pluginConfig) {
-        JsonObject youboraConfigEntry = new JsonObject();
-        youboraConfigEntry.addProperty("accountCode", "your youbora account code");
-        youboraConfigEntry.addProperty("username", "user name for youbora"); //Optional
-        youboraConfigEntry.addProperty("haltOnError", true);
-        youboraConfigEntry.addProperty("enableAnalytics", true); //If you want to enable youbora ads analytics
+include ':playkit', ':playkitdemo'
+```
 
-        JsonObject mediaEntry = new JsonObject();
-        mediaEntry.addProperty("title", "media title");
-
-        JsonObject adsEntry = new JsonObject(); //If you have ads support in your app
-        adsEntry.addProperty("adsExpected", true);
-        adsEntry.addProperty("title", "ad title");
-        adsEntry.addProperty("campaign", "ad campaign");
-
-        JsonObject extraParamEntry = new JsonObject(); // You can define upto 10 configurable params "param1" to "param10"
-        extraParamEntry.addProperty("param1", "Configurable");
-        extraParamEntry.addProperty("param2", "playKitPlayer");
-        extraParamEntry.addProperty("param3", "Configurable");
-
-        JsonObject propertiesEntry = new JsonObject();
-        propertiesEntry.addProperty("genre", "");
-        propertiesEntry.addProperty("type", "");
-        propertiesEntry.addProperty("transaction_type", "");
-        propertiesEntry.addProperty("year", "");
-        propertiesEntry.addProperty("cast", "");
-        propertiesEntry.addProperty("director", "");
-        propertiesEntry.addProperty("owner", "");
-        propertiesEntry.addProperty("parental", "");
-        propertiesEntry.addProperty("price", "");
-        propertiesEntry.addProperty("rating", "");
-        propertiesEntry.addProperty("audioType", "");
-        propertiesEntry.addProperty("audioChannels", "");
-        propertiesEntry.addProperty("device", "");
-        propertiesEntry.addProperty("quality", "");
-
-        ConverterYoubora converterYoubora = new ConverterYoubora(youboraConfigEntry, mediaEntry,
-                adsEntry, extraParamEntry, propertiesEntry); // you set the coverterYoubora.toJson() as the plugin config object
-                }
+In your build.gradle file add dependancy for the SDK:
 
 ```
+ compile project(path: ':playkit')
+```
+
+## Creating Player Object - OTT Apprach
+
+###Create the Media Source 
+
+```
+List<PKMediaSource> mediaSourceList = new ArrayList<>();
+PKMediaSource pkMediaSource = new PKMediaSource();
+pkMediaSource.setId(<FileId>);
+pkMediaSource.setUrl(<Media URL>);
+```
+### In case of Widevine Meida - DRM License is required
+
+```
+PKDrmParams pkDrmParams = new PKDrmParams(licenseUrl);
+pkDrmDataList.add(pkDrmParams);
+pkMediaSource.setDrmData(pkDrmDataList);
+```
+
+###Create the Media Entry
+
+```
+PKMediaEntry mediaEntry = new PKMediaEntry();
+mediaEntry.setId(<MediaId>)
+mediaSourceList.add(pkMediaSource);
+mediaEntry.setSources(mediaSourceList);
+```
+
+###Build the Player Config
+
+```
+PlayerConfig config = new PlayerConfig();
+config.media.setMediaEntry(mediaEntry);
+config.media.setAutoPlay(true);
+if (WATCHED_DURATION == -1) {
+    config.media.setStartPosition(0);
+} else {
+    config.media.setStartPosition((long) MEDIA_WATCHED_DURATION);
+}
+```
+
+
+
+
 
 ## Setting the plugin config to Youbora Plugin
 
@@ -73,33 +77,186 @@ In order for the Youbora Plugin to start loading, you need to set
 the plugin config you created -
 
 ```
-PlayerConfig config = new PlayerConfig();
-PlayerConfig.Plugins plugins = config.plugins;
-plugins.setPluginConfig("Youbora", converterYoubora.toJson()); 
+PlayerConfig.Plugins pluginsConfig = config.plugins;
+pluginsConfig.setPluginConfig(YouboraPlugin.factory.getName(), converterYoubora.toJson()); 
 ```
 
-## Analyzing the Youbora Plugin requests
+## Setting the plugin config to IMA Plugin
 
-The correct flow of events when Youbora Plugin is activated and you play media using Kaltur aPlayer - 
+```
+String adTagUrl = "https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/single_ad_samples&ciu_szs=300x250&impl=s&gdfp_req=1&env=vp&output=vast&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ct%3Dskippablelinear&correlator=";
+List<String> videoMimeTypes = new ArrayList<>();
+videoMimeTypes.add(MimeTypes.APPLICATION_MP4);
+IMAConfig adsConfig = new IMAConfig("en", false, true, -1, 
+videoMimeTypes, adTagUrl, true, true);
+       
+pluginsConfig.setPluginConfig(IMAPlugin.factory.getName(),adsConfig.toJSONObject());
 
-1. Data request event - /data
-The response will contain the URL all other events will be send to.
-http://nqs.nice264.com/data?system=kalturatest&pluginName=playkit%2Fandroid-0.0.3&timemark=1481719756186&pluginVersion=5.3.0-playkit%2Fandroid-0.0.3&outputformat=jsonp
+```
 
+## Create The PlayKitManager
+```
+playerKit = PlayKitManager.loadPlayer(config, this);
 
-2. Start event /start
-After play was pressed or auto-play is on
-http://test-nqs-lw2.nice264.com/start?deviceId=&cdn=&param6=&duration=15&user=&param10=&code=V_19210_apk0b5rp2e5bq0gm_0&resource=http%3A%2F%2Flbd.kaltura.com%3A8002%2Fedash%2Fp%2F552741%2Fsp%2F55274100%2FserveFlavor%2FentryId%2F1_a2qor9cc%2Fv%2F1%2FflavorId%2F1_%2C93t0pa0f%2Cnr0yylo6%2C644jy89i%2C%2Fforceproxy%2Ftrue%2Fname%2Fa.mp4.urlset%2Fmanifest.mpd&adsExpected=true&param1=playkit%2Fandroid-0.0.3&param7=&param2=&timemark=1481719912433&isp=&pingTime=5&playerVersion=playkit%2Fandroid-0.0.3&system=kalturatest&properties=%7B%22device%22%3A%22%22%2C%22audioType%22%3A%22%22%2C%22rating%22%3A%22%22%2C%22cast%22%3A%22joe+joe%22%2C%22quality%22%3A%22%22%2C%22owner%22%3A%22%22%2C%22year%22%3A%222000%22%2C%22parental%22%3A%22%22%2C%22genre%22%3A%22action%22%2C%22price%22%3A%22%22%2C%22transaction_type%22%3A%22%22%2C%22audioChannels%22%3A%22%22%2C%22type%22%3A%22video%22%2C%22director%22%3A%22henry%22%7D&live=false&param8=&param4=&pluginVersion=5.3.0-playkit%2Fandroid-0.0.3&param9=&rendition=&title=&transcode=&param3=&hashTitle=true&ip=&player=playkit%2Fandroid-0.0.3&param5=
+```
 
+## Initializing the Player with your config 
 
-3. Join event /join
-After media started playing
-http://test-nqs-lw2.nice264.com/joinTime?timemark=1481719912435&eventTime=0.0&mediaDuration=15.0&time=3&code=V_19210_apk0b5rp2e5bq0gm_0
+```
+if (playerKit == null) {
+    playerKit = PlayKitManager.loadPlayer(config, VideoPlayerBaseActivity.this);
+    final FrameLayout playerKitViewContainer = (FrameLayout) findViewById(R.id.player_root);
+    ViewGroup.LayoutParams layoutParams = new ViewGroup.LayoutParams(getWindow().getDecorView().getMeasuredWidth(),
+            getWindow().getDecorView().getMeasuredHeight());
+   
+    View playerKitView = playerKit.getView();
+    playerKitView.setLayoutParams(layoutParams);
+    playerKitViewContainer.addView(playerKitView);
+    setPlayerListeners();
+} else {
+    String adTagUrl = VIOAdUtil.getCastAdTag(mVideoDetailsModel);
+    playerKit.updatePluginConfig(IMAPlugin.factory.getName(), IMAConfig.AD_TAG_URL, adTagUrl);
+}
+playerKit.prepare(config.media);
+if (config.media.isAutoPlay()) {
+    playerKit.play();
+}
+```
 
-4. Ping event /ping     
-Every 5 seconds
+## Registering to the Player Events & States
 
-5. Stop event /stop
-After media finished playing
+```
+private void setPlayerListeners() {
+    playerKit.addEventListener(new PKEvent.Listener() {
+         @Override
+         public void onEvent(PKEvent event) {
+             log.v("addEventListener " + event.eventType());
+             log.v("Player Total duration => " + playerKit.getDuration());
+             Enum receivedEventType = event.eventType();
+             if (event instanceof PlayerEvent) {
+                 switch (((PlayerEvent) event).type) {
+                     case CAN_PLAY:
+                         showOrHideContentLoaderProgress(false);
+                         setUpdateProgressTask(true);
+                         break;
+                     case PLAY:
+                         changePlayPauseControllerState(PLAY_STATE);
+                         break;
+                     case PLAYING:
+                         PLAYBACK_STATE = PLAY_STATE;
+                         onPlayerPlay();
+                        break;
+                     case PAUSE:
+                         PLAYBACK_STATE = PAUSE_STATE;
+                         break;
+                     case SEEKING:
+                         break;
+                     case SEEKED:
+                         handlePlayerControlOnSeek(false);
+                         break;
+                     case ENDED:
+                         PLAYBACK_STATE = PAUSE_STATE;
+                         onPlayerEnd();
+                         break;
+                     case TRACKS_AVAILABLE:
+                         PKTracks tracks = ((PlayerEvent.TracksAvailable)event).getPKTracks();
+                         mPlayerTrackInfo = tracks;
+                         break;
+                     case ERROR:
+                         String errorMsg = "Player error occurred.";
+                         break;
+                 }
+             } else if (event instanceof AdEvent) {
+                 switch (((AdEvent) event).type) {
+                     case LOADED:
+                         showOrHideContentLoaderProgress(false);
+                         break;
+                     case ALL_ADS_COMPLETED:
+                         break;
+                     case CONTENT_PAUSE_REQUESTED:
+                         break;
+                     case STARTED:
+                         PLAYBACK_STATE = PLAY_STATE;
+                         mAdStartedEventInfo = (AdEvent.AdStartedEvent) event;
+                         mAdPlayState = AD_STARTED;
+                         mAdRequestStatus = AD_SERVED;
+                         break;
+                     case PAUSED:
+                         PLAYBACK_STATE = PAUSE_STATE;
+                         break;
+                     case TAPPED:
+                         break;
+                     case COMPLETED:
+                         mAdPlayState = AD_COMPLETE;
+                         break;
+                     case SKIPPED:
+                         break;
+                 }
+             } else if (event instanceof AdError) {
+                 switch (((AdError) event).errorType) {
+                     case ADS_REQUEST_NETWORK_ERROR:
+                     case INTERNAL_ERROR:
+                     case VAST_MALFORMED_RESPONSE:
+                     case UNKNOWN_AD_RESPONSE:
+                     case VAST_LOAD_TIMEOUT:
+                     case VAST_TOO_MANY_REDIRECTS:
+                     case VIDEO_PLAY_ERROR:
+                     case VAST_MEDIA_LOAD_TIMEOUT:
+                     case VAST_LINEAR_ASSET_MISMATCH:
+                     case OVERLAY_AD_PLAYING_FAILED:
+                     case OVERLAY_AD_LOADING_FAILED:
+                     case VAST_NONLINEAR_ASSET_MISMATCH:
+                     case COMPANION_AD_LOADING_FAILED:
+                     case UNKNOWN_ERROR:
+                     case VAST_EMPTY_RESPONSE:
+                     case FAILED_TO_REQUEST_ADS:
+                     case VAST_ASSET_NOT_FOUND:
+                     case INVALID_ARGUMENTS:
+                     case PLAYLIST_NO_CONTENT_TRACKING:
+                         playerKit.play();
+                         break;
+                 }
+             }
 
+             if (event instanceof PlayerEvent || receivedEventType == AdEvent.Type.PAUSED || receivedEventType == AdEvent.Type.RESUMED || receivedEventType == AdEvent.Type.STARTED) {
+                 mPlayKitState = event.eventType();
+             }
 
+         }
+
+     }, PlayerEvent.Type.PLAY, PAUSE, CAN_PLAY, PlayerEvent.Type.SEEKING, PlayerEvent.Type.SEEKED, PlayerEvent.Type.PLAYING,
+            PlayerEvent.Type.ENDED, PlayerEvent.Type.TRACKS_AVAILABLE, PlayerEvent.Type.ERROR,
+            AdEvent.Type.LOADED, AdEvent.Type.SKIPPED, AdEvent.Type.TAPPED, AdEvent.Type.CONTENT_PAUSE_REQUESTED, AdEvent.Type.CONTENT_RESUME_REQUESTED, AdEvent.Type.STARTED, AdEvent.Type.PAUSED, AdEvent.Type.RESUMED,
+            AdEvent.Type.COMPLETED, AdEvent.Type.ALL_ADS_COMPLETED, AdError.Type.ADS_REQUEST_NETWORK_ERROR,
+            AdError.Type.VAST_EMPTY_RESPONSE, AdError.Type.COMPANION_AD_LOADING_FAILED, AdError.Type.FAILED_TO_REQUEST_ADS,
+            AdError.Type.INTERNAL_ERROR, AdError.Type.OVERLAY_AD_LOADING_FAILED, AdError.Type.PLAYLIST_NO_CONTENT_TRACKING,
+            AdError.Type.UNKNOWN_ERROR, AdError.Type.VAST_LINEAR_ASSET_MISMATCH, AdError.Type.VAST_MALFORMED_RESPONSE,
+            AdError.Type.VAST_LOAD_TIMEOUT, AdError.Type.INVALID_ARGUMENTS, AdError.Type.VAST_TOO_MANY_REDIRECTS);
+
+    playerKit.addStateChangeListener(new PKEvent.Listener() {
+        @Override
+        public void onEvent(PKEvent event) {
+
+            PlayerEvent.StateChanged stateChanged = (PlayerEvent.StateChanged) event;
+            log.v("addStateChangeListener " + event.eventType() + " = " + stateChanged.newState);
+            switch (stateChanged.newState){
+                case IDLE:
+                    log.d("StateChange Idle");
+                    break;
+                case LOADING:
+                    log.d("StateChange Loading");
+                    break;
+                case READY:
+                    log.d("StateChange Ready");
+                    mPlayerControlsView.setProgressBarVisibility(false);
+                    break;
+                case BUFFERING:
+                    log.e("StateChange Buffering");
+                    mPlayerControlsView.setProgressBarVisibility(true);
+                    break;
+            }
+
+        }
+    });
+
+}
