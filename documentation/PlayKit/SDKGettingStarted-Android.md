@@ -124,7 +124,7 @@ if (config.media.isAutoPlay()) {
 }
 ```
 
-## Registering to the Player Events & States
+## Registering to the Player Events
 
 ```
 private void setPlayerListeners() {
@@ -233,8 +233,14 @@ private void setPlayerListeners() {
             AdError.Type.INTERNAL_ERROR, AdError.Type.OVERLAY_AD_LOADING_FAILED, AdError.Type.PLAYLIST_NO_CONTENT_TRACKING,
             AdError.Type.UNKNOWN_ERROR, AdError.Type.VAST_LINEAR_ASSET_MISMATCH, AdError.Type.VAST_MALFORMED_RESPONSE,
             AdError.Type.VAST_LOAD_TIMEOUT, AdError.Type.INVALID_ARGUMENTS, AdError.Type.VAST_TOO_MANY_REDIRECTS);
+}
 
-    playerKit.addStateChangeListener(new PKEvent.Listener() {
+```
+
+## Registering to Player State Change Listener
+
+```
+playerKit.addStateChangeListener(new PKEvent.Listener() {
         @Override
         public void onEvent(PKEvent event) {
 
@@ -259,5 +265,5 @@ private void setPlayerListeners() {
 
         }
     });
-
-}
+    
+```
