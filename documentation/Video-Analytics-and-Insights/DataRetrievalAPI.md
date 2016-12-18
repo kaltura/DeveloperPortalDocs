@@ -49,6 +49,14 @@ filter.utcOffset = 0;
 
 filter.dimensions = "entry,hour";
 
+filter.orderBy = “+hour”;
+
+KalturaFilterPager pager = new KalturaFilterPager();
+
+pager.pageSize = 100;
+
+pager.pageIndex = 1;
+
 KalturaReportResponse result = client.getAnalyticsService().query(filter);
 
 System.out.println(result.columns);
