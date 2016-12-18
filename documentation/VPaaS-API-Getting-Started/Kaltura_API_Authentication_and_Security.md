@@ -4,26 +4,28 @@ title: Kaltura API Authentication and Security
 subcat: Working with Application Tokens
 weight: 104
 ---
-Kaltura's API is a REST-based web service accessed over HTTP. REST APIs provide a simple and easy interface for communication between applications and the Kaltura server. However, this can also be a door for weaknesses in your applications if you overlook proper security and authentication when designing your applications.
-Kaltura was designed with privacy and security standards in mind, while at the same time providing openness of Kaltura’s technology as an open source platform and providing flexible integration models for open and free applications as well as highly secured and limitted applications.
+Kaltura's API is a REST-based web service accessed over HTTP. REST APIs provide a simple and easy interface for communication between applications and the Kaltura server. However, this approach can undermine your application's security, if you overlook proper security and authentication when designing your applications.
+Kaltura was designed with privacy and security standards in mind, while at the same time providing the openness of Kaltura’s technology as an open source platform and providing flexible integration models for open and free applications as well as highly secured and limitted applications.
 The following overview describes the authntication and security model of Kaltura’s API, and how to put it to practice when implementing Kaltura applications.
 
 ## Authentication and Security  
 
 To establish communication with the Kaltura servers, the client application must have a secret (one of 2 types) coupled with a unique account ID and a set of permissions.
+
 A valid Kaltura Session (KS) is required to interact with the Kaltura API; displaying content, upload media, delete, update or list.
 The KS expiry can be set at session initiation to range from 1 second to 10 years.
 
 Once the KS is acquired, it can be used to interact with content by users for specific pre-set actions, such as uploading, deletion, updating and listing.
-Securing apps content is done by leveraging one or more of the following methods -
 
+Securing application content is done by leveraging one or more of the following methods:
 * Data: 
-  * The Kaltura Session.
-  * The channel communication (e.g., HTTPS).
+  * The Kaltura Session
+  * The channel communication (e.g., HTTPS)
 * Video Delivery:
-  * Delivery methods and obfuscation (segmentation, url obfuscation, expired urls).
-DRM.
-  * Media Access Control
+  * Delivery methods and obfuscation (segmentation, url obfuscation, expired urls)
+  * DRM.
+ 
+## Media Access Control  
 
 There are many possible layers of security that can be deployed within Kaltura’s system. To learn more, see [The Kaltura Media Access Control Model](http://knowledge.kaltura.com/node/447).
 
