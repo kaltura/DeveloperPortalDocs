@@ -30,7 +30,7 @@ The Player API supports sending notifications to the Kaltura Video Player, liste
 
 Each Kaltura Video Video Player configuration includes the UICONF object, which includes the player configuration and indicates which plugins should be loaded. Every componenet of the layer is designed as a plugin.  
 
-## The Kaltura Player Architecture
+## The Kaltura Video Player Architecture
 
 The following diagram visualizes the Kaltura Video Player architecture, and highlights its flexibility and robust capabilities across platforms and devices: 
 
@@ -40,7 +40,7 @@ As the diagram above illustrates, you can leverage native components for [iOS](h
 
 ## When Should You Use Native Mobile SDKs?
 
-What are the advantages of using native mobile SDKs? Here is a feature list that explains the advantages of using the Kaltura Player Toolkit in native environments:
+What are the advantages of using native mobile SDKs? Here is a feature list that explains the advantages of using the Kaltura Video Player Toolkit in native environments:
 
 | Player Feature | iOS WebView | iOS Native |Android WebView | Android Native |  
 |:-------------  |:----------  |:---------- |:-------------- |:-------------- |  
