@@ -40,6 +40,7 @@ pkMediaSource.setUrl(<Media URL>);
 ### In case of Widevine Meida - DRM License is required
 
 ```
+List<PKDrmParams> pkDrmDataList = new ArrayList<>();
 PKDrmParams pkDrmParams = new PKDrmParams(licenseUrl);
 pkDrmDataList.add(pkDrmParams);
 pkMediaSource.setDrmData(pkDrmDataList);
