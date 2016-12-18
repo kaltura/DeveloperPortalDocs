@@ -901,7 +901,7 @@ Encrypted video files are generated as additional “flavors” of original asse
 
 <span class="mce-heading-2">Important Considerations For Application Developers</span><span class="mce-heading-3"></span>
 
-When not applications are not developer with security in mind, a malicious user can use:
+When not applications are not developed with security in mind, a malicious user can use:
 
 *   A compromised secret to create a KS at will
 *   A compromised admin KS to cause irreversible harm to your account (such as deleting all content)
