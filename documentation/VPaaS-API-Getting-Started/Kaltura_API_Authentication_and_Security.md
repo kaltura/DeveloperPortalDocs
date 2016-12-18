@@ -6,7 +6,7 @@ weight: 104
 ---
 Kaltura's API is a REST-based web service accessed over HTTP. REST APIs provide a simple and easy interface for communication between applications and the Kaltura server. However, this approach can undermine your application's security, if you overlook proper security and authentication when designing your applications.
 
-Kaltura was designed with privacy and security standards in mind, while at the same time providing the openness of Kaltura’s technology as an open source platform and providing flexible integration models for open and free applications as well as highly secured and limitted applications.
+Kaltura was designed with privacy and security standards in mind, while at the same time providing the openness of Kaltura’s technology as an open source platform and providing flexible integration models for open and free applications as well as highly secured and limited applications.
 
 The following overview describes the authentication and security model of Kaltura’s API, and how to put it to practice when implementing Kaltura's applications.
 
@@ -37,9 +37,9 @@ Publishers can configure the level of required security for their end users - th
 * Geo-location – Solutions can restrict access to media based on the origin on the user. This is set using the user's IP. For example, a publisher in Spain can restrict access to their media to all users outside of Spain, allowing users with Spanish IPs only to access the site's media.
 * IP - Limit access to media only from a specific IP Address or range of IP address.
 * Time limit - Solutions can allow access to media for a specified time period only, for example, allowing users to access certain media for 7 days only.
-* Session limit - "Anonymous" users will be restricted and all access to the data will require a valid KS with specific permissions to the desired entry id. The publisher application is then responsible for determining whether a user has access to the a specific content, and if valid, generate and pass a valid KS with the request to the content.
+* Session limit - "Anonymous" users will be restricted and all access to the data will require a valid KS with specific permissions to the desired entry id. The publisher application is then responsible for determining whether a user has access to the specific content, and if valid, generate and pass a valid KS with the request to the content.
 
-To learn more abou the different layers of security, see [The Kaltura Media Access Control Model](http://knowledge.kaltura.com/node/447).
+To learn more about the different layers of security, see [The Kaltura Media Access Control Model](http://knowledge.kaltura.com/node/447).
 
 ## The Kaltura Session  
 
@@ -160,9 +160,9 @@ To see an implementation of the KS generation algorithm, refer to the GenerateSe
 *   Services that delete data.
 
 *   An admin KS should never reach the browser. By letting users access an admin KS they will be able to cause changes not limited to their own content.
-*   An admin KS ignores any privilage restirctions.
+*   An admin KS ignores any privilege restrictions.
 
-<span class="mce-sub-heading">User Roles & Permissions (Authenticated User Session)</span>
+<span class="mce-sub-heading">User Roles and Permissions (Authenticated User Session)</span>
 
 *   Allow more advanced configuration of the access and permissions based on the defined Kaltura User permissions.
 
@@ -215,9 +215,7 @@ Once all the KS validations pass, the server will use the KS for:
 *   Choosing the content entities visible to the specific user.
 *   Setting the owning user for the API actions, e.g. any uploaded content will have the user specified in the KS as its owner.
 
-<p class="mce-heading-3">
-  <a name="privileges"></a>KS Privileges
-</p>
+### KS Privileges  
 
 Session privileges allows applications to limit the user to perform only specific actions.
 
@@ -227,7 +225,7 @@ For example, passing "sview:{entry ID}" enables the KS to be usable for playing 
 
 Any attempt to use that specific KS to play another entry ID will fail, as long as the entry is protected with KS-restriction access control.
 
-To be certain that the KS passed to player cannot be used for any update actions you can either:
+To verify that the KS passed to the player cannot be used for any update actions you can either:
 
 *   Add "setrole:PLAYBACK\_BASE\_ROLE" privilege to it, so it will not be allowed to perform any action other than a white-list of actions needed for the player (such as baseEntry.get, flavorAsset.list etc.).
 
@@ -352,7 +350,7 @@ Some privileges support a wildcard (*) value (for example, *edit:**). A wildcar
       </td>
       
       <td style="text-align: left;" valign="top" width="85">
-        <span>Only list:* is supported (list with other parameters will be ingored)</span> 
+        <span>Only list:* is supported (list with other parameters will be ignored)</span> 
       </td>
     </tr>
     
@@ -752,8 +750,7 @@ Some privileges support a wildcard (*) value (for example, *edit:**). A wildcar
   Examples are in PHP using the PHP5 Kaltura Client Library:
 </p>
 
-<p class="mce-heading-4">
-  <span style="font-size: small;"><strong>Never use KalturaSessionType::ADMIN in ks generated for end users.</strong></span>
+**Never use a KalturaSessionType ADMIN in a ks generated for end users.**
 </p>
 
 **Allow access to a specific entry Id (limitation is set via Access Control):**  
@@ -897,7 +894,9 @@ The table below shows the Stream security techniques as these apply differently
   </tbody>
 </table>
 
-Kaltura’s integrated DRM solutions seamlessly plug in to its existing infrastructure and workflows, protecting customers from vendor lock-in.DRM Support
+Kaltura’s integrated DRM solutions seamlessly plug in to its existing infrastructure and workflows, protecting customers from vendor lock-in.
+
+### DRM Support  
 
 Encrypted video files are generated as additional “flavors” of original asset using Kaltura’s transcoding farm and based on selected vendor and license policy. 
 
@@ -926,9 +925,9 @@ Your API Secret Keys (ADMIN and USER) are generated when you create am account. 
 
 *   Always prefer local session generation over server session.start.
 *   Prefer User Login over session.start when local KS generation is not possible.
-*   When calling the session.start API request - Make sure the connection between your client and the Kaltura server is encryoted and secured.
+*   When calling the session.start API request - Make sure the connection between your client and the Kaltura server is encrypted and secured.
 *   NEVER keep your secret keys in a front-end application (such as Flash or JavaScript). A KS should always be generated on the server side and then passed to the front-end.
-*   Keep the secret keys in a seperated file with strict file permissions.
+*   Keep the secret keys in a separated file with strict file permissions.
 
 <div class="mce-heading-3">
   Use Admin KS with care
@@ -942,7 +941,7 @@ Use Admin KS in between servers and with secured communication channel.
   Prefer Login of Users with Defined Roles and Permissions over Generic Admin KS
 </div>
 
-Kaltura Users can be assigned a fine grained level of permissions. This allows applications developers to provide a stronger login and authentication mechanism while not exposing the account secret keys.
+Kaltura Users can be assigned a fine-grained level of permissions. This allows applications developers to provide a stronger login and authentication mechanism while not exposing the account secret keys.
 
 Use user.loginByLoginId providing user credentials and your account Id. 
 
