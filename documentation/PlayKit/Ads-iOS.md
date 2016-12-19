@@ -7,25 +7,24 @@ weight: 290
 
 [![iOS](https://img.shields.io/badge/iOS-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios) 
 
-This article describes the steps required to use IMA Plugin in iOS devices.
+This article describes the steps required for using IMA Plugins in iOS devices.
 
-## Enabling IMA Plugin for the Kaltura Player  
+## Enabling IMA Plugins for the Kaltura Player  
 
-To enable IMA Plugin in iOS devices for the Kaltura Player, add following line to your Podfile:
+1. To enable IMA Plugins in iOS devices for the Kaltura Player, add the following line to your Podfile:
 
 ```
 pod 'PlayKit/IMAPlugin'
 ```
-
-Register IMA Plugin inside your app:
+2. Next, register the IMA Plugin inside your application:
 
 ```
 PlayKitManager.sharedInstance.registerPlugin(IMAPlugin.self)
 ```
 
-## Configuring the Player to use IMA Plugin  
+## Configuring the Player to use IMA Plugins  
 
-To configure the Player to use IMA Plugin, add the following configuration to your `PlayerConfig`:
+To configure the Player to use IMA Plugins, add the following configuration to your `PlayerConfig`:
 
 ```
 let adsConfig = AdsConfig()
@@ -33,9 +32,9 @@ adsConfig.set(adTagUrl: 'your ad tag url')
 playerConfig.plugins[IMAPlugin.pluginName] = adsConfig
 ```
 
-## Configuring clickthrough 
+## Configuring Clickthroughs 
 
-The IMA Plugin offers two options for opening ad landing pages—via an in-app browser, or via Safari. By default, the plugin will open pages using Safari. To update the plugin to use an in-app browser, you’ll need to set webOpenerPresentingController value in AdsConfig object:
+The IMA Plugin offers two options for opening ad landing pages — via an in-app browser, or via Safari. By default, the plugin will open pages using Safari. To update the plugin to use an in-app browser, you’ll need to set the `webOpenerPresentingController value` in the AdsConfig object:
 
 ```
 adsConfig.set(webOpenerPresentingController: webOpenerPresentingController)
@@ -43,9 +42,10 @@ adsConfig.set(webOpenerPresentingController: webOpenerPresentingController)
 
 ## Adding Companion Ads
 
-In order to see companion Ad, you should 
-	1. Have an ad tag configured to return a companion ad
-	2. Supply companion ad container to the plugin as following (make sure the size of the companion being returned is the same size as the UIView in which you’re trying to display it):
+To see companion ads, you'll need to: 
+
+1. Have an ad tag configured to return a companion ad.
+2. Supply a companion ad container to the plugin using the following format (make sure the size of the companion being returned is the same size as the UIView in which you’re trying to display it):
 
 ```
 adsConfig.set(companionView: companionView)
@@ -68,15 +68,17 @@ The IMA Plugin allows you to specify the language to be used to localize ads and
 adsConfig.set(language: "en")
 ```
 
-## Controlling Ads playing
+## Controlling Ad Play
 
-In order to control ads playing during runtime implement following player delegate method:  
+To control ad play during runtime, implement the following player delegate method:  
 
 ```
 func playerShouldPlayAd(_ player: Player) -> Bool
 ```
 
 ## Listening to Ad Events  
+
+Use the following code to listen to ad events:
 
 ```
 let events: [PKEvent.Type] = [AdEvents.adDidRequestPause.self, AdEvents.adDidRequestResume.self, AdEvents.adResumed.self, AdEvents.adTapped.self]
