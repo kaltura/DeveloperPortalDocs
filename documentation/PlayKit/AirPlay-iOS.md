@@ -21,7 +21,7 @@ let airPlayBtn = MPVolumeView(frame: CGRect(x: 0, y: 0, width: 44, height: 44))
 airPlayBtn.showsVolumeSlider = false
 container.addSubview(airPlayBtn)
 ```
-4. Optional: Customize the image of the AirPlay button: 
+**Optional:** Customize the image of the AirPlay button as follows: 
 
 ```
 airPlayBtn.setRouteButtonImage(UIImage(named: "name"), for: UIControlState.normal)
