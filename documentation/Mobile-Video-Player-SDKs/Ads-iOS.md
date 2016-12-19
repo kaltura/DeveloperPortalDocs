@@ -16,14 +16,13 @@ When linking Google in iOS devices for the Kaltura Player, there are a number of
 
 ## Using Cocoapods  
 
-### To link Google ads using Cocoapods, add these two pods to your podfile:
+To link Google ads using Cocoapods, add these two pods to your podfile:
 
 ```
 pod 'GoogleAds-IMA-iOS-SDK’ , '~> 3.2.1’
 
 ```
-
-### For AdMob Ignore the above line & Use the following:
+For AdMob, ignore the line above and use the following line instead:
 
 ```
 pod 'GoogleAds-IMA-iOS-SDK-For-AdMob’ , '~> 3.2.1’
