@@ -11,9 +11,10 @@ This article describes the steps required to enable you to control the audio out
 
 To play sounds even when the silent switch is off:
 
-When you start play the video
-1. Keep initial category value of AVAudioSession aside
-2. Change actual category value to AVAudioSessionCategoryPlayback
+When you begin playing the video: 
+
+1. Keep the initial category value of AVAudioSession aside.
+2. Change the actual category value to AVAudioSessionCategoryPlayback.
 
 ```
 var audioSessionInitialCategory: String?
