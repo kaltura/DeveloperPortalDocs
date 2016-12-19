@@ -1,15 +1,15 @@
 ---
 layout: page
-title: Controlling audio output on iOS with AVAudioSession
+title: Controlling the Audio Output on iOS Devices Using AVAudioSession
 subcat: iOS
 weight: 290
 ---
 
 [![iOS](https://img.shields.io/badge/iOS-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios) 
 
-This article describes the steps required to add support for controlling audio output in iOS devices.
+This article describes the steps required to enable you to control the audio output in iOS devices using AVAudioSession.
 
-## In order to play sound even silent switch is off, do as follows:
+To play sounds even when the silent switch is off:
 
 When you start play the video
 1. Keep initial category value of AVAudioSession aside
