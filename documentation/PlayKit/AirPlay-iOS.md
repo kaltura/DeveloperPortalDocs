@@ -7,13 +7,12 @@ weight: 290
 
 [![iOS](https://img.shields.io/badge/iOS-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios) 
 
-This article describes the steps required for adding support for AirPlay in iOS devices.
+This article describes the steps required for adding support for the AirPlay functionality in iOS devices.
 
 To add the AirPlay functionality:
 
 1. Enable the Audio, Airplay and Picture in the Picture background mode. 
 2. In Xcode 8, select a target, and then under Capabilities > Background Modes, enable "Audio, Airplay and Picture in Picture".
-
 ![Alt text](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/EnableAirPlay.png?raw=true)
 
 3. Import MediaPlayer, and then create an MPVolumeView and add it to your view as follows: 
