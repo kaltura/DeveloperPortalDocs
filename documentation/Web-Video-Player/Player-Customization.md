@@ -1,18 +1,18 @@
 ---
 layout: page
-title: Customizing the Kaltura Player's Look-and-Feel and Behavior
+title: Customizing the Kaltura Web Video Player's Look-and-Feel and Behavior
 weight: 404 
 ---
 
-The Kaltura Player look-and-feel is derived from the Player's skin, which consists of CSS classes and graphical assets such as icons and fonts; and from its Javascript code, which is used to define user interactions and UI behaviour.   
+The Kaltura Web Video Player look-and-feel is derived from the Player's skin, which consists of CSS classes and graphical assets such as icons and fonts; and from its Javascript code, which is used to define user interactions and UI behaviour.   
 
-You can customize the Player look-and-feel in a number of ways. A lot of customization can be done using the Player plugins, Player properties, and templating mechanism. More advanced customization can be achieved using custom CSS loading, external assets, and skin overrides. Custom Javascript code can also be used in order to change the UI behavior.  
+You can customize the Web Video Player look-and-feel in a number of ways. A lot of customization can be done using the Player plugins, properties, and templating mechanism. More advanced customization can be achieved using custom CSS loading, external assets, and skin overrides. Custom Javascript code can also be used in order to change the UI behavior.  
 
 This article covers these customization topics - from the simplest options to the more advanced and complex ones.
 
 ## Player and Plugin Properties  
 
-You can set Player properties to change the Player behavior; for example, setting the 'EmbedPlayer.HidePosterOnStart' property to 'true' will change the behavior of the Player, so that instead of showing the poster image (the default thumbnail set on the entry) on start, the video's first frame will be shown instead.
+You can set Web Video Player properties to change the Player behavior; for example, setting the 'EmbedPlayer.HidePosterOnStart' property to 'true' will change the behavior of the Player, so that instead of showing the poster image (the default thumbnail set on the entry) on start, the video's first frame will be shown instead.
 
 Many plugins have properties that affect the Player look-and-feel. For example, the controlBarContainer plugin has an "hover" property that defines hovering controls:   
 
@@ -27,7 +27,7 @@ Many plugins have properties that affect the Player look-and-feel. For example, 
 
 ## Predefined Skin Selection  
 
-The Kaltura Player has two available skins: 
+The Kaltura Web Video Player has two available skins: 
 
 * The "kdark" default skin 
 * The "ott", which is a custom skin for OTT products.   
