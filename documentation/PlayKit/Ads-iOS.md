@@ -7,7 +7,7 @@ weight: 290
 
 [![iOS](https://img.shields.io/badge/iOS-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios) 
 
-This article describes the steps required for using IMA Plugins in iOS devices.
+To be able to deliver advertisments to iOS devices, you'll need to implement a series of steps that are required for using IMA Plugins in iOS devices.
 
 ## Enable IMA Plugins for the Kaltura Video Player  
 
