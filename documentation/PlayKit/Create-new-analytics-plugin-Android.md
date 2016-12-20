@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Creating a New Analytics Plugin for the Kaltura Video Player in Android Devices
+title: Creating a New Analytics Plugin for the Kaltura Video Player on Android Devices
 subcat: Android
 weight: 296
 ---
@@ -12,7 +12,7 @@ This article describes the steps required for building a new analytics plugin on
 
 ## Creating a New Class for the Plugin
 
-The calss must extend PKPlugin in order to integrate with Kaltura Player.
+The class must extend the PKPlugin to integrate with the Kaltura Video Player.
 
 Steps to configure the plugin protected functions - 
 
@@ -83,7 +83,8 @@ PlayerConfig.Plugins plugins = config.plugins;
 plugins.setPluginConfig("NameOfPlugin" , genericConfigEntry.toJson()); 
 ```
 
-## Supported events in the MessageBus
+## MessageBus Supported Events  
+
 ```
 PlayerEvents{
 public enum Type {
@@ -130,14 +131,12 @@ public enum Type {
     }
 ```
 
-## Adding new events to send using the MessageBus
-In case you have new events you need to report, you 
-can add events the following way - 
+## Adding New Events Using the MessageBus  
 
-1. Add new class for your event.
+If you have new events you need to report, you can add new events by implementing the following steps: 
 
-2. Implement PKEvent in this class - 
-example of implementation - 
+1. Add a new class for your event.
+2. Implement the PKEvent in this class according the following implementation example: 
 ```
 public class NewAnalyticsEvent implements PKEvent {
     public final NewAnalyticsEvent.EventType type;
@@ -158,14 +157,15 @@ public class NewAnalyticsEvent implements PKEvent {
 }
 ```
 
-3. Use the Messagebus to post your new event - 
+3. Use the Messagebus to post your new event: 
 ```
 messageBus.post(new NewAnalyticsEvent(TAG + " " + ((NewAnalyticsEvent) event).type.toString()));
 ```
 
-## Code examples
+## Code Examples
 
-1. Event listener - 
+### Event Listener  
+
 ```
 private PKEvent.Listener mEventListener = new PKEvent.Listener() {
         @Override
@@ -205,7 +205,8 @@ private PKEvent.Listener mEventListener = new PKEvent.Listener() {
     };
 ```
 
-2. onDestroy - 
+### onDestroy  
+
 ```
    @Override
     public void onDestroy() {
@@ -214,7 +215,8 @@ private PKEvent.Listener mEventListener = new PKEvent.Listener() {
     }
 ```
 
-3. onApplicationPaused - 
+### onApplicationPaused  
+
 ```
 @Override
     protected void onApplicationPaused() {
@@ -222,7 +224,8 @@ private PKEvent.Listener mEventListener = new PKEvent.Listener() {
     }
 ```
 
-4. onApplicationResumed - 
+### onApplicationResumed  
+
 ```
     @Override
     protected void onApplicationResumed() {
