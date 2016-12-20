@@ -1,12 +1,13 @@
 ---
 layout: page
-title: Configuring the Player to use Youbora Plugin in Android Devices
+title: Configuring the Kaltura Video Player to use the Youbora Plugin in Android Devices
 subcat: Android
 weight: 291
 ---
 
 [![Android](https://img.shields.io/badge/Android-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios)
 
+Youbora is a business intelligence solution access to analytical data optimization suite that enables full control of aspects of your video service
 
 This article describes the steps required to use Youbora Plugin in Android devices.
 
