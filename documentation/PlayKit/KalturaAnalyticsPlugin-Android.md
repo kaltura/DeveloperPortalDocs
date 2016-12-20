@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Configuring the Player to use Kaltura Analytics Plugin in Android Devices
+title: Configuring the Kaltura Video Player to use Kaltura Analytics Plugin in Android Devices
 subcat: Android
 weight: 295
 ---
@@ -10,9 +10,11 @@ weight: 295
 
 This article describes the steps required for using the Kaltura Analytics Plugin in Android devices as well as the supported events.
 
-## Configuring the Player  
+## Configuring the Kaltura Video Player  
 
-### Enabling the Kaltura Analytics Plugin for the Kaltura Player  
+Follow these steps to configure the Kaltura Video Player.
+
+### Enable the Kaltura Analytics Plugin for the Kaltura Player  
 
 To enable the Kaltura Analytics Plugin in Android devices, register the plugin inside your application as follows:
 
@@ -20,7 +22,7 @@ To enable the Kaltura Analytics Plugin in Android devices, register the plugin i
 PlayKitManager.registerPlugins(KalturaAnalyticsPlugin.factory);
 ```
 
-### Configuring the Plugin Configuration Object for the Kaltura Analytics Plugin  
+### Configure the Plugin Configuration Object for the Kaltura Analytics Plugin  
 
 To configure the plugin, add the following configuration to your `pluginConfig`:
 
@@ -36,7 +38,7 @@ private void configureKalturaStatsPlugin(PlayerConfig pluginConfig) {
 
 ```
 
-### Setting the Plugin Configuration to Initiate onLoad in the Plugin
+### Sett the Plugin Configuration to Initiate onLoad in the Plugin
 
 To enable the Kaltura Analytics Plugin to start loading, you'll need to set the plugin configuration you created as follows:
 
