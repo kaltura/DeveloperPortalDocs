@@ -8,21 +8,21 @@ weight: 295
 [![Android](https://img.shields.io/badge/Android-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios)
 
 
-This article describes the steps required to use Kaltura Analytics Plugin in Android devices.
+This article describes the steps required for using the Kaltura Analytics Plugin in Android devices as well as the supported events.
 
-## Enabling Kaltura Analytics Plugin for the Kaltura Player  
+## Configuring the Player  
 
-To enable Kaltura Analytics Plugin in Android devices for the Kaltura Player do the following steps:
+### Enabling the Kaltura Analytics Plugin for the Kaltura Player  
 
-Register the Plugin inside your app:
+To enable the Kaltura Analytics Plugin in Android devices, register the plugin inside your application as follows:
 
 ```
 PlayKitManager.registerPlugins(KalturaAnalyticsPlugin.factory);
 ```
 
-## Configuring the plugin config object for Kaltura Analytics Plugin  
+### Configuring the Plugin Configuration Object for the Kaltura Analytics Plugin  
 
-To configure the Plugin, add the following configuration to your `pluginConfig`:
+To configure the plugin, add the following configuration to your `pluginConfig`:
 
 ```
 private void configureKalturaStatsPlugin(PlayerConfig pluginConfig) {
@@ -36,10 +36,9 @@ private void configureKalturaStatsPlugin(PlayerConfig pluginConfig) {
 
 ```
 
-## Setting the plugin config, initiates onLoad in the plugin
+### Setting the Plugin Configuration to Initiate onLoad in the Plugin
 
-In order for the Kaltura Analytics Plugin to start loading, you need to set
-the plugin config you created -
+To enable the Kaltura Analytics Plugin to start loading, you'll need to set the plugin configuration you created as follows:
 
 ```
 PlayerConfig config = new PlayerConfig();
@@ -47,41 +46,36 @@ PlayerConfig.Plugins plugins = config.plugins;
 plugins.setPluginConfig("KalturaAnalytics", kalturaAnalyticsConfig); 
 ```
 
-## Supported events by the kaltura Analytics plugin
+## Kaltura Analytics Plugin Supported Events  
 
-IMPRESSION(1),
+The Kaltura Analytics Plugin supports the following events:
 
-PLAY_REQUEST(2),
+* IMPRESSION(1),
 
-PLAY(3),
-        
-RESUME(4),
-        
-PLAY_25PERCENT(11),
-        
-PLAY_50PERCENT(12),
-        
-PLAY_75PERCENT(13),
-        
-PLAY_100PERCENT(14),
-        
-PAUSE(33),
-        
-REPLAY(34),
-        
-SEEK(35),
-        
-SOURCE_SELECTED(39),
-        
-INFO(40),
-        
-SPEED(41),
-        
-VIEW(99);
+* PLAY_REQUEST(2),
 
-
-
-
-
-
-
+* PLAY(3),
+        
+* RESUME(4),
+        
+* PLAY_25PERCENT(11),
+        
+* PLAY_50PERCENT(12),
+        
+* PLAY_75PERCENT(13),
+        
+* PLAY_100PERCENT(14),
+        
+* PAUSE(33),
+        
+* REPLAY(34),
+        
+* SEEK(35),
+        
+* SOURCE_SELECTED(39),
+        
+* INFO(40),
+        
+* SPEED(41),
+        
+* VIEW(99);
