@@ -32,7 +32,7 @@ do {
 }
 ```
 
-3. When video is finished, return the initial category value:
+**Note:** When the video is finished, you may return the initial category value as follows:
 ```
 if let _ = audioSessionInitialCategory {
    do {
