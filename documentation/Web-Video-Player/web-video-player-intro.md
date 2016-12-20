@@ -137,6 +137,6 @@ o	Note: The browsers that are projected to support MPEG DASH: IE 11 (Windows, Xb
 •	Seamlessly integrate advanced live broadcasts streaming and DRM
 
 
-## Web Video Player SDK  {Debbie: Rereading this I'm not sure it adds anything to the discussion - tell me if you agree and perhaps I should remove it... dz - dont know about it. My concern is why are you including all the Flas info. Flash is out.}  
+## Web Video Player SDK    
 
-The Kaltura Web Video Player SDK enables users to lead video delivery with HTML5 and provide the fastest viewing experience on any device, while maintaining all the same features and a consistent CSS/HTML player design. Kaltura Players v2 enable delivery of HTML5 with Chromeless components for Flash, iOS and Android.
+The Kaltura Web Video Player SDK enables users to lead video delivery with HTML5 and provide the fastest viewing experience on any device, while maintaining all the same features and a consistent CSS/HTML player design. Kaltura Players v2 enable delivery of HTML5 with Chromeless components for iOS and Android.
