@@ -1,29 +1,29 @@
 ---
 layout: page
-title: Configuring the Kaltura Video Player to use the Youbora Plugin in Android Devices
+title: Configuring the Kaltura Video Player to use the Youbora Plugin on Android Devices
 subcat: Android
 weight: 291
 ---
 
 [![Android](https://img.shields.io/badge/Android-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios)
 
-Youbora is a business intelligence solution access to analytical data optimization suite that enables full control of aspects of your video service
+This article describes the steps required to implement the Youbora Plugin on Android devices. Youbora is an intelligence analytics and optimization platform used in Kaltura's solution to track media analytics events.
 
-This article describes the steps required to use Youbora Plugin in Android devices.
+## Enabling the Youbora Plugin for the Kaltura Video Player  
 
-## Enabling Youbora Plugin for the Kaltura Player  
+To enable the Youbora Plugin on Android devices, impelement the following steps:
 
-To enable Youbora Plugin in Android devices for the Kaltura Player do the following steps:
+### Register the Youbora Plugin Inside your Application  
 
-Register Youbora Plugin inside your app:
+Register the Youbora Plugin as follows:
 
 ```
 PlayKitManager.registerPlugins(YouboraPlugin.factory);
 ```
 
-## Configuring the plugin config object for Youbora Plugin  
+### Configure the Plugin Configuraiton Object for the Youbora Plugin  
 
-To configure the Youbora Plugin, add the following configuration to your `pluginConfig`:
+To configure the Youbora Plugin, add the following configuration to your `pluginConfig` file:
 
 ```
 private void configureYouboraPlugin(PlayerConfig pluginConfig) {
@@ -68,10 +68,9 @@ private void configureYouboraPlugin(PlayerConfig pluginConfig) {
 
 ```
 
-## Setting the plugin config to Youbora Plugin
+### Set the Plugin Configuration to the Youbora Plugin  
 
-In order for the Youbora Plugin to start loading, you need to set
-the plugin config you created -
+For the Youbora Plugin to start loading, you'll need to set the plugin configuration you created as follows:
 
 ```
 PlayerConfig config = new PlayerConfig();
@@ -79,28 +78,28 @@ PlayerConfig.Plugins plugins = config.plugins;
 plugins.setPluginConfig("Youbora", converterYoubora.toJson()); 
 ```
 
-## Analyzing the Youbora Plugin requests
+### Analyze the Youbora Plugin Requests
 
-The correct flow of events when Youbora Plugin is activated and you play media using Kaltur aPlayer - 
+The following is the correct flow of events when the Youbora Plugin is activated and you play media using the Kaltura Video Player. 
 
-1. Data request event - /data
-The response will contain the URL all other events will be send to.
+1. Data request event - /data.
+The response will contain the URL, while all other events will be send to:
 http://nqs.nice264.com/data?system=kalturatest&pluginName=playkit%2Fandroid-0.0.3&timemark=1481719756186&pluginVersion=5.3.0-playkit%2Fandroid-0.0.3&outputformat=jsonp
 
 
-2. Start event /start
-After play was pressed or auto-play is on
+2. Start event /start.
+After pressing Play or if auto-play is on:
 http://test-nqs-lw2.nice264.com/start?deviceId=&cdn=&param6=&duration=15&user=&param10=&code=V_19210_apk0b5rp2e5bq0gm_0&resource=http%3A%2F%2Flbd.kaltura.com%3A8002%2Fedash%2Fp%2F552741%2Fsp%2F55274100%2FserveFlavor%2FentryId%2F1_a2qor9cc%2Fv%2F1%2FflavorId%2F1_%2C93t0pa0f%2Cnr0yylo6%2C644jy89i%2C%2Fforceproxy%2Ftrue%2Fname%2Fa.mp4.urlset%2Fmanifest.mpd&adsExpected=true&param1=playkit%2Fandroid-0.0.3&param7=&param2=&timemark=1481719912433&isp=&pingTime=5&playerVersion=playkit%2Fandroid-0.0.3&system=kalturatest&properties=%7B%22device%22%3A%22%22%2C%22audioType%22%3A%22%22%2C%22rating%22%3A%22%22%2C%22cast%22%3A%22joe+joe%22%2C%22quality%22%3A%22%22%2C%22owner%22%3A%22%22%2C%22year%22%3A%222000%22%2C%22parental%22%3A%22%22%2C%22genre%22%3A%22action%22%2C%22price%22%3A%22%22%2C%22transaction_type%22%3A%22%22%2C%22audioChannels%22%3A%22%22%2C%22type%22%3A%22video%22%2C%22director%22%3A%22henry%22%7D&live=false&param8=&param4=&pluginVersion=5.3.0-playkit%2Fandroid-0.0.3&param9=&rendition=&title=&transcode=&param3=&hashTitle=true&ip=&player=playkit%2Fandroid-0.0.3&param5=
 
 
-3. Join event /join
-After media started playing
+3. Join event /join.
+After the media starts playing:
 http://test-nqs-lw2.nice264.com/joinTime?timemark=1481719912435&eventTime=0.0&mediaDuration=15.0&time=3&code=V_19210_apk0b5rp2e5bq0gm_0
 
-4. Ping event /ping     
-Every 5 seconds
+4. Ping event /ping.     
+Will ping the event every five seconds.
 
-5. Stop event /stop
-After media finished playing
+5. Stop event /stop.
+Use after the media finishes playing.
 
 
