@@ -12,6 +12,10 @@ Kaltura's Web Video Player leads the industry in flexibility, ease of customizat
 
 Note that the easiest way to use Kaltura's Web Video Player is to build a player using [Kaltura's Universal Studio](https://knowledge.kaltura.com/node/1148), which provides a user-friendly UI for building and customizing the player. 
 
+## Kaltura's Web Video Player SDK    
+
+Kaltura's Web Video Player SDK enables users to deliver videos with HTML5 and provide the fastest viewing experience on any device, while maintaining all of the same features and a consistent CSS/HTML player design. The SDK enables delivery of HTML5 with Chromeless components for iOS and Android.
+
 ## Key Advantages of the Kaltura Web Video Player  
 
 The key advantages of the Kaltura Web Video Players include:
@@ -82,7 +86,11 @@ Kaltura's Web Video Player is designed to ensure seamless integration of advance
 Kaltura's Universal DRM module enables media companies, content rights owners and OTT providers to stream premium content without concern about which browser, device or platform is being used. 
 
  
-## Basic Look and Feel of the Kaltura Web Video Player  {Debbie should I even leave this section in??? ok need generic graphic}
+## Basic Look and Feel of the Kaltura Web Video Player
+
+Kaltura's Web Video Player is designed to provide your users with the best viewing experience.
+
+![Web Video Player Look-and-Feel](./images/v2player.png
 
 The following illustrates the basic look and feel of the Kaltura Web Video Player.
  
@@ -137,6 +145,4 @@ o	Note: The browsers that are projected to support MPEG DASH: IE 11 (Windows, Xb
 •	Seamlessly integrate advanced live broadcasts streaming and DRM
 
 
-## Web Video Player SDK    
 
-The Kaltura Web Video Player SDK enables users to lead video delivery with HTML5 and provide the fastest viewing experience on any device, while maintaining all the same features and a consistent CSS/HTML player design. Kaltura Players v2 enable delivery of HTML5 with Chromeless components for iOS and Android.
