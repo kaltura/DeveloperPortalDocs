@@ -7,22 +7,24 @@ weight: 292
 
 [![Android](https://img.shields.io/badge/Android-Supported-green.svg)](https://github.com/kaltura/playkit-android)
 
+This article describes the steps required for adding support for the IMA Plugin functionality on Android devices. IMA (or Interactive Media Ads) was developed by Google to enable you to display ads in your application's video, audio, and game content.
 
-This article describes the steps required to use IMA Plugin in Android devices.
 
-## Enabling the plugin for the Kaltura Player  
+## Enabling the IMA Plugin for the Kaltura Video Player  
 
-To enable the Plugin in Android devices for the Kaltura Player do the following steps:
+To enable the plugin on Android devices, you'll need to perform the following steps.
 
-Register the Plugin inside your app:
+### Register the IMA Plugin in your Application  
+
+Register the plugin as follows:
 
 ```
 PlayKitManager.registerPlugins(PhoenixAnalyticsPlugin.factory);
 ```
 
-## Configuring the plugin config object  
+### Configure the Plugin Configuration Object  
 
-To configure the Plugin, add the following configuration to your `pluginConfig`:
+To configure the plugin, add the following configuration to your `pluginConfig` file:
 
 ```
 private void configureIMAPlugin(PlayerConfig pluginConfig) {
