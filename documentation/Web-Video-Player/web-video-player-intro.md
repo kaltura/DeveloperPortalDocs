@@ -29,6 +29,10 @@ The key advantages of the Kaltura Web Video Players include:
 
 ## Technical Overview  
 
+Kaltura's Web Video Player is designed to provide your users with the best viewing experience.
+
+![Web Video Player Look-and-Feel](./images/v2player.png)
+
 The following section provides a general walk-through of the Kaltura Web Video Player technical features.
 
 ### Easy to Implement Video Embedding    
@@ -62,7 +66,7 @@ Our HTML5 video library provides you with the most advanced mobile delivery tech
 
 ### Easy to Integrate  
 
-Kaltura's multi-platform support ensures easy integration for iOS and Android player components on both mobile devices and tablets, providing maximum flexibility, while the player architecture enables you to reuse plugins and configurations across platforms.
+Kaltura's multi-platform support ensures easy integration for iOS and Android player components on both mobile devices and tablets, providing maximum flexibility, while the player architecture enables you to reuse plugins and configurations across platforms, and seamlessly integrate bothadvanced live broadcasts streaming and DRM.
 
 ### Customizable  Design
 
@@ -100,38 +104,41 @@ Every Kaltura account includes analytics fully integrated into the Kaltura platf
 
 Kaltura's Web Video Player is designed to ensure seamless integration of advanced live broadcasts streaming.
 
+### Enhanced Accessibility: 508 and WebVTT  
+
+* Industry leading 508 support
+* 508 by default – all new framework players include 508-compliant features
+* Integrated framework for making all new plugins accessible
+* Uses HTML for controls, which offers more integrated accessible features than Flash players
+
 ### Universal Digital Rights Management (DRM)  
 
 Kaltura's Universal DRM module enables media companies, content rights owners and OTT providers to stream premium content without concern about which browser, device or platform is being used. 
  
-## Kaltura Web Video Player Look-and-Feel
+### Kaltura Web Video Player Look-and-Feel
 
-Kaltura's Web Video Player is designed to provide your users with the best viewing experience.
+#### Mouse Over Scrubber  
 
-![Web Video Player Look-and-Feel](./images/v2player.png)
-
-The following illustrates the basic look and feel of the Kaltura Web Video Player.
+* Thumbnails display on playhead scrubbing on mouse over.
  
-**Mouse Over Scrubber** - Thumbnails display on playhead scrubbing on mouse over.
- 
-### Responsive Player Layout
+#### Responsive Player Layout
 
-•	Thumb up/down rating
-•	Smaller players / screens keep important controls. 
+* Thumb up/down rating
+* Smaller players / screens keep important controls. 
  
-### Improved Related Videos Experience
+#### Improved Related Videos Experience
 
-•	Enhanced related videos interface
-•	Flexible options for related video fulfillment
-•	Events for tracking conversion/retainment
+* Enhanced related videos interface
+* Flexible options for related video fulfillment
+* Events for tracking conversion/retainment
  
-### Playlists and Chapters
+#### Playlists and Chapters
 
 •	Flexible HTML plugins for playlists and chapters with support for inheriting site styles
  
-### Adaptive Streaming Support
+#### Adaptive Streaming Support
 
-•	Chromeless Flash HLS
+* Chromeless Flash HLS
 o	Supports HLS on desktop browsers for simplified live broadcast ad stitching workflows
 •	MPEG-DASH
 o	Encrypted Media Extension support web delivery of DRM and content control
@@ -139,26 +146,13 @@ o	Multi-track audio
 o	More detailed analytics on quality of services metrics
 o	Note: The browsers that are projected to support MPEG DASH: IE 11 (Windows, Xbox, phone;) Chrome (Desktop & Android), Firefox (Desktop)
  
-### Share Interface In Player or On Page  
+#### Share Interface In Player or On Page  
 
 •	Robust Configurable Share Options
  o	Support for sharing specific time offsets
  o	iframe or Flash object embed options
  o	Deep linking to specific URLs for each video: (example: myDomain.com/videos/{entryid}
   
-### Enhanced Accessibility: 508 and WebVTT  
-
-•	Industry leading 508 support
-•	508 by default – all new framework players include 508 compliant features
-•	Integrated framework for making all new plugins accessible
-•	Uses HTML for controls: offers more integrated accessible features than Flash players
-
-
-### iOS, Android, HTML, Flash All-in-One  
-
-•	Maximize ROI on your distribution strategy across native apps and web views. 
-•	Architecture for reusable plugins and configuration across platforms
-•	Seamlessly integrate advanced live broadcasts streaming and DRM
 
 
 
