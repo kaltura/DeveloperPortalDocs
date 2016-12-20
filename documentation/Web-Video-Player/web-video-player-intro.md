@@ -116,7 +116,7 @@ Kaltura's Universal DRM module enables media companies, content rights owners an
 ### Responsive Player Layout  
 
 * Thumb up/down rating
-* Smaller players / screens maintain important controls. 
+* Smaller players / screens maintain important controls
  
 ### Improved Related Videos Experience
 
