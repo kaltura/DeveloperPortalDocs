@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Using IMA Plugin
+title: Configuring IMA Plugins for iOS Devices
 subcat: iOS
 weight: 290
 ---
@@ -9,18 +9,18 @@ weight: 290
 
 This article describes the steps required for using IMA Plugins in iOS devices.
 
-## Enabling IMA Plugins for the Kaltura Player  
+## Enable IMA Plugins for the Kaltura Video Player  
 
-1. To enable IMA Plugins in iOS devices for the Kaltura Player, add the following line to your Podfile: ```pod 'PlayKit/IMAPlugin'```
+1. To enable IMA Plugins in iOS devices for the Kaltura Video Player, add the following line to your Podfile: ```pod 'PlayKit/IMAPlugin'```
 
 2. Next, register the IMA Plugin inside your application:
 ```
 PlayKitManager.sharedInstance.registerPlugin(IMAPlugin.self)
 ```
 
-## Configuring the Player to use IMA Plugins  
+## Configure the Kaltura Video Player to use IMA Plugins  
 
-To configure the Player to use IMA Plugins, add the following configuration to your `PlayerConfig`:
+To configure the Video Player to use IMA Plugins, add the following configuration to your `PlayerConfig`:
 
 ```
 let adsConfig = AdsConfig()
@@ -28,51 +28,58 @@ adsConfig.set(adTagUrl: 'your ad tag url')
 playerConfig.plugins[IMAPlugin.pluginName] = adsConfig
 ```
 
-## Configuring Clickthroughs 
+## Configure Clickthroughs 
 
-The IMA Plugin offers two options for opening ad landing pages — via an in-app browser, or via Safari. By default, the plugin will open pages using Safari. To update the plugin to use an in-app browser, you’ll need to set the `webOpenerPresentingController value` in the AdsConfig object:
+The IMA Plugin offers two options for opening ad landing pages
+
+* Via an in-app browser
+* Via Safari 
+
+By default, the plugin will open pages using Safari. To update the plugin to use an in-app browser, you’ll need to set the `webOpenerPresentingController value` in the AdsConfig object as follows:
 
 ```
 adsConfig.set(webOpenerPresentingController: webOpenerPresentingController)
 ```
 
-## Adding Companion Ads
+## Add Companion Ads
 
-To see companion ads, you'll need to: 
+To see companion ads in the device, you'll need to implement the following steps: 
 
-1. Have an ad tag configured to return a companion ad.
+1. Configure an ad tag to return a companion ad (prepare this in advance).
 2. Supply a companion ad container to the plugin using the following format (make sure the size of the companion being returned is the same size as the UIView in which you’re trying to display it):
 
 ```
 adsConfig.set(companionView: companionView)
 ```
 
-## Specifying desired bitrate and video formats
+## Specify the Desired Bitrate and Video Formats
 
-The IMA Plugin allows you to specify the video formats and bitrate, configure it as following:
+The IMA Plugin enables you to specify the video formats and bitrate using the following configuration:
 
 ```
 adsConfig.set(videoMimeTypes: ["video/mp4", "application/x-mpegURL"])
 adsConfig.set(videoBitrate: 1024)
 ```
 
-## Specifying language
+## Specify the Localized Ad Language
 
-The IMA Plugin allows you to specify the language to be used to localize ads and the player UI controls. To do so, set the language parameter of AdsConfig to the appropriate language code (https://developers.google.com/interactive-media-ads/docs/sdks/ios/ads#languagecodes)
+The IMA Plugin enables you to specify the language to be used to localize ads and the Video Player UI controls. 
+
+To do so, set the language parameter of the AdsConfig to the appropriate language code using [this reference](https://developers.google.com/interactive-media-ads/docs/sdks/ios/ads#languagecodes).
 
 ```
 adsConfig.set(language: "en")
 ```
 
-## Controlling Ad Play
+## Control Ad Play
 
-To control ad play during runtime, implement the following player delegate method:  
+To control ad play during runtime, implement the following Video Player delegate method:  
 
 ```
 func playerShouldPlayAd(_ player: Player) -> Bool
 ```
 
-## Listening to Ad Events  
+## Listen to Ad Events  
 
 Use the following code to listen to ad events:
 
