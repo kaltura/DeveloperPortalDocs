@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Configuring the Player to use TVPAPI Stats Plugin in Android Devices
+title: Configuring the Kaltura Video Player to use the TVPAPI Stats Plugin on Android Devices
 subcat: Android
 weight: 293
 ---
@@ -8,21 +8,21 @@ weight: 293
 [![Android](https://img.shields.io/badge/Android-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios)
 
 
-This article describes the steps required to use TVPAPI Stats Plugin in Android devices.
+This article describes the steps required for using the TVPAPI Stats Plugin on Android devices to get statistical information on the device, as well as the events supported by the plugin. 
 
-## Enabling the plugin for the Kaltura Player  
+## Configuring the TVPAPI Stats Plugin  
 
-To enable the Plugin in Android devices for the Kaltura Player do the following steps:
+### Register the TVPAPI Stats Plugin    
 
-Register the Plugin inside your app:
+Register the plugin in your application as follows:
 
 ```
 PlayKitManager.registerPlugins(TVPAPIAnalyticsPlugin.factory);
 ```
 
-## Configuring the plugin config object  
+### Configure the Plugin Configuration Object  
 
-To configure the Plugin, add the following configuration to your `pluginConfig`:
+To configure the TVPAPI Stats Plugin, add the following configuration to your `pluginConfig` file:
 
 ```
 private void configureTVPAPIPlugin(PlayerConfig pluginConfig) {
@@ -33,10 +33,9 @@ private void configureTVPAPIPlugin(PlayerConfig pluginConfig) {
         TVPAPIConfigEntry.add("initObj", initObj); // must be a valid initObj of TVPAPI
 ```
 
-## Setting the plugin config to the Plugin
+### Set the Plugin Configuration to the TVPAPI Stats Plugin  
 
-In order for the Plugin to start loading, you need to set
-the plugin config you created -
+To ensure that the plugin starts loading, you'll need to set the plugin configuration you created as follows:
 
 ```
 PlayerConfig config = new PlayerConfig();
@@ -44,7 +43,8 @@ PlayerConfig.Plugins plugins = config.plugins;
 plugins.setPluginConfig("TVPAPIAnalytics" , TVPAPIConfigEntry.toJson()); 
 ```
 
-## Supported events in the plugin
+## Supported Events in the TVPAPI Stats Plugin  
+
 TVPAPI action Types{
 
  MediaHit, //outputs every interval time
@@ -53,9 +53,9 @@ TVPAPI action Types{
  
 }
 
-## Concurrency handler 
-In order to receive Concurrency events from the TVPAPI Stats plugin you need to
-add listener to the following event:
+## Concurrency Handler  
+
+To receive concurrency events from the TVPAPI Stats Plugin, you'll need to add a listener to the following event:
 
 ```
 messageBus.listen(new PKEvent.Listener() {
