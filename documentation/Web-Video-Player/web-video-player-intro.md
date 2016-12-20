@@ -112,18 +112,18 @@ Kaltura's Web Video Player is designed to ensure seamless integration of advance
 ### Universal Digital Rights Management (DRM)  
 
 Kaltura's Universal DRM module enables media companies, content rights owners and OTT providers to stream premium content without concern about which browser, device or platform is being used. 
- 
-### Responsive Player Layout  
-
-* Thumb up/down rating
-* Smaller players / screens maintain important controls
  
 ### Improved Related Videos Experience
 
 * Enhanced related videos interface
 * Flexible options for related video fulfillment
 * Events for tracking conversion/retainment
- 
+ 
+### Responsive Player Layout  
+
+* Thumb up/down rating
+* Smaller players / screens maintain important controls
+
 ### Playlists and Chapters
 
 * Flexible HTML plugins for playlists and chapters with support for inheriting site styles
