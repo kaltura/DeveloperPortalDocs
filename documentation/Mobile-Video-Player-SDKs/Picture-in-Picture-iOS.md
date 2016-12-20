@@ -15,7 +15,7 @@ To enable support for Audio, AirPlay and Picture-in-Picture (PIP):
 
 Use the Background modes section of the Capabilities tab in your Xcode project.
 
-![](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/Art/4_enablebackgroundmodes_2x.png)
+![Enable Background Mode](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/Art/4_enablebackgroundmodes_2x.png)
 
 ## Attaching the 'pipBtn' Plugin to your `Config` Instance  
 
