@@ -17,7 +17,7 @@ The Player API supports sending notifications to the Player, listening to events
 
 The following diagram visualizes the architecture of the Kaltura Player, and highlights its flexibility and robustness across platforms and devices: 
 
-![](https://knowledge.kaltura.com/sites/default/files/styles/large/public/kaltura-player-toolkit.png)
+![Kaltura Player Diagram](https://knowledge.kaltura.com/sites/default/files/styles/large/public/kaltura-player-toolkit.png)
 
 As the diagram outlines, we can leverage native components for [iOS](https://github.com/kaltura/player-sdk-native-ios/) and [Android](https://github.com/kaltura/player-sdk-native-android) in conjunction with the HTML5 runtime and Adobe flash or Microsoft Silverlight plugins, to transcend platform limitations across devices and browsers, while delivering the full Player v2 Toolkit experience. 
 
