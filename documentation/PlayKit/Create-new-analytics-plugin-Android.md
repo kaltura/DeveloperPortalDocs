@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Creating new Analytics plugin for Kaltura Player in Android Devices
+title: Creating a New Analytics Plugin for the Kaltura Video Player in Android Devices
 subcat: Android
 weight: 296
 ---
@@ -8,9 +8,9 @@ weight: 296
 [![Android](https://img.shields.io/badge/Android-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios)
 
 
-This article describes the steps required to build new analytics plugin in Android devices.
+This article describes the steps required for building a new analytics plugin on Android devices.
 
-## Creating new Class for the plugin
+## Creating a New Class for the Plugin
 
 The calss must extend PKPlugin in order to integrate with Kaltura Player.
 
