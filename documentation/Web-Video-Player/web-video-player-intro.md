@@ -31,7 +31,7 @@ The key advantages of the Kaltura Web Video Players include:
 
 Kaltura's Web Video Player is designed to provide your users with the best viewing experience.
 
-![Web Video Player Look-and-Feel](./images/v2player.png)
+![Web Video Player](./images/v2player.png)
 
 The following section provides a general walk-through of the Kaltura Web Video Player technical features.
 
@@ -154,5 +154,6 @@ o	Note: The browsers that are projected to support MPEG DASH: IE 11 (Windows, Xb
  o	Deep linking to specific URLs for each video: (example: myDomain.com/videos/{entryid}
   
 
+![Player Flow](./images/new_player_flow.png)
 
 
