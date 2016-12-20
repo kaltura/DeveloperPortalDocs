@@ -7,7 +7,7 @@ weight: 290
 
 [![iOS](https://img.shields.io/badge/iOS-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios) 
 
-This article describes the steps required for adding support for the AirPlay functionality in iOS devices.
+This article describes the steps required for adding support for the AirPlay functionality in iOS devices. AirPlay (developed by Apple Inc.) enables wireless streaming of audio, video, photos and more between devices.
 
 To add the AirPlay functionality:
 
