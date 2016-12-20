@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Configuring and Customizing Kaltura Player Playlists
+title: Configuring and Customizing Kaltura Web Video Player Playlists
 weight: 405
 ---
 
-The Kaltura Player provides a robust playlist plugin that allows rendering a playlist of entries with many configuration options, such as:   
+The Kaltura Web Video Player provides a robust playlist plugin that allows rendering a playlist of entries with many configuration options, such as:   
 
 * Render the playlist to the right, left, top or bottom of the Player
 * Render a vertical or horizontal playlist
@@ -16,7 +16,7 @@ The Kaltura Player provides a robust playlist plugin that allows rendering a pla
 * Next / Play buttons
 * Robust API allowing communicating with the playlist from Javascript
 
-You can create a playlist functionality on your page by calling the Kaltura list API and using the Kaltura player `changeMedia` notification; however, using the Player's built-in playlist plugin will shorten your time to launch, simplify the management of your code, and provide better playback control.
+You can create a playlist functionality on your page by calling the Kaltura list API and using the Kaltura Web Video Player `changeMedia` notification; however, using the Web Video Player's built-in playlist plugin will shorten your time to launch, simplify the management of your code, and provide better playback control.
 
 ## Playlist Config Parameters
 
@@ -40,7 +40,7 @@ playlistAPI.layout=horizontal
 playlistAPI.autoContinue=true
 ```
 
-#### Configure Playlist via embed Flashvars  
+#### Configure Playlist via Embeded Flashvars  
 
 ```javascript
 flashvars: {
@@ -56,7 +56,7 @@ flashvars: {
 
 This section provides common best practices for customizing and configuring your playlist Player.
 
-### Size Relationship of the Player and its Playlist UI
+### Size Relationship of the Web Video Player and its Playlist UI
 
 When adding a playlist to your Player, the playlist UI will take screen space from the dimensions of your Player. As such, you should set your Player dimensions accordingly to accommodate for the added playlist UI dimensions. 
 
