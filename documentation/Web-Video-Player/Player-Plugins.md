@@ -1,14 +1,14 @@
 ---
 layout: page
-title: Extending the Kaltura Player Functionality Using Plugins
+title: Extending the Kaltura Web Video Player Functionality Using Plugins
 weight: 406
 ---
 
-The Kaltura Player architecture uses plugins to extend the Player functionality. All Player controls and core functionalities are implemented as plugins. This approach provides a separation of concerns and code isolation when implementing Player features.   
+The Kaltura Web Video Player architecture uses plugins to extend the Player functionality. All Web Video Player controls and core functionalities are implemented as plugins. This approach provides a separation of concerns and code isolation when implementing Player features.   
 
-Plugins communicate with the Player using the Player's API. Plugins also have direct access to the Player core engine and a dedicated interface to access and change the Player UI. Additionally, plugins can utilize the Player ability to communicate with the Kaltura platform API, thus gaining access to the Kaltura platform services.    
+Plugins communicate with the Web Video Player using the Player's API. Plugins also have direct access to the Player core engine and a dedicated interface to access and change the Player UI. Additionally, plugins can utilize the Player ability to communicate with the Kaltura platform API, thus gaining access to the Kaltura platform services.    
 
-To learm more about how to utilize the Player plugins, we recommend reading the following articles about the existing core Player plugins: 
+To learm more about how to utilize the Web Video Player plugins, we recommend reading the following articles about the existing core Player plugins: 
 
 * Turning plugins on and off and configuring plugin properties using the [Player Studio](http://knowledge.kaltura.com/universal-studio-information-guide)
 * Viewing plugins in action in our [Player demo pages](http://player.kaltura.com/docs/chaptersView)
