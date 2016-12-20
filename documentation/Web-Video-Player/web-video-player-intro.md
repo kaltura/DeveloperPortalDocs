@@ -82,6 +82,7 @@ Standardized features include:
 * Related videos
 * Flavor selector, adaptive streaming
 * Unified 508-compliant player
+* Mouse Over Scrubber - Thumbnails display on playhead scrubbing on mouse over
 
 ### Configuration  
 
@@ -94,11 +95,9 @@ Standardized features include:
 
 The Kaltura Web Video Player’s built-in advertising components provide support for a wide range of video ad formats and integrated plugins. The related videos experience includes an enhanced related video interface and flexible options for related video fulfillment. Kaltura supports a wide range of video ad formats including VAST 3.0, and integrated plugins for numerous video ad networks, such as Google DoubleClick DFP, FreeWheel, Ad Tech, Eye Wonder, AdapTV, Tremor Video and others. You can target viewers with ads on VOD or live videos, across multiple devices including mobile, PC’s, and set-top-boxes. 
 
-## Analytics Capabilities  
+### Analytics Capabilities  
 
-The Kaltura Web Video Player's analytics' capabilities provide you with the insight you need to manage your content, reach your audience, and optimize your workflow, as well as the ability to track conversion and retainment. 
-
-Every Kaltura account includes analytics fully integrated into the Kaltura platform. Additionally Kaltura supports integrations with numerous analytics providers such as Google Analytics, Nielsen Video Census, Nielsen Combined, Comscore and Omniture SiteCatalyst 15.
+The Kaltura Web Video Player's analytics' capabilities provide you with the insight you need to manage your content, reach your audience, and optimize your workflow, as well as the ability to track conversion and retainment. Every Kaltura account includes analytics fully integrated into the Kaltura platform. Additionally Kaltura supports integrations with numerous analytics providers such as Google Analytics, Nielsen Video Census, Nielsen Combined, Comscore and Omniture SiteCatalyst 15.
 
 ### Advanced Live Broadcast Streaming  
 
@@ -115,46 +114,37 @@ Kaltura's Web Video Player is designed to ensure seamless integration of advance
 
 Kaltura's Universal DRM module enables media companies, content rights owners and OTT providers to stream premium content without concern about which browser, device or platform is being used. 
  
-
-### Kaltura Web Video Player Look-and-Feel  
-
-The following table provide
-
-#### Mouse Over Scrubber  
-
-* Thumbnails display on playhead scrubbing on mouse over.
- 
-#### Responsive Player Layout
+### Responsive Player Layout
 
 * Thumb up/down rating
 * Smaller players / screens keep important controls. 
  
-#### Improved Related Videos Experience
+### Improved Related Videos Experience
 
 * Enhanced related videos interface
 * Flexible options for related video fulfillment
 * Events for tracking conversion/retainment
  
-#### Playlists and Chapters
+### Playlists and Chapters
 
-•	Flexible HTML plugins for playlists and chapters with support for inheriting site styles
+* Flexible HTML plugins for playlists and chapters with support for inheriting site styles
  
-#### Adaptive Streaming Support
+### Adaptive Streaming Support
 
 * Chromeless Flash HLS
-o	Supports HLS on desktop browsers for simplified live broadcast ad stitching workflows
-•	MPEG-DASH
-o	Encrypted Media Extension support web delivery of DRM and content control
-o	Multi-track audio
-o	More detailed analytics on quality of services metrics
-o	Note: The browsers that are projected to support MPEG DASH: IE 11 (Windows, Xbox, phone;) Chrome (Desktop & Android), Firefox (Desktop)
+  *	Supports HLS on desktop browsers for simplified live broadcast ad stitching workflows
+* MPEG-DASH
+  *	Encrypted Media Extension support web delivery of DRM and content control
+  *	Multi-track audio
+  *	More detailed analytics on quality of services metrics
+ ^ Note: The browsers that support MPEG DASH include IE 11 (Windows, Xbox, phone;) Chrome (Desktop & Android), Firefox (Desktop).
  
 #### Share Interface In Player or On Page  
 
-•	Robust Configurable Share Options
- o	Support for sharing specific time offsets
- o	iframe or Flash object embed options
- o	Deep linking to specific URLs for each video: (example: myDomain.com/videos/{entryid}
+* Robust Configurable Share Options
+  *		Support for sharing specific time offsets
+  *	 iframe or Flash object embed options
+  *		Deep linking to specific URLs for each video: (example: myDomain.com/videos/{entryid}
   
 
 ![Player Flow](./images/new_player_flow.png)
