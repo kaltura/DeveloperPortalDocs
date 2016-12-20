@@ -4,6 +4,7 @@ layout: page
 title: Introduction to Kaltura's Web Video Player
 weight: 401
 ---
+
 Kaltura's Web Video Player is an easy-to-use, powerful, flexible video platform, which is designed to enable you to deliver videos on your website quickly and easily, allowing you to reach viewers, engage them, and maximize your revenue. Moreover, the Kaltura Web Video Player technology is designed to ensure that the videos on your site will start quickly and stream smoothly. 
 
 Kaltura's Web Video Player leads the industry in flexibility, ease of customization, plug-in offerings and loading speed. All of the Kaltura Web Video Player features are supported on both HTML5 and Flash using the same configuration, which makes feature integration across platforms simple and easy. 
@@ -12,9 +13,9 @@ Kaltura's Web Video Player leads the industry in flexibility, ease of customizat
 
 Note that the easiest way to use Kaltura's Web Video Player is to build a player using [Kaltura's Universal Studio](https://knowledge.kaltura.com/node/1148), which provides a user-friendly UI for building and customizing the player. 
 
-## Kaltura's Web Video Player SDK    
+## Kaltura's Web Video Player Toolkit    
 
-Kaltura's Web Video Player SDK enables users to deliver videos with HTML5 and provide the fastest viewing experience on any device, while maintaining all of the same features and a consistent CSS/HTML player design. The SDK enables delivery of HTML5 with Chromeless components for iOS and Android.
+Kaltura's Web Video Player toolkit enables users to deliver videos with HTML5 and provide the fastest viewing experience on any device, while maintaining all of the same features and a consistent CSS/HTML player design. The toolkit enables delivery of HTML5 with Chromeless components for iOS and Android.
 
 ## Key Advantages of the Kaltura Web Video Player  
 
@@ -26,21 +27,15 @@ The key advantages of the Kaltura Web Video Players include:
 * Better support for additional platforms; iOS and Android player components
 * Support for all features across multiple platforms
 
-Here are some of the Kaltura Web Video Player's main advantages:
+## Technical Overview  
 
-| Feature     | Description  |
-|--------- |--- |
-| Design  | -Unified flat design <br>-Easy to customize |
-| Refactored Components  | -Enhanced configuration mechanism; skin components are plugin-based<br>-Clean separation of uiEvents from core embedPlayer<br>-Unified JSON-based configuration <br> -HTML5 first; Flash fallback is Chromeless (write plugins once for HTML5) |  
-| Standard Features | -Info tab<br>-Share tab<br>-Play head frame seek preview<br>-Related videos<br>-Flavor selector, adaptive streaming<br>-Unified 508-compliant player |
-| Cross-Platform HTML5, Native, and Flash  |Our HTML5 video library provides you with the most advanced mobile delivery technology stack available today. Our smart-player technology delivers the right player, stream, and advertising to the right device anywhere, with just a single embed code. You can extend the functionality of both Flash and HTML5 players with our Unified development API.<br> -Single player framework wraps, Flash, native iOS, native Android, and HTML5<br>-Enables you to deliver features such as DRM, offline viewing, adaptive streaming, via native or plugin components, while still leveraging single unified configuration and the same player platform cross-devices<br>-Minimizes costs in cross-platform feature delivery  |
+The following section provides a general walk-through of the Kaltura Web Video Player technical features.
 
-
-## Easy to Implement Video Embedding    
+### Easy to Implement Video Embedding    
 
 Adding video to your website is a great way to interact with your audience. Our lightweight embed codes enable you to add videos to your website quickly and easily; simply prepare the videos, generate the embed code, and then embed them into your website using Kaltura's embedding capabilities. 
 
-To learn more about embedding, read [this](https://knowledge.kaltura.com/node/1148) article.
+To learn more about embedding, you may want to read [this](https://knowledge.kaltura.com/node/1148) article.
 
 Kaltura's Web Video Player supports the following embed code types:
 
@@ -51,23 +46,47 @@ Kaltura's Web Video Player supports the following embed code types:
 * **Reference Id:** The reference ID is used for setting a custom ID for Kaltura entry.
 * **kWidget playlist:** kWidgets make it easy to embed playlists, by simply passing along playlist plugin configuration as flashvars.
 
-## Unparalleled Robust Performance  
+### Unparalleled Robust Performance  
 
 Kaltura's Web Video Player library features an advanced resource loader developed in collaboration with Wikimedia Foundation. The resource loader supports dynamically packing of modules, features and player metadata, and minimizes, gizpis and packages, CSS, images, HTML, JavaScript, metadata, and per player features into a single non-blocking payload. The resource loader, combined with Kaltura's AutoEmbed embed code, enables the player rendering to take full advantage of fetch ahead parallel JavaScript resource loading in modern browsers to deliver fast player rendering even on sites with many other active scripts included. 
 
 You get the best in class performance of all your features, without delays as in a traditional feature rich player (dz?build out.
 
-## Easy to Integrate  
+### Cross-Platform Support  
+
+Our HTML5 video library provides you with the most advanced mobile delivery technology stack available today. Our smart-player technology delivers the right player, stream, and advertising to the right device anywhere, with just a single embed code. You can extend the functionality of both Flash and HTML5 players with our Unified development API:
+
+* Single player framework wraps, native iOS, native Android, and HTML5
+* Enables you to deliver features such as DRM, offline viewing, adaptive streaming, via native or plugin components, while still leveraging single unified configuration and the same player platform cross-devices
+* Minimizes costs in cross-platform feature delivery 
+
+### Easy to Integrate  
 
 Kaltura's multi-platform support ensures easy integration for iOS and Android player components on both mobile devices and tablets, providing maximum flexibility, while the player architecture enables you to reuse plugins and configurations across platforms.
 
-## Customizable  
+### Customizable  Design
 
-The Kaltura Web Video Player is easily customized, enabling you to configure skins once using standard HTML / CSS. In addition, you can create customized cross-browser/cross-device players in the Kaltura Player Studio <dz check this out from a variety of easy-to-configure player templates>.
+The Kaltura Web Video Player features an easy-to-customize, unified flat design, which enables you to configure skins once using standard HTML / CSS. In addition, you can create customized cross-browser/cross-device players in the Kaltura Player Studio. To learn more, read this [customization] (https://vpaas.kaltura.com/documentation/Web-Video-Player/Player-Customization.html) article.
 
-The Kaltura Dynamic Player (KDP) <dz where does this fit in? > can be modified with the Universal Studio, with the UIconf or with the API. See examples of how our customers have themselves (or in collaboration with Kaltura) made their player unique to their brand and business.
- 
-## Built-in Advertising Support  
+### Standardized Features  
+
+Standardized features include:
+
+* Info tab
+* Share tab
+* Play head frame seek preview
+* Related videos
+* Flavor selector, adaptive streaming
+* Unified 508-compliant player
+
+### Configuration  
+
+* Enhanced configuration mechanism; skin components are plugin-based
+* Clean separation of uiEvents from core embedPlayer
+* Unified JSON-based configuration 
+* HTML5 first; Flash fallback is Chromeless (write plugins once for HTML5) |
+
+### Built-in Advertising Support  
 
 The Kaltura Web Video Player’s built-in advertising components provide support for a wide range of video ad formats and integrated plugins. The related videos experience includes an enhanced related video interface and flexible options for related video fulfillment. Kaltura supports a wide range of video ad formats including VAST 3.0, and integrated plugins for numerous video ad networks, such as Google DoubleClick DFP, FreeWheel, Ad Tech, Eye Wonder, AdapTV, Tremor Video and others. You can target viewers with ads on VOD or live videos, across multiple devices including mobile, PC’s, and set-top-boxes. 
 
@@ -77,26 +96,23 @@ The Kaltura Web Video Player's analytics' capabilities provide you with the insi
 
 Every Kaltura account includes analytics fully integrated into the Kaltura platform. Additionally Kaltura supports integrations with numerous analytics providers such as Google Analytics, Nielsen Video Census, Nielsen Combined, Comscore and Omniture SiteCatalyst 15.
 
-## Advanced Live Broadcast Streaming  
+### Advanced Live Broadcast Streaming  
 
 Kaltura's Web Video Player is designed to ensure seamless integration of advanced live broadcasts streaming.
 
-## Universal Digital Rights Management (DRM)  
+### Universal Digital Rights Management (DRM)  
 
 Kaltura's Universal DRM module enables media companies, content rights owners and OTT providers to stream premium content without concern about which browser, device or platform is being used. 
-
  
-## Basic Look and Feel of the Kaltura Web Video Player
+## Kaltura Web Video Player Look-and-Feel
 
 Kaltura's Web Video Player is designed to provide your users with the best viewing experience.
 
-![Web Video Player Look-and-Feel](./images/v2player.png
+![Web Video Player Look-and-Feel](./images/v2player.png)
 
 The following illustrates the basic look and feel of the Kaltura Web Video Player.
  
-### Mouse Over Scrubber
-
-•	Thumbnails display on playhead scrubbing on mouse over.
+**Mouse Over Scrubber** - Thumbnails display on playhead scrubbing on mouse over.
  
 ### Responsive Player Layout
 
