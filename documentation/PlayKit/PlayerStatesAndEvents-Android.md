@@ -1,16 +1,17 @@
 ---
 layout: page
-title: Player States and Events for Android
+title: Tracking Kaltura Video Player States and Events on Android Devices
 subcat: Android
 weight: 292
 ---
 
 [![Android](https://img.shields.io/badge/Android-Supported-green.svg)](https://github.com/kaltura/playkit-android)
 
+This article describes the steps required for registering to Kaltura Video Player events and states on Android devices.
 
-This article describes the steps required to use register player events
+## Registering to Kaltura Video Player Events and States  
 
-## Registering to player Events & States  
+Implement the following to register:
 
 ```
 private void setPlayerListeners() {
@@ -67,7 +68,9 @@ private void setPlayerListeners() {
         PlayerEvent.Type.ERROR);
 ```
 
-## Player Events  
+## Kaltura Video Player Supported Events  
+
+The Kaltura Video Player supports the following events:
 
 ```
         STATE_CHANGED,
@@ -88,7 +91,9 @@ private void setPlayerListeners() {
 ```
 
 
-## Registering to Player State Change Listener
+## Registering to the Kaltura Video Player State Change Listener  
+
+To be able to track changes in the player's state, register to the state change listener as follows:
 
 ```
 playerKit.addStateChangeListener(new PKEvent.Listener() {
@@ -119,7 +124,9 @@ playerKit.addStateChangeListener(new PKEvent.Listener() {
     
 ```
 
-## Player States
+## Kaltura Video Player States  
+
+The Kaltura Video Player state can be one of the following states:
 
 ```
 IDLE, 
