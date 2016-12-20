@@ -88,7 +88,7 @@ Standardized features include:
 * Enhanced configuration mechanism; skin components are plugin-based
 * Clean separation of uiEvents from core embedPlayer
 * Unified JSON-based configuration 
-* HTML5 first; Flash fallback is Chromeless (write plugins once for HTML5) |
+* HTML5 first; Flash fallback is Chromeless (write plugins once for HTML5)
 
 ### Built-in Advertising Support  
 
