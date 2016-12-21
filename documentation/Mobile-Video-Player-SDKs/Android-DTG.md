@@ -45,13 +45,13 @@ The simplest way to get up and running is by using JitPack's Maven repository.
 
 ```
 	dependencies {
-	    compile 'com.github.kaltura:playkit-dtg-android:v2.0.0'
+	    compile 'com.kaltura:playkit-dtg-android:v2.0.0'
 	}
 ```
 
 Replace `v2.0.0` with the [latest release](https://github.com/kaltura/playkit-dtg-android/releases).
 
-JitPack provides more [options and information](https://jitpack.io/#kaltura/playkit-dtg-android). 
+JitPack provides more [options and information](https://jitpack.io/#com.kaltura/playkit-dtg-android). 
 
 ### Alternative Setup
 
@@ -159,7 +159,7 @@ Following are some basic sequence diagrams.
 
 {% endplantuml %}
 
-### Track Selection Sequence
+## Track Selection
 
 Tracks are selected, by type, using a TrackSelector object. A TrackSelector is obtained by calling `getTrackSelector()` on a DownloadItem.
 Given a TrackSelector, the application performs selection:
@@ -173,6 +173,7 @@ trackSelector.setSelectedTracks(AUDIO, filteredTracks)
 trackSelector.apply();
 ```
 
+### Sequence Diagram
 
 {% plantuml %}
 
@@ -194,21 +195,21 @@ trackSelector.apply();
 {% endplantuml %}
 
 
-#### Interactive Selection Before Download is Started
+### Interactive Selection Before Download is Started
 
 In this scenario, the metadata for an item was downloaded, the default tracks were selected, but the download wasn't yet started. 
 The application calls item.getTrackSelector(), makes a selection and applies it. The selected tracks are downloaded as part of the normal download.
 
 
 
-#### Interactive Selection After Download is Finished
+### Interactive Selection After Download is Finished
 
 The entire item has downloaded. The user now decides to download additional tracks - such as another audio language. 
 The application calls item.getTrackSelector(), makes a selection and applies it. Then, item.startDownload() is called again, to start downloading the extra tracks.
 
-#### Preference-based Selection
+### Preference-based Selection
 
-The application should have a policy on track selection, for example:
+The application may have a policy on track selection, for example:
 - Always choose the highest quality video
 - Always prefer audio in the user's UI language
 
@@ -217,4 +218,36 @@ The ContentManager calls the application's listener method onTracksAvailable() w
 If no selection was made, some defaults are applied instead. However, it's recommended that the application adopts its own defaults.
 
 If the application can select tracks without user interaction, it is best to do so inside the onTracksAvailable() handler. It avoids writing data to the database that will be discarded immediately after.
+
+### Track Selection Samples
+
+Select the video track with the **lowest** bitrate:
+
+```java
+    List<DownloadItem.Track> videoTracks = trackSelector.getAvailableTracks(DownloadItem.TrackType.VIDEO);
+    DownloadItem.Track minVideo = Collections.min(videoTracks, DownloadItem.Track.bitrateComparator);
+    trackSelector.setSelectedTracks(DownloadItem.TrackType.VIDEO, Collections.singletonList(minVideo));
+```
+
+Select all available tracks:
+
+```java
+    void selectAllAvailableTracksByType(DownloadItem.TrackSelector trackSelector, DownloadItem.TrackType trackType) {
+        List<DownloadItem.Track> availableTracks = trackSelector.getAvailableTracks(trackType);
+        trackSelector.setSelectedTracks(trackType, availableTracks);
+    }
+```
+
+Then, from onAvailableTracks():
+
+```java
+    selectAllAvailableTracksByType(trackSelector, DownloadItem.TrackType.AUDIO);
+    selectAllAvailableTracksByType(trackSelector, DownloadItem.TrackType.TEXT);
+```
+
+### Default Selection
+
+- Video: highest bitrate track
+- Audio: highest bitrate version of the first language
+- Text: first track.
 
