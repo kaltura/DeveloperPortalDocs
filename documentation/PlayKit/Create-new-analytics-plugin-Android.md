@@ -17,6 +17,7 @@ First, you'll need to create a new class for the plugin. The class must extend t
 To configure the plugin protected functions, follow these steps: 
 
 1. Add a factory function - this enables the Kaltura Video Player to create a new instance of the Analytics Plugin and register the new plugin.
+
 ```
 public static final Factory factory = new Factory() {
         @Override
