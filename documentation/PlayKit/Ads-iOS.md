@@ -1,26 +1,33 @@
 ---
 layout: page
-title: Configuring IMA Plugins for iOS Devices
+title: Configuring the Kaltura Video Player to use IMA Plugin on iOS Devices
 subcat: iOS
 weight: 290
 ---
 
 [![iOS](https://img.shields.io/badge/iOS-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios) 
 
-To be able to deliver advertisments to iOS devices, you'll need to implement a series of steps that are required for using IMA Plugins in iOS devices.
+This article describes the steps required for adding support for the IMA Plugin functionality on iOS devices. IMA (or Interactive Media Ads) was developed by Google to enable you to display ads in your application's video, audio, and game content.
 
 ## Enable IMA Plugins for the Kaltura Video Player  
 
-1. To enable IMA Plugins in iOS devices for the Kaltura Video Player, add the following line to your Podfile: ```pod 'PlayKit/IMAPlugin'```
+To enable IMA Plugins in iOS devices for the Kaltura Video Player, add the following line to your Podfile: 
 
-2. Next, register the IMA Plugin inside your application:
+```
+pod 'PlayKit/IMAPlugin'
+```
+
+## Register the IMA Plugin  
+
+Next, register the IMA Plugin inside your application as follows:
+
 ```
 PlayKitManager.sharedInstance.registerPlugin(IMAPlugin.self)
 ```
 
-## Configure the Kaltura Video Player to use IMA Plugins  
+## Configure the Kaltura Video Player to use the IMA Plugin  
 
-To configure the Video Player to use IMA Plugins, add the following configuration to your `PlayerConfig`:
+To configure the player to use IMA Plugin, add the following configuration to your `PlayerConfig` file as follows:
 
 ```
 let adsConfig = AdsConfig()
@@ -30,7 +37,7 @@ playerConfig.plugins[IMAPlugin.pluginName] = adsConfig
 
 ## Configure Clickthroughs 
 
-The IMA Plugin offers two options for opening ad landing pages
+The IMA Plugin offers two options for opening ad landing pages:
 
 * Via an in-app browser
 * Via Safari 
