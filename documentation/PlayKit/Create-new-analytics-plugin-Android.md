@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Creating a New Analytics Plugin for the Kaltura Video Player on Android Devices
+title: Building a New Analytics Plugin on Android Devices
 subcat: Android
 weight: 296
 ---
@@ -8,11 +8,11 @@ weight: 296
 [![Android](https://img.shields.io/badge/Android-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios)
 
 
-This article describes the steps required for building a New Analytics Plugin on Android devices.
+This article describes the steps required for building a New Analytics Plugin for the Kaltura Video Player on Android devices.
 
 ## Create a New Class for the Plugin
 
-The class must extend the PKPlugin to integrate with the Kaltura Video Player.
+First, you'll need to create a new class for the plugin. The class must extend the PKPlugin to integrate with the Kaltura Video Player.
 
 To configure the plugin protected functions, follow these steps: 
 
@@ -47,9 +47,9 @@ messageBus.post(new LogEvent(TAG + " " + ((PlayerEvent) event).type.toString()))
 
 6. The methods onDestroy, onUpdateConfig, onUpdateMedia, onApplicationPaused, and onApplicationResumed help you manage the life cycle of your Analytics Plugin, including initiating end events, handling background tasks, and keeping the plugin flow in accordance with the Video Player life cycle.
 
-## Enable the the Analytics Plugin for the Kaltura Video Player on Android Devices  
+## Enable the Analytics Plugin for the Kaltura Video Player on Android Devices  
 
-Register the Analytics Plugin inside the application as follows:
+Next, you'll need to enable the Analytics Plugin by registering it inside the application as follows:
 
 ```
 PlayKitManager.registerPlugins(GenericAnalyticsPlugin.factory);
@@ -57,7 +57,7 @@ PlayKitManager.registerPlugins(GenericAnalyticsPlugin.factory);
 
 ## Configure the Plugin Configuration Object for the Analytics Plugin  
 
-To configure the Analytics Plugin, add the following configuration to your `pluginConfig` file:
+To configure the Analytics Plugin, add the following configuration to your `pluginConfig` file as follows:
 
 ```
 private void configureGenericAnalyticsPlugin(PlayerConfig pluginConfig) {
@@ -65,10 +65,9 @@ private void configureGenericAnalyticsPlugin(PlayerConfig pluginConfig) {
         genericConfigEntry.addProperty("NameOfThe Configuration", value of the configuration);
 ```
 
-## Set the plugin config to the Plugin
+## Set the Plugin Configuration to the Analytics Plugin
 
-In order for the Plugin to start loading, you need to set
-the plugin config you created -
+For the Analytics Plugin to start loading, you'll need to set the plugin configugration you created as follows:
 
 ```
 PlayerConfig config = new PlayerConfig();
@@ -77,6 +76,8 @@ plugins.setPluginConfig("NameOfPlugin" , genericConfigEntry.toJson());
 ```
 
 ## MessageBus Supported Events  
+
+The MessageBus supports the following events:
 
 ```
 PlayerEvents{
