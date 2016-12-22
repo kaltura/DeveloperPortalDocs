@@ -8,15 +8,15 @@ weight: 296
 [![Android](https://img.shields.io/badge/Android-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios)
 
 
-This article describes the steps required for building a new analytics plugin on Android devices.
+This article describes the steps required for building a New Analytics Plugin on Android devices.
 
-## Creating a New Class for the Plugin
+## Create a New Class for the Plugin
 
 The class must extend the PKPlugin to integrate with the Kaltura Video Player.
 
-Steps to configure the plugin protected functions - 
+To configure the plugin protected functions, follow these steps: 
 
-1. Adding a factory function - enables the player to create new instance of the plugin and register the new plugin
+1. Add a factory function - this enables the Kaltura Video Player to create a new instance of the Analytics Plugin and register the new plugin.
 ```
 public static final Factory factory = new Factory() {
         @Override
@@ -30,41 +30,34 @@ public static final Factory factory = new Factory() {
         }
     };
 ```
-2. When the application setting the plugin config, the player calls the plugin onLoad method.
-This function contains all the required configurations for the new plugin, a reference to the active Kaltura Player
-and reference to the MessageBus, which includes all events.
 
-3. Add listener to the desired events by calling the following function - all desired events come after the listener -  
+2. When the application sets the Analytics Plugin configuration, the Kaltura Video Player calls the plugin onLoad method. This function contains all of the required configurations for the new plugin, a reference to the active Kaltura Video Player, and a reference to the MessageBus, which includes all events.
+
+3. Add a listener to the relevant events by calling the following function - all of the relevant events will follow the listener:  
 ```
 messageBus.listen(hereComesTheEventListener, PlayerEvent.Type.PLAY, PlayerEvent.Type.PAUSE, PlayerEvent.Type.ENDED, PlayerEvent.Type.ERROR, PlayerEvent.Type.LOADED_METADATA);
 ```
 
 4. Add a send analytics event method and call it from the event listener.
 
-5. In case you want to report events to the app, you can use LogEvent the
-following way - 
+5. If you want to report events to the application, you can use LogEvent in the following way: 
 ```
 messageBus.post(new LogEvent(TAG + " " + ((PlayerEvent) event).type.toString()));
 ```
 
-6. Methods onDestroy, onUpdateConfig, onUpdateMedia, onApplicationPaused, onApplicationResumed
-help you handle the life cycle of your plugin. Initiate end events, handle background tasks
-and keep you plugin flow in accordance with the player life cycle.
+6. The methods onDestroy, onUpdateConfig, onUpdateMedia, onApplicationPaused, and onApplicationResumed help you manage the life cycle of your Analytics Plugin, including initiating end events, handling background tasks, and keeping the plugin flow in accordance with the Video Player life cycle.
 
+## Enable the the Analytics Plugin for the Kaltura Video Player on Android Devices  
 
-## Enabling the plugin for the Kaltura Player  
-
-To enable the Plugin in Android devices for the Kaltura Player do the following steps:
-
-Register the Plugin inside the app:
+Register the Analytics Plugin inside the application as follows:
 
 ```
 PlayKitManager.registerPlugins(GenericAnalyticsPlugin.factory);
 ```
 
-## Configuring the plugin config object  
+## Configure the Plugin Configuration Object for the Analytics Plugin  
 
-To configure the Plugin, add the following configuration to your `pluginConfig`:
+To configure the Analytics Plugin, add the following configuration to your `pluginConfig` file:
 
 ```
 private void configureGenericAnalyticsPlugin(PlayerConfig pluginConfig) {
@@ -72,7 +65,7 @@ private void configureGenericAnalyticsPlugin(PlayerConfig pluginConfig) {
         genericConfigEntry.addProperty("NameOfThe Configuration", value of the configuration);
 ```
 
-## Setting the plugin config to the Plugin
+## Set the plugin config to the Plugin
 
 In order for the Plugin to start loading, you need to set
 the plugin config you created -
