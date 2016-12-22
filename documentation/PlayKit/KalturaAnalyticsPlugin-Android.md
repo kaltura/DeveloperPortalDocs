@@ -24,7 +24,7 @@ PlayKitManager.registerPlugins(KalturaAnalyticsPlugin.factory);
 
 ### Configure the Plugin Configuration Object for the Kaltura Analytics Plugin  
 
-To configure the plugin, add the following configuration to your `pluginConfig`:
+To configure the plugin, add the following configuration to your `pluginConfig` file:
 
 ```
 private void configureKalturaStatsPlugin(PlayerConfig pluginConfig) {
@@ -38,7 +38,7 @@ private void configureKalturaStatsPlugin(PlayerConfig pluginConfig) {
 
 ```
 
-### Sett the Plugin Configuration to Initiate onLoad in the Plugin
+### Set the Plugin Configuration to Initiate onLoad in the Plugin
 
 To enable the Kaltura Analytics Plugin to start loading, you'll need to set the plugin configuration you created as follows:
 
