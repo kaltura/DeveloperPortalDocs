@@ -145,7 +145,6 @@ Kaltura's Universal DRM module enables media companies, content rights owners an
   *	 iframe or Flash object embed options
   *		Deep linking to specific URLs for each video: (example: myDomain.com/videos/{entryid}
   
-
 ![Player Flow](./images/new_player_flow.png)
 
 
