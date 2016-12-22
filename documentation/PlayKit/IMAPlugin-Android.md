@@ -35,7 +35,7 @@ IMAConfig(String language, boolean enableBackgroundPlayback, boolean autoPlayAdB
 
 ## Set the Plugin Configuration to the IMA Plugin  
 
-For the IMA Plugin to start loading, you'll need to set the the plugin configuration you created as follows:
+For the IMA Plugin to start loading, you'll need to set the plugin configuration you created as follows:
 
 ```
 PlayerConfig config = new PlayerConfig();
