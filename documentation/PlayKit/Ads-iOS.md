@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Configuring the Kaltura Video Player to use IMA Plugin on iOS Devices
+title: Configuring the Kaltura Video Player to use the IMA Plugin on iOS Devices
 subcat: iOS
 weight: 290
 ---
