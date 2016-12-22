@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Configuring the Kaltura Video Player to use the Kaltura Analytics Plugin on Android Devices
+title: Configuring the Kaltura Analytics Plugin on Android Devices
 subcat: Android
 weight: 295
 ---
