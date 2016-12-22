@@ -14,8 +14,6 @@ AvAudioSession enables you to control the audio on iOS devices even when the sil
 
 The AVAudioSession enables you to play audio (essentially any sound) even when the silent switch is off.
 
-To implement this option:
-
 1. When you begin playing the video, keep the initial category value of AVAudioSession aside.
 2. Change the actual category value to AVAudioSessionCategoryPlayback as follows:
 
