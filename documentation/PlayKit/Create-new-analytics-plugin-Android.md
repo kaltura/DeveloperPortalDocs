@@ -18,7 +18,7 @@ To configure the plugin protected functions, follow these steps:
 
 1. Add a factory function - this enables the Kaltura Video Player to create a new instance of the Analytics Plugin and register the new plugin.
 
-        ```
+      
         public static final Factory factory = new Factory() {
                 @Override
                 public String getName() {
@@ -30,7 +30,7 @@ To configure the plugin protected functions, follow these steps:
                         return new GenericAnalyticsPlugin(); //Name of the plugin class
                 }
         };
-        ```
+        
 
 2. When the application sets the Analytics Plugin configuration, the Kaltura Video Player calls the plugin onLoad method. This function contains all of the required configurations for the new plugin, a reference to the active Kaltura Video Player, and a reference to the MessageBus, which includes all events.
 
