@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Configuring the Kaltura Video Player to use the Phoenix Stats Plugin on Android Devices
+title: Configuring the Phoenix Stats Plugin on Android Devices
 subcat: Android
 weight: 292
 ---
