@@ -1,28 +1,25 @@
 ---
 layout: page
-title: Configuring the Player to use Kaltura Stats Plugin in Android Devices
+title: Configuring the Kaltura Video Player to use Kaltura Stats Plugin in Android Devices
 subcat: Android
 weight: 294
 ---
 
 [![Android](https://img.shields.io/badge/Android-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios)
 
+This article describes the steps required for configuring the Kaltura Video Player to use the Kaltura Stats Plugin on Android devices.
 
-This article describes the steps required to use Kaltura Stats Plugin in Android devices.
+## Enabling the Kaltura Stats Plugin for the Kaltura Video Player  
 
-## Enabling Kaltura Stats Plugin for the Kaltura Player  
-
-To enable Kaltura Stats Plugin in Android devices for the Kaltura Player do the following steps:
-
-Register the Plugin inside your app:
+To enable the Kaltura Stats Plugin, register the plugin inside your application as follows:
 
 ```
 PlayKitManager.registerPlugins(KalturaStatsPlugin.factory);
 ```
 
-## Configuring the plugin config object for Kaltura Stats Plugin  
+## Configuring the Plugin Configuration Object for the Kaltura Stats Plugin  
 
-To configure the Plugin, add the following configuration to your `pluginConfig`:
+To configure the Kaltura Stats Plugin, add the following configuration to your `pluginConfig` file as follows:
 
 ```
 private void configureKalturaStatsPlugin(PlayerConfig pluginConfig) {
