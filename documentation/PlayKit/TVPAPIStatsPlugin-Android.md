@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Configuring the Kaltura Video Player to use the TVPAPI Stats Plugin on Android Devices
+title: Configuring the TVPAPI Stats Plugin on Android Devices
 subcat: Android
 weight: 293
 ---
@@ -10,19 +10,17 @@ weight: 293
 
 This article describes the steps required for using the TVPAPI Stats Plugin on Android devices to get statistical information on the device, as well as the events supported by the plugin. 
 
-## Configuring the TVPAPI Stats Plugin  
+### Register the TVPAPI Stats Plugin  
 
-### Register the TVPAPI Stats Plugin    
-
-Register the plugin in your application as follows:
+Register the TVPAPI Stats Plugin in your application as follows:
 
 ```
 PlayKitManager.registerPlugins(TVPAPIAnalyticsPlugin.factory);
 ```
 
-### Configure the Plugin Configuration Object  
+### Configure the Plugin Configuration Object for the TVPAPI Stats Plugin 
 
-To configure the TVPAPI Stats Plugin, add the following configuration to your `pluginConfig` file:
+To configure the TVPAPI Stats Plugin, add the following configuration to your `pluginConfig` file as follows:
 
 ```
 private void configureTVPAPIPlugin(PlayerConfig pluginConfig) {
@@ -35,7 +33,7 @@ private void configureTVPAPIPlugin(PlayerConfig pluginConfig) {
 
 ### Set the Plugin Configuration to the TVPAPI Stats Plugin  
 
-To ensure that the plugin starts loading, you'll need to set the plugin configuration you created as follows:
+To ensure that the TVPAPI Stats Plugin starts loading, you'll need to set the plugin configuration you created as follows:
 
 ```
 PlayerConfig config = new PlayerConfig();
@@ -43,7 +41,9 @@ PlayerConfig.Plugins plugins = config.plugins;
 plugins.setPluginConfig("TVPAPIAnalytics" , TVPAPIConfigEntry.toJson()); 
 ```
 
-## Supported Events in the TVPAPI Stats Plugin  
+## TVPAPI Stats Plugin Supported Events  
+
+The TVPAPI Stats Plugin supports the following events:
 
 TVPAPI action Types{
 
