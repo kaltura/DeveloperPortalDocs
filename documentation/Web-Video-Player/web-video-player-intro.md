@@ -138,7 +138,7 @@ Kaltura's Universal DRM module enables media companies, content rights owners an
   *	More detailed analytics on quality of services metrics
  ^ Note: The browsers that support MPEG DASH include IE 11 (Windows, Xbox, phone;) Chrome (Desktop & Android), Firefox (Desktop).
  
-#### Share Interface In Player or On Page  
+### Share Interface In Player or On Page  
 
 * Robust Configurable Share Options
   *		Support for sharing specific time offsets
