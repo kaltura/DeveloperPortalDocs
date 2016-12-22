@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Configuring the Kaltura Video Player to use IMA Plugin on Android Devices
+title: Configuring the IMA Plugin on Android Devices
 subcat: Android
 weight: 292
 ---
