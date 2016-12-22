@@ -1,15 +1,15 @@
 ---
 layout: page
-title: Configuring the Kaltura Video Player to use Kaltura Stats Plugin in Android Devices
+title: Configuring the Kaltura Video Player to use the Kaltura Stats Plugin in Android Devices
 subcat: Android
 weight: 294
 ---
 
 [![Android](https://img.shields.io/badge/Android-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios)
 
-This article describes the steps required for configuring the Kaltura Video Player to use the Kaltura Stats Plugin on Android devices.
+This article describes the steps required for configuring the Kaltura Video Player to use the Kaltura Stats Plugin on Android devices. This will enable you to obtain important statistical information about usage.
 
-## Enabling the Kaltura Stats Plugin for the Kaltura Video Player  
+## Register the Kaltura Stats Plugin for the Kaltura Video Player  
 
 To enable the Kaltura Stats Plugin, register the plugin inside your application as follows:
 
@@ -17,7 +17,7 @@ To enable the Kaltura Stats Plugin, register the plugin inside your application 
 PlayKitManager.registerPlugins(KalturaStatsPlugin.factory);
 ```
 
-## Configuring the Plugin Configuration Object for the Kaltura Stats Plugin  
+## Configure the Plugin Configuration Object for the Kaltura Stats Plugin  
 
 To configure the Kaltura Stats Plugin, add the following configuration to your `pluginConfig` file as follows:
 
@@ -33,10 +33,9 @@ private void configureKalturaStatsPlugin(PlayerConfig pluginConfig) {
 
 ```
 
-## Setting the plugin config, initiates onLoad in the plugin
+## Set the Plugin Configuration to Initiate onLoad of the Kaltura Stats Plugin  
 
-In order for the Kaltura Stats Plugin to start loading, you need to set
-the plugin config you created -
+To enable the Kaltura Stats Plugin to start loading, you'll need to set the plugin configuration you created as follows:
 
 ```
 PlayerConfig config = new PlayerConfig();
@@ -44,7 +43,9 @@ PlayerConfig.Plugins plugins = config.plugins;
 plugins.setPluginConfig("KalturaStats", kalturaStatsConfig); 
 ```
 
-## Supported events by the kaltura Stats plugin
+## Kaltura Stats Plugin Supported Events  
+
+The Kaltura Stats Plugin supports the following events:
 
  WIDGET_LOADED(1),
 
