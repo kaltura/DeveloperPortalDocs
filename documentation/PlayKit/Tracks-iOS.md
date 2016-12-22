@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Getting available captions and audio tracks in iOS Devices
+title: Adding Available Captions and Audio Tracks to iOS Devices
 subcat: iOS
 weight: 290
 ---
@@ -9,7 +9,7 @@ weight: 290
 
 This article describes the steps required for adding support for the multi-audio and captions functionality in your application on iOS devices.
 
-1. In order to get the available tracks, register to 'PlayerEvents.tracksAvailable' event on the player:
+1. To get the available captions and audio tracks, register to the 'PlayerEvents.tracksAvailable' event on the player as follows:
 
 ```
 self.player.addObserver(self, events: [PlayerEvents.tracksAvailable.self], block: { (event: Any) -> Void in
@@ -21,7 +21,7 @@ self.player.addObserver(self, events: [PlayerEvents.tracksAvailable.self], block
 })
 ```
 
-2. In order to switch between tracks, use the following code:
+2. To switch between tracks, use the following code:
 
 ```
 self.player.selectTrack(trackId: self.audioTracks[index].id)
