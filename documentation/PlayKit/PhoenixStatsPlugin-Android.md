@@ -8,17 +8,17 @@ weight: 292
 [![Android](https://img.shields.io/badge/Android-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios)
 
 
-This article describes the steps required for integrating the Phoenix Stats Plugin on Android devices as well as the supported plugin events.
+This article describes the steps required for configuring the Kaltura Video Player to use the Phoenix Stats Plugin on Android devices as well as the supported plugin events. This will enable you to obtain important statistical information about usage.
 
-## Enabling the Phoenix Stats Plugin for the Kaltura Video Player  
+## Register the Phoenix Stats Plugin inside your Application  
 
-To enable the Phoenix Stats Plugin on Android devices, you'll need to register the Phoenix Stats Plugin inside your application as follows:
+Register the Phoenix Stats Plugin inside your application as follows:
 
 ```
 PlayKitManager.registerPlugins(PhoenixAnalyticsPlugin.factory);
 ```
 
-## Configuring the Phoenix Stats Plugin Config Object  
+## Configure the Plugin Configuration Object for the Phoenix Stats Plugin  
 
 To configure the Phoenix Stats Plugin, add the following configuration to your `pluginConfig` file as follows:
 
@@ -32,7 +32,7 @@ private void configurePhoenixPlugin(PlayerConfig pluginConfig) {
         phoenixConfigEntry.addProperty("timerInterval", timer value for HIT events - in millisecondes);//Default value - 30000
 ```
 
-## Setting the Plugin Configuration to the Phoenix Stats Plugin  
+## Set the Plugin Configuration to the Phoenix Stats Plugin  
 
 For the  Phoenix Stats Plugin to start loading, you'll need to set the plugin configuration you created as follows:
 
@@ -42,10 +42,9 @@ PlayerConfig.Plugins plugins = config.plugins;
 plugins.setPluginConfig("PhoenixAnalytics" , phoenixConfigEntry.toJson()); 
 ```
 
-## Supported Events in the Phoenix Stats Plugin  
+## Phoenix Stats Plugin Supported Events  
 
 The following events are supported by the Phoenix Stats Plugin:
-
 
 PhoenixActionType{
  HIT, //outputs every interval time
