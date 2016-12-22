@@ -1,32 +1,27 @@
 ---
 layout: page
-title: SDK GettingStarted for Android Apps
+title: Integrating the Playkit SDK in Android Applications
 subcat: Android
 weight: 291
 ---
 
 [![Android](https://img.shields.io/badge/Android-Supported-green.svg)](https://github.com/kaltura/playkit-android)
 
+This article describes the steps required for integrating the Playkit SDK in Android applications.
 
-This article describes the steps required to integrate PlakitSDK into your App.
+## Integrate the Plakit SDK into your Application Settings 
 
-## Integrating SDK to your App settings 
-
-Clone the SDK  from https://github.com/kaltura/playkit-android and locate it next to your app code 
-
-In setting.gradle add the SDK projet settings:
-
-
+1. Clone the SDK  from https://github.com/kaltura/playkit-android and locate it next to your application code. 
+2. In the setting.gradle, add the SDK projet settings as follows:
 ```
 include ':playkit', ':playkitdemo'
 ```
-
-In your build.gradle file add dependancy for the SDK:
+3. In your build.gradle file, add the dependancy for the SDK:
 
 ```
  compile project(path: ':playkit')
 ```
-## Creating PKMediaEntry for OvpMediaProvider
+## Create the PKMediaEntry for the OvpMediaProvider
 
 ###TBD 
 
