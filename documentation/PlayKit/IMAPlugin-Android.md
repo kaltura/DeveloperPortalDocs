@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Configuring the Player to use IMA Plugin in Android Devices
+title: Configuring the Kaltura Video Player to use IMA Plugin on Android Devices
 subcat: Android
 weight: 292
 ---
@@ -9,14 +9,9 @@ weight: 292
 
 This article describes the steps required for adding support for the IMA Plugin functionality on Android devices. IMA (or Interactive Media Ads) was developed by Google to enable you to display ads in your application's video, audio, and game content.
 
+### Register the IMA Plugin  
 
-## Enabling the IMA Plugin for the Kaltura Video Player  
-
-To enable the plugin on Android devices, you'll need to perform the following steps.
-
-### Register the IMA Plugin in your Application  
-
-Register the plugin as follows:
+Register the IMA Plugin as inside your application as follows:
 
 ```
 PlayKitManager.registerPlugins(PhoenixAnalyticsPlugin.factory);
@@ -24,7 +19,7 @@ PlayKitManager.registerPlugins(PhoenixAnalyticsPlugin.factory);
 
 ### Configure the Plugin Configuration Object  
 
-To configure the plugin, add the following configuration to your `pluginConfig` file:
+To configure the plugin, add the following configuration to your `pluginConfig` file as follows:
 
 ```
 private void configureIMAPlugin(PlayerConfig pluginConfig) {
@@ -32,16 +27,15 @@ private void configureIMAPlugin(PlayerConfig pluginConfig) {
     List<String> videoMimeTypes = new ArrayList<>();
     IMAConfig adsConfig = new IMAConfig("en", false, true, -1, videoMimeTypes, adTagUrl, true, true);
 ```
-### IMConfig Constructor:
+### IMConfig Constructor  
 
 ```
 IMAConfig(String language, boolean enableBackgroundPlayback, boolean autoPlayAdBreaks, int videoBitrate, List<String> videoMimeTypes, String adTagUrl, boolean adAttribution, boolean adCountDown)
 ```
 
-## Setting the plugin config to the Plugin
+## Set the Plugin Configuration to the IMA Plugin  
 
-In order for the Plugin to start loading, you need to set
-the plugin config you created -
+For the IMA Plugin to start loading, you'll need to set the the plugin configuration you created as follows:
 
 ```
 PlayerConfig config = new PlayerConfig();
@@ -49,10 +43,9 @@ PlayerConfig.Plugins plugins = config.plugins;
 pluginConfig.plugins.setPluginConfig(IMAPlugin.factory.getName(), adsConfig.toJSONObject());
 ```
 
-## Registering to AD STARTED Event
+## Register to the Ad Started Event  
 
-Ad started event has `AdInfo` playload in it 
-ths data can be fetched by the following way:
+The Ad Started event includes the `AdInfo` playload. You can fetch this data in the following way:
 
 ``` 
 player.addEventListener(new PKEvent.Listener() {
@@ -66,7 +59,7 @@ player.addEventListener(new PKEvent.Listener() {
 
 ```
 
-### AdInfo API:
+### AdInfo API  
 
 ```
     String   getAdDescription();
@@ -83,7 +76,7 @@ player.addEventListener(new PKEvent.Listener() {
     long     getAdDuration();
 ```
 
-## AD Events/Error Registration Example
+## Ad Events/Error Registration Example  
 
 
 ```
@@ -116,7 +109,9 @@ player.addEventListener(new PKEvent.Listener() {
             }
         }, AdError.Type.VAST_LOAD_TIMEOUT);
 ```
-## AD Events
+## Ad Events  
+
+The IMA Plugin supports the following ad events:
 
         STARTED,
         PAUSED,
@@ -139,7 +134,9 @@ player.addEventListener(new PKEvent.Listener() {
         CONTENT_RESUME_REQUESTED,
         ALL_ADS_COMPLETED
         
-## AD Error Events
+## Ad Error Events  
+
+The IMA Plugin supports the following ad error events:
 
         INTERNAL_ERROR(2000),
         VAST_MALFORMED_RESPONSE(2001),
