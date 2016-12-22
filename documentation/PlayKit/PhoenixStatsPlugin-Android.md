@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Configuring the Player to use Phoenix Stats Plugin in Android Devices
+title: Configuring the Kaltura Video Player to use the Phoenix Stats Plugin on Android Devices
 subcat: Android
 weight: 292
 ---
@@ -8,21 +8,19 @@ weight: 292
 [![Android](https://img.shields.io/badge/Android-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios)
 
 
-This article describes the steps required to use Phoenix Stats Plugin in Android devices.
+This article describes the steps required for integrating the Phoenix Stats Plugin on Android devices as well as the supported plugin events.
 
-## Enabling the plugin for the Kaltura Player  
+## Enabling the Phoenix Stats Plugin for the Kaltura Video Player  
 
-To enable the Plugin in Android devices for the Kaltura Player do the following steps:
-
-Register the Plugin inside your app:
+To enable the Phoenix Stats Plugin on Android devices, you'll need to register the Phoenix Stats Plugin inside your application as follows:
 
 ```
 PlayKitManager.registerPlugins(PhoenixAnalyticsPlugin.factory);
 ```
 
-## Configuring the plugin config object  
+## Configuring the Phoenix Stats Plugin Config Object  
 
-To configure the Plugin, add the following configuration to your `pluginConfig`:
+To configure the Phoenix Stats Plugin, add the following configuration to your `pluginConfig` as follows:
 
 ```
 private void configurePhoenixPlugin(PlayerConfig pluginConfig) {
@@ -34,10 +32,9 @@ private void configurePhoenixPlugin(PlayerConfig pluginConfig) {
         phoenixConfigEntry.addProperty("timerInterval", timer value for HIT events - in millisecondes);//Default value - 30000
 ```
 
-## Setting the plugin config to the Plugin
+## Setting the Plugin Configuration to the Phoenix Stats Plugin  
 
-In order for the Plugin to start loading, you need to set
-the plugin config you created -
+For the  Stats Plugin to start loading, you'll need to set the plugin configuration you created as follows:
 
 ```
 PlayerConfig config = new PlayerConfig();
@@ -45,7 +42,9 @@ PlayerConfig.Plugins plugins = config.plugins;
 plugins.setPluginConfig("PhoenixAnalytics" , phoenixConfigEntry.toJson()); 
 ```
 
-## Supported events in the plugin
+## Supported Events in the Phoenix Stats Plugin  
+
+
 PhoenixActionType{
  HIT, //outputs every interval time
  
@@ -67,9 +66,9 @@ PhoenixActionType{
 
 }
 
-## Concurrency handler 
-In order to receive Concurrency events from the Phoenix Stats plugin you need to
-add listener to the following event:
+## Concurrency Handler  
+
+To receive concurrency events from the Phoenix Stats Plugin, you'll need to add a listener to the following event:
 
 ```
 messageBus.listen(new PKEvent.Listener() {
