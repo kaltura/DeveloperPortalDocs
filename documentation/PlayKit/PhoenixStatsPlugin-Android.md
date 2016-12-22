@@ -20,7 +20,7 @@ PlayKitManager.registerPlugins(PhoenixAnalyticsPlugin.factory);
 
 ## Configuring the Phoenix Stats Plugin Config Object  
 
-To configure the Phoenix Stats Plugin, add the following configuration to your `pluginConfig` as follows:
+To configure the Phoenix Stats Plugin, add the following configuration to your `pluginConfig` file as follows:
 
 ```
 private void configurePhoenixPlugin(PlayerConfig pluginConfig) {
@@ -34,7 +34,7 @@ private void configurePhoenixPlugin(PlayerConfig pluginConfig) {
 
 ## Setting the Plugin Configuration to the Phoenix Stats Plugin  
 
-For the  Stats Plugin to start loading, you'll need to set the plugin configuration you created as follows:
+For the  Phoenix Stats Plugin to start loading, you'll need to set the plugin configuration you created as follows:
 
 ```
 PlayerConfig config = new PlayerConfig();
