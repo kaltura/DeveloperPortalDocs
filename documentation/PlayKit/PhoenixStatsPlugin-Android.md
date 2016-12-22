@@ -44,6 +44,8 @@ plugins.setPluginConfig("PhoenixAnalytics" , phoenixConfigEntry.toJson());
 
 ## Supported Events in the Phoenix Stats Plugin  
 
+The following events are supported by the Phoenix Stats Plugin:
+
 
 PhoenixActionType{
  HIT, //outputs every interval time
