@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Kaltura Mobile SDK Introduction
+subcat: SDK Version 2.0
 weight: 100
 ---
 
