@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Google Cast V3 Setup for Android Devices
+subcat: SDK Version 2.0
 subcat: Android
 weight: 370
 ---
