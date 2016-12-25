@@ -1,6 +1,7 @@
 ---
 layout: page
 title: DRM Support
+subcat: SDK Version 2.0
 weight: 140
 ---
 
