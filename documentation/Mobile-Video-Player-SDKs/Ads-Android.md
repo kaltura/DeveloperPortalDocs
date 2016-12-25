@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Configuring the Player to use Google Ads in Android Devices
+subcat: SDK Version 2.0
 subcat: Android
 weight: 360
 ---
