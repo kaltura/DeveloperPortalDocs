@@ -10,11 +10,11 @@ weight: 500
 
 # Download to Go - Android
 
-Download to Go (DTG) is an Android library facilitating the download of video assets, with emphasis on DASH and HLS.
+Download to Go (DTG) is an Android library that facilitates the download of video assets, withan emphasis on DASH and HLS.
 
 The library is external to the Player SDK, and is added separately by the application.
 
-## Supported Video Formats
+## Supported Video Formats  
 
 - MPEG-DASH
     - Clear and Widevine
@@ -27,7 +27,7 @@ The library is external to the Player SDK, and is added separately by the applic
     - Must be single-bitrate for proper playback
 - MP4
 
-## Project Setup
+## Project Setup  
 
 The simplest way to get up and running is by using JitPack's Maven repository.
 
@@ -54,7 +54,7 @@ Replace `v2.0.0` with the [latest release](https://github.com/kaltura/playkit-dt
 
 JitPack provides more [options and information](https://jitpack.io/#com.kaltura/playkit-dtg-android). 
 
-### Alternative Setup
+### Alternative Setup  
 
 As with any Open Source library, you can also [clone the repository from GitHub](https://github.com/kaltura/playkit-dtg-android/) and add it to your project:
 
@@ -75,7 +75,7 @@ As with any Open Source library, you can also [clone the repository from GitHub]
 
 Now when you build your own project, DTGLib gets built as well. However, this setup should only be used when you want to contribute to DTGLib development.
 
-## Usage
+## Usage  
 
 The following classes/interfaces are the public API of the library:
 
@@ -91,7 +91,7 @@ Please see their Javadoc comments.
 
 Following are some basic sequence diagrams.
 
-### Start and Stop the Service
+### Start and Stop the Service  
 
 {% plantuml %}
 
@@ -115,7 +115,7 @@ Following are some basic sequence diagrams.
 {% endplantuml %}
    
 
-### New Download Sequence
+### New Download Sequence  
 
 {% plantuml %}
 
@@ -160,7 +160,7 @@ Following are some basic sequence diagrams.
 
 {% endplantuml %}
 
-## Track Selection
+## Track Selection  
 
 Tracks are selected, by type, using a TrackSelector object. A TrackSelector is obtained by calling `getTrackSelector()` on a DownloadItem.
 Given a TrackSelector, the application performs selection:
@@ -174,7 +174,7 @@ trackSelector.setSelectedTracks(AUDIO, filteredTracks)
 trackSelector.apply();
 ```
 
-### Sequence Diagram
+### Sequence Diagram  
 
 {% plantuml %}
 
@@ -196,19 +196,18 @@ trackSelector.apply();
 {% endplantuml %}
 
 
-### Interactive Selection Before Download is Started
+### Interactive Selection Before Download is Started  
 
 In this scenario, the metadata for an item was downloaded, the default tracks were selected, but the download wasn't yet started. 
 The application calls item.getTrackSelector(), makes a selection and applies it. The selected tracks are downloaded as part of the normal download.
 
 
-
-### Interactive Selection After Download is Finished
+### Interactive Selection After Download is Finished  
 
 The entire item has downloaded. The user now decides to download additional tracks - such as another audio language. 
 The application calls item.getTrackSelector(), makes a selection and applies it. Then, item.startDownload() is called again, to start downloading the extra tracks.
 
-### Preference-based Selection
+### Preference-based Selection  
 
 The application may have a policy on track selection, for example:
 - Always choose the highest quality video
@@ -220,7 +219,7 @@ If no selection was made, some defaults are applied instead. However, it's recom
 
 If the application can select tracks without user interaction, it is best to do so inside the onTracksAvailable() handler. It avoids writing data to the database that will be discarded immediately after.
 
-### Track Selection Samples
+### Track Selection Samples  
 
 Select the video track with the **lowest** bitrate:
 
@@ -246,7 +245,7 @@ Then, from onAvailableTracks():
     selectAllAvailableTracksByType(trackSelector, DownloadItem.TrackType.TEXT);
 ```
 
-### Default Selection
+### Default Selection  
 
 - Video: highest bitrate track
 - Audio: highest bitrate version of the first language
