@@ -18,33 +18,39 @@ To configure the plugin protected functions, follow these steps:
 
 1. Add a factory function - this enables the Kaltura Video Player to create a new instance of the Analytics Plugin and register the new plugin.
 
-      
-        public static final Factory factory = new Factory() {
-                @Override
-                public String getName() {
-                        return "NameOfPlugin";
-                }
+{% highlight c %}
+public static final Factory factory = new Factory() {
+ @Override
+ public String getName() {
+return "NameOfPlugin";
+ }
 
-                @Override
-                public PKPlugin newInstance() {
-                        return new GenericAnalyticsPlugin(); //Name of the plugin class
-                }
+@Override
+ public PKPlugin newInstance() {
+ return new GenericAnalyticsPlugin(); //Name of the plugin class
+ }
         };
-        
+{% endhighlight %}
+         
 
 2. When the application sets the Analytics Plugin configuration, the Kaltura Video Player calls the plugin onLoad method. This function contains all of the required configurations for the new plugin, a reference to the active Kaltura Video Player, and a reference to the MessageBus, which includes all events.
 
 3. Add a listener to the relevant events by calling the following function - all of the relevant events will follow the listener:  
-```
+
+{% highlight c %}
+
 messageBus.listen(hereComesTheEventListener, PlayerEvent.Type.PLAY, PlayerEvent.Type.PAUSE, PlayerEvent.Type.ENDED, PlayerEvent.Type.ERROR, PlayerEvent.Type.LOADED_METADATA);
-```
+
+{% endhighlight %}
 
 4. Add a send analytics event method and call it from the event listener.
 
 5. If you want to report events to the application, you can use LogEvent in the following way: 
-```
+{% highlight c %}
+
 messageBus.post(new LogEvent(TAG + " " + ((PlayerEvent) event).type.toString()));
-```
+
+{% endhighlight %}
 
 6. The methods onDestroy, onUpdateConfig, onUpdateMedia, onApplicationPaused, and onApplicationResumed help you manage the life cycle of your Analytics Plugin, including initiating end events, handling background tasks, and keeping the plugin flow in accordance with the Video Player life cycle.
 
@@ -52,35 +58,39 @@ messageBus.post(new LogEvent(TAG + " " + ((PlayerEvent) event).type.toString()))
 
 Next, you'll need to enable the Analytics Plugin by registering it inside the application as follows:
 
-```
+{% highlight c %}
+
 PlayKitManager.registerPlugins(GenericAnalyticsPlugin.factory);
-```
+{% endhighlight %}
 
 ## Configure the Plugin Configuration Object for the Analytics Plugin  
 
 To configure the Analytics Plugin, add the following configuration to your `pluginConfig` file as follows:
 
-```
+{% highlight c %}
+
 private void configureGenericAnalyticsPlugin(PlayerConfig pluginConfig) {
         JsonObject genericConfigEntry = new JsonObject();
         genericConfigEntry.addProperty("NameOfThe Configuration", value of the configuration);
-```
+{% endhighlight %}
 
 ## Set the Plugin Configuration to the Analytics Plugin
 
 For the Analytics Plugin to start loading, you'll need to set the plugin configugration you created as follows:
 
-```
+{% highlight c %}
+
 PlayerConfig config = new PlayerConfig();
 PlayerConfig.Plugins plugins = config.plugins;
 plugins.setPluginConfig("NameOfPlugin" , genericConfigEntry.toJson()); 
-```
+{% endhighlight %}
 
 ## MessageBus Supported Events  
 
 The MessageBus supports the following events:
 
-```
+{% highlight c %}
+
 PlayerEvents{
 public enum Type {
         STATE_CHANGED, //IDLE, LOADING, READY, BUFFERING;
@@ -99,8 +109,10 @@ public enum Type {
         PLAYBACK_PARAMS, // Sent event that notify about changes in the playback parameters. When bitrate of the video or audio track changes or new media loaded. Holds the PlaybackParamsInfo.java object with relevant data.
         VOLUME_CHANGED // Sent when volume is changed.
     }
-```
-```
+{% endhighlight %}
+
+{% highlight c %}
+
 AdEvents{
 public enum Type {
         STARTED,
@@ -124,7 +136,7 @@ public enum Type {
         CONTENT_RESUME_REQUESTED,
         ALL_ADS_COMPLETED
     }
-```
+{% endhighlight %}
 
 ## Adding New Events Using the MessageBus  
 
@@ -132,7 +144,8 @@ If you have new events you need to report, you can add new events by implementin
 
 1. Add a new class for your event.
 2. Implement the PKEvent in this class according the following implementation example: 
-```
+{% highlight c %}
+
 public class NewAnalyticsEvent implements PKEvent {
     public final NewAnalyticsEvent.EventType type;
 
@@ -150,18 +163,20 @@ public class NewAnalyticsEvent implements PKEvent {
     }
 
 }
-```
+{% endhighlight %}
 
 3. Use the Messagebus to post your new event: 
-```
+{% highlight c %}
+
 messageBus.post(new NewAnalyticsEvent(TAG + " " + ((NewAnalyticsEvent) event).type.toString()));
-```
+{% endhighlight %}
 
 ## Code Examples
 
 ### Event Listener  
 
-```
+{% highlight c %}
+
 private PKEvent.Listener mEventListener = new PKEvent.Listener() {
         @Override
         public void onEvent(PKEvent event) {
@@ -198,32 +213,35 @@ private PKEvent.Listener mEventListener = new PKEvent.Listener() {
             }
         }
     };
-```
+{% endhighlight %}
 
 ### onDestroy  
 
-```
+{% highlight c %}
+
    @Override
     public void onDestroy() {
         log.d("onDestroy");
         sendAnalyticsEvent(PhoenixActionType.STOP);
     }
-```
+{% endhighlight %}
 
 ### onApplicationPaused  
 
-```
+{% highlight c %}
+
 @Override
     protected void onApplicationPaused() {
         stopMonitoring();
     }
-```
+{% endhighlight %}
 
 ### onApplicationResumed  
 
-```
+{% highlight c %}
+
     @Override
     protected void onApplicationResumed() {
         startMonitoring(this.player);
     }
-```
+{% endhighlight %}
