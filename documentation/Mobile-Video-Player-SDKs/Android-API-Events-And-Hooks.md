@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Android Player API - Properties, Events, Notifications
-
+subcat: SDK Version 2.0
 subcat: Android
 weight: 340
 ---
