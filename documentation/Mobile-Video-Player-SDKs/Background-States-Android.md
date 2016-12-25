@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Android Background State Handling
+subcat: SDK Version 2.0
 subcat: Android
 weight: 350
 ---
