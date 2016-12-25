@@ -1,6 +1,7 @@
 ---
 layout: page
-title: iOS Player SDK Basic Embedding  
+title: iOS Player SDK Basic Embedding
+subcat: SDK Version 2.0
 subcat: iOS
 weight: 260
 ---
