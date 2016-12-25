@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Using and Configuring Player Objects, Native vs HTML5 controls
+subcat: SDK Version 2.0
 weight: 130
 ---
 
