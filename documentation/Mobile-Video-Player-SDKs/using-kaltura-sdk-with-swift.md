@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Using the Kaltura SDK with Swift
+subcat: SDK Version 2.0
 subcat: iOS
 weight: 320
 ---
