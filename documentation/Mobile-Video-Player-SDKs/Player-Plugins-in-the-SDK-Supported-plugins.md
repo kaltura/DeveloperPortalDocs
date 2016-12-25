@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Player Plugins in the SDK
+subcat: SDK Version 2.0
 weight: 120
 ---
 
