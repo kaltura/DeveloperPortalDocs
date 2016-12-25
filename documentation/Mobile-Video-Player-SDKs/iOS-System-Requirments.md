@@ -1,6 +1,7 @@
 ---
 layout: page
 title: iOS Player SDK System Requirements
+subcat: SDK Version 2.0
 subcat: iOS
 weight: 220
 ---
