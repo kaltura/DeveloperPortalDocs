@@ -7,7 +7,8 @@ weight: 291
 
 [![Android](https://img.shields.io/badge/Android-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios)
 
-This article describes the steps required to implement the Youbora Plugin on Android devices. Youbora is an intelligence analytics and optimization platform used in Kaltura's solution to track media analytics events.
+This article describes the steps required to implement the Youbora Plugin on Android devices. Youbora is an intelligence analytics and optimization platform used in Kaltura's solution to track media analytics events. You need to setup account in http://www.youbora.com and set the account details in the plugin configuration in order to use this plugin.
+Afterwards you'll be able to use the youbora dashboard and watch statistical events and analytics sent by the player.
 
 ## Enabling the Youbora Plugin for the Kaltura Video Player  
 
