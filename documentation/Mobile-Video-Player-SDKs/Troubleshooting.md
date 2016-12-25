@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Troubleshooting the Kaltura Player SDK
+subcat: SDK Version 2.0
 weight: 160
 ---
 
