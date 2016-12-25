@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Google Cast V3 Setup for iOS Devices
+subcat: SDK Version 2.0
 subcat: iOS
 weight: 300
 ---
