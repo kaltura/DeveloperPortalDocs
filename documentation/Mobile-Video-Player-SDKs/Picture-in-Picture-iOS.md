@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Picture-in-Picture (PIP) - iOS Plugin
+subcat: SDK Version 2.0
 subcat: iOS
 weight: 280
 ---
