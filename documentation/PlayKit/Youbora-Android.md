@@ -1,14 +1,15 @@
 ---
 layout: page
-title: Configuring the Kaltura Video Player to use the Youbora Plugin on Android Devices
+title: Configuring the Youbora Plugin on Android Devices
 subcat: Android
 weight: 291
 ---
 
 [![Android](https://img.shields.io/badge/Android-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios)
 
-This article describes the steps required to implement the Youbora Plugin on Android devices. Youbora is an intelligence analytics and optimization platform used in Kaltura's solution to track media analytics events. You need to setup account in http://www.youbora.com and set the account details in the plugin configuration in order to use this plugin.
-Afterwards you'll be able to use the youbora dashboard and watch statistical events and analytics sent by the player.
+This article describes the steps required for implementing the Youbora Plugin on Android devices. Youbora is an intelligence analytics and optimization platform used in Kaltura's solution to track media analytics events. 
+
+You'll need to set up an account in http://www.youbora.com and then set the account details in the plugin configuration to use this plugin. After these steps, you'll be able to use the Youbora dashboard and watch statistical events and analytics sent by the Kaltura Video Payer.
 
 ## Enabling the Youbora Plugin for the Kaltura Video Player  
 
@@ -24,7 +25,7 @@ PlayKitManager.registerPlugins(YouboraPlugin.factory);
 
 ### Configure the Plugin Configuration Object for the Youbora Plugin  
 
-To configure the Youbora Plugin, add the following configuration to your `pluginConfig` file:
+To configure the Youbora Plugin, add the following configuration to your `pluginConfig` file as follows:
 
 ```
 private void configureYouboraPlugin(PlayerConfig pluginConfig) {
