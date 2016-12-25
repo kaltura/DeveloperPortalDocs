@@ -46,7 +46,6 @@ plugins.setPluginConfig("PhoenixAnalytics" , phoenixConfigEntry.toJson());
 
 The following events are supported by the Phoenix Stats Plugin:
 
-PhoenixActionType{
  HIT, //outputs every interval time
  
  PLAY, 
@@ -65,7 +64,6 @@ PhoenixActionType{
  
  ERROR
 
-}
 
 ## Concurrency Handler  
 
