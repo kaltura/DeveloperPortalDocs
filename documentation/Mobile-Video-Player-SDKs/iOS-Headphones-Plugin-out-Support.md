@@ -1,6 +1,7 @@
 ---
 layout: page
 title: iOS Headphones Plug/ Unplug Support
+subcat: SDK Version 2.0
 subcat: iOS
 weight: 340
 ---
