@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Android Player SDK System Requirements
+subcat: SDK Version 2.0
 subcat: Android
 weight: 320
 ---
