@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Offline Playback - Integration Guide
+subcat: SDK Version 2.0
 weight: 150
 ---
 
