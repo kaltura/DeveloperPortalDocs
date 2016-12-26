@@ -15,6 +15,7 @@ layout: default
 <div >
 <?php
 require_once('/var/www/html/IP2Location-PHP-Module/IP2Location.php');
+require_once('/var/www/html/marketo/marketo.php');
 $signer_ip=$_SERVER['HTTP_X_FORWARDED_FOR'];
 $db = new \IP2Location\Database('/etc/IP2LOCATION-LITE-DB1.BIN', \IP2Location\Database::FILE_IO);
 $excluded_countries=array('IR','SY','SD','CU','KP');
@@ -63,7 +64,7 @@ if(in_array($records['countryCode'],$excluded_countries)){
 <label for="Industry" class="form-labels">Industry</label>
 <select id="industry" name="industry" required="required" data-name="Industry" class="w-select input-light">
 <option value="">Select one...</option>
-<option value="Education or EdTech">Education or EdTech</option>
+<!--option value="Education or EdTech">Education or EdTech</option>
 <option value="Media Owners &amp; Creators">Media Owners &amp; Creators</option>
 <option value="Broadcasting">Broadcasting</option>
 <option value="IPTV and Telcos">IPTV and Telcos</option>
@@ -82,7 +83,20 @@ if(in_array($records['countryCode'],$excluded_countries)){
 <option value="Registered Not Profit Org">Registered Not for Profit Organization</option>
 <option value="Software Provider / ISV">Software Provider / ISV</option>
 <option value="Cloud, Hosting or Streaming Providers">Cloud, Hosting or Streaming Providers</option>
-<option value="Systems Integrator">Systems Integrator</option>
+<option value="Systems Integrator">Systems Integrator</option-->
+<?php
+
+foreach ($education_sub_verticals as $sub_vert){
+        echo "<option value=\"$sub_vert\">$sub_vert</option>";
+}
+foreach ($enterprise_sub_verticals as $sub_vert){
+        echo "<option value=\"$sub_vert\">$sub_vert</option>";
+}
+foreach ($media_sub_verticals as $sub_vert){
+        echo "<option value=\"$sub_vert\">$sub_vert</option>";
+}
+?>
+
 </select>
     </div>
     <div class="w-col w-col-6">
