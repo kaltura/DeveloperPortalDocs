@@ -9,218 +9,115 @@ weight: 291
 
 This article describes the steps required for integrating the Playkit SDK in Android applications.
 
-## Integrate the Plakit SDK into your Application Settings 
+## Integrate the Playkit SDK into your Application Settings
 
-1. Clone the SDK  from https://github.com/kaltura/playkit-android and locate it next to your application code. 
-2. In the setting.gradle, add the SDK projet settings as follows:
+1. Clone the SDK  from https://github.com/kaltura/playkit-android and locate it next to your application code.
+2. In the setting.gradle, add the SDK project settings as follows:
 ```
 include ':playkit', ':playkitdemo'
 ```
-3. In your build.gradle file, add the dependancy for the SDK:
-
+3. In your build.gradle file, add the dependency for the SDK:
 ```
- compile project(path: ':playkit')
-```
-## Create the PKMediaEntry for the OvpMediaProvider
-
-###TBD 
-
-## Creating PKMediaEntry for OTT PhoenixMediaProvider 
-### Creat SessionProvider
-
-```
- SessionProvider sessionProvider = new SessionProvider() {
-            @Override
-            public String baseUrl() {
-                return baseUrl;
-            }
-
-            @Override
-            public void getKs(OnCompletion<String> completion) {
-                String ks = getKs();
-                completion.onComplete(ks);
-            }
-
-            @Override
-            public int partnerId() {
-                return partnerId();
-            }
-        };
+compile project(path: ':playkit')
 ```
 
-### Create PhoenixMediaProvider
+_In order to start setting the player and its plugins, you need to provide it with a
+PKMediaEntry object._
 
+
+## Creating PKMediaEntry
+
+PKMediaEntry contains information regarding the media that will be played. With that information, the player
+prepares the playing source, decides which type of player is needed for the play, etc.
+
+#### PKMediaEntry can be created by the following ways:
+
+1. **Manually** - Instantiate new PKMediaEntry instance and fill it's fields.
+   [read more...](#PkMediaEntry breakdown)
+
+2. **Use MockMediaProvider** - Create PKMediaEntry from json input file or JsonObject.
+   [read more...](https://github.com/kaltura/DeveloperPortalDocs/tree/playkit/documentation/PlayKit/MediaEntryProvider.md#MockMediaProvider)
+
+3. **Use a remote media Provider** - Use one of the provided MediaEntryProvider implementations:
+    For OVP environments, use "KalturaOvpMediaProvider".
+    For OTT environments, use "PhoenixMediaProvider".
+
+    All you need to do is:
+    * create instance of one of the above mentioned providers.
+    * set mandatory parameters needed for the data fetching, such as, media id, SessionProvider, etc.
+    * Once your provider object is ready, activate it's "load" method, pass a completion callback,
+    and if all goes well, the PKMediaEntry object will be provided on the response.
+    [read more...](PlayKit/MediaEntryProvider.md#RemoteMediaProviders)
+
+
+ **Once You have a PKMediaEntry ready you can build the player Config and plug-ins
+ and continue to prepare the player to play.**
+
+
+
+### [PKMediaEntry](https://github.com/kaltura/playkit-android/blob/develop/playkit/src/main/java/com/kaltura/playkit/PKMediaEntry.java)
+
+PkMediaEntry holds information gathered from the media details and needed for the player.
+Such as, url to play, DRM data, duration.
+
+String id - correlates to the media/entry id
+long duration - the media duration in seconds
+MediaEntryType mediaType - indicates the type to be played: can be Vod, Live or Unknown.
+List<PKMediaSource> sources - list of source objects
+
+The PKMediaEntry can be created with builder style instantiation, chain setters:
 ```
-  String assetId         = getAssetId();
-  String referenceType   = getReferenceType();
-  List<String> format    = new ArrayList<>(getFormats());
-  String[] formatVarargs = format.toArray(new String[format.size()]); 
-
-  MediaEntryProvider phoenixMediaProvider = new PhoenixMediaProvider().setSessionProvider(sessionProvider).setAssetId(assetId).setReferenceType(referenceType).setFormats(formatVarargs);
-
-  loadMediaProvider(phoenixMediaProvider, converterPlayerConfig, onPlayerReadyListener, context);
-
-```
-
-### Load the Media Provider
-
-In this stage you will get `PKMediaEntry` in the `ResultElement` and you will be able to pass it to the player
-
-```
-   private static void loadMediaProvider(MediaEntryProvider mediaEntryProvider, final ConverterPlayerConfig layerConfig,
-                                         final Activity context) {
-    mediaEntryProvider.load(new OnMediaLoadCompletion() {
-			@Override
-            public void onComplete(final ResultElement<PKMediaEntry> mediaEntry) {
-                context.runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        if (mediaEntry.isSuccess()) {
-                            #Initialize the player
-                            onMediaLoaded(mediaEntry.getResponse(), playerConfig, context);
-                        } else {
-                            String error = "failed to fetch media data: " + (response.getError() != null ? response.getError().getMessage() : "");
-                        }
-                    }
-                });
-            }
-        });
-    }
-```
-
-### On Media Loaded
-
-```
-Build the Config and prepare teh player - see below...
-```
-
-## Creating PKMediaEntry for OTT tvpapi 
-
-###Create the Media Source 
-
-```
-List<PKMediaSource> mediaSourceList = new ArrayList<>();
-PKMediaSource pkMediaSource = new PKMediaSource();
-pkMediaSource.setId(<FileId>);
-pkMediaSource.setUrl(<Media URL>);
-```
-### In case of Widevine Media - DRM License is required
-
-```
-List<PKDrmParams> pkDrmDataList = new ArrayList<>();
-PKDrmParams pkDrmParams = new PKDrmParams(licenseUrl);
-pkDrmDataList.add(pkDrmParams);
-pkMediaSource.setDrmData(pkDrmDataList);
+PKMediaEntry mediaEntry = new PKMediaEntry().setId(entry.getId())
+                                            .setSources(sourcesList)
+                                            .setDuration(entry.getDuration())
+                                            .setMediaType(MediaTypeConverter.toMediaEntryType(entry.getType()));
 ```
 
-###Create the Media Entry
+### [PKMediaSource](https://github.com/kaltura/playkit-android/blob/develop/playkit/src/main/java/com/kaltura/playkit/PKMediaSource.java)
+
+PKMediaEntry object contains a list of "PKMediaSource". All sources relates to the same media, but have different format / quality / flavors.
+The player decides which of the source will actually be played.
+
+
+**Manually Create Media Source:**
+
+PKMediaSource can be created with builder like coding, by chaining setters:
 
 ```
-PKMediaEntry mediaEntry = new PKMediaEntry();
-mediaEntry.setId(<MediaId>)
-mediaSourceList.add(pkMediaSource);
-mediaEntry.setSources(mediaSourceList);
-```
-
-
-
-##Create MediaEntry from MockMediaProvider
-
-### Create JsonObject with your Media Information
+PKMediaSource pkMediaSource = new PKMediaSource().setId(sourceId)
+                                                 .setUrl(sourceUrl)
+                                                 .setDrmData(dramDataList);
 
 ```
-  JsonObject mediaEntryJson = new JsonObject();
-  JsonObject mediaParamsJson = new JsonObject();
-  JsonArray sourcesArray = new JsonArray();
-  JsonObject sourcesObject = new JsonObject();
-    sourcesObject.addProperty("mimeType", getMimeType());
-  sourcesObject.addProperty("url", getSourceUrl());
-  sourcesArray.add(sourcesObject);
-  mediaParamsJson.add("sources",  sourcesArray);
-  mediaEntryJson.add(<Entry_Key>, mediaParamsJson);
 
-```
-###Example:
-
-####Clear Content
-```
-{
-  "<Entry_Key>": {
-    "sources": [
-      {
-        "mimeType": "application/x-mpegURL",
-        "url": "myVideURL.m3u8"
-      }
-    ]
-  }
-}
-```
-
-#### Protecrted Content
-
-```
-{
-  "<Entry_Key>": {
-    "sources": [
-      {
-        "mimeType": "application/x-mpegURL",
-        "url": "myVideURL.m3u8"
-        "drmData": {
-          "licenseUri": "<LicenseURL>"
-        }
-      }
-    ]
-  }
-}
+* **_In OTT environments:_**
+Each source represents one MediaFile (Media or AssetInfo contains list of MediaFile items. Each file represents different format. HD, SD Download...)
+Each file can point to a different video, like Trailer MediaFile and HD media file.
+When playing on OTT environments, specific "format" (MediaFile), should be configured.
 
 
-```
-MimeTypes
+* **_In OVP environments:_**
+PKMediaSource items are created according to some criteria:
+  * Supported video format: url [.mp4], mpdash [.mpd], applehttp [.m3u8]
+  * Flavors: defines the quality of the video.
+  * Bit rate
 
-```
-    mp4_clear("video/mp4", ".mp4"),
-    dash_clear("application/dash+xml", ".mpd"),
-    dash_widevine("dash", "application/dash+xml", ".mpd"),
-    wvm_widevine("video/wvm", ".wvm"),
-    hls_clear("application/x-mpegURL", ".m3u8"),
-    hls_fairplay("application/vnd.apple.mpegurl", ".m3u8");
-```
+Single "Entry" can have many media sources. Player should decides according to device capability, connection quality, and other parameters,
+which of the sources is best the for the current play.
+In case of DRM restricted media, such as widevine, drm information will be needed for the play.
 
-###Set The MockMediaProvider:
+### [PKDrmParams](https://github.com/kaltura/playkit-android/blob/develop/playkit/src/main/java/com/kaltura/playkit/PKDrmParams.java)
 
+PKDrmParams represents a single DRM license info object.
+PKDrmParams contains the licenseUri that will be needed to the play.
 
-```
-MediaEntryProvider mockMediaProvider = new MockMediaProvider(mediaEntryJson, <Entry_Key>);
-```
+PKMediaSource contains a list of "PKDrmParams" items. The player will select the source and the relevant DRM data according to device type, Connectivity,
+supported formats, etc.
 
-### Load the Media Provider
-
-In this stage you will get `PKMediaEntry` in the `ResultElement` and you will be able to pass it to the player
-
-```
-   private static void loadMediaProvider(MediaEntryProvider mediaEntryProvider, final ConverterPlayerConfig playerConfig,
-                                         final Activity context) {
-    mediaEntryProvider.load(new OnMediaLoadCompletion() {
-			@Override
-            public void onComplete(final ResultElement<PKMediaEntry> mediaEntry) {
-                context.runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        if (mediaEntry.isSuccess()) {
-                            #Initialize the player
-                            onMediaLoaded(mediaEntry.getResponse(), playerConfig, context);
-                        } else {
-                            String error = "failed to fetch media data: " + (response.getError() != null ? response.getError().getMessage() : "");
-                        }
-                    }
-                });
-            }
-        });
-    }
-```
+[more about Media Providers...](https://github.com/kaltura/DeveloperPortalDocs/tree/playkit/documentation/PlayKit/MediaProviders.md)
 
 
-#Build the Player Config
+## Build the Player Config
 
 ```
 PlayerConfig config = new PlayerConfig();
@@ -241,7 +138,7 @@ the plugin config you created -
 
 ```
 PlayerConfig.Plugins pluginsConfig = config.plugins;
-pluginsConfig.setPluginConfig(YouboraPlugin.factory.getName(), converterYoubora.toJson()); 
+pluginsConfig.setPluginConfig(YouboraPlugin.factory.getName(), converterYoubora.toJson());
 ```
 
 ## Setting the plugin config to IMA Plugin
@@ -250,9 +147,9 @@ pluginsConfig.setPluginConfig(YouboraPlugin.factory.getName(), converterYoubora.
 String adTagUrl = "https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/single_ad_samples&ciu_szs=300x250&impl=s&gdfp_req=1&env=vp&output=vast&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ct%3Dskippablelinear&correlator=";
 List<String> videoMimeTypes = new ArrayList<>();
 videoMimeTypes.add(MimeTypes.APPLICATION_MP4);
-IMAConfig adsConfig = new IMAConfig("en", false, true, -1, 
+IMAConfig adsConfig = new IMAConfig("en", false, true, -1,
 videoMimeTypes, adTagUrl, true, true);
-       
+
 pluginsConfig.setPluginConfig(IMAPlugin.factory.getName(),adsConfig.toJSONObject());
 
 ```
@@ -263,7 +160,7 @@ playerKit = PlayKitManager.loadPlayer(config, this);
 
 ```
 
-## Initializing the Player with your config 
+## Initializing the Player with your config
 
 ```
 if (playerKit == null) {
@@ -271,7 +168,7 @@ if (playerKit == null) {
     final FrameLayout playerKitViewContainer = (FrameLayout) findViewById(R.id.player_root);
     ViewGroup.LayoutParams layoutParams = new ViewGroup.LayoutParams(getWindow().getDecorView().getMeasuredWidth(),
             getWindow().getDecorView().getMeasuredHeight());
-   
+
     View playerKitView = playerKit.getView();
     playerKitView.setLayoutParams(layoutParams);
     playerKitViewContainer.addView(playerKitView);
@@ -427,5 +324,5 @@ playerKit.addStateChangeListener(new PKEvent.Listener() {
 
         }
     });
-    
+
 ```
