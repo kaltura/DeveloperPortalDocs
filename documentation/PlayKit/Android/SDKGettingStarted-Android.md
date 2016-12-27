@@ -182,16 +182,17 @@ In this quick tutorial we saw how to create simple Player using MockMediaProvide
 
 In the next sections you will learn :
 
-- How to listen and handle player events and states.
-- How to use Plugins.
-- Plugin specific configurations: IMA,  Kaltura Analytics, Kaltura Stats, TVPAPI Stats, Phoenix Stats, Youbora.
-- Media Providers: OVP, OTT, Mock.
-- How to use ChromeCast.
-- Best practisec for UI handling during Live playback.
-- How to work with tracks.
-- Playing DRM content.
-- Playing content in offline.
-- Handle connectivity loss, and application life cycle.
+- [How to listen and handle player events and states.](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/Android/PlayerStatesAndEvents-Android.md)
+- [How to use Plugins.]()
+- [How to create new analytics Plugin.](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/Android/Create-new-analytics-plugin-Android.md)
+- Plugin specific configurations: [IMA](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/Android/IMAPlugin-Android.md),  [Kaltura Analytics](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/Android/KalturaAnalyticsPlugin-Android.md), [Kaltura Stats](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/Android/KalturaStatsPlugin-Android.md), [TVPAPI Stats](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/Android/TVPAPIStatsPlugin-Android.md), [Phoenix Stats](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/Android/PhoenixStatsPlugin-Android.md), [Youbora](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/Android/Youbora-Android.md).
+- [Media Providers: OVP, OTT, Mock.](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/Android/MediaProviders-Android.md)
+- [How to use ChromeCast.]()
+- [Best practisec for UI handling during Live playback.]()
+- [How to work with tracks.]()
+- [Playing DRM content.]()
+- [Playing content in offline.]()
+- [Handle connectivity loss, and application life cycle.]()
 
 #Build the Player Config
 
