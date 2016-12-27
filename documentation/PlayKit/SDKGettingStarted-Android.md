@@ -13,15 +13,16 @@ This article describes the steps required for integrating the Playkit SDK in And
 
 1. Clone the SDK  from https://github.com/kaltura/playkit-android and locate it next to your application code.
 2. In the setting.gradle, add the SDK project settings as follows:
-```
+{% highlight c %}
 include ':playkit', ':playkitdemo'
-```
+{% endhighlight %}
 3. In your build.gradle file, add the dependency for the SDK:
-```
-compile project(path: ':playkit')
-```
+{% highlight c %}
 
-_In order to start setting the player and its plugins, you need to provide it with a
+compile project(path: ':playkit')
+{% endhighlight %}
+
+>Note: In order to start setting the player and its plugins, you need to provide it with a
 PKMediaEntry object._
 
 
