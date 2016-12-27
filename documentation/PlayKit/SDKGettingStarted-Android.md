@@ -1,13 +1,13 @@
 ---
 layout: page
-title: Integrating the Playkit SDK in Android Applications
+title: Getting Started: Integrating the Playkit SDK in Android Applications
 subcat: Android
 weight: 291
 ---
 
 [![Android](https://img.shields.io/badge/Android-Supported-green.svg)](https://github.com/kaltura/playkit-android)
 
-This article describes the steps required for integrating the Playkit SDK in Android applications.
+This article describes the steps required for integrating the Playkit SDK in Android applications. Please follow these instructions carefully to make sure the integration is successful.
 
 ## Integrate the Playkit SDK into your Application Settings
 
@@ -18,42 +18,42 @@ include ':playkit', ':playkitdemo'
 {% endhighlight %}
 3. In your build.gradle file, add the dependency for the SDK:
 {% highlight c %}
-
 compile project(path: ':playkit')
 {% endhighlight %}
 
->Note: In order to start setting the player and its plugins, you need to provide it with a
-PKMediaEntry object._
+Next, to set up the Kaltura Video Player and its plugins, you'll need to provide it with a PKMediaEntry object.
 
 
-## Creating PKMediaEntry
+## Creating a PKMediaEntry  
 
-PKMediaEntry contains information regarding the media that will be played. With that information, the player
-prepares the playing source, decides which type of player is needed for the play, etc.
+The PKMediaEntry contains information regarding the media that will be played. With this information, the Kaltura Video Player
+prepares the source that will play the media, decides which type of player is required to play the media, and more.
 
-#### PKMediaEntry can be created by the following ways:
+#### Methods for Creating the PKMediaEntry  
 
-1. **Manually** - Instantiate new PKMediaEntry instance and fill it's fields.
-   [read more...](#PkMediaEntry breakdown)
+The PKMediaEntry can be created using one of the following methods:
 
-2. **Use MockMediaProvider** - Create PKMediaEntry from json input file or JsonObject.
-   [read more...](https://github.com/kaltura/DeveloperPortalDocs/tree/playkit/documentation/PlayKit/MediaEntryProvider.md#MockMediaProvider)
+1. **Manually** - Instantiate a new PKMediaEntry instance and fill the its fields.
+   [Learn more here...](#PkMediaEntry breakdown)
 
-3. **Use a remote media Provider** - Use one of the provided MediaEntryProvider implementations:
+2. **Using a MockMediaProvider** - Create a PKMediaEntry from a json input file or JsonObject.
+   [Learn more here...](https://github.com/kaltura/DeveloperPortalDocs/tree/playkit/documentation/PlayKit/MediaEntryProvider.md#MockMediaProvider)
+
+3. **Using a remote media Provider** - Use one of the provided MediaEntryProvider implementations:
     For OVP environments, use "KalturaOvpMediaProvider".
     For OTT environments, use "PhoenixMediaProvider".
 
-    All you need to do is:
-    * create instance of one of the above mentioned providers.
-    * set mandatory parameters needed for the data fetching, such as, media id, SessionProvider, etc.
-    * Once your provider object is ready, activate it's "load" method, pass a completion callback,
-    and if all goes well, the PKMediaEntry object will be provided on the response.
-    [read more...](PlayKit/MediaEntryProvider.md#RemoteMediaProviders)
+    To use this method, you'll need to do the following:
+   
+   a) Create an instance of one of the above mentioned providers.
+   
+   b) Set the mandatory parameters needed for fetching data, such as media id, SessionProvider, etc.
+   
+   c) Once your provider object is ready, activate its "load" method and pass a completion callback. If successful, the PKMediaEntry object will be provided in the response.
+   
+   [Learn more here...](PlayKit/MediaEntryProvider.md#RemoteMediaProviders)
 
-
- **Once You have a PKMediaEntry ready you can build the player Config and plug-ins
- and continue to prepare the player to play.**
-
+Once you have a PKMediaEntry ready you can build the player configuration and plugins, and continue to prepare the Kaltura Video Player for play.
 
 
 ### [PKMediaEntry](https://github.com/kaltura/playkit-android/blob/develop/playkit/src/main/java/com/kaltura/playkit/PKMediaEntry.java)
