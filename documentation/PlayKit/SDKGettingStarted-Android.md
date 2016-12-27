@@ -7,7 +7,8 @@ weight: 291
 
 [![Android](https://img.shields.io/badge/Android-Supported-green.svg)](https://github.com/kaltura/playkit-android)
 
-This article describes the steps required for integrating the Playkit SDK in Android applications.
+This article will describe step by step integraition of the Playkit SDK in your application. 
+Following this simple steps, you will be able to create your own player and start using it. So lets get started!
 
 ## Integrate the Plakit SDK into your Application Settings 
 
@@ -21,6 +22,30 @@ include ':playkit', ':playkitdemo'
 ```
  compile project(path: ':playkit')
 ```
+
+## Create the player instance and start playback.
+In order to create the instance of the player all you need to do is to add this line in your Activity/Fragment. Passing the [PlayerConfig](https://github.com/kaltura/playkit-android/blob/develop/playkit/src/main/java/com/kaltura/playkit/PlayerConfig.java) object and Android Context.
+
+```
+playerKit = PlayKitManager.loadPlayer(config, this);
+
+```
+
+Now, when we have an instance of the player, all we need to do in order to start the playback is to call:
+
+```
+player.play();
+```
+In order to pause the playback just call:
+
+```
+player.pause();
+```
+
+## More about PlayerConfig:
+Here we will learn more about this object and how to create it. In general, this is a simple data object, which holds the initial configurations for the player. Like media source we want to play, plugins we want to configure and more. 
+
+[PlayerConfig](https://github.com/kaltura/playkit-android/blob/develop/playkit/src/main/java/com/kaltura/playkit/PlayerConfig.java) consist from two main objects. The Media and the Plugins. For now we will focus on creating the Media object. But more about Plugins you can learn in the [Plugins section]().
 ## Create the PKMediaEntry for the OvpMediaProvider
 
 ###TBD 
