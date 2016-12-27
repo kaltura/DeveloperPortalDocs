@@ -27,11 +27,18 @@ include ':playkit', ':playkitdemo'
 In order to create the instance of the player all you need to do is to add this line in your Activity/Fragment. Passing the [PlayerConfig](https://github.com/kaltura/playkit-android/blob/develop/playkit/src/main/java/com/kaltura/playkit/PlayerConfig.java) object and Android Context.
 
 ```
-playerKit = PlayKitManager.loadPlayer(config, this);
+playerKit = PlayKitManager.loadPlayer(config, context);
 
 ```
 
-Now, when we have an instance of the player, all we need to do in order to start the playback is to call:
+In next step we will add the player view to the view hierarchy.
+
+```
+View playerView = player.getView();
+yourLayout.addView(playerView);
+```
+
+Now, when we have an instance of the player in our layout, all we need is to start the playback by calling:
 
 ```
 player.play();
@@ -47,9 +54,144 @@ Here we will learn more about this object and how to create it. In general, this
 
 [PlayerConfig](https://github.com/kaltura/playkit-android/blob/develop/playkit/src/main/java/com/kaltura/playkit/PlayerConfig.java) consist from two main objects. The Media and the Plugins. For now we will focus on creating the Media object. But more about Plugins you can learn in the [Plugins section](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/Plugins-Android.md).
 
-Playkit provides you with the build in [MediaProviders]()
+##Using MockMediaProvider
+Playkit have build in [MediaProviders](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/MediaProviders-Android.md) classes. In this example we will focus on the [MockMediaProvider](https://github.com/kaltura/playkit-android/blob/develop/playkit/src/main/java/com/kaltura/playkit/backend/mock/MockMediaProvider.java). 
 
 
+MockMediaProvider object knows how to create Media object from json. Lets take this JsonObject and parse it with our provider.
+
+Lets say, we have this JsonObject saved localy in our project assets directory, with name entries.playkit.json:
+
+```
+"dash": {
+    "duration": 102000,
+    "id": "1_1h1vsv3z",
+    "name": "DASH: Kaltura Video Solutions for Media Companies",
+    "sources": [
+      {
+        "id": "1_1h1vsv3z_dash",
+        "mimeType": "application/dash+xml",
+        "url": "http://cdnapi.kaltura.com/p/2209591/sp/0/playManifest/entryId/1_1h1vsv3z/format/mpegdash/protocol/http/a.mpd"
+      }
+    ]
+  }
+,
+  "mp4": {
+    "duration": 102000,
+    "id": "1_1h1vsv3z",
+    "name": "MP4: Kaltura Video Solutions for Media Companies",
+    "sources": [
+      {
+        "id": "1_1h1vsv3z_mp4",
+        "mimeType": "video/mp4",
+        "url":"http://cdnapi.kaltura.com/p/2209591/sp/0/playManifest/entryId/1_1h1vsv3z/format/url/protocol/http/a.mp4"
+      }
+    ]
+
+  }
+,
+  "hls": {
+    "duration": 102000,
+    "id": "1_1h1vsv3z",
+    "name": "HLS: Kaltura Video Solutions for Media Companies",
+    "sources": [
+      {
+        "id": "1_1h1vsv3z_hls",
+        "mimeType": "application/x-mpegURL",
+        "url": "http://cdnapi.kaltura.com/p/2209591/sp/0/playManifest/entryId/1_1h1vsv3z/format/applehttp/protocol/http/a.m3u8"
+      }
+    ]
+  }
+``` 
+Now we want that MockMediaProvider will provide us with the PlayerConfig.Media object. So we need to create a new instance of MockMediaProvider and pass in the constructor the location of the file, android context and id of the media we are interested in. 
+
+```
+ @Override
+ protected void onStart() {
+    //create mock provider. 
+	MockMediaProvider mockProvider = new MockMediaProvider("entries.playkit.json", this, "1_1h1vsv3z");
+	
+	//parse json
+	mockProvider.load(new OnMediaLoadCompletion() {
+            @Override
+            public void onComplete(ResultElement<PKMediaEntry> response) {
+                if (response.isSuccess()) {
+                   
+                   //Create config object.
+                   PlayerConfig config = new PlayerConfig();
+                   
+                   //Set mediaEntry that was received from provider.
+                   config.media.setMediaEntry(mediaEntry);
+                   
+                   //Apply additional configurations on the media.
+                   playerConfig.media.setAutoPlay(false);
+                   playerConfig.media.setStartPosition(30);
+                   
+                   //Create player instance.
+                   player = PlayKitManager.loadPlayer(config, context);
+                   
+                   //Add player view to the layout.
+                   View playerView = player.getView();
+                   yourLayout.addView(playerView);
+                   
+                   //Start the playback of the media.
+                   player.play();
+                   
+                }else{
+               		Log.e("Failed to obtain media entry. " + response.getError().getMessage());
+                }
+               
+            }
+        });
+```
+
+onComplete we will receive the PKMediaEntry object with which we can populate our PlayerConfig.Media, create player and pass config object into it. Note, that player will start playback automaticly because we set the autoPlay(true).
+
+
+If you have all the neccessary data for playback (your own MediaProvider), you can manually populate the Media object by calling setters on the PlayerConfig.Media object like that:
+
+```
+@Override
+protected void onStart() {
+	//Create config object
+	PlayerConfig playerConfig = new PlayerConfig();
+	
+	//Set mediaEntry that was created by yourslef.
+	playerConfig.media.setMediaEntry(new PKMediaEntry()); 
+	
+	//Apply additional configurations on the media.
+	playerConfig.media.setAutoPlay(true); //player will start playback immediately after the media is loaded and can be played.
+	playerConfig.media.setStartPosition(30); // player will start the playback from the 30 second of the media.
+	
+	//Create player instance.
+    player = PlayKitManager.loadPlayer(config, context);
+                   
+   	//Add player view to the layout.
+   	View playerView = player.getView();
+   	yourLayout.addView(playerView);
+
+	}
+```
+
+and pass it to the PlayerConfig object.
+
+
+
+##Conclusion.
+In this quick tutorial we saw how to create simple Player using MockMediaProvider and start playback of the video.
+
+In the next sections you will learn :
+
+- How to listen and handle player events and states.
+- How to use Plugins.
+- Plugin specific configurations: IMA,  Kaltura Analytics, Kaltura Stats, TVPAPI Stats, Phoenix Stats, Youbora.
+- Media Providers: OVP, OTT, Mock.
+- How to use ChromeCast.
+- Best practisec for UI handling during Live playback.
+- How to work with tracks.
+- Playing DRM content.
+- Playing content in offline.
+- Handle connectivity loss, and application life cycle.
 
 #Build the Player Config
 
