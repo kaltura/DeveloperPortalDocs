@@ -7,7 +7,15 @@ to the remote data source and request actions, get data, update data, works with
 the SessionProvider.
 
 SessoinProvider provides:
-1. Base url - url to connect to a remote data source.
+1. Base url - The domain name of the designated remote host.
+
+   _**Base url should only contain the host domain name and should not include
+   a path to the services within.**_
+
+ _Example:_
+  ```
+  OVP base url: https://cdnapisec.kaltura.com/
+  ```
 2. Session Token - a valid session key to work against the data source.
 3. PartnerId - The partner, that was used to create the session token.
 
