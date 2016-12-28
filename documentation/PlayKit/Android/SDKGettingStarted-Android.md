@@ -50,7 +50,7 @@ player.pause();
 ```
 
 ## More about PlayerConfig:
-Here we will learn more about this object and how to create it. In general, this is a simple data object, which holds the initial configurations for the player. Like media entry we want to play and plugins we want to configure. 
+Here we will learn more about this object and how to create it. In general, this is a simple data object, which holds the initial configurations for the player. Like media entry we want to play and plugins we want to configure. For the full documentation of the PlayerConfig, visit [here]()
 
 [PlayerConfig](https://github.com/kaltura/playkit-android/blob/develop/playkit/src/main/java/com/kaltura/playkit/PlayerConfig.java) consist from two main objects. The Media and the Plugins. For now we will focus on creating the Media object. But more about Plugins you can learn in the [Plugins section](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/Plugins-Android.md).
 
@@ -64,41 +64,14 @@ Lets say, we have this JsonObject saved localy in our project assets directory, 
 
 ```
 "dash": {
-    "duration": 102000,
-    "id": "1_1h1vsv3z",
-    "name": "DASH: Kaltura Video Solutions for Media Companies",
+    "duration": 100000,
+    "id": "entryId",
+    "name": "Name of the source",
     "sources": [
       {
-        "id": "1_1h1vsv3z_dash",
+        "id": "sourceId",
         "mimeType": "application/dash+xml",
-        "url": "http://cdnapi.kaltura.com/p/2209591/sp/0/playManifest/entryId/1_1h1vsv3z/format/mpegdash/protocol/http/a.mpd"
-      }
-    ]
-  }
-,
-  "mp4": {
-    "duration": 102000,
-    "id": "1_1h1vsv3z",
-    "name": "MP4: Kaltura Video Solutions for Media Companies",
-    "sources": [
-      {
-        "id": "1_1h1vsv3z_mp4",
-        "mimeType": "video/mp4",
-        "url":"http://cdnapi.kaltura.com/p/2209591/sp/0/playManifest/entryId/1_1h1vsv3z/format/url/protocol/http/a.mp4"
-      }
-    ]
-
-  }
-,
-  "hls": {
-    "duration": 102000,
-    "id": "1_1h1vsv3z",
-    "name": "HLS: Kaltura Video Solutions for Media Companies",
-    "sources": [
-      {
-        "id": "1_1h1vsv3z_hls",
-        "mimeType": "application/x-mpegURL",
-        "url": "http://cdnapi.kaltura.com/p/2209591/sp/0/playManifest/entryId/1_1h1vsv3z/format/applehttp/protocol/http/a.m3u8"
+        "url": "yourUrl.mpd"
       }
     ]
   }
@@ -109,7 +82,7 @@ Now we want that [MockMediaProvider](https://github.com/kaltura/playkit-android/
  @Override
  protected void onStart() {
     //create mock provider. 
-	MockMediaProvider mockProvider = new MockMediaProvider("entries.playkit.json", this, "1_1h1vsv3z");
+	MockMediaProvider mockProvider = new MockMediaProvider("entries.playkit.json", this, "entryId");
 	
 	//load PKMediaEntry from json file.
 	mockProvider.load(new OnMediaLoadCompletion() {
@@ -146,7 +119,7 @@ Now we want that [MockMediaProvider](https://github.com/kaltura/playkit-android/
         });
 ```
 
-onComplete we will receive the PKMediaEntry object with which we can populate our PlayerConfig.Media, create player and pass config object into it.  Pay attention, that in our example, [PKMediaEntry](https://github.com/kaltura/playkit-android/blob/develop/playkit/src/main/java/com/kaltura/playkit/PKMediaEntry.java) will hold 3 [PKMediaSource](https://github.com/kaltura/playkit-android/blob/develop/playkit/src/main/java/com/kaltura/playkit/PKMediaSource.java) objects. One for Dash, one for Mp4 and one for Hls. That, because all of them share the same id: "1_1h1vsv3z". The player will automatically select the media source that suits better to the device.
+onComplete we will receive the PKMediaEntry object with which we can populate our PlayerConfig.Media, create player and pass config object into it.
 
 
 If you have all the neccessary data for playback (your own MediaProvider), you can manually populate the Media object by calling setters on the PlayerConfig.Media object like that:
