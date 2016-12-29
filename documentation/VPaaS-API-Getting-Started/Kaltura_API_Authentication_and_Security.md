@@ -141,6 +141,7 @@ To see an implementation of the KS generation algorithm, refer to the GenerateSe
     <span class="mce-note-graphic">Note: Using the session.start API is discouraged unless secure connection (SSL) is enabled on the account and there are specific reasons to generate the KS on the server side, using short expiry time that requires synchronizing to the server time.</span>
 *   **Call user.loginByLoginId - **This method is using Kaltura Users and their Password instead of partner id and secret key.   
     <span class="mce-note-graphic">NOTE: This method is should be preferred in most cases. <br />1. It is easier to remember ua ser name and password.<br />2. Users can be limited to specific roles and permissions (e.g. enabling only upload).<br />3. Users can be deleted, passwords changed or demoted in permissions, while the secret keys can't be modified easily. </span>
+*   **Using an Application Token - **This method is described in full in [this article](https://vpaas.kaltura.com/documentation/VPaaS-API-Getting-Started/Generating-KS-with-App-Tokens.html). </span>
 
 ###  KS Types  
 
