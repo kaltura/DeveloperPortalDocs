@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Creating an Application Token User
+title: Creating an Application Token
 subcat: Working with Application Tokens
 weight: 102
 ---
