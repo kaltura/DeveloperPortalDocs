@@ -78,11 +78,16 @@ Build the Config and prepare teh player - see below...
 
 ###Create the Media Source 
 
+For each source
+
 ```
 List<PKMediaSource> mediaSourceList = new ArrayList<>();
 PKMediaSource pkMediaSource = new PKMediaSource();
 pkMediaSource.setId(<FileId>);
 pkMediaSource.setUrl(<Media URL>);
+pkMediaSource.setMediaFormat(PKMediaFormat.getMediaFormat(<Media URL));
+
+mediaSourceList.add(mediaSource); 
 ```
 ### In case of Widevine Media - DRM License is required
 
@@ -100,6 +105,8 @@ PKMediaEntry mediaEntry = new PKMediaEntry();
 mediaEntry.setId(<MediaId>)
 mediaSourceList.add(pkMediaSource);
 mediaEntry.setSources(mediaSourceList);
+mediaEntry.setDuration(mediaDuration);
+
 ```
 
 
@@ -113,7 +120,7 @@ mediaEntry.setSources(mediaSourceList);
   JsonObject mediaParamsJson = new JsonObject();
   JsonArray sourcesArray = new JsonArray();
   JsonObject sourcesObject = new JsonObject();
-    sourcesObject.addProperty("mimeType", getMimeType());
+  sourcesObject.addProperty("mimeType", getMimeType());
   sourcesObject.addProperty("url", getSourceUrl());
   sourcesArray.add(sourcesObject);
   mediaParamsJson.add("sources",  sourcesArray);
