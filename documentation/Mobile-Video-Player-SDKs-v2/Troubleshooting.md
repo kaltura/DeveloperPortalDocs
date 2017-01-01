@@ -1,3 +1,4 @@
+temp
 ---
 layout: page
 title: Troubleshooting the Kaltura Player SDK
@@ -7,7 +8,7 @@ weight: 160
 [![iOS](https://img.shields.io/badge/iOS-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios) 
 [![Android](https://img.shields.io/badge/Android-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios)
 
-This article provides troubleshooting solutions for common Player issues.
+This section provides troubleshooting solutions for common Player issues.
 
 ## iOS: App Transport Security (ATS)  
 
