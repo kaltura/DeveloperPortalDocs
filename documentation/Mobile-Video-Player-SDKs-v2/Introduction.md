@@ -19,7 +19,8 @@ The Kaltura Vidoe Player SDK for iOS and Android supports:
 
 and more...
 
-# The Mobile SDK's Architecture Overview  
+## The Mobile SDK's Architecture Overview  
+
 The Kaltura Video Player's architecture is designed to allow for a seamless integration experience, enabling you to connect mutltiple playback engines and platforms. The Kaltura Video Player wraps the playback engine with the same interface and events, thereby allowing the same plugin code to work across multiple platforms, including iOS, Android, and web.  
 
 Each platform supports different types of streaming capabilites and DRMs. The Kaltura Video Player's technology determines the best streaming delivery method and DRM as needed. Plugins can be used with or without the UI, and can work cross-platform. Some plugins require native support, such as Chromecast, DRM and ads. The Kaltura Video Player-SDK provides the DRM, Chromecast, and ads features out-of-the-box.  
@@ -30,7 +31,7 @@ The Player API supports sending notifications to the Kaltura Video Player, liste
 
 Each Kaltura Video Video Player configuration includes the UICONF object, which includes the player configuration and indicates which plugins should be loaded. Every componenet of the layer is designed as a plugin.  
 
-# The Kaltura Video Player Architecture
+## The Kaltura Video Player Architecture
 
 The following diagram visualizes the Kaltura Video Player architecture, and highlights its flexibility and robust capabilities across platforms and devices: 
 
@@ -38,7 +39,7 @@ The following diagram visualizes the Kaltura Video Player architecture, and high
 
 As the diagram above illustrates, you can leverage native components for [iOS](https://github.com/kaltura/player-sdk-native-ios/) and [Android](https://github.com/kaltura/player-sdk-native-android) in conjunction with HTML5 runtime and Adobe Flash or Microsoft Silverlight plugins, to transcend platform limitations across devices and browsers, while delivering the full Kaltura Video Player v2 Toolkit experience. 
 
-# When Should You Use Native Mobile SDKs?
+## When Should You Use Native Mobile SDKs?
 
 What are the advantages of using native mobile SDKs? Here is a feature list that explains the advantages of using the Kaltura Video Player Toolkit in native environments:
 
@@ -53,7 +54,7 @@ What are the advantages of using native mobile SDKs? Here is a feature list that
 |DRM     | Not supported  | Supported  | Not supported  | Supported |  
 |Ads     | Supported without dual buffer | Supported  | Supported without dual buffer   | Supported |  
 
-## Using and Configuring Player Objects - Native vs HTML5 controls  
+### Using and Configuring Player Objects - Native vs HTML5 controls  
 
 One of the key features of the Player-SDK is the ability to use the HTML/CSS UI, which can be used on all platforms - iOS, Android and Web. As a developer you can choose if you want to:
 
@@ -61,13 +62,13 @@ One of the key features of the Player-SDK is the ability to use the HTML/CSS UI,
 * Develop your own skin
 * Develop native controls  
 
-### Before You Begin  
+#### Before You Begin  
 
 Before getting started, we recommend you read the following article on [configuring the Kaltura Media Player](https://vpaas.kaltura.com/documentation/04_Web-Video-Player/Player-Configuration.html). You should also verify that you have your Player configured via KMC.
 
 Additionally, the following article provides a detailed explanation on [accessing the iOS Player API base methods](https://vpaas.kaltura.com/documentation/05_Mobile-Video-Player-SDKs/Kaltura-iOS-player-API-Base-Methods.html).
 
-### Removing html5 UI Controls  
+#### Removing html5 UI Controls  
 
 Use these commands to remove the html5 UI controls:
 
@@ -75,7 +76,7 @@ Use these commands to remove the html5 UI controls:
     [config addConfigKey:@"topBarContainer.plugin" withValue:@"false"];
     [config addConfigKey:@"largePlayBtn.plugin" withValue:@"false"];
     
-### Disabling the HTML Spinner and Controlling it with a Custom Spinner  
+#### Disabling the HTML Spinner and Controlling it with a Custom Spinner  
 
 To disable the HTML Spinner and control it with a customer spinner, you will need to follow these configuration steps:
 
@@ -102,7 +103,7 @@ To disable the HTML Spinner and control it with a customer spinner, you will nee
     }];
 ```
 
-### Disabling Thumbnails
+#### Disabling Thumbnails
 
 We can disable the loading of assets by setting uiconf:
 
@@ -115,7 +116,7 @@ These settings will prevent loading the thumbnails assets.
 Set this on your own discretion, as it is dependent of application usage (weather it uses web component scrubber or not, or if it needs poster on start or not).
 
 
-# Player Version Managment  
+## Player Version Managment  
 
 The Mobile Video Player SDKs are native iOS and Android wrapper libraries for the [Kaltura Web Video Player Library](https://vpaas.kaltura.com/documentation/04_Web-Video-Player/Player-Configuration.html).  
 We recommend using the latest version of both the Kaltura Web Video Player and the native Mobile Player SDKs.  
@@ -123,7 +124,7 @@ We recommend using the latest version of both the Kaltura Web Video Player and t
 * You can upgrade the version of your Kaltura Web Video Player by using the [Player Studio](https://knowledge.kaltura.com/node/1148#Updating the Player) and clicking **Upgrade**.  
 * To get the latest version of the Mobile Player SDK, always refer to the latest SDK tag on the github repository ([iOS SDK](https://github.com/kaltura/player-sdk-native-ios), [Android SDK](https://github.com/kaltura/player-sdk-native-android)).
 
-# Kaltura Player Plugins  
+## Kaltura Player Plugins  
 
 Kaltura Player plugins use a combination of HTML, JavaScript and/or CSS to customize the Player, enabling you to use a plugin to add any feature that can be added to a web page. Plugins integrate with the Player by listening to and emitting events.
 
@@ -155,10 +156,10 @@ The following are the Kaltura-provided plugins that you can implement in your sy
 | airPlay |  By default this plugin is enabled     |               V |         X |
 | pipBtn | Picture-in-picture (PIP) -  By default this plugin is enabled and will work on supported devices   |               V |         X |
 
-## How to Enable/Create a Plugin  
+### How to Enable/Create a Plugin  
 This section describes how to enable existing Kaltura plugins and how to create your own plugins.
 
-#### Using an Existing Plugin
+##### Using an Existing Plugin
 
 1. If you want to change or add a plugin, the key should begin with the plugin name, dot and the plugin attribute. Every plugin includes the plugin attributes required for enabling or disabling the plugin.
 2. In order to add a plugin, use the addConfigKey function for [iOS](https://github.com/kaltura/player-sdk-native-ios/blob/master/KALTURAPlayerSDK/KPPlayerConfig.h#L57) or [Android](https://github.com/kaltura/player-sdk-native-android/blob/master/playerSDK/src/main/java/com/kaltura/playersdk/KPPlayerConfig.java#L86). Note that the first parameter takes the key name and the second takes the value.
@@ -174,21 +175,21 @@ In the example below, the loadingSpinner plugin has been disabled:
 config.addConfig("loadingSpinner.plugin", "false");
 ```
 
-#### Creating Custom Plugins  
+##### Creating Custom Plugins  
 
 To create custom plugins, follow the steps in the article [Extending the Kaltura Web Video Player Functionality Using Plugins](https://vpaas.kaltura.com/documentation/Web-Video-Player/Player-Plugins.html).
 
-### How to Detect if Configured Plugins are Loaded  
+#### How to Detect if Configured Plugins are Loaded  
 
 1. Open the iOS Player API base by following the steps in the article [Accessing the iOS Player API Base Methods](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/05_Mobile-Video-Player-SDKs/Kaltura-iOS-player-API-Base-Methods.md).
 2. Follow the instructions in * "Receiving  a Notification when the Player API is Ready" to detect if configured plugins are loaded.
 
-### How to Get Notified about Player Plugin-Related Callbacks  
+#### How to Get Notified about Player Plugin-Related Callbacks  
 
 1. Open the iOS Player API base by following the steps in the article [Accessing the iOS Player API Base Methods](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/05_Mobile-Video-Player-SDKs/Kaltura-iOS-player-API-Base-Methods.md).
 2. Follow the instructions in * addKPlayerEventListener * to receive notifications about Player plugin-related callbacks.
 
-# DRM Support  
+## DRM Support  
 
 The Player-SDK supports seamless playback of DRM content. Each platform supports a slightly different set of DRM schemes and features, which are detailed as follows.
 
@@ -198,7 +199,7 @@ The Player-SDK supports seamless playback of DRM content. Each platform supports
 	* *Widevine Modular* does not work on Android Emulator **with API level below 23**
 		* On emulators with API level 23, it is considered a level-3 (L3) device
 
-## DRM Server  
+### DRM Server  
 
 The Player-SDK must communicate with a license server in order to get the license, for both online and offline playback. The API between the SDK and the server is a simple http POST, where all required identify/authorization parameters are provided in the query string.
 
@@ -206,7 +207,7 @@ The license URL is provided to the DRM client by `PlayerViewController`/`KPViewC
 
 The following are the high level sequence diagrams. Please note that they are internal to the Player-SDK, and are provided here for informational purposes only.
 
-### Online  
+#### Online  
 
 {% plantuml %}
 
@@ -233,7 +234,7 @@ The following are the high level sequence diagrams. Please note that they are in
 
 {% endplantuml %}
 
-### Offline  
+#### Offline  
 
 {% plantuml %}
 
@@ -259,13 +260,13 @@ The following are the high level sequence diagrams. Please note that they are in
 
 {% endplantuml %}
 
-## Offline Playback Integration  
+### Offline Playback Integration  
 
 The native mobile SDKs (Android and iOS) allow applications to play downloaded content when the device is offline. Read this section to learn how to configure offline playback and to use downloaded files with the Player.
 
 > Note: The SDK **does not** provide the download function or the download URL. This should be provided by the application.
 
-### Supported Use Case
+#### Supported Use Case
 
 This is the general supported use case for offline playback. Starting with a just-installed app, the following should work:
 
@@ -276,7 +277,7 @@ This is the general supported use case for offline playback. Starting with a jus
 
 > The requirement to play any video while online (step 1) is a limitation that will be fixed in a future version of the Player SDK.
 
-### Implementing Offline Playback
+#### Implementing Offline Playback
 
 From the application's point-of-view, there are three parts to implementing offline playback:
 
@@ -284,15 +285,15 @@ From the application's point-of-view, there are three parts to implementing offl
 2. Registering the downloaded files with the Player SDK (when the device is still online).
 3. Overriding the streaming playback URL with the downloaded file.
 
-### Integration Points  
+#### Integration Points  
 
 Playing back downloaded assets requires two integration points between the application and the SDK - **management** and **playback**.
 
-#### Asset Management  
+##### Asset Management  
 
 Local assets are managed in `LocalAssetsManager`/`KPLocalAssetsManager`. The following Asset Management operations are available:
 
-##### Register  
+###### Register  
 
 The application notifies the SDK about a new downloaded asset. The SDK fetches important metadata and a DRM license, if required.
 
@@ -313,24 +314,24 @@ The application notifies the SDK about a new downloaded asset. The SDK fetches i
     @enduml
 {% endplantuml %}
 
-###### Local Content ID  
+####### Local Content ID  
 
 The `entryConfig` object provided must include an additional field that is not used when streaming: `localContentId`. This unique string is used to map registration information to playback. The same unique string must be provided for both registration and playback.
 > Note: localContentId must **not** be set for online playback.
 
-##### Check Status  
+###### Check Status  
 
 This allows the application to verify that a downloaded asset is still playable. This applies mostly to DRM-protected assets.
 
-##### Refresh  
+###### Refresh  
 
 If possible, refresh the metadata obtained in `Register`, including the DRM license.
 
-##### Unregister
+###### Unregister
 
 The application notifies the SDK that it has deleted the asset. The SDK cleans up related resources.
 
-##### Arguments  
+###### Arguments  
 
 All methods share the same set of arguments:
 
@@ -343,7 +344,7 @@ Additional arguments:
 * Android: `Context`, listener
 * iOS: callback block
 
-#### Asset Playback  
+##### Asset Playback  
 
 To override the default (streaming) playback URL with a downloaded file, the application provides a delegate to the Player.
 
@@ -374,15 +375,15 @@ The Custom URL provider is called at the beginning of every playback. This allow
 
 As mentioned above, the `entryConfig` object must include the `localContentId` that was used during the registration of the same asset.
 
-### Download Location Guidelines  
+#### Download Location Guidelines  
 
 Application developers are free to choose download locations, as allowed by the platform; however, Kaltura recommends the following locations:
 
-#### Android  
+##### Android  
 
 Store the downloaded files in a directory returned by `context.getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS)` (or in a subdirectory of the directory). This directory is owned by the application, is deleted on uninstall, and typically resides on a relatively large partition. In addition, starting with `KITKAT`, this directory does not require read/write permissions to the shared storage (`WRITE_EXTERNAL_STORAGE`).
 
-#### iOS  
+##### iOS  
 
 As per Apple's current recommendation, downloaded video files should be stored in a subdirectory of the application's *Documents* directory – `[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject]`:
 
@@ -392,52 +393,3 @@ The selected subdirectory [must be excluded from iCloud backup](https://develope
 
 For more information, see the Apple guide: [File System Programming Guide > File System Basics > Where You Should Put Your App’s Files](https://developer.apple.com/library/ios/documentation/FileManagement/Conceptual/FileSystemProgrammingGuide/FileSystemOverview/FileSystemOverview.html#//apple_ref/doc/uid/TP40010672-CH2-SW28).
 
-# Troubleshooting the Kaltura Mobile Player SDK 2.0  
-
-This section provides troubleshooting solutions for common Player issues.
-
-## iOS: App Transport Security (ATS)  
-
-iOS 9 and above include a security feature that, by default, blocks all non-TLS connections. However, since many servers still do not support TLS, there are exclusion keys that can be set in the app's `Info.plist` file.
-
-The most permissive setting is to disable ATS entirely. This is done by setting `NSAppTransportSecurity:NSAllowsArbitraryLoads` to `YES`:
-
-```xml
-<plist version="1.0">
-<dict>
-	...
-	<key>NSAppTransportSecurity</key>
-	<dict>
-		<key>NSAllowsArbitraryLoads</key>
-		<true/>
-	</dict>
-	...
-</dict>
-</plist>
-```
-
-> Note: If there's a known limited set of domains that must to be accessed without TLS, it is advised to whitelist them explicitly. 
-For more information about fine-grained control of ATS see:
-* [Cocoa Keys - App Transport Security]( https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/plist/info/NSAppTransportSecurity)
-* [Working with Apple’s App Transport Security]( http://www.neglectedpotential.com/2015/06/working-with-apples-application-transport-security/)
-
-## iOS: Bitcode  
-
-Starting with [Xcode 7](https://developer.apple.com/library/ios/releasenotes/DeveloperTools/RN-Xcode/Chapters/xc7_release_notes.html), bitcode is enabled by default. However, building an application with bitcode requires that all of the static libraries that are being used are also built with bitcode.
-
-The Widevine Classic library (`libWViPhoneAPI.a`) included with the Kaltura SDK is not built with bitcode; as a result, your application will need to disable bitcode in its own linker settings.
-
-## Android: Device Info
-
-Use Kaltura Device Info app to generate a report of device capabilities with regards to media playback and DRM.
-Get the app here: [Google Play](https://play.google.com/store/apps/details?id=com.kaltura.kalturadeviceinfo) | [source](https://github.com/kaltura/kaltura-device-info-android).
-
-Install and execute the application. After the report (in JSON format) is shown, tap the share button to share the report with Kaltura (preferably via email).
-
-## Android: ExoPlayer Demo
-
-Another way to diagnose DRM and playback issues on Android is by using the ExoPlayer Demo app. This app is provided in source by Google, and it allows playing some Google-provided streams.
-We have built a version of the app, [available as an APK](https://dl.dropboxusercontent.com/u/125871244/apps/testapps/drm/exoplayer/exoplayer-demo-v1.5.7.apk).
-
-Install and execute the application, then run all tests in the "Widevine DASH Policy Tests" section. Keep note of the passing and failing tests.
-> Note: **Don't** expect all tests to pass, as some require specialized hardware and security features.
