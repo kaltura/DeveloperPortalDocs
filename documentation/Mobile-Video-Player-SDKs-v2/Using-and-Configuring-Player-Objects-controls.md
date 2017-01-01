@@ -1,6 +1,7 @@
+Test
 ---
 layout: page
-title: Using and Configuring Player Objects, Native vs HTML5 controls
+title: Using and Configuring Player Objects - Native vs HTML5 controls
 weight: 130
 ---
 
@@ -21,7 +22,7 @@ In this document you'll learn how to:
 * Attach custom plugins
 * Eliminate the UI and add native controls from the player
 
-## Before You Begin  
+### Before You Begin  
 
 Before getting started, we recommend you read the following article on [configuring the Kaltura Media Player](https://vpaas.kaltura.com/documentation/04_Web-Video-Player/Player-Configuration.html). You should also verify that you have your Player configured via KMC.
 
@@ -30,7 +31,7 @@ Additionally, the following article provides a detailed explanation on [accessin
 To learm more about the Kaltura Player plugin and how it helps you to customize your Player, refer to the [Player Plugin Overview](https://vpaas.kaltura.com/documentation/05_Mobile-Video-Player-SDKs/Player-Plugin-Overview.html).
 
 
-## Removing html5 UI Controls  
+### Removing html5 UI Controls  
 
 Use these commands to remove the html5 UI controls:
 
