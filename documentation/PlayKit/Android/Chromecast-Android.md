@@ -9,13 +9,15 @@ weight: 291
 
 The Cast functionality allows your videos to be cast from a Android mobile device, via the Chromecast plugin, directly to a Kaltura Player receiver application on a Chromecast-connected TV.
 
-## Begin Casting  v
+## Begin Casting  
 
 To begin casting, you'll need to follow these steps.
 
-### Cast Mandatory Configuration  
+### Mandatory Casting Configuration  
 
-######TVPAPI envrionment
+Configure the following environments as follows:
+
+**TVPAPI Envrionment**
 
 ```
 TVPAPICastBuilder tvpapiCastBuilder = new TVPAPICastBuilder()
@@ -31,7 +33,7 @@ MediaInfo mediaInfo = tvpapiCastBuilder.build();
 remoteMediaClient.load(mediaInfo)
 ```
 
-######OVP envrionment
+**OVP Envrionment**
 
 ```
 OVPCastBuilder ovpCastBuilder = new OVPCastBuilder()
@@ -46,7 +48,10 @@ MediaInfo mediaInfo = ovpCastBuilder.build();
 remoteMediaClient.load(mediaInfo)
 ```
 
-#####Cast optional configuration
+### Optional Casting Configuration  
+
+The following configurations are optional for casting:
+
 ```
 // MediaMetadata
 MediaMetadata mediaMetadata = new MediaMetadata(MediaMetadata.MEDIA_TYPE_MOVIE);
@@ -64,13 +69,15 @@ castBuilder.setTextTrackStyle(textTrackStyle);
 
 ```
 
-#####Live VS VOD
+## Live vs. VOD  
 
-###ads
+The following section shows the differences betwen the Live and VOD casting:
+
+**Ads**
 - CastAdParser
 - pass adTagUrl
 
-###tracks
+**Tracks**
 
 ###usefull links
 - cast developer guide
