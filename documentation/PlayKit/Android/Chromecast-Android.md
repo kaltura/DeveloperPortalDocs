@@ -1,17 +1,19 @@
 ---
 layout: page
-title: Chromecast
+title: Chromecast Setup
 subcat: Android
 weight: 291
 ---
 
 [![Android](https://img.shields.io/badge/Android-Supported-green.svg)](https://github.com/kaltura/playkit-android)
 
-##Chromecast
+The Cast functionality allows your videos to be cast from a Android mobile device, via the Chromecast plugin, directly to a Kaltura Player receiver application on a Chromecast-connected TV.
 
-###start casting
+## Begin Casting  v
 
-#####Cast mandatory configuration
+To begin casting, you'll need to follow these steps.
+
+### Cast Mandatory Configuration  
 
 ######TVPAPI envrionment
 
