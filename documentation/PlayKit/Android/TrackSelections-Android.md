@@ -2,15 +2,13 @@
 ---
 layout: page
 title: Track Selection
-subcat: Android
+subcat: Android Version 3.0
 weight: 291
 ---
 
 [![Android](https://img.shields.io/badge/Android-Supported-green.svg)](https://github.com/kaltura/playkit-android)
 
-##About this feature.
-
-If you want to change the video/audio quality, or captions language it is obvious that you should use tracks. In our SDK you can do it in a few very simple steps. All you need is to listen to the event, receive 
+If you want to change the video/audio quality or captions language, you'll need to use tracks, which are easy to implement using the Kaltura Mobile Video Player SDK. All you need is to listen to the event, receive 
 the tracks data object and populate your views with it. When the desired track was selected, just send us the selected track id and we will do the work. Lets take a close look on how exactly you can do it.
 
 ##Listening to the event.
