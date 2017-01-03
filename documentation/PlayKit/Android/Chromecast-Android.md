@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Chromecast Setup
-subcat: Android
+subcat: Android Version 3.0
 weight: 291
 ---
 
