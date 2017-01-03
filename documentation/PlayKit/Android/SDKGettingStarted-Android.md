@@ -98,7 +98,6 @@ Now we want that [MockMediaProvider](https://github.com/kaltura/playkit-android/
                    config.media.setMediaEntry(mediaEntry);
                    
                    //Apply additional configurations on the media.
-                   playerConfig.media.setAutoPlay(false);
                    playerConfig.media.setStartPosition(30);
                    
                    //Create player instance, using config object.
