@@ -10,7 +10,7 @@ weight: 220
 To integrate the Kaltura Player iOS SDK, the minimum system requirements are:
 * IDE: Xcode version 7 or later (we recommend the latest version) 
 * OS version: iOS 8 or later
-* CocoaPods (you can find information on CocoaPods [here](www.cocoapods.org))
+* CocoaPods (you can find information on CocoaPods [here](https://cocoapods.org/))
 
 ## Developer Skills  
 Developers should have some background knowledge and experience with system setup before building Mobile SDK applications. 
