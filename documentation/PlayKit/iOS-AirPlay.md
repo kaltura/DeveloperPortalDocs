@@ -13,7 +13,7 @@ This article describes the steps required for adding support for the AirPlay fun
 
 1. Enable the Audio, Airplay and Picture in the Picture background mode. 
 2. In Xcode 8, select a target, and then under Capabilities > Background Modes, enable "Audio, Airplay and Picture in Picture".
-![AirPlay Functionality](./images/EnableAirPlay.png) 
+![AirPlay Functionality](./iOS-images/EnableAirPlay.png) 
 
 3. Import MediaPlayer, and then create an MPVolumeView and add it to your view as follows: 
 ```
