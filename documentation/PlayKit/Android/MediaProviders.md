@@ -270,4 +270,40 @@ The Executor can be a mock executor for tests purposes or connect to a remote so
 pass the http requests. The default provided implementation, [APIOkRequestsExecutor](https://github.com/kaltura/playkit-android/blob/develop/playkit/src/main/java/com/kaltura/playkit/connect/APIOkRequestsExecutor.java), wraps the OKHttp3 http library for passing http requests.
 
 
+## Creating PKMediaEntry for OTT tvpapi 
+
+###Create the Media Source 
+
+For each source
+
+```
+List<PKMediaSource> mediaSourceList = new ArrayList<>();
+PKMediaSource pkMediaSource = new PKMediaSource();
+pkMediaSource.setId(<FileId>);
+pkMediaSource.setUrl(<Media URL>);
+pkMediaSource.setMediaFormat(PKMediaFormat.getMediaFormat(<Media URL));
+
+mediaSourceList.add(mediaSource); 
+```
+### In case of Widevine Media - DRM License is required
+
+```
+List<PKDrmParams> pkDrmDataList = new ArrayList<>();
+PKDrmParams pkDrmParams = new PKDrmParams(licenseUrl);
+pkDrmDataList.add(pkDrmParams);
+pkMediaSource.setDrmData(pkDrmDataList);
+```
+
+###Create the Media Entry
+
+```
+PKMediaEntry mediaEntry = new PKMediaEntry();
+mediaEntry.setId(<MediaId>)
+mediaSourceList.add(pkMediaSource);
+mediaEntry.setSources(mediaSourceList);
+mediaEntry.setDuration(mediaDuration);
+
+```
+
+
 #### Once the PKMediaEntry is ready, you can start configuring the player.
