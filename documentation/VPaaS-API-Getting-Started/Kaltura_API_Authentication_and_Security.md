@@ -1,7 +1,6 @@
 ---
 layout: page
 title: Kaltura API Authentication and Security
-subcat: Working with Application Tokens
 weight: 104
 ---
 Kaltura's API is a REST-based web service accessed over HTTP. REST APIs provide a simple and easy interface for communication between applications and the Kaltura server. However, this approach can undermine your application's security, if you overlook proper security and authentication when designing your applications.
