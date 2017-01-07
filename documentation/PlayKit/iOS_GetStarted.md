@@ -28,4 +28,9 @@ Get the latest version of the PlayKit SDK for iOS:
 
 |     | Release Notes & Package                                             | Podspec                                                              | Embed Documentation                   | Samples                                                                       |
 |-----|---------------------------------------------------------------------|----------------------------------------------------------------------|-------------------------------------------|-------------------------------------------------------------------------------|
-| SDK | [PlayKit Releases](https://github.com/kaltura/playkit-ios/releases) | [PlayKit Spec](https://github.com/CocoaPods/Specs/tree/master/Specs) | [Basic Embed]() | [PlayKit Sample Applications](https://github.com/kaltura/playkit-ios-samples) |
+| SDK | [PlayKit Releases](https://github.com/kaltura/playkit-ios/releases) | [PlayKit Spec](https://github.com/CocoaPods/Specs/tree/master/Specs) | [Basic Embed](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/iOS_BasicEmbedDocumantation.md) | [PlayKit Sample Applications](https://github.com/kaltura/playkit-ios-samples) |
+
+
+
+
+#### Next Chapter -> [Basic Embed](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/iOS_BasicEmbedDocumantation.md)
