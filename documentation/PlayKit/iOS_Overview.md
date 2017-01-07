@@ -19,7 +19,7 @@ If this is your first time hearing about Kaltura, we recommend starting with the
 |                        Introduction                       |                     Getting Started                    |           Technical Documentation           |
 |:-----------------------------------------------------:|:------------------------------------------------------:|:-------------------------------------------:|
 |             ![help](./iOS-images/overView.png)            |            ![help](./iOS-images/getStarted.png)            |           ![help](./iOS-images/TD.png)          |
-| [About PlayKit](https://forum.kaltura.org/c/playkit)  | [Getting Started](https://forum.kaltura.org/c/playkit) | [Docs](https://forum.kaltura.org/c/playkit) |
+| [About PlayKit](https://forum.kaltura.org/c/playkit)  | [Getting Started](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/iOS_Introduction.md) | [Docs](https://forum.kaltura.org/c/playkit) |
 | Introducing PlayKit: Supported Features, Architecture                                      | How to contribute | Detailed technical documentation |
 
 ## Questions or need help?
