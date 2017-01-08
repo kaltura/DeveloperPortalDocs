@@ -56,60 +56,60 @@ To configure the plugin protected functions, follow these steps:
 
 Next, you'll need to enable the Analytics Plugin by registering it inside the application as follows:
 
-{% highlight c %}
+ {% highlight c %}
 
-PlayKitManager.registerPlugins(GenericAnalyticsPlugin.factory);
-{% endhighlight %}
+ PlayKitManager.registerPlugins(GenericAnalyticsPlugin.factory);
+ {% endhighlight %}
 
 ## Configure the Plugin Configuration Object for the Analytics Plugin  
 
 To configure the Analytics Plugin, add the following configuration to your `pluginConfig` file as follows:
 
-{% highlight c %}
+ {% highlight c %}
 
-private void configureGenericAnalyticsPlugin(PlayerConfig pluginConfig) {
-        JsonObject genericConfigEntry = new JsonObject();
-        genericConfigEntry.addProperty("NameOfThe Configuration", value of the configuration);
-{% endhighlight %}
+ private void configureGenericAnalyticsPlugin(PlayerConfig pluginConfig) {
+         JsonObject genericConfigEntry = new JsonObject();
+         genericConfigEntry.addProperty("NameOfThe Configuration", value of the configuration);
+ {% endhighlight %}
 
-## Set the Plugin Configuration to the Analytics Plugin
+## Set the Plugin Configuration to the Analytics Plugin  
 
 For the Analytics Plugin to start loading, you'll need to set the plugin configugration you created as follows:
 
-{% highlight c %}
+ {% highlight c %}
 
-PlayerConfig config = new PlayerConfig();
-PlayerConfig.Plugins plugins = config.plugins;
-plugins.setPluginConfig("NameOfPlugin" , genericConfigEntry.toJson()); 
-{% endhighlight %}
+ PlayerConfig config = new PlayerConfig();
+ PlayerConfig.Plugins plugins = config.plugins;
+ plugins.setPluginConfig("NameOfPlugin" , genericConfigEntry.toJson()); 
+ {% endhighlight %}
 
 ## MessageBus Supported Events  
 
 The MessageBus supports the following events:
+```
+ {% highlight c %}
 
-{% highlight c %}
-
-PlayerEvents{
-public enum Type {
-        STATE_CHANGED, //IDLE, LOADING, READY, BUFFERING;
-        CAN_PLAY,   // Sent when enough data is available that the media can be played, at least for a couple of frames. This corresponds to the HAVE_ENOUGH_DATA readyState.
-        DURATION_CHANGE,   //  The metadata has loaded or changed, indicating a change in duration of the media. This is sent, for example, when the media has loaded enough that the duration is known.
+ PlayerEvents{
+ public enum Type {
+         STATE_CHANGED, //IDLE, LOADING, READY, BUFFERING;
+         CAN_PLAY,   // Sent when enough data is available that the media can be played, at least for a couple of frames. This  corresponds to the HAVE_ENOUGH_DATA readyState.
+        DURATION_CHANGE,   //  The metadata has loaded or changed, indicating a change in duration of the media. This is sent, for   example, when the media has loaded enough that the duration is known.
         ENDED,   //  Sent when playback completes.
         ERROR,   //  Sent when an error occurs. The element's error attribute contains more information. See Error handling for details.
-        LOADED_METADATA,   //  The media's metadata has finished loading; all attributes now contain as much useful information as they're going to.
+        LOADED_METADATA,   //  The media's metadata has finished loading; all attributes now contain as much useful information as  they're going to.
         PAUSE,   //  Sent when playback is paused.
-        PLAY,   //  Sent when playback of the media starts after having been paused; that is, when playback is resumed after a prior pause event.
-        PLAYING,   //  Sent when the media begins to play (either for the first time, after having been paused, or after ending and then restarting).
+        PLAY,   //  Sent when playback of the media starts after having been paused; that is, when playback is resumed after a prior  pause event.
+        PLAYING,   //  Sent when the media begins to play (either for the first time, after having been paused, or after ending and then  restarting).
         SEEKED,   //  Sent when a seek operation completes.
         SEEKING,   //  Sent when a seek operation begins.
         TRACKS_AVAILABLE, // Sent when track info is available.
         REPLAY, //Sent when replay happened.
-        PLAYBACK_PARAMS, // Sent event that notify about changes in the playback parameters. When bitrate of the video or audio track changes or new media loaded. Holds the PlaybackParamsInfo.java object with relevant data.
+        PLAYBACK_PARAMS, // Sent event that notify about changes in the playback parameters. When bitrate of the video or audio track  changes or new media loaded. Holds the PlaybackParamsInfo.java object with relevant data.
         VOLUME_CHANGED // Sent when volume is changed.
     }
-{% endhighlight %}
+ {% endhighlight %}
 
-{% highlight c %}
+ {% highlight c %}
 
 AdEvents{
 public enum Type {
@@ -134,18 +134,18 @@ public enum Type {
         CONTENT_RESUME_REQUESTED,
         ALL_ADS_COMPLETED
     }
-{% endhighlight %}
-
+ {% endhighlight %}
+```
 ## Adding New Events Using the MessageBus  
 
 If you have new events you need to report, you can add new events by implementing the following steps: 
 
 1. Add a new class for your event.
 2. Implement the PKEvent in this class according the following implementation example: 
-{% highlight c %}
-
-public class NewAnalyticsEvent implements PKEvent {
-    public final NewAnalyticsEvent.EventType type;
+ {% highlight c %}
+ 
+ public class NewAnalyticsEvent implements PKEvent {
+     public final NewAnalyticsEvent.EventType type;
 
     public enum EventType
     {Concurrency}
@@ -157,25 +157,25 @@ public class NewAnalyticsEvent implements PKEvent {
 
     @Override
     public Enum eventType() {
-        return this.type;
-    }
+         return this.type;
+     }
 
-}
-{% endhighlight %}
+ }
+ {% endhighlight %}
 
 3. Use the Messagebus to post your new event: 
-{% highlight c %}
+ {% highlight c %}
 
-messageBus.post(new NewAnalyticsEvent(TAG + " " + ((NewAnalyticsEvent) event).type.toString()));
-{% endhighlight %}
+ messageBus.post(new NewAnalyticsEvent(TAG + " " + ((NewAnalyticsEvent) event).type.toString()));
+ {% endhighlight %}
 
 ## Code Examples
 
 ### Event Listener  
 
-{% highlight c %}
+ {% highlight c %}
 
-private PKEvent.Listener mEventListener = new PKEvent.Listener() {
+ private PKEvent.Listener mEventListener = new PKEvent.Listener() {
         @Override
         public void onEvent(PKEvent event) {
             if (event instanceof PlayerEvent) {
@@ -211,35 +211,35 @@ private PKEvent.Listener mEventListener = new PKEvent.Listener() {
             }
         }
     };
-{% endhighlight %}
+ {% endhighlight %}
 
 ### onDestroy  
 
-{% highlight c %}
+ {% highlight c %}
 
    @Override
     public void onDestroy() {
         log.d("onDestroy");
         sendAnalyticsEvent(PhoenixActionType.STOP);
     }
-{% endhighlight %}
+ {% endhighlight %}
 
 ### onApplicationPaused  
 
-{% highlight c %}
+ {% highlight c %}
 
 @Override
     protected void onApplicationPaused() {
         stopMonitoring();
     }
-{% endhighlight %}
+ {% endhighlight %}
 
 ### onApplicationResumed  
 
-{% highlight c %}
+ {% highlight c %}
 
     @Override
     protected void onApplicationResumed() {
         startMonitoring(this.player);
     }
-{% endhighlight %}
+ {% endhighlight %}
