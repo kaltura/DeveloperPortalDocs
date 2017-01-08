@@ -1,6 +1,6 @@
 ---
 layout: page
-title: PlayKit Introduction for iOS
+title: PlayKit Introduction for Android
 subcat: Android Version 3.0
 weight: 391
 ---
