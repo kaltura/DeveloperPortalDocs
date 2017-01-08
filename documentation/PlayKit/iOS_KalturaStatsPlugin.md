@@ -58,6 +58,7 @@ self.playerController = PlayKitManager.sharedInstance.loadPlayer(config: playerC
 
 The Kaltura Stats Plugin supports the following events:
 
+```
 enum KStatsEventType : Int {
 case WIDGET_LOADED = 1
 case MEDIA_LOADED = 2
@@ -102,7 +103,7 @@ case POSTROLL_75 = 40
 case ERROR = 99
 }
 
-
+```
 
 
 

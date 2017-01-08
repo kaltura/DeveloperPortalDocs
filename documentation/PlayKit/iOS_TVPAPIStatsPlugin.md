@@ -58,19 +58,18 @@ self.playerController = PlayKitManager.sharedInstance.loadPlayer(config: playerC
 
 The TVPAPI Stats Plugin supports the following events:
 
-TVPAPI action Types{
-
+```
+ TVPAPI action Types{
  MediaHit, //outputs every interval time
- 
  MediaMark //Outputs in the following events - {PLAY,STOP,PAUSE,FIRST_PLAY,LOAD,FINISH,BITRATE_CHANGE,ERROR}
- 
 }
+```
 
 ## Concurrency Handler  
 
 To receive concurrency events from the TVPAPI Stats Plugin, you'll need to add a listener to the following event:
 
-```
+``````
 var playerController: Player!
 self.playerController.addObserver(self, events: [OttEvent.OttEventConcurrency.self], block: {(info) in
 
