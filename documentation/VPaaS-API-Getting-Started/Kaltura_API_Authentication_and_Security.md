@@ -746,11 +746,9 @@ Some privileges support a wildcard (*) value (for example, *edit:**). A wildcar
   </tbody>
 </table>
 
-<p class="mce-heading-4">
-  Examples are in PHP using the PHP5 Kaltura Client Library:
-</p>
+#### PHP Examples Using the PHPS Kaltura Client Library  
 
-**Important!** Never use a KalturaSessionType ADMIN in a KS generated for end users.
+> **Important!** Never use a KalturaSessionType ADMIN in a KS generated for end users.
 </p>
 
 **Allow access to a specific entry Id (limitation is set via Access Control):**  
@@ -768,7 +766,9 @@ Example:  set role id 2345 on a ks:
 
 <pre class="brush: php;fontsize: 100; first-line: 1; ">$ks = $client-&gt;session-&gt;start ( $userSecret, "myUser", KalturaSessionType::USER, $partnerID , null, "setrole:2345");</pre>
 
-<span class="mce-heading-2">Secured Delivery</span>Kaltura supports various methods of securing delivery of video streams, as follows:
+## Secured Delivery  
+
+Kaltura supports various methods of securing delivery of video streams, as follows:
 
 *   Progressive download over HTTPS
 *   RTMPE / RTMPTE
@@ -776,7 +776,7 @@ Example:  set role id 2345 on a ks:
 *   SWF Verification
 *   IP-linked token authentication
 
-The table below shows the Stream security techniques as these apply differently across devices -
+The table below shows the Stream security techniques as these apply differently across devices:
 
 <table class="kaltura-table" style="width: 100%;">
   <thead>
@@ -900,26 +900,24 @@ Kaltura’s integrated DRM solutions seamlessly plug in to its existing infrastr
 
 Encrypted video files are generated as additional “flavors” of original asset using Kaltura’s transcoding farm and based on selected vendor and license policy. 
 
-Use the standard Markdown notation for images ![DRM Metadata](./images/DRM Metadata.jpg). 
+![DRM Metadata](./images/DRM Metadata.jpg). 
 
 <span class="mce-note-graphic">Note: Due to licensing requirements, DRM solutions are only available for commercial Kaltura editions (SaaS and On Prem) and are at additional cost. For more information about DRM and the available DRM solutions, please <a href="http://corp.kaltura.com/company/contact-us" target="_blank">contact us</a> or contact your Kaltura Account Manager.</span>
 
-<span class="mce-heading-2">Important Considerations For Application Developers</span><span class="mce-heading-3"></span>
+### Important Considerations For Application Developers  
 
-When not applications are not developed with security in mind, a malicious user can use:
+When applications are not developed with security in mind, a malicious user can use:
 
 *   A compromised secret to create a KS at will
 *   A compromised admin KS to cause irreversible harm to your account (such as deleting all content)
 
 In this section, we highlight a number of common and important practices to consider when creating applications that interact with the Kaltura API.
 
-<p class="mce-heading-3">
-  Authenticated User Privileges override the User Type KS
-</p>
+### Authenticated User Privileges Override the User Type KS  
 
 When you generate a user session KS and specify an ID of a Kaltura Admin User, the KS will allow all the actions included in the user’s role.
 
-<span class="mce-heading-3">Always Protect your API Secret Keys</span>
+### Always Protect your API Secret Keys  
 
 Your API Secret Keys (ADMIN and USER) are generated when you create am account. These keys hold global access permissions to your account and thus should always be kept in secret.
 
@@ -929,25 +927,20 @@ Your API Secret Keys (ADMIN and USER) are generated when you create am account. 
 *   NEVER keep your secret keys in a front-end application (such as Flash or JavaScript). A KS should always be generated on the server side and then passed to the front-end.
 *   Keep the secret keys in a separated file with strict file permissions.
 
-<div class="mce-heading-3">
-  Use Admin KS with Care
-</div>
+### Use Admin KS with Care  
 
 A compromised Admin KS will allow a malicious user to gain full access to the publisher account, leading way to harm.
 
 Use Admin KS in between servers and with secured communication channel.
 
-<div class="mce-heading-3">
-  Prefer Login of Users with Defined Roles and Permissions over Generic Admin KS
-</div>
+### Prefer Login of Users with Defined Roles and Permissions over Generic Admin KS  
 
 Kaltura Users can be assigned a fine-grained level of permissions. This allows applications developers to provide a stronger login and authentication mechanism while not exposing the account secret keys.
 
-Use user.loginByLoginId providing user credentials and your account Id. 
+Use user.loginByLoginId providing user credentials and your account ID. 
 
-<p class="mce-heading-3">
-  Use Widget KS for Anonynous Public Content Playback
-</p>
+### Use Widget KS for Anonynous Public Content Playback  
+
 
 The session.startWidgetSession provides an anonymous simple and light KS generation mechanism that does not require a secret. This type of session can be used to perform READ operations only and only on content that is defined as publicly available with no Access Control or special permissions.
 
