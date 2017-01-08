@@ -79,6 +79,6 @@ The following section shows the differences betwen the Live and VOD casting:
 
 **Tracks**
 
-###usefull links
+###useful links
 - cast developer guide
 - cast guidelines
