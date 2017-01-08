@@ -1,6 +1,6 @@
 ##Events
 
-## Registering to the Player Events
+## Registering to Player Events  
 
 ```
 private void setPlayerListeners() {
@@ -113,7 +113,7 @@ private void setPlayerListeners() {
 
 ```
 
-## Registering to Player State Change Listener
+## Registering to Player State Change Listener  
 
 ```
 playerKit.addStateChangeListener(new PKEvent.Listener() {
