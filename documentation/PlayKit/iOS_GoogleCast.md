@@ -1,23 +1,34 @@
-# Geting Started :
+---
+layout: page
+title: Adding Support for Google Cast for iOS Devices
+subcat: iOS Version 3.0
+weight: 298
+---
 
-####  Install
-Add to your pod file:
-pod "PlayKit/GoogleCastAddon", :git => 'https://github.com/kaltura/playkit-ios.git', :tag => PLAYKIT_TAG
+[![iOS](https://img.shields.io/badge/iOS-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios) 
 
-In order to use google cast sdk you should add
+This article describes how to add support for Google Cast for iOS Devices.
 
-####  Import
+###  Install  
+To install:
+Add the following to your pod file: `pod "PlayKit/GoogleCastAddon", :git => 'https://github.com/kaltura/playkit-ios.git', :tag => PLAYKIT_TAG`.
 
-```
-import GoogleCast
-import PlayKit
-```
+In order to use google cast sdk you should add 
 
-For ex' to reach GCKGoogleCastContext you need the - import `GoogleCast`
-For ex' to reach OVP/OTT-CastBuilder you need the - import `PlayKit`
+###  Import  
+
+Next, import the following:
+	```
+	import GoogleCast
+	import PlayKit
+	```
+	
+> Note: For ex' to reach GCKGoogleCastContext you'll need the - import `GoogleCast`. 
+For ex' to reach OVP/OTT-CastBuilder you'll need the - import `PlayKit`
 
 
-##  Casting 
+##  Casting  
+
 In order to create GCKMediaInformation to cast we should use the CastBuilder :
 You can use the OVPCastBuilder Or the TVPAPICastBuilder :
 
