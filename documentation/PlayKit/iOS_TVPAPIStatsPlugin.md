@@ -69,7 +69,6 @@ The TVPAPI Stats Plugin supports the following events:
 
 To receive concurrency events from the TVPAPI Stats Plugin, you'll need to add a listener to the following event:
 
-
 ``````
 var playerController: Player!
 self.playerController.addObserver(self, events: [OttEvent.OttEventConcurrency.self], block: {(info) in
