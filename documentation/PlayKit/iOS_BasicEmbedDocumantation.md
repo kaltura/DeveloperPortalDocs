@@ -15,37 +15,41 @@ This section includes samples for basic player operations such as configuration.
 
 ### Setting up using Cocoapods
 
-Add a `pod 'PlayKit'` file similar to the following to your Podfile:
+1. Add a `pod 'PlayKit'` file similar to the following to your Podfile:
 
-`pod 'PlayKit'`
+    `pod 'PlayKit'`
 
-Since the Playkit SDK is written in Swift, you should attach the following to the bottom of your Podfile:
-
-```
-pre_install do |installer|
-    def installer.verify_no_static_framework_transitive_dependencies; end
-end
-
-post_install do |installer|
-    installer.pods_project.targets.each do |target|
-        target.build_configurations.each do |config|
-            config.build_settings['ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES'] = 'NO'
-        end
+2. Because the Playkit SDK is written in Swift, you should attach the following to the bottom of your Podfile:
+    
+    ```
+    pre_install do |installer|
+      def installer.verify_no_static_framework_transitive_dependencies; end
     end
-end
-```
+
+    post_install do |installer|
+      installer.pods_project.targets.each do |target|
+         target.build_configurations.each do |config|
+                config.build_settings['ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES'] = 'NO'
+         end
+      end
+    end
+    ```
 > Note: For a complete Podfile sample go to [PlayKit Demo Podfile](https://github.com/kaltura/playkit-ios-demo/blob/master/Podfile) and then run a `pod install` command inside your terminal, or from the CocoaPods.application.
 
 ### Declaring a Player Variable  
 
-```
-var playerController: Player
-```
+To declare a player variable, use:
 
-### Setting a Player Instance via Sample Configuration
+    ```
+    var playerController: Player
+    ```
 
-```
-let config = PlayerConfig()
+### Setting a Player Instance via Sample Configuration  
+
+To set a player instance via a sample configuration, use:
+
+    ```
+    let config = PlayerConfig()
         
         var source = [String : Any]()
         source["id"] = "123123" //"http://media.w3.org/2010/05/sintel/trailer.mp4"
@@ -63,50 +67,51 @@ let config = PlayerConfig()
         // Here we get the player
         self.playerController = PlayKitManager.sharedInstance.loadPlayer(config: config)
 
-```
+    ```
 
-> Note: To understand and learn about `PlayerConfig` Creation please go to [PlayerConfig Doc]()
+>Note: To learn more about `PlayerConfig` Creation, see the [PlayerConfig Doc]() article.
 
-### Setting player view size
+### Setting the Player View Size  
 
-Create Player Container 
+To set the player view size:
 
-```
-@IBOutlet weak var playerView: UIView!
-```
+1. Create a player container: 
 
-Add player view as a subview
+    ```
+    @IBOutlet weak var playerView: UIView!
+    ```
+2. Add a player view as a subview:
 
-```
-playerView.addSubview(self.playerController.view)
-```
+    ```
+    playerView.addSubview(self.playerController.view)
+    ```
 
-### Control Player - Basic Player Actions
+### Control Player - Basic Player Actions  
 
-Add you custome Buttons and control the player
+Add your custome buttons and control to the player as follows:
 
-```
+    ```
     @IBAction func playClicked(_ sender: AnyObject) {
         self.playerController.play()
-    }
+       }
     
     @IBAction func pauseClicked(_ sender: AnyObject) {
         self.playerController.pause()
-    }
+      }
     
     @IBAction func playheadValueChanged(_ sender: AnyObject) {
         if (!sender.isKind(of: UISlider.self)) {
             return
-        }
+         }
         let slider = sender as! UISlider
         playerController.seek(to: CMTimeMake(Int64(slider.value), 1))
-    }
-```
+     }
+    ```
 
-> Reference for: [Basic Sample](https://github.com/kaltura/playkit-ios-samples)
-> Be focused on PlayKit Sample
+> See the [Basic Sample](https://github.com/kaltura/playkit-ios-samples) for additional references.
+> Be focused on the PlayKit Sample
 
-## More Features
+## Additional Features
 
 | Feature Name |                                                           Documentation                                                           |
 |--------------|:---------------------------------------------------------------------------------------------------------------------------------:|
