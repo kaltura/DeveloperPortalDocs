@@ -18,39 +18,37 @@ To configure the plugin protected functions, follow these steps:
 
 1. Add a factory function - this enables the Kaltura Video Player to create a new instance of the Analytics Plugin and register the new plugin.
 
-{% highlight c %}
-public static final Factory factory = new Factory() {
+ {% highlight c %}
+ public static final Factory factory = new Factory() {
  @Override
  public String getName() {
-return "NameOfPlugin";
- }
+ return "NameOfPlugin";
+  }
 
-@Override
+ @Override
  public PKPlugin newInstance() {
  return new GenericAnalyticsPlugin(); //Name of the plugin class
- }
+  }
         };
-{% endhighlight %}
+ {% endhighlight %}
          
-
 2. When the application sets the Analytics Plugin configuration, the Kaltura Video Player calls the plugin onLoad method. This function contains all of the required configurations for the new plugin, a reference to the active Kaltura Video Player, and a reference to the MessageBus, which includes all events.
 
 3. Add a listener to the relevant events by calling the following function - all of the relevant events will follow the listener:  
+ {% highlight c %}
 
-{% highlight c %}
+ messageBus.listen(hereComesTheEventListener, PlayerEvent.Type.PLAY, PlayerEvent.Type.PAUSE, PlayerEvent.Type.ENDED,  PlayerEvent.Type.ERROR, PlayerEvent.Type.LOADED_METADATA);
 
-messageBus.listen(hereComesTheEventListener, PlayerEvent.Type.PLAY, PlayerEvent.Type.PAUSE, PlayerEvent.Type.ENDED, PlayerEvent.Type.ERROR, PlayerEvent.Type.LOADED_METADATA);
-
-{% endhighlight %}
+ {% endhighlight %}
 
 4. Add a send analytics event method and call it from the event listener.
 
 5. If you want to report events to the application, you can use LogEvent in the following way: 
-{% highlight c %}
+ {% highlight c %}
 
-messageBus.post(new LogEvent(TAG + " " + ((PlayerEvent) event).type.toString()));
+ messageBus.post(new LogEvent(TAG + " " + ((PlayerEvent) event).type.toString()));
 
-{% endhighlight %}
+ {% endhighlight %}
 
 6. The methods onDestroy, onUpdateConfig, onUpdateMedia, onApplicationPaused, and onApplicationResumed help you manage the life cycle of your Analytics Plugin, including initiating end events, handling background tasks, and keeping the plugin flow in accordance with the Video Player life cycle.
 
