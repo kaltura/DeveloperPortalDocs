@@ -7,7 +7,7 @@ weight: 292
 
 [![Android](https://img.shields.io/badge/Android-Supported-green.svg)](https://github.com/kaltura/playkit-android)
 
-This article describes the steps required for registering to Kaltura Video Player events and states on Android devices, which will enable you to track the events and their states.
+This article describes the steps required for registering to Kaltura Video Player events and states on Android devices, which will enable you to track the events and their current status.
 
 ## Registering to Kaltura Video Player Events and States  
 
