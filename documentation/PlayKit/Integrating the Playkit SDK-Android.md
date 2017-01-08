@@ -2,7 +2,7 @@
 layout: page
 title: Integrating the Playkit SDK in Android Applications
 subcat: Android
-weight: 291
+weight: 391
 ---
 
 [![Android](https://img.shields.io/badge/Android-Supported-green.svg)](https://github.com/kaltura/playkit-android)
