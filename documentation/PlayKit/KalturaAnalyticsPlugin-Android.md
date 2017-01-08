@@ -48,7 +48,7 @@ plugins.setPluginConfig("KalturaAnalytics", kalturaAnalyticsConfig);
 
 The Kaltura Analytics Plugin supports the following events:
 
-        ```
+        
         IMPRESSION(1),
 
        PLAY_REQUEST(2),
@@ -78,4 +78,4 @@ The Kaltura Analytics Plugin supports the following events:
        SPEED(41),
         
        VIEW(99);
-        ```
+        
