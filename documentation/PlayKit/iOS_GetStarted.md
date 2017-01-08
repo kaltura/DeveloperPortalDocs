@@ -1,13 +1,15 @@
 ---
 layout: page
-title: Get Started with PlayKit iOS
+title: Get Started with PlayKit for iOS
 subcat: iOS
 weight: 290
 ---
 
 [![iOS](https://img.shields.io/badge/iOS-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios) 
 
-# Get Started  
+This article will help you get started with the development of the Playkit for iOS.
+
+## Before You Begin  
 
 Before you begin development with PlayKit for iOS, there are a few concepts you should learn about first:
 
