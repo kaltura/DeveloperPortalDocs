@@ -1,27 +1,25 @@
 ---
 layout: page
-title: PlayKit Basic Embed Documantation
+title: iOS PlayKit Basic Embed Documantation
 subcat: iOS
 weight: 290
 ---
 
 [![iOS](https://img.shields.io/badge/iOS-Supported-green.svg)](https://github.com/kaltura/playkit-ios)
 
-# PlayKit Basic Embed Documantation
+This section includes samples for basic player operations such as configuration. For additional examples, see the [PlayKit Full Featured Demo Application](https://github.com/kaltura/playkit-ios-demo).
 
-This section includes samples for basic player operations such as configuration. For additional examples, see the [PlayKit Full Featured Demo Application](https://github.com/kaltura/playkit-ios-demo)
-
-> note: For Objective C Sample please move to [PlayKit ObjC Basic Embed]()
+>Note: For an Objective C example, see the article [PlayKit ObjC Basic Embed]().
 
 ## Basic Embed
 
 ### Setting up using Cocoapods
 
-Add `pod 'PlayKit'` similar to the following to your Podfile:
+Add a `pod 'PlayKit'` file similar to the following to your Podfile:
 
 `pod 'PlayKit'`
 
-Since Our SDK is written in swift you should attach following on the bottom of your Podfile:
+Since the Playkit SDK is written in Swift, you should attach the following to the bottom of your Podfile:
 
 ```
 pre_install do |installer|
@@ -36,12 +34,9 @@ post_install do |installer|
     end
 end
 ```
-> Note: For Full Podfile sample go to:
-> [PlayKit Demo Podfile](https://github.com/kaltura/playkit-ios-demo/blob/master/Podfile)
+> Note: For a complete Podfile sample go to [PlayKit Demo Podfile](https://github.com/kaltura/playkit-ios-demo/blob/master/Podfile) and then run a `pod install` command inside your terminal, or from the CocoaPods.application.
 
-Then run a `pod install` command inside your terminal, or from CocoaPods.app.
-
-### Declaring a player variable
+### Declaring a Player Variable
 
 ```
 var playerController: Player
