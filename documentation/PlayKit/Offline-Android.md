@@ -1,27 +1,28 @@
 ---
 layout: page
-title: Offline playback
-subcat: Android
-weight: 291
+title: Setting up Offline Playback on Android Devices
+subcat: Android Version 3.0
+weight: 294
 ---
 
 [![Android](https://img.shields.io/badge/Android-Supported-green.svg)](https://github.com/kaltura/playkit-android)
 
-##Offline
-Here we will learn how to implement offline playback in Playkit SDK. 
+This article describes how to implement offline playback in Playkit SDK on Android devices. 
 
-Lets assume that you are already downloaded the media you want to play. If no, and you are looking for a good download manager you can use [this](https://github.com/kaltura/playkit-dtg-android) one. In general the most complex part of the playback in offline, is managing the DRM content license. But dont worry, we already handle it for you. So lets see, what you need to do.
+First, download the media you wish to playh. If you are looking for a good download manager you can use [this](https://github.com/kaltura/playkit-dtg-android) one. In general the most complex part of the playback in offline is managing the DRM content license, but we've already covered that issue for you.
 
-##Registering the asset.
+## Registering the Asset  
 
-First of all, you need to create an instance of the [LocalAssetManager](https://github.com/kaltura/playkit-android/blob/develop/playkit/src/main/java/com/kaltura/playkit/LocalAssetsManager.java).
-Note that you have 2 constructors for this object. The first one receive the Android context only.
-**Improtant! The context must be the Android Application context**
+First, you'll need to create an instance of the [LocalAssetManager](https://github.com/kaltura/playkit-android/blob/develop/playkit/src/main/java/com/kaltura/playkit/LocalAssetsManager.java).
 
-```
-//Create new instance of localAssetManager with default implementatoin of LocalDrmStorage.
+Note that you have two constructors for this object; however, the first constructor only receives Android context.
+
+>**Important!** The context must be the Android Application context.
+
+  ```
+  //Create new instance of localAssetManager with default implementatoin of LocalDrmStorage.
 LocalAssetsManager localAssetsManager = new LocalAssetsManager(context);
-```
+  ```
 
 The second accept additional parameter of type [LocalDrmStorage](https://github.com/kaltura/playkit-android/blob/develop/playkit/src/main/java/com/kaltura/playkit/LocalDrmStorage.java).
 
