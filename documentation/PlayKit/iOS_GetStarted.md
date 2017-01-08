@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Get Started with PlayKit-iOS
+title: Get Started with PlayKit iOS
 subcat: iOS
 weight: 290
 ---
