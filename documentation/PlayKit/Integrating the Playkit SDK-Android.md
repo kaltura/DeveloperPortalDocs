@@ -7,9 +7,7 @@ weight: 291
 
 [![Android](https://img.shields.io/badge/Android-Supported-green.svg)](https://github.com/kaltura/playkit-android)
 
-This article describes the steps required for integrating the Playkit SDK in Android applications. Please follow these instructions carefully to make sure the integration is successful.
-
-The article also shows you how to create a  [player](https://github.com/kaltura/playkit-android/blob/develop/playkit/src/main/java/com/kaltura/playkit/Player.java) using [PlayerConfig](https://github.com/kaltura/playkit-android/blob/develop/playkit/src/main/java/com/kaltura/playkit/PlayerConfig.java). 
+This article describes the steps required for integrating the Playkit SDK in Android applications. Please follow these instructions carefully to make sure the integration is successful. The article also shows you how to create a  [player](https://github.com/kaltura/playkit-android/blob/develop/playkit/src/main/java/com/kaltura/playkit/Player.java) using [PlayerConfig](https://github.com/kaltura/playkit-android/blob/develop/playkit/src/main/java/com/kaltura/playkit/PlayerConfig.java). 
 
 In addition, you'll also learn how to receive a PlayerConfig.Media object with the help of the built-in [MockMediaProvider](https://github.com/kaltura/playkit-android/blob/develop/playkit/src/main/java/com/kaltura/playkit/backend/mock/MockMediaProvider.java).
 By following these simple steps, you'll be able to create your own player and start using it immediately. 
@@ -57,17 +55,17 @@ The PlayerConfig object is a simple data object that holds the initial configura
 
 The [PlayerConfig](https://github.com/kaltura/playkit-android/blob/develop/playkit/src/main/java/com/kaltura/playkit/PlayerConfig.java) consists of two main objects: media and plugins. For now, we'll focus on creating the Media object. Additional information about Plugins is available in this [Plugins article](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/Plugins-Android.md).
 
-##Using MockMediaProvider  
+## Kaltura's MediaProvider Classes  
 
-Playkit have build in [MediaProviders](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/Android/MediaProviders-Android.md) classes. In this example we will focus on the [MockMediaProvider](https://github.com/kaltura/playkit-android/blob/develop/playkit/src/main/java/com/kaltura/playkit/backend/mock/MockMediaProvider.java). 
+Playkit has a large number of built-in [MediaProvider classes](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/Android/MediaProviders-Android.md). In this example we'll focus on the [MockMediaProvider](https://github.com/kaltura/playkit-android/blob/develop/playkit/src/main/java/com/kaltura/playkit/backend/mock/MockMediaProvider.java) class, which is a class that knows how to create a Media object from JSON. 
 
+### Using the MockMediaProvider  
 
-MockMediaProvider class knows how to create Media object from json. Lets take this JsonObject and parse it with our provider.
+1. Take take the JsonObject and parse it with our provider. 
+2. Next, let's assume that we have this JsonObject saved locally in our project assets directory, with the name entries.playkit.json:
 
-Lets say, we have this JsonObject saved localy in our project assets directory, with name entries.playkit.json:
-
-```
-"dash": {
+	```
+	"dash": {
     "duration": 100000,
     "id": "entryId",
     "name": "Name of the source",
@@ -79,13 +77,13 @@ Lets say, we have this JsonObject saved localy in our project assets directory, 
       }
     ]
   }
-``` 
-Now we want that [MockMediaProvider](https://github.com/kaltura/playkit-android/blob/develop/playkit/src/main/java/com/kaltura/playkit/backend/mock/MockMediaProvider.java) will provide us with the PlayerConfig.Media object. So we need to create a new instance of it, and pass in the constructor the location of the file, android context and id of the media we are interested in.
+	``` 
+3. Next, we want the [MockMediaProvider](https://github.com/kaltura/playkit-android/blob/develop/playkit/src/main/java/com/kaltura/playkit/backend/mock/MockMediaProvider.java) to provide us with the PlayerConfig.Media object. Therefore, we need to create a new instance of it, and pass to the constructor the location of the file, Android context, and the ID of the media we are interested in:
 
-```
- @Override
- protected void onStart() {
-    //create mock provider. 
+	```
+ 	@Override
+ 	protected void onStart() {
+   	 //create mock provider. 
 	MockMediaProvider mockProvider = new MockMediaProvider("entries.playkit.json", this, "entryId");
 	
 	//load PKMediaEntry from json file.
@@ -120,14 +118,12 @@ Now we want that [MockMediaProvider](https://github.com/kaltura/playkit-android/
                
             }
         });
-```
+	```
 
-onComplete we will receive the PKMediaEntry object with which we can populate our PlayerConfig.Media, create player and pass config object into it.
+4. UPon completeion (onComplete), you'll receive the PKMediaEntry object with which you can populate the PlayerConfig.Media, create a player, and pass the configuration object into it.
+5. If you have all the neccessary data for playback (your own MediaProvider), you can manually populate the Media object by calling setters on the PlayerConfig.Media object in the following way:
 
-
-If you have all the neccessary data for playback (your own MediaProvider), you can manually populate the Media object by calling setters on the PlayerConfig.Media object like that:
-
-```
+	```
 @Override
 protected void onStart() {
 	//Create config object
@@ -167,28 +163,24 @@ protected void onStart() {
    	yourLayout.addView(playerView);
 
 	}
-```
+	```
 
-and pass it to the PlayerConfig object.
+	and pass it to the PlayerConfig object.
 
 
-
-## Conclusion  
-In this quick tutorial we saw how to create simple Player using MockMediaProvider and start playback of the video.
-
-In the next sections you will learn :
+In the next sections you'll learn how to  proceed with the Android SDK setup, including:
 
 - [How to listen and handle player events and states.](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/Android/PlayerStatesAndEvents-Android.md)
 - [How to use plugins.](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/Android/HowToUsePlugins-Android.md)
-- [How to create new Analytics Plugin.](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/Android/Create-new-analytics-plugin-Android.md)
+- [How to create a new Analytics Plugin.](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/Android/Create-new-analytics-plugin-Android.md)
 - Plugin specific configurations: [IMA](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/Android/IMAPlugin-Android.md),  [Kaltura Analytics](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/Android/KalturaAnalyticsPlugin-Android.md), [Kaltura Stats](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/Android/KalturaStatsPlugin-Android.md), [TVPAPI Stats](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/Android/TVPAPIStatsPlugin-Android.md), [Phoenix Stats](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/Android/PhoenixStatsPlugin-Android.md), [Youbora](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/Android/Youbora-Android.md).
-- [Media Providers: OVP, OTT, Mock.](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/Android/MediaProviders-Android.md)
-- [How to use ChromeCast.](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/Android/Chromecast-Android.md)
-- [Best practisec for UI handling during Live playback.](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/Android/LivePlayback-Android.md)
-- [How to work with tracks.](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/Android/TrackSelections-Android.md)
-- [Playing DRM content.](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/Android/DRM-Android.md)
-- [Playing content in offline.](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/Android/Offline-Android.md)
-- [Handle connectivity loss, and application life cycle.](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/Android/ConnectivityAndLifecycle-Android.md)
+- [Media Providers: OVP, OTT, Mock](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/Android/MediaProviders-Android.md)
+- [How to use ChromeCast](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/Android/Chromecast-Android.md)
+- [Best practisec for UI handling during Live playback](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/Android/LivePlayback-Android.md)
+- [How to work with tracks](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/Android/TrackSelections-Android.md)
+- [Playing DRM content](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/Android/DRM-Android.md)
+- [Playing content in offline](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/Android/Offline-Android.md)
+- [Handle connectivity loss, and application life cycle](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/Android/ConnectivityAndLifecycle-Android.md)
 
 
 
