@@ -48,32 +48,34 @@ plugins.setPluginConfig("KalturaAnalytics", kalturaAnalyticsConfig);
 
 The Kaltura Analytics Plugin supports the following events:
 
-IMPRESSION(1),
+        ```
+        IMPRESSION(1),
 
-PLAY_REQUEST(2),
+       PLAY_REQUEST(2),
 
-PLAY(3),
+       PLAY(3),
         
-RESUME(4),
+       RESUME(4),
         
-PLAY_25PERCENT(11),
+       PLAY_25PERCENT(11),
         
-PLAY_50PERCENT(12),
+       PLAY_50PERCENT(12),
         
-PLAY_75PERCENT(13),
+       PLAY_75PERCENT(13),
         
-PLAY_100PERCENT(14),
+       PLAY_100PERCENT(14),
         
-PAUSE(33),
+       PAUSE(33),
         
-REPLAY(34),
+       REPLAY(34),
        
-SEEK(35),
+       SEEK(35),
         
-SOURCE_SELECTED(39),
+       SOURCE_SELECTED(39),
         
-INFO(40),
+       INFO(40),
         
-SPEED(41),
+       SPEED(41),
         
-VIEW(99);
+       VIEW(99);
+        ```
