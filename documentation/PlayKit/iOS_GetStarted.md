@@ -32,4 +32,4 @@ Before you begin development with PlayKit for iOS, there are a few concepts you 
 | SDK | [PlayKit Releases](https://github.com/kaltura/playkit-ios/releases) | [PlayKit Spec](https://github.com/CocoaPods/Specs/tree/master/Specs) | [Basic Embed](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/iOS_BasicEmbedDocumantation.md) | [PlayKit Sample Applications](https://github.com/kaltura/playkit-ios-samples) |
 
 
-#### Next -> [PlayKit Basic Embed Documantation](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/iOS_BasicEmbedDocumantation.md)
+#### Next -> [PlayKit Basic Embed Documentation](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/iOS_BasicEmbedDocumantation.md)
