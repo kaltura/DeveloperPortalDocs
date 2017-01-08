@@ -17,7 +17,7 @@ To begin casting, you'll need to follow these steps.
 
 Configure the following environments as follows:
 
-**TVPAPI Envrionment**
+**TVPAPI Environment**
 
   ```
   TVPAPICastBuilder tvpapiCastBuilder = new TVPAPICastBuilder()
