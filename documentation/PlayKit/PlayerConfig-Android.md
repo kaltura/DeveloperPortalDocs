@@ -1,31 +1,28 @@
 ---
 layout: page
-title: PlayerConfig
+title: Player Configuration on Android Devices
 subcat: Android
 weight: 291
 ---
 
+The player configuration is the main data object of the Playkit SDK; this object is used for configuring all plugins and for creating and obtaining the media provider media entries that will play on the device.
 
-##PlayerConfig
+## Media Entry - PKMediaEntry  
 
-Player configuration is the main data object of the Playkit SDK. Here we will configure all the plugins and create/obtain from media provider media entry that will play. So lets dive in to the structure of this object.
-
-##MediaEntry
-
-The PKMediaEntry contains information regarding the media that will be played. With this information, the Kaltura Video Player
+The PKMediaEntry contains information regarding the media that will be played. With this information, the Kaltura Mobile Video Player
 prepares the source that will play the media, decides which type of player is required to play the media, and more.
 
-#### Methods for Creating the PKMediaEntry  
+### Methods for Creating the PKMediaEntry  
 
 The PKMediaEntry can be created using one of the following methods:
 
-1. **Manually** - Instantiate a new PKMediaEntry instance and fill the its fields.
-   [Learn more here...](#PkMediaEntry breakdown)
+1. **Manually** - Instantiate a new PKMediaEntry instance and fill the fields. 
+   [Learn more here...](#PkMediaEntry breakdown).
 
-2. **Using a MockMediaProvider** - Create a PKMediaEntry from a json input file or JsonObject.
-   [Learn more here...](https://github.com/kaltura/DeveloperPortalDocs/tree/playkit/documentation/PlayKit/MediaEntryProvider.md#MockMediaProvider)
+2. **Using a MockMediaProvider** - Create a PKMediaEntry from a JSON input file or JsonObject.
+   [Learn more here...](https://github.com/kaltura/DeveloperPortalDocs/tree/playkit/documentation/PlayKit/MediaEntryProvider.md#MockMediaProvider).
 
-3. **Using a remote media Provider** - Use one of the provided MediaEntryProvider implementations:
+3. **Using a remote media provider** - Use one of the provided MediaEntryProvider implementations:
     For OVP environments, use "KalturaOvpMediaProvider".
     For OTT environments, use "PhoenixMediaProvider".
 
@@ -39,66 +36,66 @@ The PKMediaEntry can be created using one of the following methods:
    
    [Learn more here...](PlayKit/MediaEntryProvider.md#RemoteMediaProviders)
 
-Once you have a PKMediaEntry ready you can build the player configuration and plugins, and continue to prepare the Kaltura Video Player for play.
+Once you have a PKMediaEntry ready, you can build the player configuration and plugins, and continue to prepare the Kaltura Mobile Video Player for play.
+
+### About the PKMediaEntry  
 
 
-### [PKMediaEntry](https://github.com/kaltura/playkit-android/blob/develop/playkit/src/main/java/com/kaltura/playkit/PKMediaEntry.java)
+The PkMediaEntry holds information gathered from the media details and needed for the player, such as the URL to play, the DRM data, and duration.
 
-PkMediaEntry holds information gathered from the media details and needed for the player.
-Such as, url to play, DRM data, duration.
+Additional information includes:
 
-String id - correlates to the media/entry id
-long duration - the media duration in seconds
-MediaEntryType mediaType - indicates the type to be played: can be Vod, Live or Unknown.
-List<PKMediaSource> sources - list of source objects
+* String id - correlates to the media/entry id
+* long duration - the media duration in seconds
+* MediaEntryType mediaType - indicates the type to be played (VOD, Live or Unknown)
+* List<PKMediaSource> sources - list of source objects
 
-The PKMediaEntry can be created with builder style instantiation, chain setters:
-```
-PKMediaEntry mediaEntry = new PKMediaEntry().setId(entry.getId())
+The PKMediaEntry can be created with builder style instantiation, chain setters as follows:
+   ```
+   PKMediaEntry mediaEntry = new PKMediaEntry().setId(entry.getId())
                                             .setSources(sourcesList)
                                             .setDuration(entry.getDuration())
                                             .setMediaType(MediaTypeConverter.toMediaEntryType(entry.getType()));
-```
+   ```
+To learn more, see [PKMediaEntry](https://github.com/kaltura/playkit-android/blob/develop/playkit/src/main/java/com/kaltura/playkit/PKMediaEntry.java).
 
-### [PKMediaSource](https://github.com/kaltura/playkit-android/blob/develop/playkit/src/main/java/com/kaltura/playkit/PKMediaSource.java)
+### PKMediaSource  
 
-PKMediaEntry object contains a list of "PKMediaSource". All sources relates to the same media, but have different format / quality / flavors.
-The player decides which of the source will actually be played.
+The PKMediaEntry object contains a list of "PKMediaSources". All sources relate to the same media, but have different formats / qualities / flavors. The player determines which of the sources will actually be played.
 
+To learn more, see [PKMediaSource](https://github.com/kaltura/playkit-android/blob/develop/playkit/src/main/java/com/kaltura/playkit/PKMediaSource.java)
 
-**Manually Create Media Source:**
+#### Manually a Create Media Source  
 
-PKMediaSource can be created with builder like coding, by chaining setters:
+PKMediaSource can be created with builder-like coding, by chaining setters:
 
-```
-PKMediaSource pkMediaSource = new PKMediaSource().setId(sourceId)
+   ```
+   PKMediaSource pkMediaSource = new PKMediaSource().setId(sourceId)
                                                  .setUrl(sourceUrl)
                                                  .setDrmData(dramDataList);
 
-```
+   ```
 
 * **_In OTT environments:_**
-Each source represents one MediaFile (Media or AssetInfo contains list of MediaFile items. Each file represents different format. HD, SD Download...)
+Each source represents one MediaFile (Media or AssetInfo contains list of MediaFile items. Each file represents a different format. HD, SD Download...)
 Each file can point to a different video, like Trailer MediaFile and HD media file.
 When playing on OTT environments, specific "format" (MediaFile), should be configured.
 
 
 * **_In OVP environments:_**
-PKMediaSource items are created according to some criteria:
+PKMediaSource items are created according to several criteria:
   * Supported video format: url [.mp4], mpdash [.mpd], applehttp [.m3u8]
   * Flavors: defines the quality of the video.
   * Bit rate
 
-Single "Entry" can have many media sources. Player should decides according to device capability, connection quality, and other parameters,
-which of the sources is best the for the current play.
-In case of DRM restricted media, such as widevine, drm information will be needed for the play.
+A single "Entry" can have many media sources. The player determines which source to use according to the device's capability, connection quality, and other parameters, such as which of the sources is best for the current play. 
 
-### [PKDrmParams](https://github.com/kaltura/playkit-android/blob/develop/playkit/src/main/java/com/kaltura/playkit/PKDrmParams.java)
+If the media is DRM-restricted, such as Widevine, the DRM information will be needed for playing.
 
-PKDrmParams represents a single DRM license info object.
-PKDrmParams contains the licenseUri that will be needed to the play.
+### PKDrmParams
 
-PKMediaSource contains a list of "PKDrmParams" items. The player will select the source and the relevant DRM data according to device type, Connectivity,
-supported formats, etc.
+PKDrmParams represents a single DRM license info object. PKDrmParams contains the licenseUri that will be needed for the play. The PKMediaSource contains a list of "PKDrmParams" items. The player will select the source and the relevant DRM data according to device type, connectivity, supported formats, etc.
 
-[more about Media Providers...](https://github.com/kaltura/DeveloperPortalDocs/tree/playkit/documentation/PlayKit/MediaProviders.md)
+To learn more, see [PKDrmParams](https://github.com/kaltura/playkit-android/blob/develop/playkit/src/main/java/com/kaltura/playkit/PKDrmParams.java).
+
+To learn more, read the [Media Providers](https://github.com/kaltura/DeveloperPortalDocs/tree/playkit/documentation/PlayKit/MediaProviders.md) article.
