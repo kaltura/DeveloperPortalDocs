@@ -11,7 +11,7 @@ This section includes samples for basic player operations such as configuration.
 
 >Note: For an Objective C example, see the article [PlayKit ObjC Basic Embed]().
 
-## Basic Embed
+## Basic Embed  
 
 ### Setting up using Cocoapods
 
@@ -19,7 +19,7 @@ This section includes samples for basic player operations such as configuration.
 
     `pod 'PlayKit'`
 
-2. Because the Playkit SDK is written in Swift, you should attach the following to the bottom of your Podfile:
+2. Because the Playkit SDK is written in Swift, you'll need to attach the following to the bottom of your Podfile:
     
     ```
     pre_install do |installer|
@@ -88,7 +88,7 @@ To set the player view size:
 
 ### Control Player - Basic Player Actions  
 
-Add your custome buttons and control to the player as follows:
+Add custom buttons and controls to the player as follows:
 
     ```
     @IBAction func playClicked(_ sender: AnyObject) {
