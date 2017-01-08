@@ -19,8 +19,8 @@ Configure the following environments as follows:
 
 **TVPAPI Envrionment**
 
-```
-TVPAPICastBuilder tvpapiCastBuilder = new TVPAPICastBuilder()
+  ```
+  TVPAPICastBuilder tvpapiCastBuilder = new TVPAPICastBuilder()
                 .setFormat()
                 .setInitObject()
                 .setMwEmbedUrl()
@@ -29,14 +29,14 @@ TVPAPICastBuilder tvpapiCastBuilder = new TVPAPICastBuilder()
                 .setMediaEntryId()
                 .setStreamType(StreamType.VOD);
                 
-MediaInfo mediaInfo = tvpapiCastBuilder.build();
-remoteMediaClient.load(mediaInfo)
-```
+  MediaInfo mediaInfo = tvpapiCastBuilder.build();
+  remoteMediaClient.load(mediaInfo)
+  ```
 
 **OVP Envrionment**
 
-```
-OVPCastBuilder ovpCastBuilder = new OVPCastBuilder()
+  ```
+  OVPCastBuilder ovpCastBuilder = new OVPCastBuilder()
                 .setKs()
                 .setMwEmbedUrl()
                 .setPartnerId()
@@ -44,32 +44,32 @@ OVPCastBuilder ovpCastBuilder = new OVPCastBuilder()
                 .setMediaEntryId()
                 .setStreamType(StreamType.VOD);
                 
-MediaInfo mediaInfo = ovpCastBuilder.build();
-remoteMediaClient.load(mediaInfo)
-```
+  MediaInfo mediaInfo = ovpCastBuilder.build();
+  remoteMediaClient.load(mediaInfo)
+  ```
 
 ### Optional Casting Configuration  
 
 The following configurations are optional for casting:
 
-```
-// MediaMetadata
-MediaMetadata mediaMetadata = new MediaMetadata(MediaMetadata.MEDIA_TYPE_MOVIE);
-mediaMetadata.putString(MediaMetadata.KEY_TITLE, title);
-mediaMetadata.putString(MediaMetadata.KEY_SUBTITLE, subTitle);
-mediaMetadata.addImage(new WebImage(uri, width, height));
-castBuilder.setMetadata(mediaMetadata);
+  ```
+  // MediaMetadata
+  MediaMetadata mediaMetadata = new MediaMetadata(MediaMetadata.MEDIA_TYPE_MOVIE);
+  mediaMetadata.putString(MediaMetadata.KEY_TITLE, title);
+  mediaMetadata.putString(MediaMetadata.KEY_SUBTITLE, subTitle);
+  mediaMetadata.addImage(new WebImage(uri, width, height));
+  castBuilder.setMetadata(mediaMetadata);
 
-// AdTagUrl
-castBuilder.setAdTagUrl();
+  // AdTagUrl
+  castBuilder.setAdTagUrl();
 
-// TextTrackStyle
-TextTrackStyle textTrackStyle = new TextTrackStyle();
-castBuilder.setTextTrackStyle(textTrackStyle);
+  // TextTrackStyle
+  TextTrackStyle textTrackStyle = new TextTrackStyle();
+  castBuilder.setTextTrackStyle(textTrackStyle);
 
-```
+  ```
 
-## Live vs. VOD  
+## Live vs. VOD    
 
 The following section shows the differences betwen the Live and VOD casting:
 
@@ -79,6 +79,7 @@ The following section shows the differences betwen the Live and VOD casting:
 
 **Tracks**
 
-###useful links
+###Useful Links  
+
 - cast developer guide
 - cast guidelines
