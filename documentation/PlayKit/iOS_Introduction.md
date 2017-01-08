@@ -28,4 +28,4 @@ This guide assumes that you have the necessary Objective C or Swift and iOS deve
 
 
 
-** Next -> [Get started with PlayKit iOS](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/iOS_GetStarted.md)**
+** Next -> [Get started with PlayKit iOS(https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/iOS_GetStarted.md)**
