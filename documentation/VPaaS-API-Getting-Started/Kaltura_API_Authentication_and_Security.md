@@ -46,7 +46,7 @@ Every KS is limited by one or more of the following components:
 
 * Expiry time – Can be set to a short period (1 second) up to 10 years. 
 
-**NOTE:** The player must perform all Kaltura API calls before the user hits play, so setting this too short for player sessions may break the playback experience. About 30 minutes is reasonable for just playback, or you could extend the player to re-negotiate for a session if it expires.
+**Note:** The player must perform all Kaltura API calls before the user hits play, so setting this too short for player sessions may break the playback experience. About 30 minutes is reasonable for just playback, or you could extend the player to re-negotiate for a session if it expires.
 
 * Number of API calls - E.g., no more than 5 API calls allowed on the KS.
 
@@ -139,7 +139,7 @@ To see an implementation of the KS generation algorithm, refer to the GenerateSe
 *   **Call session.start** - Calling the Kaltura Session.start API to generate a session on the server.  
     <span class="mce-note-graphic">Note: Using the session.start API is discouraged unless secure connection (SSL) is enabled on the account and there are specific reasons to generate the KS on the server side, using short expiry time that requires synchronizing to the server time.</span>
 *   **Call user.loginByLoginId - **This method is using Kaltura Users and their Password instead of partner id and secret key.   
-    <span class="mce-note-graphic">NOTE: This method is should be preferred in most cases. <br />1. It is easier to remember ua ser name and password.<br />2. Users can be limited to specific roles and permissions (e.g. enabling only upload).<br />3. Users can be deleted, passwords changed or demoted in permissions, while the secret keys can't be modified easily. </span>
+    <span class="mce-note-graphic">Note: This method is should be preferred in most cases. <br />1. It is easier to remember ua ser name and password.<br />2. Users can be limited to specific roles and permissions (e.g. enabling only upload).<br />3. Users can be deleted, passwords changed or demoted in permissions, while the secret keys can't be modified easily. </span>
 *   **Using an Application Token - **This method is described in full in [this article](https://vpaas.kaltura.com/documentation/VPaaS-API-Getting-Started/Generating-KS-with-App-Tokens.html). </span>
 
 ###  KS Types  
@@ -750,7 +750,7 @@ Some privileges support a wildcard (*) value (for example, *edit:**). A wildcar
   Examples are in PHP using the PHP5 Kaltura Client Library:
 </p>
 
-**Never use a KalturaSessionType ADMIN in a ks generated for end users.**
+**Important!** Never use a KalturaSessionType ADMIN in a KS generated for end users.
 </p>
 
 **Allow access to a specific entry Id (limitation is set via Access Control):**  
@@ -900,9 +900,9 @@ Kaltura’s integrated DRM solutions seamlessly plug in to its existing infrastr
 
 Encrypted video files are generated as additional “flavors” of original asset using Kaltura’s transcoding farm and based on selected vendor and license policy. 
 
-<img src="../../assets/228.img">
+Use the standard Markdown notation for images ![DRM Metadata](./images/DRM Metadata.jpg). 
 
-<span class="mce-note-graphic">NOTE: Due to licensing requirements, DRM solutions are only available for commercial Kaltura editions (SaaS and On Prem) and are at additional cost. For more information about DRM and the available DRM solutions, please <a href="http://corp.kaltura.com/company/contact-us" target="_blank">contact us</a> or contact your Kaltura Account Manager.</span>
+<span class="mce-note-graphic">Note: Due to licensing requirements, DRM solutions are only available for commercial Kaltura editions (SaaS and On Prem) and are at additional cost. For more information about DRM and the available DRM solutions, please <a href="http://corp.kaltura.com/company/contact-us" target="_blank">contact us</a> or contact your Kaltura Account Manager.</span>
 
 <span class="mce-heading-2">Important Considerations For Application Developers</span><span class="mce-heading-3"></span>
 
@@ -930,7 +930,7 @@ Your API Secret Keys (ADMIN and USER) are generated when you create am account. 
 *   Keep the secret keys in a separated file with strict file permissions.
 
 <div class="mce-heading-3">
-  Use Admin KS with care
+  Use Admin KS with Care
 </div>
 
 A compromised Admin KS will allow a malicious user to gain full access to the publisher account, leading way to harm.
