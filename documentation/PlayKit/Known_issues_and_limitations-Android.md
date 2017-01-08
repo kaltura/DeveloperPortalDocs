@@ -41,4 +41,4 @@ Our solution is as follows:
  setContentView();
  ```
 
-This will make the surfaceView transcluent until the layout is actually created.
+This will make the surfaceView translucent until the layout is actually created.
