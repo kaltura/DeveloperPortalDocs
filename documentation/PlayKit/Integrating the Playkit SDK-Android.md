@@ -7,31 +7,32 @@ weight: 291
 
 [![Android](https://img.shields.io/badge/Android-Supported-green.svg)](https://github.com/kaltura/playkit-android)
 
-This article will describe step by step integraition of the Playkit SDK in your application. And shows how to create [player](https://github.com/kaltura/playkit-android/blob/develop/playkit/src/main/java/com/kaltura/playkit/Player.java) using [PlayerConfig](https://github.com/kaltura/playkit-android/blob/develop/playkit/src/main/java/com/kaltura/playkit/PlayerConfig.java). Also we will see how to receive PlayerConfig.Media object with the help of the build-in [MockMediaProvider](https://github.com/kaltura/playkit-android/blob/develop/playkit/src/main/java/com/kaltura/playkit/backend/mock/MockMediaProvider.java).
-Following this simple steps, you will be able to create your own player and start using it. So lets get started!
+This article describes the step-by-step integration of the Playkit SDK in your application. The article also shows you how to create a  [player](https://github.com/kaltura/playkit-android/blob/develop/playkit/src/main/java/com/kaltura/playkit/Player.java) using [PlayerConfig](https://github.com/kaltura/playkit-android/blob/develop/playkit/src/main/java/com/kaltura/playkit/PlayerConfig.java). 
+In addition, you'll also learn how to receive a PlayerConfig.Media object with the help of the built-in [MockMediaProvider](https://github.com/kaltura/playkit-android/blob/develop/playkit/src/main/java/com/kaltura/playkit/backend/mock/MockMediaProvider.java).
+By following these simple steps, you'll be able to create your own player and start using it. 
 
 ## Integrate the Plakit SDK into your Application Settings 
 
 1. Clone the SDK  from https://github.com/kaltura/playkit-android and locate it next to your application code. 
 2. In the setting.gradle, add the SDK projet settings as follows:
-```
-include ':playkit', ':playkitdemo'
-```
+	```
+	include ':playkit', ':playkitdemo'
+	```
 3. In your build.gradle file, add the dependancy for the SDK:
+	```
+ 	compile project(path: ':playkit')
+	```
 
-```
- compile project(path: ':playkit')
-```
+## Create the Player Instance and Start Playback  
 
-## Create the player instance and start playback.
-In order to create the instance of the player all you need to do is to add this line in your Activity/Fragment. Passing the [PlayerConfig](https://github.com/kaltura/playkit-android/blob/develop/playkit/src/main/java/com/kaltura/playkit/PlayerConfig.java) object and Android Context.
+To create the instance of the player, add the following line to your Activity/Fragment to pass the [PlayerConfig](https://github.com/kaltura/playkit-android/blob/develop/playkit/src/main/java/com/kaltura/playkit/PlayerConfig.java) object and Android Context.
 
-```
-Player player = PlayKitManager.loadPlayer(config, context);
+	```
+	Player player = PlayKitManager.loadPlayer(config, context);
 
-```
+	```
 
-In next step we will add the player view to the view hierarchy.
+Next, add the player view to the view hierarchy as follows:
 
 ```
 View playerView = player.getView();
@@ -49,7 +50,8 @@ In order to pause the playback just call:
 player.pause();
 ```
 
-## More about PlayerConfig:
+## More about PlayerConfig  
+
 Here we will learn more about this object and how to create it. In general, this is a simple data object, which holds the initial configurations for the player. Like media entry we want to play and plugins we want to configure. For the full documentation of the PlayerConfig, visit [here](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/Android/PlayerConfig-Android.md)
 
 [PlayerConfig](https://github.com/kaltura/playkit-android/blob/develop/playkit/src/main/java/com/kaltura/playkit/PlayerConfig.java) consist from two main objects. The Media and the Plugins. For now we will focus on creating the Media object. But more about Plugins you can learn in the [Plugins section](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/Plugins-Android.md).
