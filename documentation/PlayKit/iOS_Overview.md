@@ -1,20 +1,18 @@
 ---
 layout: page
-title: PlayKit Overview
+title: PlayKit iOS Overview
 subcat: iOS
 weight: 290
 ---
 
 [![iOS](https://img.shields.io/badge/iOS-Supported-green.svg)](https://github.com/kaltura/playkit-ios)
 
-# PlayKit iOS Overview
+This document is the main source of documentation for developers working with Kaltura's iOS Player SDK project. Here you will find the information you need to get started developing your software using the SDK. The SDK provides tools to help you easily embed the Kaltura Player into native environments in your iOS applications.
 
-This document is the main source of documentation for developers working with Kaltura iOS Player SDK project. Here you will find information you need to get started developing your software using the SDK. The SDK provides tools to help you easily embed the Kaltura Player into native environments in your iOS applications.
-
-If this is your first time hearing about Kaltura, we recommend starting with the [Kaltura website](http://corp.kaltura.com/).
+If this is your first time hearing about Kaltura, we recommend you read up on Kaltura in the [Kaltura website](http://corp.kaltura.com/).
 
 
-## Quick navigation
+## Quick Navigation
 
 |                        Introduction                       |                     Getting Started                    |           Technical Documentation           |
 |:-----------------------------------------------------:|:------------------------------------------------------:|:-------------------------------------------:|
@@ -22,6 +20,6 @@ If this is your first time hearing about Kaltura, we recommend starting with the
 | [About PlayKit](https://forum.kaltura.org/c/playkit)  | [Getting Started](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/iOS_Introduction.md) | [Docs](https://forum.kaltura.org/c/playkit) |
 | Introducing PlayKit: Supported Features, Architecture                                      | How to contribute | Detailed technical documentation |
 
-## Questions or need help?
+## Questions or Need Help?
 
 Check out our [Samples](https://github.com/kaltura/playkit-ios-samples), [Full featured Demo](https://github.com/kaltura/playkit-ios-demo)  or [Kaltura PlayKit Forum](https://forum.kaltura.org/c/playkit) page for different ways of getting in touch.
