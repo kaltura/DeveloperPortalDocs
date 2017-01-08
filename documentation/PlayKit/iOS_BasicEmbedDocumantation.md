@@ -36,13 +36,13 @@ end
 ```
 > Note: For a complete Podfile sample go to [PlayKit Demo Podfile](https://github.com/kaltura/playkit-ios-demo/blob/master/Podfile) and then run a `pod install` command inside your terminal, or from the CocoaPods.application.
 
-### Declaring a Player Variable
+### Declaring a Player Variable  
 
 ```
 var playerController: Player
 ```
 
-### Setting player instance via sample configuration
+### Setting a Player Instance via Sample Configuration
 
 ```
 let config = PlayerConfig()
