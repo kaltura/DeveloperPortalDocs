@@ -32,4 +32,4 @@ Before beginning development with PlayKit for iOS there are a few concepts you s
 
 
 
-#### Next -> [Basic Embed](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/iOS_BasicEmbedDocumantation.md)
+#### Next -> [PlayKit Basic Embed Documantation](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/iOS_BasicEmbedDocumantation.md)
