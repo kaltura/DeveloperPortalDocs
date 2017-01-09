@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Getting Started: Integrating the Playkit SDK in Android Applications
+title: Getting Started Integrating the Playkit SDK in Android Applications
 subcat: Android
 weight: 291
 ---
