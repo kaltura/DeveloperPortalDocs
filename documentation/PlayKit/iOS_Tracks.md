@@ -1,8 +1,8 @@
 ---
 layout: page
 title: Adding Available Captions and Audio Tracks to iOS Devices
-subcat: iOS
-weight: 290
+subcat: iOS Version 3.0
+weight: 297
 ---
 
 [![iOS](https://img.shields.io/badge/iOS-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios) 
