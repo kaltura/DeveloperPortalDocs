@@ -7,7 +7,7 @@ weight: 296
 
 ## Create a Media-Entry 
 
-To crate a media entry, you'll need to use a Media Entry provider. Choose from the following three Media Entry providers:
+To create a media entry, you'll need to use a Media Entry provider. Choose from the following three Media Entry providers:
 
 * MockMediaProvider
 * OTTMediaProvider
