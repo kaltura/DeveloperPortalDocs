@@ -1,168 +1,98 @@
----
-layout: page
-title: Setting up the Media Entry Provider for iOS Devices
-subcat: iOS Version 3.0
-weight: 296
----
+#PlayKit 
 
-The Media Entry Provider is a component that is capable of loading media data. The provider supports the cancellation of the last executed load action.
+### How to send a item to play with PlayKit?
 
-## Set Up
-To set up the Media Entry Provider, you'll need to implement the following steps.
+## Create a Media-Entry 
 
-###  Install  
+In order to get a mediaEntry you should use MediaEntryProvider
+There is 3 options for MediaEntryProvider:
 
-Add to your pod file the following: `pod "PlayKit/GoogleCastAddon", :git => 'https://github.com/kaltura/playkit-ios.git', :tag => PLAYKIT_TAG`.
+1. MockMediaProvider
+2. OTTMediaProvider
+3. OVPMediaProvider
 
-To use the Google cast SDK, you'll need to also add:
+Each provider has it's own input params according to it's backend.
 
-####  Import  
 
-Next, import the following:
+### MockMediaProvider
 
-	```
-	import GoogleCast
-	import PlayKit
-	```
-* For ex' to reach the GCKGoogleCastContext, you'll need the import `GoogleCast`.
-* For ex' to reach the OVP/OTT-CastBuilder, you'll need the import `PlayKit`.
-
-##  Casting  
-
-To create GCKMediaInformation to cast, you'll need to use the CastBuilder, available through the OVPCastBuilder or the TVPAPICastBuilder.
-
-* For Ex' OVP:
-
-	```
-	do {
-	var media: GCKMediaInformation? = nil
-	media = try OVPCastBuilder()
-                    .set(ks: ks)
-                    .set(contentId: entryId)
-                    .set(adTagURL: adTagURL)
-                    .set(webPlayerURL: mwEmbedURL)
-                    .set(uiconfID: uiconfId)
-                    .set(partnerID: partnerId)
-                    .set(metaData: metaData)
-                    .build()
-
-	if let m = media {
-                self.load(mediaInformation: m)    
-            }
-	}catch{
-            print(error)
-	}
-                    
-	```
-* For Ex' OTT: 
-
-	```
-	do {
-	var media: GCKMediaInformation? = nil
-	 media = try TVPAPICastBuilder()
-                    .set(contentId: entryId)
-                    .set(webPlayerURL: mwEmbedURL)
-                    .set(uiconfID: uiconfId)
-                    .set(partnerID: partnerId)
-                    .set(metaData: metaData)
-                    .set(initObject: initObject)
-                    .set(format: format)
-                    .build()
-
-	if let m = media {
-                self.load(mediaInformation: m)    
-            }
-	}catch{
-            print(error)
-	}
-                    
-	```
-
-#### loadMedia  
+The Input of MockMediaProvider is json, for ex':
 
 ```
-private func load(mediaInformation:GCKMediaInformation) -> Void {
-        let session =  GCKCastContext.sharedInstance().sessionManager.currentCastSession
-        if let currentSession = session,  
-           let remoteMediaClient = currentSession.remoteMediaClient {
-            remoteMediaClient.loadMedia(mediaInformation, autoplay: true)
+{
+        "entryId": {
+            "duration": 60000,
+            "id": "entryId",
+            "name": "demo1",
+            "sources": [
+                        {
+                        "id": "m001s001",
+                        "mimeType": "application/dash+xml",
+                        "url": "http://cfvod.kaltura.com/dasha/p/1851571/sp/185157100/serveFlavor/entryId/0_pl5lbfo0/v/2/flavorId/0_,zwq3l44r,otmaqpnf,ywkmqnkg,/forceproxy/true/name/a.mp4.urlset/manifest.mpd"
+                        }
+                        ]
         }
-    }
-    
+}
+
+```
+
+Initialize the mockMediaProvider :
+
+```
+ let mediaProvider1 : MediaEntryProvider = MockMediaEntryProvider()
+            .set(content: self.fileContent)
+            .set(id: "entryId")
 ```
 
 
-#### Custom Data   
 
- private func customData(mediaMetaData: MediaMetadataData?) ->  GCKMediaMetadata {
-        
-        let metaData = GCKMediaMetadata(metadataType: GCKMediaMetadataType.movie)
-        if let title = mediaMetaData?.title {
-            metaData.setString(title, forKey: kGCKMetadataKeyTitle)
-        }
-        
-        if let subtitle = mediaMetaData?.subtitle {
-            metaData.setString(subtitle, forKey: kGCKMetadataKeySubtitle)
-        }
-        
-        if let images = mediaMetaData?.imageUrls {
-            
-            for image in images {
-                
-                guard let urlString = image.URL,
-                    let url = URL(string:urlString),
-                    let sheight = image.height,
-                    let swidth = image.width,
-                    let width = Int(swidth),
-                    let hight = Int(sheight)
-                    else {
-                        continue
-                }
-                
-                metaData.addImage(GCKImage(url:url , width:width , height:hight))
+### OTTMediaProvider
+
+The Input of OTTMediaProvider is:
+
+1. session provider - which provids all information regarding session. for ex' ks, partnerId, server base url 
+2. mediaId - the media to play id 
+3. type - is it media or EPG
+4. file formats to play - which file you accepts to play. ( HD,SD etc' )
+
+
+```
+let provider = OTTMediaProvider()
+        .set(sessionProvider: sessionProvider)
+        .set(mediaId: mediaID)
+        .set(type: AssetType.media)
+        .set(formats: ["Mobile_Devices_Main_HD"])
+```
+
+### OVPMediaProvider
+
+The Input of the OVPMediaProvider is:
+
+1. session provider - which provids all information regarding session. for ex' ks, partnerId, server base url 
+2. entryId - The entry to play id
+3. apiServerURL - base server url, for example: 
+ 
+
+```
+let provider = OVPMediaProvider()
+        .set(sessionProvider: sessionProvider)
+        .set(entryId: self.entryID)
+```
+
+
+### load the media :
+In order to get the mediaEntry you should call the "load" method.
+
+```
+ provider.loadMedia { (r:Result<MediaEntry>) in
+            if (r.error != nil){
+                print(r.error)
+            }else{
+                print(r)
             }
         }
-        
-        return metaData
-        
-    }
-
-##  Advertisments  
-
-To use advertisments, you'll need to implement the following steps.
-
-1. Add ad tag URL to the cast builder as follows:
-
-	```
-	media = try OVPCastBuilder()
-	 ...
-	.set(adTagURL: gcAddonData.params?.adTagURL)
-	 ...
-	 .build()
-	 
-	```
-2. Next, set the adInfoParserDelegate in the remoteMediaClient to AdInfoParser (which is a class from PlayKit) as follows:
-
-	```
-	private func load(mediaInformation:GCKMediaInformation) -> Void {
-        let session =  GCKCastContext.sharedInstance().sessionManager.currentCastSession
-        if let currentSession = session,  let remoteMediaClient = currentSession.remoteMediaClient {
-            remoteMediaClient.loadMedia(mediaInformation, autoplay: true)
-            //add the following raw
-            remoteMediaClient.adInfoParserDelegate = AdInfoParser.shared
-        }
-    }
-    
-	```
-
-
-
-
-
-
-
-
-
+```
+	
 
 
 
