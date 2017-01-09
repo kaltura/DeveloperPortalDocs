@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Get Started with PlayKit for iOS
+title: Get Started for iOS
 subcat: iOS Version 3.0
 weight: 292
 ---
@@ -13,7 +13,7 @@ This article will help you get started with the development of the Playkit for i
 
 Before you begin development with PlayKit for iOS, there are a few topics you should read up on first:
 
-1. [**Media Providers**](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/iOS_MediaProviders.md): These are components that are capable of loading media data as PKMediaEntry representation.
+1. [**Media Providers**](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/iOS_MediaProviders.html): These are components that are capable of loading media data as PKMediaEntry representation.
 2. [**CocoaPods**](https://guides.cocoapods.org/using/using-cocoapods.html) The PlayKit iOS SDK and its plugins can be added to your project using the CocoaPods dependency manager. 
 
 >Note: You'll need to use CocoaPods version 1.0 or newer.
@@ -29,7 +29,7 @@ Before you begin development with PlayKit for iOS, there are a few topics you sh
 
 |     | Release Notes & Package                                             | Podspec                                                              | Embed Documentation                   | Samples                                                                       |
 |-----|---------------------------------------------------------------------|----------------------------------------------------------------------|-------------------------------------------|-------------------------------------------------------------------------------|
-| SDK | [PlayKit Releases](https://github.com/kaltura/playkit-ios/releases) | [PlayKit Spec](https://github.com/CocoaPods/Specs/tree/master/Specs) | [Basic Embed](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/iOS_BasicEmbedDocumantation.md) | [PlayKit Sample Applications](https://github.com/kaltura/playkit-ios-samples) |
+| SDK | [PlayKit Releases](https://github.com/kaltura/playkit-ios/releases) | [PlayKit Spec](https://github.com/CocoaPods/Specs/tree/master/Specs) | [Basic Embed](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/iOS_BasicEmbedDocumantation.html) | [PlayKit Sample Applications](https://github.com/kaltura/playkit-ios-samples) |
 
 
-**Next -> [PlayKit Basic Embed Documentation](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/iOS_BasicEmbedDocumantation.md)**
+**Next -> [PlayKit Basic Embed Documentation](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/iOS_BasicEmbedDocumantation.html)**
