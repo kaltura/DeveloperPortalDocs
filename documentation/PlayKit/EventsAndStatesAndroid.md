@@ -1,6 +1,13 @@
-##Events
+---
+layout: page
+title: Events and States on Android Devices
+ubcat: Android Version 3.0
+weight: 414
+---
 
-## Registering to Player Events  
+## Events  
+
+### Registering to Player Events  
 
 ```
 private void setPlayerListeners() {
@@ -113,7 +120,7 @@ private void setPlayerListeners() {
 
 ```
 
-## Registering to Player State Change Listener  
+### Registering to Player State Change Listeners  
 
 ```
 playerKit.addStateChangeListener(new PKEvent.Listener() {
