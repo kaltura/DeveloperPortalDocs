@@ -16,7 +16,6 @@ The Kaltura Vidoe Player SDK for iOS and Android supports:
 * AirPlay  
 * Offline Mode (including DRM)  
 * PIP
-
 and more...
 
 ## The Mobile SDK's Architecture Overview  
