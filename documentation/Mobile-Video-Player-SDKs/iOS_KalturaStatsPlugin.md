@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Configuring the Kaltura Stats Plugin on Android Devices
+title: Configuring the Kaltura Stats Plugin on iOS Devices
 subcat: iOS Version 3.0
 weight: 296
 ---
