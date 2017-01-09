@@ -11,9 +11,7 @@ This section includes samples for basic player operations such as configuration.
 
 >Note: For an Objective C example, see the PlayKit ObjC Basic Embed.
 
-## Basic Embed  
-
-### Setting Up Using Cocoapods
+## Setting Up Using Cocoapods
 
 1. Add a `pod 'PlayKit'` file similar to the following to your Podfile:
 
@@ -36,7 +34,7 @@ This section includes samples for basic player operations such as configuration.
     ```
 > Note: For a complete Podfile sample go to [PlayKit Demo Podfile](https://github.com/kaltura/playkit-ios-demo/blob/master/Podfile) and then run a `pod install` command inside your terminal, or from the CocoaPods.application.
 
-### Declaring a Player Variable  
+## Declaring a Player Variable  
 
 To declare a player variable, use:
 
@@ -44,7 +42,7 @@ To declare a player variable, use:
     var playerController: Player
     ```
 
-### Setting a Player Instance via Sample Configuration  
+## Setting a Player Instance via Sample Configuration  
 
 To set a player instance via a sample configuration, use:
 
@@ -71,7 +69,7 @@ To set a player instance via a sample configuration, use:
 
 >Note: To learn more about `PlayerConfig` Creation, see the [PlayerConfig Doc]() article.
 
-### Setting the Player View Size  
+## Setting the Player View Size  
 
 To set the player view size:
 
@@ -86,7 +84,7 @@ To set the player view size:
     playerView.addSubview(self.playerController.view)
     ```
 
-### Control Player - Basic Player Actions  
+## Control Player - Basic Player Actions  
 
 Add custom buttons and controls to the player as follows:
 
