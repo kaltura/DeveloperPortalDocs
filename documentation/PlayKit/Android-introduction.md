@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Introduction for Android
+title: Introduction to the SDK for Android
 subcat: Android Version 3.0
 weight: 391
 ---
