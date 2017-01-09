@@ -86,7 +86,8 @@ For the Analytics Plugin to start loading, you'll need to set the plugin configu
 ## MessageBus Supported Events  
 
 The MessageBus supports the following events:
-```
+
+ ```
  {% highlight c %}
 
  PlayerEvents{
@@ -135,7 +136,8 @@ public enum Type {
         ALL_ADS_COMPLETED
     }
  {% endhighlight %}
-```
+ ```
+ 
 ## Adding New Events Using the MessageBus  
 
 If you have new events you need to report, you can add new events by implementing the following steps: 
