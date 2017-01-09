@@ -1,6 +1,6 @@
 ---
 layout: page
-title: PlayKit iOS Overview
+title: iOS Overview
 subcat: iOS Version 3.0
 weight: 290
 ---
@@ -17,7 +17,7 @@ If this is your first time hearing about Kaltura, we recommend you read up on Ka
 |                        Introduction                       |                     Getting Started                    |           Technical Documentation           |
 |:-----------------------------------------------------:|:------------------------------------------------------:|:-------------------------------------------:|
 |             ![help](./iOS-images/overView.png)            |            ![help](./iOS-images/getStarted.png)            |           ![help](./iOS-images/TD.png)          |
-| [About PlayKit](https://forum.kaltura.org/c/playkit)  | [Getting Started](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/iOS_Introduction.md) | [Docs](https://forum.kaltura.org/c/playkit) |
+| [About PlayKit](https://forum.kaltura.org/c/playkit)  | [Getting Started](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/iOS_Introduction.html) | [Docs](https://forum.kaltura.org/c/playkit) |
 | Introducing PlayKit: Supported Features, Architecture                                      | How to contribute | Detailed technical documentation |
 
 ## Questions or Need Help?
