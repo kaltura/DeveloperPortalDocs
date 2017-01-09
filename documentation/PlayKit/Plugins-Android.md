@@ -1,4 +1,9 @@
-##Plugins  
+---
+layout: page
+title: Using Plugins on Android Devices
+ubcat: Android Version 3.0
+weight: 395
+---
 
 ## Setting the Plugin Configuration to the Youbora Plugin
 
