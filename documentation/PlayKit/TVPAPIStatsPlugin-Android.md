@@ -2,7 +2,7 @@
 layout: page
 title: Configuring the TVPAPI Stats Plugin on Android Devices
 subcat: Android Version 3.0
-weight: 293
+weight: 403
 ---
 
 [![Android](https://img.shields.io/badge/Android-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios)
