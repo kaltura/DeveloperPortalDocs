@@ -1,6 +1,6 @@
 ---
 layout: page
-title: iOS Basic Embed Documantation
+title: iOS Basic Embed Documentation
 subcat: iOS Version 3.0
 weight: 293
 ---
