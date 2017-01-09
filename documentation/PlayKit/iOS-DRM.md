@@ -1,11 +1,9 @@
 ---
 layout: page
-title: PlayKit iOS DRM
+title: DRM Support in iOS Devices
 subcat: iOS Version 3.0
 weight: 295
 ---
-
-## DRM Support in iOS Devices
 
 The following DRM schemes are supported in iOS devices:
 
