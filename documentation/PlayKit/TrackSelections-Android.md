@@ -1,20 +1,19 @@
 ---
 layout: page
-title: Track Selection
+title: Implementing Track Selection
 subcat: Android Version 3.0
-weight: 291
+weight: 409
 ---
 
 [![Android](https://img.shields.io/badge/Android-Supported-green.svg)](https://github.com/kaltura/playkit-android)
 
-If you want to change the video/audio quality or captions language, you'll need to use tracks, which are easy to implement using the Kaltura Mobile Video Player SDK. All you need is to listen to the event, receive 
-the tracks data object and populate your views with it. When the desired track was selected, just send us the selected track id and we will do the work. Lets take a close look on how exactly you can do it.
+If you want to change the video/audio quality or captions language, you'll need to use tracks, which are easy to implement using the Kaltura Mobile Video Player SDK. To implement tracks, all you need to do is to listen to the event, receive the tracks data object, and populate your views with the object. When the desired track is selected, simply send us the selected track ID and we'll implement the track selection for us.
 
-##Listening to the event.
+## Listening to the Player Event  
 
-If you dont know how to listen to the player events, please follow [this link.](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/Android/PlayerStatesAndEvents-Android.md)
-In order to receive tracks all you need is to subscribe to the event called <a name="populateViews">***TRACKS_AVAILABLE***.</a>
+To learn how to listen to player events, simply follow the instructions in the [Player States and Events](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/Android/PlayerStatesAndEvents-Android.md) article.
 
+To receive tracks, subscribe to the event called <a name="populateViews">***TRACKS_AVAILABLE***.</a> as follows:
 
 ```
 //Subscribe to TRACKS_AVAILABLE event.
@@ -34,16 +33,21 @@ In order to receive tracks all you need is to subscribe to the event called <a n
         }, PlayerEvent.Type.TRACKS_AVAILABLE);
 ```
 
-## PKTracks structure
-[PKTracks](https://github.com/kaltura/playkit-android/blob/fa5144871597d6fcd03ccc541c85a94c485284b5/playkit/src/main/java/com/kaltura/playkit/PKTracks.java) object consist from 3 lists:
+## PKTracks Structure  
+
+The [PKTracks](https://github.com/kaltura/playkit-android/blob/fa5144871597d6fcd03ccc541c85a94c485284b5/playkit/src/main/java/com/kaltura/playkit/PKTracks.java) object consists of three lists:
 
 - videoTracks
 - audioTracks
 - textTracks
 
-###BaseTrack:
-It is base class which is extended by [VideoTrack](https://github.com/kaltura/playkit-android/blob/develop/playkit/src/main/java/com/kaltura/playkit/VideoTrack.java), [AudioTrack](https://github.com/kaltura/playkit-android/blob/develop/playkit/src/main/java/com/kaltura/playkit/AudioTrack.java) and [TextTrack](https://github.com/kaltura/playkit-android/blob/develop/playkit/src/main/java/com/kaltura/playkit/TextTrack.java). Actually it holds the uniqueId of the track and boolean isAdaptive, which should describe if this track can support adaptive playback (also known as "Auto").
-The uniqueId is actually the id which should be sent when we want to switch track. We will see it later in the example.
+### BaseTrack  
+
+The base class is extended by the [VideoTrack](https://github.com/kaltura/playkit-android/blob/develop/playkit/src/main/java/com/kaltura/playkit/VideoTrack.java), the [AudioTrack](https://github.com/kaltura/playkit-android/blob/develop/playkit/src/main/java/com/kaltura/playkit/AudioTrack.java), and the [TextTrack](https://github.com/kaltura/playkit-android/blob/develop/playkit/src/main/java/com/kaltura/playkit/TextTrack.java). 
+
+The base class holds the uniqueId of the track and boolean isAdaptive, which should specify whether this track can support adaptive playback (also known as "Auto").
+
+The uniqueId is the ID that should be sent when you want to switch tracks; you'll be able to see this ID in the example below.
 
 ###VideoTrack
 This object holds data about single video track. To be more specific, it have:
