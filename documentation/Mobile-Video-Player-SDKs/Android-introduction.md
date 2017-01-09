@@ -26,4 +26,4 @@ The following features are supported in Android devices:
 
 This guide assumes that you have the necessary Objective C or Swift and Android development skills to build and compile advanced Android applications using XCode.
 
-**Next -> [Get started with PlayKit Android](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/iOS_GetStarted.md)**
+**Next -> [Get started with SDK for Android](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/Getting-Started-Playkit-SDK-Android.html)**
