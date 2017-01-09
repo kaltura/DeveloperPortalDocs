@@ -2,7 +2,7 @@
 layout: page
 title: Building a New Analytics Plugin on Android Devices
 ubcat: Android Version 3.0
-weight: 296
+weight: 399
 ---
 
 [![Android](https://img.shields.io/badge/Android-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios)
