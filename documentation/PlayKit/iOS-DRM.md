@@ -1,8 +1,8 @@
 ---
 layout: page
 title: PlayKit iOS DRM
-subcat: iOS
-weight: 290
+subcat: iOS Version 3.0
+weight: 295
 ---
 
 ## DRM Support in iOS Devices
