@@ -1,6 +1,6 @@
 ---
 layout: page
-title: PlayKit Android Overview
+title: Overview to the SDK for Android
 subcat: Android Version 3.0
 weight: 390
 ---
@@ -12,14 +12,4 @@ This document is the main source of documentation for developers working with Ka
 If this is your first time hearing about Kaltura, we recommend you read up on Kaltura in the [Kaltura website](http://corp.kaltura.com/).
 
 
-## Quick Navigation
-
-|                        Introduction                       |                     Getting Started                    |           Technical Documentation           |
-|:-----------------------------------------------------:|:------------------------------------------------------:|:-------------------------------------------:|
-|             ![help](./iOS-images/overView.png)            |            ![help](./iOS-images/getStarted.png)            |           ![help](./iOS-images/TD.png)          |
-| [About PlayKit](https://forum.kaltura.org/c/playkit)  | [Getting Started](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/iOS_Introduction.md) | [Docs](https://forum.kaltura.org/c/playkit) |
-| Introducing PlayKit: Supported Features, Architecture                                      | How to contribute | Detailed technical documentation |
-
-## Questions or Need Help?
-
-Check out our [Samples](https://github.com/kaltura/playkit-ios-samples), [Full featured Demo](https://github.com/kaltura/playkit-ios-demo)  or [Kaltura PlayKit Forum](https://forum.kaltura.org/c/playkit) page for different ways of getting in touch.
+**Next -> [Introduction to the SDK for Android](https://github.com/kaltura/DeveloperPortalDocs/edit/playkit/documentation/PlayKit/Android-introduction.md)**
