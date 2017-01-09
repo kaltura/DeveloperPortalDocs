@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Get Started with PlayKit for iOS
-subcat: iOS
+subcat: iOS Version 3.0
 weight: 292
 ---
 
