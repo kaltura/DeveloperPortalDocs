@@ -1,8 +1,8 @@
 ---
 layout: page
 title: Known Issues and Limitations in Android Devices
-subcat: Android
-weight: 291
+subcat: Android Version 3.0
+weight: 411
 ---
 
 [![Android](https://img.shields.io/badge/Android-Supported-green.svg)](https://github.com/kaltura/playkit-android)
