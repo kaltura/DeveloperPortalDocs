@@ -63,7 +63,6 @@ do {
 var media: GCKMediaInformation? = nil
  media = try TVPAPICastBuilder()
                     .set(contentId: entryId)
-                    .set(webPlayerURL: mwEmbedURL)
                     .set(uiconfID: uiconfId)
                     .set(partnerID: partnerId)
                     .set(metaData: metaData)
