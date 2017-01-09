@@ -25,7 +25,7 @@ Next, register the IMA Plugin inside your application as follows:
 PlayKitManager.sharedInstance.registerPlugin(IMAPlugin.self)
 ```
 
-## Configure the Kaltura Video Player to use the IMA Plugin  
+## Configure the Kaltura Video Player to Use the IMA Plugin  
 
 To configure the player to use IMA Plugin, add the following configuration to your `PlayerConfig` file as follows:
 
