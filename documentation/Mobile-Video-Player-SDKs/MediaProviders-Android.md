@@ -31,12 +31,12 @@ The JsonObject should contain the relevant properties needed to construct the PK
 
 1. Manually create a JsonObject and add its properties:
 
-  ```
-  JsonObject entries = new JsonObject();
-  JsonObject mediaEntryJson = new JsonObject();
-  mediaEntryJson.addProperty("id", id);
-  mediaEntryJson.addProperty("name", name);
-  mediaEntryJson.addProperty("duration", duration);
+    ```
+    JsonObject entries = new JsonObject();
+    JsonObject mediaEntryJson = new JsonObject();
+   mediaEntryJson.addProperty("id", id);
+   mediaEntryJson.addProperty("name", name);
+    mediaEntryJson.addProperty("duration", duration);
   mediaEntryJson.addProperty("mediaType", type);
 
   JsonArray sourcesArray = new JsonArray();
@@ -54,8 +54,7 @@ The JsonObject should contain the relevant properties needed to construct the PK
   mediaEntryJson.add("sources",  sourcesArray);
 
   entries.add(<EntryId>, mediaEntryJson);
-  ```
-
+   ```
 2. Parsing a string representation of JSON data into JsonObject:
 
   ```
@@ -178,7 +177,7 @@ To use this provider:
 
 1. Create an instance of the KalturaOvpMediaProvider class.
 2. Using setters, fill in at least the mandatory fields to be able to construct and execute the API requests.
-  The mandatory fields can be found here: [SessionProvider](https://github.com/kaltura/DeveloperPortalDocs/tree/playkit/documentation/PlayKit/SessionProviders.md)) and EntryId.
+  The mandatory fields can be found here: [SessionProvider](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/SessionProviders-Android.html)) and EntryId.
 3. Activate the providers "load" method, passing it an OnMediaLoadCompletion callback object, in order to get the PKMediaEntry object.  
 
   ```
@@ -221,7 +220,7 @@ To use this provider:
 
 1. Create an instance of the PhoenixMediaProvider class.
 2. Using setters, fill in at least the mandatory fields to be able to construct and execute the API requests.
-  The mandatory fields can be found here:  [SessionProvider](https://github.com/kaltura/DeveloperPortalDocs/tree/playkit/documentation/PlayKit/SessionProviders.md), assetId, referenceType, and formats (at least 1).
+  The mandatory fields can be found here:  [SessionProvider](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/SessionProviders-Android.html), assetId, referenceType, and formats (at least 1).
 3. Activate the providers "load" method, passing it an OnMediaLoadCompletion callback object to get the PKMediaEntry object.  
 
   ```
