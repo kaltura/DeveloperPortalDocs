@@ -1,8 +1,8 @@
 ---
 layout: page
 title: iOS PlayKit Basic Embed Documantation
-subcat: iOS
-weight: 290
+subcat: iOS Version 3.0
+weight: 293
 ---
 
 [![iOS](https://img.shields.io/badge/iOS-Supported-green.svg)](https://github.com/kaltura/playkit-ios)
@@ -13,7 +13,7 @@ This section includes samples for basic player operations such as configuration.
 
 ## Basic Embed  
 
-### Setting up using Cocoapods
+### Setting Up Using Cocoapods
 
 1. Add a `pod 'PlayKit'` file similar to the following to your Podfile:
 
