@@ -2,10 +2,10 @@
 layout: page
 title: Player Configuration on Android Devices
 subcat: Android
-weight: 291
+weight: 397
 ---
 
-The player configuration is the main data object of the Playkit SDK; this object is used for configuring all plugins and for creating and obtaining the media provider media entries that will play on the device.
+The player configuration is the main data object of the SDK; this object is used for configuring all plugins and for creating and obtaining the media provider media entries that will play on the device.
 
 ## Media Entry - PKMediaEntry  
 
