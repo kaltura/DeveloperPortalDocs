@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Building a New Analytics Plugin on Android Devices
-sbcat: Android Version 3.0
+subcat: Android Version 3.0
 weight: 399
 ---
 
