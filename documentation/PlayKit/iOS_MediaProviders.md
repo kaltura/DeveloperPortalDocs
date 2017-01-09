@@ -1,32 +1,42 @@
-# Geting Started :
+---
+layout: page
+title: Setting up the Media Entry Provider for iOS Devices
+subcat: iOS Version 3.0
+weight: 296
+---
 
-####  Install
-Add to your pod file:
-pod "PlayKit/GoogleCastAddon", :git => 'https://github.com/kaltura/playkit-ios.git', :tag => PLAYKIT_TAG
+The Media Entry Provider is a component that is capable of loading media data. The provider supports the cancellation of the last executed load action.
 
-In order to use google cast sdk you should add
+## Set Up
+To set up the Media Entry Provider, you'll need to implement the following steps.
 
-####  Import
+###  Install  
 
-```
-import GoogleCast
-import PlayKit
-```
+Add to your pod file the following: `pod "PlayKit/GoogleCastAddon", :git => 'https://github.com/kaltura/playkit-ios.git', :tag => PLAYKIT_TAG`.
 
-For ex' to reach GCKGoogleCastContext you need the - import `GoogleCast`
-For ex' to reach OVP/OTT-CastBuilder you need the - import `PlayKit`
+To use the Google cast SDK, you'll need to also add:
 
+####  Import  
 
-##  Casting 
-In order to create GCKMediaInformation to cast we should use the CastBuilder :
-You can use the OVPCastBuilder Or the TVPAPICastBuilder :
+Next, import the following:
 
-For Ex' OVP
+	```
+	import GoogleCast
+	import PlayKit
+	```
+* For ex' to reach the GCKGoogleCastContext, you'll need the import `GoogleCast`.
+* For ex' to reach the OVP/OTT-CastBuilder, you'll need the import `PlayKit`.
 
-```
-do {
-var media: GCKMediaInformation? = nil
-media = try OVPCastBuilder()
+##  Casting  
+
+To create GCKMediaInformation to cast, you'll need to use the CastBuilder, available through the OVPCastBuilder or the TVPAPICastBuilder.
+
+* For Ex' OVP:
+
+	```
+	do {
+	var media: GCKMediaInformation? = nil
+	media = try OVPCastBuilder()
                     .set(ks: ks)
                     .set(contentId: entryId)
                     .set(adTagURL: adTagURL)
@@ -36,22 +46,20 @@ media = try OVPCastBuilder()
                     .set(metaData: metaData)
                     .build()
 
-if let m = media {
+	if let m = media {
                 self.load(mediaInformation: m)    
             }
-}catch{
+	}catch{
             print(error)
-}
+	}
                     
-```
+	```
+* For Ex' OTT: 
 
-
-For Ex' OTT
-
-```
-do {
-var media: GCKMediaInformation? = nil
- media = try TVPAPICastBuilder()
+	```
+	do {
+	var media: GCKMediaInformation? = nil
+	 media = try TVPAPICastBuilder()
                     .set(contentId: entryId)
                     .set(webPlayerURL: mwEmbedURL)
                     .set(uiconfID: uiconfId)
@@ -61,16 +69,16 @@ var media: GCKMediaInformation? = nil
                     .set(format: format)
                     .build()
 
-if let m = media {
+	if let m = media {
                 self.load(mediaInformation: m)    
             }
-}catch{
+	}catch{
             print(error)
-}
+	}
                     
-```
+	```
 
-#### loadMedia
+#### loadMedia  
 
 ```
 private func load(mediaInformation:GCKMediaInformation) -> Void {
@@ -84,7 +92,7 @@ private func load(mediaInformation:GCKMediaInformation) -> Void {
 ```
 
 
-#### custom data 
+#### Custom Data   
 
  private func customData(mediaMetaData: MediaMetadataData?) ->  GCKMediaMetadata {
         
@@ -119,23 +127,24 @@ private func load(mediaInformation:GCKMediaInformation) -> Void {
         
     }
 
-##  Advertisment  
+##  Advertisments  
 
-1 . Add ad tag URL to cast builder:
+To use advertisments, you'll need to implement the following steps.
 
-```
-media = try OVPCastBuilder()
+1. Add ad tag URL to the cast builder as follows:
+
+	```
+	media = try OVPCastBuilder()
 	 ...
 	.set(adTagURL: gcAddonData.params?.adTagURL)
 	 ...
 	 .build()
 	 
-```
+	```
+2. Next, set the adInfoParserDelegate in the remoteMediaClient to AdInfoParser (which is a class from PlayKit) as follows:
 
-2 . set the adInfoParserDelegate in remoteMediaClient to AdInfoParser ( A class from PlayKit )
-
-```
-private func load(mediaInformation:GCKMediaInformation) -> Void {
+	```
+	private func load(mediaInformation:GCKMediaInformation) -> Void {
         let session =  GCKCastContext.sharedInstance().sessionManager.currentCastSession
         if let currentSession = session,  let remoteMediaClient = currentSession.remoteMediaClient {
             remoteMediaClient.loadMedia(mediaInformation, autoplay: true)
@@ -144,7 +153,7 @@ private func load(mediaInformation:GCKMediaInformation) -> Void {
         }
     }
     
-```
+	```
 
 
 
