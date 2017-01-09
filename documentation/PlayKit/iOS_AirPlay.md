@@ -2,7 +2,7 @@
 layout: page
 title: Adding the Apple AirPlay Functionality to Applications
 subcat: iOS Version 3.0
-weight: 297
+weight: 302
 ---
 
 [![iOS](https://img.shields.io/badge/iOS-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios) 
