@@ -1,5 +1,9 @@
-#PlayKit 
-
+---
+layout: page
+title: Setting Up Media Providers for iOS Devices
+subcat: iOS Version 3.0
+weight: 296
+---
 ### How to send a item to play with PlayKit?
 
 ## Create a Media-Entry 
