@@ -14,44 +14,47 @@ This article describes the steps required for using the TVPAPI Stats Plugin on A
 
 Register the TVPAPI Stats Plugin in your application as follows:
 
-```
-PlayKitManager.registerPlugins(TVPAPIAnalyticsPlugin.factory);
-```
+        ```
+               PlayKitManager.registerPlugins(TVPAPIAnalyticsPlugin.factory);
+        ```
 
 ### Configure the Plugin Configuration Object for the TVPAPI Stats Plugin 
 
 To configure the TVPAPI Stats Plugin, add the following configuration to your `pluginConfig` file as follows:
 
-```
-private void configureTVPAPIPlugin(PlayerConfig pluginConfig) {
+        ```
+        private void configureTVPAPIPlugin(PlayerConfig pluginConfig) {
         JsonObject TVPAPIConfigEntry = new JsonObject();
         TVPAPIConfigEntry.addProperty("fileId", "fileId");
-        TVPAPIConfigEntry.addProperty("baseUrl", "base url"); //Sample url - http://tvpapi-preprod.ott.kaltura.com/v3_9/gateways/jsonpostgw.aspx?
+        TVPAPIConfigEntry.addProperty("baseUrl", "base url"); //Sample url - http://tvpapi-     preprod.ott.kaltura.com/v3_9/gateways/jsonpostgw.aspx?
         TVPAPIConfigEntry.addProperty("timerInterval", timer value for HIT events - in millisecondes);//Default value - 30000
         TVPAPIConfigEntry.add("initObj", initObj); // must be a valid initObj of TVPAPI
-```
+        ```
 
 ### Set the Plugin Configuration to the TVPAPI Stats Plugin  
 
 To ensure that the TVPAPI Stats Plugin starts loading, you'll need to set the plugin configuration you created as follows:
 
-```
-PlayerConfig config = new PlayerConfig();
-PlayerConfig.Plugins plugins = config.plugins;
-plugins.setPluginConfig("TVPAPIAnalytics" , TVPAPIConfigEntry.toJson()); 
-```
+        ```
+               PlayerConfig config = new PlayerConfig();
+        PlayerConfig.Plugins plugins = config.plugins;
+        plugins.setPluginConfig("TVPAPIAnalytics" , TVPAPIConfigEntry.toJson()); 
+        ```
 
 ## TVPAPI Stats Plugin Supported Events  
 
 The TVPAPI Stats Plugin supports the following events:
 
-TVPAPI action Types{
+        ```
 
- MediaHit, //outputs every interval time
+        TVPAPI action Types{
+
+         MediaHit, //outputs every interval time
  
- MediaMark //Outputs in the following events - {PLAY,STOP,PAUSE,FIRST_PLAY,LOAD,FINISH,BITRATE_CHANGE,ERROR}
+          MediaMark //Outputs in the following events - {PLAY,STOP,PAUSE,FIRST_PLAY,LOAD,FINISH,BITRATE_CHANGE,ERROR}
  
-}
+        }
+        ```
 
 ## Concurrency Handler  
 
