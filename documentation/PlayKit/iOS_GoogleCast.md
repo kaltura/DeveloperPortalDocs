@@ -13,8 +13,6 @@ This article describes how to add support for Google Cast for iOS Devices.
 
 Add the following to your pod file: `pod "PlayKit/GoogleCastAddon", :git => 'https://github.com/kaltura/playkit-ios.git', :tag => PLAYKIT_TAG`.
 
-In order to use google cast sdk you should add 
-
 ###  Import the Required Files  
 
 Next, import the following:
