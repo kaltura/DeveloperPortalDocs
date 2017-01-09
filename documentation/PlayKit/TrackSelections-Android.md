@@ -15,7 +15,7 @@ To learn how to listen to player events, simply follow the instructions in the [
 
 To receive tracks, subscribe to the event called <a name="populateViews">***TRACKS_AVAILABLE***.</a> as follows:
 
-```
+```	
 //Subscribe to TRACKS_AVAILABLE event.
  player.addEventListener(new PKEvent.Listener() {
             @Override
@@ -31,7 +31,7 @@ To receive tracks, subscribe to the event called <a name="populateViews">***TRAC
              	populateViews(tracks);   
             }
         }, PlayerEvent.Type.TRACKS_AVAILABLE);
-```
+	```
 
 ## PKTracks Structure  
 
@@ -49,112 +49,118 @@ The base class holds the uniqueId of the track and boolean isAdaptive, which sho
 
 The uniqueId is the ID that should be sent when you want to switch tracks; you'll be able to see this ID in the example below.
 
-###VideoTrack
-This object holds data about single video track. To be more specific, it have:
+### VideoTrack 
+
+The VideoTrack object holds data about single video tracks, including the:
 
 - bitrate
 - width 
 - height
 
-###AudioTrack
-This object holds data about single audio track.
+### AudioTrack  
+
+The AudioTrack object holds data about single audio tracks, including the:
 
 - bitrate
 - language 
 - label 
 
-###TextTrack
-It is actually captions/subtitle representation. And have folowing fields.
+### TextTrack  
+
+The TextTrack object is the captions/subtitle representation, which holds the folowing fields:
 
 - language
-- label.
+- label
 
-##Example of populating views with tracks:
+## Example of Populating Views with Tracks  
 
-Lets see the example of how we actually populate our view with tracks in the application.
-We will use android [Spinner](https://developer.android.com/guide/topics/ui/controls/spinner.html).
+Lets look at an example of how to populate a view with tracks in the application.
 
-First, create the xml.
+In this example, we'll use an Android [Spinner](https://developer.android.com/guide/topics/ui/controls/spinner.html).
 
-```
-<LinearLayout
+1. First, create the xml:
+
+	```
+	<LinearLayout
 	android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
->
+	>
 	<Spinner
     	android:id="@+id/videoSpinner"
     	android:layout_width="wrap_content"
     	android:layout_height="wrap_content" />
     
-</LinearLayout>
-```
-Next we need to create custom adapter.
+	</LinearLayout>
+	```
+2. Next, create a custom adapter:
 
-```
-public class TrackItemAdapter extends ArrayAdapter<TrackItem> {
+	```
+	public class TrackItemAdapter extends ArrayAdapter<TrackItem> {
 
-    private Context context;
-    private TrackItem[] trackItems;
+    	private Context context;
+   	 private TrackItem[] trackItems;
 
 
-    public TrackItemAdapter(Context context, int textViewResourceId, TrackItem[] trackItems) {
+	    public TrackItemAdapter(Context context, int textViewResourceId, TrackItem[] trackItems) {
         super(context, textViewResourceId, trackItems);
         this.context = context;
         this.trackItems = trackItems;
-    }
+  	  }
 
-    @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    	@Override
+    	public View getView(int position, View convertView, ViewGroup parent) {
         TextView label = new TextView(context);
         label.setTextColor(Color.BLACK);
         label.setText(trackItems[position].getTrackName());
         return label;
-    }
+  	  }
 
-    @Override
-    public View getDropDownView(int position, View convertView,
+	    @Override
+  	  public View getDropDownView(int position, View convertView,
                                     ViewGroup parent) {
         TextView label = new TextView(context);
         label.setTextColor(Color.BLACK);
         label.setText(trackItems[position].getTrackName());
         return label;
-    }
+   	 }
 
     @Override
-    public int getCount() {
+  	  public int getCount() {
         return trackItems.length;
-    }
-}
-```
-We also need to create our TrackItem, which is actually will be created based on the track data and passed into the TrackAdapter.
+  	  }
+	}
+	```
+3. You'll also need to create a TrackItem, which is created based on the track data and passed into the TrackAdapter:
 
-```
-public class TrackItem {
+	```
+	public class TrackItem {
 
-    private String uniqueId;
-    private String trackDescription; 
+	private String uniqueId;
+    	private String trackDescription; 
     
 
-    public TrackItem(String trackDescription, String uniqueId) {
+    	public TrackItem(String trackDescription, String uniqueId) {
         this.trackDescription = trackDescription;
         this.uniqueId = uniqueId;
-    }
+    	}
 
-    public String getTrackName() {
+    	public String getTrackName() {
         return trackDescription;
-    }
+    	}
 
-    public String getUniqueId() {
+    	public String getUniqueId() {
         return uniqueId;
-    }
-}
-```
+    	}
+	}
+	```
+## Use Case Example  
 
-After we did some preparation code, lets dig into the track use-case example. Remember, when we called [**populateViews(tracks);**](#populateViews) previously? So lets actually do it.
-In this example we will work with videoTracks, but in general the workflow for other track types should not be really different.
+After creating the preparation code, you're ready to dig into a track use case example. We'll use the [**populateViews(tracks);**](#populateViews) created previously.
 
-```		
+This example uses VideoTracks, but in general the workflow for other track types is similar.
+
+	```		
 	private void populateViews(PKTracks tracks){
 		prepareSpinner();
 
@@ -214,13 +220,11 @@ In this example we will work with videoTracks, but in general the workflow for o
                 : String.format("%.2fMbit", bitrate / 1000000f);
     }
 
-```
+	```
 
+The last step is to actually change the track. Previously, you set the `onItemSelectedListener` to the spinner, so let's implement that method and see how easy it is to switch between tracks.
 
-Well, we are almost done. The only thing, left to do is just actually change the track.
-Previosly we set onItemSelectedListener to our spinner, so lets implement that method and see, how easy it is to switch between tracks.
-
-```/
+	```/
 	 
 	 @Override
      public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -229,8 +233,5 @@ Previosly we set onItemSelectedListener to our spinner, so lets implement that m
             //tell to the player, to switch track based on the user selection.
             player.changeTrack(trackItem.getUniqueId());
     }
-```
-
-Thats all falks :)
-
+	```
 
