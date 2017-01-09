@@ -2,7 +2,7 @@
 layout: page
 title: Get Started with PlayKit for iOS
 subcat: iOS
-weight: 290
+weight: 292
 ---
 
 [![iOS](https://img.shields.io/badge/iOS-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios) 
@@ -11,7 +11,7 @@ This article will help you get started with the development of the Playkit for i
 
 ## Before You Begin  
 
-Before you begin development with PlayKit for iOS, there are a few concepts you should learn about first:
+Before you begin development with PlayKit for iOS, there are a few topics you should read up on first:
 
 1. [**Media Providers**](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/iOS_MediaProviders.md): These are components that are capable of loading media data as PKMediaEntry representation.
 2. [**CocoaPods**](https://guides.cocoapods.org/using/using-cocoapods.html) The PlayKit iOS SDK and its plugins can be added to your project using the CocoaPods dependency manager. 
@@ -32,4 +32,4 @@ Before you begin development with PlayKit for iOS, there are a few concepts you 
 | SDK | [PlayKit Releases](https://github.com/kaltura/playkit-ios/releases) | [PlayKit Spec](https://github.com/CocoaPods/Specs/tree/master/Specs) | [Basic Embed](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/iOS_BasicEmbedDocumantation.md) | [PlayKit Sample Applications](https://github.com/kaltura/playkit-ios-samples) |
 
 
-#### Next -> [PlayKit Basic Embed Documentation](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/iOS_BasicEmbedDocumantation.md)
+**Next -> [PlayKit Basic Embed Documentation](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/iOS_BasicEmbedDocumantation.md)**
