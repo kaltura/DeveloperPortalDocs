@@ -2,7 +2,7 @@
 layout: page
 title: Setting up Offline Playback on Android Devices
 subcat: Android Version 3.0
-weight: 412
+weight: 411
 ---
 
 [![Android](https://img.shields.io/badge/Android-Supported-green.svg)](https://github.com/kaltura/playkit-android)
@@ -33,7 +33,7 @@ Next, accept an additional parameter of type [LocalDrmStorage](https://github.co
 
 In first constructor, we implicitly implemented the [LocalDrmStorage](https://github.com/kaltura/playkit-android/blob/develop/playkit/src/main/java/com/kaltura/playkit/LocalDrmStorage.java) interface in the DefaultLocalDrmStorage class (which is actually an inner class of the LocalAssetsManager). In the second constructor, you can have your own implementation of this interface. You can read more about the LocalDrmStorage later in this section. For now, let's use the default constructor.
 
-Register the asset to the LocalAssetsManager. Note that you'll have to be ***Online*** while doing so.
+Register the asset to the LocalAssetsManager. Note that you'll need to be ***Online*** while doing so.
 
   ```
   //This listener will notify you about success/fail of the registration process.
