@@ -29,7 +29,8 @@ Next, import the following:
 
 To begin casting, you'll need to create a GCKMediaInformation by using a CastBuilder- either the OVPCastBuilder or the TVPAPICastBuilder.
 
-** OVP Example **
+
+**OVP Example**
 
 	```
 	do {
@@ -53,7 +54,7 @@ To begin casting, you'll need to create a GCKMediaInformation by using a CastBui
 	```
 
 
-** OTT Example **
+**OTT Example**
 
 	```
 	do {
@@ -130,6 +131,7 @@ To add custom data:
         
    	 }
 	```
+	
 ##  Advertisments  
 
 To add support for advertisments:
@@ -158,15 +160,3 @@ To add support for advertisments:
     }
     
 	```
-
-
-
-
-
-
-
-
-
-
-
-
