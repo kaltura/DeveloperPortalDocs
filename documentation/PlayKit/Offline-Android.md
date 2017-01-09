@@ -9,7 +9,7 @@ weight: 412
 
 This article describes how to implement offline playback in Playkit SDK on Android devices. 
 
-First, download the media you wish to playh. If you are looking for a good download manager you can use [this](https://github.com/kaltura/playkit-dtg-android) one. In general the most complex part of the playback in offline is managing the DRM content license, but we've already covered that issue for you.
+First, download the media you wish to play. If you are looking for a good download manager you can use [this](https://github.com/kaltura/playkit-dtg-android) one. In general the most complex part of the playback in offline is managing the DRM content license, but we've already covered that issue for you.
 
 ## Registering the Asset  
 
