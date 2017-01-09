@@ -17,11 +17,9 @@ prepares the source that will play the media, decides which type of player is re
 The PKMediaEntry can be created using one of the following methods:
 
 1. **Manually** - Instantiate a new PKMediaEntry instance and fill the fields. 
-   [Learn more here...](#PkMediaEntry breakdown).
 
 2. **Using a MockMediaProvider** - Create a PKMediaEntry from a JSON input file or JsonObject.
-   [Learn more here...](https://github.com/kaltura/DeveloperPortalDocs/tree/playkit/documentation/PlayKit/MediaEntryProvider.md#MockMediaProvider).
-
+   
 3. **Using a remote media provider** - Use one of the provided MediaEntryProvider implementations:
     For OVP environments, use "KalturaOvpMediaProvider".
     For OTT environments, use "PhoenixMediaProvider".
@@ -34,12 +32,9 @@ The PKMediaEntry can be created using one of the following methods:
    
    c) Once your provider object is ready, activate its "load" method and pass a completion callback. If successful, the PKMediaEntry object will be provided in the response.
    
-   [Learn more here...](PlayKit/MediaEntryProvider.md#RemoteMediaProviders)
-
 Once you have a PKMediaEntry ready, you can build the player configuration and plugins, and continue to prepare the Kaltura Mobile Video Player for play.
 
 ### About the PKMediaEntry  
-
 
 The PkMediaEntry holds information gathered from the media details and needed for the player, such as the URL to play, the DRM data, and duration.
 
