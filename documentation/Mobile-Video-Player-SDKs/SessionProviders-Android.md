@@ -12,7 +12,7 @@ Components such as Media Providers and some of the OVP plugins that need to conn
 The SessoinProvider provides the following:
 
 1. A Base url - This is the domain name of the designated remote host.
-  _**Base url should only contain the host domain name and should not include
+  _**The Base url should only contain the host domain name and should not include
    a path to the services within.**_
 
  _Example:_
@@ -33,8 +33,9 @@ There are a number of options for creating a SessionProvider:
 
 You can create a SessionProvider using an anonymous interface instantiation or implementing a class.
 
-   ```
-   SessionProvider sessionProvider = new SessionProvider() {
+
+     ```
+     SessionProvider sessionProvider = new SessionProvider() {
             @Override
             public String baseUrl() {
                 return baseUrl;
@@ -50,7 +51,7 @@ You can create a SessionProvider using an anonymous interface instantiation or i
                 return partnerId();
             }
         };
-   ```
+      ```
 
 ### Provided Implementation
 
@@ -75,7 +76,7 @@ An anonymous session can't be ended Until the session token (KS) expires.
 
 After a session has started, the SessionProvider is ready and can be used as a parameter for media providers and other components.
 
-** Using the OttSessionProvider**
+**Using the OttSessionProvider**
 
 To use the OttSessionProvider, implement the following:
 
@@ -125,7 +126,7 @@ To end a session, use the "session/end" API.
 After a session starts, the SessionProvider is ready and can be used as a parameter for media providers and other components.
 
 
-** Using the OvpSessionProvider**
+**Using the OvpSessionProvider**
 
 To use the OvpSessionProvider, implement the following:
 
