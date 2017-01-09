@@ -1,6 +1,6 @@
 ---
 layout: page
-title: PlayKit Introduction for iOS
+title: Introduction for iOS
 subcat: iOS Version 3.0
 weight: 291
 ---
@@ -26,4 +26,4 @@ The Kaltura Mobile SDKs for iOS provide the framework and tools to help you easi
 
 This guide assumes that you have the necessary Objective C or Swift and iOS development skills to build and compile advanced iOS applications using XCode.
 
-#### Next -> [Get started with PlayKit iOS](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/iOS_GetStarted.md)
+**Next -> [Get started with iOS](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/iOS_GetStarted.html)**
