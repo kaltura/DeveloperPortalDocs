@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Chromecast Setup
+title: Chromecast Setup on Android Devices
 subcat: Android Version 3.0
-weight: 291
+weight: 407
 ---
 
 [![Android](https://img.shields.io/badge/Android-Supported-green.svg)](https://github.com/kaltura/playkit-android)
