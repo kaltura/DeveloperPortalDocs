@@ -1,6 +1,11 @@
+---
+layout: page
+title: Setting Up Session Providers for Android Devices
+subcat: Android Version 3.0
+weight: 398
+---
 
-# SessionProvider
-Interface, defines the base requirements of an implementing element to enable access
+The SessionProvider interface defines the base requirements of an implementing element to enable access
 to a remote data source by the Players components.
 Components such as Media Providers and some of the OVP plugins, that needs to connect
 to the remote data source and request actions, get data, update data, works with
