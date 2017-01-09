@@ -17,7 +17,7 @@ Add the following to your pod file: `pod "PlayKit/GoogleCastAddon", :git => 'htt
 
 Next, import the following:
 
-```
+	```
 	import GoogleCast
 	import PlayKit
 	```
