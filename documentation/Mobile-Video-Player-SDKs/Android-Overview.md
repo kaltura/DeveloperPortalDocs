@@ -12,4 +12,4 @@ This document is the main source of documentation for developers working with Ka
 If this is your first time hearing about Kaltura, we recommend you read up on Kaltura in the [Kaltura website](http://corp.kaltura.com/).
 
 
-**Next -> [Introduction to the SDK for Android](https://github.com/kaltura/DeveloperPortalDocs/edit/playkit/documentation/PlayKit/Android-introduction.md)**
+**Next -> [Introduction to the SDK for Android](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/iOS_Introduction.html)**
