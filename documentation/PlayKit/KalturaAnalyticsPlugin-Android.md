@@ -2,7 +2,7 @@
 layout: page
 title: Configuring the Kaltura Analytics Plugin on Android Devices
 subcat: Android Version 3.0
-weight: 295
+weight: 401
 ---
 
 [![Android](https://img.shields.io/badge/Android-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios)
