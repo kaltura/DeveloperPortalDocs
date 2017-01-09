@@ -2,7 +2,7 @@
 layout: page
 title: Tracking Kaltura Video Player States and Events on Android Devices
 subcat: Android Version 3.0
-weight: 292
+weight: 394
 ---
 
 [![Android](https://img.shields.io/badge/Android-Supported-green.svg)](https://github.com/kaltura/playkit-android)
