@@ -2,7 +2,7 @@
 layout: page
 title: Configuring the Youbora Plugin on Android Devices
 subcat: Android Version 3.0
-weight: 291
+weight: 405
 ---
 
 [![Android](https://img.shields.io/badge/Android-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios)
