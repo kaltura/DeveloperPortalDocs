@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Getting Started with Playkit SDK in Android Applications
+title: Getting Started with the SDK in Android Applications
 subcat: Android Version 3.0
 weight: 392
 ---
