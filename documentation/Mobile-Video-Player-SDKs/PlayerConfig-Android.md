@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Player Configuration on Android Devices
-subcat: Android
+subcat: Android Version 3.0
 weight: 397
 ---
 
