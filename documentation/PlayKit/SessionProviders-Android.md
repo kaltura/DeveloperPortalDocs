@@ -5,36 +5,36 @@ subcat: Android Version 3.0
 weight: 398
 ---
 
-The SessionProvider interface defines the base requirements of an implementing element to enable access
-to a remote data source by the Players components.
-Components such as Media Providers and some of the OVP plugins, that needs to connect
-to the remote data source and request actions, get data, update data, works with
-the SessionProvider.
+The SessionProvider interface defines the base requirements for an implementing element that enables access to a remote data source by the player's components.
 
-SessoinProvider provides:
-1. Base url - The domain name of the designated remote host.
+Components such as Media Providers and some of the OVP plugins that need to connect to the remote data source and request actions, get data, and update date, work with the SessionProvider.
 
-   _**Base url should only contain the host domain name and should not include
+The SessoinProvider provides the following:
+
+1. A Base url - This is the domain name of the designated remote host.
+  _**Base url should only contain the host domain name and should not include
    a path to the services within.**_
 
  _Example:_
   ```
   OVP base url: https://cdnapisec.kaltura.com/
   ```
-2. Session Token - a valid session key to work against the data source.
-3. PartnerId - The partner, that was used to create the session token.
+2. A Session Token - This is a valid session key to work against the data source.
+3. PartnerId - The partner that was used to create the session token.
+
+>Note: You can create your own SessionProvider implementation or use the provided SDK implementations.
 
 
-**You can create your own SessionProvider implementation or use the provided SDK implementations.**
+## Creating a SessionProvider  
 
+There are a number of options for creating a SessionProvider:
 
-### Creating a SessionProvider
+### Self Implemented
 
-* **Self implemented:**
-  Using anonymous interface instantiation or implementing class.
+You can create a SessionProvider using an anonymous interface instantiation or implementing a class.
 
-```
- SessionProvider sessionProvider = new SessionProvider() {
+   ```
+   SessionProvider sessionProvider = new SessionProvider() {
             @Override
             public String baseUrl() {
                 return baseUrl;
@@ -50,35 +50,34 @@ SessoinProvider provides:
                 return partnerId();
             }
         };
-```
+   ```
 
-* **Provided implementations:**
-OttSessionProvider and OvpSessionProvider.
+### Provided Implementation
 
-  * **[OttSessionProvider](https://github.com/kaltura/playkit-android/blob/develop/playkit/src/main/java/com/kaltura/playkit/backend/phoenix/OttSessionProvider.java)**
+You can create a SessionProvider using the existing OttSessionProvider or OvpSessionProvider providerrs.
 
-   The OttSessionProvider supports, anonymous and user specific session creation, on Phoenix BE.
+#### OttSessionProvider  
 
-   Anonymous session starts with "ottUser/anonymousLogin" API.
-   User specific session starts with "ottUser/login" API, according to username and password.
+The [OttSessionProvider](https://github.com/kaltura/playkit-android/blob/develop/playkit/src/main/java/com/kaltura/playkit/backend/phoenix/OttSessionProvider.java) supports anonymous and user-specific session creation, on the Kaltura Phoenix Backend.
 
-   The provider handles the refreshes of the session token when needed, before it expires
-   and renew the session if did.
-   On Every session token fetching request, the session provider checks the current token
-   validity, and if expires and can be renewed, renews it.
+* The Anonymous session starts with the "ottUser/anonymousLogin" API.
+* User specific session starts with the "ottUser/login" API, according to the username and password.
 
-   User session can be ended, by that making the session token invalid. Further requests
-   with that token will fail.
-   Once session was ended it can't be renewed, and new session should be started.
-   Session ending is done with "ottUser/logout" API.
+The provider handles the refreshes of the session token when needed, before the token expires, and renews the session if it expires.
+Upon every session token fetching request, the session provider checks the current token validity; if the token has expired and can be renewed, the provider renews the token.
 
-   Anonymous session can't be ended. Until the session token (ks) gets expired the
-   token can be used.
+A user session can be ended by making the session token invalid. This  means that additional requests using that token will fail.
+Once a session has ended it can't be renewed, and a new session should be started.
 
-   After session started, the SessionProvider is ready and can be used as parameter
-   to the media providers and other components.
+To end a session, use the "ottUser/logout" API.
 
-   **How to use:**
+An anonymous session can't be ended Until the session token (KS) expires.
+
+After a session has started, the SessionProvider is ready and can be used as a parameter for media providers and other components.
+
+** Using the OttSessionProvider**
+
+To use the OttSessionProvider, implement the following:
 
     ```
     OttSessionProvider ottSessionProvider = new OttSessionProvider(PhoenixBaseUrl, partnerId);
@@ -107,28 +106,28 @@ OttSessionProvider and OvpSessionProvider.
     });
 
     ```
-  *  **[OvpSessionProvider](https://github.com/kaltura/playkit-android/blob/develop/playkit/src/main/java/com/kaltura/playkit/backend/ovp/OvpSessionProvider.java)**
+#### OvpSessionProvider  
 
-   The OvpSessionProvider supports, anonymous and user specific session creation, on OVP BE.
+The [OvpSessionProvider](https://github.com/kaltura/playkit-android/blob/develop/playkit/src/main/java/com/kaltura/playkit/backend/ovp/OvpSessionProvider.java) supports anonymous and user-specific session creation on Kaltura's OVP Backend.
 
-   Anonymous session starts with "session/startWidgetSession" API.
-   User specific session starts with "user/loginByLoginId" API
+* A anonymous session starts with the "session/startWidgetSession" API.
+* A user specific session starts with the "user/loginByLoginId" API
 
-   By default session is valid for 24h.
-   Once expired, the OvpSessionProvider will try to renew the session.
+By default a session is valid for 24 hours. Once expired, the OvpSessionProvider will try to renew the session.
 
-   User session can be ended, by that making the session token invalid. Further requests
-   with that token will fail.
-   Once session was ended it can't be renewed, and new session should be started.
-   Session ending is done with "session/end" API.
+A user session can be ended by making the session token invalid. This  means that additional requests using that token will fail.
+Once a session has ended it can't be renewed, and a new session should be started.
 
-   Anonymous session can't be ended. Until the session token (ks) gets expired the
-   token can be used.
+To end a session, use the "session/end" API.
 
-   After session started, the SessionProvider is ready and can be used as parameter
-   to the media providers and other components.
+> Note: An anonymous session can't be ended. Until the session token (KS) expires the token can be used.
 
-   **How to use:**
+After a session starts, the SessionProvider is ready and can be used as a parameter for media providers and other components.
+
+
+** Using the OvpSessionProvider**
+
+To use the OvpSessionProvider, implement the following:
 
       ```
       OvpSessionProvider ovpSessionProvider = new OvpSessionProvider(OvpBaseUrl);
