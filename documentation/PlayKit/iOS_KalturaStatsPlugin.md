@@ -1,8 +1,8 @@
 ---
 layout: page
 title: Configuring the Kaltura Stats Plugin on Android Devices
-subcat: iOS
-weight: 294
+subcat: iOS Version 3.0
+weight: 296
 ---
 
 [![iOS](https://img.shields.io/badge/iOS-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios) 
