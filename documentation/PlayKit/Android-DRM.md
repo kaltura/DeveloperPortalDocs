@@ -2,7 +2,7 @@
 layout: page
 title: PlayKit Android DRM
 subcat: Android Version 3.0
-weight: 400
+weight: 410
 ---
 
 ## DRM Support in Android Devices  
@@ -29,4 +29,4 @@ The following DRM schemes are supported in Android devices:
 
 ## Device Info
 
-[Kaltura Device Info App](https://play.google.com/store/apps/details?id=com.kaltura.kalturadeviceinfo) can help diagnosing DRM and Media-related problems.
+[Kaltura Device Info App](https://play.google.com/store/apps/details?id=com.kaltura.kalturadeviceinfo) can help in diagnosing DRM and Media-related problems.
