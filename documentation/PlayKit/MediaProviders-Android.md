@@ -2,7 +2,7 @@
 layout: page
 title: Setting up the Media Entry Provider for Android Devices
 subcat: Android Version 3.0
-weight: 296
+weight: 406
 ---
 
 The Media Entry Provider is a component that is capable of loading media data as a PKMediaEntry representation. The provider supports the cancellation of the last executed load action.
