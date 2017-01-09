@@ -1,11 +1,9 @@
 ---
 layout: page
-title: PlayKit Android DRM
+title: DRM Support in Android Devices
 subcat: Android Version 3.0
 weight: 410
 ---
-
-## DRM Support in Android Devices  
 
 The following DRM schemes are supported in Android devices:
 
