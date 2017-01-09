@@ -2,7 +2,7 @@
 layout: page
 title: Android Player SDK System Requirements
 subcat: Android Version 3.0
-weight: 320
+weight: 392
 ---
 
 [![Android](https://img.shields.io/badge/Android-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios)
