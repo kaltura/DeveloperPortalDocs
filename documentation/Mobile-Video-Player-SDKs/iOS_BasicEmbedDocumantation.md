@@ -1,6 +1,6 @@
 ---
 layout: page
-title: iOS PlayKit Basic Embed Documantation
+title: iOS Basic Embed Documantation
 subcat: iOS Version 3.0
 weight: 293
 ---
@@ -9,7 +9,7 @@ weight: 293
 
 This section includes samples for basic player operations such as configuration. For additional examples, see the [PlayKit Full Featured Demo Application](https://github.com/kaltura/playkit-ios-demo).
 
->Note: For an Objective C example, see the article [PlayKit ObjC Basic Embed]().
+>Note: For an Objective C example, see the PlayKit ObjC Basic Embed.
 
 ## Basic Embed  
 
@@ -115,10 +115,10 @@ Add custom buttons and controls to the player as follows:
 
 | Feature Name |                                                           Documentation                                                           |
 |--------------|:---------------------------------------------------------------------------------------------------------------------------------:|
-| Google Ads   | [IMA](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/iOS_Ads.md)                               |
-| Cast         | 1. [Chromecast]()  2. [AirPlay](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/iOS_AirPlay.md) |
-| Analytics    | [KalturaStatsPlugin](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/iOS_KalturaStatsPlugin.md) |
-| DRM          | 1. [FairPlay]()  2. [Widevine]()                                                                                                  |
-| Live         | [Live Edge](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/iOS_Live.md)                        |
-| Tracks       | [Audio & Subtitles Tracks](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/iOS_Tracks.md)       |
-| Audio Mode   |      [Control Audio Mode](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/iOS_AudioMode.md)     |
+| Google Ads   | [IMA](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/iOS_Ads.html)                               |
+| Cast         | [Chromecast](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/iOS_GoogleCast.html)  and [AirPlay](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/iOS_AirPlay.html) |
+| Analytics    | [KalturaStatsPlugin](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/iOS_KalturaStatsPlugin.html) |
+| DRM          | [FairPlay]()  [Widevine]()                                                                                                  |
+| Live         | [Live Edge](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/iOS_Live.html)                        |
+| Tracks       | [Audio & Subtitles Tracks](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/iOS_Tracks.html)       |
+| Audio Mode   |      [Control Audio Mode](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/iOS_AudioMode.html)     |
