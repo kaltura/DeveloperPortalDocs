@@ -1,8 +1,8 @@
 ---
 layout: page
 title: Configuring the TVPAPI Stats Plugin on iOS Devices
-subcat: iOS
-weight: 293
+subcat: iOS Version 3.0
+weight: 298
 ---
 
 [![iOS](https://img.shields.io/badge/iOS-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios) 
