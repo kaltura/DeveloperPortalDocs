@@ -7,7 +7,7 @@ weight: 296
 
 ## Create a Media-Entry 
 
-To get a mediaEntry, you'll need to use a MediaEntryProvider. CHoose from the following three MediaEntryProviders:
+To crate a media entry, you'll need to use a Media Entry provider. Choose from the following three Media Entry providers:
 
 * MockMediaProvider
 * OTTMediaProvider
@@ -17,7 +17,7 @@ Each provider has its own input parameters according to its backend.
 
 ### MockMediaProvider  
 
-The input of the MockMediaProvider is json, for example:
+The input of the MockMediaProvider is JSON, for example:
 
 	```
 	{
