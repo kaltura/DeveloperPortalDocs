@@ -1,8 +1,8 @@
 ---
 layout: page
 title: Configuring the IMA Plugin on iOS Devices
-subcat: iOS
-weight: 290
+subcat: iOS Version 3.0
+weight: 300
 ---
 
 [![iOS](https://img.shields.io/badge/iOS-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios) 
