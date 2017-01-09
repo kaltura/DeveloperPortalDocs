@@ -11,13 +11,13 @@ If you want to change the video/audio quality or captions language, you'll need 
 
 ## Listening to the Player Event  
 
-To learn how to listen to player events, simply follow the instructions in the [Player States and Events](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/Android/PlayerStatesAndEvents-Android.md) article.
+To learn how to listen to player events, simply follow the instructions in the [Player States and Events](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/PlayerStatesAndEvents-Android.html) article.
 
 To receive tracks, subscribe to the event called <a name="populateViews">***TRACKS_AVAILABLE***.</a> as follows:
 
-```	
-//Subscribe to TRACKS_AVAILABLE event.
- player.addEventListener(new PKEvent.Listener() {
+	```	
+	//Subscribe to TRACKS_AVAILABLE event.
+ 	player.addEventListener(new PKEvent.Listener() {
             @Override
             public void onEvent(PKEvent event) {
                 
@@ -31,7 +31,7 @@ To receive tracks, subscribe to the event called <a name="populateViews">***TRAC
              	populateViews(tracks);   
             }
         }, PlayerEvent.Type.TRACKS_AVAILABLE);
-	```
+		```
 
 ## PKTracks Structure  
 
