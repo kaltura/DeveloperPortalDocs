@@ -24,6 +24,29 @@ By following these simple steps, you'll be able to create your own player and st
  	compile project(path: ':playkit')
 	```
 
+## SDK integration using a compiled version:
+ 
+You can integrate the Kaltura Android Player SDK directly into your gradle project using a compiled version by jcenter. This is useful when you intend to run automated builds on an integration server.
+ 
+###PlayKit JCenter Available Versions exists in the following link:
+ [PlayKit JCenter](https://bintray.com/kaltura/android/playkit/)
+  
+ In your app level _**`app/build.gradle`**_ add the following:
+ 
+```javascript 
+ 
+ dependencies {
+    compile 'com.android.support:appcompat-v7:24.2.1'
+    compile 'com.android.support:design:24.2.1'
+    compile 'com.github.kaltura:playkit-dtg-android:v2.0.0.+'
+    compile 'com.kaltura.playkit:playkit:0.1.3'
+} 
+
+```
+If you decide to integrate the whole code than just replace `compile 'com.kaltura.playkit:playkit:0.1.3' ` 
+<br/> with <br/>
+`compile project(path: ':playkit')`
+
 ## Create the Player Instance and Start Playback  
 
 1. To create the instance of the player, add the following line to your Activity/Fragment to pass the [PlayerConfig](https://github.com/kaltura/playkit-android/blob/develop/playkit/src/main/java/com/kaltura/playkit/PlayerConfig.java) object and Android Context:
