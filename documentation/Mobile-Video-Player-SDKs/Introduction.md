@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Get Started with Kaltura Mobile SDK 2.0
+title: Introduction to Kaltura Mobile Video SDK 2.0
 weight: 100
 ---
 
