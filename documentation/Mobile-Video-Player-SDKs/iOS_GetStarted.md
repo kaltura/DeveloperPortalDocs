@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Get Started for iOS
+title: Getting Started with the SDK in iOS Applications
 subcat: iOS Version 3.0
 weight: 292
 ---
