@@ -38,6 +38,16 @@ This section includes samples for basic player operations such as configuration.
 
 ### Declaring a Player Variable  
 
+Import following:
+
+```
+
+import PlayKit
+import AVFoundation
+import SwiftyJSON
+
+```
+
 To declare a player variable, use:
 
     ```
@@ -78,12 +88,15 @@ To set the player view size:
 1. Create a player container: 
 
     ```
-    @IBOutlet weak var playerView: UIView!
+    @IBOutlet weak var playerContainer: UIView!
     ```
-2. Add a player view as a subview:
+2. Create View container and add player view as a subview:
 
     ```
-    playerView.addSubview(self.playerController.view)
+    
+    self.playerController.view.frame = playerContainer.bounds
+    playerContainer.addSubview(self.playerController.view)
+    
     ```
 
 ### Control Player - Basic Player Actions  
