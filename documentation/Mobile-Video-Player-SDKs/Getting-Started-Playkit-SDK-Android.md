@@ -12,6 +12,24 @@ This article describes the steps required for integrating the Playkit SDK in And
 In addition, you'll also learn how to receive a PlayerConfig.Media object with the help of the built-in [MockMediaProvider](https://github.com/kaltura/playkit-android/blob/develop/playkit/src/main/java/com/kaltura/playkit/backend/mock/MockMediaProvider.java).
 By following these simple steps, you'll be able to create your own player and start using it immediately. 
 
+## System Requirements  
+
+To integrate the Kaltura Player Android SDK, the minimum system requirements are:
+
+* IDE: Android Studio 2.0 or later (see developer.android.com/sdk)
+* OS version: Android 4.1 or later.
+* Java JDK 7 or later (see www.oracle.com/downloads)
+* Android SDK and Android SDK Tools
+
+### Developer Skills  
+
+Developers should have some background knowledge and experience with system setup before building Mobile SDK applications. 
+
+The required developer skillsets includes:
+* Familiarity with video delivery formats, ad delivery, DRM (when needed), login and passcode flows (these are essential for designing and debugging Mobile SDK applications).
+* At least 1-2 years of experience with the relative coding language Java (for Android development)
+* Hybrid requirement: Proficiency in HTML5 and JavaScript languages.
+
 ## Integrate the Playkit SDK into your Application Settings  
 
 1. Clone the SDK  from https://github.com/kaltura/playkit-android and locate it next to your application code. 
