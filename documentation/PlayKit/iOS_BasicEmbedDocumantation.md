@@ -50,15 +50,15 @@ import SwiftyJSON
 
 To declare a player variable, use:
 
-    ```
-    var playerController: Player
-    ```
+```
+var playerController: Player
+```
 
 ### Setting a Player Instance via Sample Configuration  
 
 To set a player instance via a sample configuration, use:
 
-    ```
+    
     let config = PlayerConfig()
         
         var source = [String : Any]()
@@ -76,8 +76,6 @@ To set a player instance via a sample configuration, use:
         
         // Here we get the player
         self.playerController = PlayKitManager.sharedInstance.loadPlayer(config: config)
-
-    ```
 
 >Note: To learn more about `PlayerConfig` Creation, see the [PlayerConfig Doc]() article.
 
