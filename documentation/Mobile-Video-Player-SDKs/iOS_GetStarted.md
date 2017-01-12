@@ -27,9 +27,7 @@ Before you begin development with PlayKit for iOS, there are a few topics you sh
 1. Clone or download the SDK.
 2. Get the latest version of the PlayKit SDK for iOS:
 
-|     | Release Notes & Package                                             | Podspec                                                              | Embed Documentation                   | Samples                                                                       |
+|     | Release Notes & Package                                             | Podspec                                                              | Embed Documentation                   | 
 |-----|---------------------------------------------------------------------|----------------------------------------------------------------------|-------------------------------------------|-------------------------------------------------------------------------------|
-| SDK | [PlayKit Releases](https://github.com/kaltura/playkit-ios/releases) | [PlayKit Spec](https://github.com/CocoaPods/Specs/tree/master/Specs) | [Basic Embed](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/iOS_BasicEmbedDocumantation.html) | [PlayKit Sample Applications](https://github.com/kaltura/playkit-ios-samples) |
+| SDK | [PlayKit Releases](https://github.com/kaltura/playkit-ios/releases) | [PlayKit Spec](https://github.com/CocoaPods/Specs/tree/master/Specs) | [Basic Embed](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/iOS_BasicEmbedDocumantation.html) | 
 
-
-**Next -> [PlayKit Basic Embed Documentation](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/iOS_BasicEmbedDocumantation.html)**
