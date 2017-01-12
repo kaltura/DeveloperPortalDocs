@@ -4,7 +4,7 @@ title: Introduction to Kaltura Mobile Video SDK 2.0
 weight: 100
 ---
 
-The Kaltura Mobile SDKs for iOS and Android provide the framework and tools to help you easily embed the [Kaltura Video Player](http://player.kaltura.com/) into native environments in your iOS or Android applications, without having to build a Player UI, plugins, or capabilities from scratch. 
+Kaltura's Mobile Video SDKs for iOS and Android provide the framework and tools to help you easily embed the [Kaltura Video Player](http://player.kaltura.com/) into native environments in your iOS or Android applications, without having to build a Player UI, plugins, or capabilities from scratch. 
 
 The SDK is essentially a native (i.e., Java or ObjectiveC-based code) wrapper that loads the same Kaltura Video Player inside a WebView. The Kaltura Video Player that is loaded into your native mobile application is essentially the **same** player that includes all of the customizations, themes, and plugins that are used on your website or web application. When the Kaltura Video Player loads into your native application, it seamlessly decides which is the best playback engine to leverage for playback (e.g., the native Media API of the device, a DRM provider’s API, etc.). This seamless behavior simplifies how you, the developer, build mobile video applications, by saving you the need to address video playback optimization, security, or (dz -ensuring the UI consistency) worry about maintaining the same UI across devices and platforms.
 
@@ -19,7 +19,7 @@ The Kaltura Vidoe Player SDK for iOS and Android supports:
 
 and more...
 
-## The Mobile SDK's Architecture Overview  
+## Mobile Video Player SDK Architecture Overview  
 
 The Kaltura Video Player's architecture is designed to allow for a seamless integration experience, enabling you to connect mutltiple playback engines and platforms. The Kaltura Video Player wraps the playback engine with the same interface and events, thereby allowing the same plugin code to work across multiple platforms, including iOS, Android, and web.  
 
