@@ -93,11 +93,13 @@ function show_hide_sub_div(div_id)
 		$j = el != null ? el.getElementsByTagName('div') : null;
 		if ($j) {
 			for (var $i = 0; $i < $j.length; $i++) {
-				$j[$i].style.visibility = 'visible';
-				$j[$i].style.display = 'block';
+				//$j[$i].style.visibility = 'visible';
+				//$j[$i].style.display = 'block';
 				for (var $y = 0, $z = $j[$i].getElementsByTagName('a'); $y < $z.length; $y++) {
 				    if($z[$y].getAttribute('id')==='{{page.path| replace: '/','-'}}'){
 					$z[$y].setAttribute('class', 'sidenav-links-current');
+					$j[$i].style.visibility = 'visible';
+					$j[$i].style.display = 'block';
 					//$z[$y].focus();
 				    }
 		
