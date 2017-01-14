@@ -1,7 +1,7 @@
 ---
 layout: page
 title: iOS Player SDK and Environment Setup - Getting Started
-subcat: iOS Version 2.0
+subcat: SDK 2.0 - iOS
 weight: 230
 ---
 

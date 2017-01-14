@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Setting up Offline Playback on Android Devices
-subcat: Android Version 3.0
+subcat: SDK 3.0 (Beta) - Android
 weight: 412
 ---
 

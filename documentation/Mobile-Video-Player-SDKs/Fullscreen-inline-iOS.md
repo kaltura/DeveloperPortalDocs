@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Using Fullscreen and Inline Embed of the Player in iOS
-subcat: iOS Version 2.0
+subcat: SDK 2.0 - iOS
 weight: 270
 ---
 

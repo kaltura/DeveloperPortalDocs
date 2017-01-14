@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Using Google Ads in iOS Devices
-subcat: iOS Version 2.0
+subcat: SDK 2.0 - iOS
 weight: 290
 ---
 

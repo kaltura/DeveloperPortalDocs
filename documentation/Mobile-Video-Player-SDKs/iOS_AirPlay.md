@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Adding the Apple AirPlay Functionality to Applications
-subcat: iOS Version 3.0
+subcat: SDK 3.0 (Beta) - iOS
 weight: 302
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Adding Available Captions and Audio Tracks to iOS Devices
-subcat: iOS Version 3.0
+subcat: SDK 3.0 (Beta) - iOS
 weight: 297
 ---
 

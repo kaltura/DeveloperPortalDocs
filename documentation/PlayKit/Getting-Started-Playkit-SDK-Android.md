@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Getting Started with the SDK in Android Applications
-subcat: Android Version 3.0
+subcat: SDK 3.0 (Beta) - Android
 weight: 392
 ---
 

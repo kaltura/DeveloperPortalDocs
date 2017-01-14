@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Android Tracks Manager
-subcat: Android Version 2.0
+subcat: SDK 2.0 - Android
 weight: 380
 ---
 

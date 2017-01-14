@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Implementing Track Selection
-subcat: Android Version 3.0
+subcat: SDK 3.0 (Beta) - Android
 weight: 409
 ---
 

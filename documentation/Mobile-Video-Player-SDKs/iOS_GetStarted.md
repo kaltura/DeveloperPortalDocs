@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Getting Started with the SDK in iOS Applications
-subcat: iOS Version 3.0
+subcat: SDK 3.0 (Beta) - iOS
 weight: 292
 ---
 
