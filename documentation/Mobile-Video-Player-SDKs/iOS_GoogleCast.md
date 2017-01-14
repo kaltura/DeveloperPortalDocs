@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Adding Support for Google Cast to iOS Devices
-subcat: iOS Version 3.0
+subcat: SDK 3.0 (Beta) - iOS
 weight: 303
 ---
 

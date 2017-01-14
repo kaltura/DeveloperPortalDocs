@@ -1,7 +1,7 @@
 
 layout: page
 title: Google Cast Setup for Android Devices
-subcat: Android Version 2.0
+subcat: SDK 2.0 - Android
 weight: 310
 
 This article describes how to set up the Google Cast feature in Android devices.

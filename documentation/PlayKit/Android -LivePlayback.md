@@ -2,6 +2,6 @@ temp
 ---
 layout: page
 title: Live Playback on Android Devices
-ubcat: Android Version 3.0
+ubcat: SDK 3.0 (Beta) - Android
 weight: 408
 ---

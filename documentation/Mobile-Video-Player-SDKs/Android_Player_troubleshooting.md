@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Troubelshooting Android Player Issues
-subcat: Android Version 2.0
+subcat: SDK 2.0 - Android
 weight: 501
 ---
 

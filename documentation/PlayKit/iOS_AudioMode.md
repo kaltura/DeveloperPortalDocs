@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Controlling the Audio Output on iOS Devices Using AVAudioSession
-subcat: iOS Version 3.0
+subcat: SDK 3.0 (Beta) - iOS
 weight: 299
 ---
 

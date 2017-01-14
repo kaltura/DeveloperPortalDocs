@@ -1,7 +1,7 @@
 ---
 layout: page
 title: DRM Support in iOS Devices
-subcat: iOS Version 3.0
+subcat: SDK 3.0 (Beta) - iOS
 weight: 295
 ---
 
