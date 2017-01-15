@@ -5,7 +5,7 @@ subcat: SDK 3.0 (Beta) - iOS
 weight: 291
 ---
 
-[![iOS](https://img.shields.io/badge/iOS-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios)
+# iOS Player SDK v3 Introduction
 
 > Note: The Kaltura SDK v3 is in BETA.
 
@@ -32,12 +32,11 @@ This guide assumes that you have the necessary Objective C or Swift and iOS deve
 
 |                                                      Getting Started                                                     |           Technical Documentation           |
 |:------------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------:|
-|                                           ![help](./iOS-images/getStarted.png)                                           |         ![help](./iOS-images/TD.png)        |
-| [Getting Started](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/iOS_GetStarted.html) | [Docs](https://forum.kaltura.org/c/playkit) |
-|                                                     How to contribute                                                    |       Detailed technical documentation      |
-
+|                                           ![help](./v3-images/getStarted.png)                                           |         ![help](./v3-images/TD.png)        |
+| [Getting Started]() | [Technical Docs](https://kaltura.github.io/playkit/api/ios/) |
+|                                                     **Quick Start** Create a Simple Video App                                                    |       Detailed technical iOS documentation      |
 
 
 # Questions or Need Help?
 
-Check out the [Kaltura PlayKit Forum](https://forum.kaltura.org/c/playkit) page for different ways of getting in touch.
+Check out the [Kaltura Player SDK Forum](https://forum.kaltura.org/c/playkit) page for different ways of getting in touch.
