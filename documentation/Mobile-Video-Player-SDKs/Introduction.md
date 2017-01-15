@@ -8,7 +8,7 @@ weight: 100
 
 Kaltura’s Mobile Video SDKs for iOS and Android provide the framework and tools to help you easily embed the Kaltura Video Player into native environments in your iOS or Android applications.
 
-The Kaltura Video Player is fully native and offers superb performance. 
+The Kaltura Video Player is fully native and offers excellent performance, ensuring that your users receive the best viewing experience. 
 
 The player’s architecture is designed to allow a seamless integration experience, enabling you to connect multiple playback engines and platforms. 
 
