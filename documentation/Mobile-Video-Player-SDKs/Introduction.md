@@ -36,6 +36,8 @@ Each platform supports different types of streaming capabilites and DRMs. The Ka
 * Apple
 	* iOS: v9+
 
+For more info on SDK 2.0 please refer to [documentation](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/IntroductionV2.html)
+
 **Next:**
 * [Introduction to the Kaltura Video Player SDK for iOS](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/iOS_Introduction.html)
 * [Introduction to the Kaltura Video Player SDK for Android](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/Android-introduction.html)
