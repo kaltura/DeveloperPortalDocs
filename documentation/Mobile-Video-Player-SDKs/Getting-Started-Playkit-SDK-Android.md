@@ -190,7 +190,7 @@ In the next sections you'll learn how to  proceed with the Android SDK setup, in
 
 - [How to listen and handle player events and states.](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/EventsAndStatesAndroid.html)
 - [How to use plugins.](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/Plugins-Android.html)
-- [How to create a new Analytics Plugin.]https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/Create-new-analytics-plugin-Android.html)
+- [How to create a new Analytics Plugin.](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/Create-new-analytics-plugin-Android.html)
 - Plugin specific configurations: [IMA](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/IMAPlugin-Android.html),  [Kaltura Analytics](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/KalturaAnalyticsPlugin-Android.html), [Kaltura Stats](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/KalturaStatsPlugin-Android.html), [TVPAPI Stats](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/TVPAPIStatsPlugin-Android.html), [Phoenix Stats](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/PhoenixStatsPlugin-Android.html), [Youbora](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/Youbora-Android.html).
 - [Media Providers: OVP, OTT, Mock](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/SessionProviders-Android.html)
 - [How to use ChromeCast](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/Chromecast-Android%202.html)
