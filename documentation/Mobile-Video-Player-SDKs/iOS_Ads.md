@@ -106,3 +106,33 @@ player.addObserver(self, events: events, block: { (event: Any) -> Void in
         })
 ```
 
+
+## **Important** PodFile
+
+Please don't forget to include below code on your podfile to make IMA work for you (Swift Project)
+
+```
+if target.name == "PlayKit.default-IMAPlugin"
+	            config.build_settings['OTHER_SWIFT_FLAGS'] = '-DIMA_ENABLED'
+	            config.build_settings['OTHER_LDFLAGS'] = '$(inherited) -framework "GoogleInteractiveMediaAds"'
+	        end
+
+```
+
+This code should be included in your `post_install` code, see below:
+
+```
+post_install do |installer| 
+    installer.pods_project.targets.each do |target| 
+        target.build_configurations.each do |config| 
+            config.build_settings['ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES'] = 'NO'
+            if target.name == "PlayKit.default-IMAPlugin"
+	            config.build_settings['OTHER_SWIFT_FLAGS'] = '-DIMA_ENABLED'
+	            config.build_settings['OTHER_LDFLAGS'] = '$(inherited) -framework "GoogleInteractiveMediaAds"'
+	        end
+        end 
+    end 
+end
+
+```
+
