@@ -4,7 +4,7 @@ title: Introduction to Kaltura Mobile Video SDK
 weight: 100
 ---
 
-# Kaltura’s Mobile Video SDKs for iOS and Android
+## Kaltura’s Mobile Video SDKs for iOS and Android
 
 Kaltura’s Mobile Video SDKs for iOS and Android provide the framework and tools to help you easily embed the Kaltura Video Player into native environments in your iOS or Android applications.
 
