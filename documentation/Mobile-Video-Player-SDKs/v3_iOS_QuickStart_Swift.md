@@ -65,8 +65,6 @@ The simplest way to add the SDK and its dependencies to your project is by using
 
 	```
 
->Note that the last line, which is **important** "from this point on, you must open the Video-Player.xcworkspace file in Xcode, not the Video-Player.xcodeproj file."
-
 ### Import the Native SDK
 
 Go to the desired file (e.g., ViewController.swift) and add the line below:
