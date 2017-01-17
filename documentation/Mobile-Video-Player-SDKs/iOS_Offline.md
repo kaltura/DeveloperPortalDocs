@@ -5,7 +5,7 @@ subcat: SDK 3.0 (Beta) - iOS
 weight: 300
 ---
 
-# Overview
+## Overview
 
 Offline Playback refers to the ability to play downloaded content. The device doesn't have to actually be offline (i.e. with no network access) to use downloaded assets.
 
@@ -18,9 +18,9 @@ Download itself is out of scope for this document; it is done either by iOS [AVA
 
 The main SDK component responsible for local playback is [LocalAssetsManager]. This class is used before and right after the download to make sure the SDK retrieves DRM licenses for offline playback. It is also used when starting local playback, to link the downloaded content with a [MediaEntry] object playable by the SDK.
 
-# Download and Register
+## Download and Register
 
-## Downloading with AVAssetDownloadTask
+### Downloading with AVAssetDownloadTask
 
 When using AVAssetDownloadTask, an application has to create an AVURLAsset and link it to a download task. In addition, if the asset is protected with FairPlay DRM, a delegate on the asset must be set.
 
@@ -51,7 +51,7 @@ At this point, the application can start downloading the asset (typically mp4 or
 {% endplantuml %}
 
 
-## Downloading with a 3rd-party tool
+### Downloading with a 3rd-party tool
 
 When the asset isn't downloadable by AVAssetDownloadTask (or if AVAssetDownloadTask is not available), the download will be done either with a 3rd party tool or by a [URLSessionDownloadTask]. In those cases, there's no "prepare" step. Instead, the application calls `getPreferredDownloadableMediaSource(for mediaEntry: MediaEntry)` to pick the best source. It then downloads the source, and at the end calls `assetDownloadFinished(mediaSource: MediaSource, location: URL)`.
 
@@ -73,7 +73,7 @@ This case also applies to *Widevine Classic* assets.
 {% endplantuml %}
 
 
-# Playback
+## Playback
 
 To play a downloaded asset, the application needs to wrap the asset with a MediaEntry object. `LocalAssetsManager` provides `createLocalMediaEntry(for assetId: String, localURL: URL)`. This function returns a suitable `MediaEntry`.
 
@@ -93,7 +93,7 @@ To play a downloaded asset, the application needs to wrap the asset with a Media
 
 
 
-# LocalDataStore
+## LocalDataStore
 
 The constructor of LocalAssetsManager takes an optional [LocalDataStore]. This object is **require** if the application downloads or plays DRM-protected content. The protocol has 3 functions:
 - `save(key: String, value: Data)`
