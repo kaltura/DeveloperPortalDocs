@@ -32,4 +32,4 @@ In this section, you'll learn how to build a basic video playback application us
 |            Objective-C            |                Swift               |
 |:---------------------------------:|:----------------------------------:|
 | ![help](./v3-images/iOS/objc.png) | ![help](./v3-images/iOS/swift.png) |
-|        [Basic video sample using Obj-C]()       |        [Basic video sample using Swift]()        |
+|        [Basic video sample using Obj-C](https://github.com/kaltura/DeveloperPortalDocs/blob/mobilePlayerSDKV3/documentation/Mobile-Video-Player-SDKs/v3_iOS_QuickStart_Objc.md)       |        [Basic video sample using Swift](https://github.com/kaltura/DeveloperPortalDocs/blob/mobilePlayerSDKV3/documentation/Mobile-Video-Player-SDKs/v3_iOS_QuickStart_Swift.md)        |
