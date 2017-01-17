@@ -32,4 +32,4 @@ In this section, you'll learn how to build a basic video playback application us
 |            Objective-C            |                Swift               |
 |:---------------------------------:|:----------------------------------:|
 | ![help](./v3-images/iOS/objc.png) | ![help](./v3-images/iOS/swift.png) |
-|        [basic video sample using the Obj-C]()       |        [basic video sample using the Swift]()        |
+|        [Basic video sample using the Obj-C]()       |        [Basic video sample using the Swift]()        |
