@@ -9,7 +9,7 @@ This article will help you get started with the development of the Player SDK fo
 
 ## Before You Begin  
 
-Before you begin development with Kaltura iOS Player SDK, there are a few topics you should read up on first:
+Before you begin developing with the Player SDK for iOS, there are a few topics you should read up on first:
 
 1. [**Media Providers**](): These are components that are capable of loading media data as PKMediaEntry representation.
 2. [**CocoaPods**](https://guides.cocoapods.org/using/using-cocoapods.html) The kaltura iOS SDK and its plugins can be added to your project using the CocoaPods dependency manager. 
@@ -32,4 +32,4 @@ In this section, you'll learn how to build a basic video playback application us
 |            Objective-C            |                Swift               |
 |:---------------------------------:|:----------------------------------:|
 | ![help](./v3-images/iOS/objc.png) | ![help](./v3-images/iOS/swift.png) |
-|        [Basic video sample using the Obj-C]()       |        [Basic video sample using the Swift]()        |
+|        [Basic video sample using Obj-C]()       |        [Basic video sample using Swift]()        |
