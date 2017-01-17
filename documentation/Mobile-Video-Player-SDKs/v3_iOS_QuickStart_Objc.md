@@ -1,42 +1,39 @@
 ---
 layout: page
-title: Quick Start Using Obj-C
+title: Quick Start Using ObjC
 subcat: SDK 3.0 (Beta) - iOS
 weight: 292
 ---
 
-# Quick Start Using Obj-C
+# Quick Start Using Obj-C  
 
-Build a Simple Video App using the Obj-C programming language.
+Build a simple video application using the ObjC programming language.
 
-## Create the project
+## Create the Project  
 
+### Set Up a Project in Xcode  
 
-### Set up a project in Xcode 
+1 . Open Xcode and click **start new Xcode Project**:
+	![help](./v3-images/iOS/newProj.png) 
 
-Open Xcode. Click start new Xcode Project:
+2 . Next, select **Single View Application** and click **Next**:
+	![help](./v3-images/iOS/singleView.png) 
 
-![help](./v3-images/iOS/newProj.png) 
-
-Once you have done this, Select: **Single View Application** and click the Next button.
-
-![help](./v3-images/iOS/singleView.png) 
-
-Now you will be presented with another dialogue screen enter in the details you wish.
-
-![help](./v3-images/iOS/projDetails.png) 
+3 . In the dialog screen displayed, enter the relevant details:
+	![help](./v3-images/iOS/projDetails.png) 
 
 
 ### Add the SDK
 
-The way to add the SDK and its dependencies to your project is to use CocoaPods.
+The simplest way to add the SDK and its dependencies to your project is by using CocoaPods.
 
 >Note: Using CocoaPods on an existing Xcode project will modify the project file. You may want to make a backup before doing this.
 
-* In your project folder, create a plain text file called Podfile (no file extension).
-* Using a text editor, add the following lines of code to the Podfile and save it.
+1 . In your project folder, create a plain text file called Podfile (no file extension).
 
-```
+2 . Using a text editor, add the following lines of code to the Podfile and save it.
+
+```ruby
 source 'https://github.com/CocoaPods/Specs.git'
 
 use_frameworks!
@@ -44,39 +41,48 @@ use_frameworks!
 platform :ios, '8.0' # (define required version)
 
 target 'Simple-Video-Player' do
-  pod 'PlayKit'
+	pod 'PlayKit'
 end
 
 ```
-Navigate to Podfile location via Terminal and type the command
+	
+3 . Navigate to the podfile location via Terminal and type the command:
 
-```
+```ruby
 pod install
 
 ```
 
->Notice the last line, which is **important** "from this point on, you must open the Video-Player.xcworkspace file in Xcode, not the Video-Player.xcodeproj file."
-
 ### Import the Native SDK
 
-Go to desired file (e.g ViewController.h) and put below line
+Go to the desired file (e.g., ViewController.swift) and add the line below:
+
+```objc
+#import "PlayKit-Swift.h"
 
 ```
 
-```
-
-### Code the video player app
+### Code the Video Player Application
 
 * To declare a player variable, use:
 
-```
-
-
-```
-
-* To set a player instance via a sample configuration, use:
+```objc
+@property (nonatomic, strong) id<Player> kPlayer;
 
 ```
+
+* To set a player instance via a sample configuration, use the following:
+
+```objc
+PlayerConfig *config = [PlayerConfig new];
+NSDictionary *src = @{@"id":@"123123",@"url": @"https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"};
+    
+NSArray *srcs = @[src];
+NSDictionary *entry = @{@"id":@"Trailer",@"sources": srcs};
+    
+[config setWithMediaEntry:[[MediaEntry alloc] initWithJson:entry]];
+    
+self.kPlayer = [PlayKitManager.sharedInstance loadPlayerWithConfig:config];
 
 ```
 
@@ -86,13 +92,15 @@ To set the player view size:
 
 * Create a player container: 
 
-```
-
-
-```
-* Set Player frame and Add a player view as a subview:
+```objc
+@property (weak, nonatomic) IBOutlet UIView *playerContainer;
 
 ```
+* Set the player frame and add a player view as a subview:
+
+```objc
+self.kPlayer.view.frame = CGRectMake(0, 0, self.playerContainer.frame.size.width,self.playerContainer.frame.size.height);   
+[self.playerContainer addSubview:self.kPlayer.view];
 
 ```
 
@@ -100,14 +108,24 @@ To set the player view size:
 
 * Add custom buttons and controls to the player as follows:
 
-```
+```objc
+- (IBAction)playTapped:(id)sender {
+    if(!self.kPlayer.isPlaying) {
+        [self.kPlayer play];
+    }
+}
+
+- (IBAction)pauseTapped:(id)sender {
+    if(self.kPlayer.isPlaying) {
+        [self.kPlayer pause];
+    }
+}
 
 ```
-
 
 > [Download Full Sample]()
 
 
 **Having Issues?**
 
-> We have a [Questions and Answer Forum](https://forum.kaltura.org/c/playkit) where you can ask your iOS Development questions.
+> We have a [Questions and Answer Forum](https://forum.kaltura.org/c/playkit) where you can ask your iOS development-related questions.
