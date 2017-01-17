@@ -30,7 +30,7 @@ The simplest way to add the SDK and its dependencies to your project is by using
 
 2 . Using a text editor, add the following lines of code to the Podfile and save it.
 
-```
+```ruby
 	source 'https://github.com/CocoaPods/Specs.git'
 
 	use_frameworks!
@@ -60,7 +60,7 @@ The simplest way to add the SDK and its dependencies to your project is by using
 	
 3 . Navigate to the podfile location via Terminal and type the command:
 
-```
+```ruby
 pod install
 
 ```
@@ -69,7 +69,7 @@ pod install
 
 Go to the desired file (e.g., ViewController.swift) and add the line below:
 
-```
+```swift
 import PlayKit
 
 ```
@@ -78,14 +78,14 @@ import PlayKit
 
 * To declare a player variable, use:
 
-```
+```swift
 var playerController: Player
 
 ```
 
 * To set a player instance via a sample configuration, use the following:
 
-```
+```swift
 let config = PlayerConfig()
         
         var source = [String : Any]()
@@ -112,13 +112,13 @@ To set the player view size:
 
 * Create a player container: 
 
-```
+```swift
 @IBOutlet weak var playerContainer: UIView!
 
 ```
 * Set the player frame and add a player view as a subview:
 
-```
+```swift
 self.playerController.view.frame = playerContainer.bounds
 	playerContainer.addSubview(self.playerController.view)
 
@@ -128,7 +128,7 @@ self.playerController.view.frame = playerContainer.bounds
 
 * Add custom buttons and controls to the player as follows:
 
-```
+```swift
 @IBAction func playClicked(_ sender: AnyObject) {
 	self.playerController.play()
 }
