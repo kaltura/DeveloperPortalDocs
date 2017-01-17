@@ -5,23 +5,13 @@ subcat: SDK 3.0 (Beta) - iOS
 weight: 291
 ---
 
-# iOS Player SDK v3 Introduction
-
 > Note: The Kaltura SDK v3 is in BETA.
 
 >*If you are a Kaltura customer, please contact your Kaltura Customer Success Manager to help facilitate the use of this component.*
 
-The **Kaltura Mobile Video SDK for iOS** is fully native and introduces significant performance improvements. The SDK is intended to be integrated into any iOS application and includes the following features:
+## Overview  
 
-* Online and Offline Playback
-* Live
-* Multi audio tracks
-* Multiple captions
-* Kaltura’s uDRM support (FairPlay, Widevine Classic)
-* VAST Support (IMA)
-* Kaltura analytics
-* Youbora
-* Chromecast and AirPlay support
+The **Kaltura Mobile Video SDK for iOS** is fully native and introduces significant performance improvements. The SDK is intended to be integrated into any iOS application.
 
 ## Intended Audience
 
@@ -37,6 +27,6 @@ This guide assumes that you have the necessary Objective C or Swift and iOS deve
 |                                                     **Quick Start** Create a Simple Video App                                                    |       Detailed technical iOS documentation      |
 
 
-# Questions or Need Help?
+# Have Questions or Need Help?
 
 Check out the [Kaltura Player SDK Forum](https://forum.kaltura.org/c/playkit) page for different ways of getting in touch.
