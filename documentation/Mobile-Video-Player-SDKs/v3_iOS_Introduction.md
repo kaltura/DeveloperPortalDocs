@@ -17,7 +17,7 @@ The **Kaltura Mobile Video SDK for iOS** is fully native and introduces signific
 
 This guide assumes that you have the necessary Objective C or Swift and iOS development skills to build and compile advanced iOS applications using XCode.
 
-# Quick Navigation
+## Quick Navigation
 
 
 |                                                      Getting Started                                                     |           Technical Documentation           |
@@ -27,6 +27,6 @@ This guide assumes that you have the necessary Objective C or Swift and iOS deve
 |                                                     **Quick Start** Create a Simple Video App                                                    |       Detailed technical iOS documentation      |
 
 
-# Have Questions or Need Help?
+## Have Questions or Need Help?
 
 Check out the [Kaltura Player SDK Forum](https://forum.kaltura.org/c/playkit) page for different ways of getting in touch.
