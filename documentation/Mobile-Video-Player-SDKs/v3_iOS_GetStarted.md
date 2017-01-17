@@ -1,11 +1,9 @@
 ---
 layout: page
-title: Getting Started with the SDK in iOS Applications
+title: Getting Started with the Kaltura Player SDK in iOS Applications
 subcat: SDK 3.0 (Beta) - iOS
 weight: 292
 ---
-
-# Getting Started
 
 This article will help you get started with the development of the Player SDK for iOS.
 
@@ -27,7 +25,7 @@ Before you begin development with Kaltura iOS Player SDK, there are a few topics
 
 ## Quick Start
 
-In this section, you will learn how to build a basic video playback app using the Kaltura Player SDK for iOS.
+In this section, you'll learn how to build a basic video playback application using the Kaltura Player SDK for iOS.
 
 
 
