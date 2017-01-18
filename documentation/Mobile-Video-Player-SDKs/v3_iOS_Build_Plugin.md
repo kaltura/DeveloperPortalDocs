@@ -23,12 +23,19 @@ plugin config is `Any` Object that can contain any data needed by your plugin
 
 ### plugin config smaple
 
-```
+>swift
 
+```swift
 class SamplePluginConfig {
     var data: Any?
     var param: Any?
 }
+
+```
+>objc
+
+```objc
+
 
 ```
 
@@ -41,7 +48,9 @@ plugin config will be passed vid `load` function, will be explained later.
 
 create a class that implimants [PKPlugin Protocol](https://kaltura.github.io/playkit/api/ios/Protocols/PKPlugin.html) 
 
-```
+>swift
+
+```swift
 class SamplePlugin: PKPlugin {
     
     static var pluginName: String {
@@ -61,13 +70,23 @@ class SamplePlugin: PKPlugin {
 }
 
 ```
+
+>objc
+
+```objc
+
+
+```
+
 >note: don't forget to `import PlayKit`
 
 ## Register Plugin
 
 You should do it once on your `AppDelegate` or see below:
 
-```
+>swift
+
+```swift
 import UIKit
 import PlayKit
 
@@ -80,6 +99,12 @@ class ViewController: UIViewController {
 }
 
 ```
+>objc
+
+```objc
+
+
+```
 
 ## Add Plugin Config to PlayerConfig
 
@@ -87,8 +112,9 @@ class ViewController: UIViewController {
 
 To get your plugin's config you must add him to playerConfig instance.
 
-```
+>swift
 
+```swift
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -113,6 +139,11 @@ class ViewController: UIViewController {
 
     }
 }
+
+```
+>objc
+
+```objc
 
 
 ```
