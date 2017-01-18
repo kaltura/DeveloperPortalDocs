@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Getting Started with the SDK in Android Applications
-subcat: Android Version 3.0
+subcat: SDK 3.0 (Beta) - Android
 weight: 392
 ---
 
@@ -69,13 +69,13 @@ The required developer skillsets includes:
 
 ## More About PlayerConfig  
 
-The PlayerConfig object is a simple data object that holds the initial configurations for the player. Like the media entry we want to play and the plugins we want to configure. You can find additional documentation on PlayerConfig in this [PlayerConfig article](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/Android/PlayerConfig-Android.md).
+The PlayerConfig object is a simple data object that holds the initial configurations for the player. Like the media entry we want to play and the plugins we want to configure. You can find additional documentation on PlayerConfig in this [PlayerConfig article](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/PlayerConfig-Android.html).
 
-The [PlayerConfig](https://github.com/kaltura/playkit-android/blob/develop/playkit/src/main/java/com/kaltura/playkit/PlayerConfig.java) consists of two main objects: media and plugins. For now, we'll focus on creating the Media object. Additional information about Plugins is available in this [Plugins article](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/Plugins-Android.md).
+The [PlayerConfig](https://github.com/kaltura/playkit-android/blob/develop/playkit/src/main/java/com/kaltura/playkit/PlayerConfig.java) consists of two main objects: media and plugins. For now, we'll focus on creating the Media object. Additional information about Plugins is available in this [Plugins article](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/Plugins-Android.html).
 
 ## Kaltura's MediaProvider Classes  
 
-Playkit has a large number of built-in [MediaProvider classes](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/Android/MediaProviders-Android.md). In this example we'll focus on the [MockMediaProvider](https://github.com/kaltura/playkit-android/blob/develop/playkit/src/main/java/com/kaltura/playkit/backend/mock/MockMediaProvider.java) class, which is a class that knows how to create a Media object from JSON. 
+Playkit has a large number of built-in [MediaProvider classes](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/SessionProviders-Android.html). In this example we'll focus on the [MockMediaProvider](https://github.com/kaltura/playkit-android/blob/develop/playkit/src/main/java/com/kaltura/playkit/backend/mock/MockMediaProvider.java) class, which is a class that knows how to create a Media object from JSON. 
 
 ### Using the MockMediaProvider  
 
@@ -188,17 +188,16 @@ protected void onStart() {
 
 In the next sections you'll learn how to  proceed with the Android SDK setup, including:
 
-- [How to listen and handle player events and states.](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/Android/PlayerStatesAndEvents-Android.md)
-- [How to use plugins.](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/Android/HowToUsePlugins-Android.md)
-- [How to create a new Analytics Plugin.](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/Android/Create-new-analytics-plugin-Android.md)
-- Plugin specific configurations: [IMA](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/Android/IMAPlugin-Android.md),  [Kaltura Analytics](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/Android/KalturaAnalyticsPlugin-Android.md), [Kaltura Stats](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/Android/KalturaStatsPlugin-Android.md), [TVPAPI Stats](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/Android/TVPAPIStatsPlugin-Android.md), [Phoenix Stats](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/Android/PhoenixStatsPlugin-Android.md), [Youbora](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/Android/Youbora-Android.md).
-- [Media Providers: OVP, OTT, Mock](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/Android/MediaProviders-Android.md)
-- [How to use ChromeCast](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/Android/Chromecast-Android.md)
-- [Best practisec for UI handling during Live playback](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/Android/LivePlayback-Android.md)
-- [How to work with tracks](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/Android/TrackSelections-Android.md)
-- [Playing DRM content](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/Android/DRM-Android.md)
-- [Playing content in offline](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/Android/Offline-Android.md)
-- [Handle connectivity loss, and application life cycle](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/Android/ConnectivityAndLifecycle-Android.md)
+- [How to listen and handle player events and states.](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/EventsAndStatesAndroid.html)
+- [How to use plugins.](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/Plugins-Android.html)
+- [How to create a new Analytics Plugin.](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/Create-new-analytics-plugin-Android.html)
+- Plugin specific configurations: [IMA](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/IMAPlugin-Android.html),  [Kaltura Analytics](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/KalturaAnalyticsPlugin-Android.html), [Kaltura Stats](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/KalturaStatsPlugin-Android.html), [TVPAPI Stats](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/TVPAPIStatsPlugin-Android.html), [Phoenix Stats](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/PhoenixStatsPlugin-Android.html), [Youbora](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/Youbora-Android.html).
+- [Media Providers: OVP, OTT, Mock](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/SessionProviders-Android.html)
+- [How to use ChromeCast](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/Chromecast-Android%202.html)
+- [How to work with tracks](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/TrackSelections-Android.html)
+- [Playing DRM content](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/Android-DRM.html)
+- [Playing content in offline](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/Offline-Android.html)
+
 
 
 

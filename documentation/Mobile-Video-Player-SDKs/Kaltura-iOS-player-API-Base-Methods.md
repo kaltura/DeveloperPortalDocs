@@ -1,7 +1,7 @@
 ---
 layout: page
 title: iOS Player API - Properties, Events, Notifications
-subcat: iOS Version 2.0
+subcat: SDK 2.0 - iOS
 weight: 250
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: iOS Disable Widevine
-subcat: iOS Version 2.0
+subcat: SDK 2.0 - iOS
 weight: 330
 ---
 

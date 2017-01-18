@@ -1,7 +1,7 @@
 ---
 layout: page
 title: iOS Player SDK Basic Embedding
-subcat: iOS Version 2.0
+subcat: SDK 2.0 - iOS
 weight: 260
 ---
 [![iOS](https://img.shields.io/badge/iOS-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios) 
