@@ -41,6 +41,7 @@ Once you have a `MediaEntry` ready, you can build the player configuration and p
 
 > Note: For Technical Documantion About [PlayerConfig](https://kaltura.github.io/playkit/api/ios/Classes/MediaEntry.html)
 
+</br>
 **Having Issues?**
 
 > We have a [Questions and Answer Forum](https://forum.kaltura.org/c/playkit) where you can ask your iOS Development questions.
