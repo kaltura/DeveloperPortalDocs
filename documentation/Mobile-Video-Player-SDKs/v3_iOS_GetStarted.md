@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Getting Started with the Kaltura Player SDK in iOS Applications
+title: Getting started
 subcat: SDK 3.0 (Beta) - iOS
 weight: 292
 ---
