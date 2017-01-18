@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Building plugins
+title: Plugins
 subcat: SDK 3.0 (Beta) - iOS
 weight: 292
 ---
