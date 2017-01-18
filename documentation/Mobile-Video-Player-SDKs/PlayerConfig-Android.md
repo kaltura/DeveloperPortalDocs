@@ -64,12 +64,12 @@ To learn more, see [PKMediaSource](https://github.com/kaltura/playkit-android/bl
 
 PKMediaSource can be created with builder-like coding, by chaining setters:
 
-   ```
-   PKMediaSource pkMediaSource = new PKMediaSource().setId(sourceId)
-                                                 .setUrl(sourceUrl)
-                                                 .setDrmData(dramDataList);
+```
+PKMediaSource pkMediaSource = new PKMediaSource().setId(sourceId)
+.setUrl(sourceUrl)
+.setDrmData(dramDataList);
 
-   ```
+```
 
 * **_In OTT environments:_**
 Each source represents one MediaFile (Media or AssetInfo contains list of MediaFile items. Each file represents a different format. HD, SD Download...)
