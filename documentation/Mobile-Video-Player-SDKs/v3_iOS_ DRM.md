@@ -4,40 +4,25 @@ layout: page
 
 # DRM
 
-=== TBD ===
+The following DRM schemes are supported in iOS devices:
 
-</br>
-## FairPlay
+### FairPlay  
 
->swift
+* Supported in iOS versions 8 and up
+* Offline playback is supported in iOS 10 and up
+  * Our interim solution for iOS 8 and 9 is Widevine Classic -- see below.
 
-```swift
+### Widevine Classic  
 
+* Supported in iOS 8 and up
+* Online and offline playback
 
-```
->objc
+## Known Limitations  
+* DRM does not work on the iOS Simulator
+* Widevine Classic:
+  * Requires ATS to be disabled for 127.0.0.1
+  * Requires Bitcode to be disabled (the core library does not support Bitcode)
 
-```objc
-
-
-```
-
-</br>
-## Widevine Classic
-
-
->swift
-
-```swift
-
-
-```
->objc
-
-```objc
-
-
-```
 </br>
 **Having Issues?**
 
