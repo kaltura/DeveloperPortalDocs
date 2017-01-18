@@ -32,7 +32,7 @@ The required developer skillsets includes:
 
 ## Integrate the Playkit SDK into your Application Settings  
 
-1. Clone the SDK  from https://github.com/kaltura/playkit-android and locate it next to your application code. 
+1. Clone the SDK  from https://github.com/kaltura/playkit-android and locate it next to your application code. In case that you want to look at the code stand-alone, open the playkit-android folder in the Android Studio. 
 2. In the setting.gradle, add the SDK project settings as follows:
 	```
 	include ':playkit', ':playkitdemo'
@@ -45,10 +45,11 @@ The required developer skillsets includes:
 ## Create the Player Instance and Start Playback  
 
 1. To create the instance of the player, add the following line to your Activity/Fragment to pass the [PlayerConfig](https://github.com/kaltura/playkit-android/blob/develop/playkit/src/main/java/com/kaltura/playkit/PlayerConfig.java) object and Android Context:
-	```
-	Player player = PlayKitManager.loadPlayer(config, context);
 
-	```
+
+```
+Player player = PlayKitManager.loadPlayer(config, context);
+```
 2. Next, add the player view to the view hierarchy as follows:
 
 	```
@@ -58,7 +59,7 @@ The required developer skillsets includes:
 
 3. Now that you have an instance of the player and its view is attached to your layout, start the playback by calling the following:
 	```
-	player.play();
+		player.play();
 	```
 	
 4. To pause the playback call:
