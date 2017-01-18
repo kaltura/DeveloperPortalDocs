@@ -39,8 +39,11 @@ lsi: true
 #incremental: true
 gems:
    - jekyll-plantuml
+   - jekyll-code-example-tag
 #  - jekyll-git_metadata
 #    - jekyll-sitemap
 plantuml:
   plantuml_jar: /usr/bin/plantuml.jar     # path to plantuml jar
   tmp_folder: _plantuml               # tmp folder to put generated image files
+code_example_buttons_class: 'the_buttons'
+code_example_button_class: 'a_button'
