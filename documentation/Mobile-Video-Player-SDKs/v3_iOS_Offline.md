@@ -107,6 +107,7 @@ A simple implementation is provided in [DefaultLocalDataStore], but if the appli
 [AVAssetDownloadTask]: https://developer.apple.com/reference/avfoundation/avassetdownloadtask
 [URLSessionDownloadTask]: https://developer.apple.com/reference/foundation/urlsessiondownloadtask
 
+</br>
 **Having Issues?**
 
 > We have a [Questions and Answer Forum](https://forum.kaltura.org/c/playkit) where you can ask your iOS Development questions.
