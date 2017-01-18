@@ -40,6 +40,7 @@ In order to get notified about any player-related events or states, you can add 
 
 >Note: To get full supported player states list please review [PlayerStates	](https://kaltura.github.io/playkit/api/ios/Enums/PlayerState.html)
 
+</br>
 **Having Issues?**
 
 > We have a [Questions and Answer Forum](https://forum.kaltura.org/c/playkit) where you can ask your iOS Development questions.
