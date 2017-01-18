@@ -45,6 +45,16 @@ int hello_world(char *world)
 }
 {% endhighlight %}
 
+## Adding Multi language tabbed divs
+
+Add your code snippet for each lang dir under https://github.com/kaltura/DeveloperPortalDocs/tree/master/code_examples and then include the following in your MD:
+
+&#123;% code_example snippet_file_name %&#125;
+
+**Will render as:**
+{% code_example hello_world %}
+
+
 See [List of supported languages and lexers](https://github.com/jneen/rouge/wiki/list-of-supported-languages-and-lexers).
 
 ## Adding Tables

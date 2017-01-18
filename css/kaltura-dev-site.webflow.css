@@ -1099,7 +1099,11 @@ thead tr th {
 }
 
 figure.highlight {
-  padding: 10px 30px;
+	padding: 1px 1px;
+}
+
+figure.highlight pre {
+        margin: 1px;
 }
 
 pre {
@@ -3678,7 +3682,8 @@ blockquote.recipes-ref-list ul li {
   }
 
 div.code-examples div.highlight pre { 
-margin: 1px; 
+	margin: 1px; 
+	margin-bottom: 1em;
 }
 
 ul.code-tab {
