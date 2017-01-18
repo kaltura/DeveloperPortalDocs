@@ -5,7 +5,7 @@ subcat: SDK 3.0 (Beta) - iOS
 weight: 292
 ---
 
-# Building plugins
+# Plugin Creation
 
 ## What is Plugin
 
@@ -21,7 +21,7 @@ attaching core feature to playkit sdk
 
 plugin config is `Any` Object that can contain any data needed by your plugin
 
-### pluin config smaple
+### plugin config smaple
 
 ```
 
@@ -117,6 +117,7 @@ class ViewController: UIViewController {
 
 ```
 
+</br>
 **Having Issues?**
 
-> We have a [Questions and Answer Forum](https://forum.kaltura.org/c/playkit) where you can ask your iOS Development questions.
+> We have a [Questions and Answer Forum](https://forum.kaltura.org/c/playkit) where you can ask your iOS development-related questions.
