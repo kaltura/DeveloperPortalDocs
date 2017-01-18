@@ -18,25 +18,28 @@ Each platform supports different types of streaming capabilites and DRMs. The Ka
 
 ## Supported Features  
 
-* Online and Offline Playback
-* Live
-* DRM (Fairplay, Widevine modular, Widevine classic)
-* Offline Mode (including DRM)
-* Multi audio tracks
-* Captions
-* Monetization (IMA )
-* Chromecast
-* AirPlay
-* Analytics
+| Feature  | Supported |
+| ------------- | :---: |
+| Online and Offline Playback  | :+1:  |
+| Live  | :+1:  |
+| DRM (Fairplay, Widevine modular, Widevine classic)  | :+1:  |
+| Offline Mode (including DRM)  | :+1:  |
+| Multi audio tracks  | :+1:  |
+| Captions  | :+1:  |
+| Monetization (IMA )  | :+1:  |
+| Chromecast  | :+1:  |
+| AirPlay  | :+1:  |
+| Analytics  | :+1:  |
 
 ## Supported Platforms  
 
-* Google
-	* Android phone/tablet: v4.2.2+
-* Apple
-	* iOS: v9+
+| Platform  | Supported |
+| ------------- | ------------- |
+| Google  | Android phone/tablet: v4.2.2+ |
+| Apple  |  iOS: v9+ |
 
-To learn more about the previous SDK, SDK 2.0, please refer to [this documentation](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/IntroductionV2.html).
+
+:information_source: To learn more about the previous SDK, SDK 2.0, please refer to [this documentation](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/IntroductionV2.html).
 
 **Next:**
 * [Introduction to the Kaltura Video Player SDK for iOS](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/iOS_Introduction.html)
