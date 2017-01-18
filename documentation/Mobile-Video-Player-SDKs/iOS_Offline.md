@@ -9,12 +9,13 @@ weight: 300
 
 Offline Playback refers to the ability to play downloaded content. The device doesn't have to actually be offline (i.e. with no network access) to use downloaded assets.
 
-Setting up offline playback involves a few steps:
+Conceptually, setting up offline playback has 3 parts:
+
 1. Download the content
 2. Register the downloaded content with the SDK
 3. Play the downloaded content.
 
-Download itself is out of scope for this document; it is done either by iOS [AVAssetDownloadTask] or by a third party download manager. 
+Download itself is out of scope for this document; it is done either by [AVAssetDownloadTask] (available in iOS 10 and up) or by a third party download manager.
 
 The main SDK component responsible for local playback is [LocalAssetsManager]. This class is used before and right after the download to make sure the SDK retrieves DRM licenses for offline playback. It is also used when starting local playback, to link the downloaded content with a [MediaEntry] object playable by the SDK.
 
@@ -50,6 +51,7 @@ At this point, the application can start downloading the asset (typically mp4 or
     @enduml
 {% endplantuml %}
 
+For correct usage of this mechanism, please see [Apple's guide](https://developer.apple.com/library/content/documentation/AudioVideo/Conceptual/MediaPlaybackGuide/Contents/Resources/en.lproj/HTTPLiveStreaming/HTTPLiveStreaming.html) and [sample app](https://developer.apple.com/library/content/samplecode/HLSCatalog/Introduction/Intro.html). 
 
 ### Downloading with a 3rd-party tool
 
