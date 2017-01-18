@@ -14,7 +14,7 @@ The following casting schemes are supported in iOS devices:
 |                                         |      About      | Sample |
 |:---------------------------------------:|:---------------:|:------:|
 | ![help](./v3-images/iOS/airPlay.png)    | [AirPlay](https://github.com/kaltura/DeveloperPortalDocs/blob/mobilePlayerSDKV3/documentation/Mobile-Video-Player-SDKs/v3_iOS_Casting.md#airplay)     | [x]()  |
-| ![help](./v3-images/iOS/chromecast.png) | [Google Cast]() | [x]()  |            |
+| ![help](./v3-images/iOS/chromecast.png) | [Google Cast](https://github.com/kaltura/DeveloperPortalDocs/blob/mobilePlayerSDKV3/documentation/Mobile-Video-Player-SDKs/v3_iOS_Casting.md#google-cast) | [x]()  |            |
 
 </center>
 
