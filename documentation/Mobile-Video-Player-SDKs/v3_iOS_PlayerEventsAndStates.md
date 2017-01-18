@@ -40,10 +40,6 @@ In order to get notified about any player-related events or states, you can add 
 
 >Note: To get full supported player states list please review [PlayerStates	](https://kaltura.github.io/playkit/api/ios/Enums/PlayerState.html)
 
-The Protocol provides delegate methods for each callback; for more information please review the JWPlayerDelegate.h file in the SDK package.
-
-Every callback notification has an “event” name in the userInfo dictionary, together with the additional parameters described below.
-
 **Having Issues?**
 
 > We have a [Questions and Answer Forum](https://forum.kaltura.org/c/playkit) where you can ask your iOS Development questions.
