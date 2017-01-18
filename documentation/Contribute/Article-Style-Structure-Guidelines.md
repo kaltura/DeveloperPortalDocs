@@ -32,7 +32,8 @@ To learn about Markdown basics and how to use the format, please read: [GitHub m
 &#123;% highlight c %&#125;
 int hello_world(char *world)  
 {  
-    printf("Hello %s\n", world);  
+	printf("Hello %s\n", world);  
+	return(0);
 }  
 &#123;% endhighlight %&#125;
 
@@ -41,7 +42,8 @@ int hello_world(char *world)
 {% highlight c %}
 int hello_world(char *world)
 {
-    printf("Hello %s\n", world);
+	printf("Hello %s\n", world);
+	return(0);
 }
 {% endhighlight %}
 
