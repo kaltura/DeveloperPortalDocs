@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Setting Up Media Providers for iOS Devices
+title: Connecting To Services
 subcat: SDK 3.0 (Beta) - iOS
-weight: 296
+weight: 300
 ---
 
 ## Create a Media-Entry 
@@ -19,7 +19,7 @@ Each provider has its own input parameters according to its backend.
 
 The input of the MockMediaProvider is JSON, for example:
 
-	```
+```json
 	{
         "entryId": {
             "duration": 60000,
@@ -35,17 +35,24 @@ The input of the MockMediaProvider is JSON, for example:
         }
 		}
 
-	```
+```
 
 To initialize the mockMediaProvider use:
 
-	```
- 	let mediaProvider1 : MediaEntryProvider = MockMediaEntryProvider()
-            .set(content: self.fileContent)
-            .set(id: "entryId")
-	```
+>swift
+
+```swift
+let mediaProvider1 : MediaEntryProvider = MockMediaEntryProvider()
+.set(content: self.fileContent)
+.set(id: "entryId")
+
+```
+>objc
+
+```objc
 
 
+```
 
 ### OTTMediaProvider
 
@@ -56,13 +63,22 @@ The input of the OTTMediaProvider is:
 * type - Indicates whether this is media or EPG
 * file formats to play - Indicates which files are acceptable to play (HD,SD etc' )
 
-	```
-	let provider = OTTMediaProvider()
-        .set(sessionProvider: sessionProvider)
-        .set(mediaId: mediaID)
-        .set(type: AssetType.media)
-        .set(formats: ["Mobile_Devices_Main_HD"])
-	```
+>swift
+
+```swift
+let provider = OTTMediaProvider()
+.set(sessionProvider: sessionProvider)
+.set(mediaId: mediaID)
+.set(type: AssetType.media)
+.set(formats: ["Mobile_Devices_Main_HD"])
+
+```
+>objc
+
+```objc
+
+
+```
 
 ### OVPMediaProvider
 
@@ -71,28 +87,47 @@ The input of the OVPMediaProvider is:
 * session provider - Provides all information regarding the session, for example the KS, partnerId, server base url, etc.
 * entryId - The ID of the entry to play
 * apiServerURL - The base server url, for example: 
- 
-	```
-	let provider = OVPMediaProvider()
-        .set(sessionProvider: sessionProvider)
-        .set(entryId: self.entryID)
-	```
 
+>swift
+
+```swift
+let provider = OVPMediaProvider()
+.set(sessionProvider: sessionProvider)
+.set(entryId: self.entryID)
+
+```
+>objc
+
+```objc
+
+
+```
 
 ## Loading Media  
 
 To get the MediaEntry, you'll need to call the "load" method as follows:
 
-	```
- 	provider.loadMedia { (r:Result<MediaEntry>) in
-            if (r.error != nil){
-                print(r.error)
-            }else{
-                print(r)
-            }
+>swift
+
+```swift
+ provider.loadMedia { (r:Result<MediaEntry>) in
+  		if (r.error != nil){
+          print(r.error)
+       }else{
+          print(r)
         }
-	```
-	
+  }
+
+```
+>objc
+
+```objc
 
 
+```
 
+
+</br>
+**Having Issues?**
+
+> We have a [Questions and Answer Forum](https://forum.kaltura.org/c/playkit) where you can ask your iOS Development questions.
