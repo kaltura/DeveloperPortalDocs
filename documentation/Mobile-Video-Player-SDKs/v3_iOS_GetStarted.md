@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Getting started
+title: Getting Started
 subcat: SDK 3.0 (Beta) - iOS
 weight: 292
 ---
