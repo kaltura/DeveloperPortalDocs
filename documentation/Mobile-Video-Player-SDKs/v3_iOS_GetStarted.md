@@ -11,7 +11,7 @@ This article will help you get started with the development of the Player SDK fo
 
 Before you begin developing with the Player SDK for iOS, there are a few topics you should read up on first:
 
-1. [**Media Providers**](): These are components that are capable of loading media data as PKMediaEntry representation.
+1. [**Media Providers**](https://github.com/kaltura/DeveloperPortalDocs/blob/mobilePlayerSDKV3/documentation/Mobile-Video-Player-SDKs/v3_iOS_ConnectingServices.md): These are components that are capable of loading media data as PKMediaEntry representation.
 2. [**CocoaPods**](https://guides.cocoapods.org/using/using-cocoapods.html) The kaltura iOS SDK and its plugins can be added to your project using the CocoaPods dependency manager. 
 
 >Note: You'll need to use CocoaPods version 1.0 or newer.
