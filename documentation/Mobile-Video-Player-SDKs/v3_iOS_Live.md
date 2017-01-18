@@ -28,6 +28,7 @@ self.player?.seek(to: CMTime(seconds: 999999, preferredTimescale: 1))
 
 ```
 
+</br>
 **Having Issues?**
 
 > We have a [Questions and Answer Forum](https://forum.kaltura.org/c/playkit) where you can ask your iOS Development questions.

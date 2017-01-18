@@ -79,10 +79,13 @@ pod "PlayKit/GoogleCastAddon", :git => 'https://github.com/kaltura/playkit-ios.g
 
 Next, import the following:
 
+>swift
+
 ```swift
 import GoogleCast
 import PlayKit
 ```
+
 >objc
 
 ```objc
