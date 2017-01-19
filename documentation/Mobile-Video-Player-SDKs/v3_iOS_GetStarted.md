@@ -5,7 +5,7 @@ subcat: SDK 3.0 (Beta) - iOS
 weight: 292
 ---
 
-This article will help you get started with the development of the Video Player SDK for iOS.
+This article will help you get started with the development of Kaltura's Video Player SDK for iOS.
 
 ## Before You Begin  
 
