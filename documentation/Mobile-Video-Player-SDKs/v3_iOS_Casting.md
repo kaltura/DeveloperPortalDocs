@@ -1,13 +1,11 @@
 ---
 layout: page
-title: Casting
+title: Configuring Casting on iOS Devices
 subcat: SDK 3.0 (Beta) - iOS
 weight: 291
 ---
 
-# Casting
-
-The following casting schemes are supported in iOS devices:
+The following casting schemes are supported on iOS devices:
 
 <center>
 
@@ -19,20 +17,20 @@ The following casting schemes are supported in iOS devices:
 </center>
 
 </br>
-## Airplay
+## Airplay  
 
 This article describes the steps required for adding support for the AirPlay functionality on iOS devices. AirPlay (developed by Apple Inc.) enables wireless streaming of audio, video, photos and more between devices.
 
 ### Add the AirPlay Functionality  
 
-1 . Enable the Audio, Airplay and Picture in the Picture background mode. 
-2 . In Xcode 8, select a target, and then under Capabilities > Background Modes, enable "Audio, Airplay and Picture in Picture". 
+1. Enable the Audio, Airplay, and Picture in the Picture background mode. 
+2. In Xcode 8, select a target, and then under Capabilities > Background Modes, enable **Audio, Airplay and Picture in Picture**. 
 
 ![AirPlay Functionality](./v3-images/iOS/EnableAirPlay.png) 
 
-3 . Import MediaPlayer, and then create an MPVolumeView and add it to your view as follows: 
+3. Import MediaPlayer, create an `MPVolumeView`, and then add it to your view as follows: 
 
->swift
+> swift  
 
 ```swift
 let airPlayBtn = MPVolumeView(frame: CGRect(x: 0, y: 0, width: 44, height: 44))
@@ -49,12 +47,13 @@ container.addSubview(airPlayBtn)
 
 **Optional:** Customize the image of the AirPlay button as follows: 
 
->swift
+> swift  
 
 ```swift
 airPlayBtn.setRouteButtonImage(UIImage(named: "name"), for: UIControlState.normal)
 
 ```
+
 >objc
 
 ```objc
@@ -62,9 +61,9 @@ airPlayBtn.setRouteButtonImage(UIImage(named: "name"), for: UIControlState.norma
 
 ```
 
-## Google Cast
+## Adding Support for Google Cast on iOS devices.
 
-This article describes how to add support for Google Cast for iOS Devices.
+This article describes how to add support for Google Cast on iOS devices.
 
 ###  Install Google Cast  
 
@@ -79,7 +78,7 @@ pod "PlayKit/GoogleCastAddon", :git => 'https://github.com/kaltura/playkit-ios.g
 
 Next, import the following:
 
->swift
+> swift  
 
 ```swift
 import GoogleCast
@@ -98,12 +97,12 @@ import PlayKit
 
 ###  Casting  
 
-To begin casting, you'll need to create a GCKMediaInformation by using a CastBuilder- either the OVPCastBuilder or the TVPAPICastBuilder.
+To begin casting, you'll need to create a `GCKMediaInformation` by using a CastBuilder - either `OVPCastBuilder` or `TVPAPICastBuilder`.
 
 
-#### OVP Example
+#### Example of Casting Using OVPCastBuilder  
 
->swift
+> swift  
 
 ```swift
 do {
@@ -133,9 +132,9 @@ do {
 ```
 
 
-#### OTT Example
+#### Example of Casting Using TVPAPICastBuilder
 
->swift
+> swift  
 
 ```swift
 	do {
@@ -167,7 +166,7 @@ do {
 
 Next, use the loadmedia to load the required media:
 
->swift
+> swift  
 
 ```swift
 private func load(mediaInformation:GCKMediaInformation) -> Void {
@@ -190,7 +189,7 @@ private func load(mediaInformation:GCKMediaInformation) -> Void {
 
 To add custom data:
 
->swift
+> swift  
 
 ```swift
 private func customData(mediaMetaData: MediaMetadataData?) ->  GCKMediaMetadata {
@@ -240,7 +239,7 @@ To add support for advertisments:
 
 1. Add an ad tag URL to the cast builder as follows:
 
->swift
+> swift  
 
 ```swift
 media = try OVPCastBuilder()
@@ -278,8 +277,8 @@ private func load(mediaInformation:GCKMediaInformation) -> Void {
 
 ```
 
-</br>
-**Having Issues?**
 
-> We have a [Questions and Answer Forum](https://forum.kaltura.org/c/playkit) where you can ask your iOS development-related questions.
+## Have Questions or Need Help?
+
+Check out the [Kaltura Player SDK Forum](https://forum.kaltura.org/c/playkit) page for different ways of getting in touch.
 
