@@ -2,13 +2,13 @@
 layout: page
 ---
 
-# Quick Start Using Swift  
+## Quick Start Using Swift  
 
 Build a simple video application using the Swift programming language.
 
-## Create the Project  
+### Create the Project  
 
-### Set Up a Project in Xcode  
+#### Set Up a Project in Xcode  
 
 1 . Open Xcode and click **start new Xcode Project**:
 	![help](./v3-images/iOS/newProj.png) 
@@ -20,7 +20,7 @@ Build a simple video application using the Swift programming language.
 	![help](./v3-images/iOS/projDetails.png) 
 
 
-### Add the SDK
+#### Add the SDK
 
 The simplest way to add the SDK and its dependencies to your project is by using CocoaPods.
 
@@ -65,7 +65,7 @@ pod install
 
 ```
 
-### Import the Native SDK
+#### Import the Native SDK
 
 Go to the desired file (e.g., ViewController.swift) and add the line below:
 
@@ -124,7 +124,7 @@ self.playerController.view.frame = playerContainer.bounds
 
 ```
 
-### Control Player
+#### Control Player
 
 * Add custom buttons and controls to the player as follows:
 
@@ -143,6 +143,6 @@ self.playerController.view.frame = playerContainer.bounds
 > [Download Full Sample]()
 
 
-**Having Issues?**
+## Have Questions or Need Help?
 
-> We have a [Questions and Answer Forum](https://forum.kaltura.org/c/playkit) where you can ask your iOS development-related questions.
+Check out the [Kaltura Player SDK Forum](https://forum.kaltura.org/c/playkit) page for different ways of getting in touch.
