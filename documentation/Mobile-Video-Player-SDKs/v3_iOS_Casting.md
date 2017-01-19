@@ -26,7 +26,7 @@ This article describes the steps required for adding support for the AirPlay fun
 1. Enable the Audio, Airplay, and Picture in the Picture background mode. 
 2. In Xcode 8, select a target, and then under Capabilities > Background Modes, enable **Audio, Airplay and Picture in Picture**. 
 
-![AirPlay Functionality](./v3-images/iOS/EnableAirPlay.png) 
+	![AirPlay Functionality](./v3-images/iOS/EnableAirPlay.png) 
 
 3. Import MediaPlayer, create an `MPVolumeView`, and then add it to your view as follows: 
 
@@ -239,43 +239,43 @@ To add support for advertisments:
 
 1. Add an ad tag URL to the cast builder as follows:
 
-> swift  
+	> swift  
 
-```swift
-media = try OVPCastBuilder()
-...
-.set(adTagURL: gcAddonData.params?.adTagURL)
-...
-.build()
+	```swift
+	media = try OVPCastBuilder()
+	...
+	.set(adTagURL: gcAddonData.params?.adTagURL)
+	...
+	.build()
 
-```
->objc
+	```
+	>objc
 
-```objc
-
-
-```
-
-2. Set the adInfoParserDelegate in the remoteMediaClient to AdInfoParser (a class from the PlayKit) as follows:
-
->swift
-
-```swift
-private func load(mediaInformation:GCKMediaInformation) -> Void {
-        let session =  GCKCastContext.sharedInstance().sessionManager.currentCastSession
-        if let currentSession = session,  let remoteMediaClient = currentSession.remoteMediaClient {
-            remoteMediaClient.loadMedia(mediaInformation, autoplay: true)
-            //add the following raw
-            remoteMediaClient.adInfoParserDelegate = AdInfoParser.shared
-        }
-    }
-```
->objc
-
-```objc
+	```objc
 
 
-```
+	```
+
+2. Next, set the adInfoParserDelegate in the remoteMediaClient to AdInfoParser (a class from the PlayKit) as follows:
+
+	>swift
+
+	```swift
+	private func load(mediaInformation:GCKMediaInformation) -> Void {
+		let session =  GCKCastContext.sharedInstance().sessionManager.currentCastSession
+		if let currentSession = session,  let remoteMediaClient = currentSession.remoteMediaClient {
+		    remoteMediaClient.loadMedia(mediaInformation, autoplay: true)
+		    //add the following raw
+		    remoteMediaClient.adInfoParserDelegate = AdInfoParser.shared
+		}
+	    }
+	```
+	>objc
+
+	```objc
+
+
+	```
 
 
 ## Have Questions or Need Help?
