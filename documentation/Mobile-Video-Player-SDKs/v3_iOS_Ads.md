@@ -11,9 +11,9 @@ This document describes the steps required for adding support for the IMA Plugin
 
 To enable the IMA Plugin on iOS devices for the Kaltura Video Player, add the following line to your Podfile: 
 
-```ruby
-pod 'PlayKit/IMAPlugin'
-```
+	```ruby
+	pod 'PlayKit/IMAPlugin'
+	```
 
 ## Register the IMA Plugin  
 
@@ -36,7 +36,7 @@ PlayKitManager.sharedInstance.registerPlugin(IMAPlugin.self)
 
 To configure the player to use IMA Plugin, add the following configuration to your `PlayerConfig` file as follows:
 
-### Swift  
+>swift
 
 ```swift
 let adsConfig = AdsConfig()
@@ -44,7 +44,7 @@ adsConfig.set(adTagUrl: 'your ad tag url')
 playerConfig.plugins[IMAPlugin.pluginName] = adsConfig
 ```
 
-### ojbc  
+>objc
 
 ```objc
 
@@ -60,13 +60,13 @@ The IMA Plugin offers two options for opening ad landing pages:
 
 By default, the plugin will open pages using Safari. To update the plugin to use an in-app browser, you’ll need to set the `webOpenerPresentingController value` in the AdsConfig object as follows:
 
-### Swift  
+>swift
 
 ```swift
 adsConfig.set(webOpenerPresentingController: webOpenerPresentingController)
 ```
 
-### Objc  
+>objc
 
 ```objc
 
@@ -80,13 +80,13 @@ To see companion ads in the device, you'll need to implement the following steps
 1. Configure an ad tag to return a companion ad (prepare this in advance).
 2. Supply a companion ad container to the plugin using the following format (make sure the size of the companion being returned is the same size as the UIView in which you’re trying to display it):
 
-### Swift  
+>swift
 
 ```swift
 adsConfig.set(companionView: companionView)
 ```
 
-### Objc  
+>objc
 
 ```objc
 
@@ -97,14 +97,14 @@ adsConfig.set(companionView: companionView)
 
 The IMA Plugin enables you to specify the video formats and bitrate using the following configuration:
 
-### Swift  
+>swift
 
 ```swift
 adsConfig.set(videoMimeTypes: ["video/mp4", "application/x-mpegURL"])
 adsConfig.set(videoBitrate: 1024)
 ```
 
-### Objc  
+>objc
 
 ```objc
 
@@ -117,13 +117,13 @@ The IMA Plugin enables you to specify the language to be used to localize ads an
 
 To do so, set the language parameter of the AdsConfig to the appropriate language code using [this reference](https://developers.google.com/interactive-media-ads/docs/sdks/ios/ads#languagecodes).
 
-### Swift  
+>swift
 
 ```swift
 adsConfig.set(language: "en")
 ```
 
-### Objc  
+>objc
 
 ```objc
 
@@ -134,13 +134,13 @@ adsConfig.set(language: "en")
 
 To control ad play during runtime, implement the following Video Player delegate method:
 
-### Swift  
+>swift
 
 ```swift
 func playerShouldPlayAd(_ player: Player) -> Bool
 ```
 
-### Objc  
+>objc
 
 ```objc
 
@@ -151,7 +151,7 @@ func playerShouldPlayAd(_ player: Player) -> Bool
 
 Use the following code to listen to ad events:
 
-### Swift  
+>swift
 
 ```swift
 let events: [PKEvent.Type] = [AdEvents.adDidRequestPause.self, AdEvents.adDidRequestResume.self, AdEvents.adResumed.self, AdEvents.adTapped.self]
@@ -169,7 +169,7 @@ player.addObserver(self, events: events, block: { (event: Any) -> Void in
         })
 ```
 
-### Objc  
+>objc
 
 ```objc
 
