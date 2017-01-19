@@ -7,11 +7,13 @@ weight: 291
 
 > Note: The Kaltura SDK v3 is in **BETA**.
 
->*If you are a Kaltura customer, please contact your Kaltura Customer Success Manager to help facilitate the use of this component.*
+>*If you're a Kaltura customer, please contact your Kaltura Customer Success Manager to help facilitate the use of this component.*
 
 ## Overview  
 
-The **Kaltura Mobile Video SDK for iOS** is fully native and introduces significant performance improvements. The SDK is intended to be integrated into any iOS application.
+**Kaltura's Mobile Video SDK for iOS** is a fully native application, which means that the SDK was developed specifically for iOS devices. This ensures that native application can interact with and take advantage of iOS operating system features and related software. 
+
+Kaltura's Mobile Video SDK for iOS introduces significant performance improvements and is intended to be integrated into any iOS application.
 
 ## Intended Audience
 
