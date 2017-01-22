@@ -2,7 +2,7 @@
 layout: page
 ---
 
-# DRM
+## Supported DRM Schemes  
 
 The following DRM schemes are supported in iOS devices:
 
@@ -24,6 +24,7 @@ The following DRM schemes are supported in iOS devices:
   * Requires Bitcode to be disabled (the core library does not support Bitcode)
 
 </br>
-**Having Issues?**
 
-> We have a [Questions and Answer Forum](https://forum.kaltura.org/c/playkit) where you can ask your iOS Development questions.
+## Have Questions or Need Help?
+
+Check out the [Kaltura Player SDK Forum](https://forum.kaltura.org/c/playkit) page for different ways of getting in touch.
