@@ -30,7 +30,7 @@ The simplest way to add the SDK and its dependencies to your project is by using
 
 2. Using a text editor, add the following lines of code to the Podfile and save it.
 
-	```ruby
+```ruby
 	source 'https://github.com/CocoaPods/Specs.git'
 
 	use_frameworks!
@@ -41,23 +41,23 @@ The simplest way to add the SDK and its dependencies to your project is by using
 	pod 'PlayKit'
 	end
 
-	```
+```
 	
 3. Navigate to the podfile location via Terminal and type the command:
 
-	```ruby
+```ruby
 	pod install
 
-	```
+```
 
 ### Import the Native SDK
 
 Go to the desired file (e.g., `ViewController.swift`) and add the line below:
 
-	```objc
+```objc
 	#import "PlayKit-Swift.h"
 
-	```
+```
 
 ### Code the Video Player Application  
 
@@ -65,14 +65,14 @@ You're now ready to code the video player application using the following option
 
 **Declare a Player Variable**
 
-	```objc
+```objc
 	@property (nonatomic, strong) id<Player> kPlayer;
 
-	```
+```
 
 **Set a Player Iinstance via a Sample Configuration**
 
-	```objc
+```objc
 	PlayerConfig *config = [PlayerConfig new];
 	NSDictionary *src = @{@"id":@"123123",@"url": @"https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"};
     
@@ -83,7 +83,7 @@ You're now ready to code the video player application using the following option
     
 	self.kPlayer = [PlayKitManager.sharedInstance loadPlayerWithConfig:config];
 
-	```
+```
 
 >Note: To learn more about `PlayerConfig` Creation, see the [PlayerConfig Doc]() article.
 
@@ -91,23 +91,23 @@ You're now ready to code the video player application using the following option
 
 1. Create a player container: 
 
-	```objc
+```objc
 	@property (weak, nonatomic) IBOutlet UIView *playerContainer;
 
-	```
+```
 2. Set the player frame and add a player view as a subview:
 
-	```objc
+```objc
 	self.kPlayer.view.frame = CGRectMake(0, 0, self.playerContainer.frame.size.width,self.playerContainer.frame.size.height);   
 	[self.playerContainer addSubview:self.kPlayer.view];
 
-	```
+```
 
 ### Adding Custome Buttons and Controls to the Player  
 
 Add custom buttons and controls to the player as follows:
 
-	```objc
+```objc
 	- (IBAction)playTapped:(id)sender {
     if(!self.kPlayer.isPlaying) {
         [self.kPlayer play];
@@ -120,7 +120,7 @@ Add custom buttons and controls to the player as follows:
 	    }
 	}
 
-	```
+```
 
 > [Download Full Sample]()
 
