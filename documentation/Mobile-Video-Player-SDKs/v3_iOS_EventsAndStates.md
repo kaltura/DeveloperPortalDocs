@@ -2,28 +2,11 @@
 layout: page
 ---
 
-# Player Events & States
+## Player Events & States  
 
-In order to get notified about any player-related events or states, you can add observers to relevant events.
+To receive notifications about any player-related events or states, you can add observers to the relevant events as follows.
 
-### Events Observation
-
->swift
-
-```swift
-
-
-```
->objc
-
-```objc
-
-
-```
-
->Note: To get full supported player events list please review [PlayerEvents](https://kaltura.github.io/playkit/api/ios/Classes/PlayerEvents.html)
-
-### States Observation
+### Observing Events   
 
 >swift
 
@@ -38,9 +21,28 @@ In order to get notified about any player-related events or states, you can add 
 
 ```
 
->Note: To get full supported player states list please review [PlayerStates	](https://kaltura.github.io/playkit/api/ios/Enums/PlayerState.html)
+>Note: To get a complete list of supported player events, refer to the [Player Events page](https://kaltura.github.io/playkit/api/ios/Classes/PlayerEvents.html).
+
+### Observing States  
+
+>swift
+
+```swift
+
+
+```
+>objc
+
+```objc
+
+
+```
+
+>Note: To get a complete list of supported player events, refer to the [Player States page](https://kaltura.github.io/playkit/api/ios/Enums/PlayerState.html).
 
 </br>
-**Having Issues?**
 
-> We have a [Questions and Answer Forum](https://forum.kaltura.org/c/playkit) where you can ask your iOS Development questions.
+## Have Questions or Need Help?
+
+Check out the [Kaltura Player SDK Forum](https://forum.kaltura.org/c/playkit) page for different ways of getting in touch.
+
