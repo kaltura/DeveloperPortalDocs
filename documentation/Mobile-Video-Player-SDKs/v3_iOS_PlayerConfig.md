@@ -2,15 +2,16 @@
 layout: page
 ---
 
-# Player Config
+## Player Configuration  
 
-Player configuration is the main data object of the Mobile SDK. 
+The player configuration is the main data object of the Mobile Video Player SDK. 
 
-This object is used for configuring custom player, including spesific plugins and obtaining the media that will be played on the device.
+This object is used for configuring custom players, including specific plugins, and obtaining the media that will be played on the device.
 
-> Note: For Technical Documantion About [PlayerConfig](https://kaltura.github.io/playkit/api/ios/Classes/PlayerConfig.html)
+> Note: To view additional technical documentation about the player configuration, see [this article](https://kaltura.github.io/playkit/api/ios/Classes/PlayerConfig.html).
 
-### Create PlayerConfig Instance
+### Creating a PlayerConfig Instance  
+
 
 >swift
 
@@ -25,23 +26,25 @@ PlayerConfig *config = [PlayerConfig new];
 
 ```
 
->Note: To Initialize Player Config `MediaEntry` is needed. 
+>Note: To initialize the player configuration, you'll need a `MediaEntry`. 
 
-## Media Entry
+### About the Media Entry
 
 The MediaEntry can be created using one of the following methods:
 
-Manually - Instantiate a new PKMediaEntry instance and fill the fields.
-
-Using a MockMediaProvider - Create a PKMediaEntry from a JSON input file or JsonObject.
-
-Using a remote media provider - Use one of the provided MediaEntryProvider implementations: For OVP environments, use `KalturaOvpMediaProvider`. For OTT environments, use `PhoenixMediaProvider`.
+* Manually, by instatiating a new `PKMediaEntry` instance and filling the fields.
+* Using a `MockMediaProvider` to create a `PKMediaEntry` from a JSON input file or JsonObject.
+* Using a remote media provider, provided the `MediaEntryProvider` implementations: 
+  * For OVP environments, use `KalturaOvpMediaProvider`
+  * For OTT environments, use `PhoenixMediaProvider`
 
 Once you have a `MediaEntry` ready, you can build the player configuration and plugins, and continue to prepare the Kaltura Mobile Video Player for play.
 
-> Note: For Technical Documantion About [PlayerConfig](https://kaltura.github.io/playkit/api/ios/Classes/MediaEntry.html)
+> Note: To view additional technical documentation about the player configuration, see [this article](https://kaltura.github.io/playkit/api/ios/Classes/MediaEntry.html).
 
 </br>
-**Having Issues?**
 
-> We have a [Questions and Answer Forum](https://forum.kaltura.org/c/playkit) where you can ask your iOS Development questions.
+## Have Questions or Need Help?
+
+Check out the [Kaltura Player SDK Forum](https://forum.kaltura.org/c/playkit) page for different ways of getting in touch.
+
