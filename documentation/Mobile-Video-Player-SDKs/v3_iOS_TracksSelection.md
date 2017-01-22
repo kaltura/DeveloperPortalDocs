@@ -2,7 +2,7 @@
 layout: page
 ---
 
-# Tracks Selection
+## Tracks Selection
 
 This document describes the steps required for adding support for the multi-audio and captions functionality in your application on iOS devices.
 
@@ -51,6 +51,6 @@ self.player.selectTrack(trackId: self.captions[index].id)
 
 ```
 
-**Having Issues?**
+## Have Questions or Need Help?
 
-> We have a [Questions and Answer Forum](https://forum.kaltura.org/c/playkit) where you can ask your iOS Development questions.
+Check out the [Kaltura Player SDK Forum](https://forum.kaltura.org/c/playkit) page for different ways of getting in touch.
