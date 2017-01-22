@@ -75,7 +75,7 @@ Go to the desired file (e.g., `ViewController.swift`) and add the line below:
 
 ### Code the Video Player Application  
 
-Next, you're ready to code the video player application using the following options.
+You're now ready to code the video player application using the following options.
 
 **Declare a Player Variable**
 
