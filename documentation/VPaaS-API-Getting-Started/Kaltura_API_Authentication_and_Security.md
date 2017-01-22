@@ -87,32 +87,20 @@ To decode a KS v2, IT admins and developers who operate self hosted Kaltura serv
 
 ###  Generating a KS  
 
-1. Gather all the different KS fields and their values: 
- *_e – expiry (unix timestamp)
- *_u – user
- *_[t – type (<a href="http://www.kaltura.com/api_v3/testmeDoc/index.php?object=KalturaSessionType"><span>KalturaSessionType</span>
- * Privileges (edit, download, sview, etc.)
-2. Compile all fields and URL encode the parameters as a query string, e.g.,  <strong><span style="font-family: 'courier new', courier;">_u=userId&_e=12345678&_t=2&Privileges=sview:1_0xada32as;edit:*</span></strong>.
+1. Gather all the different KS fields and their values
+  *_e – expiry (unix timestamp)
+  *_u – user
+  *_[t – type](http://www.kaltura.com/api_v3/testmeDoc/index.php?object=KalturaSessionType)
+  * Privileges (edit, download, sview, etc.)
+2. Compile all fields and URL encode the parameters as a query string, e.g., **_u=userId&_e=12345678&_t=2&Privileges=sview:1_0xada32as;edit:***
 3. Prepend 16 random binary bytes to the fields:
-  </li>
-  <li class="li1">
-    Prepend the binary SHA1 hash of the string (20 string)
-  </li>
-  <li class="li1">
-    Encrypt the string with the SHA1 hash of the account's API secret using AES128/CBC/Zero bytes padding
-  </li>
-  <li class="li1">
-    Prepend the KS version and partner ID separated by pipes (e.g. v2|1234|..)
-  </li>
-  <li class="li1">
-    Encode the result using Base64 
-  </li>
-  <li class="li1">
-    Replace + with – and / with _ to make the KS URL-safe
-  </li>
-</ol>
+4. Prepend the binary SHA1 hash of the string (20 string)
+5. Encrypt the string with the SHA1 hash of the account's API secret using AES128/CBC/Zero bytes padding.
+6. Prepend the KS version and partner ID separated by pipes (e.g. v2|1234|..).
+7. Encode the result using Base64.
+8. Replace + with – and / with _ to make the KS URL-safe.
 
-To see an implementation of the KS generation algorithm, refer to the GenerateSession function below.
+To see an implementation of the KS generation algorithm, refer to the `GenerateSession` function below.
 
 ## Methods for Generating a Valid KS  
 
@@ -132,7 +120,7 @@ To see an implementation of the KS generation algorithm, refer to the GenerateSe
 *   USER KS can invoke services on his entries and his user-data. (e.g. list actions will result in a filtered list according to the user KS)
 *   Attempting to manipulate other users' data will fail.
 
-<span class="mce-sub-heading">Admin KS</span>
+**Admin KS**
 
 *   ADMIN KS is generated using the ADMIN SECRET.
 *   ADMIN Type is an absolute administrator and can call / perform all actions in the system. Services that use this type of session are:
@@ -143,21 +131,15 @@ To see an implementation of the KS generation algorithm, refer to the GenerateSe
 *   An admin KS should never reach the browser. By letting users access an admin KS they will be able to cause changes not limited to their own content.
 *   An admin KS ignores any privilege restrictions.
 
-<span class="mce-sub-heading">User Roles and Permissions (Authenticated User Session)</span>
+**User Roles and Permissions (Authenticated User Session)**
 
 *   Allow more advanced configuration of the access and permissions based on the defined Kaltura User permissions.
 
-<div>
-  <p class="mce-heading-4">
-    How May Session Type Affect API Behavior?
-  </p>
-  
-  <p>
-    The session type may affect the way that some API calls behave.
-  </p>
-  
-  <p>
-    Examples:
+#### How May Session Type Affect API Behavior?  
+
+The session type may affect the way that some API calls behave.
+
+Examples:
   </p>
   
   <ul>
@@ -179,9 +161,7 @@ To see an implementation of the KS generation algorithm, refer to the GenerateSe
   </ul>
 </div>
 
-<p class="mce-heading-3">
-  KS Validation on the Server
-</p>
+### KS Validation on the Server  
 
 The Kaltura API servers will validate the KS for:
 
