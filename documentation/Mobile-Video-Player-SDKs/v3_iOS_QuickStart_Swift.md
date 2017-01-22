@@ -4,7 +4,7 @@ layout: page
 
 ## Quick Start Using Swift  
 
-In this ssection, you'll learn how to build a simple video application using the Swift programming language.
+In this section, you'll learn how to build a simple video application using the Swift programming language.
 
 ### Create the Project  
 
