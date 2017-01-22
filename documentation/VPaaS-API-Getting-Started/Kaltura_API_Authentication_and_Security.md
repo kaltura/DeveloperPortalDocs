@@ -46,11 +46,11 @@ Every KS is limited by one or more of the following components:
 
 * Expiry time – Can be set to a short period (1 second) up to 10 years. 
 
-**Note:** The player must perform all Kaltura API calls before the user hits play, so setting this too short for player sessions may break the playback experience. About 30 minutes is reasonable for just playback, or you could extend the player to re-negotiate for a session if it expires.
+>Note: The player must perform all Kaltura API calls before the user hits play, so setting this too short for player sessions may break the playback experience. About 30 minutes is reasonable for just playback, or you could extend the player to re-negotiate for a session if it expires.
 
 * Number of API calls - E.g., no more than 5 API calls allowed on the KS.
 
-**NOTE:** The number of needed API calls may not be an expected number, especially if you use 3rd party plugins in the player. When using this limitation, make sure all API calling components in your application are known and counted into the number of API calls specified.
+>Note: The number of needed API calls may not be an expected number, especially if you use 3rd party plugins in the player. When using this limitation, make sure all API calling components in your application are known and counted into the number of API calls specified.
 
 * Specific entry playback - When limited by an Access Control Profile, approved entries must be specifically stated by passing the privilege sview:entryId.
 * Specific IP address - Limit access to the API from a specific IP or range of IPs by passing privilege **iprestrict:IPADDRESS**.
@@ -60,7 +60,7 @@ Every KS is limited by one or more of the following components:
 The KS is a string composed of the following details:
 
 * Publisher ID – A unique identifier allocated to every Kaltura account. The partner ID can be retrieved from the KMC Integration Settings tab.
-* User ID – The id of the user within the publisher account performing the API call. This ID is the end-user's ID on the publisher's system.
+* User ID – The identifier of the user within the publisher account performing the API call. This ID is the end-user's ID on the publisher's system.
 * KS Type (admin / user) – An admin KS can access all the content of the publisher account and call management APIs, while a user KS can only access content items owned by the specific user.
 * Expiry time - Can be set to a short period (1 second) up to 10 years; set in seconds (integer).
 * Action limit – The maximum number of API calls allowed using this KS (integer).
@@ -85,34 +85,15 @@ Because the new KS format requires encryption of the fields, performing a base64
 To decode a KS v2, IT admins and developers who operate self hosted Kaltura servers can use the admin console developer tools page: https://[KalturaServerURL]/admin_console/index.php/plugin/KalturaInternalToolsPluginSystemHelperAction
 </p>
 
-<p class="p1 mce-sub-heading">
-  The steps for generating a KSv2 are:
-</p>
+###  Generating a KS  
 
-<ol class="ol1">
-  <li class="li1">
-    Gather all the different KS fields and their values: 
-  </li>
-  <ol class="ol1">
-    <li class="li1">
-      _e – expiry (unix timestamp)
-    </li>
-    <li class="li1">
-      _u – user
-    </li>
-    <li class="li1">
-      _t – type (<a href="http://www.kaltura.com/api_v3/testmeDoc/index.php?object=KalturaSessionType"><span>KalturaSessionType</span></a>)
-    </li>
-    <li class="li1">
-      Privileges (edit, download, sview, etc.)
-    </li>
-  </ol>
-  
-  <li class="li1">
-    Compile all fields and URL encode the parameters as a query string. e.g.  <strong><span style="font-family: 'courier new', courier;">_u=userId&_e=12345678&_t=2&Privileges=sview:1_0xada32as;edit:*</span></strong>
-  </li>
-  <li class="li1">
-    Prepend 16 random binary bytes to the fields
+1. Gather all the different KS fields and their values: 
+ *_e – expiry (unix timestamp)
+ *_u – user
+ *_[t – type (<a href="http://www.kaltura.com/api_v3/testmeDoc/index.php?object=KalturaSessionType"><span>KalturaSessionType</span>
+ * Privileges (edit, download, sview, etc.)
+2. Compile all fields and URL encode the parameters as a query string, e.g.,  <strong><span style="font-family: 'courier new', courier;">_u=userId&_e=12345678&_t=2&Privileges=sview:1_0xada32as;edit:*</span></strong>.
+3. Prepend 16 random binary bytes to the fields:
   </li>
   <li class="li1">
     Prepend the binary SHA1 hash of the string (20 string)
