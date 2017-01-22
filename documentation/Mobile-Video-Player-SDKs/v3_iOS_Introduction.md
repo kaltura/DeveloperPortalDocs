@@ -26,7 +26,7 @@ This guide assumes that you have the necessary Objective C or Swift and iOS deve
 |:------------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------:|
 |                                           ![help](./v3-images/getStarted.png)                                           |         ![help](./v3-images/TD.png)        |
 | [Getting Started](https://github.com/kaltura/DeveloperPortalDocs/blob/mobilePlayerSDKV3/documentation/Mobile-Video-Player-SDKs/v3_iOS_GetStarted.md) | [Mobile Video Player API Documentation](https://kaltura.github.io/playkit/api/ios/) |
-|                                                     **Quick Start** Create a Simple Video App                                                    |       Detailed technical iOS documentation      |
+|                                                     **Quick Start** Create a Simple Video Application                                                   |       Detailed technical iOS API documentation      |
 
 
 ## Have Questions or Need Help?
