@@ -2,21 +2,21 @@
 layout: page
 ---
 
-# Quick Start Using Obj-C  
+## Quick Start Using Obj-C  
 
-Build a simple video application using the ObjC programming language.
+n this section, you'll learn how to build a simple video application using the ObjC programming language.
 
 ## Create the Project  
 
 ### Set Up a Project in Xcode  
 
-1 . Open Xcode and click **start new Xcode Project**:
+1. Open Xcode and click **start new Xcode Project**:
 	![help](./v3-images/iOS/newProj.png) 
 
-2 . Next, select **Single View Application** and click **Next**:
+2. Next, select **Single View Application** and click **Next**:
 	![help](./v3-images/iOS/singleView.png) 
 
-3 . In the dialog screen displayed, enter the relevant details:
+3. In the dialog screen displayed, enter the relevant details:
 	![help](./v3-images/iOS/projDetails.png) 
 
 
@@ -24,105 +24,108 @@ Build a simple video application using the ObjC programming language.
 
 The simplest way to add the SDK and its dependencies to your project is by using CocoaPods.
 
->Note: Using CocoaPods on an existing Xcode project will modify the project file. You may want to make a backup before doing this.
+>Note: Using CocoaPods on an existing Xcode project will modify the project file, so you may want to make a backup before doing this.
 
-1 . In your project folder, create a plain text file called Podfile (no file extension).
+1. In your project folder, create a plain text file called `Podfile` (no file extension).
 
-2 . Using a text editor, add the following lines of code to the Podfile and save it.
+2. Using a text editor, add the following lines of code to the Podfile and save it.
 
-```ruby
-source 'https://github.com/CocoaPods/Specs.git'
+	```ruby
+	source 'https://github.com/CocoaPods/Specs.git'
 
-use_frameworks!
+	use_frameworks!
 
-platform :ios, '8.0' # (define required version)
+	platform :ios, '8.0' # (define required version)
 
-target 'Simple-Video-Player' do
+	target 'Simple-Video-Player' do
 	pod 'PlayKit'
-end
+	end
 
-```
+	```
 	
-3 . Navigate to the podfile location via Terminal and type the command:
+3. Navigate to the podfile location via Terminal and type the command:
 
-```ruby
-pod install
+	```ruby
+	pod install
 
-```
+	```
 
 ### Import the Native SDK
 
-Go to the desired file (e.g., ViewController.swift) and add the line below:
+Go to the desired file (e.g., `ViewController.swift`) and add the line below:
 
-```objc
-#import "PlayKit-Swift.h"
+	```objc
+	#import "PlayKit-Swift.h"
 
-```
+	```
 
-### Code the Video Player Application
+### Code the Video Player Application  
 
-* To declare a player variable, use:
+You're now ready to code the video player application using the following options.
 
-```objc
-@property (nonatomic, strong) id<Player> kPlayer;
+**Declare a Player Variable**
 
-```
+	```objc
+	@property (nonatomic, strong) id<Player> kPlayer;
 
-* To set a player instance via a sample configuration, use the following:
+	```
 
-```objc
-PlayerConfig *config = [PlayerConfig new];
-NSDictionary *src = @{@"id":@"123123",@"url": @"https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"};
+**Set a Player Iinstance via a Sample Configuration**
+
+	```objc
+	PlayerConfig *config = [PlayerConfig new];
+	NSDictionary *src = @{@"id":@"123123",@"url": @"https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"};
     
-NSArray *srcs = @[src];
-NSDictionary *entry = @{@"id":@"Trailer",@"sources": srcs};
+	NSArray *srcs = @[src];
+	NSDictionary *entry = @{@"id":@"Trailer",@"sources": srcs};
     
-[config setWithMediaEntry:[[MediaEntry alloc] initWithJson:entry]];
+	[config setWithMediaEntry:[[MediaEntry alloc] initWithJson:entry]];
     
-self.kPlayer = [PlayKitManager.sharedInstance loadPlayerWithConfig:config];
+	self.kPlayer = [PlayKitManager.sharedInstance loadPlayerWithConfig:config];
 
-```
+	```
 
 >Note: To learn more about `PlayerConfig` Creation, see the [PlayerConfig Doc]() article.
 
-To set the player view size:
+### Setting the Player View Size  
 
-* Create a player container: 
+1. Create a player container: 
 
-```objc
-@property (weak, nonatomic) IBOutlet UIView *playerContainer;
+	```objc
+	@property (weak, nonatomic) IBOutlet UIView *playerContainer;
 
-```
-* Set the player frame and add a player view as a subview:
+	```
+2. Set the player frame and add a player view as a subview:
 
-```objc
-self.kPlayer.view.frame = CGRectMake(0, 0, self.playerContainer.frame.size.width,self.playerContainer.frame.size.height);   
-[self.playerContainer addSubview:self.kPlayer.view];
+	```objc
+	self.kPlayer.view.frame = CGRectMake(0, 0, self.playerContainer.frame.size.width,self.playerContainer.frame.size.height);   
+	[self.playerContainer addSubview:self.kPlayer.view];
 
-```
+	```
 
-### Control Player
+### Adding Custome Buttons and Controls to the Player  
 
-* Add custom buttons and controls to the player as follows:
+Add custom buttons and controls to the player as follows:
 
-```objc
-- (IBAction)playTapped:(id)sender {
+	```objc
+	- (IBAction)playTapped:(id)sender {
     if(!self.kPlayer.isPlaying) {
         [self.kPlayer play];
     }
-}
+	}
 
-- (IBAction)pauseTapped:(id)sender {
+	- (IBAction)pauseTapped:(id)sender {
     if(self.kPlayer.isPlaying) {
         [self.kPlayer pause];
-    }
-}
+	    }
+	}
 
-```
+	```
 
 > [Download Full Sample]()
 
 
-**Having Issues?**
+## Have Questions or Need Help?
 
-> We have a [Questions and Answer Forum](https://forum.kaltura.org/c/playkit) where you can ask your iOS development-related questions.
+Check out the [Kaltura Player SDK Forum](https://forum.kaltura.org/c/playkit) page for different ways of getting in touch.
+
