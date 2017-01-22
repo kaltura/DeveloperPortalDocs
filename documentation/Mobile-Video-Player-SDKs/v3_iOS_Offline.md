@@ -2,35 +2,36 @@
 layout: page
 ---
 
-## Overview
+## Offline Playback
 
-Offline Playback refers to the ability to play downloaded content. The device doesn't have to actually be offline (i.e. with no network access) to use downloaded assets.
+Offline Playback refers to the ability to play downloaded content, although the device doesn't actually have to be offline (i.e., without network access) to use downloaded assets.
 
-Conceptually, setting up offline playback has 3 parts:
+Setting up offline playback requires three steps:
 
-1. Download the content
-2. Register the downloaded content with the SDK
+1. Download the content.
+2. Register the downloaded content with the SDK.
 3. Play the downloaded content.
 
-Download itself is out of scope for this document; it is done either by [AVAssetDownloadTask] (available in iOS 10 and up) or by a third party download manager.
+Download itself is out of scope for this article; you can use either [AVAssetDownloadTask](https://developer.apple.com/reference/avfoundation/avassetdownloadtask) (available in iOS 10 and up) or use a third party download manager.
 
-The main SDK component responsible for local playback is [LocalAssetsManager]. This class is used before and right after the download to make sure the SDK retrieves DRM licenses for offline playback. It is also used when starting local playback, to link the downloaded content with a [MediaEntry] object playable by the SDK.
+The main SDK component responsible for local playback is the `LocalAssetsManager`. This class is used before and right after the download to make sure the SDK retrieves the DRM licenses for offline playback. It's also used when starting local playback, to link the downloaded content with a `MediaEntry` object playable by the SDK.
 
-## Download and Register
+### Download and Register
 
-### Downloading with AVAssetDownloadTask
+#### Downloading with AVAssetDownloadTask  
 
-When using AVAssetDownloadTask, an application has to create an AVURLAsset and link it to a download task. In addition, if the asset is protected with FairPlay DRM, a delegate on the asset must be set.
+When using `AVAssetDownloadTask`, the application will need to create an `AVURLAsset` and link it to a download task. In addition, if the asset is protected with FairPlay DRM, a delegate on the asset must be set.
 
-Before starting to download, the application should have a ready-to-use MediaEntry object, containing one or more `MediaSource`s. 
+Before starting to download, the application should have a ready-to-use `MediaEntry` object, containing one or more `MediaSource`s. 
 
-The application should then call `prepareForDownload(of mediaEntry: MediaEntry)` - which will pick the most suitable source for the download and return two values:
- - A downloadable `AVURLAsset`, configured with FairPlay if required
- - The original `MediaSource` from which the `AVURLAsset` was built.
+The application should then call `prepareForDownload(of mediaEntry: MediaEntry)`, which will pick the most suitable source for the download and return two values:
+
+ * A downloadable `AVURLAsset`, configured with FairPlay if required
+* The original `MediaSource` from which the `AVURLAsset` was built
  
-At this point, the application can start downloading the asset (typically mp4 or HLS).
+At this point, the application can begin downloading the asset (typically mp4 or HLS).
 
-{% plantuml %}
+	{% plantuml %}
     @startuml
 	participant App
 	participant LocalAssetsManager as LAM
@@ -46,17 +47,17 @@ At this point, the application can start downloading the asset (typically mp4 or
     App->LAM: assetDownloadFinished(mediaSource, location)
 
     @enduml
-{% endplantuml %}
+	{% endplantuml %}
 
-For correct usage of this mechanism, please see [Apple's guide](https://developer.apple.com/library/content/documentation/AudioVideo/Conceptual/MediaPlaybackGuide/Contents/Resources/en.lproj/HTTPLiveStreaming/HTTPLiveStreaming.html) and [sample app](https://developer.apple.com/library/content/samplecode/HLSCatalog/Introduction/Intro.html). 
+For correct usage of this mechanism, please see the [Apple guide](https://developer.apple.com/library/content/documentation/AudioVideo/Conceptual/MediaPlaybackGuide/Contents/Resources/en.lproj/HTTPLiveStreaming/HTTPLiveStreaming.html) and a [sample application](https://developer.apple.com/library/content/samplecode/HLSCatalog/Introduction/Intro.html). 
 
-### Downloading with a 3rd-party tool
+#### Downloading with a Third-Party  Tool  
 
-When the asset isn't downloadable by AVAssetDownloadTask (or if AVAssetDownloadTask is not available), the download will be done either with a 3rd party tool or by a [URLSessionDownloadTask]. In those cases, there's no "prepare" step. Instead, the application calls `getPreferredDownloadableMediaSource(for mediaEntry: MediaEntry)` to pick the best source. It then downloads the source, and at the end calls `assetDownloadFinished(mediaSource: MediaSource, location: URL)`.
+When the asset isn't downloadable by `AVAssetDownloadTask` (or if `AVAssetDownloadTask` isn't available), you can perform a download using either a third-party tool or a [`URLSessionDownloadTask`](https://developer.apple.com/reference/foundation/urlsessiondownloadtask). In these cases, there's no "preparation" step. Instead, the application calls `getPreferredDownloadableMediaSource(for mediaEntry: MediaEntry)` to pick the best source. It then downloads the source, and at the end calls `assetDownloadFinished(mediaSource: MediaSource, location: URL)`.
 
 This case also applies to *Widevine Classic* assets.
 
-{% plantuml %}
+	{% plantuml %}
     @startuml
 	participant App
 	participant LocalAssetsManager as LAM
@@ -69,14 +70,14 @@ This case also applies to *Widevine Classic* assets.
     App->LAM: assetDownloadFinished(mediaSource, location)
 
     @enduml
-{% endplantuml %}
+	{% endplantuml %}
 
 
-## Playback
+### Playing Back and Downloaded Asset    
 
-To play a downloaded asset, the application needs to wrap the asset with a MediaEntry object. `LocalAssetsManager` provides `createLocalMediaEntry(for assetId: String, localURL: URL)`. This function returns a suitable `MediaEntry`.
+To play back a downloaded asset, the application needs to wrap the asset with a `MediaEntry` object. `LocalAssetsManager` provides `createLocalMediaEntry(for assetId: String, localURL: URL)`. This function returns a suitable `MediaEntry`.
 
-{% plantuml %}
+	{% plantuml %}
     @startuml
 	participant App
 	participant LocalAssetsManager as LAM
@@ -87,17 +88,17 @@ To play a downloaded asset, the application needs to wrap the asset with a Media
     App->Player: play(localMediaEntry)
 
     @enduml
-{% endplantuml %}
+	{% endplantuml %}
 
 
-## LocalDataStore
+### Using a LocalDataStore  
 
-The constructor of LocalAssetsManager takes an optional [LocalDataStore]. This object is **require** if the application downloads or plays DRM-protected content. The protocol has 3 functions:
+The constructor of a `LocalAssetsManager` takes an optional [LocalDataStore]. This object is **required** if the application downloads or plays DRM-protected content. The protocol has three functions:
 - `save(key: String, value: Data)`
 - `load(key: String) -> Data`
 - `remove(key: String)`
 
-A simple implementation is provided in [DefaultLocalDataStore], but if the application has an existing persistent storage facility (such as a CoreData/SQLite db), it might be good idea to provide a different implementation.
+A simple implementation is provided in [DefaultLocalDataStore], but if the application has an existing persistent storage facility (such as a CoreData/SQLite db), it might be a good idea to provide a different implementation.
 
 
 [LocalAssetsManager]: https://kaltura.github.io/playkit/api/ios/Classes/LocalAssetsManager.html
@@ -108,6 +109,8 @@ A simple implementation is provided in [DefaultLocalDataStore], but if the appli
 [URLSessionDownloadTask]: https://developer.apple.com/reference/foundation/urlsessiondownloadtask
 
 </br>
-**Having Issues?**
 
-> We have a [Questions and Answer Forum](https://forum.kaltura.org/c/playkit) where you can ask your iOS Development questions.
+## Have Questions or Need Help?
+
+Check out the [Kaltura Player SDK Forum](https://forum.kaltura.org/c/playkit) page for different ways of getting in touch.
+
