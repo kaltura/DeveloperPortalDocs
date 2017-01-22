@@ -2,12 +2,14 @@
 layout: page
 ---
 
-# App Lifecycle
+## Application Lifecycle  
+
+The following section details the iOS application lifecyle.
 
 === TBD ===
 
 </br>
-## Application State Changes
+### Application State Changes
 
 >swift
 
@@ -23,7 +25,7 @@ layout: page
 ```
 
 </br>
-## Connectivity
+### Connectivity
 
 
 >swift
@@ -39,6 +41,6 @@ layout: page
 
 ```
 </br>
-**Having Issues?**
+## Have Questions or Need Help?
 
-> We have a [Questions and Answer Forum](https://forum.kaltura.org/c/playkit) where you can ask your iOS Development questions.
+Check out the [Kaltura Player SDK Forum](https://forum.kaltura.org/c/playkit) page for different ways of getting in touch.
