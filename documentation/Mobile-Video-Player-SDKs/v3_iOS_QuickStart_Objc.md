@@ -40,6 +40,19 @@ The simplest way to add the SDK and its dependencies to your project is by using
 	target 'Simple-Video-Player' do
 	pod 'PlayKit'
 	end
+	
+	pre_install do |installer|
+    		def installer.verify_no_static_framework_transitive_dependencies; end
+	end
+
+	post_install do |installer| 
+   		installer.pods_project.targets.each do |target| 
+        		target.build_configurations.each do |config| 
+                		config.build_settings['SWIFT_VERSION'] = '3.0'
+	        		config.build_settings['ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES'] = 'NO'
+        		end 
+    		end 
+	end
 
 ```
 	
