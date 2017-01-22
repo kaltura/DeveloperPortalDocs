@@ -233,7 +233,7 @@ private func customData(mediaMetaData: MediaMetadataData?) ->  GCKMediaMetadata 
 
 ```
 	
-##  Advertisments  
+##  Adding Support for Advertisements on Casted Media    
 
 To add support for advertisments:
 
