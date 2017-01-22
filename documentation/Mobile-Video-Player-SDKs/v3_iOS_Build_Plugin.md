@@ -7,14 +7,13 @@ weight: 292
 
 This article describes how to create plugins, which enable you to add certain functionalities to your player.
 
-
 ## When Should You Use Plugins?
 
 You'll want to create and use plugins to add core feature to Kaltura's Video Player SDK for iOS. 
 
-## Creating a Plugin Configuration Class
+## Creating a Plugin Configuration Class  
 
-**What is plugin configuration?** A plugin configuration is `Any` Object that can contain any data needed by your plugin.
+**What is a plugin configuration?** A plugin configuration is *any* object that can contain any data required by your plugin. This section will show you how to create a plugin configuration class and provide you with some examples.
 
 ### Plugin Configuration Sample  
 
@@ -40,7 +39,7 @@ The plugin configuration is passed via the `load` function, will be explained la
 
 ## Building Plugins  
 
-To build plugins create a class that implements the [PKPlugin Protocol](https://kaltura.github.io/playkit/api/ios/Protocols/PKPlugin.html):
+To build plugins, create a class that implements the [PKPlugin Protocol](https://kaltura.github.io/playkit/api/ios/Protocols/PKPlugin.html):
 
 >swift
 
@@ -76,7 +75,7 @@ class SamplePlugin: PKPlugin {
 
 ## Register the Plugin
 
-You should do it once on your `AppDelegate` or see below:
+You should register the plugin once on your `AppDelegate` or see below:
 
 >swift
 
