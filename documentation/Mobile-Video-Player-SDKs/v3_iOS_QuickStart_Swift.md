@@ -4,19 +4,19 @@ layout: page
 
 ## Quick Start Using Swift  
 
-Build a simple video application using the Swift programming language.
+In this ssection, you'll learn how to build a simple video application using the Swift programming language.
 
 ### Create the Project  
 
 #### Set Up a Project in Xcode  
 
-1 . Open Xcode and click **start new Xcode Project**:
+1. Open Xcode and click **start new Xcode Project**:
 	![help](./v3-images/iOS/newProj.png) 
 
-2 . Next, select **Single View Application** and click **Next**:
+2. Next, select **Single View Application** and click **Next**:
 	![help](./v3-images/iOS/singleView.png) 
 
-3 . In the dialog screen displayed, enter the relevant details:
+3. In the dialog screen displayed, enter the relevant details:
 	![help](./v3-images/iOS/projDetails.png) 
 
 
@@ -26,11 +26,10 @@ The simplest way to add the SDK and its dependencies to your project is by using
 
 >Note: Using CocoaPods on an existing Xcode project will modify the project file. You may want to make a backup before doing this.
 
-1 . In your project folder, create a plain text file called Podfile (no file extension).
+1. In your project folder, create a plain text file called `Podfile` (no file extension).
+2. Using a text editor, add the following lines of code to the Podfile and save it.
 
-2 . Using a text editor, add the following lines of code to the Podfile and save it.
-
-```ruby
+	```ruby
 	source 'https://github.com/CocoaPods/Specs.git'
 
 	use_frameworks!
@@ -56,37 +55,39 @@ The simplest way to add the SDK and its dependencies to your project is by using
    	 end 
 	end
 
-```
+	```
 	
-3 . Navigate to the podfile location via Terminal and type the command:
+3. Navigate to the podfile location via Terminal and type the command:
 
-```ruby
-pod install
+	```ruby
+	`pod install
 
-```
+	````
 
-#### Import the Native SDK
+#### Import the Native SDK  
 
-Go to the desired file (e.g., ViewController.swift) and add the line below:
+Go to the desired file (e.g., `ViewController.swift`) and add the line below:
 
-```swift
-import PlayKit
+	```swift
+	import PlayKit
 
-```
+	```
 
-### Code the Video Player Application
+### Code the Video Player Application  
 
-* To declare a player variable, use:
+Next, you're ready to code the video player application using the following options.
 
-```swift
-var playerController: Player
+**Declare a Player Variable**
 
-```
+	```swift
+	var playerController: Player
 
-* To set a player instance via a sample configuration, use the following:
+	```
 
-```swift
-let config = PlayerConfig()
+**Set a Player Instance via a Sample Configuration** 
+
+	```swift
+	let config = PlayerConfig()
         
         var source = [String : Any]()
         source["id"] = "123123" //"http://media.w3.org/2010/05/sintel/trailer.mp4"
@@ -104,40 +105,40 @@ let config = PlayerConfig()
         // Here we get the player
         self.playerController = PlayKitManager.sharedInstance.loadPlayer(config: config)
 
-```
+	```
 
 >Note: To learn more about `PlayerConfig` Creation, see the [PlayerConfig Doc]() article.
 
-To set the player view size:
+### Setting the Player View Size  
 
-* Create a player container: 
+1. Create a player container as follows: 
 
-```swift
-@IBOutlet weak var playerContainer: UIView!
+	```swift
+	@IBOutlet weak var playerContainer: UIView!
 
-```
-* Set the player frame and add a player view as a subview:
+	```
+2. Set the player frame and add a player view as a subview:
 
-```swift
-self.playerController.view.frame = playerContainer.bounds
+	```swift
+	self.playerController.view.frame = playerContainer.bounds
 	playerContainer.addSubview(self.playerController.view)
 
-```
+	```
 
-#### Control Player
+#### Adding Custom Buttons and Controls to the Player  
 
-* Add custom buttons and controls to the player as follows:
+Add custom buttons and controls to the player as follows:
 
-```swift
-@IBAction func playClicked(_ sender: AnyObject) {
+	```swift
+	@IBAction func playClicked(_ sender: AnyObject) {
 	self.playerController.play()
-}
+	}
     
-@IBAction func pauseClicked(_ sender: AnyObject) {
+	@IBAction func pauseClicked(_ sender: AnyObject) {
 	self.playerController.pause()
-}
+	}
 
-```
+	```
 
 
 > [Download Full Sample]()
