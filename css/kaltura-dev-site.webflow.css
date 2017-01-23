@@ -709,10 +709,11 @@ h4 {
 }
 
 .sidenav-headings.grp-heading {
-  border-bottom: 1px dotted #ccc;
   color: #188093;
   font-size: 14px;
 }
+
+h4.sidenav-headings.grp-heading { padding-bottom: 0px; }
 
 .sidenav-headings.grp-heading.heading-close:after {
    content: " +";
@@ -815,6 +816,7 @@ h4 {
 
 .sidenav-sub-cat-links .sidenav-headings.grp-heading {
   font-size: 12px;
+  padding-top: 0;
 }
 
 .sidenav-cat-links:hover {
@@ -829,7 +831,6 @@ h4 {
   padding-top: 12px;
   padding-bottom: 12px;
   padding-left: 15px;
-  border-bottom: 1px solid #ececec;
   background-color: transparent;
   -webkit-transition: color 200ms ease-in-out;
   transition: color 200ms ease-in-out;
@@ -844,10 +845,9 @@ h4 {
   /*display: block;*/
   display: none;
   visibility: hidden;
-  padding-top: 5px;
+  padding-top: 0;
   padding-bottom: 5px;
   padding-left: 25px;
-  border-bottom: 1px solid #ececec;
   background-color: transparent;
   -webkit-transition: color 200ms ease-in-out;
   transition: color 200ms ease-in-out;
