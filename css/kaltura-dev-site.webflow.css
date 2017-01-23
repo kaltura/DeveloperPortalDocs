@@ -868,7 +868,7 @@ h4.sidenav-headings.grp-heading {
 .sidenav-links-current {
   display: block;
   padding-top: 0;
-  padding-bottom: 0;
+  padding-bottom: 12px;
   padding-left: 12px;
   /*border-bottom: 1px solid #ececec;*/
   background-color: transparent;
