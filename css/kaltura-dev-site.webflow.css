@@ -869,7 +869,7 @@ h4.sidenav-headings.grp-heading {
   display: block;
   padding-top: 0;
   padding-bottom: 0;
-  padding-left: 6px;
+  padding-left: 12px;
   /*border-bottom: 1px solid #ececec;*/
   background-color: transparent;
   -webkit-transition: color 200ms ease-in-out;
@@ -882,6 +882,9 @@ h4.sidenav-headings.grp-heading {
 }
 .sidenav-links-current:before {
     content: "> ";
+}
+.sidenav-sub-cat-links .sidenav-headings.grp-heading:before {
+    content: "+";
 }
 
 .sidenav-links:hover {
