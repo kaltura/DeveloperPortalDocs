@@ -66,9 +66,31 @@ To configure the Youbora Plugin, add the following configuration to your `plugin
 
         ConverterYoubora converterYoubora = new ConverterYoubora(youboraConfigEntry, mediaEntry,
                 adsEntry, extraParamEntry, propertiesEntry); // you set the coverterYoubora.toJson() as the plugin config object
-                }
+    }
+```
+public class ConverterYoubora extends ConverterPlugin {
+    JsonObject youboraConfig;
+    JsonObject media;
+    JsonObject ads;
+    JsonObject properties;
+    JsonObject extraParams;
 
-        ```
+
+
+    @Override
+    public JsonObject toJson() {
+
+        JsonObject jsonObject = new JsonObject();
+        jsonObject.add("youboraConfig", youboraConfig);
+        jsonObject.add("media", media);
+        jsonObject.add("ads", ads);
+        jsonObject.add("properties", properties);
+        jsonObject.add("extraParams", extraParams);
+
+        return jsonObject;
+    }
+
+```        
 
 ### Set the Plugin Configuration to the Youbora Plugin  
 
