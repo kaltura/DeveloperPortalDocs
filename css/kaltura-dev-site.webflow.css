@@ -832,7 +832,7 @@ h4.sidenav-headings.grp-heading {
 .sidenav-links {
   display: block;
   padding-left: 15px;
-  padding-bottom: 0;
+  padding-bottom: 12px;
   padding-top: 0;
   background-color: transparent;
   -webkit-transition: color 200ms ease-in-out;
