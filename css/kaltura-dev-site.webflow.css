@@ -919,14 +919,12 @@ h4.sidenav-headings.grp-heading {
   margin-bottom: 8px;
 }
 
-.lastcommittable tbody tr td {
-  margin-bottom: 8px;
-  border: none !important;
-  padding-left: 0px !important;
+.lastcommittable {
+   color: #929eaa;
 }
 
 .commit-author {
-  color: #188093;
+   
 }
 
 .recipe-container {
@@ -1270,12 +1268,10 @@ td {
 .editgithub {
     color: #fff;
     text-decoration: none;
-    background-color: #aaa;
-    padding: 3px 8px 3px 8px;
+    background-color: #579fcc;
+    padding: 1px 4px 1px 3px;
     border-radius: 4px;
-    margin-bottom: 10px;
-    margin-top: -20px;
-    letter-spacing: 0.3px;
+    margin-left: 10px;
 }
 
 .contributor-column-1 {
