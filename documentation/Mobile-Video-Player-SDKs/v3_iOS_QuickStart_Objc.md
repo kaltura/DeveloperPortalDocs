@@ -83,7 +83,7 @@ You're now ready to code the video player application using the following option
 
 ```
 
-**Set a Player Iinstance via a Sample Configuration**
+**Set a Player Instance via a Sample Configuration**
 
 ```objc
 	PlayerConfig *config = [PlayerConfig new];
@@ -116,7 +116,7 @@ You're now ready to code the video player application using the following option
 
 ```
 
-### Adding Custome Buttons and Controls to the Player  
+### Adding Custom Buttons and Controls to the Player  
 
 Add custom buttons and controls to the player as follows:
 
