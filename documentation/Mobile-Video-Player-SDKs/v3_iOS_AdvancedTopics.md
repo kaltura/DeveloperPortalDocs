@@ -7,7 +7,7 @@ weight: 291
 
 <center>
 
-# Advanced Topics
+Kaltura's Mobile Video SDK supports various advanced features to enable multiple usage with ease and convenience; refer to the list below for additional details and examples.
 
 
 |                    |      Documentation                        | Sample | Apple Doc                                   |
