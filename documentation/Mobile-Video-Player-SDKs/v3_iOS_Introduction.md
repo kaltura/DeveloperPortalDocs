@@ -19,6 +19,25 @@ Kaltura's Mobile Video SDK for iOS introduces significant performance improvemen
 
 This guide assumes that you have the necessary Objective C or Swift and iOS development skills to build and compile advanced iOS applications using XCode.
 
+## Supported Devices  
+
+**Definitions**
+
+* Tier A - Tested and supported
+* Tier B - Supported, not tested (we accept bug reports)
+* Tier C - Not supported
+
+| Support Tier | iOS (OS version 9 and 10) |
+|--------------|---------------------------|
+| A            |      iPhone 5S/6S/7+      |
+| A            |         iPad Air 2        |
+| A            | iPad 4                    |
+| A            | iPad mini 4               |
+| A            |          iPad Pro         |
+| B            | iPhone 5/5S/6/6+/7        |
+| B            | iPad mini 1/2             |
+| B            | iPad2                     |
+
 ## Quick Navigation
 
 
