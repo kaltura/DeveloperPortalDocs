@@ -38,12 +38,13 @@ Each platform supports different types of streaming capabilites and DRMs. The Ka
 | Google  | Android phone/tablet: v4.2.2+ |
 | Apple  |  iOS: v9+ |
 
-## Support Devices  
+## Supported Devices  
 
 **Definitions**
-Tier A - Tested and Supported
-Tier B - Supported, not tested, we accept bug reports
-Tier C - not supported
+
+* Tier A - Tested and Supported
+* Tier B - Supported, not tested, we accept bug reports
+* Tier C - not supported
 
 | Support Tier | iOS (OS version 9 and 10) |
 |--------------|:-------------------------:|
