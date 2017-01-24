@@ -26,9 +26,9 @@ The simplest way to add the SDK and its dependencies to your project is by using
 
 >Note: Using CocoaPods on an existing Xcode project will modify the project file, so you may want to make a backup before doing this.
 
-1. In your project folder, create a plain text file called `Podfile` (no file extension).
+1 . In your project folder, create a plain text file called `Podfile` (no file extension).
 
-2. Using a text editor, add the following lines of code to the Podfile and save it.
+2 . Using a text editor, add the following lines of code to the Podfile and save it.
 
 ```ruby
 	source 'https://github.com/CocoaPods/Specs.git'
@@ -56,7 +56,7 @@ The simplest way to add the SDK and its dependencies to your project is by using
 
 ```
 	
-3. Navigate to the podfile location via Terminal and type the command:
+3 . Navigate to the podfile location via Terminal and type the command:
 
 ```ruby
 	pod install
@@ -102,13 +102,13 @@ You're now ready to code the video player application using the following option
 
 ### Setting the Player View Size  
 
-1. Create a player container: 
+1 . Create a player container: 
 
 ```objc
 	@property (weak, nonatomic) IBOutlet UIView *playerContainer;
 
 ```
-2. Set the player frame and add a player view as a subview:
+2 . Set the player frame and add a player view as a subview:
 
 ```objc
 	self.kPlayer.view.frame = CGRectMake(0, 0, self.playerContainer.frame.size.width,self.playerContainer.frame.size.height);   
