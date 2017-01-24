@@ -58,6 +58,6 @@ This guide assumes that you have the necessary Objective C or Swift and Android 
 |                                                     How to contribute                                                    |       Detailed technical documentation      |
 
 
-# Questions or Need Help?
+## Questions or Need Help?
 
 Check out the [Kaltura PlayKit Forum](https://forum.kaltura.org/c/playkit) page for different ways of getting in touch.
