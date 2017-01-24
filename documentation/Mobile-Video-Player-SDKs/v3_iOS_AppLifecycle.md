@@ -11,18 +11,11 @@ The following section details the iOS application lifecyle.
 </br>
 ### Application State Changes
 
->swift
+The framework observes application state changes internally to provide better handling.
 
-```swift
-
-
-```
->objc
-
-```objc
-
-
-```
+Handled events:
+* On will terminate event:
+	* Post analytics "stop" event.
 
 </br>
 ### Connectivity
