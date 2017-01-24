@@ -38,43 +38,6 @@ Each platform supports different types of streaming capabilites and DRMs. The Ka
 | Google  | Android phone/tablet: v4.2.2+ |
 | Apple  |  iOS: v9+ |
 
-## Supported Devices  
-
-**Definitions**
-
-* Tier A - Tested and supported
-* Tier B - Supported, not tested (we accept bug reports)
-* Tier C - Not supported
-
-| Support Tier | iOS (OS version 9 and 10) |
-|--------------|---------------------------|
-| A            |      iPhone 5S/6S/7+      |
-| A            |         iPad Air 2        |
-| A            | iPad 4                    |
-| A            | iPad mini 4               |
-| A            |          iPad Pro         |
-| B            | iPhone 5/5S/6/6+/7        |
-| B            | iPad mini 1/2             |
-| B            | iPad2                     |
-
-| Support Tier | Android (OS Versions 4.2.2 and up) |
-|--------------|----------------------------------|
-| A            | HTC One M8                         |
-| A            | Samsung Galaxy Tab 3 10.1          |
-| A            | LG G Pad 10.1                      |
-| A            | Nexus 5 or 6                       |
-| A            | LG G2                              |
-| A            | HTC One M8                         |
-| A            | Samsung Galaxy Tab 10              |
-| A            | Samsung Galaxy  7 Edge             |
-| A            |               Nexus 6              |
-| A            |              Nexus 5x              |
-| B            | Lenovo A6000                       |
-| B            | samsung SM-J200G                   |
-| B            |              vivo Y51L             |
-| B            | OPPO A33f                          |
-| B            | motorola Moto G (4)                |
-| B            | Xiaomi Redmi 3S                    |
 
 >Note: To learn more about the previous SDK, SDK 2.0, please refer to [this documentation](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/IntroductionV2.html).
 
