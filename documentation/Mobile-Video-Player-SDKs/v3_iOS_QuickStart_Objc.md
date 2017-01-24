@@ -4,7 +4,7 @@ layout: page
 
 ## Quick Start Using Obj-C  
 
-n this section, you'll learn how to build a simple video application using the ObjC programming language.
+In this section, you'll learn how to build a simple video application using the ObjC programming language.
 
 ## Create the Project  
 
