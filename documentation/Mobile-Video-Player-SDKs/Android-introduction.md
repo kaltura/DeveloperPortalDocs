@@ -17,26 +17,38 @@ This document is the main source of documentation for developers working with Ka
 
 If this is your first time hearing about Kaltura, we recommend you read up on Kaltura in the [Kaltura website](http://corp.kaltura.com/).
 
-
-## Supported Features
-
-The following features are supported in Android devices:
-
-* DRM
-* IMA (Google Ads)
-* Chromecast
-* AirPlay
-* Offline Mode (including DRM)
-* Analytics
-* PIP
-* And more...
-
 ## Intended Audience
 
 This guide assumes that you have the necessary Objective C or Swift and Android development skills to build and compile advanced Android applications using XCode.
 
+## Supported Devices  
 
-# Quick Navigation
+**Definitions**
+
+* Tier A - Tested and supported
+* Tier B - Supported, not tested (we accept bug reports)
+* Tier C - Not supported
+
+| Support Tier | Android (OS Versions 4.2.2 and up) |
+|--------------|----------------------------------|
+| A            | HTC One M8                         |
+| A            | Samsung Galaxy Tab 3 10.1          |
+| A            | LG G Pad 10.1                      |
+| A            | Nexus 5 or 6                       |
+| A            | LG G2                              |
+| A            | HTC One M8                         |
+| A            | Samsung Galaxy Tab 10              |
+| A            | Samsung Galaxy  7 Edge             |
+| A            |               Nexus 6              |
+| A            |              Nexus 5x              |
+| B            | Lenovo A6000                       |
+| B            | samsung SM-J200G                   |
+| B            |              vivo Y51L             |
+| B            | OPPO A33f                          |
+| B            | motorola Moto G (4)                |
+| B            | Xiaomi Redmi 3S                    |
+
+## Quick Navigation
 
 
 |                                                      Getting Started                                                     |           Technical Documentation           |
