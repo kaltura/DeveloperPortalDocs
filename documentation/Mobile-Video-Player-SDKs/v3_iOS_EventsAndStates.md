@@ -80,6 +80,16 @@ To receive notifications about any player-related events or states, you can add 
 
 ```objc
 
+- (void)addStateChangeObserver {
+    [self.kPlayer addObserver:self events:@[PlayerEvent_playing.self, PlayerEvent_pause.self, PlayerEvent_durationChanged.self, PlayerEvent_stateChanged.self] block:^(PKEvent * _Nonnull event) {
+        if ([event isKindOfClass:PlayerEvent_stateChanged.class]) {
+            NSLog(@"---------> newState: %ld", (long)((PlayerEvent_stateChanged*)event).newState);
+            NSLog(@"---------> oldState: %ld", (long)((PlayerEvent_stateChanged*)event).oldState);
+        } else {
+            NSLog(@"event: %@", event);
+        }
+    }];
+}
 
 ```
 
