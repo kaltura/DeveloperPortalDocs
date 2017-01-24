@@ -42,9 +42,9 @@ Each platform supports different types of streaming capabilites and DRMs. The Ka
 
 **Definitions**
 
-* Tier A - Tested and Supported
-* Tier B - Supported, not tested, we accept bug reports
-* Tier C - not supported
+* Tier A - Tested and supported
+* Tier B - Supported, not tested (we accept bug reports)
+* Tier C - Not supported
 
 | Support Tier | iOS (OS version 9 and 10) |
 |--------------|---------------------------|
