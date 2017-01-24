@@ -47,7 +47,7 @@ Each platform supports different types of streaming capabilites and DRMs. The Ka
 * Tier C - not supported
 
 | Support Tier | iOS (OS version 9 and 10) |
-|--------------|:-------------------------:|
+|--------------|---------------------------|
 | A            |      iPhone 5S/6S/7+      |
 | A            |         iPad Air 2        |
 | A            | iPad 4                    |
@@ -58,7 +58,7 @@ Each platform supports different types of streaming capabilites and DRMs. The Ka
 | B            | iPad2                     |
 
 | Support Tier | Android (OS Versions 4.2.2 and up) |
-|--------------|:----------------------------------:|
+|--------------|----------------------------------|
 | A            | HTC One M8                         |
 | A            | Samsung Galaxy Tab 3 10.1          |
 | A            | LG G Pad 10.1                      |
