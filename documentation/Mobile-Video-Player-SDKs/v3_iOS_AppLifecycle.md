@@ -97,6 +97,10 @@ func applicationDidBecomeActive(_ application: UIApplication) {
 </br>
 ### Connectivity
 
+Connectivity changes are observed internally to provide better handling when no network connection is available.
+Whenever network reachability will change, an error event will be sent with NSError inside.
+The player begins listening to changes when starting to load the asset and stops when destroyed.
+In case more than one player is used only when all players are destroyed network reachability notifying will stop.
 
 >swift
 
