@@ -19,8 +19,8 @@ Handled events:
 
 #### Playing Media While in Background
 
-* **Declare your app plays audible content while in the background**. To do this enable in the application background modes section or info.plist .
-* **Setting the audio session category**. You must assign an appropriate category to your audio session to ensure your audio plays even with the screen locked.
+* **Enabling your application to play audible content while in the background**. To enable your application to play audible content while in the background, enable this option in the application background modes section or info.plist.
+* **Setting the audio session category**. You must assign an appropriate category to your audio session to ensure your audio plays even when the screen is locked.
 
 >swift
 
@@ -59,7 +59,7 @@ success = [audioSession setActive:YES error:&activationError];
 if (!success) { /* handle the error condition */ }
 ```
 
-* **Special considerations for video media**. if current item is displaying video, playback of the Player is automatically paused when the app is sent to the background. to prevent this pause we need to set the player of an AVPlayerLayer to nil.
+>Note: Special considerations for video media - if the current item is displaying video, playback of the player is automatically paused when the application is sent to the background. To prevent this pause from occurring, you'll need to set the player of an AVPlayerLayer to *nil*.
 
 >swift
 
@@ -92,15 +92,15 @@ func applicationDidBecomeActive(_ application: UIApplication) {
 }
 ```
 
-**note:** the information regarding playing media while in background was taken from [Apple Developer Site](https://developer.apple.com/library/content/qa/qa1668/_index.html)
+> Note: For more information about playing media while in the application runs in the background see the [Apple Developer Site](https://developer.apple.com/library/content/qa/qa1668/_index.html).
 
 </br>
 ### Connectivity
 
 Connectivity changes are observed internally to provide better handling when no network connection is available.
-Whenever network reachability will change, an error event will be sent with NSError inside.
+Whenever network reachability changes, an error event will be sent with an NSError inside.
 The player begins listening to changes when starting to load the asset and stops when destroyed.
-In case more than one player is used only when all players are destroyed network reachability notifying will stop.
+If more than one player is used, only when all players are destroyed network wukk reachability notification stop.
 
 >swift
 
