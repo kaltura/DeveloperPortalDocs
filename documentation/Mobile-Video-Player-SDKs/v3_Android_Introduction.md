@@ -17,7 +17,7 @@ If this is your first time hearing about Kaltura, we recommend you read up on Ka
 
 ## Intended Audience
 
-This guide assumes that you have the necessary Objective C or Swift and Android development skills to build and compile advanced Android applications using XCode.
+TBD
 
 ## Supported Devices  
 
