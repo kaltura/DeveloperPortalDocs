@@ -20,7 +20,7 @@ Handled events:
 #### Playing Media While in Background
 
 * **Enabling your application to play audible content while in the background**. To enable your application to play audible content while in the background, enable this option in the application background modes section or info.plist.
-* **Setting the audio session category**. To continue playing media while in the background we must set an audio session category with background playback (for example: AVAudioSessionCategoryPlayback).
+* **Setting the audio session category**. To continue playing media while in the background, you must set an audio session category with background playback (for example: AVAudioSessionCategoryPlayback).
 
 >swift
 
@@ -59,7 +59,7 @@ success = [audioSession setActive:YES error:&activationError];
 if (!success) { /* handle the error condition */ }
 ```
 
->Note: Special considerations for video media - if the current item is displaying video, playback of the player is automatically paused when the application is sent to the background. To prevent this pause from occurring, you'll need to set the player of an AVPlayerLayer to *nil*.
+**Special considerations for video media**. If the current item is displaying video, playback of the player is automatically paused when the application is sent to the background. To prevent this pause from occurring, you'll need to set the player of an AVPlayerLayer to *nil*.
 
 >swift
 
