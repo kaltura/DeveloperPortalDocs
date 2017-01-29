@@ -11,9 +11,9 @@ This document describes the steps required for adding support for the IMA Plugin
 
 To enable the IMA Plugin on iOS devices for the Kaltura Video Player, add the following line to your Podfile: 
 
-	```ruby
-	pod 'PlayKit/IMAPlugin'
-	```
+```ruby
+pod 'PlayKit/IMAPlugin'
+```
 
 ## Register the IMA Plugin  
 
@@ -206,7 +206,6 @@ end
 ```
 
 </br>
-
 ## Have Questions or Need Help?
 
 Check out the [Kaltura Player SDK Forum](https://forum.kaltura.org/c/playkit) page for different ways of getting in touch.

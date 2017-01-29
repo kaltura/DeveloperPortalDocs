@@ -5,8 +5,6 @@ subcat: SDK 3.0 (Beta) - Android
 weight: 391
 ---
 
-[![Android](https://img.shields.io/badge/Android-Supported-green.svg)](https://github.com/kaltura/player-sdk-native-ios)
-
 > Note: The Kaltura Video Player SDK v3 is in BETA.
 
 >*If you are a Kaltura customer, please contact your Kaltura Customer Success Manager to help facilitate the use of this component.*
@@ -53,11 +51,12 @@ This guide assumes that you have the necessary Objective C or Swift and Android 
 
 |                                                      Getting Started                                                     |           Technical Documentation           |
 |:------------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------:|
-|                                           ![help](./iOS-images/getStarted.png)                                           |         ![help](./iOS-images/TD.png)        |
+|                                           ![help](./v3-images/getStarted.png)                                           |         ![help](./v3-images/TD.png)        |
 | [Getting Started](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/Getting-Started-Playkit-SDK-Android.html) | [Docs](https://forum.kaltura.org/c/playkit) |
 |                                                     How to contribute                                                    |       Detailed technical documentation      |
 
 
-## Questions or Need Help?
+</br>
+## Have Questions or Need Help?
 
-Check out the [Kaltura PlayKit Forum](https://forum.kaltura.org/c/playkit) page for different ways of getting in touch.
+Check out the [Kaltura Player SDK Forum](https://forum.kaltura.org/c/playkit) page for different ways of getting in touch.

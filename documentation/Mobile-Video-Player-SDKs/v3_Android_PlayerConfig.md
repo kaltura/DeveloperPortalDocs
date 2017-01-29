@@ -1,9 +1,8 @@
 ---
 layout: page
-title: Player Configuration on Android Devices
-subcat: SDK 3.0 (Beta) - Android
-weight: 397
 ---
+
+## Player Configuration  
 
 The player configuration is the main data object of the SDK; this object is used for configuring all plugins and for creating and obtaining the media provider media entries that will play on the device.
 
@@ -46,12 +45,14 @@ Additional information includes:
 * List<PKMediaSource> sources - list of source objects
 
 The PKMediaEntry can be created with builder style instantiation, chain setters as follows:
-   ```
-   PKMediaEntry mediaEntry = new PKMediaEntry().setId(entry.getId())
+
+```java
+PKMediaEntry mediaEntry = new PKMediaEntry().setId(entry.getId())
                                             .setSources(sourcesList)
                                             .setDuration(entry.getDuration())
                                             .setMediaType(MediaTypeConverter.toMediaEntryType(entry.getType()));
-   ```
+```
+
 To learn more, see [PKMediaEntry](https://github.com/kaltura/playkit-android/blob/develop/playkit/src/main/java/com/kaltura/playkit/PKMediaEntry.java).
 
 ### PKMediaSource  
@@ -64,7 +65,7 @@ To learn more, see [PKMediaSource](https://github.com/kaltura/playkit-android/bl
 
 PKMediaSource can be created with builder-like coding, by chaining setters:
 
-```
+```java
 PKMediaSource pkMediaSource = new PKMediaSource().setId(sourceId)
 .setUrl(sourceUrl)
 .setDrmData(dramDataList);
@@ -94,3 +95,10 @@ PKDrmParams represents a single DRM license info object. PKDrmParams contains th
 To learn more, see [PKDrmParams](https://github.com/kaltura/playkit-android/blob/develop/playkit/src/main/java/com/kaltura/playkit/PKDrmParams.java).
 
 To learn more, read the [Media Providers](https://github.com/kaltura/DeveloperPortalDocs/tree/playkit/documentation/PlayKit/MediaProviders.md) article.
+
+</br>
+
+## Have Questions or Need Help?
+
+Check out the [Kaltura Player SDK Forum](https://forum.kaltura.org/c/playkit) page for different ways of getting in touch.
+

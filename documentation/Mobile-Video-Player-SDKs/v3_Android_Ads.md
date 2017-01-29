@@ -5,15 +5,13 @@ subcat: SDK 3.0 (Beta) - Android
 weight: 400
 ---
 
-[![Android](https://img.shields.io/badge/Android-Supported-green.svg)](https://github.com/kaltura/playkit-android)
-
 This article describes the steps required for adding support for the IMA Plugin functionality on Android devices. IMA (or Interactive Media Ads) was developed by Google to enable you to display ads in your application's video, audio, and game content.
 
 ### Register the IMA Plugin  
 
 Register the IMA Plugin as inside your application as follows:
 
-```
+```java
 PlayKitManager.registerPlugins(PhoenixAnalyticsPlugin.factory);
 ```
 
@@ -21,7 +19,7 @@ PlayKitManager.registerPlugins(PhoenixAnalyticsPlugin.factory);
 
 To configure the plugin, add the following configuration to your `pluginConfig` file as follows:
 
-```
+```java
 private void configureIMAPlugin(PlayerConfig pluginConfig) {
     String adTagUrl = VIOAdUtil.getCastAdTag(mVideoDetailsModel);
     List<String> videoMimeTypes = new ArrayList<>();
@@ -29,7 +27,7 @@ private void configureIMAPlugin(PlayerConfig pluginConfig) {
 ```
 ### IMConfig Constructor  
 
-```
+```java
 IMAConfig(String language, boolean enableBackgroundPlayback, boolean autoPlayAdBreaks, int videoBitrate, List<String> videoMimeTypes, String adTagUrl, boolean adAttribution, boolean adCountDown)
 ```
 
@@ -37,7 +35,7 @@ IMAConfig(String language, boolean enableBackgroundPlayback, boolean autoPlayAdB
 
 For the IMA Plugin to start loading, you'll need to set the plugin configuration you created as follows:
 
-```
+```java
 PlayerConfig config = new PlayerConfig();
 PlayerConfig.Plugins plugins = config.plugins;
 pluginConfig.plugins.setPluginConfig(IMAPlugin.factory.getName(), adsConfig.toJSONObject());
@@ -47,7 +45,7 @@ pluginConfig.plugins.setPluginConfig(IMAPlugin.factory.getName(), adsConfig.toJS
 
 The Ad Started event includes the `AdInfo` playload. You can fetch this data in the following way:
 
-``` 
+```java 
 player.addEventListener(new PKEvent.Listener() {
             @Override
             public void onEvent(PKEvent event) {
@@ -61,7 +59,7 @@ player.addEventListener(new PKEvent.Listener() {
 
 ### AdInfo API  
 
-```
+```java
     String   getAdDescription();
     String   getAdId();
     String   getAdSystem();
@@ -79,7 +77,7 @@ player.addEventListener(new PKEvent.Listener() {
 ## Ad Events/Error Registration Example  
 
 
-```
+```java
         public void onEvent(PKEvent event) {
                 log.d("AD_CONTENT_PAUSE_REQUESTED");
                 PKAdInfo adInfo = player.getAdInfo();
@@ -113,6 +111,7 @@ player.addEventListener(new PKEvent.Listener() {
 
 The IMA Plugin supports the following ad events:
 
+```java
         STARTED,
         PAUSED,
         RESUMED,
@@ -133,11 +132,13 @@ The IMA Plugin supports the following ad events:
         CONTENT_PAUSE_REQUESTED,
         CONTENT_RESUME_REQUESTED,
         ALL_ADS_COMPLETED
+```
         
 ## Ad Error Events  
 
 The IMA Plugin supports the following ad error events:
 
+```java
         INTERNAL_ERROR(2000),
         VAST_MALFORMED_RESPONSE(2001),
         UNKNOWN_AD_RESPONSE(2002),
@@ -157,4 +158,10 @@ The IMA Plugin supports the following ad error events:
         ADS_REQUEST_NETWORK_ERROR(2016),
         INVALID_ARGUMENTS(2017),
         PLAYLIST_NO_CONTENT_TRACKING(2018);
+```
 
+</br>
+
+## Have Questions or Need Help?
+
+Check out the [Kaltura Player SDK Forum](https://forum.kaltura.org/c/playkit) page for different ways of getting in touch.

@@ -1,11 +1,6 @@
 ---
 layout: page
-title: Tracking Kaltura Video Player States and Events on Android Devices
-subcat: SDK 3.0 (Beta) - Android
-weight: 394
 ---
-
-[![Android](https://img.shields.io/badge/Android-Supported-green.svg)](https://github.com/kaltura/playkit-android)
 
 This article describes the steps required for registering to Kaltura Video Player events and states on Android devices, which will enable you to track the events and their current status.
 
@@ -13,7 +8,7 @@ This article describes the steps required for registering to Kaltura Video Playe
 
 Implement the following to register:
 
-```
+```java
 private void setPlayerListeners() {
     playerKit.addEventListener(new PKEvent.Listener() {
          @Override
@@ -72,7 +67,7 @@ private void setPlayerListeners() {
 
 The Kaltura Video Player supports the following events:
 
-```
+```java
         STATE_CHANGED,
         CAN_PLAY,          // Sent when enough data is available that the media can be played, at least for a couple of frames. This corresponds to the HAVE_ENOUGH_DATA readyState.
         DURATION_CHANGE,   //  The metadata has loaded or changed, indicating a change in duration of the media. This is sent, for example, when the media has loaded enough that the duration is known.
@@ -95,7 +90,7 @@ The Kaltura Video Player supports the following events:
 
 To be able to track changes in the player's state, register to the state change listener as follows:
 
-```
+```java
 playerKit.addStateChangeListener(new PKEvent.Listener() {
         @Override
         public void onEvent(PKEvent event) {
@@ -128,9 +123,14 @@ playerKit.addStateChangeListener(new PKEvent.Listener() {
 
 The Kaltura Video Player state can be one of the following states:
 
-```
+```java
 IDLE, 
 LOADING, 
 READY, 
 BUFFERING
 ```
+
+</br>
+## Have Questions or Need Help?
+
+Check out the [Kaltura Player SDK Forum](https://forum.kaltura.org/c/playkit) page for different ways of getting in touch.

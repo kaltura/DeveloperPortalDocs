@@ -5,8 +5,6 @@ subcat: SDK 3.0 (Beta) - Android
 weight: 407
 ---
 
-[![Android](https://img.shields.io/badge/Android-Supported-green.svg)](https://github.com/kaltura/playkit-android)
-
 The Cast functionality allows your videos to be cast from a Android mobile device, via the Chromecast plugin, directly to a Kaltura Player receiver application on a Chromecast-connected TV.
 
 ## Begin Casting  
@@ -19,7 +17,7 @@ Configure the following environments as follows:
 
 **TVPAPI Environment**
 
-  ```
+```java
   TVPAPICastBuilder tvpapiCastBuilder = new TVPAPICastBuilder()
                 .setFormat()
                 .setInitObject()
@@ -31,11 +29,11 @@ Configure the following environments as follows:
                 
   MediaInfo mediaInfo = tvpapiCastBuilder.build();
   remoteMediaClient.load(mediaInfo)
-  ```
+```
 
 **OVP Envrionment**
 
-  ```
+```java
   OVPCastBuilder ovpCastBuilder = new OVPCastBuilder()
                 .setKs()
                 .setMwEmbedUrl()
@@ -46,13 +44,13 @@ Configure the following environments as follows:
                 
   MediaInfo mediaInfo = ovpCastBuilder.build();
   remoteMediaClient.load(mediaInfo)
-  ```
+```
 
 ### Optional Casting Configuration  
 
 The following configurations are optional for casting:
 
-  ```
+```java
   // MediaMetadata
   MediaMetadata mediaMetadata = new MediaMetadata(MediaMetadata.MEDIA_TYPE_MOVIE);
   mediaMetadata.putString(MediaMetadata.KEY_TITLE, title);
@@ -67,7 +65,7 @@ The following configurations are optional for casting:
   TextTrackStyle textTrackStyle = new TextTrackStyle();
   castBuilder.setTextTrackStyle(textTrackStyle);
 
-  ```
+```
 
 ## Live vs. VOD    
 
@@ -83,3 +81,8 @@ The following section shows the differences betwen the Live and VOD casting:
 
 - cast developer guide
 - cast guidelines
+
+</br>
+## Have Questions or Need Help?
+
+Check out the [Kaltura Player SDK Forum](https://forum.kaltura.org/c/playkit) page for different ways of getting in touch.

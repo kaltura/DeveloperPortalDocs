@@ -1,11 +1,10 @@
 ---
 layout: page
-title: Implementing Track Selection
-subcat: SDK 3.0 (Beta) - Android
-weight: 409
 ---
 
-[![Android](https://img.shields.io/badge/Android-Supported-green.svg)](https://github.com/kaltura/playkit-android)
+## Tracks Selection
+
+This document describes the steps required for adding support for the multi-audio and captions functionality in your application on iOS devices.
 
 If you want to change the video/audio quality or captions language, you'll need to use tracks, which are easy to implement using the Kaltura Mobile Video Player SDK. To implement tracks, all you need to do is to listen to the event, receive the tracks data object, and populate your views with the object. When the desired track is selected, simply send us the selected track ID and we'll implement the track selection for us.
 
@@ -15,7 +14,7 @@ To learn how to listen to player events, simply follow the instructions in the [
 
 To receive tracks, subscribe to the event called <a name="populateViews">***TRACKS_AVAILABLE***.</a> as follows:
 
-	```	
+```	java
 	//Subscribe to TRACKS_AVAILABLE event.
  	player.addEventListener(new PKEvent.Listener() {
             @Override
@@ -31,7 +30,7 @@ To receive tracks, subscribe to the event called <a name="populateViews">***TRAC
              	populateViews(tracks);   
             }
         }, PlayerEvent.Type.TRACKS_AVAILABLE);
-		```
+```
 
 ## PKTracks Structure  
 
@@ -78,9 +77,9 @@ Lets look at an example of how to populate a view with tracks in the application
 
 In this example, we'll use an Android [Spinner](https://developer.android.com/guide/topics/ui/controls/spinner.html).
 
-1. First, create the xml:
+1 . First, create the xml:
 
-	```
+```java
 	<LinearLayout
 	android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -92,10 +91,10 @@ In this example, we'll use an Android [Spinner](https://developer.android.com/gu
     	android:layout_height="wrap_content" />
     
 	</LinearLayout>
-	```
-2. Next, create a custom adapter:
+```
+2 . Next, create a custom adapter:
 
-	```
+```java
 	public class TrackItemAdapter extends ArrayAdapter<TrackItem> {
 
     	private Context context;
@@ -130,10 +129,10 @@ In this example, we'll use an Android [Spinner](https://developer.android.com/gu
         return trackItems.length;
   	  }
 	}
-	```
-3. You'll also need to create a TrackItem, which is created based on the track data and passed into the TrackAdapter:
+```
+3 . You'll also need to create a TrackItem, which is created based on the track data and passed into the TrackAdapter:
 
-	```
+```java
 	public class TrackItem {
 
 	private String uniqueId;
@@ -153,14 +152,14 @@ In this example, we'll use an Android [Spinner](https://developer.android.com/gu
         return uniqueId;
     	}
 	}
-	```
+```
 ## Use Case Example  
 
 After creating the preparation code, you're ready to dig into a track use case example. We'll use the [**populateViews(tracks);**](#populateViews) created previously.
 
 This example uses VideoTracks, but in general the workflow for other track types is similar.
 
-	```		
+```	java	
 	private void populateViews(PKTracks tracks){
 		prepareSpinner();
 
@@ -220,11 +219,11 @@ This example uses VideoTracks, but in general the workflow for other track types
                 : String.format("%.2fMbit", bitrate / 1000000f);
     }
 
-	```
+```
 
 The last step is to actually change the track. Previously, you set the `onItemSelectedListener` to the spinner, so let's implement that method and see how easy it is to switch between tracks.
 
-	```/
+```java
 	 
 	 @Override
      public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -233,5 +232,10 @@ The last step is to actually change the track. Previously, you set the `onItemSe
             //tell to the player, to switch track based on the user selection.
             player.changeTrack(trackItem.getUniqueId());
     }
-	```
+```
+	
+</br>
 
+## Have Questions or Need Help?
+
+Check out the [Kaltura Player SDK Forum](https://forum.kaltura.org/c/playkit) page for different ways of getting in touch.
