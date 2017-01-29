@@ -20,7 +20,7 @@ Handled events:
 #### Playing Media While in Background
 
 * **Enabling your application to play audible content while in the background**. To enable your application to play audible content while in the background, enable this option in the application background modes section or info.plist.
-* **Setting the audio session category**. You must assign an appropriate category to your audio session to ensure your audio plays even when the screen is locked.
+* **Setting the audio session category**. To continue playing media while in the background we must set an audio session category with background playback (for example: AVAudioSessionCategoryPlayback).
 
 >swift
 
@@ -92,7 +92,7 @@ func applicationDidBecomeActive(_ application: UIApplication) {
 }
 ```
 
-> Note: For more information about playing media while in the application runs in the background see the [Apple Developer Site](https://developer.apple.com/library/content/qa/qa1668/_index.html).
+> Note: For more information about playing media while the application runs in the background see the [Apple Developer Site](https://developer.apple.com/library/content/qa/qa1668/_index.html).
 
 </br>
 ### Connectivity
