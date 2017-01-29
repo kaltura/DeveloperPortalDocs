@@ -108,7 +108,7 @@ var exLink = (function() {
 
         $('a').each(function() {
 
-            if(hostname.test($(this).attr('href')) === false) {
+	    if(hostname.test($(this).attr('href')) === false && this.className != 'a_button' && this.className != 'a_button active') {
                 if(opts.noFollow) {
                     if(opts.fancyBoxignore) {
                         $(this).not('.docuLink, .iframe').addClass('exLink').attr('rel', 'nofollow');

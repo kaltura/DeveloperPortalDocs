@@ -1,7 +1,7 @@
----
+----
 layout: null
 sitemap: false
----
+----
 .inactive-link {
    pointer-events: none;
    cursor: default;
@@ -709,9 +709,13 @@ h4 {
 }
 
 .sidenav-headings.grp-heading {
-  border-bottom: 1px dotted #ccc;
   color: #188093;
   font-size: 14px;
+}
+
+h4.sidenav-headings.grp-heading { 
+   padding-bottom: 4px; 
+   padding-top: 0px;
 }
 
 .sidenav-headings.grp-heading.heading-close:after {
@@ -815,6 +819,7 @@ h4 {
 
 .sidenav-sub-cat-links .sidenav-headings.grp-heading {
   font-size: 12px;
+  padding-top: 0;
 }
 
 .sidenav-cat-links:hover {
@@ -826,10 +831,9 @@ h4 {
 
 .sidenav-links {
   display: block;
-  padding-top: 12px;
-  padding-bottom: 12px;
   padding-left: 15px;
-  border-bottom: 1px solid #ececec;
+  padding-bottom: 12px;
+  padding-top: 0;
   background-color: transparent;
   -webkit-transition: color 200ms ease-in-out;
   transition: color 200ms ease-in-out;
@@ -844,10 +848,9 @@ h4 {
   /*display: block;*/
   display: none;
   visibility: hidden;
-  padding-top: 5px;
+  padding-top: 0;
   padding-bottom: 5px;
-  padding-left: 25px;
-  border-bottom: 1px solid #ececec;
+  padding-left: 14px;
   background-color: transparent;
   -webkit-transition: color 200ms ease-in-out;
   transition: color 200ms ease-in-out;
@@ -864,9 +867,9 @@ h4 {
 
 .sidenav-links-current {
   display: block;
-  padding-top: 12px;
+  padding-top: 0;
   padding-bottom: 12px;
-  padding-left: 15px;
+  padding-left: 12px;
   /*border-bottom: 1px solid #ececec;*/
   background-color: transparent;
   -webkit-transition: color 200ms ease-in-out;
@@ -880,6 +883,9 @@ h4 {
 .sidenav-links-current:before {
     content: "> ";
 }
+.sidenav-sub-cat-links .sidenav-headings.grp-heading:before {
+    content: "+";
+}
 
 .sidenav-links:hover {
   background-color: transparent;
@@ -889,7 +895,7 @@ h4 {
 }
 
 .template-page-nav-column {
-  margin-top: 35px;
+  margin-top: 60px;
   font-size: 12px;
 }
 
@@ -913,14 +919,12 @@ h4 {
   margin-bottom: 8px;
 }
 
-.lastcommittable tbody tr td {
-  margin-bottom: 8px;
-  border: none !important;
-  padding-left: 0px !important;
+.lastcommittable {
+   color: #929eaa;
 }
 
 .commit-author {
-  color: #188093;
+   
 }
 
 .recipe-container {
@@ -1095,11 +1099,15 @@ thead tr th {
 }
 
 .highlight {
-  padding: 15px;
+  padding: 1px;
 }
 
 figure.highlight {
-  padding: 10px 30px;
+	padding: 1px 1px;
+}
+
+figure.highlight pre {
+        margin: 1px;
 }
 
 pre {
@@ -1260,12 +1268,10 @@ td {
 .editgithub {
     color: #fff;
     text-decoration: none;
-    background-color: #aaa;
-    padding: 3px 8px 3px 8px;
+    background-color: #579fcc;
+    padding: 1px 4px 1px 3px;
     border-radius: 4px;
-    margin-bottom: 10px;
-    margin-top: -20px;
-    letter-spacing: 0.3px;
+    margin-left: 10px;
 }
 
 .contributor-column-1 {
@@ -3676,3 +3682,47 @@ blockquote.recipes-ref-list ul li {
       font-weight: bold;
     }
   }
+
+div.code-examples div.highlight pre { 
+	margin: 1px; 
+	margin-bottom: 1em;
+}
+
+ul.code-tab {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    /*border: 1px solid #ccc;
+    background-color: #f1f1f1;*/
+}
+
+/* Float the list items side by side */
+ul.code-tab li {float: left;}
+
+/* Style the links inside the list items */
+ul.code-tab li a {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 4px 10px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;
+    border-radius: 10px;
+    margin-right: 4px;
+}
+
+/* Change background color of links on hover */
+ul.code-tab li a:hover {background-color: #ddd;}
+
+/* Create an active/current tablink class */
+ul.code-tab li a:focus, .active {background-color: #ccc;}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}

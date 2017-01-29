@@ -1,12 +1,12 @@
 ---
 layout: page
-title: Introduction to Kaltura Mobile Video SDK
+title: Introduction to Kaltura's Mobile Video SDK
 weight: 100
 ---
 
-# Kaltura’s Mobile Video SDKs for iOS and Android
+## Kaltura’s Mobile Video SDKs for iOS and Android
 
-Kaltura’s Mobile Video SDKs for iOS and Android provide the framework and tools to help you easily embed the Kaltura Video Player into native environments in your iOS or Android applications.
+Kaltura’s Mobile Video SDK for iOS and Android provide the framework and tools to help you easily embed the Kaltura Video Player into native environments in your iOS or Android applications.
 
 The Kaltura Video Player is fully native and offers excellent performance, ensuring that your users receive the best viewing experience. 
 
@@ -38,8 +38,7 @@ Each platform supports different types of streaming capabilites and DRMs. The Ka
 | Google  | Android phone/tablet: v4.2.2+ |
 | Apple  |  iOS: v9+ |
 
-
->Note: To learn more about the previous SDK, SDK 2.0, please refer to [this documentation](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/IntroductionV2.html).
+To learn more about the previous SDK (version 2.0), please refer to [this documentation](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/IntroductionV2.html).
 
 **Next:**
 * [Introduction to the Kaltura Video Player SDK for iOS](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/iOS_Introduction.html)

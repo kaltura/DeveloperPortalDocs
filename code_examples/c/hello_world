@@ -1,0 +1,5 @@
+int hello_world(char *world)
+{
+	printf("Hello %s\n", world);
+	return(0);
+}

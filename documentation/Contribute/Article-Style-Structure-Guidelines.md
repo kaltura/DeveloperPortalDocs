@@ -32,7 +32,8 @@ To learn about Markdown basics and how to use the format, please read: [GitHub m
 &#123;% highlight c %&#125;
 int hello_world(char *world)  
 {  
-    printf("Hello %s\n", world);  
+	printf("Hello %s\n", world);  
+	return(0);
 }  
 &#123;% endhighlight %&#125;
 
@@ -41,9 +42,20 @@ int hello_world(char *world)
 {% highlight c %}
 int hello_world(char *world)
 {
-    printf("Hello %s\n", world);
+	printf("Hello %s\n", world);
+	return(0);
 }
 {% endhighlight %}
+
+## Adding Multi language tabbed divs
+
+Add your code snippet for each lang dir under https://github.com/kaltura/DeveloperPortalDocs/tree/master/code_examples and then include the following in your MD:
+
+&#123;% code_example snippet_file_name %&#125;
+
+**Will render as:**
+{% code_example hello_world %}
+
 
 See [List of supported languages and lexers](https://github.com/jneen/rouge/wiki/list-of-supported-languages-and-lexers).
 
