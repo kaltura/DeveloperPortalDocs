@@ -14,7 +14,7 @@ The following section details the iOS application lifecyle.
 The framework observes application state changes internally to provide better handling.
 
 Handled events:
-* On will terminate event:
+* *On* will terminate the event:
 	* Post analytics "stop" event.
 
 #### Playing Media While in Background
