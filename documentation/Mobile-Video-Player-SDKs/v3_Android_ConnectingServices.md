@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Connecting to the Kaltura Backend
+title: Connecting Services
 subcat: SDK 3.0 (Beta) - Android
 weight: 294
 ---

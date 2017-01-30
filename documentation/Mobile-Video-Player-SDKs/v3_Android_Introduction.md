@@ -1,6 +1,6 @@
 ---
 layout: page
-title:  Introduction to the Kaltura Video Player SDK for Android
+title:  Introduction
 subcat: SDK 3.0 (Beta) - Android
 weight: 290
 ---

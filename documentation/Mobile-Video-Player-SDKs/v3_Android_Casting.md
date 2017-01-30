@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Chromecast Setup on Android Devices
+title: Casting
 subcat: SDK 3.0 (Beta) - Android
 weight: 407
 ---

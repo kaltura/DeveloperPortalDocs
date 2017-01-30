@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Configuring Casting on iOS Devices
+title: Casting
 subcat: SDK 3.0 (Beta) - iOS
 weight: 502
 ---

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Configuring the IMA Plugin on iOS Devices to Display Ads
+title: Ads
 subcat: SDK 3.0 (Beta) - iOS
 weight: 501
 ---

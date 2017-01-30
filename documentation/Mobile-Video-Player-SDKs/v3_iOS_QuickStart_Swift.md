@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Quick Start Using Swift 
+title: Quick Start (Swift)
 subcat: SDK 3.0 (Beta) - iOS
 weight: 300
 ---

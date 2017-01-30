@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Getting Started with Kaltura's Video Player SDK for iOS
+title: Getting Started
 subcat: SDK 3.0 (Beta) - iOS
 weight: 292
 ---

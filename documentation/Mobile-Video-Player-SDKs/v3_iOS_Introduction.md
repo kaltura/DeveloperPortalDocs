@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Introduction to the Kaltura Video Player SDK for iOS
+title: Introduction
 subcat: SDK 3.0 (Beta) - iOS
 weight: 291
 ---

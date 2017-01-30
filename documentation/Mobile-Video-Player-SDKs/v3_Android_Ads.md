@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Configuring the IMA Plugin on Android Devices
+title: Ads
 subcat: SDK 3.0 (Beta) - Android
 weight: 400
 ---
