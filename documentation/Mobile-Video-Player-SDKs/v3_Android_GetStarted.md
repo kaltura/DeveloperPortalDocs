@@ -2,7 +2,7 @@
 layout: page
 title: Getting Started with Kaltura's Video Player SDK for Android
 subcat: SDK 3.0 (Beta) - Android
-weight: 392
+weight: 291
 ---
 
 This article will help you get started with the development of Kaltura's Video Player SDK for Android.
