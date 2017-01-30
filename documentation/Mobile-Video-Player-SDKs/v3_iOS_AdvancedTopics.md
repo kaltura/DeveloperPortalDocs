@@ -11,7 +11,7 @@ Kaltura's Mobile Video SDK supports various advanced features to enable multiple
 
 
 |                    |      Documentation                        | Sample | Apple Doc                                   |
-|--------------------|:-----------------------------------------:|:------:|:-------------------------------------------:|
+|:-------------------|:-----------------------------------------:|:------:|:-------------------------------------------:|
 |**Player Config**   |[Setup PlayerConfig][playerConfigDocs]     | [x]()  | [PlayerConfig][playerConfigSwiftDocs]       |
 |**Events & States** |[Events Observation][eventsObservationDocs]| [x]()  | [PlayerEvents][eventsObservationSwiftDocs]  |
 |**Tracks Selection**|[Audio & Text Tracks][Audio&TextTracksDocs]| [x]()  | [tracksAvailable][Audio&TextTracksSwiftDocs]|
@@ -33,7 +33,7 @@ Kaltura's Mobile Video SDK supports various advanced features to enable multiple
 ## [DRM](https://github.com/kaltura/DeveloperPortalDocs/blob/mobilePlayerSDKV3/documentation/Mobile-Video-Player-SDKs/v3_iOS_%20DRM.md)
 
 |                      |         Documentation                    | Sample | Apple Doc                            |
-|----------------------|:----------------------------------------:|:------:|:------------------------------------:|
+|:---------------------|:----------------------------------------:|:------:|:------------------------------------:|
 | **FairPlay**         | [About FairPlay Streaming][FairPlayDocs] | [x]()  | [FairPlayDRMData][FairPlaySwiftDocs] |
 | **Widevine Classic** | [About Widevine Classic][wideVineDocs]   | [x]()  | X                                    |
 
@@ -46,7 +46,7 @@ Kaltura's Mobile Video SDK supports various advanced features to enable multiple
  
 
 |                 |         Documentation        | Sample |
-|-----------------|:----------------------------:|:------:|
+|:----------------|:----------------------------:|:------:|
 | **Application State Changes** | [Background, Foreground, Termination][application-state-changes] | [x]()  |
 | **Connectivity**    | [Connectivity Loss][connectivityLoss]   | [x]()  |
 
