@@ -1,8 +1,5 @@
 ---
 layout: page
-title: Offline Playback on iOS Devices
-subcat: SDK 3.0 (Beta) - iOS
-weight: 300
 ---
 
 ## Overview
