@@ -52,7 +52,7 @@ TBD
 |                                                      Getting Started                                                     |           Technical Documentation           |
 |:------------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------:|
 |                                           ![help](./v3-images/getStarted.png)                                           |         ![help](./v3-images/TD.png)        |
-| [Getting Started](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/Getting-Started-Playkit-SDK-Android.html) | [Docs](https://forum.kaltura.org/c/playkit) |
+| [Getting Started](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/v3_Android_GetStarted.html) | [Docs](https://kaltura.github.io/playkit/api/android/reference/packages.html) |
 |                                                     How to contribute                                                    |       Detailed technical documentation      |
 
 
