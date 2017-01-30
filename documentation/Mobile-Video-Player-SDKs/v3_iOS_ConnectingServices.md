@@ -2,7 +2,7 @@
 layout: page
 title: Connecting to the Kaltura Backend
 subcat: SDK 3.0 (Beta) - iOS
-weight: 300
+weight: 320
 ---
 
 This article describes how to connect to the Kaltura Backend.

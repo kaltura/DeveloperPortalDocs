@@ -2,7 +2,7 @@
 layout: page
 title: Plugin Creation
 subcat: SDK 3.0 (Beta) - iOS
-weight: 292
+weight: 515
 ---
 
 This article describes how to create plugins, which enable you to add certain functionalities to your player.

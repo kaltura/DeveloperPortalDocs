@@ -2,7 +2,7 @@
 layout: page
 title: Connecting to the Kaltura Backend
 subcat: SDK 3.0 (Beta) - Android
-weight: 406
+weight: 294
 ---
 
 This article describes how to connect to the Kaltura Backend.

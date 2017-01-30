@@ -2,7 +2,7 @@
 layout: page
 title: Advanced Topics
 subcat: SDK 3.0 (Beta) - iOS
-weight: 291
+weight: 305
 ---
 
 <center>

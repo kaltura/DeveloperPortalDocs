@@ -2,7 +2,7 @@
 layout: page
 title: Configuring Casting on iOS Devices
 subcat: SDK 3.0 (Beta) - iOS
-weight: 291
+weight: 502
 ---
 
 The following casting schemes are supported on iOS devices:

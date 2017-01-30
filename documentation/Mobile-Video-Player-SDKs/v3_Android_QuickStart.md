@@ -1,5 +1,8 @@
 ---
 layout: page
+title: Quick Start
+subcat: SDK 3.0 (Beta) - Android
+weight: 293
 ---
 
 ## Quick Start

@@ -1,5 +1,8 @@
 ---
 layout: page
+title: Analytics
+subcat: SDK 3.0 (Beta) - iOS
+weight: 500
 ---
 
 ## Analytics
