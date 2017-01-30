@@ -17,11 +17,11 @@ Kaltura's Mobile Video SDK supports various advanced features to enable multiple
 
 |                    |      Documentation                        | Sample | Apple Doc                                   |
 |:-------------------|:-----------------------------------------:|:------:|:-------------------------------------------:|
-|Player Config       |[Setup PlayerConfig][playerConfigDocs]     | [x]()  | [PlayerConfig][playerConfigSwiftDocs]       |
-|Events & States     |[Events Observation][eventsObservationDocs]| [x]()  | [PlayerEvents][eventsObservationSwiftDocs]  |
-|Tracks Selection    |[Audio & Text Tracks][Audio&TextTracksDocs]| [x]()  | [tracksAvailable][Audio&TextTracksSwiftDocs]|
-|Live                |[Live Stream][Live Stream Docs]            | [x]()  | X                                           |
-|Offline             |[Offline Playback][Offline Playback Docs]  | [x]()  | X                                           |
+|**Player Config**   |[Setup PlayerConfig][playerConfigDocs]     | [x]()  | [PlayerConfig][playerConfigSwiftDocs]       |
+|**Events & States** |[Events Observation][eventsObservationDocs]| [x]()  | [PlayerEvents][eventsObservationSwiftDocs]  |
+|**Tracks Selection**|[Audio & Text Tracks][Audio&TextTracksDocs]| [x]()  | [tracksAvailable][Audio&TextTracksSwiftDocs]|
+|**Live**            |[Live Stream][Live Stream Docs]            | [x]()  | X                                           |
+|**Offline**         |[Offline Playback][Offline Playback Docs]  | [x]()  | X                                           |
 
 [playerConfigDocs]:https://github.com/kaltura/DeveloperPortalDocs/blob/mobilePlayerSDKV3/documentation/Mobile-Video-Player-SDKs/v3_iOS_PlayerConfig.md
 [playerConfigSwiftDocs]:https://kaltura.github.io/playkit/api/ios/Classes/PlayerConfig.html 
