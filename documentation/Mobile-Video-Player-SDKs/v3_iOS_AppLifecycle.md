@@ -4,9 +4,7 @@ layout: page
 
 ## Application Lifecycle  
 
-The following section details the iOS application lifecyle.
-
-=== TBD ===
+The following section details the iOS application lifecycle.
 
 </br>
 ### Application State Changes
@@ -101,18 +99,22 @@ Connectivity changes are observed internally to provide better handling when no 
 Whenever network reachability changes, an error event will be sent with an NSError inside.
 The player begins listening to changes when starting to load the asset, and stops when the player is deinitialized.
 If more than one player is used, the network reachability notifications will stop only after all of the players are deinitialized.
-
+</br>
+</br>
+To observe errors (not just reachability), add an observer for error type and use the error accessor on the event.
 >swift
 
 ```swift
-
-
+player.addObserver(self, events: [PlayerEvent.error]) { event in
+    let error: NSError = event.error // on unreachable event receive NSError with relevant data
+}
 ```
 >objc
 
 ```objc
-
-
+[self.player addObserver:self events:@[PlayerEvent.error] block:^(PKEvent * _Nonnull event) {
+    NSError *error = event.error;
+}];
 ```
 </br>
 ## Have Questions or Need Help?
