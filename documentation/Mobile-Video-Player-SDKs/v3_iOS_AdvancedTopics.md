@@ -34,7 +34,6 @@ Kaltura's Mobile Video SDK supports various advanced features to enable multiple
 [Offline Playback Docs]:https://github.com/kaltura/DeveloperPortalDocs/blob/mobilePlayerSDKV3/documentation/Mobile-Video-Player-SDKs/v3_iOS_Offline.md
 [Offline Playback SwiftDocs]: http://
 
-</br>
 ## [DRM](https://github.com/kaltura/DeveloperPortalDocs/blob/mobilePlayerSDKV3/documentation/Mobile-Video-Player-SDKs/v3_iOS_%20DRM.md)
 
 |                      |         Documentation                    | Sample | Apple Doc                            |
@@ -46,7 +45,6 @@ Kaltura's Mobile Video SDK supports various advanced features to enable multiple
 [FairPlaySwiftDocs]: https://kaltura.github.io/playkit/api/ios/Other%20Classes.html#/s:C7PlayKit15FairPlayDRMData
 [widevineDocs]: https://github.com/kaltura/DeveloperPortalDocs/blob/mobilePlayerSDKV3/documentation/Mobile-Video-Player-SDKs/v3_iOS_%20DRM.md#widevine-classic
 
-</br>
 ## [App Lifecycle](https://github.com/kaltura/DeveloperPortalDocs/blob/mobilePlayerSDKV3/documentation/Mobile-Video-Player-SDKs/v3_iOS_AppLifecycle.md)
  
 
