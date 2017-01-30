@@ -9,6 +9,11 @@ weight: 305
 
 Kaltura's Mobile Video SDK supports various advanced features to enable multiple usage with ease and convenience; refer to the list below for additional details and examples.
 
+</center>
+
+
+
+
 
 |                    |      Documentation                        | Sample | Apple Doc                                   |
 |:-------------------|:-----------------------------------------:|:------:|:-------------------------------------------:|
@@ -53,7 +58,6 @@ Kaltura's Mobile Video SDK supports various advanced features to enable multiple
 [application-state-changes]: https://github.com/kaltura/DeveloperPortalDocs/blob/mobilePlayerSDKV3/documentation/Mobile-Video-Player-SDKs/v3_iOS_AppLifecycle.md#application-state-changes
 [connectivityLoss]: https://github.com/kaltura/DeveloperPortalDocs/blob/mobilePlayerSDKV3/documentation/Mobile-Video-Player-SDKs/v3_iOS_AppLifecycle.md#connectivity
 
-</center>
 
 
 ## Have Questions or Need Help?
