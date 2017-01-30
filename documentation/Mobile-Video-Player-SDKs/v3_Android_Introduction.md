@@ -2,7 +2,7 @@
 layout: page
 title:  Introduction to the Kaltura Video Player SDK for Android
 subcat: SDK 3.0 (Beta) - Android
-weight: 391
+weight: 290
 ---
 
 > Note: The Kaltura Video Player SDK v3 is in BETA.
