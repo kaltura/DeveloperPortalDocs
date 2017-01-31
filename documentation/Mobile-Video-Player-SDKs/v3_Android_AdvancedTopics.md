@@ -5,11 +5,10 @@ subcat: SDK 3.0 (Beta) - Android
 weight: 294
 ---
 
-<center>
 
 Kaltura's Mobile Video SDK supports various advanced features to enable multiple usage with ease and convenience; refer to the list below for additional details and examples.
 
-</center>
+
 
 |                    |      Documentation                        | Sample | Apple Doc                                   |
 |--------------------|:-----------------------------------------:|:------:|:-------------------------------------------:|
@@ -19,31 +18,31 @@ Kaltura's Mobile Video SDK supports various advanced features to enable multiple
 | **Live**           |[Live Stream][Live Stream Docs]            | [x]()  | X                                           |
 | **Offline**        |[Offline Playback][Offline Playback Docs]  | [x]()  | X                                           |
 
-[playerConfigDocs]:https://github.com/kaltura/DeveloperPortalDocs/blob/mobilePlayerSDKV3/documentation/Mobile-Video-Player-SDKs/v3_iOS_PlayerConfig.md
+[playerConfigDocs]:https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/v3_iOS_PlayerConfig.html
 [playerConfigSwiftDocs]:https://kaltura.github.io/playkit/api/ios/Classes/PlayerConfig.html 
-[eventsObservationDocs]:https://github.com/kaltura/DeveloperPortalDocs/blob/mobilePlayerSDKV3/documentation/Mobile-Video-Player-SDKs/v3_iOS_EventsAndStates.md
+[eventsObservationDocs]:https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/v3_iOS_EventsAndStates.html
 [eventsObservationSwiftDocs]:https://kaltura.github.io/playkit/api/ios/Classes/PlayerEvents.html
-[Audio&TextTracksDocs]:https://github.com/kaltura/DeveloperPortalDocs/blob/mobilePlayerSDKV3/documentation/Mobile-Video-Player-SDKs/v3_iOS_TracksSelection.md
+[Audio&TextTracksDocs]:https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/v3_iOS_TracksSelection.html
 [Audio&TextTracksSwiftDocs]: https://kaltura.github.io/playkit/api/ios/Classes/PlayerEvents/tracksAvailable.html#/s:FCC7PlayKit12PlayerEvents15tracksAvailablecFT6tracksCS_8PKTracks_S1_
-[Live Stream Docs]:https://github.com/kaltura/DeveloperPortalDocs/blob/mobilePlayerSDKV3/documentation/Mobile-Video-Player-SDKs/v3_iOS_Live.md
+[Live Stream Docs]:https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/v3_iOS_Live.html
 [Live Stream SwiftDocs]: http://
-[Offline Playback Docs]:https://github.com/kaltura/DeveloperPortalDocs/blob/mobilePlayerSDKV3/documentation/Mobile-Video-Player-SDKs/v3_iOS_Offline.md
+[Offline Playback Docs]:https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/v3_iOS_Offline.html
 [Offline Playback SwiftDocs]: http://
 
-</br>
-## [DRM](https://github.com/kaltura/DeveloperPortalDocs/blob/mobilePlayerSDKV3/documentation/Mobile-Video-Player-SDKs/v3_iOS_%20DRM.md)
+
+## [DRM](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/v3_iOS_%20DRM.html)
 
 |                      |         Documentation                    | Sample | Java Doc                            |
 |----------------------|:----------------------------------------:|:------:|:------------------------------------:|
 | **Widevine Modular**         | [About Widevine Modular][FairPlayDocs] | [x]()  | [Empty][FairPlaySwiftDocs] |
 | **Widevine Classic** | [About Widevine Classic][wideVineDocs]   | [x]()  | X                                    |
 
-[FairPlayDocs]: https://github.com/kaltura/DeveloperPortalDocs/blob/mobilePlayerSDKV3/documentation/Mobile-Video-Player-SDKs/v3_iOS_%20DRM.md#fairplay
+[FairPlayDocs]: https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/v3_iOS_%20DRM.html#fairplay
 [FairPlaySwiftDocs]: https://kaltura.github.io/playkit/api/ios/Other%20Classes.html#/s:C7PlayKit15FairPlayDRMData
-[widevineDocs]: https://github.com/kaltura/DeveloperPortalDocs/blob/mobilePlayerSDKV3/documentation/Mobile-Video-Player-SDKs/v3_iOS_%20DRM.md#widevine-classic
+[widevineDocs]: https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/v3_iOS_%20DRM.html#widevine-classic
 
-</br>
-## [App Lifecycle](https://github.com/kaltura/DeveloperPortalDocs/blob/mobilePlayerSDKV3/documentation/Mobile-Video-Player-SDKs/v3_iOS_AppLifecycle.md)
+
+## [App Lifecycle](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/v3_iOS_AppLifecycle.html)
  
 
 |                 |         Documentation        | Sample |
@@ -51,8 +50,8 @@ Kaltura's Mobile Video SDK supports various advanced features to enable multiple
 | **Application State Changes** | [Background, Foreground, Termination][application-state-changes] | [x]()  |
 | **Connectivity**    | [Connectivity Loss][connectivityLoss]   | [x]()  |
 
-[application-state-changes]: https://github.com/kaltura/DeveloperPortalDocs/blob/mobilePlayerSDKV3/documentation/Mobile-Video-Player-SDKs/v3_iOS_AppLifecycle.md#application-state-changes
-[connectivityLoss]: https://github.com/kaltura/DeveloperPortalDocs/blob/mobilePlayerSDKV3/documentation/Mobile-Video-Player-SDKs/v3_iOS_AppLifecycle.md#connectivity
+[application-state-changes]: hthttps://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/v3_iOS_AppLifecycle.html#application-state-changes
+[connectivityLoss]: https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/v3_iOS_AppLifecycle.html#connectivity
 
 
 ## Have Questions or Need Help?
