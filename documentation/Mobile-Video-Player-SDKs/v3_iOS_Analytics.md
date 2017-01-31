@@ -18,17 +18,24 @@ Kaltura’s Mobile Video Player SDKs for iOS make it easy for you to integrate a
 | Phoenix               | []()             |
 
 
-### Youbora  
+## Youbora Plugin  
 
 This section describes the steps required for implementing the Youbora Plugin on iOS devices. Youbora is an intelligence analytics and optimization platform used in Kaltura's solution to track media analytics events. 
 
 You'll need to set up an account in http://www.youbora.com and then set the account details in the plugin configuration to use this plugin. After these steps, you'll be able to use the Youbora dashboard and watch statistical events and analytics sent by the Kaltura Video Payer.
 
 <details><summary>Click for Integration</summary><p>
-TBD
+
+### Enabling the Youbora Plugin for the Kaltura Video Player  
+
+To enable the TVPAPI Stats Plugin on iOS devices for the Kaltura Video Player, add the following line to your Podfile: 
+
+```ruby
+pod 'PlayKit/KalturaStatsPlugin'
+```
 </p></details>
 
-### Kaltura Analytics  
+## Kaltura Analytics Plugin  
 
 This section describes the steps required for using the Kaltura Analytics Plugin on iOS devices as well as the events supported by the plugin. Adding the Kaltura Analytics Plugin will enable you get detailed analytics. 
 
@@ -36,24 +43,13 @@ This section describes the steps required for using the Kaltura Analytics Plugin
 TBD
 </p></details>
 
-### Kaltura Stats  
+## Kaltura Stats Plugin  
 
 This section describes the steps required for configuring the Kaltura Video Player to use the Kaltura Stats Plugin on iOS devices. This will enable you to obtain important statistical information about usage.
 
 <details><summary>Click for Integration</summary><p>
-TBD
-</p></details>
 
-
-## Enabling the Youbora Plugin for the Kaltura Video Player  
-
-To enable the TVPAPI Stats Plugin on iOS devices for the Kaltura Video Player, add the following line to your Podfile: 
-
-```ruby
-pod 'PlayKit/KalturaStatsPlugin'
-```
-
-## Register the Kaltura Stats Plugin for the Kaltura Video Player  
+### Register the Kaltura Stats Plugin for the Kaltura Video Player  
 
 To enable the Kaltura Stats Plugin, register the plugin inside your application as follows:
 
@@ -61,7 +57,7 @@ To enable the Kaltura Stats Plugin, register the plugin inside your application 
 PlayKitManager.sharedInstance.registerPlugin(KalturaStatsPlugin.self)
 ```
 
-## Configure the Analytics Configuration Object for the Kaltura Stats Plugin  
+### Configure the Analytics Configuration Object for the Kaltura Stats Plugin  
 
 To configure the Kaltura Stats Plugin, add the following configuration to your `pluginConfig` file as follows:
 
@@ -89,8 +85,7 @@ var pluginsConfig = [String : AnyObject?]()
 playerConfig.plugins[KalturaStatsPlugin.pluginName] = analyticsConfig
 self.playerController = PlayKitManager.sharedInstance.loadPlayer(config: playerConfig.plugins)
 ```
-
-## Kaltura Stats Plugin Supported Events  
+### Kaltura Stats Plugin Supported Events  
 
 The Kaltura Stats Plugin supports the following events:
 
@@ -142,15 +137,13 @@ case ERROR = 99
 </p></details>
 
 
-## TVPAPI
+## TVPAPI Stats Plugin
 
 This section describes the steps required for using the TVPAPI Stats Plugin on iOS devices to get statistical information on the device, as well as the events supported by the plugin.
 
 <details><summary>Click for Integration</summary><p>
-TBD
-</p></details>
 
-## Enabling the TVPAPI Stats Plugin for the Kaltura Video Player  
+### Enabling the TVPAPI Stats Plugin for the Kaltura Video Player  
 
 To enable the TVPAPI Stats Plugin on iOS devices for the Kaltura Video Player, add the following line to your Podfile: 
 
@@ -166,7 +159,7 @@ Register the TVPAPI Stats Plugin in your application as follows:
 PlayKitManager.sharedInstance.registerPlugin(TVPAPIAnalyticsPlugin.self)
 ```
 
-## Configure the Kaltura Video Player to use the TVPAPI Stats Plugin  
+### Configure the Kaltura Video Player to use the TVPAPI Stats Plugin  
 
 To configure the player to use TVPAPI Stats Plugin, add the following configuration to your `PlayerConfig` file as follows:
 
@@ -180,7 +173,6 @@ params["initObj"] = initObj //must be a valid initObj of TVPAPI
 analyticsConfig.params = params
 
 ```
-
 ### Set the Plugin Configuration to the TVPAPI Stats Plugin  
 
 To ensure that the TVPAPI Stats Plugin starts loading, you'll need to set the plugin configuration you created as follows:
@@ -215,8 +207,10 @@ self.playerController.addObserver(self, events: [OttEvent.OttEventConcurrency.se
 
 })                    
 ```
+</p></details>
 
-## Phoenix  
+
+## Phoenix Stats Plugin  
 
 This section describes the steps required for configuring the Kaltura Video Player to use the Phoenix Stats Plugin on iOS devices as well as the supported plugin events. This will enable you to obtain important statistical information about usage.
 
