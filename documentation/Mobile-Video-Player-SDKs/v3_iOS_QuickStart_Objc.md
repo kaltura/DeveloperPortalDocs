@@ -1,11 +1,9 @@
 ---
 layout: page
-title: Quick Start (Objective C)  
+title: Quick Start Using Obj-C  
 subcat: SDK 3.0 (Beta) - iOS
 weight: 301
 ---
-
-## Quick Start Using Obj-C  
 
 In this section, you'll learn how to build a simple video application using the ObjC programming language.
 
