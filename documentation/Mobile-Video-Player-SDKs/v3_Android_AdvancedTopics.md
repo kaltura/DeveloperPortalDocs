@@ -50,7 +50,7 @@ Kaltura's Mobile Video SDK supports various advanced features to enable multiple
 | **Application State Changes** | [Background, Foreground, Termination][application-state-changes] | [x]()  |
 | **Connectivity**    | [Connectivity Loss][connectivityLoss]   | [x]()  |
 
-[application-state-changes]: hthttps://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/v3_iOS_AppLifecycle.html#application-state-changes
+[application-state-changes]: https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/v3_iOS_AppLifecycle.html#application-state-changes
 [connectivityLoss]: https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/v3_iOS_AppLifecycle.html#connectivity
 
 
