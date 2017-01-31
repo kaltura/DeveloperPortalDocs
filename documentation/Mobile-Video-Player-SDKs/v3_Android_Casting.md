@@ -77,12 +77,12 @@ The following section shows the differences betwen the Live and VOD casting:
 
 **Tracks**
 
-###Useful Links  
+### Useful Links  
 
-- cast developer guide
-- cast guidelines
+- Cast developer guide
+- Cast guidelines
 
-</br>
+
 ## Have Questions or Need Help?
 
 Check out the [Kaltura Player SDK Forum](https://forum.kaltura.org/c/playkit) page for different ways of getting in touch.
