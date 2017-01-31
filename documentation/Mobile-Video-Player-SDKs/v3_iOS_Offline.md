@@ -1,4 +1,5 @@
 ---
+title: Offline Playback
 layout: page
 ---
 
