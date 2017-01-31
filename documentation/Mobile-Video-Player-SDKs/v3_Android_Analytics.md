@@ -24,8 +24,6 @@ This article describes the steps required for implementing the Youbora Plugin on
 
 You'll need to set up an account in http://www.youbora.com and then set the account details in the plugin configuration to use this plugin. After these steps, you'll be able to use the Youbora dashboard and watch statistical events and analytics sent by the Kaltura Video Payer.
 
-<details><summary>**Click for Integration**</summary><p>
-
 ### Enabling the Youbora Plugin  
 
 To enable the Youbora Plugin in Android devices, register the plugin inside your application as follows
@@ -116,13 +114,10 @@ http://test-nqs-lw2.nice264.com/start?          deviceId=&cdn=&param6=&duration=
 
 5 . Stop event /stop: Use this funciton after the media finishes playing.
 
-</p></details>
 
 ## Kaltura Analytics Plugin  
 
 This section describes the steps required for using the Kaltura Analytics Plugin on Android devices as well as the events supported by the plugin. Adding the Kaltura Analytics Plugin will enable you get detailed analytics. 
-
-<details><summary>**Click for Integration**</summary><p>
 
 ### Enable the Kaltura Analytics Plugin for the Kaltura Player  
 
@@ -191,7 +186,6 @@ The Kaltura Analytics Plugin supports the following events:
         
        VIEW(99);
 ```
-</p></details>
 
 ## Kaltura Stats Plugin  
 
@@ -297,8 +291,7 @@ The Kaltura Stats Plugin supports the following events:
 
 This section describes the steps required for using the TVPAPI Stats Plugin on Android devices to get statistical information on the device, as well as the events supported by the plugin. 
 
-<details><summary>**Click for Integration**</summary><p>
- 
+
 ### Register the TVPAPI Stats Plugin  
 
 Register the TVPAPI Stats Plugin in your application as follows:
@@ -355,13 +348,10 @@ public void onEvent(PKEvent event) {
 }
 }, OttEvent.OttEventType.Concurrency);                    
 ```
-</p></details>
 
 ## Phoenix Stats Plugin  
 
 This article describes the steps required for configuring the Kaltura Video Player to use the Phoenix Stats Plugin on Android devices as well as the supported plugin events. This will enable you to obtain important statistical information about usage.
-
-<details><summary>**Click for Integration**</summary><p>
 
 ### Register the Phoenix Stats Plugin inside your Application  
 
@@ -434,7 +424,6 @@ messageBus.listen(new PKEvent.Listener() {
                     }, OttEvent.OttEventType.Concurrency);
                     
 ```
-</p></details>
 
 
 ## Have Questions or Need Help?
