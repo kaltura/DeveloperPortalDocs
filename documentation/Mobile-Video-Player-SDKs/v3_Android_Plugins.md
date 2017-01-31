@@ -290,7 +290,7 @@ For the IMA Plugin to start loading, you'll need to set the plugin configuration
 
 ```
 
-</br>
+
 ## Have Questions or Need Help?
 
 Check out the [Kaltura Player SDK Forum](https://forum.kaltura.org/c/playkit) page for different ways of getting in touch.
