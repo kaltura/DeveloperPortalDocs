@@ -191,9 +191,7 @@ The Kaltura Analytics Plugin supports the following events:
 
 This section describes the steps required for configuring the Kaltura Video Player to use the Kaltura Stats Plugin on Android devices. This will enable you to obtain important statistical information about usage.
 
-<details><summary>**Click for Integration**</summary><p>
-
-## Register the Kaltura Stats Plugin for the Kaltura Video Player  
+### Register the Kaltura Stats Plugin for the Kaltura Video Player  
 
 To enable the Kaltura Stats Plugin, register the plugin inside your application as follows:
 
@@ -284,8 +282,6 @@ The Kaltura Stats Plugin supports the following events:
 
  ERROR(99);
 ```
-</p></details>
-
 
 ## TVPAPI Stats Plugin  
 
