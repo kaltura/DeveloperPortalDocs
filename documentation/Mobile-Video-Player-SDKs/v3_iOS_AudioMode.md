@@ -35,7 +35,6 @@ if let _ = audioSessionInitialCategory {
 }
 ```
 
-</br>
 
 ## Have Questions or Need Help?
 
