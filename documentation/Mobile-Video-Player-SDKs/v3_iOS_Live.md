@@ -28,7 +28,6 @@ self.player?.seek(to: CMTime(seconds: 999999, preferredTimescale: 1))
 
 ```
 
-</br>
 
 ## Have Questions or Need Help?
 
