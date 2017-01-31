@@ -20,16 +20,16 @@ Each platform supports different types of streaming capabilites and DRMs. The Ka
 
 | Feature  | Supported |
 | ------------- | :---: |
-| Online and Offline Playback  | :+1:  |
+| Online and Offline Playback  | :V:  |
 | Live  | :+1:  |
-| DRM (Fairplay, Widevine modular, Widevine classic)  | :+1:  |
-| Offline Mode (including DRM)  | :+1:  |
-| Multi audio tracks  | :+1:  |
-| Captions  | :+1:  |
-| Monetization (IMA )  | :+1:  |
-| Chromecast  | :+1:  |
-| AirPlay  | :+1:  |
-| Analytics  | :+1:  |
+| DRM (Fairplay, Widevine modular, Widevine classic)  | :V:  |
+| Offline Mode (including DRM)  | :V:  |
+| Multi audio tracks  | :V:  |
+| Captions  | :V:  |
+| Monetization (IMA )  | :V:  |
+| Chromecast  | :V:  |
+| AirPlay  | :V:  |
+| Analytics  | :V:  |
 
 ## Supported Platforms  
 
