@@ -30,7 +30,8 @@ The simplest way to add the SDK and its dependencies to your project is by using
 1. In your project folder, create a plain text file called `Podfile` (no file extension).
 2. Using a text editor, add the following lines of code to the Podfile and save it.
 
-	```ruby
+
+```ruby
 	source 'https://github.com/CocoaPods/Specs.git'
 
 	use_frameworks!
@@ -56,23 +57,22 @@ The simplest way to add the SDK and its dependencies to your project is by using
    	 end 
 	end
 
-	```
+```
 	
 3. Navigate to the podfile location via Terminal and type the command:
 
-	```ruby
+```ruby
 	`pod install
-
-	````
+```
 
 #### Import the Native SDK  
 
 Go to the desired file (e.g., `ViewController.swift`) and add the line below:
 
-	```swift
+```swift
 	import PlayKit
 
-	```
+```
 
 ### Code the Video Player Application  
 
@@ -80,14 +80,14 @@ You're now ready to code the video player application using the following option
 
 **Declare a Player Variable**
 
-	```swift
+```swift
 	var playerController: Player
 
-	```
+```
 
 **Set a Player Instance via a Sample Configuration** 
 
-	```swift
+```swift
 	let config = PlayerConfig()
         
         var source = [String : Any]()
@@ -106,7 +106,7 @@ You're now ready to code the video player application using the following option
         // Here we get the player
         self.playerController = PlayKitManager.sharedInstance.loadPlayer(config: config)
 
-	```
+```
 
 >Note: To learn more about `PlayerConfig` Creation, see the [PlayerConfig Doc]() article.
 
@@ -114,23 +114,22 @@ You're now ready to code the video player application using the following option
 
 1. Create a player container as follows: 
 
-	```swift
+```swift
 	@IBOutlet weak var playerContainer: UIView!
-
-	```
+```
 2. Set the player frame and add a player view as a subview:
 
-	```swift
+```swift
 	self.playerController.view.frame = playerContainer.bounds
 	playerContainer.addSubview(self.playerController.view)
 
-	```
+```
 
 #### Adding Custom Buttons and Controls to the Player  
 
 Add custom buttons and controls to the player as follows:
 
-	```swift
+```swift
 	@IBAction func playClicked(_ sender: AnyObject) {
 	self.playerController.play()
 	}
@@ -139,7 +138,7 @@ Add custom buttons and controls to the player as follows:
 	self.playerController.pause()
 	}
 
-	```
+```
 
 
 > [Download Full Sample]()
