@@ -2,7 +2,7 @@
 layout: page
 ---
 
-## Player Events & States  
+## Player Events and States  
 
 To receive notifications about any player-related events or states, you can add observers to the relevant events as follows.
 
@@ -44,7 +44,7 @@ To receive notifications about any player-related events or states, you can add 
 
 ```
 
-### Remove Observers
+### Removing Observers
 
 >swift
 
@@ -95,7 +95,7 @@ To receive notifications about any player-related events or states, you can add 
 
 >Note: To get a complete list of supported player states, refer to the [Player States page](https://kaltura.github.io/playkit/api/ios/Enums/PlayerState.html).
 
-</br>
+
 
 ## Have Questions or Need Help?
 
