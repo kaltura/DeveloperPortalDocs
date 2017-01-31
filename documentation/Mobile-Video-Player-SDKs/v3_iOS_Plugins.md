@@ -99,7 +99,7 @@ class ViewController: UIViewController {
 
 ```
 
-## Add Plugin Config to PlayerConfig
+## Add the Plugin Configuration to the PlayerConfig
 
 > [Read About PlayerConfig]()
 
@@ -141,7 +141,7 @@ class ViewController: UIViewController {
 
 ```
 
-</br>
+
 ## Have Questions or Need Help?
 
 Check out the [Kaltura Player SDK Forum](https://forum.kaltura.org/c/playkit) page for different ways of getting in touch.
