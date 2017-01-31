@@ -113,6 +113,6 @@ A simple implementation is provided in [DefaultLocalDataStore], but if the appli
 
 
 
-## Have Questions or Need Help?
+### Have Questions or Need Help?
 
 Check out the [Kaltura Player SDK Forum](https://forum.kaltura.org/c/playkit) page for different ways of getting in touch.
