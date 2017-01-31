@@ -26,7 +26,7 @@ This article describes the steps required for implementing the Youbora Plugin on
 
 You'll need to set up an account in http://www.youbora.com and then set the account details in the plugin configuration to use this plugin. After these steps, you'll be able to use the Youbora dashboard and watch statistical events and analytics sent by the Kaltura Video Payer.
 
-<details><summary>**Click For Integration**</summary><p>
+<details><summary>**Click for Integration**</summary><p>
 TBD
 </p></details>
 
@@ -34,7 +34,7 @@ TBD
 
 This article describes the steps required for using the Kaltura Analytics Plugin on iOS devices as well as the events supported by the plugin. Adding the Kaltura Analytics Plugin will enable you get detailed analytics. 
 
-<details><summary>**Click For Integration**</summary><p>
+<details><summary>**Click for Integration**</summary><p>
 TBD
 </p></details>
 
@@ -42,7 +42,7 @@ TBD
 
 This article describes the steps required for configuring the Kaltura Video Player to use the Kaltura Stats Plugin on iOS devices. This will enable you to obtain important statistical information about usage.
 
-<details><summary>**Click For Integration**</summary><p>
+<details><summary>**Click for Integration**</summary><p>
 ## Enabling the Youbora Plugin for the Kaltura Video Player  
 
 To enable the TVPAPI Stats Plugin on iOS devices for the Kaltura Video Player, add the following line to your Podfile: 
@@ -144,7 +144,7 @@ case ERROR = 99
 
 This article describes the steps required for using the TVPAPI Stats Plugin on iOS devices to get statistical information on the device, as well as the events supported by the plugin.
 
-<details><summary>**Click For Integration**</summary><p>
+<details><summary>**Click for Integration**</summary><p>
 ## Enabling the Youbora Plugin for the Kaltura Video Player  
 
 To enable the TVPAPI Stats Plugin on iOS devices for the Kaltura Video Player, add the following line to your Podfile: 
@@ -217,7 +217,7 @@ self.playerController.addObserver(self, events: [OttEvent.OttEventConcurrency.se
 
 This article describes the steps required for configuring the Kaltura Video Player to use the Phoenix Stats Plugin on iOS devices as well as the supported plugin events. This will enable you to obtain important statistical information about usage.
 
-<details><summary>**Click For Integration**</summary><p>
+<details><summary>**Click for Integration**</summary><p>
 TBD
 </p></details>
 
