@@ -11,14 +11,14 @@ Your application will use permanent Application Tokens to generate temporary KS 
 
 ## How to Create an Application Token  
 
-The Application Token will need to be created by an administrator (or Kaltura professional services provider), which you'll then use to generate temporary KSs. The Application Token is comprised of an ID (ApplicationToken.id) and token (ApplicationToken.token). 
+The Application Token will need to be created by your account administrator (or by Kaltura Professional Services). A developer will then use the Application Token to generate Kaltura Session tokens in her or his applications.
 
-The Application Token is preconfigured with a maximum session length, a set of content entitlements (Channel access permissions), and API access privileges. The temporary session tokens generated using the Application Token will inherit these preconfigured properties. You'll also be told which hash function to use when working with the Application Token (the default is SHA1, but MD5, SHA-256, and others are also available).
+The Application Token is comprised of an ID (ApplicationToken.id) and token (ApplicationToken.token). The Application Token is preconfigured with a maximum session length, a set of content entitlements (category access permissions), and API access privileges. Kaltura Sessions generated using an Application Token will inherit these properties from it. You'll also be told which hash function to use when working with the Application Token (the default is SHA1, but MD5, SHA-256, and others are also available).
 
-After creating the Application Token user, your developer can then build a KS token from an Application Token. See the next articles for details:
+See the following articles for details:
 
-* [Creating an Application Token](https://vpaas.kaltura.com/documentation/VPaaS-API-Getting-Started/Account-Representative-Steps.html)
-* [Authorizing with an Application Token](https://vpaas.kaltura.com/documentation/VPaaS-API-Getting-Started/Authorizing-With-Application-Token.html)
+* For Account Administrators: [Creating an Application Token](https://vpaas.kaltura.com/documentation/VPaaS-API-Getting-Started/Account-Representative-Steps.html)
+* For Application Developers: [Authorizing with an Application Token](https://vpaas.kaltura.com/documentation/VPaaS-API-Getting-Started/Authorizing-With-Application-Token.html)
 
 ## Security Considerations  
 
