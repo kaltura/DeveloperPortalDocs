@@ -11,12 +11,12 @@ The following casting schemes are supported on iOS devices:
 
 |                                         |      About      | Sample |
 |:---------------------------------------:|:---------------:|:------:|
-| ![help](./v3-images/iOS/airPlay.png)    | [AirPlay](https://github.com/kaltura/DeveloperPortalDocs/blob/mobilePlayerSDKV3/documentation/Mobile-Video-Player-SDKs/v3_iOS_Casting.md#airplay)     | [x]()  |
-| ![help](./v3-images/iOS/chromecast.png) | [Google Cast](https://github.com/kaltura/DeveloperPortalDocs/blob/mobilePlayerSDKV3/documentation/Mobile-Video-Player-SDKs/v3_iOS_Casting.md#google-cast) | [x]()  |            |
+| ![help](./v3-images/iOS/airPlay.png)    | [AirPlay](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/v3_iOS_Casting.html#airplay)     | [x]()  |
+| ![help](./v3-images/iOS/chromecast.png) | [Google Cast](https://https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/v3_iOS_Casting.html#google-cast) | [x]()  |            |
 
 </center>
 
-</br>
+
 ## Airplay  
 
 This article describes the steps required for adding support for the AirPlay functionality on iOS devices. AirPlay (developed by Apple Inc.) enables wireless streaming of audio, video, photos and more between devices.
@@ -278,7 +278,6 @@ To add support for advertisments:
 	```
 
 
-</br>
 ## Have Questions or Need Help?
 
 Check out the [Kaltura Player SDK Forum](https://forum.kaltura.org/c/playkit) page for different ways of getting in touch.
