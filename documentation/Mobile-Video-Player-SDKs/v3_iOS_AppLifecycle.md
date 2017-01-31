@@ -6,8 +6,7 @@ layout: page
 
 The following section details the iOS application lifecycle.
 
-</br>
-### Application State Changes
+### Application State Changes  
 
 The framework observes application state changes internally to provide better handling.
 
@@ -15,7 +14,7 @@ Handled events:
 * *On* will terminate the event:
 	* Post analytics "stop" event.
 
-#### Playing Media While in Background
+#### Playing Media While in Background  
 
 * **Enabling your application to play audible content while in the background**. To enable your application to play audible content while in the background, enable this option in the application background modes section or info.plist.
 * **Setting the audio session category**. To continue playing media while in the background, you must set an audio session category with background playback (for example: AVAudioSessionCategoryPlayback).
@@ -92,15 +91,15 @@ func applicationDidBecomeActive(_ application: UIApplication) {
 
 > Note: For more information about playing media while the application runs in the background see the [Apple Developer Site](https://developer.apple.com/library/content/qa/qa1668/_index.html).
 
-</br>
+ 
 ### Connectivity
 
 Connectivity changes are observed internally to provide better handling when no network connection is available.
 Whenever network reachability changes, an error event will be sent with an NSError inside.
 The player begins listening to changes when starting to load the asset, and stops when the player is deinitialized.
 If more than one player is used, the network reachability notifications will stop only after all of the players are deinitialized.
-</br>
-</br>
+
+
 To observe errors (not just reachability), add an observer for error type and use the error accessor on the event.
 >swift
 
@@ -116,7 +115,7 @@ player.addObserver(self, events: [PlayerEvent.error]) { event in
     NSError *error = event.error;
 }];
 ```
-</br>
+
 ## Have Questions or Need Help?
 
 Check out the [Kaltura Player SDK Forum](https://forum.kaltura.org/c/playkit) page for different ways of getting in touch.
