@@ -11,7 +11,9 @@ To receive notifications about any player-related events or states, you can add 
 >swift
 
 ```swift
-
+player.addObserver(self, events: [PlayerEvent.durationChanged]) { event in
+    print(event.duration) 
+}
 
 ```
 >objc
@@ -20,22 +22,14 @@ To receive notifications about any player-related events or states, you can add 
 
 - (void)addPlayerObservers {
     // add observer to list of different events
-    [self.kPlayer addObserver:self events:@[PlayerEvent_playing.self, PlayerEvent_pause.self, PlayerEvent_durationChanged.self, PlayerEvent_stateChanged.self] block:^(PKEvent * _Nonnull event) {
-        if ([event isKindOfClass:PlayerEvent_playing.class]) {
-            NSLog(@"---------> playing %@", event);
-        } else if ([event isKindOfClass:PlayerEvent_pause.class]) {
-            NSLog(@"---------> paused %@", event);
-        } else if ([event isKindOfClass:PlayerEvent_durationChanged.class]) {
-            NSLog(@"---------> duration change: %f", ((PlayerEvent_durationChanged*)event).duration);
-        } else {
-            NSLog(@"event: %@", event);
-        }
-    }];
-    
-    // add observer to one event
-    [self.kPlayer addObserver:self events:@[PlayerEvent_playing.self] block:^(PKEvent * _Nonnull event) {
-        if ([event isKindOfClass:PlayerEvent_playing.class]) {
-            NSLog(@"---------> playing %@", event);
+    [self.kPlayer addObserver:self events:@[PlayerEvent.playing, PlayerEvent.durationChanged, PlayerEvent.stateChanged] block:^(PKEvent * _Nonnull event) {
+        if ([event isKindOfClass:PlayerEvent.playing]) {
+            NSLog(@"playing %@", event);
+        } else if ([event isKindOfClass:PlayerEvent.durationChanged]) {
+            NSLog(@"duration: %@", event.duration);
+        } else if ([event isKindOfClass:PlayerEvent.stateChanged]) {
+            NSLog(@"old state: %ld", (long)event.oldState);
+            NSLog(@"new state: %ld", (long)event.newState);
         } else {
             NSLog(@"event: %@", event);
         }
@@ -56,13 +50,7 @@ To receive notifications about any player-related events or states, you can add 
 
 ```objc
 
-- (void)removePlayerObservers {
-    // remove observer to list of different events
-    [self.kPlayer removeObserver:self events:@[PlayerEvent_playing.self, PlayerEvent_pause.self, PlayerEvent_durationChanged.self, PlayerEvent_stateChanged.self]];
-    
-    // remove one event observation
-    [self.kPlayer removeObserver:self events:@[PlayerEvent_playing.self]];
-}
+[self.kPlayer removeObserver:self events:@[PlayerEvent.playing]];
 
 ```
 
