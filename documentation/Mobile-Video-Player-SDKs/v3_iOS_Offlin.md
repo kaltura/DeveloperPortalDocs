@@ -4,9 +4,9 @@ layout: page
 
 ## Overview
 
-Offline Playback refers to the ability to play downloaded content. The device doesn't have to actually be offline (i.e. with no network access) to use downloaded assets.
+Offline Playback refers to the ability to play downloaded content, although the device doesn't actually have to be offline (i.e., without network access) to use downloaded assets.
 
-Conceptually, setting up offline playback has 3 parts:
+Conceptually, setting up offline playback requires three steps:
 
 1. Download the content
 2. Register the downloaded content with the SDK
@@ -48,11 +48,11 @@ At this point, the application can start downloading the asset (typically mp4 or
     @enduml
 {% endplantuml %}
 
-For correct usage of this mechanism, please see [Apple's guide](https://developer.apple.com/library/content/documentation/AudioVideo/Conceptual/MediaPlaybackGuide/Contents/Resources/en.lproj/HTTPLiveStreaming/HTTPLiveStreaming.html) and [sample app](https://developer.apple.com/library/content/samplecode/HLSCatalog/Introduction/Intro.html). 
+For correct usage of this mechanism, please see [Apple's guide](https://developer.apple.com/library/content/documentation/AudioVideo/Conceptual/MediaPlaybackGuide/Contents/Resources/en.lproj/HTTPLiveStreaming/HTTPLiveStreaming.html) and a [sample application](https://developer.apple.com/library/content/samplecode/HLSCatalog/Introduction/Intro.html). 
 
 ### Downloading with a 3rd-party tool
 
-When the asset isn't downloadable by AVAssetDownloadTask (or if AVAssetDownloadTask is not available), the download will be done either with a 3rd party tool or by a [URLSessionDownloadTask]. In those cases, there's no "prepare" step. Instead, the application calls `getPreferredDownloadableMediaSource(for mediaEntry: MediaEntry)` to pick the best source. It then downloads the source, and at the end calls `assetDownloadFinished(mediaSource: MediaSource, location: URL)`.
+When the asset isn't downloadable by AVAssetDownloadTask (or if AVAssetDownloadTask is not available), the download will be done either with a 3rd party tool or by using a [URLSessionDownloadTask].  In these cases, there's no "preparation" step; instead, the application calls `getPreferredDownloadableMediaSource(for mediaEntry: MediaEntry)` to pick the best source. It then downloads the source, and at the end calls `assetDownloadFinished(mediaSource: MediaSource, location: URL)`.
 
 This case also applies to *Widevine Classic* assets.
 
@@ -109,3 +109,9 @@ A simple implementation is provided in [DefaultLocalDataStore], but if the appli
 [MediaEntry]: https://kaltura.github.io/playkit/api/ios/Classes/MediaEntry.html
 [AVAssetDownloadTask]: https://developer.apple.com/reference/avfoundation/avassetdownloadtask
 [URLSessionDownloadTask]: https://developer.apple.com/reference/foundation/urlsessiondownloadtask
+
+
+
+## Have Questions or Need Help?
+
+Check out the [Kaltura Player SDK Forum](https://forum.kaltura.org/c/playkit) page for different ways of getting in touch.
