@@ -5,8 +5,6 @@ subcat: SDK 3.0 (Beta) - Android
 weight: 293
 ---
 
-## Quick Start
-
 In this section, you'll learn how to build a simple video application.
 
 ## Integrate the Playkit SDK into your Application Settings  
