@@ -11,7 +11,7 @@ In this section, you'll learn how to build a simple video application.
 
 ## Integrate the Playkit SDK into your Application Settings  
 
-1 . Clone the SDK  from https://github.com/kaltura/playkit-android and locate it next to your application code. In case that you want to look at the code stand-alone, open the playkit-android folder in the Android Studio. 
+1 . Clone the SDK  from https://github.com/kaltura/playkit-android and locate it next to your application code. If you want to be able to review the code as standalone, open the playkit-android folder in the Android Studio. 
 2 . In the setting.gradle, add the SDK project settings as follows:
 
 ```java
@@ -52,9 +52,9 @@ player.pause();
 
 ## More About PlayerConfig  
 
-The PlayerConfig object is a simple data object that holds the initial configurations for the player. Like the media entry we want to play and the plugins we want to configure. You can find additional documentation on PlayerConfig in this [PlayerConfig article](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/Android/PlayerConfig-Android.md).
+The PlayerConfig object is a simple data object that holds the initial configurations for the player, similar to the media entry you wish to play and the plugins you want to configure. You can find additional documentation on PlayerConfig in this [PlayerConfig article](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/Android/PlayerConfig-Android.md).
 
-The [PlayerConfig](https://github.com/kaltura/playkit-android/blob/develop/playkit/src/main/java/com/kaltura/playkit/PlayerConfig.java) consists of two main objects: media and plugins. For now, we'll focus on creating the Media object. Additional information about Plugins is available in this [Plugins article](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/Plugins-Android.md).
+The [PlayerConfig](https://github.com/kaltura/playkit-android/blob/develop/playkit/src/main/java/com/kaltura/playkit/PlayerConfig.java) consists of two main objects: media and plugins. For now, we'll focus on creating the **media** object. Additional information about plugins is available in this [plugins ](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/Plugins-Android.md) article.
 
 ## Kaltura's MediaProvider Classes  
 
@@ -62,8 +62,8 @@ Playkit has a large number of built-in [MediaProvider classes](https://github.co
 
 ### Using the MockMediaProvider  
 
-1 . Take take the JsonObject and parse it with our provider. 
-2 . Next, let's assume that we have this JsonObject saved locally in our project assets directory, with the name entries.playkit.json:
+1 . Take take the JsonObject and parse it with your provider. 
+2 . Next, let's assume that you have this JsonObject saved locally in your project assets directory, with the name entries.playkit.json:
 
 ```json
 	"dash": {
@@ -79,7 +79,7 @@ Playkit has a large number of built-in [MediaProvider classes](https://github.co
     ]
   }
 ``` 
-3 . Next, we want the [MockMediaProvider](https://github.com/kaltura/playkit-android/blob/develop/playkit/src/main/java/com/kaltura/playkit/backend/mock/MockMediaProvider.java) to provide us with the PlayerConfig.Media object. Therefore, we need to create a new instance of it, and pass to the constructor the location of the file, Android context, and the ID of the media we are interested in:
+3 . You now want the [MockMediaProvider](https://github.com/kaltura/playkit-android/blob/develop/playkit/src/main/java/com/kaltura/playkit/backend/mock/MockMediaProvider.java) to provide you with the PlayerConfig.Media object. Therefore, you need to create a new instance of it, and pass to the constructor the location of the file, the Android context, and the ID of the media you're interested in:
 
 ```java
  	@Override
@@ -121,8 +121,8 @@ Playkit has a large number of built-in [MediaProvider classes](https://github.co
         });
 ```
 
-4 . UPon completeion (onComplete), you'll receive the PKMediaEntry object with which you can populate the PlayerConfig.Media, create a player, and pass the configuration object into it.
-5 . If you have all the neccessary data for playback (your own MediaProvider), you can manually populate the Media object by calling setters on the PlayerConfig.Media object in the following way:
+4 . Once completed (onComplete), you'll receive the PKMediaEntry object with which you can populate the PlayerConfig.Media, create a player, and pass the configuration object into it.
+5 . If you have all the neccessary data for playback (your own MediaProvider), you can manually populate the media object by calling setters on the PlayerConfig.Media object in the following way:
 
 ```java
 @Override
@@ -168,11 +168,10 @@ protected void onStart() {
 
 and pass it to the PlayerConfig object.
 
-</br>
+
 > [Download Full Sample]()
 
 
-</br>
 
 ## Have Questions or Need Help?
 
