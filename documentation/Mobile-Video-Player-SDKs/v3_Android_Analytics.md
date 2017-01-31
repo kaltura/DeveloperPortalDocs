@@ -5,11 +5,9 @@ subcat: SDK 3.0 (Beta) - Android
 weight: 298
 ---
 
-## Analytics
-
 Kaltura’s Mobile Video Player SDKs for Android make it easy for you to integrate analytics data collection, by providing you with several analytics solutions.
 
-### Supported Analytics
+## Supported Analytics
 
 | Analytics Plugin Name | More Information |
 |-----------------------|------------------|
@@ -20,21 +18,17 @@ Kaltura’s Mobile Video Player SDKs for Android make it easy for you to integra
 | Phoenix               | []()             |
 
 
-## Youbora
+## Youbora Plugin  
 
 This article describes the steps required for implementing the Youbora Plugin on Android devices. Youbora is an intelligence analytics and optimization platform used in Kaltura's solution to track media analytics events. 
 
 You'll need to set up an account in http://www.youbora.com and then set the account details in the plugin configuration to use this plugin. After these steps, you'll be able to use the Youbora dashboard and watch statistical events and analytics sent by the Kaltura Video Payer.
 
-<details><summary>**Click For Integration**</summary><p>
+<details><summary>**Click for Integration**</summary><p>
 
-## Enabling the Youbora Plugin for the Kaltura Video Player  
+### Enabling the Youbora Plugin  
 
-To enable the Youbora Plugin on Android devices, implement the following steps:
-
-### Register the Youbora Plugin Inside your Application  
-
-Register the Youbora Plugin as follows:
+To enable the Youbora Plugin in Android devices, register the plugin inside your application as follows
 
 ```java
 PlayKitManager.registerPlugins(YouboraPlugin.factory);
@@ -124,11 +118,11 @@ http://test-nqs-lw2.nice264.com/start?          deviceId=&cdn=&param6=&duration=
 
 </p></details>
 
-## Kaltura Analytics
+## Kaltura Analytics Plugin  
 
-This article describes the steps required for using the Kaltura Analytics Plugin on Android devices as well as the events supported by the plugin. Adding the Kaltura Analytics Plugin will enable you get detailed analytics. 
+This section describes the steps required for using the Kaltura Analytics Plugin on Android devices as well as the events supported by the plugin. Adding the Kaltura Analytics Plugin will enable you get detailed analytics. 
 
-<details><summary>**Click For Integration**</summary><p>
+<details><summary>**Click for Integration**</summary><p>
 
 ### Enable the Kaltura Analytics Plugin for the Kaltura Player  
 
@@ -162,7 +156,7 @@ PlayerConfig.Plugins plugins = config.plugins;
 plugins.setPluginConfig("KalturaAnalytics", kalturaAnalyticsConfig); 
 ```
 
-## Kaltura Analytics Plugin Supported Events  
+### Kaltura Analytics Plugin Supported Events  
 
 The Kaltura Analytics Plugin supports the following events:
 
@@ -199,11 +193,11 @@ The Kaltura Analytics Plugin supports the following events:
 ```
 </p></details>
 
-## Kaltura Stats
+## Kaltura Stats Plugin  
 
-This article describes the steps required for configuring the Kaltura Video Player to use the Kaltura Stats Plugin on Android devices. This will enable you to obtain important statistical information about usage.
+This section describes the steps required for configuring the Kaltura Video Player to use the Kaltura Stats Plugin on Android devices. This will enable you to obtain important statistical information about usage.
 
-<details><summary>**Click For Integration**</summary><p>
+<details><summary>**Click for Integration**</summary><p>
 
 ## Register the Kaltura Stats Plugin for the Kaltura Video Player  
 
@@ -213,7 +207,7 @@ To enable the Kaltura Stats Plugin, register the plugin inside your application 
 PlayKitManager.registerPlugins(KalturaStatsPlugin.factory);
 ```
 
-## Configure the Plugin Configuration Object for the Kaltura Stats Plugin  
+### Configure the Plugin Configuration Object for the Kaltura Stats Plugin  
 
 To configure the Kaltura Stats Plugin, add the following configuration to your `pluginConfig` file as follows:
 
@@ -227,7 +221,7 @@ private void configureKalturaStatsPlugin(PlayerConfig pluginConfig) {
         kalturaStatsConfig.addProperty("timerInterval", timerInterval); //Timer interval to check progress of the media in milliseconds- recommended value - short media - 10000, long media - 30000
 ```
 
-## Set the Plugin Configuration to Initiate onLoad of the Kaltura Stats Plugin  
+### Set the Plugin Configuration to Initiate onLoad of the Kaltura Stats Plugin  
 
 To enable the Kaltura Stats Plugin to start loading, you'll need to set the plugin configuration you created as follows:
 
@@ -237,7 +231,7 @@ PlayerConfig.Plugins plugins = config.plugins;
 plugins.setPluginConfig("KalturaStats", kalturaStatsConfig); 
 ```
 
-## Kaltura Stats Plugin Supported Events  
+### Kaltura Stats Plugin Supported Events  
 
 The Kaltura Stats Plugin supports the following events:
 
@@ -299,11 +293,11 @@ The Kaltura Stats Plugin supports the following events:
 </p></details>
 
 
-## TVPAPI
+## TVPAPI Stats Plugin  
 
-This article describes the steps required for using the TVPAPI Stats Plugin on Android devices to get statistical information on the device, as well as the events supported by the plugin. 
+This section describes the steps required for using the TVPAPI Stats Plugin on Android devices to get statistical information on the device, as well as the events supported by the plugin. 
 
-<details><summary>**Click For Integration**</summary><p>
+<details><summary>**Click for Integration**</summary><p>
  
 ### Register the TVPAPI Stats Plugin  
 
@@ -336,7 +330,7 @@ PlayerConfig.Plugins plugins = config.plugins;
 plugins.setPluginConfig("TVPAPIAnalytics" , TVPAPIConfigEntry.toJson()); 
 ```
 
-## TVPAPI Stats Plugin Supported Events  
+### TVPAPI Stats Plugin Supported Events  
 
 The TVPAPI Stats Plugin supports the following events:
 
@@ -347,7 +341,7 @@ MediaHit, //outputs every interval time
 }
 ```
 
-## Concurrency Handler  
+### Concurrency Handler  
 
 To receive concurrency events from the TVPAPI Stats Plugin, you'll need to add a listener to the following event:
 
@@ -363,12 +357,13 @@ public void onEvent(PKEvent event) {
 ```
 </p></details>
 
-## Phoenix
+## Phoenix Stats Plugin  
 
 This article describes the steps required for configuring the Kaltura Video Player to use the Phoenix Stats Plugin on Android devices as well as the supported plugin events. This will enable you to obtain important statistical information about usage.
 
-<details><summary>**Click For Integration**</summary><p>
-## Register the Phoenix Stats Plugin inside your Application  
+<details><summary>**Click for Integration**</summary><p>
+
+### Register the Phoenix Stats Plugin inside your Application  
 
 Register the Phoenix Stats Plugin inside your application as follows:
 
@@ -376,7 +371,7 @@ Register the Phoenix Stats Plugin inside your application as follows:
 PlayKitManager.registerPlugins(PhoenixAnalyticsPlugin.factory);
 ```
 
-## Configure the Plugin Configuration Object for the Phoenix Stats Plugin  
+### Configure the Plugin Configuration Object for the Phoenix Stats Plugin  
 
 To configure the Phoenix Stats Plugin, add the following configuration to your `pluginConfig` file as follows:
 
@@ -390,7 +385,7 @@ private void configurePhoenixPlugin(PlayerConfig pluginConfig) {
         phoenixConfigEntry.addProperty("timerInterval", timer value for HIT events - in millisecondes);//Default value - 30000
 ```
 
-## Set the Plugin Configuration to the Phoenix Stats Plugin  
+### Set the Plugin Configuration to the Phoenix Stats Plugin  
 
 For the  Phoenix Stats Plugin to start loading, you'll need to set the plugin configuration you created as follows:
 
@@ -400,7 +395,7 @@ PlayerConfig.Plugins plugins = config.plugins;
 plugins.setPluginConfig("PhoenixAnalytics" , phoenixConfigEntry.toJson()); 
 ```
 
-## Phoenix Stats Plugin Supported Events  
+### Phoenix Stats Plugin Supported Events  
 
 The following events are supported by the Phoenix Stats Plugin:
 
@@ -424,7 +419,7 @@ The following events are supported by the Phoenix Stats Plugin:
  ERROR
 ```
 
-## Concurrency Handler  
+### Concurrency Handler  
 
 To receive concurrency events from the Phoenix Stats Plugin, you'll need to add a listener to the following event:
 
@@ -441,7 +436,7 @@ messageBus.listen(new PKEvent.Listener() {
 ```
 </p></details>
 
-</br>
+
 ## Have Questions or Need Help?
 
 Check out the [Kaltura Player SDK Forum](https://forum.kaltura.org/c/playkit) page for different ways of getting in touch.
