@@ -15,6 +15,25 @@ To enable the IMA Plugin on iOS devices for the Kaltura Video Player, add the fo
 pod 'PlayKit/IMAPlugin'
 ```
 
+## Control Ad Play
+
+To control ad play during runtime, implement the following Video Player delegate method:
+
+>swift
+
+```swift
+func playerShouldPlayAd(_ player: Player) -> Bool
+```
+
+>objc
+
+```objc
+- (BOOL)playerShouldPlayAd:(id<Player>)player {
+    return YES;
+}
+
+```  
+
 ## Register the IMA Plugin  
 
 Next, register the IMA Plugin inside your application as follows:
@@ -28,7 +47,7 @@ PlayKitManager.sharedInstance.registerPlugin(IMAPlugin.self)
 >objc
 
 ```objc
-
+[PlayKitManager.sharedInstance registerPlugin:IMAPlugin.self];
 
 ```
 
@@ -47,8 +66,9 @@ playerConfig.plugins[IMAPlugin.pluginName] = adsConfig
 >objc
 
 ```objc
-
-
+AdsConfig *adsConfig = [AdsConfig new];
+    adsConfig.adTagUrl = @"https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/3274935/preroll&impl=s&gdfp_req=1&env=vp&output=xml_vast2&unviewed_position_start=1&url=[referrer_url]&description_url=[description_url]&correlator=[timestamp]";
+    [config setPlugins:@{IMAPlugin.pluginName:adsConfig}];
 ```
 
 ## Configure Clickthroughs 
@@ -129,23 +149,6 @@ adsConfig.set(language: "en")
 
 
 ```
-
-## Control Ad Play
-
-To control ad play during runtime, implement the following Video Player delegate method:
-
->swift
-
-```swift
-func playerShouldPlayAd(_ player: Player) -> Bool
-```
-
->objc
-
-```objc
-
-
-```  
 
 ## Listen to Ad Events  
 
