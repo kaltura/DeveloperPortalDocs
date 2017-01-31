@@ -98,13 +98,8 @@ function show_hide_sub_div(div_id)
 				for (var $y = 0, $z = $j[$i].getElementsByTagName('a'); $y < $z.length; $y++) {
 				    if($z[$y].getAttribute('id')==='{{page.path| replace: '/','-'}}'){
 					$z[$y].setAttribute('class', 'sidenav-links-current');
-					parent_div_id=$($z[$y]).parent()["0"].parentNode.firstElementChild.parentElement.id;
 					$j[$i].style.visibility = 'visible';
 					$j[$i].style.display = 'block';
-					for (var $yy = 0, $zz = document.getElementById(parent_div_id).getElementsByClassName('sidenav-sub-links'); $yy < $zz.length; $yy++) {
-					    $zz[$yy].style.visibility = 'visible';
-					    $zz[$yy].style.display = 'block';
-					}
 					//$z[$y].focus();
 				    }
 		
@@ -123,10 +118,10 @@ function show_hide_sub_div(div_id)
 
 			{% if page.git and page.name != 'index.md' and page.name != '404.md' %}
 			
-			<table class="lastcommittable">
-
+			<div class="lastcommittable">
+				<span>Updated: {{ page.git.last_commit.commit_date }}</span>, By <span class="commit-author">{{ page.git.last_commit.author_name }}</span> <a class="editgithub" href="{{ page.git.github_url }}" target="_blank">Contribute to this page</a>
 				<!--tr><td>Created on: {{ page.git.first_commit.commit_date }}, By: {{ page.git.first_commit.author_name }}</td></tr-->
-				<tr><td>Last commit: {{ page.git.last_commit.commit_date }}, By <span class="commit-author">{{ page.git.last_commit.author_name }}</span></td></tr>
+				<!--tr><td>Last commit: {{ page.git.last_commit.commit_date }}, By <span class="commit-author">{{ page.git.last_commit.author_name }}</span></td></tr-->
 			
 				<!-- {% for contrib in page.git.authors %}
 				
@@ -136,9 +131,7 @@ function show_hide_sub_div(div_id)
 
 				<!-- {% endfor %} -->
 
-			</table>
-
-			<a class="editgithub" href="{{ page.git.github_url }}" target="_blank">Contribute to this page</a>
+			</div>
 
 			{% endif %}
 
