@@ -160,7 +160,6 @@ The IMA Plugin supports the following ad error events:
         PLAYLIST_NO_CONTENT_TRACKING(2018);
 ```
 
-</br>
 
 ## Have Questions or Need Help?
 
