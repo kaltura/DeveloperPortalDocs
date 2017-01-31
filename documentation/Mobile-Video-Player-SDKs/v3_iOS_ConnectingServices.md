@@ -22,20 +22,20 @@ Each provider has its own input parameters according to its backend.
 The input of the MockMediaProvider is JSON, for example:
 
 ```json
-	{
-        "entryId": {
-            "duration": 60000,
-            "id": "entryId",
-            "name": "demo1",
-            "sources": [
-                        {
-                        "id": "m001s001",
-                        "mimeType": "application/dash+xml",
-                        "url": 	"http://cfvod.kaltura.com/dasha/p/1851571/sp/185157100/serveFlavor/entryId/0_pl5lbfo0/v/2/flavorId/0_,zwq3l44r,otmaqpnf,ywkmqnkg,/forceproxy/true/name/a.mp4.urlset/manifest.mpd"
-                        }
-                        ]
-        }
-		}
+{
+	"entryId": {
+		"duration": 60000,
+		"id": "entryId",
+		"name": "demo1",
+		"sources": [
+			{
+				"id": "m001s001",
+				"mimeType": "application/dash+xml",
+				"url": 	"http://cfvod.kaltura.com/dasha/p/1851571/sp/185157100/serveFlavor/entryId/0_pl5lbfo0/v/2/flavorId/0_,zwq3l44r,otmaqpnf,ywkmqnkg,/forceproxy/true/name/a.mp4.urlset/manifest.mpd"
+			}
+		]
+	}
+}
 
 ```
 
@@ -112,14 +112,13 @@ To get the MediaEntry, you'll need to call the "load" method as follows:
 >swift
 
 ```swift
- provider.loadMedia { (r:Result<MediaEntry>) in
-  		if (r.error != nil){
-          print(r.error)
-       }else{
-          print(r)
+provider.loadMedia { (r:Result<MediaEntry>) in
+	if (r.error != nil){
+		print(r.error)
+	}else{
+		print(r)
         }
-  }
-
+}
 ```
 >objc
 
