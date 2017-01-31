@@ -1,11 +1,9 @@
 ---
 layout: page
-title: Quick Start (Swift)
+title: Quick Start Using Swift
 subcat: SDK 3.0 (Beta) - iOS
 weight: 300
 ---
-
-## Quick Start Using Swift  
 
 In this section, you'll learn how to build a simple video application using the Swift programming language.
 
