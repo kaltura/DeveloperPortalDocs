@@ -108,7 +108,7 @@ A simple implementation is provided in [DefaultLocalDataStore], but if the appli
 [AVAssetDownloadTask]: https://developer.apple.com/reference/avfoundation/avassetdownloadtask
 [URLSessionDownloadTask]: https://developer.apple.com/reference/foundation/urlsessiondownloadtask
 
-</br>
+
 
 ## Have Questions or Need Help?
 
