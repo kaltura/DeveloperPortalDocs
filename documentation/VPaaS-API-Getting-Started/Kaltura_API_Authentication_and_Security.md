@@ -46,11 +46,11 @@ Every KS is limited by one or more of the following components:
 
 * Expiry time – Can be set to a short period (1 second) up to 10 years. 
 
->Note: The player must perform all Kaltura API calls before the user hits play, so setting this too short for player sessions may break the playback experience. About 30 minutes is reasonable for just playback, or you could extend the player to re-negotiate for a session if it expires.
+**Note:** The player must perform all Kaltura API calls before the user hits play, so setting this too short for player sessions may break the playback experience. About 30 minutes is reasonable for just playback, or you could extend the player to re-negotiate for a session if it expires.
 
 * Number of API calls - E.g., no more than 5 API calls allowed on the KS.
 
->Note: The number of needed API calls may not be an expected number, especially if you use 3rd party plugins in the player. When using this limitation, make sure all API calling components in your application are known and counted into the number of API calls specified.
+**NOTE:** The number of needed API calls may not be an expected number, especially if you use 3rd party plugins in the player. When using this limitation, make sure all API calling components in your application are known and counted into the number of API calls specified.
 
 * Specific entry playback - When limited by an Access Control Profile, approved entries must be specifically stated by passing the privilege sview:entryId.
 * Specific IP address - Limit access to the API from a specific IP or range of IPs by passing privilege **iprestrict:IPADDRESS**.
@@ -60,7 +60,7 @@ Every KS is limited by one or more of the following components:
 The KS is a string composed of the following details:
 
 * Publisher ID – A unique identifier allocated to every Kaltura account. The partner ID can be retrieved from the KMC Integration Settings tab.
-* User ID – The identifier of the user within the publisher account performing the API call. This ID is the end-user's ID on the publisher's system.
+* User ID – The id of the user within the publisher account performing the API call. This ID is the end-user's ID on the publisher's system.
 * KS Type (admin / user) – An admin KS can access all the content of the publisher account and call management APIs, while a user KS can only access content items owned by the specific user.
 * Expiry time - Can be set to a short period (1 second) up to 10 years; set in seconds (integer).
 * Action limit – The maximum number of API calls allowed using this KS (integer).
@@ -85,22 +85,53 @@ Because the new KS format requires encryption of the fields, performing a base64
 To decode a KS v2, IT admins and developers who operate self hosted Kaltura servers can use the admin console developer tools page: https://[KalturaServerURL]/admin_console/index.php/plugin/KalturaInternalToolsPluginSystemHelperAction
 </p>
 
-###  Generating a KS  
+<p class="p1 mce-sub-heading">
+  The steps for generating a KSv2 are:
+</p>
 
-1. Gather all the different KS fields and their values
-  *_e – expiry (unix timestamp)
-  *_u – user
-  *_[t – type](http://www.kaltura.com/api_v3/testmeDoc/index.php?object=KalturaSessionType)
-  * Privileges (edit, download, sview, etc.)
-2. Compile all fields and URL encode the parameters as a query string, e.g., **_u=userId&_e=12345678&_t=2&Privileges=sview:1_0xada32as;edit:***
-3. Prepend 16 random binary bytes to the fields:
-4. Prepend the binary SHA1 hash of the string (20 string)
-5. Encrypt the string with the SHA1 hash of the account's API secret using AES128/CBC/Zero bytes padding.
-6. Prepend the KS version and partner ID separated by pipes (e.g. v2|1234|..).
-7. Encode the result using Base64.
-8. Replace + with – and / with _ to make the KS URL-safe.
+<ol class="ol1">
+  <li class="li1">
+    Gather all the different KS fields and their values: 
+  </li>
+  <ol class="ol1">
+    <li class="li1">
+      _e – expiry (unix timestamp)
+    </li>
+    <li class="li1">
+      _u – user
+    </li>
+    <li class="li1">
+      _t – type (<a href="http://www.kaltura.com/api_v3/testmeDoc/index.php?object=KalturaSessionType"><span>KalturaSessionType</span></a>)
+    </li>
+    <li class="li1">
+      Privileges (edit, download, sview, etc.)
+    </li>
+  </ol>
+  
+  <li class="li1">
+    Compile all fields and URL encode the parameters as a query string. e.g.  <strong><span style="font-family: 'courier new', courier;">_u=userId&_e=12345678&_t=2&Privileges=sview:1_0xada32as;edit:*</span></strong>
+  </li>
+  <li class="li1">
+    Prepend 16 random binary bytes to the fields
+  </li>
+  <li class="li1">
+    Prepend the binary SHA1 hash of the string (20 string)
+  </li>
+  <li class="li1">
+    Encrypt the string with the SHA1 hash of the account's API secret using AES128/CBC/Zero bytes padding
+  </li>
+  <li class="li1">
+    Prepend the KS version and partner ID separated by pipes (e.g. v2|1234|..)
+  </li>
+  <li class="li1">
+    Encode the result using Base64 
+  </li>
+  <li class="li1">
+    Replace + with – and / with _ to make the KS URL-safe
+  </li>
+</ol>
 
-To see an implementation of the KS generation algorithm, refer to the `GenerateSession` function below.
+To see an implementation of the KS generation algorithm, refer to the GenerateSession function below.
 
 ## Methods for Generating a Valid KS  
 
@@ -120,7 +151,7 @@ To see an implementation of the KS generation algorithm, refer to the `GenerateS
 *   USER KS can invoke services on his entries and his user-data. (e.g. list actions will result in a filtered list according to the user KS)
 *   Attempting to manipulate other users' data will fail.
 
-**Admin KS**
+<span class="mce-sub-heading">Admin KS</span>
 
 *   ADMIN KS is generated using the ADMIN SECRET.
 *   ADMIN Type is an absolute administrator and can call / perform all actions in the system. Services that use this type of session are:
@@ -131,15 +162,21 @@ To see an implementation of the KS generation algorithm, refer to the `GenerateS
 *   An admin KS should never reach the browser. By letting users access an admin KS they will be able to cause changes not limited to their own content.
 *   An admin KS ignores any privilege restrictions.
 
-**User Roles and Permissions (Authenticated User Session)**
+<span class="mce-sub-heading">User Roles and Permissions (Authenticated User Session)</span>
 
 *   Allow more advanced configuration of the access and permissions based on the defined Kaltura User permissions.
 
-#### How May the Session Type Affect API Behavior?  
-
-The session type may affect the way that some API calls behave.
-
-Examples:
+<div>
+  <p class="mce-heading-4">
+    How May Session Type Affect API Behavior?
+  </p>
+  
+  <p>
+    The session type may affect the way that some API calls behave.
+  </p>
+  
+  <p>
+    Examples:
   </p>
   
   <ul>
@@ -148,10 +185,10 @@ Examples:
     </li>
     <ul>
       <li>
-        With a <em>user</em> session – it lists videos owned by the user specified in the KS
+        With a <em>user</em> session – lists videos owned by the user specified in the KS
       </li>
       <li>
-        With an <em>admin</em> session – it lists all entries in the account that match your filter criteria. The list is not filtered for a specific user (unless you specifically filter by <em>userId</em>).
+        With an <em>admin</em> session – lists all entries in the account that match your filter criteria. The list is not filtered for a specific user (unless you specifically filter by <em>userId</em>).
       </li>
     </ul>
     
@@ -161,9 +198,11 @@ Examples:
   </ul>
 </div>
 
-### KS Validation on the Server  
+<p class="mce-heading-3">
+  KS Validation on the Server
+</p>
 
-The Kaltura API servers will validate the KS in the following ways:
+The Kaltura API servers will validate the KS for:
 
 *   Check the signature against the secret of the specific publisher account to verify the authenticity of the KS.
 *   Check whether the KS has elapsed or the action limit has been reached.
@@ -178,17 +217,23 @@ Once all the KS validations pass, the server will use the KS for:
 
 ### KS Privileges  
 
-Session privileges allows applications to limit the user to perform only specific actions. The privileges in the KS, in general, do not block actions but instead limit some actions to a smaller scope.
+Session privileges allows applications to limit the user to perform only specific actions.
 
-For example, passing the `sview:{entry ID}` enables the KS to be usable for playing a specific entry. Any attempt to use that specific KS to play another entry ID will fail, as long as the entry is protected with KS-restriction access control.
+The privileges in the KS, in general, do not block actions but instead limit some actions to a smaller scope.
 
-To verify that the KS passed to the player cannot be used for any update actions, you can either:
+For example, passing "sview:{entry ID}" enables the KS to be usable for playing a specific entry.
 
-* Add a `setrole:PLAYBACK\_BASE\_ROLE` privilege to it, so that it will not be allowed to perform any action other than a white-list of actions needed for the player (such as baseEntry.get, flavorAsset.list etc.).
+Any attempt to use that specific KS to play another entry ID will fail, as long as the entry is protected with KS-restriction access control.
 
- or
+To verify that the KS passed to the player cannot be used for any update actions you can either:
 
-* Add "widget:1" privilege to the KS to tell the server that this KS was generated for player use only, which will tell the server to make a distinction between a regular USER session and a "PLAYER" session.
+*   Add "setrole:PLAYBACK\_BASE\_ROLE" privilege to it, so it will not be allowed to perform any action other than a white-list of actions needed for the player (such as baseEntry.get, flavorAsset.list etc.).
+
+<p style="padding-left: 30px;">
+  or
+</p>
+
+*   Add "widget:1" privilege to the KS to tell the server that this KS was generated for player use only, which will tell the server to make a distinction between a regular USER session and a "PLAYER" session.
 
 You define privileges using a comma-separated list of key-value pairs.
 
@@ -203,8 +248,9 @@ Multiple key-value pairs are separated by commas with no spaces: *key:1\_value,
 
 Some privileges support a wildcard (*) value (for example, *edit:**). A wildcard permits the action for any object.
 
- 
-[List of available privileges](https://github.com/kaltura/server/blob/master/alpha/apps/kaltura/lib/request/kSessionBase.class.php#L26)
+<p class="mce-heading-4">
+  <a name="ks-permissions-list"></a>The available privileges<span style="color: #000000; font-size: 10px;"> (<a href="https://github.com/kaltura/server/blob/master/alpha/apps/kaltura/lib/request/kSessionBase.class.php#L26" target="_blank">source reference</a>)</span>
+</p>
 
 <table border="1" cellspacing="0" cellpadding="0">
   <thead>
@@ -507,7 +553,7 @@ Some privileges support a wildcard (*) value (for example, *edit:**). A wildcar
       
       <td style="text-align: left;" valign="top" width="227">
          Forces entitlement checks.<p>
->Note: there is a setting on account level (configured in the admin console) that determines the default entitlement enforcement
+          Note: there is a setting on account level (configured in the admin console) that determines the default entitlement enforcement
         </p>
       </td>
       
@@ -535,7 +581,7 @@ Some privileges support a wildcard (*) value (for example, *edit:**). A wildcar
         </p>
         
         <p>
->Note: there is a setting on account level (configured in the admin console) that determines the default entitlement enforcement</span>
+          <span>Note: there is a setting on account level (configured in the admin console) that determines the default entitlement enforcement</span>
         </p>
       </td>
       
@@ -700,31 +746,25 @@ Some privileges support a wildcard (*) value (for example, *edit:**). A wildcar
   </tbody>
 </table>
 
-
 #### PHP Examples Using the PHPS Kaltura Client Library  
 
-> Important! Never use a KalturaSessionType ADMIN in a KS generated for end users.
+> **Important!** Never use a KalturaSessionType ADMIN in a KS generated for end users.
+</p>
 
-**Allow access to a specific entry ID (limitation is set via the Access Control)**  
-Example: Allow access to entry id 0_iuasd7 (this [blog post](http://blog.kaltura.org/create-ks-protected-videos-with-free-preview) shows an example of a use case.
- 
-  ```
-  $ks = $client-&gt;session-&gt;start ( $userSecret, "myUser", KalturaSessionType::USER, $partnerID , null, "sview:0_iuasd7"
-  ```
+**Allow access to a specific entry Id (limitation is set via Access Control):**  
+Example: allow access to entry id 0_iuasd7 (<a href="http://blog.kaltura.org/create-ks-protected-videos-with-free-preview" target="_blank">Read this blog post for use-case</a>):
 
-**Limit the number of actions for a KS**  
-Example: Limit the number of actions to four:
+<pre class="brush: php;fontsize: 100; first-line: 1; ">$ks = $client-&gt;session-&gt;start ( $userSecret, "myUser", KalturaSessionType::USER, $partnerID , null, "sview:0_iuasd7");</pre>
 
-  ```
-  $ks = $client-&gt;session-&gt;start ( $userSecret, "myUser", KalturaSessionType::USER, $partnerID , null, "actionslimit:4
-  ```
+**Limit number of action For KS:**  
+Example: limit number of actions to 4:
 
-**Set the role on the KS**  
-Example: Set the role id 2345 on a KS:
+<pre class="brush: php;fontsize: 100; first-line: 1; ">$ks = $client-&gt;session-&gt;start ( $userSecret, "myUser", KalturaSessionType::USER, $partnerID , null, "actionslimit:4");</pre>
 
- ```
- $ks = $client-&gt;session-&gt;start ( $userSecret, "myUser", KalturaSessionType::USER, $partnerID , null, "setrole:2345")
- ```
+**Set Role on the KS:**  
+Example:  set role id 2345 on a ks:
+
+<pre class="brush: php;fontsize: 100; first-line: 1; ">$ks = $client-&gt;session-&gt;start ( $userSecret, "myUser", KalturaSessionType::USER, $partnerID , null, "setrole:2345");</pre>
 
 ## Secured Delivery  
 
@@ -736,7 +776,7 @@ Kaltura supports various methods of securing delivery of video streams, as follo
 *   SWF Verification
 *   IP-linked token authentication
 
-The table below shows the stream security techniques as these apply differently across devices:
+The table below shows the Stream security techniques as these apply differently across devices:
 
 <table class="kaltura-table" style="width: 100%;">
   <thead>
@@ -862,7 +902,7 @@ Encrypted video files are generated as additional “flavors” of original asse
 
 ![DRM Metadata](./images/DRM Metadata.jpg). 
 
->Note: Due to licensing requirements, DRM solutions are only available for commercial Kaltura editions (SaaS and On Prem) and are at additional cost. For more information about DRM and the available DRM solutions, please [contact use](http://corp.kaltura.com/company/contact-u) or contact your Kaltura Account Manager. 
+<span class="mce-note-graphic">Note: Due to licensing requirements, DRM solutions are only available for commercial Kaltura editions (SaaS and On Prem) and are at additional cost. For more information about DRM and the available DRM solutions, please <a href="http://corp.kaltura.com/company/contact-us" target="_blank">contact us</a> or contact your Kaltura Account Manager.</span>
 
 ### Important Considerations For Application Developers  
 
@@ -901,7 +941,8 @@ Use user.loginByLoginId providing user credentials and your account ID. 
 
 ### Use Widget KS for Anonynous Public Content Playback  
 
-The `session.startWidgetSession` provides an anonymous simple and light KS generation mechanism that does not require a secret. This type of session can be used to perform READ operations only and only on content that is defined as publicly available with no Access Control or special permissions.
+
+The session.startWidgetSession provides an anonymous simple and light KS generation mechanism that does not require a secret. This type of session can be used to perform READ operations only and only on content that is defined as publicly available with no Access Control or special permissions.
 
 The Widget KS is perfect for cases where public content needs to be accessed freely and without secured authentication. 
 

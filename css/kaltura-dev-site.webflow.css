@@ -709,13 +709,9 @@ h4 {
 }
 
 .sidenav-headings.grp-heading {
+  border-bottom: 1px dotted #ccc;
   color: #188093;
   font-size: 14px;
-}
-
-h4.sidenav-headings.grp-heading { 
-   padding-bottom: 4px; 
-   padding-top: 0px;
 }
 
 .sidenav-headings.grp-heading.heading-close:after {
@@ -819,7 +815,6 @@ h4.sidenav-headings.grp-heading {
 
 .sidenav-sub-cat-links .sidenav-headings.grp-heading {
   font-size: 12px;
-  padding-top: 0;
 }
 
 .sidenav-cat-links:hover {
@@ -831,9 +826,10 @@ h4.sidenav-headings.grp-heading {
 
 .sidenav-links {
   display: block;
-  padding-left: 15px;
+  padding-top: 12px;
   padding-bottom: 12px;
-  padding-top: 0;
+  padding-left: 15px;
+  border-bottom: 1px solid #ececec;
   background-color: transparent;
   -webkit-transition: color 200ms ease-in-out;
   transition: color 200ms ease-in-out;
@@ -848,9 +844,10 @@ h4.sidenav-headings.grp-heading {
   /*display: block;*/
   display: none;
   visibility: hidden;
-  padding-top: 0;
+  padding-top: 5px;
   padding-bottom: 5px;
-  padding-left: 14px;
+  padding-left: 25px;
+  border-bottom: 1px solid #ececec;
   background-color: transparent;
   -webkit-transition: color 200ms ease-in-out;
   transition: color 200ms ease-in-out;
@@ -867,9 +864,9 @@ h4.sidenav-headings.grp-heading {
 
 .sidenav-links-current {
   display: block;
-  padding-top: 0;
+  padding-top: 12px;
   padding-bottom: 12px;
-  padding-left: 12px;
+  padding-left: 15px;
   /*border-bottom: 1px solid #ececec;*/
   background-color: transparent;
   -webkit-transition: color 200ms ease-in-out;
@@ -883,9 +880,6 @@ h4.sidenav-headings.grp-heading {
 .sidenav-links-current:before {
     content: "> ";
 }
-.sidenav-sub-cat-links .sidenav-headings.grp-heading:before {
-    content: "+";
-}
 
 .sidenav-links:hover {
   background-color: transparent;
@@ -895,7 +889,7 @@ h4.sidenav-headings.grp-heading {
 }
 
 .template-page-nav-column {
-  margin-top: 60px;
+  margin-top: 35px;
   font-size: 12px;
 }
 
@@ -919,12 +913,14 @@ h4.sidenav-headings.grp-heading {
   margin-bottom: 8px;
 }
 
-.lastcommittable {
-   color: #929eaa;
+.lastcommittable tbody tr td {
+  margin-bottom: 8px;
+  border: none !important;
+  padding-left: 0px !important;
 }
 
 .commit-author {
-   
+  color: #188093;
 }
 
 .recipe-container {
@@ -1268,10 +1264,12 @@ td {
 .editgithub {
     color: #fff;
     text-decoration: none;
-    background-color: #579fcc;
-    padding: 1px 4px 1px 3px;
+    background-color: #aaa;
+    padding: 3px 8px 3px 8px;
     border-radius: 4px;
-    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-top: -20px;
+    letter-spacing: 0.3px;
 }
 
 .contributor-column-1 {
