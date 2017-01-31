@@ -145,7 +145,7 @@ Add custom buttons and controls to the player as follows:
 > [Download Full Sample]()
 
 
-</br>
-## Have Questions or Need Help?
+
+## Have Questions or Need Help?  
 
 Check out the [Kaltura Player SDK Forum](https://forum.kaltura.org/c/playkit) page for different ways of getting in touch.
