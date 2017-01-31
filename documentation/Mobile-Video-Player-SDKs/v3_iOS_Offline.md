@@ -16,7 +16,7 @@ Download itself is out of scope for this article; you can use either [AVAssetDow
 
 The main SDK component responsible for local playback is the `LocalAssetsManager`. This class is used before and right after the download to make sure the SDK retrieves the DRM licenses for offline playback. It's also used when starting local playback, to link the downloaded content with a `MediaEntry` object playable by the SDK.
 
-### Download and Register
+### Download and Register  
 
 #### Downloading with AVAssetDownloadTask  
 
