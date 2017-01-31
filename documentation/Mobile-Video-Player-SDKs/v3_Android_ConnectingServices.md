@@ -5,14 +5,15 @@ subcat: SDK 3.0 (Beta) - Android
 weight: 294
 ---
 
-This article describes how to connect to the Kaltura Backend.
+This article describes how to connect services using the Kaltura Backend.
 
 ## Media Provider
 
 This article describes the steps required for using the Kaltura Analytics Plugin on Android devices as well as the events supported by the plugin. Adding the Kaltura Analytics Plugin will enable you get detailed analytics. 
 
-<details><summary>**Click For Integration**</summary><p>
+<details><summary>**Click for Integration**</summary><p>
 The Media Entry Provider is a component that is capable of loading media data as a PKMediaEntry representation. The provider supports the cancellation of the last executed load action.
+</details>
 
 ## Implementation Options  
 
@@ -152,7 +153,7 @@ _singleEntry.json_
 }
 ```
 
-### Using MockMediaProvider:
+### Using MockMediaProvider
 
 ```json
 // using input file
@@ -257,7 +258,7 @@ completion callback.
 The executor can be a mock executor for test purposes or connect to a remote source and pass the http requests. The default provided implementation, [APIOkRequestsExecutor](https://github.com/kaltura/playkit-android/blob/develop/playkit/src/main/java/com/kaltura/playkit/connect/APIOkRequestsExecutor.java), wraps the OKHttp3 http library for passing http requests.
 
 
-## Creating PKMediaEntry for OTT tvpapi  
+## Creating PKMediaEntry for OTT TVPAPI  
 
 ### Create the Media Source   
 
