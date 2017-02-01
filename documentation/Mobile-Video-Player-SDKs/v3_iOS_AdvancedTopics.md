@@ -10,13 +10,14 @@ Kaltura's Mobile Video SDK supports various advanced features to enable multiple
 
 
 
-|                    |      Documentation                        | Sample | Apple Doc                                   |
+|                    |      Documentation                        | Sample | API docs                                    |
 |:-------------------|:-----------------------------------------:|:------:|:-------------------------------------------:|
 |**Player Config**   |[Setup PlayerConfig][playerConfigDocs]     | [x]()  | [PlayerConfig][playerConfigSwiftDocs]       |
 |**Events & States** |[Events Observation][eventsObservationDocs]| [x]()  | [PlayerEvents][eventsObservationSwiftDocs]  |
 |**Tracks Selection**|[Audio & Text Tracks][Audio&TextTracksDocs]| [x]()  | [tracksAvailable][Audio&TextTracksSwiftDocs]|
 |**Live**            |[Live Stream][Live Stream Docs]            | [x]()  | X                                           |
 |**Offline**         |[Offline Playback][Offline Playback Docs]  | [x]()  | X                                           |
+|**DRM**             |[DRM]                                      | [x]()  | X                                           |
 
 [playerConfigDocs]:https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/v3_iOS_PlayerConfig.html
 [playerConfigSwiftDocs]:https://kaltura.github.io/playkit/api/ios/Classes/PlayerConfig.html 
@@ -28,18 +29,7 @@ Kaltura's Mobile Video SDK supports various advanced features to enable multiple
 [Live Stream SwiftDocs]: http://
 [Offline Playback Docs]:https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/v3_iOS_Offline.html
 [Offline Playback SwiftDocs]: http://
-
-
-## [DRM](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/v3_iOS_DRM.html)  
-
-|                      |         Documentation                    | Sample | Apple Doc                            |
-|:---------------------|:----------------------------------------:|:------:|:------------------------------------:|
-| FairPlay             | [About FairPlay Streaming][FairPlayDocs] | [x]()  | [FairPlayDRMData][FairPlaySwiftDocs] |
-| Widevine Classic     | [About Widevine Classic][wideVineDocs]   | [x]()  | X                                    |
-
-[FairPlayDocs]: https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/v3_iOS_%20DRM.html#fairplay
-[FairPlaySwiftDocs]: https://kaltura.github.io/playkit/api/ios/Other%20Classes.html#/s:C7PlayKit15FairPlayDRMData
-[widevineDocs]: https://github.com/kaltura/DeveloperPortalDocs/blob/mobilePlayerSDKV3/documentation/Mobile-Video-Player-SDKs/v3_iOS_%20DRM.md#widevine-classic
+[DRM]: v3_iOS_DRM
 
 
 ## [App Lifecycle](hhttps://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/v3_iOS_AppLifecycle.html)  
