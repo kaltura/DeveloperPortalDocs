@@ -138,26 +138,12 @@ To see an implementation of the KS generation algorithm, refer to the `GenerateS
 The session type may affect the way that some API calls behave.
 
 Examples:
-  </p>
-  
-  <ul>
-    <li>
-      A <em>media.list</em> call:
-    </li>
-    <ul>
-      <li>
-        With a <em>user</em> session – it lists videos owned by the user specified in the KS
-      </li>
-      <li>
-        With an <em>admin</em> session – it lists all entries in the account that match your filter criteria. The list is not filtered for a specific user (unless you specifically filter by <em>userId</em>).
-      </li>
-    </ul>
-    
-    <li>
-      An <em>update</em> call: If the user specified in a user session is not the owner of content item, the user does not have permission to update the item. You can override this restriction by specifying special session privileges.
-    </li>
-  </ul>
-</div>
+
+* A `media.list` call:
+ * With a *user* session – lists videos owned by the user specified in the KS
+ * With an *admin* session – lists all entries in the account that match your filter criteria. The list is not filtered for a specific user (unless you specifically filter by *userId*).
+* An *update* call: If the user specified in a user session is not the owner of content item, the user does not have permission to update the item. You can override this restriction by specifying special session privileges.
+
 
 ### KS Validation on the Server  
 
