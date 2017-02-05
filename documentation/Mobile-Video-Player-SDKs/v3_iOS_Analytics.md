@@ -11,26 +11,13 @@ Kaltura’s Mobile Video Player SDKs for iOS make it easy for you to integrate a
 
 | Analytics Plugin Name | More Information |
 |-----------------------|------------------|
-| Youbora               | []()             |
 | Kaltura Analytics     | []()             |
 | Kaltura Stats         | []()             |
 | TVPAPI                | []()             |
 | Phoenix               | []()             |
+| Youbora               | []()             |
 
 
-## Youbora Plugin  
-
-This section describes the steps required for implementing the Youbora Plugin on iOS devices. Youbora is an intelligence analytics and optimization platform used in Kaltura's solution to track media analytics events. 
-
-You'll need to set up an account in http://www.youbora.com and then set the account details in the plugin configuration to use this plugin. After these steps, you'll be able to use the Youbora dashboard and watch statistical events and analytics sent by the Kaltura Video Payer.
-
-### Enabling the Youbora Plugin for the Kaltura Video Player  
-
-To enable the TVPAPI Stats Plugin on iOS devices for the Kaltura Video Player, add the following line to your Podfile: 
-
-```ruby
-pod 'PlayKit/KalturaStatsPlugin'
-```
 
 ## Kaltura Analytics Plugin  
 
@@ -206,6 +193,20 @@ This section describes the steps required for configuring the Kaltura Video Play
 <details><summary>**Click for Integration**</summary><p>
 TBD
 </p></details>
+
+## Youbora Plugin  
+
+This section describes the steps required for implementing the Youbora Plugin on iOS devices. Youbora is an intelligence analytics and optimization platform used in Kaltura's solution to track media analytics events. 
+
+You'll need to set up an account in http://www.youbora.com and then set the account details in the plugin configuration to use this plugin. After these steps, you'll be able to use the Youbora dashboard and watch statistical events and analytics sent by the Kaltura Video Payer.
+
+### Enabling the Youbora Plugin for the Kaltura Video Player  
+
+To enable the Youbora Stats Plugin on iOS devices for the Kaltura Video Player, add the following line to your Podfile: 
+
+```ruby
+pod 'PlayKit/YouboraPlugin'
+```
 
 
 ## Have Questions or Need Help?
