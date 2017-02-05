@@ -658,70 +658,6 @@ Some privileges support a wildcard (*) value (for example, *edit:**). A wildcar
     
     <tr>
       <td style="text-align: left;" valign="top" width="92">
-        <span><span><span>preview</span></span></span>
-      </td>
-      
-      <td style="text-align: left;" valign="top" width="227">
-        A limit (in bytes) on the size of the file that is returned from the flavor download action
-      </td>
-      
-      <td style="text-align: left;" valign="top" width="227">
-        Used internally by the server when flavorAsset.getUrl is called on an entry whose access control has preview restrictions.
-      </td>
-      
-      <td style="text-align: left;" valign="top" width="85">
-        size in bytes 
-      </td>
-    </tr>
-    
-    <tr>
-      <td style="text-align: left;" valign="top" width="92">
-        <span>sessionid</span>
-      </td>
-      
-      <td style="text-align: left;" valign="top" width="227">
-        <p>
-          Can be used to group a set of KS's together for invalidation purposes - when session.end is called.
-        </p>
-        
-        <p>
-          With a ks that has sessionid=X, all other KS's that have sessionId=X become invalid as well.
-        </p>
-      </td>
-      
-      <td style="text-align: left;" valign="top" width="227">
-        Applications that create multiple KS's for different uses can use this privilege to terminate all KS's upon user logoff, without the need to keep track of them 
-      </td>
-      
-      <td style="text-align: left;" valign="top" width="85">
-        An arbitrary string identifying the session 
-      </td>
-    </tr>
-    
-    <tr>
-      <td style="text-align: left;" valign="top" width="92">
-        <span><span><span>apptoken</span></span></span>
-      </td>
-      
-      <td style="text-align: left;" valign="top" width="227">
-        For a KS that was created with appToken.startSession, this privilege will contain the app token through which the KS was created.
-      </td>
-      
-      <td style="text-align: left;" valign="top" width="227">
-        <p>
-          Used mainly for investigation/tracking purposes.
-        </p> 
-      </td>
-      
-      <td valign="top" width="85">
-        <p style="text-align: left;">
-          The apptoken id
-        </p> 
-      </td>
-    </tr>
-  </tbody>
-</table>
-
 
 #### PHP Examples Using the PHPS Kaltura Client Library  
 
@@ -759,6 +695,15 @@ Kaltura supports various methods of securing delivery of video streams, as follo
 *   IP-linked token authentication
 
 The table below shows the stream security techniques as these apply differently across devices:
+
+
+|     Delivery              |      Device                          |      Player Security     |      Entitlement      |      Encryption     |
+|---------------------------|--------------------------------------|--------------------------|-----------------------|---------------------|
+|    Akamai HD              |    Flash - PC, Android               |    SWF verification      |    IP based token     |    HTTPS            |
+|    RTMP                   |    Flash - PC, Android               |    SWF verification      |    IP based token     |    RTMPE            |
+|    Progressive            |    All – iOS, Bberry, Flash, etc.    |                          |    IP based token     |    HTTPS            |
+|    IOS Streaming (HLS)    |    iPhone, iPad                      |                          |    IP based token     |    HTTPS            |
+
 
 <table class="kaltura-table" style="width: 100%;">
   <thead>
@@ -827,54 +772,6 @@ The table below shows the stream security techniques as these apply differently
       
       <td class="kaltura-table-row-item" style="width: 20%; text-align: left;">
         <span>RTMPE</span>
-      </td>
-    </tr>
-    
-    <tr class="kaltura-table-row">
-      <td class="kaltura-table-row-item" style="width: 20%; text-align: left;">
-        <span>Progressive</span>
-      </td>
-      
-      <td class="kaltura-table-row-item" style="width: 20%; text-align: left;">
-        <span>All – iOS, Bberry, Flash, etc.</span>
-      </td>
-      
-      <td class="kaltura-table-row-item" style="width: 20%;">
-         
-      </td>
-      
-      <td class="kaltura-table-row-item" style="width: 20%; text-align: left;">
-        <span>IP based token</span>
-      </td>
-      
-      <td class="kaltura-table-row-item" style="width: 20%; text-align: left;">
-        <span>HTTPS</span>
-      </td>
-    </tr>
-    
-    <tr class="kaltura-table-row">
-      <td class="kaltura-table-row-item" style="width: 20%; text-align: left;">
-        <span>IOS Streaming (HLS)</span>
-      </td>
-      
-      <td class="kaltura-table-row-item" style="width: 20%; text-align: left;">
-        <span>iPhone, iPad</span>
-      </td>
-      
-      <td class="kaltura-table-row-item" style="width: 20%;">
-         
-      </td>
-      
-      <td class="kaltura-table-row-item" style="width: 20%; text-align: left;">
-        <span>IP based token</span>
-      </td>
-      
-      <td class="kaltura-table-row-item" style="width: 20%; text-align: left;">
-        <span>HTTPS</span>
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 Kaltura’s integrated DRM solutions seamlessly plug in to its existing infrastructure and workflows, protecting customers from vendor lock-in.
 
