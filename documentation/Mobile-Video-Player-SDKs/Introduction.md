@@ -4,6 +4,8 @@ title: Introduction to Kaltura's Mobile Video SDK
 weight: 100
 ---
 
+> Note: The Kaltura Video Player SDK v3 is currently in BETA. If you're a Kaltura customer, please contact your Kaltura Customer Success Manager to help facilitate the use of this component. To learn more about the previous SDK (version 2.0), please refer to this [introduction](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/IntroductionV2.html) article.
+
 ## Kaltura’s Mobile Video SDKs for iOS and Android
 
 Kaltura’s Mobile Video SDK for iOS and Android provide the framework and tools to help you easily embed the Kaltura Video Player into native environments in your iOS or Android applications.
@@ -50,10 +52,6 @@ For more information, refer to the [iOS](https://vpaas.kaltura.com/documentation
 
 
 **Next:**
-* [Introduction to the Kaltura Video Player SDK for iOS](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/iOS_Introduction.html)
-* [Introduction to the Kaltura Video Player SDK for Android](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/Android-introduction.html)
+* [Introduction to the Kaltura Video Player SDK for iOS](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/v3_iOS_Introduction.html)
+* [Introduction to the Kaltura Video Player SDK for Android](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/v3_Android_Introduction.html)
 
-
-## Mobile Video Player SDK 2.0  
-
-The Kaltura Video Player SDK v3 is in BETA. If you are a Kaltura customer, please contact your Kaltura Customer Success Manager to help facilitate the use of this component. To learn more about the previous SDK (version 2.0), please refer to this [introduction](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/IntroductionV2.html) article.
