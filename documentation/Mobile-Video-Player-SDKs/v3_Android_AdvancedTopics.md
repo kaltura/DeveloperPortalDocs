@@ -30,7 +30,7 @@ Kaltura's Mobile Video SDK supports various advanced features to enable multiple
 [Offline Playback SwiftDocs]: http://
 
 
-## [DRM](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/v3_iOS_%20DRM.html)
+## [DRM](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/v3_iOS_DRM.html)
 
 |                      |         Documentation                    | Sample | Java Doc                            |
 |----------------------|:----------------------------------------:|:------:|:------------------------------------:|
