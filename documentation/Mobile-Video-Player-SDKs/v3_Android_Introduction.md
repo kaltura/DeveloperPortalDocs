@@ -17,7 +17,7 @@ If this is your first time hearing about Kaltura, we recommend you read up on Ka
 
 ## Intended Audience
 
-TBD
+This guide assumes that you have the necessary Objective C or Swift and iOS development skills to build and compile advanced iOS applications using XCode.
 
 ## Supported Devices  
 
