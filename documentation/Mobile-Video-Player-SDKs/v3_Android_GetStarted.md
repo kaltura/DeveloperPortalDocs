@@ -81,7 +81,7 @@ This will make the surfaceView translucent until the layout is actually created.
 In this section, you'll learn how to build a basic video playback application using the Kaltura Player SDK for Android.
 
 
-[Android Quick Start]()
+[Android Quick Start](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/v3_Android_QuickStart.html)
 
 
 ## Have Questions or Need Help?
