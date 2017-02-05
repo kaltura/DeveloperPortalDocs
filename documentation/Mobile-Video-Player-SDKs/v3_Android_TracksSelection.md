@@ -10,7 +10,7 @@ If you want to change the video/audio quality or captions language, you'll need 
 
 ## Listening to the Player Event  
 
-To learn how to listen to player events, simply follow the instructions in the [Player States and Events](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/PlayerStatesAndEvents-Android.html) article.
+To learn how to listen to player events, simply follow the instructions in the [Player States and Events](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/v3_Android_EventsAndStates.html) article.
 
 To receive tracks, subscribe to the event called <a name="populateViews">***TRACKS_AVAILABLE***.</a> as follows:
 
