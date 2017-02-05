@@ -1,9 +1,8 @@
 ---
-title: Offline Playback
 layout: page
 ---
 
-## Overview
+## Offline Playback
 
 Offline Playback refers to the ability to play downloaded content, although the device doesn't actually have to be offline (i.e., without network access) to use downloaded assets.
 
