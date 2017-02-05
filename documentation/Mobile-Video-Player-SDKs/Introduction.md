@@ -48,10 +48,12 @@ Kaltura’s analytics reports enable you to gain business insights, understand u
 
 For more information, refer to the [iOS](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/v3_iOS_Analytics.html) and [Android](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/v3_Android_Analytics.html) analytics articles.
 
-## Mobile Video Player SDK 2.0  
-
-The Kaltura Video Player SDK v3 is in BETA. If you are a Kaltura customer, please contact your Kaltura Customer Success Manager to help facilitate the use of this component. To learn more about the previous SDK (version 2.0), please refer to this [introduction](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/IntroductionV2.html) article.
 
 **Next:**
 * [Introduction to the Kaltura Video Player SDK for iOS](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/iOS_Introduction.html)
 * [Introduction to the Kaltura Video Player SDK for Android](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/Android-introduction.html)
+
+
+## Mobile Video Player SDK 2.0  
+
+The Kaltura Video Player SDK v3 is in BETA. If you are a Kaltura customer, please contact your Kaltura Customer Success Manager to help facilitate the use of this component. To learn more about the previous SDK (version 2.0), please refer to this [introduction](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/IntroductionV2.html) article.
