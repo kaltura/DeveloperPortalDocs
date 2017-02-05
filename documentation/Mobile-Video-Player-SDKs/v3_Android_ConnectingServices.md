@@ -11,13 +11,11 @@ This article describes how to connect services using the Kaltura Backend.
 
 This article describes the steps required for using the Kaltura Analytics Plugin on Android devices as well as the events supported by the plugin. Adding the Kaltura Analytics Plugin will enable you get detailed analytics. 
 
-<details><summary>**Click for Integration**</summary><p>
 The Media Entry Provider is a component that is capable of loading media data as a PKMediaEntry representation. The provider supports the cancellation of the last executed load action.
-</details>
 
 ## Implementation Options  
 
-Playkit offers three implementation of media providers: *MockMediaProvider*, *KalturaOvpMediaProvider*, and *PhoenixMediaProvider*.
+Playkit offers three implementations of media providers: *MockMediaProvider*, *KalturaOvpMediaProvider*, and *PhoenixMediaProvider*.
 
 *KalturaOvpMediaProvider* and *PhoenixMediaProvider* are remote providers and require an Internet connection. Each load activation freezes the current filled media data, and starts data loading and constructing operations. The response to the load operation is passed to the calling component over the provided callback object.
 
@@ -298,7 +296,6 @@ For each entry, do the following:
 
 **When the PKMediaEntry is ready, you can begin configuring the player.**
 
-</p></details>
 
 ## Session Provider
 
@@ -306,7 +303,6 @@ The SessionProvider interface defines the base requirements for implementing an 
 
 Components such as Media Providers and some of the OVP plugins that need to connect to the remote data source and request actions, get data, and update date, work with the SessionProvider.
 
-<details><summary>**Click For Integration**</summary><p>
 The SessoinProvider provides the following:
 
 1 . A Base url - This is the domain name of the designated remote host.
@@ -455,17 +451,12 @@ To use the OvpSessionProvider, implement the following:
           }
       });
 ```
-</p></details>
 
 ## UIConf Provider
 
 ==TBD==
 
-<details><summary>**Click For Integration**</summary><p>
-==TBD==
-</p></details>
 
-</br>
 ## Have Questions or Need Help?
 
 Check out the [Kaltura Player SDK Forum](https://forum.kaltura.org/c/playkit) page for different ways of getting in touch.
