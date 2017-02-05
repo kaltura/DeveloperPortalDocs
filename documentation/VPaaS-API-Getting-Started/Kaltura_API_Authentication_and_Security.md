@@ -74,16 +74,11 @@ The information above is then combined with either an Admin or User Secret (depe
 
 Kaltura Session Version 2 (introduced in October 2012) includes field encryption to protect user privacy.
 
-<p class="mce-note-graphic">
+Version 1 (the original format) is maintained for backward compatibility - the Kaltura server accepts both version 1 and 2. The Kaltura server generates version 2 by default for publisher accounts created after Oct 2012. **Implementations that generate a KS locally are encouraged to use KS version 2 as well.**
 
-Version 1 (the original format) is maintained for backward compatibility - the Kaltura server accepts both version 1 and 2. The Kaltura server generates version 2 by default for publisher accounts created after Oct 2012. <strong>Implementations that generate a KS locally are encouraged to use KS version 2 as well.</strong>
-</p>
-
-<p class="p1">
 Because the new KS format requires encryption of the fields, performing a base64 decode on the KS will not reveal its fields (as was the case with KS version 1). 
 
-To decode a KS v2, IT admins and developers who operate self hosted Kaltura servers can use the admin console developer tools page: https://[KalturaServerURL]/admin_console/index.php/plugin/KalturaInternalToolsPluginSystemHelperAction
-</p>
+To decode a KS v2, IT admins and developers who operate self hosted Kaltura servers can use the admin console developer tools page.
 
 ###  Generating a KS  
 
@@ -92,9 +87,9 @@ To decode a KS v2, IT admins and developers who operate self hosted Kaltura serv
   *_u – user
   *_[t – type](http://www.kaltura.com/api_v3/testmeDoc/index.php?object=KalturaSessionType)
   * Privileges (edit, download, sview, etc.)
-2. Compile all fields and URL encode the parameters as a query string, e.g., **_u=userId&_e=12345678&_t=2&Privileges=sview:1_0xada32as;edit:***
-3. Prepend 16 random binary bytes to the fields:
-4. Prepend the binary SHA1 hash of the string (20 string)
+2. Compile all fields and URL encode the parameters as a query string, e.g., ```_u=userId&_e=12345678&_t=2&Privileges=sview:1_0xada32as;edit:```
+3. Prepend 16 random binary bytes to the fields.
+4. Prepend the binary SHA1 hash of the string (20 string).
 5. Encrypt the string with the SHA1 hash of the account's API secret using AES128/CBC/Zero bytes padding.
 6. Prepend the KS version and partner ID separated by pipes (e.g. v2|1234|..).
 7. Encode the result using Base64.
@@ -106,10 +101,13 @@ To see an implementation of the KS generation algorithm, refer to the `GenerateS
 
 *   **Generate Session Locally** - Combine all the above details, and sign them using the shared secret key. This method is great for reducing callbacks to the server and enhanced security, since the session is generated locally and the secret key is kept private.
 *   **Call session.start** - Calling the Kaltura Session.start API to generate a session on the server.  
-    <span class="mce-note-graphic">Note: Using the session.start API is discouraged unless secure connection (SSL) is enabled on the account and there are specific reasons to generate the KS on the server side, using short expiry time that requires synchronizing to the server time.</span>
-*   **Call user.loginByLoginId - **This method is using Kaltura Users and their Password instead of partner id and secret key.   
-    <span class="mce-note-graphic">Note: This method is should be preferred in most cases. <br />1. It is easier to remember ua ser name and password.<br />2. Users can be limited to specific roles and permissions (e.g. enabling only upload).<br />3. Users can be deleted, passwords changed or demoted in permissions, while the secret keys can't be modified easily. </span>
-*   **Using an Application Token - **This method is described in full in [this article](https://vpaas.kaltura.com/documentation/VPaaS-API-Getting-Started/Generating-KS-with-App-Tokens.html). </span>
+
+>Note: Using the session.start API is discouraged unless a secure connection (SSL) is enabled on the account and there are specific reasons to generate the KS on the server side, using short expiry time that requires synchronizing to the server time.
+
+*   **Call user.loginByLoginId - **This method is using Kaltura Users and their Password instead of partner id and secret key. 
+
+>Note: This method is should be preferred in most cases because a) It is easier to remember a user name and password, b) users can be limited to specific roles and permissions (e.g. enabling only upload), and c) users can be deleted, passwords changed or demoted in permissions, while the secret keys can't be modified easily.
+*   **Using an Application Token - **This method is described in full in [this article](https://vpaas.kaltura.com/documentation/VPaaS-API-Getting-Started/Generating-KS-with-App-Tokens.html). 
 
 ###  KS Types  
 
