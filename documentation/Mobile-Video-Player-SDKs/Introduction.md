@@ -22,7 +22,10 @@ Each platform supports different types of streaming capabilites and DRMs. The Ka
 
 | Feature  | Supported |
 | ------------- | :---: |
-| Online and Offline Playback  | **V**  |
+|  <details>
+  <summary>Online and Offline Playback</summary>
+ The Kaltura Live functionality enables your customers to play Live Stream content on their devices. Refer to the specific [iOS](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/v3_iOS_Live.html) and [Android](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/v3_Android_Live.html) Live support pages for details
+</details> | **V**  |
 | Live  | **V**  |
 | DRM (Fairplay, Widevine modular, Widevine classic)  | **V**  |
 | Offline Mode (including DRM)  | **V**  |
