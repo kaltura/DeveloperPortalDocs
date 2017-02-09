@@ -12,7 +12,7 @@ This article describes the steps required for adding support for the IMA Plugin 
 Register the IMA Plugin as inside your application as follows:
 
 ```java
-PlayKitManager.registerPlugins(PhoenixAnalyticsPlugin.factory);
+PlayKitManager.registerPlugins(IMAPlugin.factory);
 ```
 
 ### Configure the Plugin Configuration Object  
