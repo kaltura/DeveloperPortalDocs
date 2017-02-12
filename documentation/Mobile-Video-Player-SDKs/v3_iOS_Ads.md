@@ -7,6 +7,8 @@ weight: 501
 
 This document describes the steps required for adding support for the IMA Plugin functionality on iOS devices. IMA (or Interactive Media Ads) was developed by Google to enable you to display ads in your application's video, audio, and game content. To learn more about Google's IMA, see [Google's IMA developer's site](https://developers.google.com/interactive-media-ads/).
 
+> Supported IMA SDK Version is: 3.4.1
+
 ## Enable IMA Plugins for the Kaltura Video Player  
 
 To enable the IMA Plugin on iOS devices for the Kaltura Video Player, add the following line to your Podfile: 
@@ -176,35 +178,6 @@ player.addObserver(self, events: events, block: { (event: Any) -> Void in
 
 ```objc
 
-
-```
-
-
-## Important Attachment for PodFile
-
-Remember to include the code below in your podfile to verify that IMA works properly (in Swift projects):
-
-```ruby
-if target.name == "PlayKit.default-IMAPlugin"
-	            config.build_settings['OTHER_SWIFT_FLAGS'] = '-DIMA_ENABLED'
-	            config.build_settings['OTHER_LDFLAGS'] = '$(inherited) -framework "GoogleInteractiveMediaAds"'
-	        end
-```
-
-This code should be included in your `post_install` code, see below:
-
-```ruby
-post_install do |installer| 
-    installer.pods_project.targets.each do |target| 
-        target.build_configurations.each do |config| 
-            config.build_settings['ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES'] = 'NO'
-            if target.name == "PlayKit.default-IMAPlugin"
-	            config.build_settings['OTHER_SWIFT_FLAGS'] = '-DIMA_ENABLED'
-	            config.build_settings['OTHER_LDFLAGS'] = '$(inherited) -framework "GoogleInteractiveMediaAds"'
-	        end
-        end 
-    end 
-end
 
 ```
 
