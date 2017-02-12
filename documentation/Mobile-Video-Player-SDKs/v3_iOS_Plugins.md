@@ -10,32 +10,32 @@ This article describes how to create plugins, which enable you to add certain fu
 ## When Should You Use Plugins?
 
 You'll want to create and use plugins to add core feature to Kaltura's Video Player SDK for iOS. 
+>**Note:** Plugins creation is supported for swift only (can only create plugin classes in Swift and not in Objective-C).
 
 ## Creating a Plugin Configuration Class  
 
 **What is a plugin configuration?** A plugin configuration is *any* object that can contain any data required by your plugin. This section will show you how to create a plugin configuration class and provide you with some examples.
 
 ### Plugin Configuration Sample  
+>swift
 
-    >swift
+```swift
+class SamplePluginConfig {
+    var data: Any?
+    var param: Any?
+}
 
-    ```swift
-    class SamplePluginConfig {
-        var data: Any?
-        var param: Any?
-    }
+```
+>objc
 
-    ```
-    >objc
-
-    ```objc
+```objc
 
 
-    ```
+```
 
 ### When to Pass the Plugin Configuration  
 
-The plugin configuration is passed via the `load` function, will be explained later.
+The plugin configuration is passed via the `load` function, will be explained later.
 
 ## Building Plugins  
 
@@ -64,13 +64,6 @@ class SamplePlugin: PKPlugin {
 
 ```
 
->objc
-
-```objc
-
-
-```
-
 >Note: Remember to use the `import PlayKit`function.
 
 ## Register the Plugin
@@ -83,27 +76,41 @@ You should register the plugin once on your `AppDelegate` or see below:
 import UIKit
 import PlayKit
 
-class ViewController: UIViewController {
+@UIApplicationMain
+class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        PlayKitManager.sharedInstance.registerPlugin(SamplePlugin.self)
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        PlayKitManager.shared.registerPlugin(IMAPlugin.self)
+        return true
     }
+    
+    ...
+    
 }
-
 ```
 >objc
 
 ```objc
+#import "AppDelegate.h"
+#import "PlayKit-Swift.h"
 
+@implementation AppDelegate
 
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [[PlayKitManager sharedInstance] registerPlugin:SamplePlugin.self];
+    return YES;
+}
+
+...
+
+@end
 ```
 
-## Add the Plugin Configuration to the PlayerConfig
+## Add the Plugin Configuration
 
-> [Read About PlayerConfig]()
+> [Read About PluginConfig]()
 
-To get your plugin's configuration, you'll need to add it to the `playerConfig` instance as follows.
+To get your plugin's configuration, you'll need to add it to the `pluginConfig` instance as follows.
 
 >swift
 
@@ -113,23 +120,20 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        PlayKitManager.sharedInstance.registerPlugin(SamplePlugin.self)
-        
-        // Create PlayerConfig
-        let config = PlayerConfig()
+        PlayKitManager.shared.registerPlugin(SamplePlugin.self)
         
         ...
         
-        var plugins = [String : AnyObject?]()
+        var plugins = [String : AnyObject]()
         
         let samplePluginConfig = SamplePluginConfig()
         samplePluginConfig.data = {your_content}
         
         plugins[SamplePlugin.pluginName] = samplePluginConfig
-        config.plugins = plugins
+        // Create PluginConfig
+        let config = PluginConfig(config: plugins)
         
-        self.playerController = PlayKitManager.sharedInstance.loadPlayer(config: config)
-
+        self.playerController = PlayKitManager.shared.loadPlayer(config: config)
     }
 }
 
