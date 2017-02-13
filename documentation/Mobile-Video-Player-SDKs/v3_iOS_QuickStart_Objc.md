@@ -87,15 +87,15 @@ You're now ready to code the video player application using the following option
 **Set a Player Instance via a Sample Configuration**
 
 ```objc
-	PlayerConfig *config = [PlayerConfig new];
-	NSDictionary *src = @{@"id":@"123123",@"url": @"https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"};
+    NSDictionary *src = @{@"id":@"123123",@"url": @"https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"};
+    NSArray *srcs = @[src];
+    NSDictionary *entry = @{@"id":@"Trailer",@"sources": srcs};
+    MediaConfig *mediaConfig = [MediaConfig configWithMediaEntry:[[MediaEntry alloc] initWithJson:entry]];
     
-	NSArray *srcs = @[src];
-	NSDictionary *entry = @{@"id":@"Trailer",@"sources": srcs};
+    self.kPlayer = [PlayKitManager.sharedInstance loadPlayerWithPluginConfig:nil];
     
-	[config setWithMediaEntry:[[MediaEntry alloc] initWithJson:entry]];
-    
-	self.kPlayer = [PlayKitManager.sharedInstance loadPlayerWithConfig:config];
+    // prepare the player with media entry to start the plugin and buffering the media.
+    [self.kPlayer prepare:mediaConfig];
 
 ```
 
