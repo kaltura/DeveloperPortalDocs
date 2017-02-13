@@ -136,7 +136,7 @@ Add custom buttons and controls to the player as follows:
 
 ```
 
-> [Download Full Sample]()
+> [Download Full Sample](https://github.com/kaltura/playkit-ios-samples/tree/master/PlayKitApp/ObjCSample)
 
 
 
