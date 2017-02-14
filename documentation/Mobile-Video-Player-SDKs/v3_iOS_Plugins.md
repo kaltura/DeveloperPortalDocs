@@ -10,7 +10,8 @@ This article describes how to create plugins, which enable you to add certain fu
 ## When Should You Use Plugins?
 
 You'll want to create and use plugins to add core feature to Kaltura's Video Player SDK for iOS. 
->**Note:** Plugins creation is supported for swift only (can only create plugin classes in Swift and not in Objective-C).
+
+>Note: Plugins creation is supported for swift only (can only create plugin classes in Swift and not in Objective-C).
 
 ## Creating a Plugin Configuration Class  
 
