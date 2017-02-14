@@ -91,7 +91,7 @@ To decode a KS v2, IT admins and developers who operate self hosted Kaltura serv
 3. Prepend 16 random binary bytes to the fields.
 4. Prepend the binary SHA1 hash of the string (20 string).
 5. Encrypt the string with the SHA1 hash of the account's API secret using AES128/CBC/Zero bytes padding.
-6. Prepend the KS version and partner ID separated by pipes (e.g. v2|1234|..).
+6. Prepend the KS version and partner ID separated by pipes (for example: v2|1234|).
 7. Encode the result using Base64.
 8. Replace + with – and / with _ to make the KS URL-safe.
 
