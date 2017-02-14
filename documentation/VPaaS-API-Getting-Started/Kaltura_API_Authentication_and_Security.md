@@ -95,7 +95,7 @@ To decode a KS v2, IT admins and developers who operate self hosted Kaltura serv
 7. Encode the result using Base64.
 8. Replace + with – and / with _ to make the KS URL-safe.
 
-To see an implementation of the KS generation algorithm, refer to the `GenerateSession` function below.
+To see an implementation of the KS generation algorithm, refer to the **GenerateSession** function below.
 
 ## Methods for Generating a Valid KS  
 
