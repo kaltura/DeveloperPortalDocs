@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Quick Start Using Obj-C  
-subcat: SDK 3.0 (Beta) - iOS
+subcat: SDK 3.0 - iOS
 weight: 301
 ---
 

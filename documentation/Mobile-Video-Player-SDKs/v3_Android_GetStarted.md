@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Getting Started
-subcat: SDK 3.0 (Beta) - Android
+subcat: SDK 3.0 - Android
 weight: 291
 ---
 

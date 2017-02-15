@@ -5,8 +5,6 @@ subcat: SDK 3.0 (Beta) - iOS
 weight: 291
 ---
 
-> Note: The Kaltura Video Player SDK v3 is in **BETA**.
-
 >*If you're a Kaltura customer, please contact your Kaltura Customer Success Manager to help facilitate the use of this component.*
 
 ## Overview  

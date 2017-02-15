@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Analytics
-subcat: SDK 3.0 (Beta) - Android
+subcat: SDK 3.0 - Android
 weight: 298
 ---
 
