@@ -117,6 +117,16 @@ You're now ready to code the video player application using the following option
 
 ```
 
+>Note: The way we recommand **setting player's view frame** is:
+
+```objc
+- (void)viewDidLayoutSubviews {
+    [super viewWillLayoutSubviews];
+    self.kPlayer.view.frame = self.playerContainer.bounds;
+    [self.playerContainer addSubview:self.kPlayer.view];
+}
+```
+
 ### Adding Custom Buttons and Controls to the Player  
 
 Add custom buttons and controls to the player as follows:
