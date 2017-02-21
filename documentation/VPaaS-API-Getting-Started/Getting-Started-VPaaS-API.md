@@ -21,6 +21,7 @@ Your PID is easily available at any time through the Kaltura Management Console 
 ## Creating a Kaltura Session  
 
 The Kaltura API is [stateless](https://en.wikipedia.org/wiki/Stateless_protocol), which means that every request made to the Kaltura API requires an authenticated session string to be passed along with your request. This is the Kaltura Session, which identifies the Kaltura account and user for which the executed API action is to be executed. The Kaltura Session can also specify various permissions and configurations, such as setting the role of the user dynamically, setting the time duration for the session, and more. 
+
 > Remember: For every API call you make, you will need to provide a Kaltura Session. 
 
 ### Methods for Generating a Kaltura Session  
