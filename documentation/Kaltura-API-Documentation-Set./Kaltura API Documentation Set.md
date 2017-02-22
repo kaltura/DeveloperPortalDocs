@@ -3,17 +3,11 @@ layout: page
 title: Kaltura API Documentation Set
 ---
 
-<p class="mce-heading-2">
-  Getting started with the Kaltura API
-</p>
-
-<p class="mce-heading-2">
-   
-</p>
+## Getting Started with the Kaltura API  
 
 
 *   Start by reading about [Kaltura's Architecture][1].
-*   For Interactive Code Recipes and Examples, visit <a href="https://developers.kaltura.org" target="_blank">https://developers.kaltura.org</a>.
+*   For Interactive Code Recipes and Examples, visit [https://developers.kaltura.org](https://developers.kaltura.org).
 *   As a reference for understaning technical terms related to Online Video, Media Asset Management and Kaltura - use the [Kaltura Knowledge Center Glossary][2].
 *   For more information about using api_v3 refer to the [Introduction to the Kaltura API Architecture][3].
 *   For further information on the API calls for Partner Services 3 (api_v3), please refer to the <a href="https://developer.kaltura.com/api-docs" target="_blank" title="Kaltura api_v3 Documentation">api_v3 API documentation</a> (API Docs).
