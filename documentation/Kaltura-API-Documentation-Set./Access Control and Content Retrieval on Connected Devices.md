@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Access Control and Content Retrieval on Connected Devices"
+title: Access Control and Content Retrieval on Connected Devices
 ---
 
 <p>
