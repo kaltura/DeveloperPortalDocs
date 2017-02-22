@@ -32,67 +32,6 @@ To provide search functionality that allows users to search through the reposito
 
 The search provider script should receive a set of POST parameters and return the results as XML according to format in the following table:
 
-<table cellpadding="6">
-  <tbody>
-    <tr>
-      <th>
-        POST Parameter
-      </th>
-      
-      <th>
-        Type
-      </th>
-      
-      <th style="text-align: left;">
-        Description
-      </th>
-    </tr>
-    
-    <tr>
-      <td style="text-align: left;">
-        uid
-      </td>
-      
-      <td style="text-align: left;" align="center">
-        String
-      </td>
-      
-      <td style="text-align: left;">
-        The user id of the user using the KCW
-      </td>
-    </tr>
-    
-    <tr>
-      <td style="text-align: left;">
-        <span style="text-decoration: line-through;"></span>search
-      </td>
-      
-      <td style="text-align: left;" align="center">
-        String
-      </td>
-      
-      <td>
-        The keywords the user is searching for (there is not any preprocessing of special characters)
-      </td>
-    </tr>
-    
-    <tr>
-      <td style="text-align: left;">
-        media_type
-      </td>
-      
-      <td style="text-align: left;" align="center">
-        Integer
-      </td>
-      
-      <td style="text-align: left;">
-        1 - video, 2 - image, 5 - audio
-      </td>
-    </tr>
-    
-    <tr>
-      <td style="text-align: left;">
-        page
 | POST Parameter | Type    | Description                                                                                   |
 |----------------|---------|-----------------------------------------------------------------------------------------------|
 | uid            | String  | The user id of the user using the KCW                                                         |
