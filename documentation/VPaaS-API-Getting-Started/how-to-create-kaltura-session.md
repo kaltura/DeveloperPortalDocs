@@ -24,12 +24,61 @@ The examples above using the [Kaltura PHP5 Client Library](https://developer.kal
 
  
 
->**Important Security Notes:**
+## Important Security Notes  
 
 1.  The ADMIN type KS provides super admin priveliges to the Kaltura account. If you're creating an application where the session will be exposed to the end-user, make sure that you are using a USER type KS and not ADMIN type. Exposing an ADMIN type KS in non-administrative context will expose your Kaltura account to risks of being used by malicious users with unrestricted access.</strong>
-2.  Sharing the account API secret keys with 3rd party vendors should be avoided, as secret keys can not be regenerated or blocked for access. Kaltura API based application developers and 3rd party application vendors should build their application to leverage the user.loginByLoginId API and ask the publisher for their email, password and account Id (aka partnerId). Users can be easily created, removed or blocked and their password can easily be changed. </strong>
+2.  Sharing the account API secret keys with 3rd party vendors should be avoided, as secret keys can not be regenerated or blocked for access. Kaltura API based application developers and 3rd party application vendors should build their application to leverage the user.loginByLoginId API and ask the publisher for their email, password and account Id (aka partnerId). Users can be easily created, removed or blocked and their password can easily be changed.
 
- 
+## Code Example for Configuring a Kaltura Session  
+
+// include the KalturaClient PHP client library to be able to use its funtions/objects
+require_once(dirname(__FILE__).'/lib/KalturaClient.php');
+
+
+/*********************** ACCOUNT CONFIGURATION START ***********************/
+
+// Kaltura account ID (partner ID)
+define('KALTURA_PARTNER_ID', PARTNER_ID);
+
+// Kaltura account admin secret
+define('KALTURA_ADMIN_SECRET', ADMIN_SECRET);
+
+// Kaltura service URL (can be changed to work with on-prem deployments)
+define('KALTURA_SERVICE_URL', 'http://www.kaltura.com/');
+
+/************************ ACCOUNT CONFIGURATION END ************************/
+
+
+/**
+* @return KalturaClient object with a valid KS according to the supplied parameters
+* @param KalturaSessionType $sessionType
+* @param string $userId
+* @param int $sessionExpiry
+* @param string $sessionPrivileges
+*/
+function getClient($sessionType, $userId = '', $sessionExpiry = 86400, $sessionPrivileges = '')
+{
+// Create KalturaClient object using the accound configuration
+$config = new KalturaConfiguration(KALTURA_PARTNER_ID);
+$config-&gt;serviceUrl = KALTURA_SERVICE_URL;
+$client = new KalturaClient($config);
+
+// Generate KS string locally, without calling the API
+$ks = $client-&gt;generateSession(
+  KALTURA_ADMIN_SECRET,
+  $userId,
+  $sessionType,
+  $config-&gt;partnerId,
+  $sessionExpiry,
+  $sessionPrivileges
+);
+
+// Set the generated KS to be used for future API calls from this KalturaClient object
+$client-&gt;setKs($ks);
+
+// return the KalturaClient object
+return $client;?&gt;</pre>
+
 
 To learn more about the KS and its usage read the article [Kaltura's API Authentication and Security](https://vpaas.kaltura.com/documentation/VPaaS-API-Getting-Started/Kaltura_API_Authentication_and_Security.html).
 
