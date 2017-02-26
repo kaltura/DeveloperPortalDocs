@@ -13,16 +13,14 @@ The following DRM schemes are supported in iOS devices:
   * Our interim solution for iOS 8 and 9 is Widevine Classic -- see below.
 
 ### Widevine Classic  
-
 * Supported in iOS 8 and up
 * Online and offline playback
 
 <details><summary>Get Started with Widevine Classic</summary><p>
 
-## Get Started
+#### Get Started
 
-> Note: **Before you begin please make sure you have an access to [Widevine Private Repo](https://github.com/kaltura/playkit-ios-widevine)** 
-
+> Note: **Before you begin please make sure you have an access to our private [Widevine repo](https://github.com/kaltura/playkit-ios-widevine)** 
 To get integrated with Widevine Classic please follow below steps:
 
 1 . Open you project's **Podfile** and add below reference on top:
@@ -31,24 +29,23 @@ To get integrated with Widevine Classic please follow below steps:
 source 'https://github.com/kaltura/playkit-ios-widevine.git'
 source 'https://github.com/CocoaPods/Specs.git'
 ```
+
 2 . Add Widevine Classic Plugin on your Podfile:
 
 > Note: Please make sure to add WidevineClassic plugin as written below
-
 ```ruby
  pod 'PlayKit/WidevineClassic', :git => 'https://github.com/kaltura/playkit-ios.git', :tag => 'widevine/{latest_wvm_release}'
 ```
 
 3 . On your terminal run `pod update`
 
-## Offline Widveine Playback
+#### Offline Widveine Playback
 
 To get Widevine Offline playback refer to [Offline Playback](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/v3_iOS_Offline.html)
 
-## Demo
+#### Demo
 
-For full sample (Wdievine Playback + Offline) refer to [Local Assets Sample](https://github.com/kaltura/playkit-ios-samples/tree/master/PlayKitApp/LocalAssetsSample)
-
+For full sample (Widevine Playback + Offline) refer to [Local Assets Sample](https://github.com/kaltura/playkit-ios-samples/tree/master/PlayKitApp/LocalAssetsSample)
 </p></details>
 
 ## Known Limitations  
