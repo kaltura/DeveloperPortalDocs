@@ -208,6 +208,21 @@ To enable the Youbora Stats Plugin on iOS devices for the Kaltura Video Player, 
 pod 'PlayKit/YouboraPlugin'
 ```
 
+### Register Plugin
+
+```swift
+PlayKitManager.sharedInstance.registerPlugin(YouboraPlugin.self)
+```
+
+### Create a Config and set below custom params
+
+```
+config["accountCode"] = *{account_code}*
+config["username"] = *{user_name}*
+```
+
+>Note: Only then load player with Plugin Config.
+
 
 ## Have Questions or Need Help?
 
