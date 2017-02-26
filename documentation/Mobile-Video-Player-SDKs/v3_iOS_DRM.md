@@ -17,7 +17,8 @@ The following DRM schemes are supported in iOS devices:
 * Supported in iOS 8 and up
 * Online and offline playback
 
-<details><summary>**Get Started with Widevine Classic**</summary><p>
+<details><summary>Get Started with Widevine Classic</summary><p>
+
 ## Get Started
 
 > Note: **Before you begin please make sure you have an access to [Widevine Private Repo](https://github.com/kaltura/playkit-ios-widevine)** 
