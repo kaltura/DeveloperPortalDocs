@@ -20,7 +20,8 @@ The following DRM schemes are supported in iOS devices:
 
 #### Get Started
 
-> Note: **Before you begin please make sure you have an access to our private [Widevine repo](https://github.com/kaltura/playkit-ios-widevine)** 
+> Note: **Before you begin please make sure you have an access to our private [Widevine repo](https://github.com/kaltura/playkit-ios-widevine)**. If you don't, please contact Kaltura.
+
 To get integrated with Widevine Classic please follow below steps:
 
 1 . Open you project's **Podfile** and add below reference on top:
@@ -41,7 +42,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 
 #### Offline Widveine Playback
 
-To get Widevine Offline playback refer to [Offline Playback](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/v3_iOS_Offline.html)
+To get Widevine Offline playback refer to [Offline Playback](./v3_iOS_Offline.html)
 
 #### Demo
 
@@ -52,7 +53,7 @@ For full sample (Widevine Playback + Offline) refer to [Local Assets Sample](htt
 * DRM does not work on the iOS Simulator
 * Widevine Classic:
   * Requires ATS to be disabled for 127.0.0.1
-  * Requires Bitcode to be disabled (the core library does not support Bitcode)
+  * Requires Bitcode to be disabled (the core Widevine library does not support Bitcode)
 
 
 ## Have Questions or Need Help?
