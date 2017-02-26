@@ -56,7 +56,6 @@ For full sample (Wdievine Playback + Offline) refer to [Local Assets Sample](htt
   * Requires ATS to be disabled for 127.0.0.1
   * Requires Bitcode to be disabled (the core library does not support Bitcode)
 
-</br>
 
 ## Have Questions or Need Help?
 
