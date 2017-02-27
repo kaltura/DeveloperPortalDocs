@@ -10,14 +10,13 @@ This article details the Kaltura API documentation that is available to developo
 
 *   Start by reading about [Kaltura's Architecture](kaltura-video-platform-architecture-overview).
 *   For Interactive Code Recipes and Examples, visit [https://developers.kaltura.org](https://developers.kaltura.org).
-*   As a reference for understaning technical terms related to Online Video, Media Asset Management and Kaltura - use the [Kaltura Knowledge Center Glossary][2].
+*   As a reference for understaning technical terms related to Online Video, Media Asset Management and Kaltura - use the [Kaltura Knowledge Center Glossary](http://knowledge.kaltura.com/glossary).
 *   For more information about using api_v3 refer to the [Introduction to the Kaltura API Architecture][3].
 *   For further information on the API calls for Partner Services 3 (api_v3), please refer to the [API documentation](https://developer.kaltura.com/api-docs).
 *   Use the API Client Libraries to easily perform the API callbacks in your programming language of choice - Refer to the [Kaltura API Client Libraries Guide](introduction-kaltura-client-libraries) for more.
 *   If you use a CMS like Drupal and WordPress or an LMS such as Moodle, Sakai or Blackboard, make sure to check the [Kaltura Exchange](http://exchange.kaltura.com/) for a Kaltura integration to your CMS of choice.
 
  [1]: /kaltura-video-platform-architecture-overview
- [2]: http://knowledge.kaltura.com/glossary
  [3]: http://knowledge.kaltura.com/introduction-kaltura-api-architecture
  [4]: /introduction-kaltura-client-libraries
  [5]: /using-kalturas-api-test-console-introduction
