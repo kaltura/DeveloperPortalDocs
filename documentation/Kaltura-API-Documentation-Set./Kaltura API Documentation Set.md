@@ -38,9 +38,9 @@ The series of guides below are what we recommend as proper training steps in usi
 | [Introduction to Kaltura Client Libraries](https://vpaas.kaltura.com/documentation/VPaaS-API-Getting-Started/introduction-kaltura-client-libraries.html)                          | Kaltura client libraries are SDKs in numerous programming languages that provide easy access to the Kaltura API and facilitate developing Kaltura applications.                                                                                                                                                                                                                                         | Learn about Kaltura client libraries, where to download the clients, and how to use client libraries in your applications.                                                                                                                                                                                                  |
                                                                                                                |
 | [The Kaltura Thumbnail API](https://vpaas.kaltura.com/documentation/VPaaS-API-Getting-Started/kaltura-thumbnail-api.html)                                         | The Thumbnail API provides an easy interface to dynamically manipulate images or video snapshots to be used as thumbnails. Using the thumbnail API it is possible to resize, cropped versions of the original Kaltura video thumbnail, a specific frame from in the video and manipulate the thumbnail image and various ways.                                                                          | Learn how to use the Kaltura Thumbnail API to modify and create thumbnails on the fly.                                                                                                                                                                                                                                      |
-| How To Create a Video Thumbnail Rotator in JavaScript             | Case Study of using Kaltura's Thumbnail API to create a rotating video thumbnail.                                                                                                                                                                                                                                                                                                                       | The steps to create a Video Thumbnail Rotator in JavaScript.                                                                                                                                                                                                                                                                |
-| How To Handle Kaltura Server Notifications in PHP                 | Often applications require the ability to respond to asynchronous events that occurred on the Kaltura server. For example, when a Media Entry was uploaded, finished transcoding or any other status update.                                                                                                                                                                                            | This guide will take you through the steps of listening to these events, called Server Notifications, how to parse the data carried in these notifications and respond properly in your applications.                                                                                                                       |
-| Introduction to Kaltura's Cross-Platform Media Players            | Kaltura's flexible HTML5 and Adobe OSMF (Flash)-based media players provide media online publishing solutions that are easy to use and embed.                                                                                                                                                                                                                                                           | Learn about the Kaltura Media Players and how to play Kaltura Media in your applications.                                                                                                                                                                                                                                   |
+| [How To Create a Video Thumbnail Rotator in JavaScript](https://vpaas.kaltura.com/documentation/VPaaS-API-Getting-Started/how-create-video-thumbnail-rotator-javascript.html)             | Case Study of using Kaltura's Thumbnail API to create a rotating video thumbnail.                                                                                                                                                                                                                                                                                                                       | The steps to create a Video Thumbnail Rotator in JavaScript.                                                                                                                                                                                                                                                                |
+| [How To Handle Kaltura Server Notifications in PHP](https://vpaas.kaltura.com/documentation/VPaaS-API-Getting-Started/how-handle-kaltura-server-notifications-in-php.html)                 | Often applications require the ability to respond to asynchronous events that occurred on the Kaltura server. For example, when a Media Entry was uploaded, finished transcoding or any other status update.                                                                                                                                                                                            | This guide will take you through the steps of listening to these events, called Server Notifications, how to parse the data carried in these notifications and respond properly in your applications.                                                                                                                       |
+| [Introduction to Kaltura's Cross-Platform Media Players]()            | Kaltura's flexible HTML5 and Adobe OSMF (Flash)-based media players provide media online publishing solutions that are easy to use and embed.                                                                                                                                                                                                                                                           | Learn about the Kaltura Media Players and how to play Kaltura Media in your applications.                                                                                                                                                                                                                                   |
  JavaScript API for Kaltura Media Players                          | Kaltura's powerful media player JavaScript API enables you to design flexible, multifaceted interaction with the player.                                                                                                                                                                                                                                                                                | Learn how to integrate the Kaltura media player in your web applications and call the player's JavaScript API.                                                                                                                                                                                                              |
 | Creating Kaltura Server Plugins                                   | A Kaltura server plugin extends Kaltura server functionality, such as services and batches. You create a server plugin to rapidly and cost-effectively expand upon the core Kaltura platform for your own specific use case, create an application to publish to the community, and potentially generate revenue from your contribution to the Kaltura system through the Kaltura Application Exchange. | Learn how to expand the Kaltura system using server plugins.                                                                                                                                                         
 <table class="kaltura-table" style="width: 100%;">
@@ -60,41 +60,7 @@ The series of guides below are what we recommend as proper training steps in usi
     </tr>
   </thead>
   
-    
-  
-    
-    <tr class="kaltura-table-row">
-      <td class="kaltura-table-row-item" style="width: 33%; text-align: left;">
-        <a href="/how-create-video-thumbnail-rotator-javascript">How To Create a Video Thumbnail Rotator in JavaScript</a>
-      </td>
       
-      <td class="kaltura-table-row-item" style="width: 33%; text-align: left;">
-        <span>Case Study of using Kaltura's Thumbnail API to create a rotating video thumbnail.</span>
-      </td>
-      
-      <td class="kaltura-table-row-item" style="width: 33%; text-align: left;">
-        <p>
-          <span><span>The steps to create a Video Thumbnail Rotator in JavaScript.</span></span>
-        </p>
-      </td>
-    </tr>
-    
-    <tr class="kaltura-table-row">
-      <td class="kaltura-table-row-item" style="width: 33%; text-align: left;">
-        <a href="/how-handle-kaltura-server-notifications-php">How To Handle Kaltura Server Notifications in PHP</a>
-      </td>
-      
-      <td class="kaltura-table-row-item" style="width: 33%; text-align: left;">
-        <span>Often applications require the ability to respond to asynchronous events that occurred on the Kaltura server. For example, when a Media Entry was uploaded, finished transcoding or any other status update. </span>
-      </td>
-      
-      <td class="kaltura-table-row-item" style="width: 33%; text-align: left;">
-        <p>
-          <span>This guide will take you through the steps of listening to these events, called Server Notifications, how to parse the data carried in these notifications and respond properly in your applications.</span>
-        </p>
-      </td>
-    </tr>
-    
     <tr class="kaltura-table-row">
       <td class="kaltura-table-row-item" style="width: 33%; text-align: left;">
         <a href="/introduction-kalturas-cross-platform-media-players">Introduction to Kaltura's Cross-Platform Media Players</a>
