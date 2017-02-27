@@ -8,14 +8,13 @@ This article details the Kaltura API documentation that is available to developo
 ## Getting Started with the Kaltura API  
 
 
-*   Start by reading about [Kaltura's Architecture][1].
+*   Start by reading about [Kaltura's Architecture](kaltura-video-platform-architecture-overview).
 *   For Interactive Code Recipes and Examples, visit [https://developers.kaltura.org](https://developers.kaltura.org).
 *   As a reference for understaning technical terms related to Online Video, Media Asset Management and Kaltura - use the [Kaltura Knowledge Center Glossary][2].
 *   For more information about using api_v3 refer to the [Introduction to the Kaltura API Architecture][3].
-*   For further information on the API calls for Partner Services 3 (api_v3), please refer to the <a href="https://developer.kaltura.com/api-docs" target="_blank" title="Kaltura api_v3 Documentation">api_v3 API documentation</a> (API Docs).
-*   Use the API Client Libraries to easily perform the API callbacks in your programming language of choice - Refer to the [Kaltura API Client Libraries Guide][4] for more.
-*   Learn about the differences between api\_v2 and api\_v3, and learn how to use the TestMe Console - read the [Kaltura API and TestMe Console Introduction][5].
-*   If you use a CMS like Drupal and WordPress or an LMS such as Moodle, Sakai or Blackboard, make sure to check the <a href="http://exchange.kaltura.com/" target="_blank">Kaltura Exchange</a> for a Kaltura integration to your CMS of choice.
+*   For further information on the API calls for Partner Services 3 (api_v3), please refer to the [API documentation](https://developer.kaltura.com/api-docs).
+*   Use the API Client Libraries to easily perform the API callbacks in your programming language of choice - Refer to the [Kaltura API Client Libraries Guide](introduction-kaltura-client-libraries) for more.
+*   If you use a CMS like Drupal and WordPress or an LMS such as Moodle, Sakai or Blackboard, make sure to check the [Kaltura Exchange](http://exchange.kaltura.com/) for a Kaltura integration to your CMS of choice.
 
  [1]: /kaltura-video-platform-architecture-overview
  [2]: http://knowledge.kaltura.com/glossary
@@ -24,7 +23,7 @@ This article details the Kaltura API documentation that is available to developo
  [5]: /using-kalturas-api-test-console-introduction
 
  
- ## Kaltura API Guides
+ ## Kaltura API Guides  
 
 The series of guides below are what we recommend as proper training steps in using Kaltura's API to integrate Kaltura functionality to websites and applications and create custom Kaltura applications.
 
@@ -32,10 +31,10 @@ Read the guides in-order, or find the specific answers you are looking for and l
 
 |  Guide                                                            | Summary                                                                                                                                                                                                                                                                                                                                                                                                 | What will you learn                                                                                                                                                                                                                                                                                                         |
 |-------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Introduction to the Kaltura API Architecture](introduction-kaltura-api-architecture.html)                      | Kaltura provides server APIs for every core feature. You can use the Kaltura API to incorporate Kaltura features in web applications and web sites.                                                                                                                                                                                                                                                     | Learn the basics of the Kaltura API and API architecture.                                                                                                                                                                                                                                                                   |
-| [Kaltura API Usage Guidelines](kaltura-api-usage-guidelines.html)                                      | The Kaltura API is flexible, easy to access, and simple to use.                                                                                                                                                                                                                                                                                                                                         | Learn how to access and use the Kaltura API.                                                                                                                                                                                                                                                                                |
-| Kaltura API and TestMe Console Introduction                       | A basic introduction to the Kaltura "TestMe" Console - A tool that provides interaction with Kaltura API calls using a simple user interface.                                                                                                                                                                                                                                                           | What is the Kaltura TestMe Console and how to use it to test API calls.                                                                                                                                                                                                                                                     |
-| Kaltura's API Authentication and Security                         | Protecting personal user data, video streaming and limiting access to features are at the heart of the Kaltura Media Asset Management Platform. This guide will take you through the basic concepts and practices of authentication and security in the Kaltura API v3.                                                                                                                                 | Learn about Kaltura's API authentication and security options and how to use the Kaltura Session.                                                                                                                                                                                                                           |
+| [Introduction to the Kaltura API Architecture](https://vpaas.kaltura.com/documentation/VPaaS-API-Getting-Started/introduction-kaltura-api-architecture.html)                      | Kaltura provides server APIs for every core feature. You can use the Kaltura API to incorporate Kaltura features in web applications and web sites.                                                                                                                                                                                                                                                     | Learn the basics of the Kaltura API and API architecture.                                                                                                                                                                                                                                                                   |
+| [Kaltura API Usage Guidelines](https://vpaas.kaltura.com/documentation/VPaaS-API-Getting-Started/kaltura-api-usage-guidelines.html)                                      | The Kaltura API is flexible, easy to access, and simple to use.                                                                                                                                                                                                                                                                                                                                         | Learn how to access and use the Kaltura API.                                                                                                                                                                                                                                                                                |
+| [Kaltura API Developer's Console Introduction](https://vpaas.kaltura.com/documentation/VPaaS-API-Getting-Started/using-kalturas-api-developer-console-introduction.html)                       | A basic introduction to the Kaltura API Developer's Console - A tool that provides interaction with Kaltura API calls using a simple user interface.                                                                                                                                                                                                                                                           | What is the Kaltura API Developer's Console and how to use it to test API calls.                                                                                                                                                                                                                                                     |
+| [Kaltura's API Authentication and Security](https://vpaas.kaltura.com/documentation/VPaaS-API-Getting-Started/Kaltura_API_Authentication_and_Security.html)                         | Protecting personal user data, video streaming and limiting access to features are at the heart of the Kaltura Media Asset Management Platform. This guide will take you through the basic concepts and practices of authentication and security in the Kaltura API v3.                                                                                                                                 | Learn about Kaltura's API authentication and security options and how to use the Kaltura Session.                                                                                                                                                                                                                           |
 | The Kaltura Media Access Control Model                            | An Access Control Profile defines authorized and restricted domains where your content can or cannot be displayed, countries from which it can or cannot be viewed, white and black lists of IP addresses and authorized and unauthorized domains and devices in which your media can be embedded.                                                                                                      | Learn the details of Kaltura’s Access Control Model and how to use it through sample code.                                                                                                                                                                                                                                  |
 | Introduction to Kaltura Client Libraries                          | Kaltura client libraries are SDKs in numerous programming languages that provide easy access to the Kaltura API and facilitate developing Kaltura applications.                                                                                                                                                                                                                                         | Learn about Kaltura client libraries, where to download the clients, and how to use client libraries in your applications.                                                                                                                                                                                                  |
 | Kaltura Android SDK — Reference Application: Implementation Guide | The Kaltura Android Software Development Kit (SDK)  Reference Application demonstrates how to use the Kaltura Android SDK with native Android applications.                                                                                                                                                                                                                                             | Learn how the Kaltura Android SDK Reference Application is implemented.                                                                                                                                                                                                                                                     |
@@ -66,34 +65,8 @@ Read the guides in-order, or find the specific answers you are looking for and l
   </thead>
   
     
-     <tr class="kaltura-table-row">
-      <td class="kaltura-table-row-item" style="width: 33%; text-align: left;">
-        <a href="/using-kalturas-api-test-console-introduction">Kaltura API and TestMe Console Introduction</a><a href="/introduction-kaltura-client-libraries"></a>
-      </td>
       
-      <td class="kaltura-table-row-item" style="width: 33%; text-align: left;">
-        <span>A basic introduction to the Kaltura "TestMe" Console - A tool that provides interaction with Kaltura API calls using a simple user interface.</span>
-      </td>
-      
-      <td class="kaltura-table-row-item" style="width: 33%; text-align: left;">
-        What is the Kaltura TestMe Console and how to use it to test API calls.
-      </td>
-    </tr>
-    
-    <tr class="kaltura-table-row">
-      <td class="kaltura-table-row-item" style="width: 33%; text-align: left;">
-        <a href="/kalturas-api-authentication-and-security">Kaltura's API Authentication and Security</a>
-      </td>
-      
-      <td class="kaltura-table-row-item" style="width: 33%; text-align: left;">
-        <span>Protecting personal user data, video streaming and limiting access to features are at the heart of the Kaltura Media Asset Management Platform. This guide will take you through the basic concepts and practices of authentication and security in the Kaltura API v3.</span>
-      </td>
-      
-      <td class="kaltura-table-row-item" style="width: 33%; text-align: left;">
-        Learn about Kaltura's API authentication and security options and how to use the Kaltura Session.
-      </td>
-    </tr>
-    
+       
     <tr class="kaltura-table-row">
       <td>
         <p id="page-title" style="text-align: left;">
@@ -248,21 +221,7 @@ Read the guides in-order, or find the specific answers you are looking for and l
       </td>
     </tr>
     
-    <tr class="kaltura-table-row">
-      <td class="kaltura-table-row-item" style="width: 33%; text-align: left;">
-        <p id="page-title">
-          <a href="{{site.url}}/documentation/Knowledge/kaltura-api-release-notes-and-changelog.html">Kaltura API Release Notes for Falcon</a>
-        </p>
-      </td>
-      
-      <td class="kaltura-table-row-item" style="width: 33%; text-align: left;">
-        The release notes pertain to the Kaltura API changes for Falcon, released July, 2012.
-      </td>
-      
-      <td class="kaltura-table-row-item" style="width: 33%; text-align: left;">
-        Learn what's new in the <span>Falcon version of the </span>Kaltura API: <span>Event Notification Changes, <span>Category Enhancements, <span>Entitlement - Category Changes, <span>Entitlement - categoryUser Changes, <span>Entitlement - categoryEntry Changes, <span>Entitlement Additions, <span>New EntryOrderBy Changes, <span>Bulk Upload Changes, <span>Documents Image Flavor Changes</span></span></span></span></span></span></span></span></span>
-      </td>
-    </tr>
+   
   </tbody>
 </table>
 
