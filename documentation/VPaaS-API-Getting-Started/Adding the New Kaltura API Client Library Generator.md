@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Adding the New Kaltura API Client Library Generator
-weight: 105
+weight: 106
 ---
 
 The Kaltura API Client Library Generator is an automatic method of packaging the native API client libraries from the latest API code. The Kaltura Server provides a unique way of generating an always up-to-date native API Client Libraries by using an XML based reflection of Kaltura's internal API classes (API services, actions, objects, Enums...).
