@@ -23,11 +23,10 @@ This article details the Kaltura API documentation that is available to developo
  [5]: /using-kalturas-api-test-console-introduction
 
  
- ## Kaltura API Guides  
+## Kaltura API Guides  
 
 The series of guides below are what we recommend as proper training steps in using Kaltura's API to integrate Kaltura functionality to websites and applications and create custom Kaltura applications.
 
-Read the guides in-order, or find the specific answers you are looking for and let us know if we're [missing a guide.][6]
 
 |  Guide                                                            | Summary                                                                                                                                                                                                                                                                                                                                                                                                 | What will you learn                                                                                                                                                                                                                                                                                                         |
 |-------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -35,18 +34,15 @@ Read the guides in-order, or find the specific answers you are looking for and l
 | [Kaltura API Usage Guidelines](https://vpaas.kaltura.com/documentation/VPaaS-API-Getting-Started/kaltura-api-usage-guidelines.html)                                      | The Kaltura API is flexible, easy to access, and simple to use.                                                                                                                                                                                                                                                                                                                                         | Learn how to access and use the Kaltura API.                                                                                                                                                                                                                                                                                |
 | [Kaltura API Developer's Console Introduction](https://vpaas.kaltura.com/documentation/VPaaS-API-Getting-Started/using-kalturas-api-developer-console-introduction.html)                       | A basic introduction to the Kaltura API Developer's Console - A tool that provides interaction with Kaltura API calls using a simple user interface.                                                                                                                                                                                                                                                           | What is the Kaltura API Developer's Console and how to use it to test API calls.                                                                                                                                                                                                                                                     |
 | [Kaltura's API Authentication and Security](https://vpaas.kaltura.com/documentation/VPaaS-API-Getting-Started/Kaltura_API_Authentication_and_Security.html)                         | Protecting personal user data, video streaming and limiting access to features are at the heart of the Kaltura Media Asset Management Platform. This guide will take you through the basic concepts and practices of authentication and security in the Kaltura API v3.                                                                                                                                 | Learn about Kaltura's API authentication and security options and how to use the Kaltura Session.                                                                                                                                                                                                                           |
-| The Kaltura Media Access Control Model                            | An Access Control Profile defines authorized and restricted domains where your content can or cannot be displayed, countries from which it can or cannot be viewed, white and black lists of IP addresses and authorized and unauthorized domains and devices in which your media can be embedded.                                                                                                      | Learn the details of Kaltura’s Access Control Model and how to use it through sample code.                                                                                                                                                                                                                                  |
-| Introduction to Kaltura Client Libraries                          | Kaltura client libraries are SDKs in numerous programming languages that provide easy access to the Kaltura API and facilitate developing Kaltura applications.                                                                                                                                                                                                                                         | Learn about Kaltura client libraries, where to download the clients, and how to use client libraries in your applications.                                                                                                                                                                                                  |
-| Kaltura Android SDK — Reference Application: Implementation Guide | The Kaltura Android Software Development Kit (SDK)  Reference Application demonstrates how to use the Kaltura Android SDK with native Android applications.                                                                                                                                                                                                                                             | Learn how the Kaltura Android SDK Reference Application is implemented.                                                                                                                                                                                                                                                     |
-| Kaltura iOS SDK — Reference Application: Implementation Guide     | The Kaltura iOS Software Development Kit (SDK)  Reference Application demonstrates how to use the Kaltura iOS SDK with native iOS applications.                                                                                                                                                                                                                                                         | Learn how the Kaltura iOS SDK Reference Application is implemented.                                                                                                                                                                                                                                                         |
-| The Kaltura Thumbnail API                                         | The Thumbnail API provides an easy interface to dynamically manipulate images or video snapshots to be used as thumbnails. Using the thumbnail API it is possible to resize, cropped versions of the original Kaltura video thumbnail, a specific frame from in the video and manipulate the thumbnail image and various ways.                                                                          | Learn how to use the Kaltura Thumbnail API to modify and create thumbnails on the fly.                                                                                                                                                                                                                                      |
+| [The Kaltura Media Access Control Model](https://vpaas.kaltura.com/documentation/VPaaS-API-Getting-Started/kaltura-media-access-control-model.html)                            | An Access Control Profile defines authorized and restricted domains where your content can or cannot be displayed, countries from which it can or cannot be viewed, white and black lists of IP addresses and authorized and unauthorized domains and devices in which your media can be embedded.                                                                                                      | Learn the details of Kaltura’s Access Control Model and how to use it through sample code.                                                                                                                                                                                                                                  |
+| [Introduction to Kaltura Client Libraries](https://vpaas.kaltura.com/documentation/VPaaS-API-Getting-Started/introduction-kaltura-client-libraries.html)                          | Kaltura client libraries are SDKs in numerous programming languages that provide easy access to the Kaltura API and facilitate developing Kaltura applications.                                                                                                                                                                                                                                         | Learn about Kaltura client libraries, where to download the clients, and how to use client libraries in your applications.                                                                                                                                                                                                  |
+                                                                                                               |
+| [The Kaltura Thumbnail API](https://vpaas.kaltura.com/documentation/VPaaS-API-Getting-Started/kaltura-thumbnail-api.html)                                         | The Thumbnail API provides an easy interface to dynamically manipulate images or video snapshots to be used as thumbnails. Using the thumbnail API it is possible to resize, cropped versions of the original Kaltura video thumbnail, a specific frame from in the video and manipulate the thumbnail image and various ways.                                                                          | Learn how to use the Kaltura Thumbnail API to modify and create thumbnails on the fly.                                                                                                                                                                                                                                      |
 | How To Create a Video Thumbnail Rotator in JavaScript             | Case Study of using Kaltura's Thumbnail API to create a rotating video thumbnail.                                                                                                                                                                                                                                                                                                                       | The steps to create a Video Thumbnail Rotator in JavaScript.                                                                                                                                                                                                                                                                |
 | How To Handle Kaltura Server Notifications in PHP                 | Often applications require the ability to respond to asynchronous events that occurred on the Kaltura server. For example, when a Media Entry was uploaded, finished transcoding or any other status update.                                                                                                                                                                                            | This guide will take you through the steps of listening to these events, called Server Notifications, how to parse the data carried in these notifications and respond properly in your applications.                                                                                                                       |
 | Introduction to Kaltura's Cross-Platform Media Players            | Kaltura's flexible HTML5 and Adobe OSMF (Flash)-based media players provide media online publishing solutions that are easy to use and embed.                                                                                                                                                                                                                                                           | Learn about the Kaltura Media Players and how to play Kaltura Media in your applications.                                                                                                                                                                                                                                   |
-| JavaScript API for Kaltura Media Players                          | Kaltura's powerful media player JavaScript API enables you to design flexible, multifaceted interaction with the player.                                                                                                                                                                                                                                                                                | Learn how to integrate the Kaltura media player in your web applications and call the player's JavaScript API.                                                                                                                                                                                                              |
-| Creating Kaltura Server Plugins                                   | A Kaltura server plugin extends Kaltura server functionality, such as services and batches. You create a server plugin to rapidly and cost-effectively expand upon the core Kaltura platform for your own specific use case, create an application to publish to the community, and potentially generate revenue from your contribution to the Kaltura system through the Kaltura Application Exchange. | Learn how to expand the Kaltura system using server plugins.                                                                                                                                                                                                                                                                |
- [6]: /couldnt-find-what-youre-looking
-
+ JavaScript API for Kaltura Media Players                          | Kaltura's powerful media player JavaScript API enables you to design flexible, multifaceted interaction with the player.                                                                                                                                                                                                                                                                                | Learn how to integrate the Kaltura media player in your web applications and call the player's JavaScript API.                                                                                                                                                                                                              |
+| Creating Kaltura Server Plugins                                   | A Kaltura server plugin extends Kaltura server functionality, such as services and batches. You create a server plugin to rapidly and cost-effectively expand upon the core Kaltura platform for your own specific use case, create an application to publish to the community, and potentially generate revenue from your contribution to the Kaltura system through the Kaltura Application Exchange. | Learn how to expand the Kaltura system using server plugins.                                                                                                                                                         
 <table class="kaltura-table" style="width: 100%;">
   <thead>
     <tr class="kaltura-table-header">
@@ -65,81 +61,7 @@ Read the guides in-order, or find the specific answers you are looking for and l
   </thead>
   
     
-      
-       
-    <tr class="kaltura-table-row">
-      <td>
-        <p id="page-title" style="text-align: left;">
-          <a href="http://knowledge.kaltura.com/kaltura-media-access-control-model">The Kaltura Media Access Control Model</a>
-        </p>
-      </td>
-      
-      <td class="kaltura-table-row-item" style="width: 33%; text-align: left;">
-        An Access Control Profile defines authorized and restricted domains where your content can or cannot be displayed, countries from which it can or cannot be viewed, white and black lists of IP addresses and authorized and unauthorized domains and devices in which your media can be embedded.
-      </td>
-      
-      <td class="kaltura-table-row-item" style="width: 33%; text-align: left;">
-        Learn the details of Kaltura’s Access Control Model and how to use it through sample code<span>.</span>
-      </td>
-    </tr>
-    
-    <tr class="kaltura-table-row">
-      <td class="kaltura-table-row-item" style="width: 33%; text-align: left;">
-        <a href="/introduction-kaltura-client-libraries">Introduction to Kaltura Client Libraries</a>
-      </td>
-      
-      <td class="kaltura-table-row-item" style="width: 33%; text-align: left;">
-        <span>Kaltura client libraries are SDKs in numerous programming languages that provide easy access to the Kaltura API and facilitate developing Kaltura applications.</span>
-      </td>
-      
-      <td class="kaltura-table-row-item" style="width: 33%; text-align: left;">
-        <span>Learn about Kaltura client libraries, where to download the clients, and how to use client libraries in your applications.</span>
-      </td>
-    </tr>
-    
-    <tr class="kaltura-table-row">
-      <td class="kaltura-table-row-item" style="width: 33%; text-align: left;">
-        <a href="{{site.url}}/documentation/Knowledge/kaltura-android-sdk-reference-application-implementation-guide.html">Kaltura Android SDK — Reference Application: Implementation Guide</a><a href="/kaltura-thumbnail-api"></a>
-      </td>
-      
-      <td class="kaltura-table-row-item" style="width: 33%; text-align: left;">
-        The Kaltura Android <span>Software Development Kit (</span>SDK)  Reference Application demonstrates how to use the Kaltura Android SDK with native Android applications.
-      </td>
-      
-      <td class="kaltura-table-row-item" style="width: 33%; text-align: left;">
-        Learn how the Kaltura Android SDK Reference Application is implemented.
-      </td>
-    </tr>
-    
-    <tr class="kaltura-table-row">
-      <td class="kaltura-table-row-item" style="width: 33%; text-align: left;">
-        <a href="{{site.url}}/documentation/Knowledge/kaltura-ios-sdk-reference-application-implementation-guide.html">Kaltura iOS SDK — Reference Application: Implementation Guide</a><a href="/kaltura-thumbnail-api"></a>
-      </td>
-      
-      <td class="kaltura-table-row-item" style="width: 33%; text-align: left;">
-        <span>The Kaltura iOS </span><span>Software Development Kit (</span><span>SDK)  Reference Application demonstrates how to use the Kaltura iOS SDK with native iOS applications.</span> 
-      </td>
-      
-      <td class="kaltura-table-row-item" style="width: 33%; text-align: left;">
-        <span>Learn how the Kaltura iOS SDK Reference Application is implemented.</span>
-      </td>
-    </tr>
-    
-    <tr class="kaltura-table-row">
-      <td class="kaltura-table-row-item" style="width: 33%; text-align: left;">
-        <a href="/kaltura-thumbnail-api">The Kaltura Thumbnail API</a>
-      </td>
-      
-      <td class="kaltura-table-row-item" style="width: 33%; text-align: left;">
-        <span><span>The Thumbnail API provides an easy interface to dynamically manipulate images or video snapshots to be used as thumbnails. Using the thumbnail API it is possible to resize, cropped versions of the original Kaltura video thumbnail, a specific frame from in the video and manipulate the thumbnail image and various ways.</span></span>
-      </td>
-      
-      <td class="kaltura-table-row-item" style="width: 33%; text-align: left;">
-        <p>
-          <span><span>Learn how to use the Kaltura Thumbnail API to modify and create thumbnails on the fly.</span></span>
-        </p>
-      </td>
-    </tr>
+  
     
     <tr class="kaltura-table-row">
       <td class="kaltura-table-row-item" style="width: 33%; text-align: left;">
@@ -247,16 +169,12 @@ The following links review few of the selected sample applications:
 
 ## Common API Related Questions  
 
-*   [Create A New Kaltura Entry And Upload Video File Using The Kaltura API][8]
+*   [Create A New Kaltura Entry And Upload Video File Using The Kaltura API](http://knowledge.kaltura.com/node/468)
 *   [Getting Started with the Kaltura API - Blog post and Webinar](http://blog.kaltura.org/kaltura-api-how-to-get-started-video)
 *   [How to retrieve the Partner ID, API Admin Secret and API User Secret?](/documentation/Knowledge/what-can-you-configure-integration-settings.html)
 *   [How to retrieve the download or streaming URL using API calls?](http://knowledge.kaltura.com/node/39)
 *   [How to retrieve a media entry details and metadata?](http://knowledge.kaltura.com/node/40)
 *   [How the Search in Kaltura Works (How to perform AND, OR, NOT and Exact Match searches in API)](http://knowledge.kaltura.com/node/653).
 
- [8]: http://knowledge.kaltura.com/node/468
- [9]: http://knowledge.kaltura.com/node/39
- [10]: http://knowledge.kaltura.com/node/40
- [11]: http://knowledge.kaltura.com/node/653
 
  
