@@ -31,6 +31,7 @@ The examples above using the [Kaltura PHP5 Client Library](https://developer.kal
 
 ## Code Example for Configuring a Kaltura Session  
 
+{% highlight c %}
 // include the KalturaClient PHP client library to be able to use its funtions/objects
 require_once(dirname(__FILE__).'/lib/KalturaClient.php');
 
@@ -79,6 +80,7 @@ $client-&gt;setKs($ks);
 // return the KalturaClient object
 return $client;?&gt;</pre>
 
+{% endhighlight %}
 
 To learn more about the KS and its usage read the article [Kaltura's API Authentication and Security](https://vpaas.kaltura.com/documentation/VPaaS-API-Getting-Started/Kaltura_API_Authentication_and_Security.html).
 
