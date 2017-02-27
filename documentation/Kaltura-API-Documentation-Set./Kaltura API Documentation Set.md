@@ -41,81 +41,24 @@ The series of guides below are what we recommend as proper training steps in usi
 | [How To Create a Video Thumbnail Rotator in JavaScript](https://vpaas.kaltura.com/documentation/VPaaS-API-Getting-Started/how-create-video-thumbnail-rotator-javascript.html)             | Case Study of using Kaltura's Thumbnail API to create a rotating video thumbnail.                                                                                                                                                                                                                                                                                                                       | The steps to create a Video Thumbnail Rotator in JavaScript.                                                                                                                                                                                                                                                                |
 | [How To Handle Kaltura Server Notifications in PHP](https://vpaas.kaltura.com/documentation/VPaaS-API-Getting-Started/how-handle-kaltura-server-notifications-in-php.html)                 | Often applications require the ability to respond to asynchronous events that occurred on the Kaltura server. For example, when a Media Entry was uploaded, finished transcoding or any other status update.                                                                                                                                                                                            | This guide will take you through the steps of listening to these events, called Server Notifications, how to parse the data carried in these notifications and respond properly in your applications.                                                                                                                       |
 | [Introduction to Kaltura's Cross-Platform Media Players](https://vpaas.kaltura.com/documentation/VPaaS-API-Getting-Started/introduction-kalturas-cross-platform-media-players.html)    | Kaltura's flexible HTML5 and Adobe OSMF (Flash)-based media players provide media online publishing solutions that are easy to use and embed.                                                                                                                                                                                                                                                           | Learn about the Kaltura Media Players and how to play Kaltura Media in your applications.                                                                                                                                                                                                                                   |
- JavaScript API for Kaltura Media Players                          | Kaltura's powerful media player JavaScript API enables you to design flexible, multifaceted interaction with the player.                                                                                                                                                                                                                                                                                | Learn how to integrate the Kaltura media player in your web applications and call the player's JavaScript API.                                                                                                                                                                                                              |
-| Creating Kaltura Server Plugins                                   | A Kaltura server plugin extends Kaltura server functionality, such as services and batches. You create a server plugin to rapidly and cost-effectively expand upon the core Kaltura platform for your own specific use case, create an application to publish to the community, and potentially generate revenue from your contribution to the Kaltura system through the Kaltura Application Exchange. | Learn how to expand the Kaltura system using server plugins.                                                                                                                                                         
-<table class="kaltura-table" style="width: 100%;">
-  <thead>
-    <tr class="kaltura-table-header">
-      <th class="kaltura-table-head-item" style="width: 33%; text-align: center;">
-         Guide
-      </th>
-      
-      <th class="kaltura-table-head-item" style="width: 33%; text-align: center;">
-        Summary 
-      </th>
-      
-      <th class="kaltura-table-head-item" style="width: 33%; text-align: center;">
-        What will you learn 
-      </th>
-    </tr>
-  </thead>
-  
-      
-       
-    <tr class="kaltura-table-row">
-      <td class="kaltura-table-row-item" style="width: 33%; text-align: left;">
-        <a href="/javascript-api-kaltura-media-players">JavaScript API for Kaltura Media Players</a>
-      </td>
-      
-      <td class="kaltura-table-row-item" style="width: 33%; text-align: left;">
-        <span>Kaltura's powerful media player JavaScript API enables you to design flexible, multifaceted interaction with the player.</span>
-      </td>
-      
-      <td class="kaltura-table-row-item" style="width: 33%; text-align: left;">
-        <p>
-          Learn how to integrate the Kaltura media player in your web applications and call the player's JavaScript API.
-        </p>
-      </td>
-    </tr>
-    
-    <tr class="kaltura-table-row">
-      <td class="kaltura-table-row-item" style="width: 33%; text-align: left;">
-        <a href="http://knowledge.kaltura.com//sites/default/files/Creating_Kaltura_Server_Plugins_User_Manual_Eagle.pdf">Creating Kaltura Server Plugins</a>
-      </td>
-      
-      <td class="kaltura-table-row-item" style="width: 33%; text-align: left;">
-        A Kaltura server plugin extends Kaltura server functionality, such as services and batches. You create a server plugin to rapidly and cost-effectively expand upon the core Kaltura platform for your own specific use case, create an application to publish to the community, and potentially generate revenue from your contribution to the Kaltura system through the <a href="http://exchange.kaltura.com/welcome" target="_blank">Kaltura Application Exchange</a>.
-      </td>
-      
-      <td class="kaltura-table-row-item" style="width: 33%; text-align: left;">
-        <p>
-          Learn how to expand the Kaltura system using server plugins.
-        </p>
-      </td>
-    </tr>
-    
-   
-  </tbody>
-</table>
+ [JavaScript API for Kaltura Media Players](https://vpaas.kaltura.com/documentation/VPaaS-API-Getting-Started/javascript-api-kaltura-media-players.html)                          | Kaltura's powerful media player JavaScript API enables you to design flexible, multifaceted interaction with the player.                                                                                                                                                                                                                                                                                | Learn how to integrate the Kaltura media player in your web applications and call the player's JavaScript API.                                                                                                                                                                                                              |
+| [Creating Kaltura Server Plugins](http://knowledge.kaltura.com//sites/default/files/Creating_Kaltura_Server_Plugins_User_Manual_Eagle.pdf)                                   | A Kaltura server plugin extends Kaltura server functionality, such as services and batches. You create a server plugin to rapidly and cost-effectively expand upon the core Kaltura platform for your own specific use case, create an application to publish to the community, and potentially generate revenue from your contribution to the Kaltura system through the Kaltura Application Exchange. | Learn how to expand the Kaltura system using server plugins.                                                                                                                                                         
 
-<p class="mce-heading-2">
-  Sample Applications with Source Code
-</p>
+## Sample Applications with Source Code  
 
 The <a href="https://github.com/kaltura" target="_blank">Kaltura GitHub profile</a> features various applications with full open source code, that can be used as reference samples.
 
-The following links review few of the selected sample applications:
+The following links review some of the selected sample applications:
 
-1.  <a href="http://www.kaltura.org/demos/listentries/" target="_blank">Listing Kaltura Entries, PHP. (featuring the use of Filters and Pagers)</a> 
-2.  [Creating a Paid-for Content Gallery with Access Control and PayPal API][7]
-3.  <a href="http://blog.kaltura.org/tags-editor" target="_blank">Implementing a Smarter Archive Tags Management - The Tags Editor</a>
-4.  <a href="http://blog.kaltura.org/mobile-app-moderation-kmoderate-case-study" target="_blank">Mobile App for Moderation – The “kModerate” Case Study (HTML5 Mobile App using Sencha Touch)</a>
-5.  <a href="https://github.com/kaltura/Kaltura-Facebook-App-Media-Page" target="_blank">Facebook Page Tab Application with Kaltura Video Gallery</a>
-6.  <a href="https://github.com/kaltura/kaltura-bulk-upload-migration-samples" target="_blank">Automating Content Migration using Kaltura's XML Bulk Upload Ingestion - Sample Scripts</a>
-7.  <a href="https://github.com/kaltura/Metadata-Dump" target="_blank">Listing (Dumping) All Content in a Kaltura Account and Export to Excel - Advanced Archive Listing</a>
-8.  <a href="http://blog.kaltura.org/how-to-increase-video-seo-using-in-video-chapters-driven-by-cue-points" target="_blank">How To Increase Video SEO Using In-Video Chapters Driven By Cue-Points</a> 
+* [Listing Kaltura Entries, PHP](http://www.kaltura.org/demos/listentries/) (featuring the use of Filters and Pagers) 
+* [Creating a Paid-for Content Gallery with Access Control and PayPal API](http://blog.kaltura.org/turning-profit-online-video-made-easy-using-paypal-html5-digital-goods)
+* [Implementing a Smarter Archive Tags Management - The Tags Editor(http://blog.kaltura.org/tags-editor)
+* [The “kModerate” Case Study (HTML5 Mobile App using Sencha Touch)](http://blog.kaltura.org/mobile-app-moderation-kmoderate-case-study)
+* [Facebook Page Tab Application with Kaltura Video Gallery](https://github.com/kaltura/Kaltura-Facebook-App-Media-Page)
+* [Automating Content Migration using Kaltura's XML Bulk Upload Ingestion - Sample Scripts](https://github.com/kaltura/kaltura-bulk-upload-migration-samples)
+* [Listing (Dumping) All Content in a Kaltura Account and Export to Excel - Advanced Archive Listing](https://github.com/kaltura/Metadata-Dump)
+* [How To Increase Video SEO Using In-Video Chapters Driven By Cue-Points]{http://blog.kaltura.org/how-to-increase-video-seo-using-in-video-chapters-driven-by-cue-points)
 
- [7]: http://blog.kaltura.org/turning-profit-online-video-made-easy-using-paypal-html5-digital-goods
 
 
 ## Common API Related Questions  
