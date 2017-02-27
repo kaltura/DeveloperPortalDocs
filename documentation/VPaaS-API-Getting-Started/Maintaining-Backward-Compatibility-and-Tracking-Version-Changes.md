@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Maintaining Backward Compatibility and Tracking Version Changes
-weight: 104
+weight: 105
 ---
 
 Maintaining backward compatibility during API upgrades is a common concern for developers utilizing APIs to build applications. 
