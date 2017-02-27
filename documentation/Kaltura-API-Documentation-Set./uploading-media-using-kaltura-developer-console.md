@@ -1,11 +1,13 @@
 ---
 layout: page
-title: Uploading Media using the Kaltura Developer Console
+title: Uploading Media using the Kaltura Developer API Console
 ---
 
 ## Starting a Kaltura Session  
 
 <span>Complete the steps as described in <a href="{{site.url}}/documentation/Knowledge/how-start-kaltura-session-using-testme-console.html">How to Start a Kaltura Session using the TestMe Console</a></span>
+
+https://developer.kaltura.com/api-docs/#/uploadToken
 
 <p id="UploadingMediawiththeAPI-UploadingMediaUsingtheAPI:" class="mce-procedure">
   To Upload Media Using the API
