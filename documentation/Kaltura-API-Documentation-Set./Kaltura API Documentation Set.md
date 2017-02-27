@@ -8,18 +8,13 @@ This article details the Kaltura API documentation that is available to developo
 ## Getting Started with the Kaltura API  
 
 
-*   Start by reading about [Kaltura's Architecture](kaltura-video-platform-architecture-overview).
+*   Start by reading about [Kaltura's Architecture](https://vpaas.kaltura.com/documentation/VPaaS-API-Getting-Started/kaltura-video-platform-architecture-overview.html).
 *   For Interactive Code Recipes and Examples, visit [https://developers.kaltura.org](https://developers.kaltura.org).
 *   As a reference for understaning technical terms related to Online Video, Media Asset Management and Kaltura - use the [Kaltura Knowledge Center Glossary](http://knowledge.kaltura.com/glossary).
-*   For more information about using api_v3 refer to the [Introduction to the Kaltura API Architecture][3].
+*   For more information about using APIs, refer to the [Introduction to the Kaltura API Architecture](https://vpaas.kaltura.com/documentation/VPaaS-API-Getting-Started/iintroduction-kaltura-api-architecture.html	).
 *   For further information on the API calls for Partner Services 3 (api_v3), please refer to the [API documentation](https://developer.kaltura.com/api-docs).
-*   Use the API Client Libraries to easily perform the API callbacks in your programming language of choice - Refer to the [Kaltura API Client Libraries Guide](introduction-kaltura-client-libraries) for more.
+*   Use the API Client Libraries to easily perform the API callbacks in your programming language of choice - Refer to the [Kaltura API Client Libraries Guide](https://vpaas.kaltura.com/documentation/VPaaS-API-Getting-Started/introduction-kaltura-client-libraries.html) for more.
 *   If you use a CMS like Drupal and WordPress or an LMS such as Moodle, Sakai or Blackboard, make sure to check the [Kaltura Exchange](http://exchange.kaltura.com/) for a Kaltura integration to your CMS of choice.
-
- [1]: /kaltura-video-platform-architecture-overview
- [3]: http://knowledge.kaltura.com/introduction-kaltura-api-architecture
- [4]: /introduction-kaltura-client-libraries
- [5]: /using-kalturas-api-test-console-introduction
 
  
 ## Kaltura API Guides  
@@ -45,7 +40,7 @@ The series of guides below are what we recommend as proper training steps in usi
 
 ## Sample Applications with Source Code  
 
-The <a href="https://github.com/kaltura" target="_blank">Kaltura GitHub profile</a> features various applications with full open source code, that can be used as reference samples.
+The <[Kaltura GitHub profile](https://github.com/kaltura) features various applications with full open source code, that can be used as reference samples.
 
 The following links review some of the selected sample applications:
 
@@ -57,7 +52,6 @@ The following links review some of the selected sample applications:
 * [Automating Content Migration using Kaltura's XML Bulk Upload Ingestion - Sample Scripts](https://github.com/kaltura/kaltura-bulk-upload-migration-samples)
 * [Listing (Dumping) All Content in a Kaltura Account and Export to Excel - Advanced Archive Listing](https://github.com/kaltura/Metadata-Dump)
 * [How To Increase Video SEO Using In-Video Chapters Driven By Cue-Points](http://blog.kaltura.org/how-to-increase-video-seo-using-in-video-chapters-driven-by-cue-points)
-
 
 
 ## Common API Related Questions  
