@@ -3,6 +3,8 @@ layout: page
 title: Kaltura API Documentation Set
 ---
 
+This article details the Kaltura API documentation that is available to developoers working with Kaltura's APIs.
+
 ## Getting Started with the Kaltura API  
 
 
@@ -30,7 +32,7 @@ Read the guides in-order, or find the specific answers you are looking for and l
 
 |  Guide                                                            | Summary                                                                                                                                                                                                                                                                                                                                                                                                 | What will you learn                                                                                                                                                                                                                                                                                                         |
 |-------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Introduction to the Kaltura API Architecture](ntroduction-kaltura-api-architecture.html)                      | Kaltura provides server APIs for every core feature. You can use the Kaltura API to incorporate Kaltura features in web applications and web sites.                                                                                                                                                                                                                                                     | Learn the basics of the Kaltura API and API architecture.                                                                                                                                                                                                                                                                   |
+| [Introduction to the Kaltura API Architecture](introduction-kaltura-api-architecture.html)                      | Kaltura provides server APIs for every core feature. You can use the Kaltura API to incorporate Kaltura features in web applications and web sites.                                                                                                                                                                                                                                                     | Learn the basics of the Kaltura API and API architecture.                                                                                                                                                                                                                                                                   |
 | [Kaltura API Usage Guidelines](kaltura-api-usage-guidelines.html)                                      | The Kaltura API is flexible, easy to access, and simple to use.                                                                                                                                                                                                                                                                                                                                         | Learn how to access and use the Kaltura API.                                                                                                                                                                                                                                                                                |
 | Kaltura API and TestMe Console Introduction                       | A basic introduction to the Kaltura "TestMe" Console - A tool that provides interaction with Kaltura API calls using a simple user interface.                                                                                                                                                                                                                                                           | What is the Kaltura TestMe Console and how to use it to test API calls.                                                                                                                                                                                                                                                     |
 | Kaltura's API Authentication and Security                         | Protecting personal user data, video streaming and limiting access to features are at the heart of the Kaltura Media Asset Management Platform. This guide will take you through the basic concepts and practices of authentication and security in the Kaltura API v3.                                                                                                                                 | Learn about Kaltura's API authentication and security options and how to use the Kaltura Session.                                                                                                                                                                                                                           |
@@ -44,8 +46,6 @@ Read the guides in-order, or find the specific answers you are looking for and l
 | Introduction to Kaltura's Cross-Platform Media Players            | Kaltura's flexible HTML5 and Adobe OSMF (Flash)-based media players provide media online publishing solutions that are easy to use and embed.                                                                                                                                                                                                                                                           | Learn about the Kaltura Media Players and how to play Kaltura Media in your applications.                                                                                                                                                                                                                                   |
 | JavaScript API for Kaltura Media Players                          | Kaltura's powerful media player JavaScript API enables you to design flexible, multifaceted interaction with the player.                                                                                                                                                                                                                                                                                | Learn how to integrate the Kaltura media player in your web applications and call the player's JavaScript API.                                                                                                                                                                                                              |
 | Creating Kaltura Server Plugins                                   | A Kaltura server plugin extends Kaltura server functionality, such as services and batches. You create a server plugin to rapidly and cost-effectively expand upon the core Kaltura platform for your own specific use case, create an application to publish to the community, and potentially generate revenue from your contribution to the Kaltura system through the Kaltura Application Exchange. | Learn how to expand the Kaltura system using server plugins.                                                                                                                                                                                                                                                                |
-| Kaltura API Release Notes for Falcon                              | The release notes pertain to the Kaltura API changes for Falcon, released July, 2012.                                                                                                                                                                                                                                                                                                                   | Learn what's new in the Falcon version of the Kaltura API: Event Notification Changes, Category Enhancements, Entitlement - Category Changes, Entitlement - categoryUser Changes, Entitlement - categoryEntry Changes, Entitlement Additions, New EntryOrderBy Changes, Bulk Upload Changes, Documents Image Flavor Changes |
-
  [6]: /couldnt-find-what-youre-looking
 
 <table class="kaltura-table" style="width: 100%;">
@@ -65,36 +65,8 @@ Read the guides in-order, or find the specific answers you are looking for and l
     </tr>
   </thead>
   
-  <tbody>
-    <tr class="kaltura-table-row">
-      <td class="kaltura-table-row-item" style="width: 33%; text-align: left;">
-        <a href="/introduction-kaltura-api-architecture">Introduction to the Kaltura API Architecture</a>
-      </td>
-      
-      <td class="kaltura-table-row-item" style="width: 33%; text-align: left;">
-        <span>Kaltura provides server APIs for every core feature. You can use the Kaltura API to incorporate Kaltura features in web applications and web sites.</span>
-      </td>
-      
-      <td class="kaltura-table-row-item" style="width: 33%; text-align: left;">
-        <span>Learn the basics of the Kaltura API and API architecture.</span>
-      </td>
-    </tr>
     
-    <tr class="kaltura-table-row">
-      <td class="kaltura-table-row-item" style="width: 33%; text-align: left;">
-        <a href="/kaltura-api-usage-guidelines">Kaltura API Usage Guidelines</a>
-      </td>
-      
-      <td class="kaltura-table-row-item" style="width: 33%; text-align: left;">
-        <span>The Kaltura API is flexible, easy to access, and simple to use.</span>
-      </td>
-      
-      <td class="kaltura-table-row-item" style="width: 33%; text-align: left;">
-        <span>Learn how to access and use the Kaltura API.</span>
-      </td>
-    </tr>
-    
-    <tr class="kaltura-table-row">
+     <tr class="kaltura-table-row">
       <td class="kaltura-table-row-item" style="width: 33%; text-align: left;">
         <a href="/using-kalturas-api-test-console-introduction">Kaltura API and TestMe Console Introduction</a><a href="/introduction-kaltura-client-libraries"></a>
       </td>
@@ -313,16 +285,15 @@ The following links review few of the selected sample applications:
 
  [7]: http://blog.kaltura.org/turning-profit-online-video-made-easy-using-paypal-html5-digital-goods
 
-<p class="mce-heading-2">
-  Common API Related Questions
-</p>
+
+## Common API Related Questions  
 
 *   [Create A New Kaltura Entry And Upload Video File Using The Kaltura API][8]
-*   <a href="http://blog.kaltura.org/kaltura-api-how-to-get-started-video" target="_blank">Getting Started with the Kaltura API - Blog post and Webinar.</a>
-*   <a href="{{site.url}}/documentation/Knowledge/what-can-you-configure-integration-settings.html" target="_blank">How to retrieve the Partner ID, API Admin Secret and API User Secret?</a>
-*   [How to retrieve the download or streaming URL using API calls?][9]
-*   [How to retrieve a media entry details and metadata?][10]
-*   [How the Search in Kaltura Works (How to perform AND, OR, NOT and Exact Match searches in API)][11].
+*   [Getting Started with the Kaltura API - Blog post and Webinar](http://blog.kaltura.org/kaltura-api-how-to-get-started-video)
+*   [How to retrieve the Partner ID, API Admin Secret and API User Secret?](/documentation/Knowledge/what-can-you-configure-integration-settings.html)
+*   [How to retrieve the download or streaming URL using API calls?](http://knowledge.kaltura.com/node/39)
+*   [How to retrieve a media entry details and metadata?](http://knowledge.kaltura.com/node/40)
+*   [How the Search in Kaltura Works (How to perform AND, OR, NOT and Exact Match searches in API)](http://knowledge.kaltura.com/node/653).
 
  [8]: http://knowledge.kaltura.com/node/468
  [9]: http://knowledge.kaltura.com/node/39
@@ -330,7 +301,3 @@ The following links review few of the selected sample applications:
  [11]: http://knowledge.kaltura.com/node/653
 
  
-
-<p class="mce-sub-heading">
-  <a href="/couldnt-find-what-youre-looking">Got a question that is not answered above?</a>
-</p>
