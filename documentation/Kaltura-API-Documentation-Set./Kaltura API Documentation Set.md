@@ -40,7 +40,7 @@ The series of guides below are what we recommend as proper training steps in usi
 
 ## Sample Applications with Source Code  
 
-The <[Kaltura GitHub profile](https://github.com/kaltura) features various applications with full open source code, that can be used as reference samples.
+The [Kaltura GitHub profile](https://github.com/kaltura) features various applications with full open source code, that can be used as reference samples.
 
 The following links review some of the selected sample applications:
 
@@ -56,12 +56,12 @@ The following links review some of the selected sample applications:
 
 ## Common API Related Questions  
 
-*   [Create A New Kaltura Entry And Upload Video File Using The Kaltura API](http://knowledge.kaltura.com/node/468)
+*   [Create A New Kaltura Entry And Upload Video File Using The Kaltura API](https://vpaas.kaltura.com/documentation/VPaaS-API-Getting-Started/create-new-kaltura-entry-and-upload-video-file-using-kaltura-api.html)
 *   [Getting Started with the Kaltura API - Blog post and Webinar](http://blog.kaltura.org/kaltura-api-how-to-get-started-video)
-*   [How to retrieve the Partner ID, API Admin Secret and API User Secret?](/documentation/Knowledge/what-can-you-configure-integration-settings.html)
-*   [How to retrieve the download or streaming URL using API calls?](http://knowledge.kaltura.com/node/39)
-*   [How to retrieve a media entry details and metadata?](http://knowledge.kaltura.com/node/40)
-*   [How the Search in Kaltura Works (How to perform AND, OR, NOT and Exact Match searches in API)](http://knowledge.kaltura.com/node/653).
+*   [How to retrieve the Partner ID, API Admin Secret and API User Secret?](https://vpaas.kaltura.com/documentation/VPaaS-API-Getting-Started/what-can-you-configure-integration-settings.html)
+*   [How to retrieve the download or streaming URL using API calls?](https://vpaas.kaltura.com/documentation/VPaaS-API-Getting-Started/how-retrieve-download-or-streaming-url-using-api-calls.html)
+*   [How to retrieve a media entry details and metadata?](https://vpaas.kaltura.com/documentation/VPaaS-API-Getting-Started/how-retrieve-metadata-media-entry-using-api.html)
+*   [How the Search in Kaltura Works (How to perform AND, OR, NOT and Exact Match searches in API)](https://vpaas.kaltura.com/documentation/VPaaS-API-Getting-Started/how-search-kaltura-works-how-perform-and-or-not-and-exact-match-searches-api.html).
 
 
  
