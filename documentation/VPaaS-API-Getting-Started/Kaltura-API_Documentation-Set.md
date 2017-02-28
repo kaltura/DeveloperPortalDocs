@@ -19,7 +19,7 @@ This article details the Kaltura API documentation that is available to developo
 *   Use the API Client Libraries to easily perform the API callbacks in your programming language of choice - Refer to the [Kaltura API Client Libraries Guide](https://vpaas.kaltura.com/documentation/VPaaS-API-Getting-Started/introduction-kaltura-client-libraries.html) for more.
 *   If you use a CMS like Drupal and WordPress or an LMS such as Moodle, Sakai or Blackboard, make sure to check the [Kaltura Exchange](http://exchange.kaltura.com/) for a Kaltura integration to your CMS of choice.
 
- 
+
 ## Kaltura API Guides  
 
 The series of guides below are what we recommend as proper training steps in using Kaltura's API to integrate Kaltura functionality to websites and applications and create custom Kaltura applications.
