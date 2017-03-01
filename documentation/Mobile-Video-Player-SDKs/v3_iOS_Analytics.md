@@ -15,7 +15,7 @@ Kaltura’s Mobile Video Player SDKs for iOS make it easy for you to integrate a
 | Kaltura Stats         | []()             |
 | TVPAPI                | []()             |
 | Phoenix               | []()             |
-| Youbora               | []()             |
+| Youbora               | [Youbora Developer Portal](http://developer.nicepeopleatwork.com) |
 
 
 
@@ -200,6 +200,8 @@ This section describes the steps required for implementing the Youbora Plugin on
 
 You'll need to set up an account in http://www.youbora.com and then set the account details in the plugin configuration to use this plugin. After these steps, you'll be able to use the Youbora dashboard and watch statistical events and analytics sent by the Kaltura Video Payer.
 
+For extra information on YouboraPlugin options dictionary visit [developer portal](http://developer.nicepeopleatwork.com/plugins/general/setting-youbora-options/)
+
 ### Enabling the Youbora Plugin for the Kaltura Video Player  
 
 To enable the Youbora Stats Plugin on iOS devices for the Kaltura Video Player, add the following line to your Podfile: 
@@ -210,19 +212,95 @@ pod 'PlayKit/YouboraPlugin'
 
 ### Register Plugin
 
+>swift
+
 ```swift
-PlayKitManager.sharedInstance.registerPlugin(YouboraPlugin.self)
+PlayKitManager.shared.registerPlugin(YouboraPlugin.self)
 ```
 
-### Create a Config and set below custom params
+>objc
 
+```objc
+[PlayKitManager.sharedInstance registerPlugin: YouboraPlugin.self];
 ```
-config["accountCode"] = *{account_code}*
-config["username"] = *{user_name}*
+
+### Create a Config and and load player
+
+>swift
+
+```swift
+let youboraOptions: [String: Any] = [
+    "accountCode": "nicetest",
+    "httpSecure": true,
+    "parseHLS": true,
+    "media": [
+        "title": "Sintel",
+        "duration": 600
+    ],
+    "properties": [
+        "year": "2001",
+        "genre": "Fantasy",
+        "price": "free"
+    ],
+    "network": [
+        "ip": "1.2.3.4"
+    ],
+    "ads": [
+        "adsExpected": true,
+        "campaign": "Ad campaign name"
+    ],
+    "extraParams": [
+        "param1": "Extra param 1 value",
+        "param2": "Extra param 2 value"
+    ]
+]
+
+let youboraConfig = AnalyticsConfig(params: youboraOptions)
+let config = [YouboraPlugin.pluginName: youboraConfig]
+let pluginConfig = PluginConfig(config: config)
+
+let player = PlayKitManager.shared.loadPlayer(pluginConfig: pluginConfig)
+```
+
+>objc
+
+```objc
+NSDictionary * youboraOptions = @{
+                           @"accountCode": @"nicetest",
+                           @"httpSecure": @YES,
+                           @"parseHLS": @YES,
+                           @"media": @{
+                                  @"title": @"Sintel",
+                                  @"duration": @600
+                                  },
+                           @"properties": @{
+                                  @"year": @"2001",
+                                  @"genre": @"Fantasy",
+                                  @"price": @"free"
+                                  },
+                           @"network": @{
+                                  @"ip": @"1.2.3.4"
+                                  },
+                           @"ads": @{
+                                  @"adsExpected": @YES,
+                                  @"campaign": @"Ad campaign name"
+                                  },
+                           @"extraParams": @{
+                                   @"param1": @"Extra param 1 value",
+                                   @"param2": @"Extra param 2 value"
+                                   }
+                           };
+                           
+AnalyticsConfig *youboraConfig = [[AnalyticsConfig alloc] initWithParams: youboraOptions];
+    
+NSMutableDictionary *config = [NSMutableDictionary dictionary];
+[config setValue: youboraConfig forKey:[YouboraPlugin pluginName]];
+
+PluginConfig *pluginConfig = [[PluginConfig alloc] initWithConfig:config];
+self.player = [PlayKitManager.sharedInstance loadPlayerWithPluginConfig:pluginConfig];
 ```
 
 >Note: Only then load player with Plugin Config.
-
 
 ## Have Questions or Need Help?
 
