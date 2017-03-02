@@ -35,11 +35,12 @@ function submit_feedback()
 	issue=document.getElementById("Issue-Description").value;
 	email=document.getElementById("email").value;
 	name=document.getElementById("name").value;
+	page_loc=document.getElementById("page_loc").value;
 	grecaptcharesponse=document.getElementById("g-recaptcha-response").value;
         $.ajax({
                   type: 'POST',
                   url: '{{ site.url }}:8443/mailme.php',
-                  data: {'issue': issue, 'email':email,'name':name, 'g-recaptcha-response':grecaptcharesponse},
+                  data: {'issue': issue, 'email':email,'name':name,'page_loc':page_loc, 'g-recaptcha-response':grecaptcharesponse},
                   success: function(data){
 			post_message=document.getElementById("post_message");
 			post_message.innerHTML='<p>'+data+'</p>';
