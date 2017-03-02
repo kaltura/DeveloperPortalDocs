@@ -7,16 +7,16 @@ $lastname='';
 $email='';
 $company='';
 if (isset($_GET['firstname'])){
-	$firstname=$_GET['firstname'];
+	$firstname=strip_tags($_GET['firstname']);
 }
 if (isset($_GET['lastname'])){
-	$lastname=$_GET['lastname'];
+	$lastname=strip_tags($_GET['lastname']);
 }
 if (isset($_GET['email'])){
-	$email=$_GET['email'];
+	$email=strip_tags($_GET['email']);
 }
 if (isset($_GET['company'])){
-	$company=$_GET['company'];
+	$company=strip_tags($_GET['company']);
 }
 ?>
 

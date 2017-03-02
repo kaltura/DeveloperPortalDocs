@@ -152,6 +152,7 @@ function show_hide_sub_div(div_id)
                 			<label for="Issue-Description-label" class="form-labels">Share feedback on this page</label>
                 			<textarea id="Issue-Description" placeholder="Describe the issue in as much detail as possible" name="Issue-Description" data-name="Issue Description" required="required" class="w-input form-fields"></textarea>
 <div class="g-recaptcha" data-sitekey="6Lf2bx8TAAAAAFiXASujAbfTnbBr7H6cqUbHLnnE"></div>
+					<input type="hidden" id="page_loc" name="page_loc" value="{{page.path}}">
 					<input type="submit" value="Submit Feedback" data-wait="Please wait..." class="w-button standard-button">
               			</form>
               			<div class="w-form-done" id="post_message">
