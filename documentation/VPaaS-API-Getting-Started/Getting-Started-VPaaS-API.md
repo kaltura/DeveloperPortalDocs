@@ -244,15 +244,18 @@ Most Kaltura API calls require you to authenticate before executing a call. Call
 
 To learn more about the Kaltura Session and API Authentication, read: [Kaltura's API Authentication and Security](https://vpaas.kaltura.com/documentation/VPaaS-API-Getting-Started/Kaltura_API_Authentication_and_Security.html).
 
-| INVALID_OBJECT_TYPE                | Invalid object type "%OBJECT_TYPE%"                                                                                 |   |
-| INVALID_ENUM_VALUE                 | Invalid enumeration value "%GIVEN_VALUE%" for parameter "%PARAMETER_NAME%", expecting enumeration type "%ENUM_TYPE" |   |
-| INVALID_PARTNER_ID                 | Invalid partner id "%PARTNER_ID%"                                                                                   |   |
-| INVALID_SERVICE_CONFIGURATION      | Invalid service configuration. Unknown service [%SERVICE_NAME%:%ACTION_NAME%].                                      |   |
-| PROPERTY_VALIDATION_CANNOT_BE_NULL | The property "%PROPERTY_NAME%" cannot be NULL                                                                       |   |
-| PROPERTY_VALIDATION_MIN_LENGTH     | The property "%PROPERTY_NAME%" must have a min length of %MININUM_LENGTH% characters                                |   |
-| PROPERTY_VALIDATION_MAX_LENGTH     | The property "%PROPERTY_NAME%" cannot have more than %MAXIMUM_LENGTH% characters                                    |   |
-| PROPERTY_VALIDATION_NOT_UPDATABLE  | The property "%PROPERTY_NAME%" cannot be updated                                                                    |   |
-| INVALID_USER_ID                    | Invalid user id                                                                                                     |   |
+
+| Error Code                         | Error Message                                                                                                       |   |
+|------------------------------------|---------------------------------------------------------------------------------------------------------------------|---|
+| INTERNAL_SERVERL_ERROR             | Internal server error occurred                                                                                      |   |
+| MISSING_KS                         | Missing KS, session not established                                                                                 |   |
+| INVALID_KS                         | Invalid KS "%KS%", Error "%KS_ERROR_CODE%,%KS_ERROR_DESCRIPTION%"                                                   |   |
+| SERVICE_NOT_SPECIFIED              | Service name was not specified, please specify one                                                                  |   |
+| SERVICE_DOES_NOT_EXISTS            | Service "%SERVICE_NAME%" does not exist                                                                             |   |
+| ACTION_NOT_SPECIFIED               | Action name was not specified, please specify one                                                                   |   |
+| ACTION_DOES_NOT_EXISTS             | Action "%ACTION_NAME%" does not exist for service "%SERVICE_NAME%"                                                  |   |
+| MISSING_MANDATORY_PARAMETER        | Missing parameter "%PARAMETER_NAME%"                                                                                |   |
+
 
 
 
