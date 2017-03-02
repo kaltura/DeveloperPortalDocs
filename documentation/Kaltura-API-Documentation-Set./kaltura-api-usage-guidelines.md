@@ -267,6 +267,28 @@ The actual message contains the specific value that the request passes.
 
 For an exhaustive list of error codes, <a href="https://github.com/kaltura/server/blob/master/api_v3/lib/KalturaErrors.php" target="_blank">review the KalturaErrors class</a>.
 
+
+| Error Code                         | Error Message                                                                                                       |   |
+|------------------------------------|---------------------------------------------------------------------------------------------------------------------|---|
+| INTERNAL_SERVERL_ERROR             | Internal server error occurred                                                                                      |   |
+| MISSING_KS                         | Missing KS, session not established                                                                                 |   |
+| INVALID_KS                         | Invalid KS "%KS%", Error "%KS_ERROR_CODE%,%KS_ERROR_DESCRIPTION%"                                                   |   |
+| SERVICE_NOT_SPECIFIED              | Service name was not specified, please specify one                                                                  |   |
+| SERVICE_DOES_NOT_EXISTS            | Service "%SERVICE_NAME%" does not exist                                                                             |   |
+| ACTION_NOT_SPECIFIED               | Action name was not specified, please specify one                                                                   |   |
+| ACTION_DOES_NOT_EXISTS             | Action "%ACTION_NAME%" does not exist for service "%SERVICE_NAME%"                                                  |   |
+| MISSING_MANDATORY_PARAMETER        | Missing parameter "%PARAMETER_NAME%"                                                                                |   |
+| INVALID_OBJECT_TYPE                | Invalid object type "%OBJECT_TYPE%"                                                                                 |   |
+| INVALID_ENUM_VALUE                 | Invalid enumeration value "%GIVEN_VALUE%" for parameter "%PARAMETER_NAME%", expecting enumeration type "%ENUM_TYPE" |   |
+| INVALID_PARTNER_ID                 | Invalid partner id "%PARTNER_ID%"                                                                                   |   |
+| INVALID_SERVICE_CONFIGURATION      | Invalid service configuration. Unknown service [%SERVICE_NAME%:%ACTION_NAME%].                                      |   |
+| PROPERTY_VALIDATION_CANNOT_BE_NULL | The property "%PROPERTY_NAME%" cannot be NULL                                                                       |   |
+| PROPERTY_VALIDATION_MIN_LENGTH     | The property "%PROPERTY_NAME%" must have a min length of %MININUM_LENGTH% characters                                |   |
+| PROPERTY_VALIDATION_MAX_LENGTH     | The property "%PROPERTY_NAME%" cannot have more than %MAXIMUM_LENGTH% characters                                    |   |
+| PROPERTY_VALIDATION_NOT_UPDATABLE  | The property "%PROPERTY_NAME%" cannot be updated                                                                    |   |
+| INVALID_USER_ID                    | Invalid user id                                                                                                     |   |
+
+
 <table border="1" cellspacing="0" cellpadding="0">
   <thead>
     <tr>
@@ -475,55 +497,6 @@ For an exhaustive list of error codes, <a href="https://github.com/kaltura/serv
       </td>
       
       <td style="text-align: left;" valign="top" width="329">
-        <p class="TableText">
-          The property "%PROPERTY_NAME%" must have a min length of %MININUM_LENGTH% characters
-        </p>
-      </td>
-    </tr>
-    
-    <tr>
-      <td style="text-align: left;" valign="top" width="310">
-        <p class="TableText">
-          PROPERTY_VALIDATION_MAX_LENGTH
-        </p>
-      </td>
-      
-      <td style="text-align: left;" valign="top" width="329">
-        <p class="TableText">
-          The property "%PROPERTY_NAME%" cannot have more than %MAXIMUM_LENGTH% characters
-        </p>
-      </td>
-    </tr>
-    
-    <tr>
-      <td style="text-align: left;" valign="top" width="310">
-        <p class="TableText">
-          PROPERTY_VALIDATION_NOT_UPDATABLE
-        </p>
-      </td>
-      
-      <td style="text-align: left;" valign="top" width="329">
-        <p class="TableText">
-          The property "%PROPERTY_NAME%" cannot be updated
-        </p>
-      </td>
-    </tr>
-    
-    <tr>
-      <td style="text-align: left;" valign="top" width="310">
-        <p class="TableText">
-          INVALID_USER_ID
-        </p>
-      </td>
-      
-      <td style="text-align: left;" valign="top" width="329">
-        <p class="TableText">
-          Invalid user id
-        </p>
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 <p class="Sub-Heading">
   <strong>Error Response Example</strong>
