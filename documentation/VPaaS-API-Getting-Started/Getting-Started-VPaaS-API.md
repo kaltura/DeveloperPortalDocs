@@ -196,6 +196,49 @@ Follow the Code Recipe below to get started with the Kaltura Analytics [report s
 
 {% onebox https://developer.kaltura.com/recipes/analytics/embed %}
 
+
+## Kaltura API Usage Guidelines  
+
+### Document Conventions  
+
+A string in brackets [] represents a value. Replace the string – including the brackets – with an actual value.  For example: replace *[SERVICENAME]* with *syndicationFeed*.
+
+### Finding the Latest API Version Number  
+
+To find the version number of the API that contains the latest updates, go to the full XML description of the API schema: [http://www.kaltura.com/api\_v3/api\_schema.php](http://www.kaltura.com/api_v3/api_schema.php).
+
+The version and date of the API schema appear near the beginning of the file.
+
+### Getting a Client Library for the Kaltura API  
+
+To work with the Kaltura API, you need code that can:
+
+*   Construct a Kaltura request.
+*   Perform an HTTP request.
+*   Parse the result of a Kaltura request.
+
+To save you time, Kaltura provides client libraries. A client library is a set of classes that includes:
+
+*   The functional infrastructure for communication with the Kaltura API: constructing a request, performing an HTTP request, and parsing a response
+*   A full object representation of all the entities that are available through the Kaltura API, including enumeration objects
+*   Infrastructure for developers, such as built-in log capabilities
+
+The Kaltura API SDK includes client library packages in different languages, including PHP, Java, C#, and JavaScript. For the latest version of all client libraries, refer to [Kaltura API SDK - Native Client Libraries](https://developer.kaltura.com/api-docs/#/Client%20Libraries).
+
+To get the entire API in your IDE, just download the client library for the language that you use to develop your applications and include the client library in your application or project.
+
+### Getting a Client Library for a Language that Kaltura Does Not Provide  
+
+The Kaltura client libraries are generated automatically based on API schema. Kaltura also strives to include contributions from the community and customers, and we welcome contributions of client libraries for languages that Kaltura does not yet provide.
+
+You can write a custom generator class in PHP that generates code in the language of your choice.
+
+If you provide the generator class to Kaltura, Kaltura will include your generator class in the Kaltura core generator. The new client library will be automatically generated and will be publicly available.
+
+For more information on creating a client library generator, refer to [Adding New Kaltura API Client Library Generator](https://vpaas.kaltura.com/documentation/VPaaS-API-Getting-Started/introduction-kaltura-client-libraries.html).
+
+
+
 ## Maintaining Backward Compatibility and Tracking Version Changes  
 
 Maintaining backward compatibility during API upgrades is a common concern for developers utilizing APIs to build applications. 
