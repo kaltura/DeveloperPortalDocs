@@ -1,10 +1,11 @@
 ---
 layout: page
-title: "Introduction to Kaltura Client Libraries"
-date: 2011-12-27 14:51:25
+title: Introduction to Kaltura Client Libraries
+weight: 
 ---
 
-This document describes:
+## Overview  
+This article describes the following topics:
 
 *   [Understanding Kaltura Client Libraries][1]
 *   [Deciding Where to Get a Client Library][2] and Getting/Generating Your Kaltura Client Library
@@ -14,29 +15,21 @@ This document describes:
  [2]: #DecidingontheRightTypeofClientLibrary
  [3]: #UsingaKalturaClientLibrary
 
-This document does not address how to implement specific flows using the Kaltura API.
+This article does not address how to implement specific flows using the Kaltura API.
 
-<h2 class="mce-heading-2">
-  Applicability
-</h2>
+### Applicability  
 
 This document applies to Kaltura API version 3 and later.
 
-<p class="mce-heading-2">
-  Sample Code Usage
-</p>
+### Sample Code Usage  
 
 All sample code is PHP5, unless otherwise stated.
 
 The sample code is designed to show you how to use the features of Kaltura client libraries.
 
-<p class="mce-note-graphic">
-  The sample code is formatted for this document and includes hard-coded examples. Before using sample code copied from this document, replace the examples and adapt the formatting.
-</p>
+>Note: The sample code is formatted for this document and includes hard-coded examples. Before using sample code copied from this document, replace the examples and adapt the formatting.
 
-<h2 class="mce-heading-2">
-  Document Conventions
-</h2>
+### Document Conventions  
 
 *   File paths and names appear in bold.  
     Example:** /[INSTALLATION_PATH]/app/generator/config.ini**
@@ -45,24 +38,7 @@ The sample code is designed to show you how to use the features of Kaltura clien
     Replace the string – including the brackets – with an actual value.  
     Example: Replace *[yourClientLibraryName]* with *Java*.
 
-<h2 class="mce-heading-2">
-  Prerequisites
-</h2>
-
-<p class="mce-procedure">
-   To access the Kaltura API, you require:
-</p>
-
-1.  A Kaltura publisher account - To obtain a Kaltura account, start a <a href="http://corp.kaltura.com/free-trial" target="_blank">free trial</a>, <a href="http://corp.kaltura.com/company/contact-us" target="_blank">contact us</a> or <a href="http://www.kaltura.org/project/community_edition_video_platform" target="_blank">Download Kaltura CE</a>.
-2.  Obtain your Kaltura API publisher credentials via the <a href="http://www.kaltura.com/index.php/kmc/kmc4#account%7Cintegration" target="_blank">KMC Integration Settings</a>.
-
-<p class="mce-heading-2">
-  <a name="UnderstandingKalturaClientLibraries"></a>Understanding Kaltura Client Libraries
-</p>
-
-<p class="mce-heading-3">
-  What Is a Kaltura Client Library?
-</p>
+## What are Kaltura's Kaltura Client Libraries?  
 
 A Kaltura client library:
 
@@ -70,21 +46,13 @@ A Kaltura client library:
 *   Provides developers with easy access to the Kaltura API
 *   Makes it easy to develop Kaltura applications
 
-<p class="mce-heading-3">
-  What Does a Kaltura Client Library Consist of?
-</p>
+The Kaltura client library is a collection of classes. Each class consists of objects and service classes. The collection of classes represents the entities, services, and actions that the Kaltura API provides.
 
-A Kaltura client library is a collection of classes. Each class consists of objects and service classes. The collection of classes represents the entities, services, and actions that the Kaltura API provides.
-
-<p class="mce-heading-3">
-  When Do You Use a Kaltura Client Library?
-</p>
+### When Do You Use a Kaltura Client Library?  
 
 Kaltura recommends that you use a Kaltura Client Library when you develop applications that interact with the Kaltura API.
 
-<p class="mce-heading-3">
-  <a name="WhatAretheTypesofClientLibraries"></a>What Are the Types of Client Libraries?
-</p>
+### >What Are the Types of Client Libraries?  
 
 There are different types of client libraries:
 
@@ -92,15 +60,11 @@ There are different types of client libraries:
 *   Local client libraries for Kaltura On-Prem™ and Kaltura Community Edition (Kaltura CE)
 *   Specialized Kaltura client libraries
 
-To understand which type to use, see [Deciding Where to Get a Client Library][2].
+To understand which type to use, see [Deciding Where to Get a Client Library](#DecidingontheRightTypeofClientLibrary).
 
-<p class="mce-heading-3">
-  How Do You Start Using a Kaltura Client Library?
-</p>
+### How Do You Start Using a Kaltura Client Library?  
 
-First, [decide where to get a client library][2].
-
-Then do one of the following:
+First, [decide where to get a client library](#DecidingontheRightTypeofClientLibrary). Then do one of the following:
 
 *   [Get a client library for Kaltura Hosted Edition][4].
 *   [Generate a client library for Kaltura On-Prem and Kaltura CE][5].
@@ -117,9 +81,7 @@ When you have a client library:
 
  [7]: #SampleCode
 
-<h3 class="mce-heading-3">
-  Client Library Programming Languages
-</h3>
+### Client Library Programming Languages  
 
 Kaltura provides [downloadable client libraries][8] for the Kaltura Hosted Edition in various programming languages. These languages also are available when [generating a client library for Kaltura On-Prem and Kaltura CE][5]. You can generate a client library for an additional language. See [Generating a Client Library for a Language that Kaltura Does Not Provide][9].
 
