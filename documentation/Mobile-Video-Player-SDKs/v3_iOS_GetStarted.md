@@ -27,10 +27,7 @@ Recommended reading before you begin:
 
 In this section, you'll learn how to build a basic video playback application using the Kaltura Player SDK for iOS.
 
-
-|            Objective-C            |                Swift               |
-|:---------------------------------:|:----------------------------------:|
-| [![help](./v3-images/iOS/objc.png)](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/v3_iOS_QuickStart_Objc.html) | [![help](./v3-images/iOS/swift.png)](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/v3_iOS_QuickStart_Swift.html)  |
+[Quick Start Document for Swift & Obj-C](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/v3_iOS_QuickStart.html)
 
 
 </br>
