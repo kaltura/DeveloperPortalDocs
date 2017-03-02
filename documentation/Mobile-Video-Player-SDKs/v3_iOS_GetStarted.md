@@ -30,7 +30,6 @@ In this section, you'll learn how to build a basic video playback application us
 [Quick Start Document for Swift & Obj-C](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/v3_iOS_QuickStart.html)
 
 
-</br>
 ## Have Questions or Need Help?
 
 Check out the [Kaltura Player SDK Forum](https://forum.kaltura.org/c/playkit) page for different ways of getting in touch.
