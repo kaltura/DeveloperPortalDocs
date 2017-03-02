@@ -68,9 +68,16 @@ The simplest way to add the SDK and its dependencies to your project is by using
 
 Go to the desired file (e.g., `ViewController.swift`) and add the line below:
 
-```objc
-	#import "PlayKit-Swift.h"
+>swift
 
+```swift
+import PlayKit
+```
+
+>objc
+
+```objc
+#import "PlayKit-Swift.h"
 ```
 
 ### Code the Video Player Application  
@@ -79,24 +86,55 @@ You're now ready to code the video player application using the following option
 
 **Declare a Player Variable**
 
-```objc
-	@property (nonatomic, strong) id<Player> kPlayer;
+>swift
 
+```swift
+var playerController: Player
+```
+
+>objc
+
+```objc
+@property (nonatomic, strong) id<Player> kPlayer;
 ```
 
 **Set a Player Instance via a Sample Configuration**
 
-```objc
-    NSDictionary *src = @{@"id":@"123123",@"url": @"https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"};
-    NSArray *srcs = @[src];
-    NSDictionary *entry = @{@"id":@"Trailer",@"sources": srcs};
-    MediaConfig *mediaConfig = [MediaConfig configWithMediaEntry:[[MediaEntry alloc] initWithJson:entry]];
-    
-    self.kPlayer = [PlayKitManager.sharedInstance loadPlayerWithPluginConfig:nil];
-    
-    // prepare the player with media entry to start the plugin and buffering the media.
-    [self.kPlayer prepare:mediaConfig];
+>swift
 
+```swift
+var source = [String : Any]()
+source["id"] = video.video
+source["url"] = video.video
+   
+var sources = [JSON]()
+sources.append(JSON(source))
+        
+var entry = [String : Any]()
+entry["id"] = video.title
+entry["sources"] = sources
+
+let mediaConfig = MediaConfig(mediaEntry: MediaEntry(json: JSON(entry)))
+
+self.kPlayer = PlayKitManager.shared.loadPlayer(pluginConfig: pluginConfig)
+self.kPlayer.prepare(mediaConfig)
+```
+
+>objc
+
+```objc
+NSDictionary *src = @{@"id":@"123123",@"url": @"https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"};
+
+NSArray *srcs = @[src];
+
+NSDictionary *entry = @{@"id":@"Trailer",@"sources": srcs};
+
+MediaConfig *mediaConfig = [MediaConfig configWithMediaEntry:[[MediaEntry alloc] initWithJson:entry]];
+    
+self.kPlayer = [PlayKitManager.sharedInstance loadPlayerWithPluginConfig:nil];
+    
+// prepare the player with media entry to start the plugin and buffering the media.
+[self.kPlayer prepare:mediaConfig];
 ```
 
 >Note: To learn more about `PlayerConfig` Creation, see the [PlayerConfig Doc]() article.
@@ -105,25 +143,52 @@ You're now ready to code the video player application using the following option
 
 1 . Create a player container: 
 
-```objc
-	@property (weak, nonatomic) IBOutlet UIView *playerContainer;
+>swift
 
+```swift
+@IBOutlet weak var playerContainer: UIView!
 ```
+
+>objc
+
+```objc
+@property (weak, nonatomic) IBOutlet UIView *playerContainer;
+```
+
 2 . Set the player frame and add a player view as a subview:
 
-```objc
-	self.kPlayer.view.frame = CGRectMake(0, 0, self.playerContainer.frame.size.width,self.playerContainer.frame.size.height);   
-	[self.playerContainer addSubview:self.kPlayer.view];
+>swift
 
+```swift
+self.playerController.view.frame = playerContainer.bounds
+playerContainer.addSubview(self.playerController.view)
+```
+
+>objc
+
+```objc
+self.kPlayer.view.frame = CGRectMake(0, 0, self.playerContainer.frame.size.width,self.playerContainer.frame.size.height);   
+[self.playerContainer addSubview:self.kPlayer.view];
 ```
 
 >Note: The way we recommand **setting player's view frame** is:
 
+>swift
+
+```swift
+override func viewWillLayoutSubviews() {
+	super.viewWillLayoutSubviews()
+        
+}
+```
+
+>objc
+
 ```objc
 - (void)viewDidLayoutSubviews {
-    [super viewWillLayoutSubviews];
-    self.kPlayer.view.frame = self.playerContainer.bounds;
-    [self.playerContainer addSubview:self.kPlayer.view];
+    	[super viewWillLayoutSubviews];
+    	self.kPlayer.view.frame = self.playerContainer.bounds;
+    	[self.playerContainer addSubview:self.kPlayer.view];
 }
 ```
 
@@ -131,22 +196,36 @@ You're now ready to code the video player application using the following option
 
 Add custom buttons and controls to the player as follows:
 
-```objc
-	- (IBAction)playTapped:(id)sender {
-    if(!self.kPlayer.isPlaying) {
-        [self.kPlayer play];
-    }
-	}
+>swift
 
-	- (IBAction)pauseTapped:(id)sender {
-    if(self.kPlayer.isPlaying) {
-        [self.kPlayer pause];
-	    }
-	}
+```swift
+@IBAction func playClicked(_ sender: AnyObject) {
+    self.playerController.play()
+}
 
+@IBAction func pauseClicked(_ sender: AnyObject) {
+    self.playerController.pause()
+}
 ```
 
-> [Download Full Sample](https://github.com/kaltura/playkit-ios-samples/tree/master/PlayKitApp/ObjCSample)
+>objc
+
+```objc
+- (IBAction)playTapped:(id)sender {
+	if(!self.kPlayer.isPlaying) {
+        	[self.kPlayer play];
+    	}
+}
+
+- (IBAction)pauseTapped:(id)sender {
+    	if(self.kPlayer.isPlaying) {
+        	[self.kPlayer pause];
+	}
+}
+```
+
+> [Download Full Swift Sample](https://github.com/kaltura/playkit-ios-samples/tree/master/PlayKitApp/PlayKitApp)
+> [Download Full Obj-C Sample](https://github.com/kaltura/playkit-ios-samples/tree/master/PlayKitApp/ObjCSample)
 
 
 
