@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Quick Start Using Obj-C  
+title: Quick Start
 subcat: SDK 3.0 - iOS
 weight: 301
 ---
