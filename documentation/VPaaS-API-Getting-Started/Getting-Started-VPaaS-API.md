@@ -199,7 +199,7 @@ Follow the Code Recipe below to get started with the Kaltura Analytics [report s
 
 ## Kaltura API Documentation  
 
-This section details the Kaltura API documentation that is available to developoers working with Kaltura's APIs.
+This section details the Kaltura API documentation that is available to developers working with Kaltura's APIs.
 
 
 
@@ -220,12 +220,11 @@ This section details the Kaltura API documentation that is available to developo
                                                                                                                                    
 ## Common API Related Tasks  
 
-*   [Create A New Kaltura Entry And Upload Video File Using The Kaltura API](https://vpaas.kaltura.com/documentation/VPaaS-API-Getting-Started/create-new-kaltura-entry-and-upload-video-file-using-kaltura-api.html)
-*   [Getting Started with the Kaltura API - Blog post and Webinar](http://blog.kaltura.org/kaltura-api-how-to-get-started-video)
-*   [How to retrieve the Partner ID, API Admin Secret and API User Secret?](https://vpaas.kaltura.com/documentation/VPaaS-API-Getting-Started/what-can-you-configure-integration-settings.html)
-*   [How to retrieve the download or streaming URL using API calls?](https://vpaas.kaltura.com/documentation/VPaaS-API-Getting-Started/how-retrieve-download-or-streaming-url-using-api-calls.html)
-*   [How to retrieve a media entry details and metadata?](https://vpaas.kaltura.com/documentation/VPaaS-API-Getting-Started/how-retrieve-metadata-media-entry-using-api.html)
-*   [How the Search in Kaltura Works (How to perform AND, OR, NOT and Exact Match searches in API)](https://vpaas.kaltura.com/documentation/VPaaS-API-Getting-Started/how-search-kaltura-works-how-perform-and-or-not-and-exact-match-searches-api.html).               
+* [Create A New Kaltura Entry And Upload Video File Using The Kaltura API](https://vpaas.kaltura.com/documentation/VPaaS-API-Getting-Started/examples/create-new-kaltura-entry-and-upload-video-file-using-kaltura-api.html)
+* [Getting Started with the Kaltura API - Blog post and Webinar](http://blog.kaltura.org/kaltura-api-how-to-get-started-video)
+* [How to retrieve the download or streaming URL using API calls?]https://vpaas.kaltura.com/documentation/VPaaS-API-Getting-Started/examples/how-retrieve-download-or-streaming-url-using-api-calls.html)
+* [How to retrieve a media entry details and metadata?](https://vpaas.kaltura.com/documentation/VPaaS-API-Getting-Started/examples/how-retrieve-metadata-media-entry-using-api.html)
+* [How the Search in Kaltura Works (How to perform AND, OR, NOT and Exact Match searches in API)](https://vpaas.kaltura.com/documentation/VPaaS-API-Getting-Started/examples/how-search-kaltura-works-how-perform-and-or-not-and-exact-match-searches-api.html).               
 
 
 ## Kaltura API Usage Guidelines  
