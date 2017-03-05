@@ -15,8 +15,8 @@ To configure the plugin protected functions, follow these steps:
 
 1 . Add a factory function - this enables the Kaltura Video Player to create a new instance of the Analytics Plugin and register the new plugin.
 
-```java
  {% highlight c %}
+ java
  public static final Factory factory = new Factory() {
  @Override
  public String getName() {
@@ -29,31 +29,31 @@ To configure the plugin protected functions, follow these steps:
   }
         };
  {% endhighlight %}
-```
+
          
 2 . When the application sets the Analytics Plugin configuration, the Kaltura Video Player calls the plugin onLoad method. This function contains all of the required configurations for the new plugin, a reference to the active Kaltura Video Player, and a reference to the MessageBus, which includes all events.
 
 3 . Add a listener to the relevant events by calling the following function - all of the relevant events will follow the listener:  
 
-```java
  {% highlight c %}
 
+java
  messageBus.listen(hereComesTheEventListener, PlayerEvent.Type.PLAY, PlayerEvent.Type.PAUSE, PlayerEvent.Type.ENDED,  PlayerEvent.Type.ERROR, PlayerEvent.Type.LOADED_METADATA);
 
  {% endhighlight %}
-```
+
 
 4 . Add a send analytics event method and call it from the event listener.
 
 5 . If you want to report events to the application, you can use LogEvent in the following way: 
 
-```java
  {% highlight c %}
+java
 
  messageBus.post(new LogEvent(TAG + " " + ((PlayerEvent) event).type.toString()));
 
  {% endhighlight %}
-```
+
 
 6 . The methods onDestroy, onUpdateConfig, onUpdateMedia, onApplicationPaused, and onApplicationResumed help you manage the life cycle of your Analytics Plugin, including initiating end events, handling background tasks, and keeping the plugin flow in accordance with the Video Player life cycle.
 
@@ -61,46 +61,45 @@ To configure the plugin protected functions, follow these steps:
 
 Next, you'll need to enable the Analytics Plugin by registering it inside the application as follows:
 
-```java
- {% highlight c %}
 
+ {% highlight c %}
+java
  PlayKitManager.registerPlugins(GenericAnalyticsPlugin.factory);
  {% endhighlight %}
-```
+
 
 ## Configure the Plugin Configuration Object for the Analytics Plugin  
 
 To configure the Analytics Plugin, add the following configuration to your `pluginConfig` file as follows:
 
-```java
- {% highlight c %}
 
+ {% highlight c %}
+java
  private void configureGenericAnalyticsPlugin(PlayerConfig pluginConfig) {
          JsonObject genericConfigEntry = new JsonObject();
          genericConfigEntry.addProperty("NameOfThe Configuration", value of the configuration);
  {% endhighlight %}
-```
+
 
 ## Set the Plugin Configuration to the Analytics Plugin  
 
 For the Analytics Plugin to start loading, you'll need to set the plugin configugration you created as follows:
 
-```java
- {% highlight c %}
 
+ {% highlight c %}
+java
  PlayerConfig config = new PlayerConfig();
  PlayerConfig.Plugins plugins = config.plugins;
  plugins.setPluginConfig("NameOfPlugin" , genericConfigEntry.toJson()); 
  {% endhighlight %}
-```
+
 
 ## MessageBus Supported Events  
 
 The MessageBus supports the following events:
 
- ```java
- {% highlight c %}
-
+  {% highlight c %}
+java
  PlayerEvents{
  public enum Type {
          STATE_CHANGED, //IDLE, LOADING, READY, BUFFERING;
@@ -120,6 +119,7 @@ The MessageBus supports the following events:
         VOLUME_CHANGED // Sent when volume is changed.
     }
  {% endhighlight %}
+
 
  {% highlight c %}
 
@@ -147,7 +147,7 @@ public enum Type {
         ALL_ADS_COMPLETED
     }
  {% endhighlight %}
- ```
+ 
  
 ## Adding New Events Using the MessageBus  
 
@@ -156,9 +156,9 @@ If you have new events you need to report, you can add new events by implementin
 1 . Add a new class for your event.
 2 . Implement the PKEvent in this class according the following implementation example: 
 
-```java
+
  {% highlight c %}
- 
+ java
  public class NewAnalyticsEvent implements PKEvent {
      public final NewAnalyticsEvent.EventType type;
 
@@ -177,20 +177,22 @@ If you have new events you need to report, you can add new events by implementin
 
  }
  {% endhighlight %}
-```
+
 
 3 . Use the Messagebus to post your new event: 
+
  {% highlight c %}
 
  messageBus.post(new NewAnalyticsEvent(TAG + " " + ((NewAnalyticsEvent) event).type.toString()));
  {% endhighlight %}
+ 
 
-## Code Examples
+## Code Examples  
 
 ### Event Listener  
-```java
- {% highlight c %}
 
+ {% highlight c %}
+java
  private PKEvent.Listener mEventListener = new PKEvent.Listener() {
         @Override
         public void onEvent(PKEvent event) {
@@ -228,58 +230,59 @@ If you have new events you need to report, you can add new events by implementin
         }
     };
  {% endhighlight %}
-```
+
 ### onDestroy  
 
-```java
  {% highlight c %}
-
+java
    @Override
     public void onDestroy() {
         log.d("onDestroy");
         sendAnalyticsEvent(PhoenixActionType.STOP);
     }
  {% endhighlight %}
-```
+
 
 ### onApplicationPaused  
 
-```java
  {% highlight c %}
+ java
 
 @Override
     protected void onApplicationPaused() {
         stopMonitoring();
     }
  {% endhighlight %}
-```
+
 
 ### onApplicationResumed  
 
-```java
- {% highlight c %}
 
+{% highlight c %}
+java
     @Override
     protected void onApplicationResumed() {
         startMonitoring(this.player);
     }
  {% endhighlight %}
-```
+
 
 ## Setting the Plugin Configuration to the Youbora Plugin
 
 For the Youbora Plugin to start loading, you'll need to set the plugin configuration you created as follows:
 
-```java
+ {% highlight c %}
+ java
        PlayerConfig.Plugins pluginsConfig = config.plugins;
        pluginsConfig.setPluginConfig(YouboraPlugin.factory.getName(), converterYoubora.toJson()); 
-```
+{% endhighlight %}
 
 ## Setting the Plugin Configuration to the IMA Plugin  
 
 For the IMA Plugin to start loading, you'll need to set the plugin configuration you created as follows:
 
-```java
+ {% highlight c %}
+ java
        String adTagUrl = "https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/single_ad_samples&ciu_szs=300x250&impl=s&gdfp_req=1&env=vp&output=vast&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ct%3Dskippablelinear&correlator=";
        List<String> videoMimeTypes = new ArrayList<>();
        videoMimeTypes.add(MimeTypes.APPLICATION_MP4);
@@ -288,7 +291,7 @@ For the IMA Plugin to start loading, you'll need to set the plugin configuration
             
        pluginsConfig.setPluginConfig(IMAPlugin.factory.getName(),adsConfig.toJSONObject());
 
-```
+{% endhighlight %}
 
 
 ## Have Questions or Need Help?
