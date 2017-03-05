@@ -7,9 +7,9 @@ weight:
 ## Overview  
 This article describes the following topics:
 
-*   [Understanding Kaltura Client Libraries][1]
-*   [Deciding Where to Get a Client Library][2] and Getting/Generating Your Kaltura Client Library
-*   [Using a Kaltura Client Library][3]
+* [Understanding Kaltura Client Libraries][1]
+* [Deciding Where to Get a Client Library][2] and Getting/Generating Your Kaltura Client Library
+* [Using a Kaltura Client Library][3]
 
  [1]: #UnderstandingKalturaClientLibraries
  [2]: #DecidingontheRightTypeofClientLibrary
@@ -42,23 +42,36 @@ The sample code is designed to show you how to use the features of Kaltura clien
 
 A Kaltura client library:
 
-*   Is an SDK package in a specific programming language
-*   Provides developers with easy access to the Kaltura API
-*   Makes it easy to develop Kaltura applications
+* Is an SDK package in a specific programming language
+* Provides developers with easy access to the Kaltura API
+* Makes it easy to develop Kaltura applications
 
 The Kaltura client library is a collection of classes. Each class consists of objects and service classes. The collection of classes represents the entities, services, and actions that the Kaltura API provides.
 
 ### When Do You Use a Kaltura Client Library?  
 
-Kaltura recommends that you use a Kaltura Client Library when you develop applications that interact with the Kaltura API.
+Kaltura recommends that you use a Kaltura Client Library when you develop applications that interact with the Kaltura API. Client libraries provide the following benefits:
+
+* All objects and enums are auto-generated for you.
+* All services and actions are auto-generated for you.
+* Because they are auto-generated, there is lower chance for mistakes.
+* The low level is already implemented for you, including:
+	* HTTP communication
+	* Serialization and deserialization
+	* Error handling
+*  Authentication is built-in.
+* Multi-request is built-in.
+* Response-profile is built-in.
+* Global parameters are utilized for you.
+
 
 ### >What Are the Types of Client Libraries?  
 
 There are different types of client libraries:
 
-*   Client libraries for the Kaltura Hosted Edition
-*   Local client libraries for Kaltura On-Prem™ and Kaltura Community Edition (Kaltura CE)
-*   Specialized Kaltura client libraries
+* Client libraries for the Kaltura Hosted Edition
+* Local client libraries for Kaltura On-Prem™ and Kaltura Community Edition (Kaltura CE)
+* Specialized Kaltura client libraries
 
 To understand which type to use, see [Deciding Where to Get a Client Library](#DecidingontheRightTypeofClientLibrary).
 
@@ -66,9 +79,9 @@ To understand which type to use, see [Deciding Where to Get a Client Library](#D
 
 First, [decide where to get a client library](#DecidingontheRightTypeofClientLibrary). Then do one of the following:
 
-*   [Get a client library for Kaltura Hosted Edition][4].
-*   [Generate a client library for Kaltura On-Prem and Kaltura CE][5].
-*   [Generate a specialized Kaltura client library][6].
+* [Get a client library for Kaltura Hosted Edition][4].
+* [Generate a client library for Kaltura On-Prem and Kaltura CE][5].
+* [Generate a specialized Kaltura client library][6].
 
  [4]: #GettingaClientLibraryforKalturaHostedEdi
  [5]: #GeneratingaClientLibraryoaLocalServer
@@ -76,8 +89,8 @@ First, [decide where to get a client library](#DecidingontheRightTypeofClientLib
 
 When you have a client library:
 
-*   [Use the client library][3].
-*   Refer to [Sample Code for Multiple Client Library Languages][7] to help use your client library.
+* [Use the client library][3].
+* Refer to [Sample Code for Multiple Client Library Languages][7] to help use your client library.
 
  [7]: #SampleCode
 
@@ -90,19 +103,18 @@ Kaltura provides [downloadable client libraries][8] for the Kaltura Hosted Editi
 
 **Available Client Library Languages**
 
-*   PHP  
-*   PHP5
-*   Zend Framework-compatible library: Eases library integration in terms of coding standards and auto-loading
-*   PHP4: For applications required to be compatible with PHP4
-
-*   ActionScript 3       
-*   Adobe Flex       
-*   JavaScript       
-*   C#       
-*   Java       
-*   Ruby       
-*   Python
-*   Objective-C/Cocoa
+* PHP  
+* PHP5
+* Zend Framework-compatible library: Eases library integration in terms of coding standards and auto-loading
+* PHP4: For applications required to be compatible with PHP4
+* ActionScript 3       
+* Adobe Flex       
+* JavaScript       
+* C#       
+* Java       
+* Ruby       
+* Python
+* Objective-C/Cocoa
 
 <span class="mce-heading-2"><a name="DecidingontheRightTypeofClientLibrary"></a>Where to Get a Client Library?</span>
 
