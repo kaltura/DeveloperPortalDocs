@@ -9,7 +9,7 @@ This topic describes the steps to create a Video Thumbnail Rotator in JavaScrip
 
 To use the KalturaThumbRotator, include its javascript code and attach two events to each img element you want to turn into a slideshow preview:
 
-1 .  Download the ]Kaltura Video Thumbnail Rotator script[(http://knowledge.kaltura.com/sites/default/files/dl_resources/kalturaThumbRotator.zip).
+1 .  Download the [Kaltura Video Thumbnail Rotator script](http://knowledge.kaltura.com/sites/default/files/dl_resources/kalturaThumbRotator.zip).
 2 .  Next, include the JavaScript, add the following line at the **head** of the document:
 
 {% highlight javascript %}
