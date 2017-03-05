@@ -29,15 +29,7 @@ The Kaltura API is [stateless](https://en.wikipedia.org/wiki/Stateless_protocol)
 
 > Remember: For every API call you make, you will need to provide a Kaltura Session. 
 
-### Methods for Generating a Kaltura Session  
-
-There are three methods for generating a Kaltura Session:
-
-* Calling the [session.start action](https://developer.kaltura.com/api-docs/#/session.start): This method is recommended for scripts and applications to which you alone will have access.
-* Calling the [user.loginByLoginId action](https://developer.kaltura.com/api-docs/#/user.loginByLoginId): This method is recommended for managing registered users in Kaltura, and allowing users to log in using email and password. When you log in to the KMC, the KMC application calls the user.loginByLoginId action to authenticate you using your registered email and password.
-* Using the [appToken service](https://developer.kaltura.com/api-docs/#/appToken): This method is recommended when providing access to scripts or applications that are managed by others; this method provides tools to manage API tokens per application provider, revoke access to specific applications, and more.
-
-> To learn more about the Kaltura Session, its algorithm, guidelines and options read the [Kaltura API Authentication and Security article](https://knowledge.kaltura.com/node/229).
+To learn more about creating a Kaltura Session, see [How to Create a Kaltura Session](https://vpaas.kaltura.com/documentation/VPaaS-API-Getting-Started/how-to-create-kaltura-session.html).
 
 ## Uploading Your Media Files  
 
