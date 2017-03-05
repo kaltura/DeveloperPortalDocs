@@ -15,12 +15,11 @@ To get started, let's review the foundational building blocks of a video experie
 To access the Kaltura API, you'll need the following:
 
 * A Kaltura publisher account - To obtain a Kaltura account, start a [free trail](http://corp.kaltura.com/free-trial), [contact us](http://corp.kaltura.com/company/contact-us), or [download Kaltura CE](http://www.kaltura.org/project/community_edition_video_platform).
-* Your Kaltura API publisher credentials, which are available through the [KMC Integration Settings](http://www.kaltura.com/index.php/kmc/kmc4#account|integration).
+* Your Kaltura API publisher credentials, which are available through the [KMC Integration Settings](http://www.kaltura.com/index.php/kmc/kmc4#account/integration).
 
 ## Your Kaltura Account ID (PartnerId)  
 
-Your Kaltura Partner ID, or PID, is a unique number that identifies your Kaltura account.  
-Your PID is easily available at any time through the Kaltura Management Console (KMC), by simply clicking the [Account Settings tab](https://www.kaltura.com/index.php/kmc/kmc#account|overview).  
+Your Kaltura Partner ID, or PID, is a unique number that identifies your Kaltura account. Your PID is easily available at any time through the Kaltura Management Console (KMC), by simply clicking the [Account Settings tab](https://www.kaltura.com/index.php/kmc/kmc#account/overview).  
 
 > Remember: You'll need to pass the PID parameter every time you authenticate with the Kaltura API, or connect with integrated applications.
 
@@ -55,9 +54,10 @@ Which method you chose to implement depends on your application needs. The follo
 If your application is HTML5 based, you can implement a reliable and fault-tolerant large-files upload with an automatic pause-and-resume functionality, by including the Kaltura Upload JavaScript widget. The [Kaltura Upload JavaScript widget](https://github.com/kaltura/chunked-file-upload-jquery) provides a simple JavaScript library that abstracts the use of the Kaltura API and handles the files locally (such as file chunking and pause-resume).
 
 The [Kaltura Upload jQuery project](https://github.com/kaltura/chunked-file-upload-jquery) can be used as reference or basis to implement your own reliable chunked file upload to Kaltura.  
+
 For a quick view of how this method works:
 
-1. Download the project to your localhost, edit the index.php file, and switch the value of $the_user_ks_to_use to a valid Kaltura Session. 
+1. Download the project to your localhost, edit the index.php file, and switch the value of `$the_user_ks_to_use` to a valid Kaltura Session. 
 2. Next, load the page from your localhost, open your browser console and try uploading a file. You'll see all the steps printed to the browser console.
 
 ### Upload Files by Calling the API Directly  
@@ -197,6 +197,33 @@ Follow the Code Recipe below to get started with the Kaltura Analytics [report s
 {% onebox https://developer.kaltura.com/recipes/analytics/embed %}
 
 
+## Kaltura API Documentation  
+
+This section details the Kaltura API documentation that is available to developoers working with Kaltura's APIs.
+
+*   For further information on the API calls for Partner Services 3 (api_v3), please refer to the [API documentation](https://developer.kaltura.com/api-docs).
+*   Use the API Client Libraries to easily perform the API callbacks in your programming language of choice - Refer to the [Kaltura API Client Libraries Guide](https://vpaas.kaltura.com/documentation/VPaaS-API-Getting-Started/introduction-kaltura-client-libraries.html) for more information.
+*   If you use a CMS such as Drupal or WordPress, or an LMS such as Moodle, Sakai or Blackboard, make sure to check the [Kaltura Exchange](http://exchange.kaltura.com/) for a Kaltura integration to your CMS of choice.
+
+
+| Guide                                                  | Summary                                                                                                                                                                                                                                                                                                                                                                                                 |
+|--------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [Interactive Code Recipes and Examples](https://developers.kaltura.org)                  | Kaltura provides APIs for every core feature. You can use the Kaltura API to incorporate Kaltura features in web applications and web sites.                                                                                                                                                                                                                                                            |
+| [Kaltura Knowledge Center Glossary](http://knowledge.kaltura.com/glossary)                     | As a reference for understanding technical terms related to Online Video, Media Asset Management and Kaltura.                                                                                                                                                                                                                                                                                          |
+| [Kaltura's API Authentication and Security](https://vpaas.kaltura.com/documentation/VPaaS-API-Getting-Started/Kaltura_API_Authentication_and_Security.html)              | Protecting personal user data, video streaming and limiting access to features are at the heart of the Kaltura Media Asset Management Platform. This guide will take you through the basic concepts and practices of authentication and security in the Kaltura API v3.                                                                                                                                 |
+| The Kaltura Media Access Control Model                 | An Access Control Profile defines authorized and restricted domains where your content can or cannot be displayed, countries from which it can or cannot be viewed, white and black lists of IP addresses and authorized and unauthorized domains and devices in which your media can be embedded.                                                                                                      |
+| [Introduction to Kaltura Client Libraries](https://vpaas.kaltura.com/documentation/VPaaS-API-Getting-Started/introduction-kaltura-client-libraries.hmtl)               | Kaltura client libraries are SDKs in numerous programming languages that provide easy access to the Kaltura API and facilitate developing Kaltura applications.                                                                                                                                                                                                                                         |
+|                                                        |                                                                                                                                                                                                                                                                                                                                                                                                         |
+| The Kaltura Thumbnail API                              | The Thumbnail API provides an easy interface to dynamically manipulate images or video snapshots to be used as thumbnails. Using the thumbnail API it is possible to resize, cropped versions of the original Kaltura video thumbnail, a specific frame from in the video and manipulate the thumbnail image and various ways.                                                                          |
+| How To Create a Video Thumbnail Rotator in JavaScript  | Case Study of using Kaltura's Thumbnail API to create a rotating video thumbnail.                                                                                                                                                                                                                                                                                                                       |
+| How To Handle Kaltura Server Notifications in PHP      | Often applications require the ability to respond to asynchronous events that occurred on the Kaltura server. For example, when a Media Entry was uploaded, finished transcoding or any other status update.                                                                                                                                                                                            |
+| Introduction to Kaltura's Cross-Platform Media Players | Kaltura's flexible HTML5 and Adobe OSMF (Flash)-based media players provide media online publishing solutions that are easy to use and embed.                                                                                                                                                                                                                                                           |
+| JavaScript API for Kaltura Media Players               | Kaltura's powerful media player JavaScript API enables you to design flexible, multifaceted interaction with the player.                                                                                                                                                                                                                                                                                |
+| Creating Kaltura Server Plugins                        | A Kaltura server plugin extends Kaltura server functionality, such as services and batches. You create a server plugin to rapidly and cost-effectively expand upon the core Kaltura platform for your own specific use case, create an application to publish to the community, and potentially generate revenue from your contribution to the Kaltura system through the Kaltura Application Exchange. |
+                                                                                                                                         
+               
+
+
 ## Kaltura API Usage Guidelines  
 
 ### Document Conventions  
@@ -227,6 +254,7 @@ The Kaltura API SDK includes client library packages in different languages, inc
 
 To get the entire API in your IDE, just download the client library for the language that you use to develop your applications and include the client library in your application or project.
 
+
 ### Getting a Client Library for a Language that Kaltura Does Not Provide  
 
 The Kaltura client libraries are generated automatically based on API schema. Kaltura also strives to include contributions from the community and customers, and we welcome contributions of client libraries for languages that Kaltura does not yet provide.
@@ -255,7 +283,6 @@ To learn more about the Kaltura Session and API Authentication, read: [Kaltura'
 | ACTION_NOT_SPECIFIED               | Action name was not specified, please specify one                                                                   |   |
 | ACTION_DOES_NOT_EXISTS             | Action "%ACTION_NAME%" does not exist for service "%SERVICE_NAME%"                                                  |   |
 | MISSING_MANDATORY_PARAMETER        | Missing parameter "%PARAMETER_NAME%"                                                                                |   |
-
 
 
 
