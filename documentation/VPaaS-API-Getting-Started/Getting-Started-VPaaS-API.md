@@ -296,7 +296,7 @@ The format of the API method location is:https://developer.kaltura.com/api-docs/
 *   [SERVICENAME] represents a specific service
 *   [ACTIONNAME] represent an action to be applied in the specific service
 
-** Request URL Example**
+#### Request URL Example  
 
 Post a request to activate the *list* action of the *media* service to the following URL: https://developer.kaltura.com/api-docs/#/media.list.
 
@@ -341,12 +341,13 @@ A comma separates the error ID from the description.
 <pre class="brush: plain;fontsize: 100; first-line: 1; ">ENTRY_ID_NOT_FOUND,Entry id "%s" not found </pre>
 {% endhighlight %}
 
-whereby *%s* is replaced with the value that is sent to the API call.
+where *%s* is replaced with the value that is sent to the API call.
 
 In the response XML:
 
-* The *<code>* node contains the error code (such as *ENTRY\_ID\_NOT_FOUND*).
-* The *<message>* node contains the description (such as *Entry id “%s” not found*).
+*   The *<code>* node contains the error code (such as *ENTRY\_ID\_NOT_FOUND*).
+*   The *<message>* node contains the description (such as *Entry id “%s” not found*).
+
 
 #### ErrorResponse  
 
@@ -366,9 +367,9 @@ While the Kaltura API is processing each of the API calls in a multi-request, it
 
 #### Using the Multi-Request Feature  
 
-**Multi-Request with Dependency: Sample Use Case**
+##### Multi-Request with Dependency - Sample Use Case
 
-To create a new entry out of a file in your server, you execute several different API calls:
+To create a new entry out of a file in your server, execute several different API calls:
 
 1.  uploadToken.add
 2.  uploadToken.upload
@@ -376,26 +377,23 @@ To create a new entry out of a file in your server, you execute several differen
 
 The result of *uploadToken.add* is an *uploadToken* object that consists of a token string.
 
-You need the token string when executing the next action – uploading the file. So you must complete the first action in order to call the second.
+You'll need the token string when executing the next action – uploading the file, therefore, you must complete the first action to call the second one.
 
 Using the multi-request feature, in the second request you specify obtaining the value of the token parameter from the token property that is the result of the first request.
 
-**Multi-Request Structure**
+### Multi-Request Structure  
 
-<p class="Sub-Heading mce-procedure">
-  To perform a multi-request call:
-</p>
+To perform a multi-request call:
 
-1.  Define the *GET* parameter of *service* as *multirequest* and define *action* as *null*:[  
-    ][12]<pre class="brush: as3;fontsize: 100; first-line: 1; ">http://www.kaltura.com/api_v3/?service=multirequest&action=null</pre>
+1.  Define the *GET* parameter of *service* as *multirequest* and define the *action* as *null* using (http://www.kaltura.com/api_v3/?service=multirequest&action=null).
 
 2.  Prefix each API call with a number that represents its order in the multi-request call, followed by a colon. Prefix the first call with *1:*, the second with *2:*, and so on.
+
 3.  Use the prefix for each of an API call's parameters (service, action, and action parameters).
 
- [12]: http://www.kaltura.com/api_v3/?service=multirequest&action=null
+### Multi-Request Structure Example  
 
-**Multi-Request Structure Example**
-
+{% highlight c %}
 <pre class="brush: xml;fontsize: 100; first-line: 1; ">Request URL: api_v3/index.php?service=multirequest&action=null
 	POST variables:
 		1:service=baseEntry
@@ -407,18 +405,16 @@ Using the multi-request feature, in the second request you specify obtaining the
 		2:entryId=0_zsadqv3e
 		2:version=-1
 		ks={ks}</pre>
+{% endhighlight %}
 
-<p class="Sub-Heading">
-  <strong>Multi-Request with Dependency: Structure</strong>
-</p>
 
-<p class="Sub-Heading mce-procedure">
-  To create a multi-request with a dependent request:
-</p>
+### Multi-Request with Dependency - Structure  
 
-Use the following structure as input in the variable whose value you want to replace with a result of a preceding request:
+To create a multi-request with a dependent request, use the following structure as input in the variable whose value you want to replace with a result of a preceding request:
 
+{% highlight c %}
 <pre class="brush: xml;fontsize: 100; first-line: 1; ">{num:result:propertyName}</pre>
+{% endhighlight %}
 
 where:
 
@@ -426,9 +422,9 @@ where:
 *   *result* instructs the Kaltura API to replace this value with a result from another request.
 *   *propertyName* is the property to obtain from the object of the required result.
 
-<p class="Sub-Heading">
-  <strong>Multi-Request With Dependency: Example</strong>
-</p>
+### Multi-Request With Dependency - Example  
+
+{% highlight c %}
 
 <pre class="brush: xml;fontsize: 100; first-line: 1; ">Request URL: api_v3/index.php?service=multirequest&action=null
 	POST variables:
@@ -439,18 +435,18 @@ where:
 		2:action=get
 		2:entryId={1:result:objects:0:id}
 		ks={ks}</pre>
+{% endhighlight %}
 
-In the example, the first request lists entries whose names resemble *myentry*.
 
-The *media.list* request returns an object of type *KalturaMediaListResponse*, which contains an object named *objects* of type *KalturaMediaEntryArray*.
+In the example, the first request lists entries whose names resemble *myentry*. The *media.list* request returns an object of type *KalturaMediaListResponse*, which contains an object named *objects* of type *KalturaMediaEntryArray*.
 
 The second request is *media.get*, which uses *entryId* as input.
 
 The *entryId* input is dynamic, and the value is obtained from the first request. Since the *media.list* response is constructed of array object within a response object, the first property to access is *KalturaMediaEntryArray*.
 
-Since in *KalturaMediaEntryArray* you want to obtain the first element (index **), you add *:0* to the request value.
+Since in the `KalturaMediaEntryArray` you want to obtain the first element (index **), add *:0* to the request value.
 
-Since from the first element you want only the ID that is the input for the second request, you add *:id* to the request value.
+Since from the first element you want only the ID that is the input for the second request, add *:id* to the request value.
 
 
 ## Maintaining Backward Compatibility and Tracking Version Changes  
