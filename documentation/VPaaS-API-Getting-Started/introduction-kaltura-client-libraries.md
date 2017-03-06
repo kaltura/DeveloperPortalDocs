@@ -893,31 +893,22 @@ The sample code demonstrates the following scenario for using a Kaltura client l
 
 To understand the sample code in detail, see [Using a Kaltura Client Library][3].
 
-<p class="mce-heading-3">
-  Sample Code – Available Languages
-</p>
+## Sample Code – Available Languages
 
-Sample code appears for:
+Sample code appears for the following languages:
 
-*   [PHP5][26]
-*   [Java][27]
-*   [C#][28]
-*   [Python][29]
-*   [Ruby][30]
-*   [AS3][31]
-*   [JavaScript][32]
-*   [Objective-C/Cocoa][33]
+* PHP
+* Java
+* C#
+* Python
+* Ruby
+* AS3
+* JavaScript
+* Objective-C/Cocoa
 
- [26]: #PHP5
- [27]: #Java
- [28]: #CSharp
- [29]: #Python
- [30]: #Ruby
- [31]: #AS3
- [32]: #JavaScript
- [33]: #ObjectiveC
+### PHP5  
 
-<span class="mce-heading-4"><a name="PHP5"></a>PHP5</span> {% highlight perl %}
+{% highlight perl %}
 require_once 'KalturaClient.php'; 
 $kalturaConfig = new KalturaConfiguration(123); // where 123 is your partner ID 
 $kalturaConfig->serviceUrl = ‘http://KalturaServerDomain’; // if you want to communicate with a Kaltura server which is other than the default http://www.kaltura.com 
@@ -933,9 +924,9 @@ try {
 }
 {% endhighlight %} 
 
-<p class="mce-heading-4">
-  <a name="Java"></a>Java
-</p> {% highlight java %}
+### Java  
+
+{% highlight java %}
 package com.kaltura.code.example; 
 import com.kaltura.client.enums.*; 
 import com.kaltura.client.types.*; 
@@ -964,9 +955,9 @@ class CodeExample
 }
 {% endhighlight %} 
 
-<p class="mce-heading-2 mce-heading-4">
-  <a name="CSharp"></a>C#
-</p> {% highlight csharp %}
+### C#  
+
+{% highlight csharp %}
 using System.Collections.Generic; 
 using System.Text; 
 using System.IO; 
@@ -996,9 +987,9 @@ namespace Kaltura
 }
 {% endhighlight %} 
 
-<p class="mce-heading-2 mce-heading-4">
-  <a name="Python"></a>Python
-</p> {% highlight python %}
+### Python  
+
+{% highlight python %}
 from KalturaClient import * 
 config = KalturaConfiguration(123) # where 123 is your partner ID 
 config.serviceUrl = "http://devtests.kaltura.co.cc/" # if you want to communicate with a Kaltura server which is other than the default http://www.kaltura.com 
@@ -1013,9 +1004,9 @@ except KalturaException, e:
     print "could not get entry from Kaltura. Reason: %s" % repr(e)
 {% endhighlight %} 
 
-<p class="mce-heading-2 mce-heading-4">
-  <a name="Ruby"></a>Ruby
-</p> {% highlight ruby %}
+### Ruby  
+
+{% highlight ruby %}
 require "ruby_client.rb" 
 include Kaltura 
 config = KalturaConfiguration.new(123) # where 123 is your partner ID 
