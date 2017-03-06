@@ -6,7 +6,7 @@ weight: 106
 
 This article describes the following topics:
 
-* [Understanding Kaltura Client Libraries][1]
+* [Understanding Kaltura's Client Libraries][1]
 * [Deciding Where to Get a Client Library][2] and Getting/Generating Your Kaltura Client Library
 * [Using a Kaltura Client Library][3]
 
@@ -1028,19 +1028,18 @@ media_entry = client.media_service.get(entry_id)
 puts media_entry.name
 {% endhighlight %} 
 
-<p class="mce-note-graphic">
-  The Ruby client library does not include a local generateSession function to generate a Kaltura session. Instead, use the session service to start a session.
-</p>
+>Note: The Ruby client library does not include a local generateSession function to generate a Kaltura session. Instead, use the session service to start a session.
 
-<p class="mce-heading-2 mce-heading-4">
-  <a name="AS3"></a>AS3
-</p> {% highlight c %}
+### AS3  
+
+{% highlight c %}
 { import com.kaltura.KalturaClient; import com.kaltura.commands.baseEntry.BaseEntryGet; import com.kaltura.config.KalturaConfig; import com.kaltura.events.KalturaEvent; public class CodeExample { private var \_client:KalturaClient; public function CodeExample() { // create KalturaClient: var configuration:KalturaConfig = new KalturaConfig(); configuration.partnerId = "123"; // where 123 is your partner ID configuration.ignoreNull = 1; configuration.ks = loaderInfo.parameters.ks; // ks passed in as flashvar \_client = new KalturaClient(configuration); var entryId:String = "XXXYYYZZZA"; // a known ID of media entry that you have var beg:BaseEntryGet = new BaseEntryGet(entryId); beg.addEventListener(KalturaEvent.COMPLETE, handleEntryGet); beg.addEventListener(KalturaEvent.FAILED, handleEntryGet); _client.post(beg); } private function handleEntryGet(e:KalturaEvent):void { e.target.removeEventListener(KalturaEvent.COMPLETE, handleEntryGet); e.target.removeEventListener(KalturaEvent.FAILED, handleEntryGet); if (e.type == KalturaEvent.COMPLETE) { trace(e.data.name); } else { trace("could not get entry from Kaltura. Reason: ", e.error.errorMsg); } } } }
 {% endhighlight %} 
 
-<p class="mce-heading-2 mce-heading-4">
-  <a name="JavaScript"></a>JavaScript
-</p> {% highlight javascript %}
+### JavaScript  
+ 
+
+{% highlight javascript %}
 <script type="text/javascript"> 
 var kConfig; 
 var kClient; 
@@ -1074,19 +1073,21 @@ function getEntryResult(success, data)
 </script>
 {% endhighlight %} 
 
-<p class="mce-sub-heading">
-  Handling Secrets
-</p>
+### Handling Secrets  
 
-Since JavaScript is a client-side programming language, secrets included in the code are compromised. Exposing secrets causes a security issue.
+Because JavaScript is a client-side programming language, secrets included in the code are compromised. Exposing secrets causes a security issue.
 
-To avoid exposing the KS secret, Kaltura recommends calling an AJAX (or similar methodology) server‑side action that returns a KS. The sample code implements the recommendation: {% highlight javascript %}var ks = ajaxGetKs(partnerId, userId, expiry, privileges);{% endhighlight %} 
+To avoid exposing the KS secret, Kaltura recommends calling an AJAX (or similar methodology) server‑side action that returns a KS. The sample code implements the recommendation: 
 
-For more information about security issues related to accessing the Kaltura API using client-side technology, refer to [Kaltura API Usage Guidelines][11].
+{% highlight javascript %}
+var ks = ajaxGetKs(partnerId, userId, expiry, privileges);
+{% endhighlight %} 
 
-<p class="mce-heading-4">
-  <a name="ObjectiveC"></a>Objective-C/Cocoa
-</p> {% highlight objc %}
+For more information about security issues related to accessing the Kaltura API using client-side technology, refer to [Kaltura API Authentication and Security](https://vpaas.kaltura.com/documentation/VPaaS-API-Getting-Started/Kaltura_API_Authentication_and_Security.html).
+
+### Objective-C/Cocoa  
+
+{% highlight objc %}
 #import "KalturaClient.h" 
 #define SERVICE_URL (@"http://www.kaltura.com") 
 #define ADMIN_SECRET (@"1234abcd") 
