@@ -7,7 +7,7 @@ weight: 106
 This article describes the following topics:
 
 * [Understanding Kaltura's Client Libraries][1]
-* [Deciding Where to Get a Client Library][2] and Getting/Generating Your Kaltura Client Library
+* [Deciding on the Right Type of Client Library][2] and Getting/Generating Your Kaltura Client Library
 * [Using a Kaltura Client Library][3]
 
  [1]: #UnderstandingKalturaClientLibraries
@@ -17,23 +17,6 @@ This article describes the following topics:
 This article does not address how to implement specific flows using the Kaltura API.
 
 >Note: This document applies to Kaltura API version 3 and later.
-
-## Sample Code Usage  
-
-All sample code is PHP5, unless otherwise stated.
-
-The sample code is designed to show you how to use the features of Kaltura client libraries.
-
->Note: The sample code is formatted for this document and includes hard-coded examples. Before using sample code copied from this document, replace the examples and adapt the formatting.
-
-## Document Conventions  
-
-*   File paths and names appear in bold.  
-    Example:** /[INSTALLATION_PATH]/app/generator/config.ini**
-
-*   A string in brackets [] represents a value.  
-    Replace the string – including the brackets – with an actual value.  
-    Example: Replace *[yourClientLibraryName]* with *Java*.
 
 ## What are Kaltura's Kaltura Client Libraries?  
 
@@ -45,7 +28,7 @@ A Kaltura client library:
 
 The Kaltura client library is a collection of classes. Each class consists of objects and service classes. The collection of classes represents the entities, services, and actions that the Kaltura API provides.
 
-## Why SHould You Use a Kaltura Client Library?  
+## Why Should You Use a Kaltura Client Library?  
 
 Kaltura recommends that you use a Kaltura Client Library when you develop applications that interact with the Kaltura API. Client libraries provide the following benefits:
 
@@ -90,6 +73,23 @@ When you have a client library:
 * Refer to [Sample Code for Multiple Client Library Languages][7] to help use your client library.
 
  [7]: #SampleCode
+
+## Sample Code Usage  
+
+All sample code is PHP5, unless otherwise stated.
+
+The sample code is designed to show you how to use the features of Kaltura client libraries.
+
+>Note: The sample code is formatted for this document and includes hard-coded examples. Before using sample code copied from this document, replace the examples and adapt the formatting.
+
+## Document Conventions  
+
+*   File paths and names appear in bold.  
+    Example:** /[INSTALLATION_PATH]/app/generator/config.ini**
+
+*   A string in brackets [] represents a value.  
+    Replace the string – including the brackets – with an actual value.  
+    Example: Replace *[yourClientLibraryName]* with *Java*.
 
 ## Client Library Programming Languages  
 
