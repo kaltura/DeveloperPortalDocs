@@ -1,7 +1,7 @@
 ---
 layout: page
 title: How to use Kaltura's API Abstract Classes
-weight: 106
+weight: 107
 ---
 
 Abstract classes cannot be instantiated. Therefore abstracts have derived classes, but not objects. For each abstract class, use one of its sub classes.
