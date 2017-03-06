@@ -21,23 +21,25 @@ Player errors contain 4 types:
 3. `failedToPlayToEndTime`, code: 7002.</br>userInfo holds the root error if exists. Sent when player failed to play to the end time.
 4. `playerItemErrorLogEvent`, code: 7003.</br>wraps `AVPlayerItemErrorLogEvent` which contains all error log events.</br>userInfo holds the root error code and root domain of the original error. Sent when player received error log event.
 
-###Plugins General (`PKPluginError`)
+###Plugins
+
+####Plugins General (`PKPluginError`)
 
 For plugins we have 2 general errors:
 
 1. `failedToCreatePlugin`, code: 2000.</br>Sent when failed to create the plugin.
 2. `missingPluginConfig`, code: 2001.</br>userInfo holds the plugin name. Sent when the plugin is missing his config.
 
-###Analytics Plugins - (`AnalyticsError`)
+####Analytics Plugins - (`AnalyticsError`)
 
 1. `missingMediaEntry`, code: 2100.</br>Sent when failed to send analytics event because media entry is missing.
 2. `missingInitObject`, code: 2101.</br>userInfo holds the plugin name. Sent when failed to send analytics event because initObj is missing.
 
-###Youbora - (`YouboraPluginError`)
+####Youbora - (`YouboraPluginError`)
 
 Youbora has only one error, `failedToSetupYouboraManager`, code: 2200.</br>Sent when failed to setup Youbora manager, can happen when config is wrong or media entry is missing.
 
-###IMA - (`IMAPluginError`)
+####IMA - (`IMAPluginError`)
 
 IMA errors codes (see `IMAErrorCode` for all codes) and descriptions are the same as the original error. 
 In addition, the userInfo holds the the error type from IMA error types.
