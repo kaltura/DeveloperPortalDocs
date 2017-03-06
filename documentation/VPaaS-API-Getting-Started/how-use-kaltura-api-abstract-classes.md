@@ -4,21 +4,23 @@ title: How to use Kaltura's API Abstract Classes
 weight: 107
 ---
 
-Abstract classes cannot be instantiated. Therefore abstracts have derived classes, but not objects. For each abstract class, use one of its sub classes.
+Abstract classes cannot be instantiated; therefore abstracts have derived classes, but not objects. For each abstract class, use one of its sub classes.
 
 Each abstract class has a subset of required properties. The specific properties that are required depend on the service/action pair and object used with the sub class.
 
-<p class="APEdocument APEinternal">
-  For example, for the <a href="https://developer.kaltura.com/api-docs/#/syndicationFeed.add">syndicationFeed.add</a> API, select one of the sub classes listed for the abstract <a href="https://developer.kaltura.com/api-docs/#/KalturaBaseSyndicationFeed">KalturaBaseSyndicationFeed</a> class, such as <a href="https://developer.kaltura.com/api-docs/#/KalturaGenericSyndicationFeed">KalturaGenericSyndicationFeed</a>.
-</p>
+For example, for the [syndicationFeed.add](https://developer.kaltura.com/api-docs/#/syndicationFeed.add) API, select one of the sub classes listed for the abstract [KalturaBaseSyndicationFeed](https://developer.kaltura.com/api-docs/#/KalturaBaseSyndicationFeed) class, such as [KalturaGenericSyndicationFeed]"https://developer.kaltura.com/api-docs/#/KalturaGenericSyndicationFeed).
 
-<p class="APEdocument APEinternal">
-  <a href="https://developer.kaltura.com/api-docs/#/KalturaBaseSyndicationFeed">KalturaBaseSyndicationFeed</a> supports <a href="https://developer.kaltura.com/api-docs/#/KalturaGoogleVideoSyndicationFeed">Google</a>, <a href="https://developer.kaltura.com/api-docs/#/KalturaITunesSyndicationFeed">iTunes</a>, <a href="https://developer.kaltura.com/api-docs/#/KalturaTubeMogulSyndicationFeed">TubeMogul</a>, <a href="https://developer.kaltura.com/api-docs/#/KalturaYahooSyndicationFeed">Yahoo</a>, and <a href="https://developer.kaltura.com/api-docs/#/KalturaGenericXsltSyndicationFeed">KalturaGenericXsltSyndicationFeed</a> (a sub class of <a href="https://developer.kaltura.com/api-docs/#/KalturaGenericSyndicationFeed" class="APEdocument APEinternal">KalturaGenericSyndicationFeed</a>). <a href="https://developer.kaltura.com/api-docs/#/KalturaGenericXsltSyndicationFeed">KalturaGenericXsltSyndicationFeed</a> supports running a custom XSLT on the XML feed that the Kaltura system generates internally.
-</p>
+The [KalturaBaseSyndicationFeed](https://developer.kaltura.com/api-docs/#/KalturaBaseSyndicationFeed) supports the following:
 
-<p class="APEdocument APEinternal">
-  To call the <a href="https://developer.kaltura.com/api-docs/#/syndicationFeed.add">syndicationFeed.add</a> API with the <a href="https://developer.kaltura.com/api-docs/#/KalturaGenericXsltSyndicationFeed">KalturaGenericXsltSyndicationFeed</a> sub class:
-</p>{% highlight php %}
+* [Google](https://developer.kaltura.com/api-docs/#/KalturaGoogleVideoSyndicationFeed)
+* [iTunes](https://developer.kaltura.com/api-docs/#/KalturaITunesSyndicationFeed)
+* [TubeMogul](https://developer.kaltura.com/api-docs/#/KalturaTubeMogulSyndicationFeed)
+* [Yahoo](https://developer.kaltura.com/api-docs/#/KalturaYahooSyndicationFeed)
+* [KalturaGenericXsltSyndicationFeed](https://developer.kaltura.com/api-docs/#/KalturaGenericXsltSyndicationFeed) a sub class of [KalturaGenericSyndicationFeed](https://developer.kaltura.com/api-docs/#/KalturaGenericSyndicationFeed), which supports running a custom XSLT on the XML feed that the Kaltura system generates internally.
+
+To call the [syndicationFeed.add](https://developer.kaltura.com/api-docs/#/syndicationFeed.add) API with the [KalturaGenericXsltSyndicationFeed](https://developer.kaltura.com/api-docs/#/KalturaGenericXsltSyndicationFeed) sub class use the following:
+
+{% highlight php %}
 <?php 
 require_once('lib/KalturaClient.php'); 
 $config = new KalturaConfiguration($partnerId); 
