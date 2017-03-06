@@ -4,19 +4,7 @@ title: Introduction to Kaltura's Client Libraries
 weight: 106
 ---
 
-This article describes the following topics:
-
-* [Understanding Kaltura's Client Libraries][1]
-* [Deciding on the Right Type of Client Library][2] and Getting/Generating Your Kaltura Client Library
-* [Using a Kaltura Client Library][3]
-
- [1]: #UnderstandingKalturaClientLibraries
- [2]: #DecidingontheRightTypeofClientLibrary
- [3]: #UsingaKalturaClientLibrary
-
-This article does not address how to implement specific flows using the Kaltura API.
-
->Note: This document applies to Kaltura API version 3 and later.
+>Note: This article applies to Kaltura API version 3 and later. It does not address how to implement specific flows using the Kaltura API.
 
 ## What are Kaltura's Kaltura Client Libraries?  
 
@@ -57,7 +45,7 @@ To understand which type to use, see [Deciding Where to Get a Client Library](#D
 
 ## How Do You Start Using a Kaltura Client Library?  
 
-First, [decide where to get a client library](#DecidingontheRightTypeofClientLibrary). Then do one of the following:
+First, [decide on the right type of client library](#DecidingontheRightTypeofClientLibrary). Then do one of the following:
 
 * [Get a client library for Kaltura Hosted Edition][4].
 * [Generate a client library for Kaltura On-Prem and Kaltura CE][5].
