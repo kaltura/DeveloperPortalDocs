@@ -1,6 +1,6 @@
 ---
 layout: page
-title: How to use Kaltura's API Abstract Classes
+title: Introduction to Kaltura's Client Libraries
 weight: 106
 ---
 
