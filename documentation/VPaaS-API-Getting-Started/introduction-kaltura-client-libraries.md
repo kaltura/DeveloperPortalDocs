@@ -1062,7 +1062,7 @@ function getEntryResult(success, data)
 </script>
 {% endhighlight %} 
 
-### Handling Secrets  
+#### Handling Secrets  
 
 Because JavaScript is a client-side programming language, secrets included in the code are compromised. Exposing secrets causes a security issue.
 
