@@ -309,20 +309,22 @@ For all request types:
 *   Send input parameters as a standard URL-encoded key-value string.
 *   When an input parameter is an object, flatten it to pairs of ObjectName:Param keys.
 
-** Request Input Parameters Example**
+#### Request Input Parameters Example  
 
+{% highlight c %}
 <pre class="brush: plain;fontsize: 100; first-line: 1; ">id=abc12&name=name%20with%20spaces&entry:tag=mytag&entry:description=mydesc</pre>
+{% endhighlight %}
 
 In the example, the following parameters are URL encoded and are passed as API input parameters:
 
+{% highlight c %}
 <pre class="brush: plain;fontsize: 100; first-line: 1; ">id = ‘abc’
 name = ‘name with spaces’
 entry {
 	tag = ‘mytag’,
 	description = ‘mydesc’	
 }</pre>
-
-                                                                          |   |
+{% endhighlight %}
 
 ### API Errors and Error Handling  
 
@@ -335,7 +337,9 @@ A comma separates the error ID from the description.
 
 #### API Error Example  
 
+{% highlight c %}
 <pre class="brush: plain;fontsize: 100; first-line: 1; ">ENTRY_ID_NOT_FOUND,Entry id "%s" not found </pre>
+{% endhighlight %}
 
 whereby *%s* is replaced with the value that is sent to the API call.
 
