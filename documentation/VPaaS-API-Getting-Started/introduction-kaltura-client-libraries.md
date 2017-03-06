@@ -16,11 +16,9 @@ This article describes the following topics:
 
 This article does not address how to implement specific flows using the Kaltura API.
 
-### Applicability  
+>Note: This document applies to Kaltura API version 3 and later.
 
-This document applies to Kaltura API version 3 and later.
-
-### Sample Code Usage  
+## Sample Code Usage  
 
 All sample code is PHP5, unless otherwise stated.
 
@@ -28,7 +26,7 @@ The sample code is designed to show you how to use the features of Kaltura clien
 
 >Note: The sample code is formatted for this document and includes hard-coded examples. Before using sample code copied from this document, replace the examples and adapt the formatting.
 
-### Document Conventions  
+## Document Conventions  
 
 *   File paths and names appear in bold.  
     Example:** /[INSTALLATION_PATH]/app/generator/config.ini**
@@ -47,7 +45,7 @@ A Kaltura client library:
 
 The Kaltura client library is a collection of classes. Each class consists of objects and service classes. The collection of classes represents the entities, services, and actions that the Kaltura API provides.
 
-### When Do You Use a Kaltura Client Library?  
+## Why SHould You Use a Kaltura Client Library?  
 
 Kaltura recommends that you use a Kaltura Client Library when you develop applications that interact with the Kaltura API. Client libraries provide the following benefits:
 
@@ -64,7 +62,7 @@ Kaltura recommends that you use a Kaltura Client Library when you develop applic
 * Global parameters are utilized for you.
 
 
-### >What Are the Types of Client Libraries?  
+## What Are the Types of Client Libraries Available?  
 
 There are different types of client libraries:
 
@@ -74,7 +72,7 @@ There are different types of client libraries:
 
 To understand which type to use, see [Deciding Where to Get a Client Library](#DecidingontheRightTypeofClientLibrary).
 
-### How Do You Start Using a Kaltura Client Library?  
+## How Do You Start Using a Kaltura Client Library?  
 
 First, [decide where to get a client library](#DecidingontheRightTypeofClientLibrary). Then do one of the following:
 
@@ -93,7 +91,7 @@ When you have a client library:
 
  [7]: #SampleCode
 
-### Client Library Programming Languages  
+## Client Library Programming Languages  
 
 Kaltura provides [downloadable client libraries][8] for the Kaltura Hosted Edition in various programming languages. These languages also are available when [generating a client library for Kaltura On-Prem and Kaltura CE][5]. You can generate a client library for an additional language. See [Generating a Client Library for a Language that Kaltura Does Not Provide][9].
 
