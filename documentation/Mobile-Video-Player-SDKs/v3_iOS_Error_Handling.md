@@ -12,7 +12,7 @@ Errors from the observation comes as `NSError` object that includes: domain, err
 
 All error domains are centerlized at `PKErrorDomain` for easy access, for example: `PKErrorDomain.Player` get the player error domain. 
 
-###Player - (PlayerError)
+###Player - (`PlayerError`)
 
 Player errors contain 4 types:
 
@@ -21,28 +21,70 @@ Player errors contain 4 types:
 3. `failedToPlayToEndTime`, code: 7002.</br>userInfo holds the root error if exists. Sent when player failed to play to the end time.
 4. `playerItemErrorLogEvent`, code: 7003.</br>wraps `AVPlayerItemErrorLogEvent` which contains all error log events.</br>userInfo holds the root error code and root domain of the original error. Sent when player received error log event.
 
-###Plugins General (PKPluginError)
+###Plugins General (`PKPluginError`)
 
 For plugins we have 2 general errors:
 
 1. `failedToCreatePlugin`, code: 2000.</br>Sent when failed to create the plugin.
 2. `missingPluginConfig`, code: 2001.</br>userInfo holds the plugin name. Sent when the plugin is missing his config.
 
-###IMA - (IMAPluginError)
+###Analytics Plugins - (`AnalyticsError`)
 
-IMA errors codes and descriptions are the same as the original error. 
+1. `missingMediaEntry`, code: 2100.</br>Sent when failed to send analytics event because media entry is missing.
+2. `missingInitObject`, code: 2101.</br>userInfo holds the plugin name. Sent when failed to send analytics event because initObj is missing.
+
+###Youbora - (`YouboraPluginError`)
+
+Youbora has only one error, `failedToSetupYouboraManager`, code: 2200.</br>Sent when failed to setup Youbora manager, can happen when config is wrong or media entry is missing.
+
+###IMA - (`IMAPluginError`)
+
+IMA errors codes (see `IMAErrorCode` for all codes) and descriptions are the same as the original error. 
 In addition, the userInfo holds the the error type from IMA error types.
 
-###Analytics Plugins - (AnalyticsError)
+###DRM
 
-1. `missingMediaEntry`, code: 3000.</br>Sent when failed to send analytics event because media entry is missing.
-2. `missingInitObject`, code: 3001.</br>userInfo holds the plugin name. Sent when failed to send analytics event because initObj is missing.
+####Widevine Classic (`WidevineClassError`)
 
-###Youbora - (YouboraPluginError)
+Widevine classic has 2 errors:
 
-Youbora has only one error, `failedToSetupYouboraManager`, code: 4000.</br>Sent when failed to setup Youbora manager, can happen when config is wrong or media entry is missing.
+1. `invalidDRMData`, code: 6200.</br>Sent when we could not extract the license URI from the DRM data.
+2. `missingWidevineFile`, code: 6201.</br>Sent when registering local asset fails because widevine file not found.
 
 ##Usage
+
+Loading a `Player` object can fail and we want to make sure you have the ability to handle such cases:
+
+>swift
+
+```swift
+do {
+    player = try PlayKitManager.shared.loadPlayer(pluginConfig: pluginConfig)
+} catch let e {
+    // handle error
+    if e.code == PKErrorCode.failedToCreatePlugin {
+        // handle failed to create plugin
+    } else if e.code == PKErrorCode.missingPluginConfig {
+        // handle missing plugin config
+    }
+}
+```
+
+>objc
+
+```objc
+NSError *error = nil;
+self.kPlayer = [PlayKitManager.sharedInstance loadPlayerWithPluginConfig: pluginConfig error: &error];
+
+if (error) {
+    // handle error
+    if (error.code == PKErrorCode.FailedToCreatePlugin) {
+        // handle failed to create plugin
+    } else if (error.code == PKErrorCode.MissingPluginConfig) {
+        // handle missing plugin config
+    }
+}
+```
 
 In order to observe errors we use the following types:
 
@@ -50,22 +92,25 @@ In order to observe errors we use the following types:
 2. `PlayerEvent.pluginError` - represent plugin related errors.
 3. `AdEvent.error` - represents ads error
 
+For example observing `PlayerEvent.error`:
+
 >swift
-````swift
+
+```swift
 player.addObserver(self, events: [PlayerEvent.error]) { event in
-    if let error = event.error, error.domain == PKErrorDomain.Player && error.code == 7000 {
+    if let error = event.error, error.code == PKErrorCode.assetNotPlayable {
         // handle error
     }
 }
-````
+```
 
 >objc
-````objc
+
+```objc
 [self.kPlayer addObserver:self events:@[PlayerEvent.error] block:^(PKEvent * _Nonnull event) {
     NSError *error = event.error;
-    if (error && error.domain == PKErrorDomain.Player && error.code == 7000) {
+    if (error && error.code == PKErrorCode.AssetNotPlayable) {
         // handle error
     }
 }];
-````
-
+```
