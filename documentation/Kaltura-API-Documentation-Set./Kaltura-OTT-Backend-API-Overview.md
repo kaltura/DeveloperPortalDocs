@@ -4,7 +4,7 @@ title: Kaltura’s OTT Backend API Overview
 ---
 
 Kaltura’s OTT Backend features hundreds of REST-based APIs that provide programmable access to every OTT service. With full access to the OTT Backend API, you can extend every feature and functionality of the Kaltura Platform integrate Kaltura’s solutions, services, and widgets seamlessly, creating a unified experience within your chosen environments.
-This site provides comprehensive documentation on Kaltura’s OTT Backend API, and is intended to developers who wish to use these APIs within their services. To gain a greater understanding of Kaltura’s OTT Video Platform, please review the [Introduction to Kaltura Platform]( https://corp.kaltura.com/content/video-platform-features) article.
+This site provides comprehensive documentation on Kaltura’s OTT Backend API, and is intended to developers who wish to use these APIs within their services. To gain a greater understanding of Kaltura’s OTT Video Platform, please review the [introduction to Kaltura OTT TV](https://corp.kaltura.com/Video-Solutions/OTT-TV-and-TV-Everywhere) article.
 
 ## About Kaltura’s OTT Backend  
 
@@ -240,6 +240,3 @@ http://www.kaltura.com/api_v3/service/asset/action/get:
 }
 {% endhighlight %}
 
-## Additional Help and Support  
-
-For additional support, please visit [Kaltura Community Forums](http://www.kaltura.org/forums).
