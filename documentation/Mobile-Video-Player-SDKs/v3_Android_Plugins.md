@@ -15,8 +15,7 @@ To configure the plugin protected functions, follow these steps:
 
 1 . Add a factory function - this enables the Kaltura Video Player to create a new instance of the Analytics Plugin and register the new plugin.
 
- {% highlight c %}
- java
+ {% highlight java %}
  public static final Factory factory = new Factory() {
  @Override
  public String getName() {
@@ -35,9 +34,8 @@ To configure the plugin protected functions, follow these steps:
 
 3 . Add a listener to the relevant events by calling the following function - all of the relevant events will follow the listener:  
 
- {% highlight c %}
+ {% highlight java %}
 
-java
  messageBus.listen(hereComesTheEventListener, PlayerEvent.Type.PLAY, PlayerEvent.Type.PAUSE, PlayerEvent.Type.ENDED,  PlayerEvent.Type.ERROR, PlayerEvent.Type.LOADED_METADATA);
 
  {% endhighlight %}
@@ -47,8 +45,7 @@ java
 
 5 . If you want to report events to the application, you can use LogEvent in the following way: 
 
- {% highlight c %}
-java
+ {% highlight java %}
 
  messageBus.post(new LogEvent(TAG + " " + ((PlayerEvent) event).type.toString()));
 
@@ -62,8 +59,7 @@ java
 Next, you'll need to enable the Analytics Plugin by registering it inside the application as follows:
 
 
- {% highlight c %}
-java
+ {% highlight java %}
  PlayKitManager.registerPlugins(GenericAnalyticsPlugin.factory);
  {% endhighlight %}
 
@@ -73,8 +69,7 @@ java
 To configure the Analytics Plugin, add the following configuration to your `pluginConfig` file as follows:
 
 
- {% highlight c %}
-java
+ {% highlight java %}
  private void configureGenericAnalyticsPlugin(PlayerConfig pluginConfig) {
          JsonObject genericConfigEntry = new JsonObject();
          genericConfigEntry.addProperty("NameOfThe Configuration", value of the configuration);
@@ -86,8 +81,7 @@ java
 For the Analytics Plugin to start loading, you'll need to set the plugin configugration you created as follows:
 
 
- {% highlight c %}
-java
+ {% highlight java %}
  PlayerConfig config = new PlayerConfig();
  PlayerConfig.Plugins plugins = config.plugins;
  plugins.setPluginConfig("NameOfPlugin" , genericConfigEntry.toJson()); 
@@ -98,8 +92,7 @@ java
 
 The MessageBus supports the following events:
 
-  {% highlight c %}
-java
+  {% highlight java %}
  PlayerEvents{
  public enum Type {
          STATE_CHANGED, //IDLE, LOADING, READY, BUFFERING;
@@ -121,7 +114,7 @@ java
  {% endhighlight %}
 
 
- {% highlight c %}
+ {% highlight java %}
 
 AdEvents{
 public enum Type {
@@ -157,8 +150,7 @@ If you have new events you need to report, you can add new events by implementin
 2 . Implement the PKEvent in this class according the following implementation example: 
 
 
- {% highlight c %}
- java
+ {% highlight java %}
  public class NewAnalyticsEvent implements PKEvent {
      public final NewAnalyticsEvent.EventType type;
 
@@ -181,7 +173,7 @@ If you have new events you need to report, you can add new events by implementin
 
 3 . Use the Messagebus to post your new event: 
 
- {% highlight c %}
+ {% highlight java %}
 
  messageBus.post(new NewAnalyticsEvent(TAG + " " + ((NewAnalyticsEvent) event).type.toString()));
  {% endhighlight %}
@@ -191,8 +183,7 @@ If you have new events you need to report, you can add new events by implementin
 
 ### Event Listener  
 
- {% highlight c %}
-java
+ {% highlight java %}
  private PKEvent.Listener mEventListener = new PKEvent.Listener() {
         @Override
         public void onEvent(PKEvent event) {
@@ -233,8 +224,7 @@ java
 
 ### onDestroy  
 
- {% highlight c %}
-java
+ {% highlight java %}
    @Override
     public void onDestroy() {
         log.d("onDestroy");
@@ -245,8 +235,7 @@ java
 
 ### onApplicationPaused  
 
- {% highlight c %}
- java
+ {% highlight java %}
 
 @Override
     protected void onApplicationPaused() {
@@ -258,8 +247,7 @@ java
 ### onApplicationResumed  
 
 
-{% highlight c %}
-java
+{% highlight java %}
     @Override
     protected void onApplicationResumed() {
         startMonitoring(this.player);
@@ -271,8 +259,7 @@ java
 
 For the Youbora Plugin to start loading, you'll need to set the plugin configuration you created as follows:
 
- {% highlight c %}
- java
+ {% highlight java %}
        PlayerConfig.Plugins pluginsConfig = config.plugins;
        pluginsConfig.setPluginConfig(YouboraPlugin.factory.getName(), converterYoubora.toJson()); 
 {% endhighlight %}
@@ -281,8 +268,7 @@ For the Youbora Plugin to start loading, you'll need to set the plugin configura
 
 For the IMA Plugin to start loading, you'll need to set the plugin configuration you created as follows:
 
- {% highlight c %}
- java
+ {% highlight java %}
        String adTagUrl = "https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/single_ad_samples&ciu_szs=300x250&impl=s&gdfp_req=1&env=vp&output=vast&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ct%3Dskippablelinear&correlator=";
        List<String> videoMimeTypes = new ArrayList<>();
        videoMimeTypes.add(MimeTypes.APPLICATION_MP4);
