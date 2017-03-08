@@ -9,9 +9,10 @@ The Kaltura Player abstracts the need to retrieve direct access to the video fil
 
 The playManifest is a redirect action [source code](https://github.com/kaltura/server/blob/master/alpha/apps/kaltura/modules/extwidget/actions/playManifestAction.class.php), whose purpose is to direct media player applications to the desired video stream.
 
-playManifest features return two types:
+playManifest features return the following types:
 
 1.  A redirect to video file for [progressive download (http://en.wikipedia.org/wiki/Progressive_download) or an M3U8 stream descriptor for [Apple HTTP Streaming, aka HLS](http://en.wikipedia.org/wiki/HTTP_Live_Streaming).
+2. An XML response in the form of a MPEG-DASH Media Presentation Description (MPD).
 2.  An XML response in the form of [Flash Media Manifest File](http://osmf.org/dev/osmf/specpdfs/FlashMediaManifestFileFormatSpecification.pdf).
 
 ### Retrieving a URL for a Video Stream  
@@ -31,12 +32,40 @@ Replace the following parameters:
 *   **ks** - A valid Kaltura Session. This parameter is only required when the media entry has an Access Control defined to limit anonymous access to the media.
 *   ********ext****** - The file extension of the video you wish to retrieve (For example, mp4, if the video flavor is an MPEG4 file or flv, if the video flavor is an FLV file.)**
 
-** **
 
-<div>
-  <p>
-    <strong>Available Playback Formats</strong>
-  </p>
+### Available Service URLs (Public / SaaS)  
+
+| Protocol + Domain             | Description                         |
+|-------------------------------|-------------------------------------|
+| https://cdnapisec.kaltura.com | Secure HTTPS Request. (recommended) |
+| http://cdn.kaltura.com        | Standard HTTP Request.              |
+
+
+### Available Playback Formats  
+
+
+| Format            | Description                                                                                          |
+|-------------------|------------------------------------------------------------------------------------------------------|
+| mpegdash          | MPEG-DASH Streaming.                                                                                 |
+| applehttp         | HTTP Live Streaming (HLS) Streaming.                                                                 |
+| url               | Progressive download.                                                                                |
+| hds               | Adobe HTTP Dynamic Streaming. Not available for all Kaltura accounts.                                |
+| rtmp              | Real Time Messaging Protocol (RTMP). Recommended only for Live, or special use cases.                |
+| rtsp              | Real Time Streaming Protocol (RTSP). For legacy devices, such as older Blackberry and Nokia phones.  |
+| hdnetworkmanifest | Akamai HDS delivery. Available only for accounts with Akamai delivery.                               |
+| hdnetwork         | Akamai Proprietary Delivery Protocol. Available only for accounts with Akamai delivery. (deprecated) |
+
+
+### Available Protocol Parameters  
+
+| Protocol                 | Description                                                                                                         |
+|-------------------------|---------------------------------------------------------------------------------------------------------------------|
+| http                    | http Redirect and streaming URLs make use of the HTTP protocol. (Default)                                           |
+| https                   | https  Redirect and streaming URLs make use of the HTTPS protocol.                                                  |
+| rtmp|rtmpe|rtmpt|rtmpte | (RTMP Streaming only) Streaming Server Base URL make use of the specified protocol (RTMP, RTMPE, RTMPT, or RTMPTE). |
+
+
+
   
   <table style="width: 787px;" border="1" cellspacing="0" cellpadding="0">
     <tbody>
@@ -217,86 +246,47 @@ Replace the following parameters:
           <p>
             https  Redirect and streaming URLs make use of the HTTPS protocol.
           </p>
-        </td>
-      </tr>
-      
-      <tr>
-        <td style="text-align: left;" valign="top" width="135">
-          <p>
-            rtmp|rtmpe|rtmpt|rtmpte
-          </p>
-        </td>
-        
-        <td style="text-align: left;" valign="top" width="653">
-          <p>
-            (RTMP Streaming only) Streaming Server Base URL make use of the specified protocol (RTMP, RTMPE, RTMPT, or RTMPTE).
-          </p>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+### Examples  
 
-<div>
-  <div>
-     
-  </div>
-  
-  <div>
-    Examples:
-  </div>
-  
-  <div>
-    <ul>
-      <li>
-        <a href="http://www.kaltura.com/p/309/sp/0/playManifest/entryId/1_rcit0qgs/format/url/flavorParamId/301971/video.mp4">http://www.kaltura.com/p/309/sp/0/playManifest/entryId/1_rcit0qgs/format/url/flavorParamId/301971/video.mp4</a>
-      </li>
-      <li>
-        <a href="http://www.kaltura.com/p/309/sp/0/playManifest/entryId/1_rcit0qgs/format/applehttp/protocol/http/flavorParamId/301971/video.mp4">http://www.kaltura.com/p/309/sp/0/playManifest/entryId/1_rcit0qgs/format/applehttp/protocol/http/flavorParamId/301971/video.mp4</a>
-      </li>
-    </ul>
-  </div>
-</div>
+* http://www.kaltura.com/p/309/sp/0/playManifest/entryId/1_rcit0qgs/format/url/flavorParamId/301971/video.mp4
+* http://www.kaltura.com/p/309/sp/0/playManifest/entryId/1_rcit0qgs/format/applehttp/protocol/http/flavorParamId/301971/video.mp4
 
-<p class="mce-note-graphic">
-   
-</p>
+>Note: The playManifest API is not a standard part of the Kaltura API v3, it is a direct URL request that retrieves the specific binary video file from Kaltura. The response to the playManifest URL is the actual video file of the requested entry flavor.
 
-<p class="mce-note-graphic">
-  The playManifest API is not a standard part of the Kaltura API v3, it is a direct URL request that retrieves the specific binary video file from Kaltura. The response to the playManifest URL is the actual video file of the requested entry flavor.<br />The playManifest API does not require a KS unless the media entries were specifically setup with Access Control profiles to limit anonymous access to the media. If the media entry does have Access Control profiles assigned, a KS (Kaltura Session) must be specfied when calling the playManifest URL.
-</p>
 
-<p class="mce-heading-2 mce-heading-3">
-  <a name="acl-entitlements-consider"></a>Considerations of Access Control and Entitlements
-</p>
+>Note: The playManifest API does not require a KS unless the media entries were specifically setup with Access Control profiles to limit anonymous access to the media. If the media entry does have Access Control profiles assigned, a KS (Kaltura Session) must be specfied when calling the playManifest URL.
 
-It is important to note that Kaltura entries can be set for private or protected modes, where access is only allowed when providing a valid admin [Kaltura Session][1].
+### >Considerations of Access Control and Entitlements  
 
- [1]: http://knowledge.kaltura.com/faq/how-create-kaltura-session
+It is important to note that Kaltura entries can be set for private or protected modes, where access is only allowed when providing a valid admin [Kaltura Session](https://vpaas.kaltura.com/documentation/VPaaS-API-Getting-Started/how-to-create-kaltura-session.html).
 
-<p class="mce-procedure">
-  For best practice, to retrieve the download URL for an entry, use the following steps:
-</p>
+For best practice, to retrieve the download URL for an entry, use the following steps:
 
-1.  Locate the Id of the desired video flavor (see below Video Flavor Id).
-2.  Call the <span>flavorAsset</span><span>.</span><span><span class="code-php-call-func"><span class="code-php-func-name">geturl API action.</span></span></span>
+1.  Locate the ID of the desired video flavor (see below Video Flavor Id).
+2.  Call the `flavorAsset.geturl` API action.
 
-<span><span class="code-php-call-func"><span class="code-php-func-name">Below is a PHP code sample for retrieving the download URL of a web-playable flavor for a desired entry Id:</span></span></span>
+Below is a PHP code sample for retrieving the download URL of a web-playable flavor for a desired entry ID:
 
-<pre class="brush: php;fontsize: 100; first-line: 1; ">//Client library configuration and instantiation...
+{% highlight c %}
 
+//Client library configuration and instantiation...
+ 
 //when creating the Kaltura Session it is important to specify that this KS should bypass entitlemets restrictions:
-$ks = $client-&gt;session-&gt;start($secret, $userId, KalturaSessionType::ADMIN, $partnerId, 86400, 'disableentitlement');
-$client-&gt;setKs($ks);
-
-$client-&gt;startMultiRequest();
+$ks = $client->session->start($secret, $userId, KalturaSessionType::ADMIN, $partnerId, 86400, 'disableentitlement');
+$client->setKs($ks);
+ 
+$client->startMultiRequest();
 $entryId = '1_u7aj9kasw'; //replace this with your entry Id
-$client-&gt;flavorAsset-&gt;getwebplayablebyentryid($entryId);
+$client->flavorAsset->getwebplayablebyentryid($entryId);
 $req1ResultFlavorId = '{1:result:0:id}'; //get the first flavor from the result of getwebplayablebyentryid
-$client-&gt;flavorAsset-&gt;geturl($req1ResultFlavorId); //this action will return a valid download URL
-$multiRequestResults = $client-&gt;doMultiRequest();
+$client->flavorAsset->geturl($req1ResultFlavorId); //this action will return a valid download URL
+$multiRequestResults = $client->doMultiRequest();
 $downloadUrl = $multiRequestResults[1];
-echo 'The entry download URL is: '.$downloadUrl;</pre>
+echo 'The entry download URL is: '.$downloadUrl;
+
+{% endhighlight %}
+
+
 
 <span class="mce-heading-3">Video Flavor Id</span>
 
