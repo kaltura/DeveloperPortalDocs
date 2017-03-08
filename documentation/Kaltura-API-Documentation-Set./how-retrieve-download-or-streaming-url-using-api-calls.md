@@ -5,20 +5,16 @@ title: How to Retrieve the Download or Streaming URL using API Calls?
 
 The Kaltura Player abstracts the need to retrieve direct access to the video file, and handles the various aspects of the video playback including multi-bitrate, choosing the correct codec and streaming protocols, DRM, Access Control and more. Often applications need a direct URL for downloading the raw media file for purposes such as streaming outside of the Kaltura Player, processing the video data (such as video analysis or transcriptions) and more. In cases where you need to access the playback stream directly, or just a link to download the video file, you will need to consider the target playback devices, any security protocols applied to your Kaltura account and video, and then call the suitable API methods. The following will guide developers of using the playManifest API call to retrieve specific transcoded video flavors from a Kaltura account. 
 
-<p class="mce-heading-2">
-  The playManifest API
-</p>
+## The playManifest API  
 
-The playManifest is a redirect action [<a href="%20https://github.com/kaltura/server/blob/master/alpha/apps/kaltura/modules/extwidget/actions/playManifestAction.class.php" target="_blank">source code</a>], its purpose is to direct media player applications to the desired video stream.
+The playManifest is a redirect action [source code](https://github.com/kaltura/server/blob/master/alpha/apps/kaltura/modules/extwidget/actions/playManifestAction.class.php), whose purpose is to direct media player applications to the desired video stream.
 
 playManifest features return two types:
 
-1.  A redirect to video file for <a href="http://en.wikipedia.org/wiki/Progressive_download" target="_blank">progressive download</a>, or an M3U8 stream descriptor for <a href="http://en.wikipedia.org/wiki/HTTP_Live_Streaming" target="_blank">Apple HTTP Streaming, aka HLS</a>.
-2.  An XML response in the form of <a href="http://osmf.org/dev/osmf/specpdfs/FlashMediaManifestFileFormatSpecification.pdf" target="_blank">Flash Media Manifest File</a>.
+1.  A redirect to video file for [progressive download (http://en.wikipedia.org/wiki/Progressive_download) or an M3U8 stream descriptor for [Apple HTTP Streaming, aka HLS](http://en.wikipedia.org/wiki/HTTP_Live_Streaming).
+2.  An XML response in the form of [Flash Media Manifest File](http://osmf.org/dev/osmf/specpdfs/FlashMediaManifestFileFormatSpecification.pdf).
 
-<p class="mce-heading-3">
-  <span>Retrieving a URL for a Video Stream</span>
-</p>
+### Retrieving a URL for a Video Stream  
 
 To retrieve a specific video flavor, call the **playManifest** API. Be certain to have the Partner ID and Entry ID at hand. To call the **playManifest** API and retrieve a specific video flavor, call the following URL -
 
