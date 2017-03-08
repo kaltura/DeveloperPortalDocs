@@ -1,16 +1,9 @@
 ---
 layout: page
-title: "Introduction to Kaltura's Cross-Platform Media Players"
-date: 2011-12-28 20:28:09
+title: Introduction to Kaltura's Cross-Platform Media Players
 ---
 
-<h1 class="mce-heading-1 mce-heading-2">
-  The Kaltura Cross-Platform Flexible Media Players
-</h1>
-
-<h2 class="mce-heading-2 mce-heading-3">
-  Overview
-</h2>
+## Overview  
 
 Kaltura’s flexible HTML5 and Adobe OSMF (Flash)-based media players provide media online publishing solutions that are easy to use and embed.
 
@@ -32,111 +25,17 @@ The Kaltura players provide a light-weight and robust framework for creating ric
 
 This document covers the following Kaltura Players:
 
-<table class="kaltura-table" style="width: 100%;">
-  <thead>
-    <tr class="kaltura-table-header">
-      <th class="kaltura-table-head-item" style="width: 50%;">
-         Player
-      </th>
-      
-      <th class="kaltura-table-head-item" style="width: 50%;">
-        Description 
-      </th>
-    </tr>
-  </thead>
-  
-  <tbody>
-    <tr class="kaltura-table-row">
-      <td class="kaltura-table-row-item" style="width: 50%; text-align: left;">
-         Kaltura HTML5 Video Library
-      </td>
-      
-      <td class="kaltura-table-row-item" style="width: 50%; text-align: left;">
-        <p>
-           Kaltura's HTML5 video library provides seamless cross-platform video playback, including:
-        </p>
-        
-        <ul>
-          <li>
-            Fallback logic to Flash when HTML5 is not supported
-          </li>
-          <li>
-            Complete feature stack of flexible layout and design
-          </li>
-          <li>
-            Plugins for analytics, access control, advertising, and more
-          </li>
-        </ul>
-        
-        <p>
-          The Kaltura HTML5 Video Library was developed in collaboration with the Wikimedia Foundation, Mozilla, and many community contributors.
-        </p>
-        
-        <p>
-          To download source code and for more information, visit <a href="http://player.kaltura.com/docs">player.kaltura.com</a>
-        </p>
-      </td>
-    </tr>
-    
-    <tr class="kaltura-table-row">
-      <td class="kaltura-table-row-item" style="width: 50%; text-align: left;">
-        Kaltura Dynamic Player version 3 (KDP3)
-      </td>
-      
-      <td class="kaltura-table-row-item" style="width: 50%; text-align: left;">
-        <p>
-          An Adobe OSMF (Flash/ActionScript 3)-based, highly flexible media player.
-        </p>
-        
-        <p>
-          KDP3 provides out-of-the-box media playback, in addition to:
-        </p>
-        
-        <ul>
-          <li>
-            Robust layout and design capabilities
-          </li>
-          <li>
-            Flash and JavaScript API
-          </li>
-          <li>
-            A flexible plugin mechanism to customize and extend playback, analytics, access control, advertising, and more
-          </li>
-        </ul>
-        
-        <p>
-          KDP3 is built on top of the following Open Source libraries:
-        </p>
-        
-        <ul>
-          <li>
-            Adobe OSMF
-          </li>
-          <li>
-            PureMVC
-          </li>
-          <li>
-            Yahoo! ASTRA
-          </li>
-        </ul>
-      </td>
-    </tr>
-  </tbody>
-</table>
+|  Player                                 | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+|-----------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|  Kaltura HTML5 Video Library            |  Kaltura's HTML5 video library provides seamless cross-platform video playback, including:Fallback logic to Flash when HTML5 is not supportedComplete feature stack of flexible layout and designPlugins for analytics, access control, advertising, and moreThe Kaltura HTML5 Video Library was developed in collaboration with the Wikimedia Foundation, Mozilla, and many community contributors.To download source code and for more information, visit [player.kaltura.com](http://player.kaltura.com/docs). |
+| Kaltura Dynamic Player version 3 (KDP3) | An Adobe OSMF (Flash/ActionScript 3)-based, highly flexible media player.KDP3 provides out-of-the-box media playback, in addition to:Robust layout and design capabilitiesFlash and JavaScript APIA flexible plugin mechanism to customize and extend playback, analytics, access control, advertising, and more. KDP3 is built on top of the following Open Source libraries:Adobe OSMFPureMVCYahoo! ASTRA                                                                      |
+|                                         |                                                                                                                                                                                                                                                                                                                                                                             ## KDP3: Adobe Flash-based Kaltura Dynamic Media Player  
 
-<p class="mce-heading-2">
-  KDP3: Adobe Flash-based Kaltura Dynamic Media Player
-</p>
-
-<p class="mce-heading-3">
-  Prerequisites
-</p>
+### Prerequisites  
 
 KDP version 3 and later requires Adobe Flash Player version 10.1 and later.
 
-<p class="mce-heading-3">
-  What is KDP3?
-</p>
+### What is KDP3?  
 
 KDP3 is an Adobe Flash-based rich media and media player widget. KDP3 can be customized and extended, and is easy to design. In summary, KDP3:
 
@@ -152,13 +51,9 @@ KDP3 is an Adobe Flash-based rich media and media player widget. KDP3 can be cus
  [2]: http://puremvc.org/
  [3]: http://developer.yahoo.com/flash/astra-flash/
 
-To create your own look and feel for KDP3, refer to [Creating and Using a Player Skin][4].
+To create your own look and feel for KDP3, refer to [Creating and Using a Player Skin](http://knowledge.kaltura.com/creating-and-using-player-skin).
 
- [4]: http://knowledge.kaltura.com/creating-and-using-player-skin
-
-<p class="mce-heading-3">
-  Integration and Player API
-</p>
+### Integration and Player API  
 
 KDP3 incorporates a robust JavaScript API that enables easy integration with applications.
 
@@ -166,15 +61,12 @@ To learn more about integrating KDP3, refer to the [KDP3 JavaScript API][5].
 
  [5]: http://www.kaltura.org/demos/kdp3/docs.html#jsapi
 
-<p class="mce-heading-3">
-  Extending and Player Plugins
-</p>
+
+### Extending and Player Plugins  
 
 To learn more about extending KDP3, refer to Creating KDP Plugins.
 
-<p class="mce-heading-3">
-  Kaltura Player Studio
-</p>
+### Kaltura Player Studio  
 
 Leveraging the flexible XML-based layout mechanism built into the Kaltura media players, the [Kaltura Player Studio][6] provides a WYSIWYG environment to create customized Kaltura Players. The studio does not require programming or design skills.
 
