@@ -101,27 +101,21 @@ Kaltura provides [downloadable client libraries][8] for the Kaltura Hosted Editi
 * Python
 * Objective-C/Cocoa
 
-<span class="mce-heading-2"><a name="DecidingontheRightTypeofClientLibrary"></a>Where to Get a Client Library?</span>
+## Where to Get a Client Library? 
 
 The [type of client library][10] that you use depends on your Kaltura edition and specific needs.
 
  [10]: #WhatAretheTypesofClientLibraries
 
-<p class="mce-heading-3">
-  Kaltura Hosted Edition
-</p>
+### Kaltura Hosted Edition  
 
 If you use a standard Kaltura Hosted Edition, [get a client library for the Kaltura Hosted Edition][4].
 
-<p class="mce-heading-3">
-  Kaltura On‑Prem
-</p>
+### Kaltura On‑Prem  
 
 If you use a standard Kaltura On‑Prem, you need local client libraries. See [Generating a Client Library for Kaltura On Prem and Kaltura CE][5].
 
-<p class="mce-heading-3">
-  Kaltura CE
-</p>
+### Kaltura CE  
 
 If you use a standard Kaltura CE, you need local client libraries. See [Generating a Client Library for Kaltura On Prem and Kaltura CE][5].
 
