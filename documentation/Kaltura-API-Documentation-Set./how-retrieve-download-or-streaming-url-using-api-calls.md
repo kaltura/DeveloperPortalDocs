@@ -185,67 +185,7 @@ Replace the following parameters:
         <td style="text-align: left;" valign="top" width="135">
           <p>
             hdnetwork  
-          </p>
-        </td>
-        
-        <td style="text-align: left;" valign="top" width="653">
-          <p>
-            Akamai Proprietary Delivery Protocol. <em>Available only for accounts with Akamai delivery.</em> <strong>(deprecated)</strong>
-          </p>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-  
-  <p>
-    <strong> </strong>
-  </p>
-  
-  <p>
-    <strong>Available Protocol Parameters</strong>
-  </p>
-  
-  <table style="width: 787px;" border="1" cellspacing="0" cellpadding="0">
-    <tbody>
-      <tr>
-        <td style="text-align: left;" valign="top" width="135">
-          <p>
-            <strong>Protocol</strong>
-          </p>
-        </td>
-        
-        <td style="text-align: left;" valign="top" width="653">
-          <p>
-            <strong>Description</strong>
-          </p>
-        </td>
-      </tr>
-      
-      <tr>
-        <td style="text-align: left;" valign="top" width="135">
-          <p>
-            http
-          </p>
-        </td>
-        
-        <td style="text-align: left;" valign="top" width="653">
-          <p>
-            http Redirect and streaming URLs make use of the HTTP protocol. (Default)
-          </p>
-        </td>
-      </tr>
-      
-      <tr>
-        <td style="text-align: left;" valign="top" width="135">
-          <p>
-            https
-          </p>
-        </td>
-        
-        <td style="text-align: left;" valign="top" width="653">
-          <p>
-            https  Redirect and streaming URLs make use of the HTTPS protocol.
-          </p>
+
 ### Examples  
 
 * http://www.kaltura.com/p/309/sp/0/playManifest/entryId/1_rcit0qgs/format/url/flavorParamId/301971/video.mp4
@@ -284,77 +224,63 @@ $multiRequestResults = $client->doMultiRequest();
 $downloadUrl = $multiRequestResults[1];
 echo 'The entry download URL is: '.$downloadUrl;
 
+
 {% endhighlight %}
 
-
-
-<span class="mce-heading-3">Video Flavor Id</span>
+### Video Flavor ID  
 
 The VideoFlavorId parameter determines which video flavor the API will return as download. This parameter has various options, depending on the Kaltura server deployment and publisher account.
 
-The following lists few of the conventional flavor Id's:
+The following lists few of the conventional flavor IDs:
 
-<p class="mce-note-graphic">
-  Note: Only flavor id 0 (zero) is static and the same across Kaltura editions. The following list are common flavor Ids on the Kaltura SaaS edition, but note flavors change and upgraded often (improved quality, new codecs, etc.) - Use this list for example purposes.
-</p>
+>Note:Note: Only flavor id 0 (zero) is static and the same across Kaltura editions. The following list are common flavor Ids on the Kaltura SaaS edition, but note flavors change and upgraded often (improved quality, new codecs, etc.) - Use this list for example purposes.
 
-*   The original uploaded video (before transcoding) = 0
+* The original uploaded video (before transcoding) = 0
+* iPhone / Android (mp4) = 301951
+* iPad (mp4) = 301971
+* Nokia/Blackberry (3gp) = 301991
+* Other devices (mp4) = 301961
 
-*   iPhone / Android (mp4) = 301951
+The correct flavor IDs (per account and Kaltura edition) can be retrieved using one of the following ways:
 
-*   iPad (mp4) = 301971
+1. Visiting the KMC Settings > [Transcoding Profiles](http://knowledge.kaltura.com/faq/how-create-transcoding-profile).
+2. Making an API call to the [ConversionProfile.list action](https://developer.kaltura.com/api-docs/#/conversionProfile.list).
 
-*   Nokia/Blackberry (3gp) = 301991
-
-*   Other devices (mp4) = 301961
-
-<p class="mce-procedure">
-  The correct flavor Ids (per account and Kaltura edition) can be retrieved by:
-</p>
-
-1.  Visiting the KMC Settings > [Transcoding Profiles][2].
-2.  OR by making an API call the <a href="https://developer.kaltura.com/api-docs/#/conversionProfile.list" target="_blank">ConversionProfile.list</a> action.
-
- [2]: http://knowledge.kaltura.com/faq/how-create-transcoding-profile
-
-<p class="mce-heading-3">
-  <span>Retrieving Streaming URL for Mobile Applications</span>
-</p>
+### >Retrieving Streaming URL for Mobile Applications  
 
 To retrive streaming URL for mobile applications, use the following guidelines:
 
-<p class="p1">
-  For Apple iPad devices – <a href="#acl-entitlements-consider">get all the flavors</a> (marked ready) that have the tag 'ipadnew' and build the following URL:
-</p>
+* For Apple iPad devices – <a href="#acl-entitlements-consider">get all the flavors</a> (marked ready) that have the tag 'ipadnew' and build the following URL:
 
+{% highlight c %}
+<pre class="brush: jscript;fontsize: 100; first-line: 1; ">serviceUrl + '/p/' + partnerId + '/sp/' + partnerId + '00/playManifest/entryId/' + entryId + '/flavorIds/' + flavorIds.join(',') + '/format/applehttp/protocol/http/a.m3u8?ks=' + ks + '&referrer=' + base64_encode(application_name)</pre>
 <pre class="brush: jscript;fontsize: 100; first-line: 1; ">serviceUrl + '/p/' + partnerId + '/sp/' + partnerId + '00/playManifest/entryId/' + entryId + '/flavorIds/' + flavorIds.join(',') + '/format/applehttp/protocol/http/a.m3u8?ks=' + ks + '&referrer=' + base64_encode(application_name)</pre>
 
-<p class="p1">
-  For Apple iPhone devices – <a href="#acl-entitlements-consider">get all the flavors</a> (marked ready) that have the tag 'iphonenew' tag and build the following URL:
-</p>
+{% endhighlight %}
 
+* For Apple iPhone devices – <a href="#acl-entitlements-consider">get all the flavors</a> (marked ready) that have the tag 'iphonenew' tag and build the following URL:
+
+{% highlight c %}
 <pre class="brush: jscript;fontsize: 100; first-line: 1; ">serviceUrl + '/p/' + partnerId + '/sp/' + partnerId + '00/playManifest/entryId/' + entryId + '/flavorIds/' + flavorIds.join(',') + '/format/applehttp/protocol/http/a.m3u8?ks=' + ks + '&referrer=' + base64_encode(application_name)</pre>
+{% endhighlight %}
 
-<p class="p1">
-  For Android devices that support HLS – <a href="#acl-entitlements-consider">get all the flavors</a> (marked ready) that have the tag 'iphonenew' tag (excluding audio-only flavors where width, height & framerate fields equal to zero) and build the following URL:
-</p>
+* For Android devices that support HLS – <a href="#acl-entitlements-consider">get all the flavors</a> (marked ready) that have the tag 'iphonenew' tag (excluding audio-only flavors where width, height & framerate fields equal to zero) and build the following URL:
 
+{% highlight c %}
 <pre class="brush: jscript;fontsize: 100; first-line: 1; ">serviceUrl + '/p/' + partnerId + '/sp/' + partnerId + '00/playManifest/entryId/' + entryId + '/flavorIds/' + flavorIds.join(',') + '/format/applehttp/protocol/http/a.m3u8?ks=' + ks + '&referrer=' + base64_encode(application_name)</pre>
+{% endhighlight %}
 
-<p class="p1">
-  For Android devices that do not support HLS – get a single video flavor that has the 'iPhoneNew' tag and build the following URL:
-</p>
+* For Android devices that do not support HLS – get a single video flavor that has the 'iPhoneNew' tag and build the following URL:
 
+{% highlight c %}
 <pre class="brush: jscript;fontsize: 100; first-line: 1; ">serviceUrl + '/p/' + partnerId + '/sp/' + partnerId + '00/playManifest/entryId/' + entryId + '/flavorId/' + flavorId + '/format/url/protocol/http/a.mp4?ks=' + ks + '&referrer=' + base64_encode(application_name)</pre>
+{% endhighlight %}
 
-<p class="mce-heading-2">
-  Retriving the currently playing video URL using the Player JS API
-</p>
+## Retrieving the Currently Playing Video URL using the Player JS API  
 
 To retrieve the URL of the video that is being played in the player, use the following player call:
 
-### <a href="http://player.kaltura.com/kWidget/tests/kWidget.getSources.html" target="_blank">kWidget.getSources</a>
+[`kWidget.getSources`](http://player.kaltura.com/kWidget/tests/kWidget.getSources.html)
 
-To learn more about the <a href="http://www.kaltura.org/demos/kdp3/docs.html#evaluate" target="_blank">evaluate function</a> and the KDP API, read: [JavaScript API for Kaltura Media Players][3].
+To learn more about the [evaluate function](http://www.kaltura.org/demos/kdp3/docs.html#evaluate) and the KDP API, read: [JavaScript API for Kaltura Media Players](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/javascript-api-kaltura-media-players.html).
 
- [3]: http://knowledge.kaltura.com/node/53
