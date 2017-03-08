@@ -3,7 +3,7 @@ layout: page
 title: How To Create a Video Thumbnail Rotator in JavaScript
 ---
 
-This topic describes the steps to create a Video Thumbnail Rotator in JavaScript. The Video Thumbnail Rotator is a JS widget that provides a thumbnail slideshow preview for videos hosted on the Kaltura Server.
+This article describes the steps to create a Video Thumbnail Rotator in JavaScript. The Video Thumbnail Rotator is a JS widget that provides a thumbnail slideshow preview for videos hosted on the Kaltura Server.
 
 ## How to use the Thumb Rotator  
 
@@ -15,14 +15,14 @@ To use the KalturaThumbRotator, include its javascript code and attach two event
 
 {% highlight javascript %}
 
-```<script type="text/javascript" src="kaltura_thumb_rotator.js"></script>```
+<script type="text/javascript" src="kaltura_thumb_rotator.js"></script>
 
 {% endhighlight %}
 
 3 .  Add the **<img>** tag where you want the thumbnail to be as follows:
 
 {% highlight xml %}
-```<img src="http://cdn.kaltura.com/p/309/sp/0/thumbnail/entry\_id/1\_gdmcbimk/width/120/height/90" width="120" height="90" onmouseover="KalturaThumbRotator.start(this)" onmouseout="KalturaThumbRotator.end(this)">```
+<img src="http://cdn.kaltura.com/p/309/sp/0/thumbnail/entry\_id/1\_gdmcbimk/width/120/height/90" width="120" height="90" onmouseover="KalturaThumbRotator.start(this)" onmouseout="KalturaThumbRotator.end(this)">
 {% endhighlight %}
 
 4 .  Change the width and height parameters in the thumbnail URL as well as the img tag attributes to suit the dimensions you want the thumbnail to be.
