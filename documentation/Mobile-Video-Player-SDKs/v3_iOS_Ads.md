@@ -24,7 +24,9 @@ To control ad play during runtime, implement the following Video Player delegate
 >swift
 
 ```swift
-func playerShouldPlayAd(_ player: Player) -> Bool
+func playerShouldPlayAd(_ player: Player) -> Bool {
+    return true
+}
 ```
 
 >objc
@@ -43,14 +45,13 @@ Next, register the IMA Plugin inside your application as follows:
 >swift
 
 ```swift
-PlayKitManager.sharedInstance.registerPlugin(IMAPlugin.self)
+PlayKitManager.shared.registerPlugin(IMAPlugin.self)
 ```
 
 >objc
 
 ```objc
-[PlayKitManager.sharedInstance registerPlugin:IMAPlugin.self];
-
+[PlayKitManager.sharedInstance registerPlugin: IMAPlugin.self];
 ```
 
 ## Configure the Kaltura Video Player to Use the IMA Plugin  
@@ -69,8 +70,8 @@ playerConfig.plugins[IMAPlugin.pluginName] = adsConfig
 
 ```objc
 AdsConfig *adsConfig = [AdsConfig new];
-    adsConfig.adTagUrl = @"https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/3274935/preroll&impl=s&gdfp_req=1&env=vp&output=xml_vast2&unviewed_position_start=1&url=[referrer_url]&description_url=[description_url]&correlator=[timestamp]";
-    [config setPlugins:@{IMAPlugin.pluginName:adsConfig}];
+adsConfig.adTagUrl = @"https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/3274935/preroll&impl=s&gdfp_req=1&env=vp&output=xml_vast2&unviewed_position_start=1&url=[referrer_url]&description_url=[description_url]&correlator=[timestamp]";
+[config setPlugins: @{IMAPlugin.pluginName: adsConfig}];
 ```
 
 ## Configure Clickthroughs 
@@ -80,7 +81,7 @@ The IMA Plugin offers two options for opening ad landing pages:
 * Via an in-app browser
 * Via Safari 
 
-By default, the plugin will open pages using Safari. To update the plugin to use an in-app browser, you’ll need to set the `webOpenerPresentingController value` in the AdsConfig object as follows:
+By default, the plugin will open pages using Safari. To update the plugin to use an in-app browser, you’ll need to set the `webOpenerPresentingController` value in the AdsConfig object as follows:
 
 >swift
 
@@ -91,8 +92,7 @@ adsConfig.set(webOpenerPresentingController: webOpenerPresentingController)
 >objc
 
 ```objc
-
-
+adsConfig.webOpenerPresentingController = webOpenerPresentingController;
 ```
 
 ## Add Companion Ads
@@ -111,8 +111,7 @@ adsConfig.set(companionView: companionView)
 >objc
 
 ```objc
-
-
+adsConfig.companionView = companionView;
 ```
 
 ## Specify the Desired Bitrate and Video Formats
@@ -129,8 +128,8 @@ adsConfig.set(videoBitrate: 1024)
 >objc
 
 ```objc
-
-
+adsConfig.videoMimeTypes = @[@"video/mp4", @"application/x-mpegURL"];
+adsConfig.videoBitrate = 1024;
 ```
 
 ## Specify the Localized Ad Language
@@ -148,8 +147,7 @@ adsConfig.set(language: "en")
 >objc
 
 ```objc
-
-
+adsConfig.language = @"en";
 ```
 
 ## Listen to Ad Events  
@@ -159,26 +157,79 @@ Use the following code to listen to ad events:
 >swift
 
 ```swift
-let events: [PKEvent.Type] = [AdEvents.adDidRequestPause.self, AdEvents.adDidRequestResume.self, AdEvents.adResumed.self, AdEvents.adTapped.self]
+let events: [PKEvent.Type] = [AdEvents.adDidRequestPause, AdEvents.adDidRequestResume]
 
-player.addObserver(self, events: events, block: { (event: Any) -> Void in
-            if event is AdEvents.adDidRequestResume {
-  
-            } else if event is AdEvents.adDidRequestPause {
- 
-            } else if event is AdEvents.adTapped {
-
-            } else if event is AdEvents.adResumed {
-  
-            }
-        })
+player.addObserver(self, events: events) { event in
+    if event is AdEvents.adDidRequestResume {
+        // handle adDidRequestResume
+    } else if event is AdEvents.adDidRequestPause {
+        // handle adDidRequestPause
+    }
+})
 ```
 
 >objc
 
 ```objc
+NSArray *events = @[AdEvents.adDidRequestPause, AdEvents.adDidRequestResume];
+        
+[self.player addObserver:self events: events block:^(PKEvent * _Nonnull event) {
+    if ([event isKindOfClass: AdEvents.adDidRequestResume]) {
+        // handle adDidRequestResume
+    } else if ([event isKindOfClass: AdEvents.adDidRequestPause]) {
+        // handle adDidRequestPause
+    }
+}];
+```
 
+### Ad Info Event
 
+To observe ad info when an ad is starting use the following:
+
+>swift
+
+```swift
+player.addObserver(self, events: [AdEvent.adStarted]) { event in
+    if let adInfo = event.adInfo {
+        // use ad info
+    }
+})
+```
+
+>objc
+
+```objc
+[self.kPlayer addObserver: self events: @[AdEvent.adStarted] block:^(PKEvent * _Nonnull event) {
+    AdInfo *info = event.adInfo;
+    if (info) {
+        // use ad info
+    }
+}];
+```
+
+### Ad Cue Points Event
+
+To observe ad cue points update use the following:
+
+>swift
+
+```swift
+player.addObserver(self, events: [AdEvent.adStartedadCuePointsChanged]) { event in
+    if let adCuePoints = event.adCuePoints {
+        // use ad cue points
+    }
+})
+```
+
+>objc
+
+```objc
+[self.kPlayer addObserver: self events: @[AdEvent.adCuePoints] block:^(PKEvent * _Nonnull event) {
+    AdInfo *adCuePoints = event.adCuePoints;
+    if (adCuePoints) {
+        // use ad cue points
+    }
+}];
 ```
 
 ## Have Questions or Need Help?
