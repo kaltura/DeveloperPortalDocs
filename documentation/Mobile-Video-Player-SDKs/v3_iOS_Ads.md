@@ -225,7 +225,7 @@ player.addObserver(self, events: [AdEvent.adCuePointsUpdate]) { event in
 
 ```objc
 [self.kPlayer addObserver: self events: @[AdEvent.adCuePoints] block:^(PKEvent * _Nonnull event) {
-    AdInfo *adCuePoints = event.adCuePoints;
+    AdCuePoints *adCuePoints = event.adCuePoints;
     if (adCuePoints) {
         // use ad cue points
     }
