@@ -189,7 +189,7 @@ To observe ad info when an ad is starting use the following:
 >swift
 
 ```swift
-player.addObserver(self, events: [AdEvent.adStarted]) { event in
+player.addObserver(self, events: [AdEvent.adInformation]) { event in
     if let adInfo = event.adInfo {
         // use ad info
     }
@@ -199,7 +199,7 @@ player.addObserver(self, events: [AdEvent.adStarted]) { event in
 >objc
 
 ```objc
-[self.kPlayer addObserver: self events: @[AdEvent.adStarted] block:^(PKEvent * _Nonnull event) {
+[self.kPlayer addObserver: self events: @[AdEvent.adInformation] block:^(PKEvent * _Nonnull event) {
     AdInfo *info = event.adInfo;
     if (info) {
         // use ad info
@@ -214,7 +214,7 @@ To observe ad cue points update use the following:
 >swift
 
 ```swift
-player.addObserver(self, events: [AdEvent.adStartedadCuePointsChanged]) { event in
+player.addObserver(self, events: [AdEvent.adCuePointsUpdate]) { event in
     if let adCuePoints = event.adCuePoints {
         // use ad cue points
     }
