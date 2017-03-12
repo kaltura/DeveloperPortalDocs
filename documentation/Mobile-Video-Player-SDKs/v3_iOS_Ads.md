@@ -190,8 +190,13 @@ To observe ad info when an ad is starting use the following:
 
 ```swift
 player.addObserver(self, events: [AdEvent.adInformation]) { event in
-    if let adInfo = event.adInfo {
+    if let info = event.adInfo {
         // use ad info
+        switch info.positionType {
+        case .preRoll: // handle pre roll
+        case .midRoll: // handle mid roll
+        case .postRoll: // handle post roll
+        }
     }
 })
 ```
@@ -200,9 +205,20 @@ player.addObserver(self, events: [AdEvent.adInformation]) { event in
 
 ```objc
 [self.kPlayer addObserver: self events: @[AdEvent.adInformation] block:^(PKEvent * _Nonnull event) {
-    AdInfo *info = event.adInfo;
+    PKAdInfo *info = event.adInfo;
     if (info) {
         // use ad info
+        switch (info.positionType) {
+            case AdPositionTypePreRoll:
+                // handle pre roll
+                break;
+            case AdPositionTypeMidRoll:
+                // handle mid roll
+                break;
+            case AdPositionTypePostRoll:
+                // handle post roll
+                break;
+        }
     }
 }];
 ```
@@ -225,7 +241,7 @@ player.addObserver(self, events: [AdEvent.adCuePointsUpdate]) { event in
 
 ```objc
 [self.kPlayer addObserver: self events: @[AdEvent.adCuePoints] block:^(PKEvent * _Nonnull event) {
-    AdCuePoints *adCuePoints = event.adCuePoints;
+    PKAdCuePoints *adCuePoints = event.adCuePoints;
     if (adCuePoints) {
         // use ad cue points
     }
