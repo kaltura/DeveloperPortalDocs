@@ -7,42 +7,25 @@ title: Creating A Kaltura Video Gallery
 
 Kaltura Partner Service: 3.0 (aka api_v3)
 
-Web site designers may want to add a Gallery component to their web pages so that end-users can browse within a large set of media files and conveniently select the media they want to see. For additional information, read the overview of the  <a href="http://knowledge.kaltura.com/kgallery-kaltura-video-gallery" class="bb-url">KGallery widget</a>.
+Web site designers may want to add a Gallery component to their web pages so that end-users can browse within a large set of media files and conveniently select the media they want to see. For additional information, read the overview of the  [KGallery widget](http://knowledge.kaltura.com/kgallery-kaltura-video-gallery).
 
-<a href="http://www.kaltura.org/sites/default/themes/kdotorg/demos/kgallery/kgalleryScrollable.php" target="_blank" title="kaltura gallery implementation example">See Demo</a>.
+See [demo](http://www.kaltura.org/sites/default/themes/kdotorg/demos/kgallery/kgalleryScrollable.php) for details.
 
-## Integration Steps
+## Integration Steps  
 
-To get started please read [Kaltura API usage guidelines][1] 
+To get started please read the [Kaltura API usage guidelines](https://vpaas.kaltura.com/documentation/VPaaS-API-Getting-Started/Getting-Started-VPaaS-API.html).
 
- [1]: http://knowledge.kaltura.com/kaltura-api-usage-guidelines
+## Editing your Web Page to Integrate with Kaltura Gallery Services
 
-<a name="edit-web-page"></a>
+Integrating KGallery services into your web site requires that you add following to your web page:
 
-## Edit your Web Page to Integrate with Kaltura Gallery Services
+*  <a href="#ext">Inclusion of External Scripts</a>
+*  <a href="#define">Definition of constants and variables</a>
+*  <a href="#construct">Construction of Kaltura Objects for Session Initiation</a>
+*  <a href="#media">Media entries list retrieval</a>
+*  <a href="#pop">Population of media entries within Gallery layout</a>
+*  <a href="#java">JavaScript implementation for showing selected media</a>
 
-Integrating KGallery services into your web site requires that you add following into your web page:
-
-<ul class="bb-list">
-  <li>
-    <a href="#ext">Inclusion of External Scripts</a>
-  </li>
-  <li>
-    <a href="#define">Definition of constants and variables</a>
-  </li>
-  <li>
-    <a href="#construct">Construction of Kaltura Objects for Session Initiation</a>
-  </li>
-  <li>
-    <a href="#media">Media entries list retrieval</a>
-  </li>
-  <li>
-    <a href="#pop">Population of media entries within Gallery layout</a>
-  </li>
-  <li>
-    <a href="#java">JavaScript implementation for showing selected media</a>
-  </li>
-</ul>
 
 ## Full Example Script
 
