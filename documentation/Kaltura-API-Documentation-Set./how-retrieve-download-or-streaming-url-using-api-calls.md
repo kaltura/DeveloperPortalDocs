@@ -23,11 +23,11 @@ To retrieve a specific video flavor, call the **playManifest** API. Be certain
 
 Replace the following parameters:
 
-*   **serviceUrl - **the base URL to the Kaltura Server (e.g. http://www.kaltura.com)
-*   **YourPartnerId** - Your Kaltura account publisher Id. (Can be retrieved from the <a href="http://www.kaltura.com/index.php/kmc/kmc4#account|integration" target="_blank">Publisher Account Settings</a> page in the KMC).
+*   **serviceUrl - **the base URL to the Kaltura Server
+*   **YourPartnerId** - Your Kaltura account publisher Id. (Can be retrieved from the [Publisher Account Settings](http://www.kaltura.com/index.php/kmc/kmc4#account|integration) page in the KMC).
 *   ****YourEntryId**** - The Id of the media entry you'd like to retrieve.
-*   **StreamingFormat** - See the list of available formats in the table below. This parameter is optional and defaults to <span style="font-family: 'andale mono', times;">/format/url</span>
-*   **Protocol** - Whether video is to be delivered over HTTP or HTTPS. See the list of available protocols below for additional options. This parameter is optional and defaults to <span style="font-family: 'andale mono', times;">/format/http</span>
+*   **StreamingFormat** - See the list of available formats in the table below. This parameter is optional and defaults to **/format/url**.
+*   **Protocol** - Whether video is to be delivered over HTTP or HTTPS. See the list of available protocols below for additional options. This parameter is optional and defaults to **/format/http**.
 *   ******VideoFlavorId** - ****The Id of the video flavor you want to download. If supported by the streaming format, multiple flavors may be comma-separated.
 *   **ks** - A valid Kaltura Session. This parameter is only required when the media entry has an Access Control defined to limit anonymous access to the media.
 *   ********ext****** - The file extension of the video you wish to retrieve (For example, mp4, if the video flavor is an MPEG4 file or flv, if the video flavor is an FLV file.)**
@@ -67,8 +67,8 @@ Replace the following parameters:
 
 ### Examples  
 
-* http://www.kaltura.com/p/309/sp/0/playManifest/entryId/1_rcit0qgs/format/url/flavorParamId/301971/video.mp4
-* http://www.kaltura.com/p/309/sp/0/playManifest/entryId/1_rcit0qgs/format/applehttp/protocol/http/flavorParamId/301971/video.mp4
+* http://cdnapisec.kaltura.com/p/309/sp/0/playManifest/entryId/1_rcit0qgs/format/url/flavorParamId/301971/video.mp4
+* http://cdnapisec.kaltura.com/p/309/sp/0/playManifest/entryId/1_rcit0qgs/format/applehttp/protocol/http/flavorParamId/301971/video.mp4
 
 >Note: The playManifest API is not a standard part of the Kaltura API v3, it is a direct URL request that retrieves the specific binary video file from Kaltura. The response to the playManifest URL is the actual video file of the requested entry flavor.
 
