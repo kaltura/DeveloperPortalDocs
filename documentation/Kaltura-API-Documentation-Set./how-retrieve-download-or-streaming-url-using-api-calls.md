@@ -25,12 +25,12 @@ Replace the following parameters:
 
 *   **serviceUrl - **the base URL to the Kaltura Server
 *   **YourPartnerId** - Your Kaltura account publisher Id. (Can be retrieved from the [Publisher Account Settings](http://www.kaltura.com/index.php/kmc/kmc4#account|integration) page in the KMC).
-*   ****YourEntryId**** - The Id of the media entry you'd like to retrieve.
+*   ***YourEntryId** - The Id of the media entry you'd like to retrieve.
 *   **StreamingFormat** - See the list of available formats in the table below. This parameter is optional and defaults to **/format/url**.
 *   **Protocol** - Whether video is to be delivered over HTTP or HTTPS. See the list of available protocols below for additional options. This parameter is optional and defaults to **/format/http**.
-*   ******VideoFlavorId** - ****The Id of the video flavor you want to download. If supported by the streaming format, multiple flavors may be comma-separated.
+*   **VideoFlavorId** - ****The Id of the video flavor you want to download. If supported by the streaming format, multiple flavors may be comma-separated.
 *   **ks** - A valid Kaltura Session. This parameter is only required when the media entry has an Access Control defined to limit anonymous access to the media.
-*   ********ext****** - The file extension of the video you wish to retrieve (For example, mp4, if the video flavor is an MPEG4 file or flv, if the video flavor is an FLV file.)**
+*   **ext** - The file extension of the video you wish to retrieve (For example, mp4, if the video flavor is an MPEG4 file or flv, if the video flavor is an FLV file.)**
 
 
 ### Available Service URLs (Public / SaaS)  
@@ -38,7 +38,7 @@ Replace the following parameters:
 | Protocol + Domain             | Description                         |
 |-------------------------------|-------------------------------------|
 | https://cdnapisec.kaltura.com | Secure HTTPS Request. (recommended) |
-| http://cdn.kaltura.com        | Standard HTTP Request.              |
+| http://cdnapi.kaltura.com        | Standard HTTP Request.              |
 
 
 ### Available Playback Formats  
@@ -75,7 +75,19 @@ Replace the following parameters:
 
 >Note: The playManifest API does not require a KS unless the media entries were specifically setup with Access Control profiles to limit anonymous access to the media. If the media entry does have Access Control profiles assigned, a KS (Kaltura Session) must be specfied when calling the playManifest URL.
 
-### >Considerations of Access Control and Entitlements  
+
+### What is the Distinction between flavorParamId and flavorId?  
+
+* **flavorParamId** represents the transcoding parameters that are used to generate a flavor. For example, all HD flavors in an account will usually have the same flavorParamId (across different entries)
+* **flavorId** is the identifier of a specific video file, for example, the HD flavor will have a different flavorId for each entry that has an HD flavor.
+
+**When should you use which flavor?**
+
+* If the flavorIds for the specific entry are known (e.g., the application is doing a flavorAsset.list with entryIdEqual), then use flavorId/flavorIds.
+* If the flavorIds are not known (e.g., the application would like to build a URL to the HD flavor, but does not want to perform flavorAsset.list) use flavorParamId/flavorParamIds.
+
+
+### Considerations of Access Control and Entitlements  
 
 It is important to note that Kaltura entries can be set for private or protected modes, where access is only allowed when providing a valid admin [Kaltura Session](https://vpaas.kaltura.com/documentation/VPaaS-API-Getting-Started/how-to-create-kaltura-session.html).
 
