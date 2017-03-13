@@ -82,6 +82,8 @@ import PlayKit
 
 ### Code the Video Player Application  
 
+>Note: to change log level use `PlayKitManager` log level property.
+
 You're now ready to code the video player application using the following options.
 
 **Declare a Player Variable**
