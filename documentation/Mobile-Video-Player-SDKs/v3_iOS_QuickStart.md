@@ -84,6 +84,14 @@ import PlayKit
 
 >Note: to change log level use `PlayKitManager` log level property.
 
+```objc 
+PlayKitManager.logLevel = PKLogLevelInfo;
+```
+
+```swift 
+PlayKitManager.logLevel = .info 
+```
+
 You're now ready to code the video player application using the following options.
 
 **Declare a Player Variable**
