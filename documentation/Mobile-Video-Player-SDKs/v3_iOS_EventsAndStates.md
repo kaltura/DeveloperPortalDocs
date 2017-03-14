@@ -99,7 +99,7 @@ func addEvents() {
 
 >Note: To get a complete list of supported player states, refer to the [Player States page](https://kaltura.github.io/playkit/api/ios/Enums/PlayerState.html).
 
-### Observing Metadata
+### Observing Timed Metadata
 
 Observe timed metadata and filter by key. 
 for more ways how to handle metadata see [AVMetadataItem](https://developer.apple.com/reference/avfoundation/avmetadataitem)
