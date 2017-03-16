@@ -17,29 +17,45 @@ Kaltura’s Mobile Video Player SDKs for iOS make it easy for you to integrate a
 | Phoenix               | []()             |
 | Youbora               | [Youbora Developer Portal](http://developer.nicepeopleatwork.com) |
 
+>**important - best practice is to register plugins in `AppDelegate` file.
+
+## Kaltura Live Stats Plugin  
+
+This section describes the steps required for using the Kaltura live stats plugin on iOS devices as well as the events supported by the plugin. 
+
+<details><summary>Get Started with Widevine Classic</summary><p>
+
+### Register the plugin
+
+```swift
+PlayKitManager.shared.registerPlugin(KalturaLiveStatsPlugin.self)
+```
+
+```objc
+[PlayKitManager.sharedInstance registerPlugin:KalturaLiveStatsPlugin.self];
+```
+
+### Create a Config and and load player
 
 
-## Kaltura Analytics Plugin  
 
-This section describes the steps required for using the Kaltura Analytics Plugin on iOS devices as well as the events supported by the plugin. Adding the Kaltura Analytics Plugin will enable you get detailed analytics. 
-
-<details><summary>Click for Integration</summary><p>
-TBD
 </p></details>
 
 ## Kaltura Stats Plugin  
 
 This section describes the steps required for configuring the Kaltura Video Player to use the Kaltura Stats Plugin on iOS devices. This will enable you to obtain important statistical information about usage.
 
-### Register the Kaltura Stats Plugin for the Kaltura Video Player  
+<details><summary>Get Started With Kaltura Stats Plugin</summary><p>
+
+### Register the plugin  
 
 To enable the Kaltura Stats Plugin, register the plugin inside your application as follows:
 
 ```swift
-PlayKitManager.sharedInstance.registerPlugin(KalturaStatsPlugin.self)
+PlayKitManager.shared.registerPlugin(KalturaStatsPlugin.self)
 ```
 
-### Configure the Analytics Configuration Object for the Kaltura Stats Plugin  
+###  the Analytics Configuration Object for the Kaltura Stats Plugin  
 
 To configure the Kaltura Stats Plugin, add the following configuration to your `pluginConfig` file as follows:
 
@@ -48,10 +64,9 @@ let analyticsConfig = AnalyticsConfig()
 var params: [String : Any]
 params["sessionId"] = "sessionId"
 params["baseUrl"] = "baseUrl" 
-params["uiconfId"] = "baseUrl" 
-params["partnerId"] = "baseUrl" 
-
-params["timeInterval"] = 30000 //Timer interval to check progress of the media in milliseconds- recommended value - short media - 10000, long media - 30000
+params["uiconfId"] = "uiconfId" 
+params["partnerId"] = "partnerId" 
+params["timeInterval"] = 30 // Timer interval to check progress of the media in seconds - recommended value: short media - 10, long media - 30
 
 analyticsConfig.params = params
 ```
@@ -117,9 +132,13 @@ case ERROR = 99
 }
 ```
 
+</p></details>
+
 ## TVPAPI Stats Plugin
 
 This section describes the steps required for using the TVPAPI Stats Plugin on iOS devices to get statistical information on the device, as well as the events supported by the plugin.
+
+<details><summary>Get Started With TVPAPI Plugin</summary><p>
 
 ### Enabling the TVPAPI Stats Plugin for the Kaltura Video Player  
 
@@ -146,11 +165,11 @@ let analyticsConfig = AnalyticsConfig()
 var params: [String : Any]
 params["fileId"] = "fileId"
 params["baseUrl" = "baseUrl" //Sample url - http://tvpapi-preprod.ott.kaltura.com/v3_9/gateways/jsonpostgw.aspx?
-params["timeInterval"] = 30000 //Default value - 30000. Value is in miliseconds.
+params["timeInterval"] = 30 //Default value - 30. Value is in seconds.
 params["initObj"] = initObj //must be a valid initObj of TVPAPI
 analyticsConfig.params = params
-
 ```
+
 ### Set the Plugin Configuration to the TVPAPI Stats Plugin  
 
 To ensure that the TVPAPI Stats Plugin starts loading, you'll need to set the plugin configuration you created as follows:
@@ -161,29 +180,43 @@ let config = PlayerConfig()
 var pluginsConfig = [String : AnyObject?]()
 playerConfig.plugins[TVPAPIAnalyticsPlugin.pluginName] = analyticsConfig
 self.playerController = PlayKitManager.sharedInstance.loadPlayer(config: playerConfig.plugins)
-
 ```
 
-## TVPAPI Stats Plugin Supported Events  
+</p></details>
 
-The TVPAPI Stats Plugin supports the following events:
+## OTT Stats Plugin Supported Events  
+
+The OTT Stats Plugins (Phoenix, TVPAPI) supports the following events:
 
 ```swift
- TVPAPI action Types{
- MediaHit, //outputs every interval time
- MediaMark //Outputs in the following events - {PLAY,STOP,PAUSE,FIRST_PLAY,LOAD,FINISH,BITRATE_CHANGE,ERROR}
+enum OTTAnalyticsEventType: String {
+    case hit
+    case play
+    case stop
+    case pause
+    case firstPlay
+    case swoosh
+    case load
+    case finish
+    case bitrateChange
+    case error
 }
 ```
 
 ## Concurrency Handler  
 
-To receive concurrency events from the TVPAPI Stats Plugin, you'll need to add a listener to the following event:
+To receive concurrency events from the OTT Stats Plugin, you'll need to add a listener to the following event:
 
 ```swift
-var playerController: Player!
-self.playerController.addObserver(self, events: [OttEvent.OttEventConcurrency.self], block: {(info) in
+self.playerController.addObserver(self, events: [OttEvent.concurrency]) { event in
+    // handle concurrency event
+}                   
+```
 
-})                    
+```objc
+[self.player addObserver:self events:@[OttEvent.concurrency] block:^(PKEvent * _Nonnull event) {
+    // handle concurrency event
+}];
 ```
 
 ## Phoenix Stats Plugin  
@@ -202,7 +235,7 @@ You'll need to set up an account in http://www.youbora.com and then set the acco
 
 For extra information on YouboraPlugin options dictionary visit [developer portal](http://developer.nicepeopleatwork.com/plugins/general/setting-youbora-options/)
 
-### Enabling the Youbora Plugin for the Kaltura Video Player  
+<details><summary>Get Started With Youbora Plugin</summary><p>
 
 To enable the Youbora Stats Plugin on iOS devices for the Kaltura Video Player, add the following line to your Podfile: 
 
@@ -294,13 +327,15 @@ NSDictionary * youboraOptions = @{
 AnalyticsConfig *youboraConfig = [[AnalyticsConfig alloc] initWithParams: youboraOptions];
     
 NSMutableDictionary *config = [NSMutableDictionary dictionary];
-[config setValue: youboraConfig forKey:[YouboraPlugin pluginName]];
+config[PhoenixAnalyticsPlugin.pluginName] = youboraConfig;
 
 PluginConfig *pluginConfig = [[PluginConfig alloc] initWithConfig:config];
 self.player = [PlayKitManager.sharedInstance loadPlayerWithPluginConfig:pluginConfig];
 ```
 
 >Note: Only then load player with Plugin Config.
+
+</p></details>  
 
 ## Have Questions or Need Help?
 
