@@ -12,7 +12,8 @@ To receive notifications about any player-related events or states, you can add 
 
 ```swift
 // add observer to list of different events
-player.addObserver(self, events: [PlayerEvent.playing, PlayerEvent.durationChanged, PlayerEvent.stateChanged]) { event in
+// don't forget to use weak self to prevent retain cycles when needed
+player.addObserver(self, events: [PlayerEvent.playing, PlayerEvent.durationChanged, PlayerEvent.stateChanged]) { [weak self] event in
      if type(of: event) == PlayerEvent.playing {
         // handle playing event
      } else if type(of: event) == PlayerEvent.durationChanged {
@@ -27,6 +28,9 @@ player.addObserver(self, events: [PlayerEvent.playing, PlayerEvent.durationChang
 >objc
 
 ```objc
+// don't forget to use weak self to prevent retain cycles when needed
+__weak __typeof(self) weakSelf = self;
+
 // add observer to list of different events
 [self.kPlayer addObserver:self events:@[PlayerEvent.playing, PlayerEvent.durationChanged, PlayerEvent.stateChanged] block:^(PKEvent * _Nonnull event) {
     if ([event isKindOfClass:PlayerEvent.playing]) {
