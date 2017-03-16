@@ -139,7 +139,7 @@ self.player = [PlayKitManager.sharedInstance loadPlayerWithPluginConfig:pluginCo
 
 ## Kaltura Stats Plugin + Kaltura Live Stats Plugin  
 
-This section describes the steps required for using the Kaltura live stats plugin. 
+This section describes the steps required for using the Kaltura stats plugin or live stats plugin. 
 
 <details><summary>Get Started With Kaltura Stats + Live Stats</summary><p>
 
