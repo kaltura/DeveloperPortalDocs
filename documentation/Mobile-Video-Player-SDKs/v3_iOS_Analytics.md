@@ -11,25 +11,147 @@ Kaltura’s Mobile Video Player SDKs for iOS make it easy for you to integrate a
 
 | Analytics Plugin Name | More Information |
 |-----------------------|------------------|
-| Kaltura Analytics     | []()             |
-| Kaltura Stats         | []()             |
-| TVPAPI                | []()             |
-| Phoenix               | []()             |
 | Youbora               | [Youbora Developer Portal](http://developer.nicepeopleatwork.com) |
+| Kaltura Stats         | []()             |
+| Kaltura Live Stats    | []()             |
+| TVPAPI                | []()             |
+| Phoenix               | []()             |
 
 >**important - best practice is to register plugins in `AppDelegate` file.
+
+</p></details>
+
+## Youbora Plugin  
+
+This section describes the steps required for implementing the Youbora Plugin on iOS devices. Youbora is an intelligence analytics and optimization platform used in Kaltura's solution to track media analytics events. 
+
+You'll need to set up an account in http://www.youbora.com and then set the account details in the plugin configuration to use this plugin. After these steps, you'll be able to use the Youbora dashboard and watch statistical events and analytics sent by the Kaltura Video Payer.
+
+For extra information on YouboraPlugin options dictionary visit [developer portal](http://developer.nicepeopleatwork.com/plugins/general/setting-youbora-options/)
+
+<details><summary>Get Started With Youbora Plugin</summary><p>
+
+To enable the Youbora Stats Plugin on iOS devices for the Kaltura Video Player, add the following line to your Podfile: 
+
+```ruby
+pod 'PlayKit/YouboraPlugin'
+```
+
+### Register Plugin
+
+>swift
+
+```swift
+PlayKitManager.shared.registerPlugin(YouboraPlugin.self)
+```
+
+>objc
+
+```objc
+[PlayKitManager.sharedInstance registerPlugin: YouboraPlugin.self];
+```
+
+### Create a Config and and load player
+
+>swift
+
+```swift
+// config options
+let youboraOptions: [String: Any] = [
+    "accountCode": "nicetest",
+    "httpSecure": true,
+    "parseHLS": true,
+    "media": [
+        "title": "Sintel",
+        "duration": 600
+    ],
+    "properties": [
+        "year": "2001",
+        "genre": "Fantasy",
+        "price": "free"
+    ],
+    "network": [
+        "ip": "1.2.3.4"
+    ],
+    "ads": [
+        "adsExpected": true,
+        "campaign": "Ad campaign name"
+    ],
+    "extraParams": [
+        "param1": "Extra param 1 value",
+        "param2": "Extra param 2 value"
+    ]
+]
+// create analytics config with the created params
+let youboraConfig = AnalyticsConfig(params: youboraOptions)
+// create config dictionary
+let config = [YouboraPlugin.pluginName: youboraConfig]
+// create plugin config object
+let pluginConfig = PluginConfig(config: config)
+// load the player with the created plugin config
+let player = PlayKitManager.shared.loadPlayer(pluginConfig: pluginConfig)
+```
+
+>objc
+
+```objc
+// config options
+NSDictionary * youboraOptions = @{
+                           @"accountCode": @"nicetest",
+                           @"httpSecure": @YES,
+                           @"parseHLS": @YES,
+                           @"media": @{
+                                  @"title": @"Sintel",
+                                  @"duration": @600
+                                  },
+                           @"properties": @{
+                                  @"year": @"2001",
+                                  @"genre": @"Fantasy",
+                                  @"price": @"free"
+                                  },
+                           @"network": @{
+                                  @"ip": @"1.2.3.4"
+                                  },
+                           @"ads": @{
+                                  @"adsExpected": @YES,
+                                  @"campaign": @"Ad campaign name"
+                                  },
+                           @"extraParams": @{
+                                   @"param1": @"Extra param 1 value",
+                                   @"param2": @"Extra param 2 value"
+                                   }
+                           };
+// create analytics config with the created params                        
+AnalyticsConfig *youboraConfig = [[AnalyticsConfig alloc] initWithParams: youboraOptions];
+// create config dictionary
+NSMutableDictionary *config = [NSMutableDictionary dictionary];
+// set the created config to the plugin name key in the dictionary
+config[PhoenixAnalyticsPlugin.pluginName] = youboraConfig;
+// create plugin config object
+PluginConfig *pluginConfig = [[PluginConfig alloc] initWithConfig:config];
+// load the player with the created plugin config
+self.player = [PlayKitManager.sharedInstance loadPlayerWithPluginConfig:pluginConfig];
+```
+
+>Note: Only then load player with Plugin Config.
+
+</p></details> 
 
 ## Kaltura Live Stats Plugin  
 
 This section describes the steps required for using the Kaltura live stats plugin on iOS devices as well as the events supported by the plugin. 
 
-<details><summary>Get Started with Widevine Classic</summary><p>
+<details><summary>Get Started With Kaltura Live Stats</summary><p>
 
 ### Register the plugin
+
+>swift
 
 ```swift
 PlayKitManager.shared.registerPlugin(KalturaLiveStatsPlugin.self)
 ```
+
+>objc
 
 ```objc
 [PlayKitManager.sharedInstance registerPlugin:KalturaLiveStatsPlugin.self];
@@ -37,7 +159,49 @@ PlayKitManager.shared.registerPlugin(KalturaLiveStatsPlugin.self)
 
 ### Create a Config and and load player
 
+>swift
 
+```swift
+// config params, defaults values, insert your data instead
+let kalturaLiveStatsPluginParams: [String: Any] = [
+   "sessionId": "",
+   "uiconfId": 0,
+   "baseUrl": "",
+   "partnerId": 0,
+   "timerInterval": 30                                          
+]
+// create analytics config with the created params
+let youboraConfig = AnalyticsConfig(params: youboraOptions)
+// create config dictionary
+let config = [YouboraPlugin.pluginName: youboraConfig]
+// create plugin config object
+let pluginConfig = PluginConfig(config: config)
+// load the player with the created plugin config
+let player = PlayKitManager.shared.loadPlayer(pluginConfig: pluginConfig)
+```
+
+>objc
+
+```objc
+// config params, defaults values, insert your data instead
+NSDictionary *kalturaLiveStatsPluginParams = @{
+                                               @"sessionId": @"",
+                                               @"uiconfId": @0,
+                                               @"baseUrl": @"",
+                                               @"partnerId": @0,
+                                               @"timerInterval": @30
+                                               };
+// create analytics config with the created params                                               
+AnalyticsConfig *kalturaLiveStatsConfig = [[AnalyticsConfig alloc] initWithParams:kalturaLiveStatsPluginParams];
+// create config dictionary
+NSMutableDictionary *config = [NSMutableDictionary dictionary];
+// set the created config to the plugin name key in the dictionary
+config[KalturaLiveStatsPlugin.pluginName] = kalturaLiveStatsConfig;
+// create plugin config object
+PluginConfig *pluginConfig = [[PluginConfig alloc] initWithConfig:config];
+// load the player with the created plugin config
+self.player = [PlayKitManager.sharedInstance loadPlayerWithPluginConfig:pluginConfig];
+```
 
 </p></details>
 
@@ -47,15 +211,17 @@ This section describes the steps required for configuring the Kaltura Video Play
 
 <details><summary>Get Started With Kaltura Stats Plugin</summary><p>
 
-### Register the plugin  
-
-To enable the Kaltura Stats Plugin, register the plugin inside your application as follows:
-
 ```swift
 PlayKitManager.shared.registerPlugin(KalturaStatsPlugin.self)
 ```
 
-###  the Analytics Configuration Object for the Kaltura Stats Plugin  
+>objc
+
+```objc
+[PlayKitManager.sharedInstance registerPlugin:KalturaStatsPlugin.self];
+```
+
+### Create a Config and and load player  
 
 To configure the Kaltura Stats Plugin, add the following configuration to your `pluginConfig` file as follows:
 
@@ -184,6 +350,20 @@ self.playerController = PlayKitManager.sharedInstance.loadPlayer(config: playerC
 
 </p></details>
 
+## Phoenix Stats Plugin  
+
+This section describes the steps required for configuring the Kaltura Video Player to use the Phoenix Stats Plugin on iOS devices as well as the supported plugin events. This will enable you to obtain important statistical information about usage.
+
+<details><summary>Get Started With Phoenix Plugin</summary><p>
+
+
+
+</p></details>
+
+## OTT Stats Plugin Info
+
+<details><summary>Extra Info on OTT Stats Plugin</summary><p>
+
 ## OTT Stats Plugin Supported Events  
 
 The OTT Stats Plugins (Phoenix, TVPAPI) supports the following events:
@@ -217,125 +397,7 @@ self.playerController.addObserver(self, events: [OttEvent.concurrency]) { event 
 [self.player addObserver:self events:@[OttEvent.concurrency] block:^(PKEvent * _Nonnull event) {
     // handle concurrency event
 }];
-```
-
-## Phoenix Stats Plugin  
-
-This section describes the steps required for configuring the Kaltura Video Player to use the Phoenix Stats Plugin on iOS devices as well as the supported plugin events. This will enable you to obtain important statistical information about usage.
-
-<details><summary>**Click for Integration**</summary><p>
-TBD
-</p></details>
-
-## Youbora Plugin  
-
-This section describes the steps required for implementing the Youbora Plugin on iOS devices. Youbora is an intelligence analytics and optimization platform used in Kaltura's solution to track media analytics events. 
-
-You'll need to set up an account in http://www.youbora.com and then set the account details in the plugin configuration to use this plugin. After these steps, you'll be able to use the Youbora dashboard and watch statistical events and analytics sent by the Kaltura Video Payer.
-
-For extra information on YouboraPlugin options dictionary visit [developer portal](http://developer.nicepeopleatwork.com/plugins/general/setting-youbora-options/)
-
-<details><summary>Get Started With Youbora Plugin</summary><p>
-
-To enable the Youbora Stats Plugin on iOS devices for the Kaltura Video Player, add the following line to your Podfile: 
-
-```ruby
-pod 'PlayKit/YouboraPlugin'
-```
-
-### Register Plugin
-
->swift
-
-```swift
-PlayKitManager.shared.registerPlugin(YouboraPlugin.self)
-```
-
->objc
-
-```objc
-[PlayKitManager.sharedInstance registerPlugin: YouboraPlugin.self];
-```
-
-### Create a Config and and load player
-
->swift
-
-```swift
-let youboraOptions: [String: Any] = [
-    "accountCode": "nicetest",
-    "httpSecure": true,
-    "parseHLS": true,
-    "media": [
-        "title": "Sintel",
-        "duration": 600
-    ],
-    "properties": [
-        "year": "2001",
-        "genre": "Fantasy",
-        "price": "free"
-    ],
-    "network": [
-        "ip": "1.2.3.4"
-    ],
-    "ads": [
-        "adsExpected": true,
-        "campaign": "Ad campaign name"
-    ],
-    "extraParams": [
-        "param1": "Extra param 1 value",
-        "param2": "Extra param 2 value"
-    ]
-]
-
-let youboraConfig = AnalyticsConfig(params: youboraOptions)
-let config = [YouboraPlugin.pluginName: youboraConfig]
-let pluginConfig = PluginConfig(config: config)
-
-let player = PlayKitManager.shared.loadPlayer(pluginConfig: pluginConfig)
-```
-
->objc
-
-```objc
-NSDictionary * youboraOptions = @{
-                           @"accountCode": @"nicetest",
-                           @"httpSecure": @YES,
-                           @"parseHLS": @YES,
-                           @"media": @{
-                                  @"title": @"Sintel",
-                                  @"duration": @600
-                                  },
-                           @"properties": @{
-                                  @"year": @"2001",
-                                  @"genre": @"Fantasy",
-                                  @"price": @"free"
-                                  },
-                           @"network": @{
-                                  @"ip": @"1.2.3.4"
-                                  },
-                           @"ads": @{
-                                  @"adsExpected": @YES,
-                                  @"campaign": @"Ad campaign name"
-                                  },
-                           @"extraParams": @{
-                                   @"param1": @"Extra param 1 value",
-                                   @"param2": @"Extra param 2 value"
-                                   }
-                           };
-                           
-AnalyticsConfig *youboraConfig = [[AnalyticsConfig alloc] initWithParams: youboraOptions];
-    
-NSMutableDictionary *config = [NSMutableDictionary dictionary];
-config[PhoenixAnalyticsPlugin.pluginName] = youboraConfig;
-
-PluginConfig *pluginConfig = [[PluginConfig alloc] initWithConfig:config];
-self.player = [PlayKitManager.sharedInstance loadPlayerWithPluginConfig:pluginConfig];
-```
-
->Note: Only then load player with Plugin Config.
-
-</p></details>  
+``` 
 
 ## Have Questions or Need Help?
 
