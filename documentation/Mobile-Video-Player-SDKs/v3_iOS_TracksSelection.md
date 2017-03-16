@@ -45,7 +45,7 @@ self.player.addObserver(self, events: [PlayerEvents.tracksAvailable.self], block
 }
 ```
 
-### Change Track
+### Select Track
 
 To switch between tracks, use the following code:
 
