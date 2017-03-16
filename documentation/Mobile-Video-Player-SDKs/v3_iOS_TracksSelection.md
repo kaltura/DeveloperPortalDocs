@@ -25,8 +25,24 @@ self.player.addObserver(self, events: [PlayerEvents.tracksAvailable.self], block
 >objc
 
 ```objc
-
-
+- (void)handleTracks {
+    // don't forget to use weak self to prevent retain cycles when needed
+    __weak __typeof(self) weakSelf = self;
+    
+    // add observer to tracksAvailable event
+    [self.player addObserver:self events:@[PlayerEvent.tracksAvailable] block:^(PKEvent * _Nonnull event) {
+        if ([event isKindOfClass:PlayerEvent.tracksAvailable]) {
+            // Extract Audio Tracks
+            if (event.tracks.audioTracks) {
+                weakSelf.audioTracks = event.tracks.audioTracks;
+            }
+            // Extract Text Tracks
+            if (event.tracks.textTracks) {
+                weakSelf.textTracks = event.tracks.textTracks;
+            }
+        }
+    }];
+}
 ```
 
 ### Change Track
@@ -47,8 +63,10 @@ self.player.selectTrack(trackId: self.captions[index].id)
 >objc
 
 ```objc
-
-
+// Select Track
+- (void)selectTrack:(Track *)track {
+    [self.player selectTrackWithTrackId:track.id];
+}
 ```
 
 ## Have Questions or Need Help?
