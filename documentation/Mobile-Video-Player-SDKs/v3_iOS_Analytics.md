@@ -374,7 +374,7 @@ This section describes the steps required for configuring the Kaltura Video Play
 To enable the phoenix analytics plugin on iOS devices for the Kaltura Video Player, add the following line to your Podfile: 
 
 ```ruby
-pod 'PlayKit/PhoenixAnalyticsPlugin'
+pod 'PlayKit/PhoenixPlugin'
 ```
 
 ### Register the Phoenix Stats Plugin  
