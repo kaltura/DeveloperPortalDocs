@@ -51,7 +51,7 @@ PlayKitManager.shared.registerPlugin(YouboraPlugin.self)
 [PlayKitManager.sharedInstance registerPlugin: YouboraPlugin.self];
 ```
 
-### Create a Config and and load player
+### Create a config and load player
 
 >swift
 
@@ -137,7 +137,7 @@ self.player = [PlayKitManager.sharedInstance loadPlayerWithPluginConfig:pluginCo
 
 </p></details> 
 
-## Kaltura Stats Plugin + Kaltura Live Stats Plugin  
+## Kaltura Stats Plugin + Kaltura Live Stats Plugin Configuration 
 
 This section describes the steps required for using the Kaltura stats plugin or live stats plugin. 
 
@@ -159,7 +159,7 @@ PlayKitManager.shared.registerPlugin(KalturaStatsPlugin.self)
 [PlayKitManager.sharedInstance registerPlugin:KalturaStatsPlugin.self];
 ```
 
-### Create a Config and and load player
+### Create a config and load player
 
 >swift
 
@@ -207,15 +207,11 @@ self.player = [PlayKitManager.sharedInstance loadPlayerWithPluginConfig:pluginCo
 
 </p></details>
 
-## Kaltura Stats Plugin  
+### Kaltura Stats Plugin Events
 
 This section describes the events available for kaltura stats plugin.
 
-<details><summary>Kaltura Stats Plugin</summary><p>
-
-### Kaltura Stats Plugin Supported Events  
-
-The Kaltura Stats Plugin supports the following events:
+<details><summary>Kaltura Stats Plugin Events</summary><p>
 
 ```swift
 enum KStatsEventType : Int {
@@ -265,7 +261,7 @@ case ERROR = 99
 
 </p></details>
 
-## TVPAPI Stats Plugin
+## TVPAPI Analytics Plugin
 
 This section describes the steps required for using the TVPAPI Stats Plugin on iOS devices to get statistical information on the device, as well as the events supported by the plugin.
 
@@ -283,45 +279,165 @@ pod 'PlayKit/PhoenixPlugin'
 
 Register the TVPAPI Stats Plugin in your application as follows:
 
+>swift
+
 ```swift
-PlayKitManager.sharedInstance.registerPlugin(TVPAPIAnalyticsPlugin.self)
+PlayKitManager.shared.registerPlugin(TVPAPIAnalyticsPlugin.self)
 ```
 
-### Configure the Kaltura Video Player to use the TVPAPI Stats Plugin  
+>objc
 
-To configure the player to use TVPAPI Stats Plugin, add the following configuration to your `PlayerConfig` file as follows:
-
-```swift
-let analyticsConfig = AnalyticsConfig()
-var params: [String : Any]
-params["fileId"] = "fileId"
-params["baseUrl" = "baseUrl" //Sample url - http://tvpapi-preprod.ott.kaltura.com/v3_9/gateways/jsonpostgw.aspx?
-params["timeInterval"] = 30 //Default value - 30. Value is in seconds.
-params["initObj"] = initObj //must be a valid initObj of TVPAPI
-analyticsConfig.params = params
+```objc
+[PlayKitManager.sharedInstance registerPlugin:TVPAPIAnalyticsPlugin.self];
 ```
 
-### Set the Plugin Configuration to the TVPAPI Stats Plugin  
+### Create a config and load player
 
-To ensure that the TVPAPI Stats Plugin starts loading, you'll need to set the plugin configuration you created as follows:
+>swift
 
 ```swift
-var playerController: Player!
-let config = PlayerConfig()
-var pluginsConfig = [String : AnyObject?]()
-playerConfig.plugins[TVPAPIAnalyticsPlugin.pluginName] = analyticsConfig
-self.playerController = PlayKitManager.sharedInstance.loadPlayer(config: playerConfig.plugins)
+// config params, defaults values, insert your data instead
+let tvpapiPluginParams: [String: Any] = [
+    "fileId": "",
+    "baseUrl": "",
+    "timerInterval": 30,
+    "initObj": [
+        "Token": "",
+        "SiteGuid": "",
+        "ApiUser": "",
+        "DomainID": "",
+        "UDID": "",
+        "ApiPass": "",
+        "Locale": [
+            "LocaleUserState": "",
+            "LocaleCountry": "",
+            "LocaleDevice": "",
+            "LocaleLanguage": ""
+        ],
+        "Platform": ""
+    ]
+]
+// create analytics config with the created params
+let tvpapiPluginConfig = AnalyticsConfig(params: tvpapiPluginParams)
+// create config dictionary
+let config = [TVPAPIAnalyticsPlugin.pluginName: tvpapiPluginConfig]
+// create plugin config object
+let pluginConfig = PluginConfig(config: config)
+// load the player with the created plugin config
+let player = PlayKitManager.shared.loadPlayer(pluginConfig: pluginConfig)
+```
+
+>objc
+
+```objc
+// config params, defaults values, insert your data instead
+NSDictionary *tvpapiPluginParams = @{
+                                     @"fileId": @"",
+                                     @"baseUrl": @"",
+                                     @"timerInterval": @30,
+                                     @"initObj": @{
+                                                  @"Token": @"",
+                                                  @"SiteGuid": @"",
+                                                  @"ApiUser": @"",
+                                                  @"DomainID": @"",
+                                                  @"UDID": @"",
+                                                  @"ApiPass": @"",
+                                                  @"Locale": @{
+                                                              @"LocaleUserState": @"",
+                                                              @"LocaleCountry": @"",
+                                                              @"LocaleDevice": @"",
+                                                              @"LocaleLanguage": @""
+                                                              },
+                                                 @"Platform": @""
+                                                 }
+                                     };
+// create analytics config with the created params                                               
+AnalyticsConfig *tvpapiPluginConfig = [[AnalyticsConfig alloc] initWithParams:tvpapiPluginParams];
+// create config dictionary
+NSMutableDictionary *config = [NSMutableDictionary dictionary];
+// set the created config to the plugin name key in the dictionary
+config[TVPAPIAnalyticsPlugin.pluginName] = tvpapiPluginConfig;
+// create plugin config object
+PluginConfig *pluginConfig = [[PluginConfig alloc] initWithConfig:config];
+// load the player with the created plugin config
+self.player = [PlayKitManager.sharedInstance loadPlayerWithPluginConfig:pluginConfig];
 ```
 
 </p></details>
 
-## Phoenix Stats Plugin  
+## Phoenix Analytics Plugin  
 
 This section describes the steps required for configuring the Kaltura Video Player to use the Phoenix Stats Plugin on iOS devices as well as the supported plugin events. This will enable you to obtain important statistical information about usage.
 
 <details><summary>Get Started With Phoenix Plugin</summary><p>
 
+To enable the phoenix analytics plugin on iOS devices for the Kaltura Video Player, add the following line to your Podfile: 
 
+```ruby
+pod 'PlayKit/PhoenixAnalyticsPlugin'
+```
+
+### Register the Phoenix Stats Plugin  
+
+Register the phoenix analytics plugin in your application as follows:
+
+>swift
+
+```swift
+PlayKitManager.shared.registerPlugin(PhoenixAnalyticsPlugin.self)
+```
+
+>objc
+
+```objc
+[PlayKitManager.sharedInstance registerPlugin:PhoenixAnalyticsPlugin.self];
+```
+
+### Create a config and load player
+
+>swift
+
+```swift
+// config params, defaults values, insert your data instead
+let phoenixPluginParams = [
+    "fileId": "",
+    "baseUrl": "",
+    "ks": "",
+    "partnerId": 0,
+    "timerInterval": 30
+]
+// create analytics config with the created params
+let phoenixPluginConfig = AnalyticsConfig(params: phoenixPluginParams)
+// create config dictionary
+let config = [PhoenixAnalyticsPlugin.pluginName: phoenixPluginConfig]
+// create plugin config object
+let pluginConfig = PluginConfig(config: config)
+// load the player with the created plugin config
+let player = PlayKitManager.shared.loadPlayer(pluginConfig: pluginConfig)
+```
+
+>objc
+
+```objc
+// config params, defaults values, insert your data instead
+NSDictionary *phoenixPluginParams = @{
+                                      @"fileId": @"",
+                                      @"baseUrl": @"",
+                                      @"ks": @"",
+                                      @"partnerId": @0,
+                                      @"timerInterval": @30
+                                      };
+// create analytics config with the created params                                               
+AnalyticsConfig *phoenixPluginConfig = [[AnalyticsConfig alloc] initWithParams:phoenixPluginParams];
+// create config dictionary
+NSMutableDictionary *config = [NSMutableDictionary dictionary];
+// set the created config to the plugin name key in the dictionary
+config[PhoenixAnalyticsPlugin.pluginName] = phoenixPluginConfig;
+// create plugin config object
+PluginConfig *pluginConfig = [[PluginConfig alloc] initWithConfig:config];
+// load the player with the created plugin config
+self.player = [PlayKitManager.sharedInstance loadPlayerWithPluginConfig:pluginConfig];
+```
 
 </p></details>
 
