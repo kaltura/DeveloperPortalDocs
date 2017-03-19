@@ -13,14 +13,24 @@ To get the available captions and audio tracks, register to the 'PlayerEvents.tr
 >swift
 
 ```swift
-self.player.addObserver(self, events: [PlayerEvents.tracksAvailable.self], block: { (event: Any) -> Void in
-  if let eventData = event as? PlayerEvents.tracksAvailable {
-     self.audioTracks = eventData.tracks.audioTracks
-     self.captions = eventData.tracks.textTracks
-     //configure UI with the result
-  }
-})
-
+func handleTracks() {
+    self.addObserver(self, events: [PlayerEvent.tracksAvailable]) { [weak self] event in
+        if type(of: event) == PlayerEvent.tracksAvailable {
+            guard let tracks = event.tracks else {
+                print("No Tracks Available")
+                return
+            }
+            
+            if let audioTracks = tracks.audioTracks {
+                self.audioTracks = audioTracks
+            }
+            
+            if let textTracks = tracks.textTracks {
+                self.textTracks = textTracks
+            }
+        }
+    }
+}
 ```
 >objc
 
@@ -71,6 +81,8 @@ self.player.selectTrack(trackId: self.captions[index].id)
 
 ### Get Current Tracks
 
+>swift
+
 ```swift
 // Get Current Audio/Text Track
 let currentAudioTrack = self.player.currentAudioTrack
@@ -82,6 +94,39 @@ let currentTextTrack = self.player.currentTextTrack
 // Get Current Audio/Text Track
 NSString *currentAudioTrack = self.player.currentAudioTrack;
 NSString *currentTextTrack = self.player.currentTextTrack;
+```
+
+### Get Current Bitrate
+
+>swift
+
+```swift
+// Get Current Bitrate
+func currentBitrateHandler() {
+    self.addObserver(self, events: [PlayerEvent.playbackParamsUpdated]) { [weak self] event in
+        if type(of: event) == PlayerEvent.tracksAvailable {
+            // Get Current Bitrate Value
+            if let currentBitrate = event.currentBitrate {
+                print("currentBitrate: ", currentBitrate)
+            }
+        }
+    }
+}
+```
+>objc
+
+```objc
+// Get Current Bitrate
+- (void)currentBitrateHandler {   
+    [self.player addObserver:self events:@[PlayerEvent.playbackParamsUpdated] block:^(PKEvent * _Nonnull event) {
+        if ([event isKindOfClass:PlayerEvent.playbackParamsUpdated]) {
+            // Get Current Bitrate Value
+            if (event.currentBitrate) {
+                NSLog(@"%@", event.currentBitrate);
+            }
+        }
+    }];
+}
 ```
 
 ## Have Questions or Need Help?
