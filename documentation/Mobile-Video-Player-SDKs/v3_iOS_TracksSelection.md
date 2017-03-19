@@ -62,13 +62,10 @@ To switch between tracks, use the following code:
 >swift
 
 ```swift
-
-// Audio Tracks
-self.player.selectTrack(trackId: self.audioTracks[index].id)
-
-// Text Tracks
-self.player.selectTrack(trackId: self.captions[index].id)
-
+// Select Track
+func selectTrack(track: Track) {
+    self.player.selectTrack(trackId: track.id)
+}
 ```
 >objc
 
