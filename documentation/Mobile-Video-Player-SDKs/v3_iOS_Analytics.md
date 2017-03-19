@@ -480,6 +480,12 @@ self.playerController.addObserver(self, events: [OttEvent.concurrency]) { event 
 }];
 ``` 
 
+</p></details>
+
+## Code Sample
+
+[PlayKit iOS samples](https://github.com/kaltura/playkit-ios-samples) repo has a dedicated samples with more details.
+
 ## Have Questions or Need Help?
 
 Check out the [Kaltura Player SDK Forum](https://forum.kaltura.org/c/playkit) page for different ways of getting in touch.

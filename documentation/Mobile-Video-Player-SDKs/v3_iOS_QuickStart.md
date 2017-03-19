@@ -303,7 +303,9 @@ Add custom buttons and controls to the player as follows:
 > [Download Full Swift Sample](https://github.com/kaltura/playkit-ios-samples/tree/master/PlayKitApp/PlayKitApp)
 > [Download Full Obj-C Sample](https://github.com/kaltura/playkit-ios-samples/tree/master/PlayKitApp/ObjCSample)
 
+## Code Sample
 
+[PlayKit iOS samples](https://github.com/kaltura/playkit-ios-samples) repo has a dedicated samples with more details.
 
 ## Have Questions or Need Help?  
 
