@@ -69,6 +69,21 @@ self.player.selectTrack(trackId: self.captions[index].id)
 }
 ```
 
+### Get Current Tracks
+
+```swift
+// Get Current Audio/Text Track
+let currentAudioTrack = self.player.currentAudioTrack
+let currentTextTrack = self.player.currentTextTrack
+```
+>objc
+
+```objc
+// Get Current Audio/Text Track
+NSString *currentAudioTrack = self.player.currentAudioTrack;
+NSString *currentTextTrack = self.player.currentTextTrack;
+```
+
 ## Have Questions or Need Help?
 
 Check out the [Kaltura Player SDK Forum](https://forum.kaltura.org/c/playkit) page for different ways of getting in touch.
