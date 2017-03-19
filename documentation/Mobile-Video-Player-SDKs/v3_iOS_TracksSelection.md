@@ -131,7 +131,7 @@ func currentBitrateHandler() {
 
 ## Code Sample
 
-[PlayKit iOS Tracks Sample](https://github.com/kaltura/playkit-ios-samples/tree/master/TracksSample) repo has a dedicated samples with more details.
+[PlayKit iOS Tracks Sample](https://github.com/kaltura/playkit-ios-samples/tree/master/TracksSample), click to get full sample.
 
 ## Have Questions or Need Help?
 
