@@ -233,6 +233,8 @@ To observe ad cue points update use the following:
 player.addObserver(self, events: [AdEvent.adCuePointsUpdate]) { event in
     if let adCuePoints = event.adCuePoints {
         // use ad cue points
+        if adCuePoints.hasPreRoll || adCuePoints.hasMidRoll || adCuePoints.hasPostRoll {
+            // do your stuff
     }
 })
 ```
@@ -240,10 +242,13 @@ player.addObserver(self, events: [AdEvent.adCuePointsUpdate]) { event in
 >objc
 
 ```objc
-[self.kPlayer addObserver: self events: @[AdEvent.adCuePoints] block:^(PKEvent * _Nonnull event) {
+[self.kPlayer addObserver: self events: @[AdEvent.adCuePointsUpdate] block:^(PKEvent * _Nonnull event) {
     PKAdCuePoints *adCuePoints = event.adCuePoints;
     if (adCuePoints) {
         // use ad cue points
+        if (adCuePoints.hasPreRoll || adCuePoints.hasMidRoll || adCuePoints.hasPostRoll) {
+            // do your stuff
+        }
     }
 }];
 ```
