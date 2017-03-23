@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Kaltura Player JavaScript API, Events and Hooks
-weight: 403
+weight: 404
 ---
 
 The Web Video Player JavaScript API is a two-way communication channel that enables you to manage properties, event and notifications, including: 
