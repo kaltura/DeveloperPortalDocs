@@ -318,7 +318,7 @@ In many cases you would like to know the Player's current state, i.e., is it pla
 
 * Events registration: Register to Player events such as the `playerStateChange` event. For more information, see the Events section in the [Player API guide](https://vpaas.kaltura.com/documentation/Web-Video-Player/Kaltura-Media-Player-API.html).
 * Check Player properties, for example: `this.getPlayer().paused`. 
-* Examine the Player state classes. For more information see the Player state CSS classes in the [Player customization article](https://vpaas.kaltura.com/documentation/media-player/Player-Customization.html). 
+* Examine the Player state classes. For more information see the Player state CSS classes in the [Player customization article](https://vpaas.kaltura.com/documentation/Web-Video-Player/Player-Customization.html). 
 * To determine if an ad is currently playing use: `this.getPlayer().isInSequence()`. `true` indicates an ad is currently playing.
 
 #### Example: Disable Your Plugin During Ad Playback
@@ -339,7 +339,7 @@ addBindings: function() {
 
 While you may call the Player methods directly from your plugin, it is better the use the Player API for this purpose.   
 The Player API makes sure your command is executed seamlessly across multiple playback engines and handles possible errors.  
-To call a Player method using the API, use the `sendNotification` method. For more information, see the [Player API guide](https://vpaas.kaltura.com/documentation/media-player/Kaltura-Media-Player-API#sthash.JFWYb2CM.dpbs).   
+To call a Player method using the API, use the `sendNotification` method. For more information, see the [Player API guide]https://vpaas.kaltura.com/documentation/Web-Video-Player/Kaltura-Media-Player-API.html).   
 
 
 #### Example: Switching the Currently Playing Media
