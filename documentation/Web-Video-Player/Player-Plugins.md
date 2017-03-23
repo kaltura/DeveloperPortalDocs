@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Extending the Kaltura Web Video Player Functionality Using Plugins
-weight: 406
+weight: 408
 ---
 
 The Kaltura Web Video Player architecture uses plugins to extend the Player functionality. All Web Video Player controls and core functionalities are implemented as plugins. This approach provides a separation of concerns and code isolation when implementing Player features.   
