@@ -316,9 +316,9 @@ this.getPlayer().getControlBarContainer().find('.btn');
 
 In many cases you would like to know the Player's current state, i.e., is it playing or paused, is an ad currently playing, etc. Determining the state of the Player can be done in the following ways:
 
-* Events registration: Register to Player events such as the `playerStateChange` event. For more information, see the Events section in the [Player API guide](https://vpaas.kaltura.com/documentation/media-player/Kaltura-Media-Player-API#sthash.JFWYb2CM.dpbs).
+* Events registration: Register to Player events such as the `playerStateChange` event. For more information, see the Events section in the [Player API guide](https://vpaas.kaltura.com/documentation/Web-Video-Player/Kaltura-Media-Player-API.html).
 * Check Player properties, for example: `this.getPlayer().paused`. 
-* Examine the Player state classes. For more information see the Player state CSS classes in the [Player customization article](https://vpaas.kaltura.com/documentation/media-player/Player-Customization#sthash.c5Tw60XR.dpbs). 
+* Examine the Player state classes. For more information see the Player state CSS classes in the [Player customization article](https://vpaas.kaltura.com/documentation/media-player/Player-Customization.html). 
 * To determine if an ad is currently playing use: `this.getPlayer().isInSequence()`. `true` indicates an ad is currently playing.
 
 #### Example: Disable Your Plugin During Ad Playback
