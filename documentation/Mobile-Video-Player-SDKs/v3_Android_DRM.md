@@ -28,7 +28,7 @@ The following DRM schemes are supported in Android devices:
 
 [Kaltura Device Info App](https://play.google.com/store/apps/details?id=com.kaltura.kalturadeviceinfo) can help in diagnosing DRM and Media-related problems.
 
-</br>
+
 ## Have Questions or Need Help?
 
 Check out the [Kaltura Player SDK Forum](https://forum.kaltura.org/c/playkit) page for different ways of getting in touch.
