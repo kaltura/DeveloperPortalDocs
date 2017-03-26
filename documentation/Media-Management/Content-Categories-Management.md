@@ -5,9 +5,9 @@ weight: 102
 ---
 
 Media entries can be organized in categories. Categories are structured in a tree-like hierarchy where each category can include multiple sub-categories.  
-You can add, remove and edit categories using the [category service](https://developer.kaltura.com/api-docs/#/category). You can assign a media entry to a specific category using the [categoryEntry service](https://developer.kaltura.com/api-docs/#/categoryEntry).   
+You can add, remove and edit categories using the [category service](https://developer.kaltura.com/api-docs/Enrich_and_Organize_Metadata/category). You can assign a media entry to a specific category using the [categoryEntry service](https://developer.kaltura.com/api-docs/Enrich_and_Organize_Metadata/categoryEntry).   
 Categories provide a logical structure for your site and assist with content management. You can assign custom metadata to categories. Then, using filters you can create robust search and discovery workflows, playlists and more.  
-Categories may also be used to set content entitlements for end-users in various applications using the [categoryUser service](https://developer.kaltura.com/api-docs/#/categoryUser).  
+Categories may also be used to set content entitlements for end-users in various applications using the [categoryUser service](https://developer.kaltura.com/api-docs/Enrich_and_Organize_Metadata/categoryUser).  
 
 ### Quick Summary - Categories     
 
@@ -19,37 +19,37 @@ Categories may also be used to set content entitlements for end-users in various
 * You can use categories, along with metadata and filters to create manually or dynamically generated playlists.
 * Categories can be used for setting content entitlements for end-users, regulating access to content and functionality.
 
-> **Backward Compatibility** - The [KalturaBaseEntry](https://developer.kaltura.com/api-docs/#/KalturaBaseEntry) exposes the two properties `categories` and `categoriesIds`. These properties can only be used when your categories are not configured with Entitlement settings. It is always best to rely on the `categoryEntry` service to retrieve a full list of categories per Entry. Avoid using the `categories` and `categoriesIds` properties.
+> **Backward Compatibility** - The [KalturaBaseEntry](https://developer.kaltura.com/api-docs/General_Objects/Objects/KalturaBaseEntry) exposes the two properties `categories` and `categoriesIds`. These properties can only be used when your categories are not configured with Entitlement settings. It is always best to rely on the `categoryEntry` service to retrieve a full list of categories per Entry. Avoid using the `categories` and `categoriesIds` properties.
 
 ## Creating and Managing Categories
 
-To add, list, delete, edit, move and manage categories, use the [`category service`](https://developer.kaltura.com/api-docs/#/category).
+To add, list, delete, edit, move and manage categories, use the [`category service`](https://developer.kaltura.com/api-docs/Enrich_and_Organize_Metadata/category).
 
-* Categories are always associated with an owner user ID. This is the user who created the category (determined by the Kaltura Session used when calling [`category.add`](https://developer.kaltura.com/api-docs/#/category.add)).
-* To retrieve a category's full parent's tree path (until the root parent) use	the	[KalturaCategory.fullName](https://developer.kaltura.com/api-docs/#/KalturaCategory) and [KalturaCategory.fullIds](https://developer.kaltura.com/api-docs/#/KalturaCategory) fields.
+* Categories are always associated with an owner user ID. This is the user who created the category (determined by the Kaltura Session used when calling [`category.add`](https://developer.kaltura.com/api-docs/Enrich_and_Organize_Metadata/category/category_add)).
+* To retrieve a category's full parent's tree path (until the root parent) use	the	[KalturaCategory.fullName](https://developer.kaltura.com/api-docs/General_Objects/Objects/KalturaCategory) and [KalturaCategory.fullIds](https://developer.kaltura.com/api-docs/General_Objects/Objects/KalturaCategory) fields.
 
 ## Managing Entries Inside Categories  
 
-With a category structure in place, use the [`categoryEntry service`](https://developer.kaltura.com/api-docs/#/categoryEntry) to add, delete and move entries in and out of categories.
+With a category structure in place, use the [`categoryEntry service`](https://developer.kaltura.com/api-docs/Enrich_and_Organize_Metadata/categoryEntry) to add, delete and move entries in and out of categories.
 
-To add an entry to a category, simply call the [categoryEntry.add](https://developer.kaltura.com/api-docs/#/categoryEntry.add) providing a [KalturaCategoryEntry](https://developer.kaltura.com/api-docs/#/KalturaCategoryEntry) object. In the `KalturaCategoryEntry` object, set the id of the entry and the id of the category you want to associate it to.  
+To add an entry to a category, simply call the [categoryEntry.add](https://developer.kaltura.com/api-docs/Enrich_and_Organize_Metadata/categoryEntry/categoryEntry_add) providing a [KalturaCategoryEntry](https://developer.kaltura.com/api-docs/Enrich_and_Organize_Metadata/categoryEntry/) object. In the `KalturaCategoryEntry` object, set the id of the entry and the id of the category you want to associate it to.  
 
-To remove an entry from a category, call the [categoryEntry.delete](https://developer.kaltura.com/api-docs/#/categoryEntry.delete) action and provide the id of the entry (`entryId`) and the id of the category (`categoryId`) from which to remove the entry.
+To remove an entry from a category, call the [categoryEntry.delete](https://developer.kaltura.com/api-docs/Enrich_and_Organize_Metadata/categoryEntry/categoryEntry_delete) action and provide the id of the entry (`entryId`) and the id of the category (`categoryId`) from which to remove the entry.
 
 ## Category Content Moderation   
 
 By default, every entry may be added to a category, however, you may choose to moderate content.  
 Setting the `moderation` property to 1 (true) places new entries into a virtual moderation queue. Entries in the moderation queue must be approved by a user with Manager or Moderator permission level, before they are officially associated with the category.  
 
-The membership of users in a category is defined with the [categoryUser](https://developer.kaltura.com/api-docs/#/categoryUser) service. Use the `add` action to associate a user with a category.  
+The membership of users in a category is defined with the [categoryUser](https://developer.kaltura.com/api-docs/Enrich_and_Organize_Metadata/categoryUser) service. Use the `add` action to associate a user with a category.  
 
-The relationship of user permissions in a specific category is configured with the `permissionLevel` property when calling the [`categoryUser.add`](https://developer.kaltura.com/api-docs/#/categoryUser.add) action. (The options for `permissionLevel` are available in [`KalturaCategoryUserPermissionLevel`](https://developer.kaltura.com/api-docs/#/KalturaCategoryUserPermissionLevel)).  
+The relationship of user permissions in a specific category is configured with the `permissionLevel` property when calling the [`categoryUser.add`](https://developer.kaltura.com/api-docs/Enrich_and_Organize_Metadata/categoryUser/categoryUser_add) action. (The options for `permissionLevel` are available in [`KalturaCategoryUserPermissionLevel`](https://developer.kaltura.com/api-docs/General_Objects/Enums/KalturaCategoryUserPermissionLevel)).  
 
-Moderation is governed with the [categoryEntry.activate](https://developer.kaltura.com/api-docs/#/categoryEntry.activate) and [categoryEntry.reject](https://developer.kaltura.com/api-docs/#/categoryEntry.reject) actions, that allow moderator users to approve (`activate`) or reject the addition of an entry to the category.
+Moderation is governed with the [categoryEntry.activate](https://developer.kaltura.com/api-docs/Enrich_and_Organize_Metadata/categoryEntry/categoryEntry_activate) and [categoryEntry.reject](https://developer.kaltura.com/api-docs/Enrich_and_Organize_Metadata/categoryEntry/categoryEntry_reject) actions, that allow moderator users to approve (`activate`) or reject the addition of an entry to the category.
 
-The [`contributionPolicy`](https://developer.kaltura.com/api-docs/#/KalturaCategory) determines if users are required to have a contributor level permission to be allowed to add or even suggest entries to the category. By default, all users are allowed to contribute (suggest) entries to be added. By setting the `contributionPolicy` to [`KalturaContributionPolicyType.MEMBERS_WITH_CONTRIBUTION_PERMISSION`](https://developer.kaltura.com/api-docs/#/KalturaContributionPolicyType), only users that are given a contributor role or above will be allowed to suggest entries.  
+The [`contributionPolicy`](https://developer.kaltura.com/api-docs/General_Objects/Objects/KalturaCategory) determines if users are required to have a contributor level permission to be allowed to add or even suggest entries to the category. By default, all users are allowed to contribute (suggest) entries to be added. By setting the `contributionPolicy` to [`KalturaContributionPolicyType.MEMBERS_WITH_CONTRIBUTION_PERMISSION`](https://developer.kaltura.com/api-docs/General_Objects/Enums/KalturaContributionPolicyType), only users that are given a contributor role or above will be allowed to suggest entries.  
 
-Use the [`userJoinPolicy`](https://developer.kaltura.com/api-docs/#/KalturaCategory) and [`KalturaUserJoinPolicyType`](https://developer.kaltura.com/api-docs/#/KalturaUserJoinPolicyType) to set whether users:
+Use the [`userJoinPolicy`](https://developer.kaltura.com/api-docs/General_Objects/Objects/KalturaCategory) and [`KalturaUserJoinPolicyType`](https://developer.kaltura.com/api-docs/General_Objects/Enums/KalturaUserJoinPolicyType) to set whether users:
 * can add themselves to the category (`AUTO_JOIN`)
 * can request to be added and wait for themoderator's approval (`REQUEST_TO_JOIN`) 
 * or if it's a by-invitation only list and users are not allowed to ask to be added (`NOT_ALLOWED`).  
@@ -73,9 +73,9 @@ Content Privacy defines the visibility of content associated with a category, in
 Content Privacy determines:  
 
 * Who has access to content associated with the category
-* Whether the content will be available to the user in global search results (e.g. when calling [`media.list`](https://developer.kaltura.com/api-docs/#/media.list))
+* Whether the content will be available to the user in global search results (e.g. when calling [`media.list`](https://developer.kaltura.com/api-docs/Ingest_and_Upload_Media/media/media_list))
 
-Content Privacy is configured in the Category's [privacy](https://developer.kaltura.com/api-docs/#/KalturaCategory) property. The available options are defined in [`KalturaPrivacyType`](https://developer.kaltura.com/api-docs/#/KalturaPrivacyType). 
+Content Privacy is configured in the Category's [privacy](https://developer.kaltura.com/api-docs/General_Objects/Objects/KalturaCategory) property. The available options are defined in [`KalturaPrivacyType`](https://developer.kaltura.com/api-docs/General_Objects/Enums/KalturaPrivacyType). 
 
 #### Available options for `privacy`:
 
@@ -94,7 +94,7 @@ If an entry is associated with a category where privacy is set to `MEMBERS_ONLY`
 
 ## Entitlement Enforcement Behavior
 
-To configure how Kaltura enforces entitlement and handles entitlement conflicts, use the [`defaultEntitlementEnforcement`](https://developer.kaltura.com/api-docs/#/KalturaPartner) property of `KalturaPartner`.
+To configure how Kaltura enforces entitlement and handles entitlement conflicts, use the [`defaultEntitlementEnforcement`](https://developer.kaltura.com/api-docs/General_Objects/Objects/KalturaPartner) property of `KalturaPartner`.
 
 * When `defaultEntitlementEnforcement` is set to true (default): Access to content under categories where privacy and privacyContext are configured is only allowed for API calls that provide a KS (Kaltura Session) that specify the correct privacyContext and a userId that is a member of the category.
 * When `defaultEntitlementEnforcement` is set to false: Access to content under categories with entitlement is possible using any valid Kaltura Session, including anonymous player embed codes (using a Widget Session). With this option, the application itself is responsible to implement an entitlement enforcement and it is expected that entitlement rules are kept within the application. 
@@ -105,7 +105,7 @@ To configure how Kaltura enforces entitlement and handles entitlement conflicts,
 
 Categories expose properties to control whether to, and who can find the categories and the entries associated with them. 
 
-[privacy](https://developer.kaltura.com/api-docs/#/KalturaCategory), defined to one of its ENUM options [`KalturaPrivacyType`](https://developer.kaltura.com/api-docs/#/KalturaPrivacyType) sets whether entries that are associated with the category can be seen by users: 
+[privacy](https://developer.kaltura.com/api-docs/General_Objects/Objects/KalturaCategory), defined to one of its ENUM options [`KalturaPrivacyType`](https://developer.kaltura.com/api-docs/General_Objects/Enums/KalturaPrivacyType) sets whether entries that are associated with the category can be seen by users: 
 
 * ALL: Category will be visible to all users.
 * AUTHENTICATED_USERS: Category will only be visible to logged-in users (i.e. List API requests made with a USER or ADMIN KS that specify a userId that is not null).
@@ -113,12 +113,12 @@ Categories expose properties to control whether to, and who can find the categor
 
 ### Configure and Use Content Entitlements
 
-To configure entitlements on a category, you will need to set a "Privacy Context" ([`category.privacyContext`](https://developer.kaltura.com/api-docs/#/KalturaCategory) propetry) for the desired category.  
+To configure entitlements on a category, you will need to set a "Privacy Context" ([`category.privacyContext`](https://developer.kaltura.com/api-docs/General_Objects/Objects/KalturaCategory) propetry) for the desired category.  
 Privacy Context is a free text label (English character string; commas and spaces are not allowed) that indicates to which application the entitlement settings apply, for example, “MySuperAwesomeVideoApp”.
 
 To allow access to an entitled category, follow these steps: 
 
-1. The end user must be added as a member of the category by using the [`CategoryUser`](https://developer.kaltura.com/api-docs/#/categoryUser) service. 
+1. The end user must be added as a member of the category by using the [`CategoryUser`](https://developer.kaltura.com/api-docs/Enrich_and_Organize_Metadata/categoryUser) service. 
 2. The privacy context should be passed in the application session (KS) whenever making API requests in the [`privacycontext` KS privileges](https://knowledge.kaltura.com/node/229#privacycontext).  
 
 > `privacyContexts` provides a means to set multiple entitlement application contexts per category with comma-seperated list of unique keys.
