@@ -68,7 +68,7 @@ When uploading a scheduled event recording to Kaltura, certain information from 
 Use one of the following options:
 
 * **Via XML/CSV:** The templateEntryId can be set via [XML bulk](http://www.kaltura.com/api_v3/xsdDoc/index.php?type=bulkUploadXml.bulkUploadXML). The templateEntryId is also supported in CSV.
-* **Via API:** The templateEntryId can be set via [API](https://developer.kaltura.com/api-docs/#/KalturaBaseEntry).
+* **Via API:** The templateEntryId can be set via [API](https://developer.kaltura.com/api-docs/General_Objects/Objects/KalturaBaseEntry).
 
 ### Publishing Permissions  
 
@@ -101,11 +101,11 @@ iCal export is supported via HTTP/HTTPS or FTP.
 
 ### Filtering and Pagination of Results  
 
-All Kaltura list actions, including [scheduleEvent.list](https://developer.kaltura.com/api-docs/#/scheduleEvent.list), accept the [KalturaFilterPager](https://developer.kaltura.com/api-docs/#/KalturaFilterPager). For example:
+All Kaltura list actions, including [scheduleEvent.list](https://developer.kaltura.com/api-docs/Integration_Scheduling_and_Hooks/Scheduling_Triggers_using_iCal/scheduleEvent/scheduleEvent_list), accept the [KalturaFilterPager](https://developer.kaltura.com/api-docs/General_Objects/Filters/KalturaFilterPager). For example:
 http://www.kaltura.com/api_v3/service/schedule_scheduleevent/action/list/format/ical/filter:objectType/KalturaScheduleEventFilter/filter:resourceIdsLike/33/pager:pageSize/30/pager:pageIndex/2
 ftp://api.kaltura.com/format/ical/schedule_scheduleevent/filter:objectType/KalturaScheduleEventFilter/filter:resourceIdsLike/33/pager:pageSize/30/pager:pageIndex/2.
  
-For a list of filters see: [KalturaScheduleEventFilter](https://developer.kaltura.com/api-docs/#/KalturaScheduleEventFilter). 
+For a list of filters see: [KalturaScheduleEventFilter](https://developer.kaltura.com/api-docs/General_Objects/Filters/KalturaScheduleEventFilter). 
 Note that more than one filter can be applied to each request. 
 Time attributes support both absolute and relative times. The time is measured in seconds since 1970, also known as a UNIX timestamp; however, if you specify a time that is smaller than 1980 (in seconds since 1970), e.g., 0, 60, or -60, Kaltura will calculate the past value as a relative time, for example:
 0 = now.
@@ -126,7 +126,7 @@ To use FTP, you will need to use KMC user credentials. A user with limited permi
 
 ### HTTP/S  
 
-You may download files via HTTP/S. The maximum number of returned results is 500 per page and 10,000 total. To filter the next 10,000 you will need to add a filter, for example: [createdAtGreaterThanOrEqual](https://developer.kaltura.com/api-docs/#/KalturaAccessControlBaseFilter). Partners will need to use a KS to request a list of events. 
+You may download files via HTTP/S. The maximum number of returned results is 500 per page and 10,000 total. To filter the next 10,000 you will need to add a filter, for example: [createdAtGreaterThanOrEqual](https://developer.kaltura.com/api-docs/General_Objects/Filters/KalturaAccessControlBaseFilter). Partners will need to use a KS to request a list of events. 
 
 The results can be filtered on any of the parameters. For example: 
 http://www.kaltura.com/api_v3/service/schedule_scheduleevent/action/list/format/ical/filter:objectType/KalturaScheduleEventFilter/filter:resourceIdsLike/RESOURCE-ID
@@ -151,7 +151,7 @@ To modify the resources list use the following actions:
 
 Be certain to modify the action column accordingly.
 
-The APIs can be found under the [Integration, Scheduling and Hooks](https://developer.kaltura.com/api-docs/#/Integration,%20Scheduling%20and%20Hooks) section in the developer.kaltura.com site.
+The APIs can be found under the [Integration, Scheduling and Hooks](https://developer.kaltura.com/api-docs/Integration_Scheduling_and_Hooks) section in the developer.kaltura.com site.
 
 These are the defaults if a field is missing:
 
@@ -171,4 +171,4 @@ Note that resources can have a hierarchy (e.g., a room with cameras), which is d
 ## Other Considerations  
 
 * Conflicting events: At present, Kaltura does not prevent conflicting events. The user will need to ensure that there is no resource conflict when scheduling the event. Devices should be able to handle resource conflicts and ensure operations in this case. 
-* Recurring events: When using HTTP/S or FTP, both the series and the breakdown of each occurrence will be provided. Devices can filter based on [event type](https://developer.kaltura.com/api-docs/#/KalturaScheduleEventRecurrence) to receive only the series and single events, or to receive single events and breakdown of series. The choice between the options depends on the capability of the device. 
+* Recurring events: When using HTTP/S or FTP, both the series and the breakdown of each occurrence will be provided. Devices can filter based on [event type](https://developer.kaltura.com/api-docs/General_Objects/Objects/KalturaScheduleEventRecurrence) to receive only the series and single events, or to receive single events and breakdown of series. The choice between the options depends on the capability of the device. 
