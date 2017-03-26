@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Kaltura Web Video Player Configuration and Parameters
-weight: 403
+weight: 404
 ---
 
 The Kaltura Web Video Player configuration is determined by a JSON structured configuration object, which is also called **Flashvars**. The Flashvars configuration parameters object defines key / value pairs for Player properties as well as a plugins configuration list.   
