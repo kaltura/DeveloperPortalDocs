@@ -151,7 +151,7 @@ _singleEntry.json_
 }
 ```
 
-### Using MockMediaProvider
+### Using MockMediaProvider  
 
 ```json
 // using input file
