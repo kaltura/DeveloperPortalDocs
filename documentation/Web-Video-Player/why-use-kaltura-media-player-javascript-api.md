@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Why use the Kaltura Media Player JavaScript API?
-weight: 406
+weight: 407
 ---
 
 You can use the JavaScript API to integrate the Kaltura player in your site, enrich the user experience, and help monetize your site:
