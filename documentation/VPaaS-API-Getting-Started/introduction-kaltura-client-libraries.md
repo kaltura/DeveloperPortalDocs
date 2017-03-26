@@ -83,23 +83,22 @@ The sample code is designed to show you how to use the features of Kaltura clien
 
 Kaltura provides [downloadable client libraries][8] for the Kaltura Hosted Edition in various programming languages. These languages also are available when [generating a client library for Kaltura On-Prem and Kaltura CE][5]. You can generate a client library for an additional language. See [Generating a Client Library for a Language that Kaltura Does Not Provide][9].
 
- [8]: https://developer.kaltura.com/api-docs/#/Client%20Libraries
- [9]: #GeneratingaClientLibraryforaLanguagethat
+ [8]: https://developer.kaltura.com/api-docs/Client_Libraries
+ [9]: https://knowledge.kaltura.com/adding-new-kaltura-api-client-library-generator
 
 **Available Client Library Languages**
 
-* PHP  
 * PHP5
 * Zend Framework-compatible library: Eases library integration in terms of coding standards and auto-loading
-* PHP4: For applications required to be compatible with PHP4
-* ActionScript 3       
-* Adobe Flex       
-* JavaScript       
-* C#       
+* JavaScript  
+* Node.JS
+* C# .NET       
 * Java       
 * Ruby       
 * Python
 * Objective-C/Cocoa
+* Java Android
+* CLI
 
 ## Where to Get a Client Library? 
 
@@ -405,8 +404,8 @@ The generator class has methods that are required to be implemented so that the 
 
 The generator class includes methods such as:
 
-*   *writeEnum* –Outputs code of an enumeration class (for example, <https://developer.kaltura.com/api-docs/#/KalturaEntryStatus>)
-*   *writeClass* – Outputs code of an object that represents a Kaltura entity (for example, <https://developer.kaltura.com/api-docs/#/KalturaBaseEntry>)
+*   *writeEnum* –Outputs code of an enumeration class (for example, [KalturaEntryStatus](https://developer.kaltura.com/api-docs/General_Objects/Enums/KalturaEntryStatus))
+*   *writeClass* – Outputs code of an object that represents a Kaltura entity (for example, [KalturaBaseEntry](https://developer.kaltura.com/api-docs/General_Objects/Objects/KalturaBaseEntry))
 *   *writeService* - Outputs code of an object that represents a Kaltura service.  
     The object has methods. Each method represents an action that is available in the service.
 *   *writeAction* - Outputs code of an action method within a service object.
