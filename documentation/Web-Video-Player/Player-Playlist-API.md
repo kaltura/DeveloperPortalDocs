@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Configuring and Customizing Kaltura Web Video Player Playlists
-weight: 407
+weight: 408
 ---
 
 The Kaltura Web Video Player provides a robust playlist plugin that allows rendering a playlist of entries with many configuration options, such as:   
