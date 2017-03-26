@@ -24,17 +24,20 @@ The following table lists the devices that are supported on the Kaltura Mobile W
 
 ## Desktop Graded Support Matrix  
 
-| Browser             | Version                                                                       | Windows                                                                       | Mac                   |                       |                       |                       |                       |                       |
-|---------------------|-------------------------------------------------------------------------------|-------------------------------------------------------------------------------|-----------------------|-----------------------|-----------------------|-----------------------|-----------------------|-----------------------|
-|                     |                                                                               | XP                                                                            | 7                     | 8                     | 10                    | X 10.10               | X 10.11               | X 10.12               |
-| Internet Explorer   |                                                                               |                                                                               |                       |                       |                       |                       |                       |                       |
-| 8                   | Flash / HTML5 w/ Chromeless Flash note: not all HTML5 features are supported. | Flash / HTML5 w/ Chromeless Flash note: not all HTML5 features are supported. |                       |                       |                       |                       |                       |                       |
-| 9                   |                                                                               | Flash / HTML5                                                                 |                       |                       |                       |                       |                       |                       |
-| 10                  |                                                                               | HTML5 / Flash                                                                 | HTML5                 | HTML5                 |                       |                       |                       |                       |
-| 11                  |                                                                               | HTML5                                                                         | HTML5                 |                       |                       |                       |                       |                       |
-| Edge                |                                                                               |                                                                               |                       | HTML5                 |                       |                       |                       |                       |
-| Firefox             | Previous version                                                              | HTML5 ( webm) / Flash                                                         | HTML5 ( webm) / Flash | HTML5 ( webm) / Flash | HTML5 ( webm) / Flash | HTML5 ( webm) / Flash | HTML5 ( webm) / Flash | HTML5 ( webm) / Flash |
-| Latest              | HTML5 ( webm) / Flash                                                         | HTML5 ( webm) / Flash                                                         | HTML5 ( webm)         | HTML5 ( webm)         | HTML5 ( webm) / Flash | HTML5 ( webm) / Flash | HTML5 ( webm) / Flash |                       |
-| Chrome              | Previous version                                                              | HTML5 / Flash                                                                 | HTML5 ( webm)         | HTML5 / Flash         | HTML5 / Flash         | HTML5 ( webm)         | HTML5 ( webm)         | HTML5 ( webm)         |
-| Latest              | HTML5 / Flash                                                                 | HTML5 / Flash                                                                 | HTML5 / Flash         | HTML5 / Flash         | HTML5 / Flash         | HTML5 / Flash         | HTML5 / Flash         |                       |
-| Desktop Safari      | Latest                                                                        |                                                                               |                       |                       |                       | HTML5 / Flash         | HTML5 / Flash         | HTML5 / Flash         |
+### Windows Support  
+
+|    Browser              |    Version              |    Windows Version      |                         |                         |                         |   |   |   |
+|-------------------------|-------------------------|-------------------------|-------------------------|-------------------------|-------------------------|---|---|---|
+|                         |                         |    Windows XP           |    Windows 7            |    Windows 8            |    Windows 10           |   |   |   |
+|    Internet Explorer    |    8                    |    V                    |    V                    |    X                    |    X                    |   |   |   |
+|                         |    9                    |    V                    |    V                    |    X                    |    X                    |   |   |   |
+|                         |    10                   |    X                    |    V                    |    V                    |    V                    |   |   |   |
+|                         |    11                   |    X                    |    V                    |    V                    |    V                    |   |   |   |
+|                         |    Edge                 |    X                    |    X                    |    X                    |    V                    |   |   |   |
+|    Firefox              |    Previous Versions    |    V                    |    V                    |    V                    |    V                    |   |   |   |
+|                         |    Latest Version       |    V                    |    V                    |    V                    |    V                    |   |   |   |
+|    Chrome               |    Previous Versions    |    Previous Versions    |    Previous Versions    |    Previous Versions    |    Previous Versions    |   |   |   |
+|                         |    Latest Version       |    Latest Version       |    Latest Version       |    Latest Version       |    Latest Version       |   |   |   |
+|                         |                         |                         |                         |                         |                         |   |   |   |
+
+
