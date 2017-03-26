@@ -15,11 +15,11 @@ weight: 202
 The Kaltura VPaaS offers many ways for ingesting content; a file upload API, bulk files import using CSV or XML, MRSS ingest services, and various widgets you can integrate into your workflows or sites, to allow user contributions and build custom upload interfaces.
 Find the sutiable ingestion methologies for your workflow below:
 
-* [File Upload and Import REST APIs](https://developer.kaltura.com/recipes/upload)
+* [File Upload and Import REST APIs](https://developer.kaltura.com/workflows/Ingest_and_Upload_Media)
 	* [Web Upload in JavaScript/jQuery (with chunked parallel pause-resume support)](https://github.com/kaltura/chunked-file-upload-jquery)
 	* [Upload in Java](https://github.com/kaltura/Sample-Kaltura-Chunked-Upload-Java)
 * [Bulk Upload XML and CSV formats](https://vpaas.kaltura.com/documentation/02_Media-Ingest-and-Preperation/Bulk-Content-Ingestion)
-* [Live Streaming and Webcam Recording](https://developer.kaltura.com/recipes/live_broadcast)
+* [Live Streaming and Webcam Recording](https://developer.kaltura.com/workflows/Live_Stream_and_Broadcast)
 * [Drop Folders and Aspera](https://knowledge.kaltura.com/node/737)
 
 ## Conversion Profiles and Flavor Assets  
