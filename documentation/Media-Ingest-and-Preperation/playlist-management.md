@@ -17,4 +17,4 @@ To understand how playlists are configured and used, see:
 > **Knowledge Article:** [How to create / add a single rule playlist](http://knowledge.kaltura.com/faq/how-create-add-single-rule-playlist#playlist)
 
 ### Quick Start
-Kaltura playlists can be added, updated, deleted and listed via the [`playlist service`](https://developer.kaltura.com/api-docs/#/playlist).
+Kaltura playlists can be added, updated, deleted and listed via the [`playlist service`](https://developer.kaltura.com/api-docs/Search_Discover_and_Personalize/playlist).
