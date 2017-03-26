@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Customizing the Kaltura Web Video Player's Look-and-Feel and Behavior
-weight: 405 
+weight: 406 
 ---
 
 The Kaltura Web Video Player look-and-feel is derived from the Player's skin, which consists of CSS classes and graphical assets such as icons and fonts; and from its Javascript code, which is used to define user interactions and UI behaviour.   
