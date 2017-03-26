@@ -54,7 +54,7 @@ For a quick view of how this method works:
 
 ### Upload Files by Calling the API Directly  
 
-Uploading a file directly via the REST API requires knowledge of handling files in your preferred programming language. The [Kaltura Client Libraries](https://developer.kaltura.com/api-docs/#/Client%20Libraries) simplify constructing the REST API calls to Kaltura and provide a simple API for a simple file upload request. However, if you'd like to support chunked file upload and pause-resume in your application, you will need to handle the file-chunking according to your preferred programming language standards.
+Uploading a file directly via the REST API requires knowledge of handling files in your preferred programming language. The [Kaltura Client Libraries](https://developer.kaltura.com/api-docs/Client_Libraries) simplify constructing the REST API calls to Kaltura and provide a simple API for a simple file upload request. However, if you'd like to support chunked file upload and pause-resume in your application, you will need to handle the file-chunking according to your preferred programming language standards.
 
 > If you're using Java, to achieve a chunked file upload in your Java application follow the information in [chunked uploads in the Java reference implementation](https://github.com/kaltura/Sample-Kaltura-Chunked-Upload-Java).
 
@@ -64,9 +64,9 @@ To learn how to use the file upload API, follow the recipe below:
 
 ## Working with Media Entries  
 
-Uploading a file creates a [KalturaMediaEntry](https://developer.kaltura.com/api-docs/#/KalturaMediaEntry) object by calling the [media.add](https://developer.kaltura.com/api-docs/#/media.add) action. The uploaded file is then assigned to this media entry by calling the [media.addContent](https://developer.kaltura.com/api-docs/#/media.addContent) action.
+Uploading a file creates a [KalturaMediaEntry](https://developer.kaltura.com/api-docs/General_Objects/Objects/KalturaMediaEntry) object by calling the [media.add](https://developer.kaltura.com/api-docs/Ingest_and_Upload_Media/media/media_add) action. The uploaded file is then assigned to this media entry by calling the [media.addContent](https://developer.kaltura.com/api-docs/Ingest_and_Upload_Media/media/media_addContent) action.
 
-Now that you have content in your account, you will want to implement a library search to create galleries or search for media discovery. The main service you will be working with is the [media service](https://developer.kaltura.com/api-docs/#/media).
+Now that you have content in your account, you will want to implement a library search to create galleries or search for media discovery. The main service you will be working with is the [media service](https://developer.kaltura.com/api-docs/Ingest_and_Upload_Media/media).
 
 ### Searching Entries - media.list  
 
@@ -76,12 +76,12 @@ Note that you can combine several filter parameters together to further narrow d
 
 ### Retrieving Entry Details - media.get  
 
-To retrieve the data of an object using its ID, call the object's `get` action. With media entries, call the [`media.get`](https://developer.kaltura.com/api-docs/#/media.get) action to retrieve the data of a specific entry.
+To retrieve the data of an object using its ID, call the object's `get` action. With media entries, call the [`media.get`](https://developer.kaltura.com/api-docs/Ingest_and_Upload_Media/media/media_get) action to retrieve the data of a specific entry.
 
 ### Updating Entry Details - media.update  
 
 To update any object in Kaltura's VPaaS, use the `update` action. 
-To update media entries, call the [`media.update`](https://developer.kaltura.com/api-docs/#/media.update) action by providing an instance of the `KalturaMediaEntry` object.   
+To update media entries, call the [`media.update`](https://developer.kaltura.com/api-docs/Ingest_and_Upload_Media/media/media_update) action by providing an instance of the `KalturaMediaEntry` object.   
 
 Additionally, media entries in Kaltura have several related objects, including: 
 
