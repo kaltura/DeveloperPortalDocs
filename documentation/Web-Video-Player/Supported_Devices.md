@@ -41,3 +41,13 @@ The following table lists the devices that are supported on the Kaltura Mobile W
 |                         |                         |                         |                         |                         |                         |   |   |   |
 
 
+### Mac Support  
+
+|    Browser           |    Version              |    Mac Version    |               |               |
+|----------------------|-------------------------|-------------------|---------------|---------------|
+|                      |                         |    X 10.10        |    X 10.11    |    X 10.12    |
+|    Firefox           |    Previous Versions    |    V              |    V          |    V          |
+|                      |    Latest Version       |    V              |    V          |    V          |
+|    Chrome            |    Previous Versions    |    V              |    V          |    V          |
+|                      |    Latest Version       |    V              |    V          |    V          |
+|    Desktop Safari    |    Latest               |    V              |    V          |    V          |
