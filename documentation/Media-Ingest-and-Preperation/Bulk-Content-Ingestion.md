@@ -50,12 +50,12 @@ With XML, you can achieve a simplified integration with other systems (for examp
 
 1. In the XML format, the order of the fields is not important (since each field is defined atomically).  
 2. Additionally, fields with an empty value can be skipped and not defined in the entry element.  
-3. The structure and field names should respect that of the [Kaltura Bulk Upload XML Schema](https://developer.kaltura.com/api-docs/#/Bulk%20Upload).
+3. The structure and field names should respect that of the [Kaltura Bulk Upload XML Schema](https://developer.kaltura.com/api-docs/XML_Schemas/Bulk_Upload).
 
 > If you're comfortable using PHP as a programming language, we recommend reviewing the GitHub project: [Kaltura's Bulk Upload XML Content Migration Sample Scripts](https://github.com/kaltura/kaltura-bulk-upload-migration-samples).
 
 
 ## The Bulk Upload Job API  
 
-1. After you create the CSV or XML file that you want to submit for ingestion, call the [media.bulkUploadAdd action](https://developer.kaltura.com/api-docs/#/media.bulkUploadAdd) to execute the ingestion job.   
-2. Once submitted, you can use the [bulk service](https://developer.kaltura.com/api-docs/#/bulk) to review the status of your ingestion job or to cancel it.   
+1. After you create the CSV or XML file that you want to submit for ingestion, call the [media.bulkUploadAdd action](https://developer.kaltura.com/api-docs/Execute_Bulk_Ingest_and_Updates/media_bulkUploadAdd) to execute the ingestion job.   
+2. Once submitted, you can use the [bulk service](https://developer.kaltura.com/api-docs/Execute_Bulk_Ingest_and_Updates/bulk) to review the status of your ingestion job or to cancel it.   
