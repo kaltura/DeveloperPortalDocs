@@ -88,8 +88,8 @@ The Kaltura Player is the building block by which you deliver video experiences 
               <blockquote class="recipes-ref-list">
                 <strong>Learn &amp; explore with Code Recipes:</strong> 
                 <ul>
-                  <li><a href="https://developer.kaltura.com/recipes/authentication" target="_blank">Creating KS using session or user services.</a></li>
-                  <li><a href="https://developer.kaltura.com/recipes/app_tokens" target="_blank">Managing applications access with the appTokens service.</a></li>
+                  <li><a href="https://developer.kaltura.com/workflows/Generate_API_Sessions/Authentication" target="_blank">Creating KS using session or user services.</a></li>
+                  <li><a href="https://developer.kaltura.com/workflows/Generate_API_Sessions/App_Token_Authentication" target="_blank">Managing applications access with the appTokens service.</a></li>
                 </ul>
               </blockquote>
               
@@ -101,13 +101,13 @@ The Kaltura Player is the building block by which you deliver video experiences 
               <blockquote class="recipes-ref-list">
                 <strong>Learn &amp; explore with Code Recipes:</strong> 
                 <ul>
-                  <li><a href="https://developer.kaltura.com/recipes/upload" target="_blank">Create and upload on-demand media files.</a></li>
-                  <li><a href="https://developer.kaltura.com/recipes/live_broadcast" target="_blank">Create live broadcast and stream live from webcam.</a></li>
-                  <li><a href="https://developer.kaltura.com/recipes/video_search" target="_blank">List and search entries.</a></li>
-                  <li><a href="https://developer.kaltura.com/recipes/metadata" target="_blank">Work with custom metadata.</a></li>
-                  <li><a href="https://developer.kaltura.com/recipes/code_cue_points" target="_blank">Timed metadata using cue points.</a></li>
-                  <li><a href="https://developer.kaltura.com/recipes/captions" target="_blank">Upload captions and run in-video search.</a></li>
-                  <li><a href="https://developer.kaltura.com/recipes/backend_notifications" target="_blank">Working with Backend and Email Notifications.</a></li>
+                  <li><a href="https://developer.kaltura.com/workflows/Ingest_and_Upload_Media" target="_blank">Create and upload on-demand media files.</a></li>
+                  <li><a href="https://developer.kaltura.com/workflows/Live_Stream_and_Broadcast" target="_blank">Create live broadcast and stream live from webcam.</a></li>
+                  <li><a href="https://developer.kaltura.com/workflows/Search_Discover_and_Personalize/Kaltura_Media_Library_Search" target="_blank">List and search entries.</a></li>
+                  <li><a href="https://developer.kaltura.com/workflows/Enrich_and_Organize_Metadata/Working_with_metadata" target="_blank">Work with custom metadata.</a></li>
+                  <li><a href="https://developer.kaltura.com/workflows/Engage_and_Publish/Cue_Points" target="_blank">Timed metadata using cue points.</a></li>
+                  <li><a href="https://developer.kaltura.com/workflows/Enrich_and_Organize_Metadata/Captions" target="_blank">Upload captions and run in-video search.</a></li>
+                  <li><a href="https://developer.kaltura.com/workflows/Integration_Scheduling_and_Hooks/Backend_and_Email_Notifications" target="_blank">Working with Backend and Email Notifications.</a></li>
                 </ul>
               </blockquote>
               
@@ -126,7 +126,7 @@ The Kaltura Player is the building block by which you deliver video experiences 
                   <li><a href="http://player.kaltura.com/docs/responsive" target="_blank">Example reference for responsive player embed.</a></li>
                   <li><a href="http://player.kaltura.com/docs/thumb" target="_blank">JavaScript function thmbnail embed (click turns thumbnail to player).</a></li>
                   <li><a href="http://player.kaltura.com/docs/NativeCallout" target="_blank">Enables a robust web to native bridge.</a></li>
-                  <li><a href="https://developer.kaltura.com/recipes/player_uiconf" target="_blank">Working with the uiConf service.</a></li>
+                  <li><a href="https://developer.kaltura.com/workflows/Engage_and_Publish/Player_UI_conf" target="_blank">Working with the uiConf service.</a></li>
                 </ul>
               </blockquote>
 
