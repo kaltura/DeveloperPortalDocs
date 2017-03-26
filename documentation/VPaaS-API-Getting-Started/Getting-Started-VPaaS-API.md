@@ -60,7 +60,7 @@ Uploading a file directly via the REST API requires knowledge of handling files 
 
 To learn how to use the file upload API, follow the recipe below:
 
-{% onebox https://developer.kaltura.com/recipes/upload/embed#/start %}
+{% onebox https://developer.kaltura.com/workflows/Ingest_and_Upload_Media/embed %}
 
 ## Working with Media Entries  
 
@@ -72,7 +72,7 @@ Now that you have content in your account, you will want to implement a library 
 
 Note that you can combine several filter parameters together to further narrow down your search results. 
 
-{% onebox https://developer.kaltura.com/recipes/video_search/embed#/start %}
+{% onebox https://developer.kaltura.com/workflows/Search_Discover_and_Personalize/Kaltura_Media_Library_Search/embed %}
 
 ### Retrieving Entry Details - media.get  
 
@@ -85,19 +85,19 @@ To update media entries, call the [`media.update`](https://developer.kaltura.com
 
 Additionally, media entries in Kaltura have several related objects, including: 
 
-* [captionAsset](https://developer.kaltura.com/api-docs/#/captionAsset) for caption files
-* [thumbAsset](https://developer.kaltura.com/api-docs/#/thumbAsset) for editorial thumbnails
-* [access control](https://developer.kaltura.com/api-docs/#/accessControl) profiles to set rules that allow or deny access to the media
-* [custom metadata](https://developer.kaltura.com/recipes/metadata) profiles to enhance the base fields available in your account
+* [captionAsset](https://developer.kaltura.com/api-docs/Enrich_and_Organize_Metadata/captionAsset/) for caption files
+* [thumbAsset](https://developer.kaltura.com/api-docs/Ingest_and_Upload_Media/thumbAsset/) for editorial thumbnails
+* [access control](https://developer.kaltura.com/api-docs/Secure_Control_and_Govern/accessControl) profiles to set rules that allow or deny access to the media
+* [custom metadata](https://developer.kaltura.com/workflows/Enrich_and_Organize_Metadata/Working_with_metadata) profiles to enhance the base fields available in your account
 * And more
 
-We recommend reading these guides and reviewing the [Code Recipes](https://developer.kaltura.com/recipes/) to learn more about the many capabilities of Kaltura's VPaaS.
+We recommend reading these guides and reviewing the [Interactive Code Workflows](https://developer.kaltura.com/workflows/) to learn more about the many capabilities of Kaltura's VPaaS.
 
 ## Dynamic Thumbnails  
 
 An important tool for dealing with video and building video experiences are thumbnails, images that represent your video file. Kaltura provides two methods for creating and handling thumbnails: 
 
-* The [thumbAsset Service](https://developer.kaltura.com/api-docs/#/thumbAsset): Enables you to edit and manage editorial thumbnail assets that are associated with your video.
+* The [thumbAsset Service](https://developer.kaltura.com/api-docs/Ingest_and_Upload_Media/thumbAsset/): Enables you to edit and manage editorial thumbnail assets that are associated with your video.
 * The [Dynamic Thumbnail API](https://knowledge.kaltura.com/kaltura-thumbnail-api): Provides a simple API for creating thumbnails on-the-fly (in real-time) from the source media (the file originally uploaded).
 
 The images are generated on-demand (with caching on disk and via CDN) by calling the following URL:  
@@ -114,7 +114,7 @@ The result of the thumbnail API is a JPEG image with one or more of the followin
 * Preparation of Imahe Stripes for animating thumbnails via CSS
 * And more.
 
-> Read more about the [Dynamic Thumbnail API](knowledge.kaltura.com/kaltura-thumbnail-api) and explore the [Thumbnail Animation with CSS Stripes Code Recipe](https://developer.kaltura.com/recipes/dynamic_thumbnails).
+> Read more about the [Dynamic Thumbnail API](knowledge.kaltura.com/kaltura-thumbnail-api) and explore the [Thumbnail Animation with CSS Stripes Code Recipe](https://developer.kaltura.com/workflows/Engage_and_Publish/Animated_Thumbnails_with_CSS_Stripes).
 
 
 ## Embed and Customize Your Video Player  
@@ -168,7 +168,7 @@ The uiConfId is used to reference the Player instance you wish to render when em
 
 ### Creating and Managing Player Widgets - uiConf Service  
 
-{% onebox https://developer.kaltura.com/recipes/player_uiconf/embed#/start %} 
+{% onebox https://developer.kaltura.com/workflows/Engage_and_Publish/Player_UI_conf/embed %} 
 
 ### Getting Started with the Player Features  
 
@@ -184,9 +184,9 @@ Make decisions based on complete data - the Kaltura VPaaS usage and engagement a
 
 Integrated Analytics Partners - [See Configuring Analytics Plugins](https://knowledge.kaltura.com/universal-studio-information-guide#configuring_analytics): [Youbora](https://knowledge.kaltura.com/node/1675), [comScore](http://player.kaltura.com/docs/ComscoreAnalytics), [Nielsen](http://player.kaltura.com/docs/NielsenVideoCensus), [Chartbeat](http://support.chartbeat.com/docs/video.html#kaltura), [Google Analytics](https://knowledge.kaltura.com/node/1148#googleanalytics), and [Adobe Heartbeat](http://player.kaltura.com/modules/Heartbeat/tests/HeartBeatDemo.html).
 
-Follow the Code Recipe below to get started with the Kaltura Analytics [report service](https://developer.kaltura.com/api-docs/#/report).
+Follow the Code Recipe below to get started with the Kaltura Analytics [report service](https://developer.kaltura.com/api-docs/Review_Media_Analytics/report).
 
-{% onebox https://developer.kaltura.com/recipes/analytics/embed %}
+{% onebox https://developer.kaltura.com/workflows/Integration_Scheduling_and_Hooks/Analytics_Reports %}
 
 
 ## Kaltura API Documentation  
@@ -197,7 +197,7 @@ This section details the Kaltura API documentation that is available to develope
 
 | Guide                                                  | Summary                                                                                                                                                                                                                                                                                                                                                                                                 |
 |--------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Interactive Code Recipes and Examples](https://developers.kaltura.org)                  | Kaltura provides APIs for every core feature. You can use the Kaltura API to incorporate Kaltura features in web applications and web sites.                                                                                                                                                                                                                                                            |
+| [Interactive Code Workflows and Examples](https://developer.kaltura.com/)                  | Kaltura provides APIs for every core feature. You can use the Kaltura API to incorporate Kaltura features in web applications and web sites.                                                                                                                                                                                                                                                            |
 | [Kaltura Knowledge Center Glossary](http://knowledge.kaltura.com/glossary)                     | As a reference for understanding technical terms related to Online Video, Media Asset Management and Kaltura.                                                                                                                                                                                                                                                                                          |
 | [Kaltura's API Authentication and Security](https://vpaas.kaltura.com/documentation/VPaaS-API-Getting-Started/Kaltura_API_Authentication_and_Security.html)              | Protecting personal user data, video streaming and limiting access to features are at the heart of the Kaltura Media Asset Management Platform. This guide will take you through the basic concepts and practices of authentication and security in the Kaltura API v3.                                                                                                                                 |
 | The Kaltura Media Access Control Model                 | An Access Control Profile defines authorized and restricted domains where your content can or cannot be displayed, countries from which it can or cannot be viewed, white and black lists of IP addresses and authorized and unauthorized domains and devices in which your media can be embedded.                                                                                                      |
@@ -245,7 +245,7 @@ To save you time, Kaltura provides client libraries. A client library is a set o
 *   A full object representation of all the entities that are available through the Kaltura API, including enumeration objects
 *   Infrastructure for developers, such as built-in log capabilities
 
-The Kaltura API SDK includes client library packages in different languages, including PHP, Java, C#, and JavaScript. For the latest version of all client libraries, refer to [Kaltura API SDK - Native Client Libraries](https://developer.kaltura.com/api-docs/#/Client%20Libraries).
+The Kaltura API SDK includes client library packages in different languages, including PHP, Java, C#, and JavaScript. For the latest version of all client libraries, refer to [Kaltura API SDK - Native Client Libraries](https://developer.kaltura.com/api-docs/Client_Libraries).
 
 To get the entire API in your IDE, just download the client library for the language that you use to develop your applications and include the client library in your application or project.
 
@@ -291,14 +291,11 @@ Each API method location is concatenated from:
 *   Service identifier string
 *   Action identifier string
 
-The format of the API method location is:https://developer.kaltura.com/api-docs/#/[SERVICENAME].[ACTIONNAME], where
+The format of the API method location is: /api_v3/service/[SERVICENAME]/action/[ACTIONNAME], where
 
 *   [SERVICENAME] represents a specific service
 *   [ACTIONNAME] represent an action to be applied in the specific service
 
-#### Request URL Example  
-
-Post a request to activate the *list* action of the *media* service to the following URL: https://developer.kaltura.com/api-docs/#/media.list.
 
 #### Request Input Parameters  
 
