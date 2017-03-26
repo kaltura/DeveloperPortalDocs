@@ -10,11 +10,11 @@ The Kaltura API is representational state transfer (REST)(http://en.wikipedia.or
 
 There are three methods for generating a Kaltura Session:
 
-* Calling the [session.start action](https://developer.kaltura.com/api-docs/#/session.start): This method is recommended for scripts and applications to which you alone will have access.
-* Calling the [user.loginByLoginId action](https://developer.kaltura.com/api-docs/#/user.loginByLoginId): This method is recommended for managing registered users in Kaltura, and allowing users to log in using email and password. When you log in to the KMC, the KMC application calls the user.loginByLoginId action to authenticate you using your registered email and password.
-* Using the [appToken service](https://developer.kaltura.com/api-docs/#/appToken): This method is recommended when providing access to scripts or applications that are managed by others; this method provides tools to manage API tokens per application provider, revoke access to specific applications, and more.
+* Calling the [session.start action](https://developer.kaltura.com/api-docs/Generate_API_Sessions/session/session_start): This method is recommended for scripts and applications to which you alone will have access.
+* Calling the [user.loginByLoginId action](https://developer.kaltura.com/api-docs/Generate_API_Sessions/user_loginByLoginId): This method is recommended for managing registered users in Kaltura, and allowing users to log in using email and password. When you log in to the KMC, the KMC application calls the user.loginByLoginId action to authenticate you using your registered email and password.
+* Using the [appToken service](https://developer.kaltura.com/api-docs/Generate_API_Sessions/appToken): This method is recommended when providing access to scripts or applications that are managed by others; this method provides tools to manage API tokens per application provider, revoke access to specific applications, and more.
 
-The examples above use the [Kaltura PHP5 Client Library](https://developer.kaltura.com/api-docs/#/Client%20Libraries).
+The examples above use the [Kaltura PHP5 Client Library](https://developer.kaltura.com/api-docs/Client_Libraries).
 
 > To learn more about the Kaltura Session, its algorithm, guidelines and options read the [Kaltura API Authentication and Security article](https://knowledge.kaltura.com/node/229).
  
