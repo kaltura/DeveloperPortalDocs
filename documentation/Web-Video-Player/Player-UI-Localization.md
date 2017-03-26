@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Kaltura Player UI Localization
-weight: 409
+weight: 410
 ---
 
 The Kaltura Web Video Player supports localization for most languages by specifying the language-corresponding locale key.   
