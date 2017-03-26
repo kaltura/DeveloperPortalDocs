@@ -30,6 +30,6 @@ See the following articles for details:
 
 * To learn more about creating Application Tokens, check out the Application Token code recipe below:
 
-{% onebox https://developer.kaltura.com/recipes/app_tokens/embed#/start %}
+{% onebox https://developer.kaltura.com/workflows/Generate_API_Sessions/App_Token_Authentication/embed %}
 
 * To learn about creating Application Tokens with Kaltura API, refer to the [developer API site](https://developer.kaltura.com/api-docs/#/appToken).
