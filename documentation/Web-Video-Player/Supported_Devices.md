@@ -36,8 +36,8 @@ The following table lists the devices that are supported on the Kaltura Mobile W
 |                         |    Edge                 |    X                    |    X                    |    X                    |    V                    |   |   |   |
 |    Firefox              |    Previous Versions    |    V                    |    V                    |    V                    |    V                    |   |   |   |
 |                         |    Latest Version       |    V                    |    V                    |    V                    |    V                    |   |   |   |
-|    Chrome               |    Previous Versions    |    Previous Versions    |    Previous Versions    |    Previous Versions    |    Previous Versions    |   |   |   |
-|                         |    Latest Version       |    Latest Version       |    Latest Version       |    Latest Version       |    Latest Version       |   |   |   |
+|    Chrome               |    Previous Versions    |    V    |    V    |    V    |    V    |   |   |   |
+|                         |    Latest Version       |    V       |    V       |    V       |    V       |   |   |   |
 |                         |                         |                         |                         |                         |                         |   |   |   |
 
 
