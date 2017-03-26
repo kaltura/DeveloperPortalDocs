@@ -184,7 +184,6 @@ To use this provider:
 
 1. Create an instance of the KalturaOvpMediaProvider class.
 2. Using setters, fill in at least the mandatory fields to be able to construct and execute the API requests.
-  The mandatory fields can be found here: [SessionProvider](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/SessionProviders-Android.html)) and EntryId.
 3. Activate the providers "load" method, passing it an OnMediaLoadCompletion callback object, in order to get the PKMediaEntry object.  
 
 ```java
