@@ -159,7 +159,7 @@ The following is a list of core Player skin CSS files:
 | kdark	| https://github.com/kaltura/mwEmbed/blob/master/skins/kdark/css/layout.css |
 | ott | 	https://github.com/kaltura/mwEmbed/blob/master/skins/ott/css/layout.css |
 
-> See the article [Kaltura Player External Skin Overrides Recipe](https://developer.kaltura.com/recipes/player_external_skin_overrides/)
+> See the Interactive Code Workflow: [Kaltura Player External Skin Overrides](https://developer.kaltura.com/workflows/Engage_and_Publish/Kaltura_Player_External_Skin_Overrides)
 for a rich example of using custom CSS and external resources.
 
 ## Custom Interactivity with Javascript  
