@@ -225,8 +225,7 @@ The media provider uses the supplied media parameters, to build the relevant Pho
 To use this provider:
 
 1. Create an instance of the PhoenixMediaProvider class.
-2. Using setters, fill in at least the mandatory fields to be able to construct and execute the API requests.
-  The mandatory fields can be found here:  [SessionProvider](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/SessionProviders-Android.html), assetId, referenceType, and formats (at least 1).
+2. Using setters, fill in at least the mandatory fields to be able to construct and execute the API requests (assetId, referenceType, and formats; at least 1).
 3. Activate the providers "load" method, passing it an OnMediaLoadCompletion callback object to get the PKMediaEntry object.  
 
 ```java
