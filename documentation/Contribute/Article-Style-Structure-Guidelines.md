@@ -152,7 +152,7 @@ For additional reading on the Markdown flavor in use, see: [Kramdown](http://kra
 Think about steps that will take your reader through actual scenarios' breakdown, with code reference examples that are complete and easy to follow.
 
 * Include code snippets where relevant.
-* Create code recipes where possible (developer.kaltura.org).
+* Create Interactive Code Workflows where possible (https://developer.kaltura.com/workflows).
 * Reference API end-points where applicable, and make sure to explain these API end-points and their respective request and response fields and formats. 
 * Reference relevant github repositories where applicable.
 * Clearly explain the required workflows, and ensure they achieve a final and complete end-result.
