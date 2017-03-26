@@ -32,4 +32,4 @@ See the following articles for details:
 
 {% onebox https://developer.kaltura.com/workflows/Generate_API_Sessions/App_Token_Authentication/embed %}
 
-* To learn about creating Application Tokens with Kaltura API, refer to the [developer API site](https://developer.kaltura.com/api-docs/#/appToken).
+* To learn about creating Application Tokens with Kaltura API, refer to the [developer API site](https://developer.kaltura.com/api-docs/Generate_API_Sessions/appToken).
