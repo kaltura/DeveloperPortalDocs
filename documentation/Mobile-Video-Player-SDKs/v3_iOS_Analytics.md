@@ -17,7 +17,7 @@ Kaltura’s Mobile Video Player SDKs for iOS make it easy for you to integrate a
 | TVPAPI                | []()             |
 | Phoenix               | []()             |
 
->**important - best practice is to register plugins in `AppDelegate` file.
+> **important - best practice is to register plugins in `AppDelegate` file.**
 
 </p></details>
 
