@@ -189,7 +189,7 @@ To observe ad info when an ad is starting use the following:
 >swift
 
 ```swift
-player.addObserver(self, events: [AdEvent.adInformation]) { event in
+player.addObserver(self, events: [AdEvent.adStarted]) { event in
     if let info = event.adInfo {
         // use ad info
         switch info.positionType {
@@ -204,7 +204,7 @@ player.addObserver(self, events: [AdEvent.adInformation]) { event in
 >objc
 
 ```objc
-[self.kPlayer addObserver: self events: @[AdEvent.adInformation] block:^(PKEvent * _Nonnull event) {
+[self.kPlayer addObserver: self events: @[AdEvent.adStarted] block:^(PKEvent * _Nonnull event) {
     PKAdInfo *info = event.adInfo;
     if (info) {
         // use ad info
