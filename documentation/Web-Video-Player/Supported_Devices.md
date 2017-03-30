@@ -5,6 +5,7 @@ weight: 403
 ---
 
 
+
 This article lists devices that are supported for standalone players.
 
 ## Mobile Graded Support Matrix  
