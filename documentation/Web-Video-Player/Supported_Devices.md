@@ -17,8 +17,8 @@ The following table lists the devices that are supported on the Kaltura Mobile W
 | iOS (Safari) | v9.x                         | HTML iPad / native controls on iPhone |
 |              | v10                          | HTML iPad / native controls on iPhone |
 | Android      | v4.4+                        | Full HTML5 ( Mobile Chrome )          |
-| v5.x         | Full HTML5 ( Mobile Chrome ) |                                       |
-| v6.x         | Full HTML5 ( Mobile Chrome ) |                                       |
+|          | v5.x |   Full HTML5 ( Mobile Chrome )                                    |
+|         | v6.x  |   Full HTML5 ( Mobile Chrome )                                    |
 | Windows      | v9                           | HTML5                                 |
 
 ## Desktop Graded Support Matrix  
