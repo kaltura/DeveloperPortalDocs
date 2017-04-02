@@ -6,7 +6,7 @@ weight: 403
 
 
 
-This article lists איק devices that are supported for standalone players.
+This article lists the devices that are supported for standalone players.
 
 ## Mobile Graded Support Matrix  
 
@@ -23,6 +23,8 @@ The following table lists the devices that are supported on the Kaltura Mobile W
 
 ## Desktop Graded Support Matrix  
 
+The following tables show the support matrix for desktops.
+
 
 ### Windows Support  
 
@@ -38,7 +40,7 @@ The following table lists the devices that are supported on the Kaltura Mobile W
 |                         |    Latest Version       |    V                    |    V                    |    V                    |    V                    |   |   |   |
 |    Chrome               |    Previous Versions    |    V    |    V    |    V    |    V    |   |   |   |
 |                         |    Latest Version       |    V       |    V       |    V       |    V       |   |   |   |
-|                         |                         |                         |                         |                         |                         |   |   |   |
+|                         |                         |                         |                         |                         |     
 
 
 ### Mac Support  
