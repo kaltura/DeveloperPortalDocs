@@ -40,7 +40,7 @@ The following tables show the support matrix for desktops.
 |                         |    Latest Version       |    V                    |    V                    |    V                    |    V                    |   |   |   |
 |    Chrome               |    Previous Versions    |    V    |    V    |    V    |    V    |   |   |   |
 |                         |    Latest Version       |    V       |    V       |    V       |    V       |   |   |   |
-|                         |                         |                         |                         |                         |                         |   |   |   |
+|                         |                         |                         |                         |                         |     
 
 
 ### Mac Support  
