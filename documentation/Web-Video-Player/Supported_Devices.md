@@ -23,6 +23,8 @@ The following table lists the devices that are supported on the Kaltura Mobile W
 
 ## Desktop Graded Support Matrix  
 
+The following tables show the support matrix for desktops.
+
 
 ### Windows Support  
 
