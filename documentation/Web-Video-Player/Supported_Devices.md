@@ -6,7 +6,7 @@ weight: 403
 
 
 
-This article lists איק devices that are supported for standalone players.
+This article lists the devices that are supported for standalone players.
 
 ## Mobile Graded Support Matrix  
 
