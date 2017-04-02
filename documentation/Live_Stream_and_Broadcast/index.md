@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Live Video and Broadcast
+title: Live Stream and Broadcast
 ---
 
 {% capture html %}

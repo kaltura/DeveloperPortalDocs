@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Media Ingest and Preperation 
+title: Ingest and Upload Media 
 weight: 201
 ---
 

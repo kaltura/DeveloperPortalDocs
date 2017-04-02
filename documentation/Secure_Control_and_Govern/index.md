@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Media Management
+title: Secure, Control and Govern
 weight: 301
 ---
 
