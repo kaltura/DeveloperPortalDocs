@@ -1,5 +1,5 @@
 ---
 layout: nil
-catname: Live Video and Broadcast
+catname: Live Stream and Broadcast
 catweight: "08"
 ---
