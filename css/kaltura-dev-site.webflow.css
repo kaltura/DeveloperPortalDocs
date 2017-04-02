@@ -731,12 +731,12 @@ h4.sidenav-headings.grp-heading {
    content: "\f005";
    padding-right: 6px;
 }
-.sidenav-headings.grp-heading.documentation\/Media-Ingest-and-Preperation:before {
+.sidenav-headings.grp-heading.documentation\/Ingest_and_Upload_Media:before {
    font-family: FontAwesome;
    content: "\f0ee";
    padding-right: 6px;
 }
-.sidenav-headings.grp-heading.documentation\/Media-Management:before {
+.sidenav-headings.grp-heading.documentation\/Secure_Control_and_Govern:before {
    font-family: FontAwesome;
    content: "\f0ae";
    padding-right: 6px;
@@ -751,12 +751,12 @@ h4.sidenav-headings.grp-heading {
    content: "\f10b";
    padding-right: 6px;
 }
-.sidenav-headings.grp-heading.documentation\/Video-Experiences:before {
+.sidenav-headings.grp-heading.documentation\/Engage_and_Publish:before {
    font-family: FontAwesome;
    content: "\f118";
    padding-right: 6px;
 }
-.sidenav-headings.grp-heading.documentation\/Live-Video-and-Broadcast:before {
+.sidenav-headings.grp-heading.documentation\/Live_Srteam_and_Broadcast:before {
    font-family: FontAwesome;
    content: "\f03d";
    padding-right: 6px;
