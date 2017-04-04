@@ -21,13 +21,13 @@ Following article will explain how to do that and show list of all available met
 In order to get start receiving metadata, you need to subscribe to the corresponding event, called METADATA_AVAILABLE. More about events subscription you can learn from [here.] (https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/v3_Android_EventsAndStates.html)
 
 ```
-         player.addEventListener(new PKEvent.Listener() {
-            @Override
-            public void onEvent(PKEvent event) {
-					//Obtain the Metadata object.
-            }
-            //Subscribe to the events you are interested in.
-        }, PlayerEvent.Type.METADATA_AVAILABLE);
+player.addEventListener(new PKEvent.Listener() {
+    @Override
+    public void onEvent(PKEvent event) {
+				//Obtain the Metadata object.
+    }
+    //Subscribe to the events you are interested in.
+}, PlayerEvent.Type.METADATA_AVAILABLE);
 
 ```
 
@@ -37,11 +37,11 @@ METADATA_AVAILABLE event holds data object with Metadata. In order to get this o
 
 
 ```
-  //Cast received event to MetadataAvailable event, which holds the data object with actual metadata.
-  PlayerEvent.MetadataAvailable metadataAvailableEvent = (PlayerEvent.MetadataAvailable) event;
-  
-  //Retrieve the metadata object itself.
-  Metadata metadata = metadataAvailableEvent.getMetadata();
+//Cast received event to MetadataAvailable event, which holds the data object with actual metadata.
+PlayerEvent.MetadataAvailable metadataAvailableEvent = (PlayerEvent.MetadataAvailable) event;
+
+//Retrieve the metadata object itself.
+Metadata metadata = metadataAvailableEvent.getMetadata();
 
 ```
 
@@ -50,25 +50,25 @@ METADATA_AVAILABLE event holds data object with Metadata. In order to get this o
 Each media entry can have more than one type of metadata objects, called frames. In order to receive the one you are interested in you should run through all the entries in Metadata object and check it for instance. In next section we will see the list of all available types of metadata.
 
 ```
-  				//Iterate through all entries in metadata object.
-                for (int i = 0; i < metadata.length(); i++) {
-                    Metadata.Entry metadataEntry = metadata.get(i);
+//Iterate through all entries in metadata object.
+for (int i = 0; i < metadata.length(); i++) {
+    Metadata.Entry metadataEntry = metadata.get(i);
 
-                    //For simplicity, in this example, we are interested only in TextInformationFrame.
-                    if (metadataEntry instanceof TextInformationFrame) {
+    //For simplicity, in this example, we are interested only in TextInformationFrame.
+    if (metadataEntry instanceof TextInformationFrame) {
 
-                        //Cast mediaEntry to TextInformationFrame.
-                        TextInformationFrame textInformationFrame = (TextInformationFrame) metadataEntry;
+	//Cast mediaEntry to TextInformationFrame.
+	TextInformationFrame textInformationFrame = (TextInformationFrame) metadataEntry;
 
-                        //Print to log.
-                        Log.d(TAG, "metadata text information: " + textInformationFrame.value);
-                    }
-                }
+	//Print to log.
+	Log.d(TAG, "metadata text information: " + textInformationFrame.value);
+    }
+}
 ```
 
 ### List of available metadata types:
 
-####HLS:
+#### HLS:
 
 * [ApicFram](https://google.github.io/ExoPlayer/doc/reference/com/google/android/exoplayer2/metadata/id3/ApicFrame.html)
 * [BinaryFrame](https://google.github.io/ExoPlayer/doc/reference/com/google/android/exoplayer2/metadata/id3/BinaryFrame.html)
@@ -81,7 +81,7 @@ Each media entry can have more than one type of metadata objects, called frames.
 * [TextInformationFrame](https://google.github.io/ExoPlayer/doc/reference/com/google/android/exoplayer2/metadata/id3/TextInformationFrame.html)
 * [UrlLinkFrame](https://google.github.io/ExoPlayer/doc/reference/com/google/android/exoplayer2/metadata/id3/UrlLinkFrame.html)
 
-####DASH:
+#### DASH:
 
 * [EventMessage](https://google.github.io/ExoPlayer/doc/reference/com/google/android/exoplayer2/metadata/emsg/EventMessage.html)
 
