@@ -68,8 +68,8 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 <script type="text/javascript" src="/js/jQuery.exLink/jquery.exLink.js"></script>
 <link rel="stylesheet" type="text/css" href="/js/jQuery.exLink/jquery.exLink.css">
 <script type="text/javascript">
- $( document ).ready(function() {
-    exLink.init({
+$( document ).ready(function() {
+exLink.init({
     	parentElementPath: '.template-page-content-column .post-content',
  	linkWarning: false,
 	hostCompare: true,
@@ -80,7 +80,68 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 	gaTrackOld: false,
 	fileWarning: false
     });
- });
+	//turn all headings into clicable anchors:
+	$('.post-content h1, .post-content h2, .post-content h3, .post-content h4, .post-content h5, .post-content h6').filter('[id]').each(function () {
+	    $(this).html('<a href="#'+$(this).attr('id')+'" class="post-content" aria-hidden="true">'+$(this).text()+'</a>');
+	});
+	
+
+	//build the "on this page" menu:
+	var ToC =
+	  "<nav role='navigation' class='table-of-contents'>" +
+	    "<h2>On this page:</h2>" +
+	    "<ul>";
+	
+	var newLine, el, title, link;
+	var hasHeaders = false;
+	$('.post-content h2').each(function() {
+	  hasHeaders = true;
+	  el = $(this);
+	  title = el.text();
+	  link = "#" + el.attr("id");
+	
+	  newLine =
+	    "<li>" +
+	      "<a href='" + link + "'>" +
+	        title +
+	      "</a>" +
+	    "</li>";
+	
+	  ToC += newLine;
+	
+	});
+	
+	ToC +=
+	   "</ul>" +
+	  "</nav>";
+	
+	if (hasHeaders) $("div.post-content").prepend(ToC);
+	
+    	
+	//back to top
+	if ($('#back-to-top').length) {
+    		var scrollTrigger = 100, // px
+	        backToTop = function () {
+	            var scrollTop = $(window).scrollTop();
+	            if (scrollTop > scrollTrigger) {
+	                $('#back-to-top').addClass('show');
+	            } else {
+	                $('#back-to-top').removeClass('show');
+	            }
+	        };
+	    backToTop();
+	    $(window).on('scroll', function () {
+	        backToTop();
+	    });
+	    $('#back-to-top a:first-child').on('click', function (e) {
+	        e.preventDefault();
+	        $('html,body').animate({
+	            scrollTop: 0
+	        }, 700);
+	    });
+	}
+});
+
 </script>
 
 <script src='https://www.google.com/recaptcha/api.js'></script>
