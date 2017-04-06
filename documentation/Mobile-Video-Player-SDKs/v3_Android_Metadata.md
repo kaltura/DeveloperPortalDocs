@@ -8,7 +8,7 @@ weight: 400
 Playkit SDK provides convinient methods to receive Metadata from HLS and DASH sources.
 Following article will explain how to do that and show list of all available metadata types. The working code sample you can find [here] (https://github.com/kaltura/playkit-android-samples/tree/master/MetadataSample).
 
-### Step by step.
+### Step by step
 
 1) Subscribe to METADATA_AVAILABLE event.
 
@@ -31,7 +31,7 @@ player.addEventListener(new PKEvent.Listener() {
 
 ```
 
-### Obtain the Metadata object.
+### Obtain the Metadata object
 
 METADATA_AVAILABLE event holds data object with Metadata. In order to get this object, first you must cast event to PlayerEvent.MetadataAvailable, and then apply getter on it.
 
@@ -45,7 +45,7 @@ Metadata metadata = metadataAvailableEvent.getMetadata();
 
 ```
 
-### Get the actual metadata.
+### Get the actual metadata
 
 Each media entry can have more than one type of metadata objects, called frames. In order to receive the one you are interested in you should run through all the entries in Metadata object and check it for instance. In next section we will see the list of all available types of metadata.
 
@@ -67,7 +67,8 @@ for (int i = 0; i < metadata.length(); i++) {
 ```
 
 ### List of available metadata types:
-
+	
+	
 #### HLS:
 
 * [ApicFram](https://google.github.io/ExoPlayer/doc/reference/com/google/android/exoplayer2/metadata/id3/ApicFrame.html)
