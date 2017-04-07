@@ -1,20 +1,24 @@
+---
+layout: null
+sitemap: false
+---
 @keyframes load {
 	0% {
-		background-image: url(../images/sun_logo.png);
+		background-image: url({{ site.url }}/images/sun_logo.png);
 	}
 
 	100% {
-		background-image: url(../images/sun_logo.png);
+		background-image: url({{ site.url }}/images/sun_logo.png);
 	}
 }
 
 @keyframes hover {
 	0% {
-		background-image: url(../images/sun_logo.png);
+		background-image: url({{ site.url }}/images/sun_logo.png);
 	}
 
 	100% {
-		background-image: url(../images/sun_logo.png);
+		background-image: url({{ site.url }}/images/sun_logo.png);
 	}
 }
 a#logo:hover:before {
@@ -24,7 +28,7 @@ a#logo:hover:before {
 	animation-delay: 13s;
 }
 a#logo:before {
-	background-image: url(../images/kaltura-logo-38-38_02.gif);
+	background-image: url({{ site.url }}/images/kaltura-logo-38-38_02.gif);
 	background-size: contain;
 	animation-name: load;
 	animation-duration: 1s;
@@ -39,7 +43,7 @@ a#logo:before {
 }
 a#logo {
 	z-index: 1;
-	background: url("../images/VPaaS-logo-text.png") no-repeat;
+	background: url("{{ site.url }}/images/VPaaS-logo-text.png") no-repeat;
 	background-size: contain;
 	padding: 0;
 	margin: 0;
