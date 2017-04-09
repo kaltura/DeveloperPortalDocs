@@ -5,20 +5,20 @@ subcat: SDK 3.0 - Android
 weight: 400
 ---
 
-Playkit SDK provides convinient methods to receive Metadata from HLS and DASH sources.
-Following article will explain how to do that and show list of all available metadata types. The working code sample you can find [here] (https://github.com/kaltura/playkit-android-samples/tree/master/MetadataSample).
+The Playkit SDK provides a convenient method for retrieving metadata from HLS and DASH sources. The following article explains how to retrieve the metadata and provides a list of all available metadata types. You can also find a working code sample [here] (https://github.com/kaltura/playkit-android-samples/tree/master/MetadataSample).
 
-### Step by step
+## Retrieving Metadata  
 
-1) Subscribe to METADATA_AVAILABLE event.
+There are three steps required for retrieving the metadata:
 
-2) Obtain the Metadata object.
-
-3) get the actual metadata.
+1. Subscribe to the METADATA_AVAILABLE event.
+2. Obtain the Metadata object.
+3. Get the metadata.
  
-### Subscribe to METADATE_AVAILABLE event.
+### Subscribing to the METADATE_AVAILABLE Event  
 
-In order to get start receiving metadata, you need to subscribe to the corresponding event, called METADATA_AVAILABLE. More about events subscription you can learn from [here.] (https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/v3_Android_EventsAndStates.html)
+You will need to subscribe to the corresponding event called METADATA_AVAILABLE. We recommend reading this article on [event subscriptions](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/v3_Android_EventsAndStates.html) for more information.
+
 
 ```
 player.addEventListener(new PKEvent.Listener() {
@@ -31,9 +31,9 @@ player.addEventListener(new PKEvent.Listener() {
 
 ```
 
-### Obtain the Metadata object
+### Obtaining the Metadata Object  
 
-METADATA_AVAILABLE event holds data object with Metadata. In order to get this object, first you must cast event to PlayerEvent.MetadataAvailable, and then apply getter on it.
+The METADATA_AVAILABLE event holds data objects with Metadata. To get this object, you'll first need to cast the event to PlayerEvent.MetadataAvailable, and then apply a getter to it.
 
 
 ```
@@ -45,9 +45,10 @@ Metadata metadata = metadataAvailableEvent.getMetadata();
 
 ```
 
-### Get the actual metadata
+### Getting the Metadata
 
-Each media entry can have more than one type of metadata objects, called frames. In order to receive the one you are interested in you should run through all the entries in Metadata object and check it for instance. In next section we will see the list of all available types of metadata.
+Each media entry can have more than one type of metadata object, which are called frames. To receive the frame you are interested in, you'll need to review all the entries in the Metadata object to locate the relevant instance. In the next section, you'll find a list of all available types of metadata. Use the following code to get the metadata you need. 
+
 
 ```
 //Iterate through all entries in metadata object.
@@ -66,10 +67,9 @@ for (int i = 0; i < metadata.length(); i++) {
 }
 ```
 
-### List of available metadata types:
+### Available Metadata Types  
 	
-	
-#### HLS:
+#### HLS
 
 * [ApicFram](https://google.github.io/ExoPlayer/doc/reference/com/google/android/exoplayer2/metadata/id3/ApicFrame.html)
 * [BinaryFrame](https://google.github.io/ExoPlayer/doc/reference/com/google/android/exoplayer2/metadata/id3/BinaryFrame.html)
@@ -82,10 +82,14 @@ for (int i = 0; i < metadata.length(); i++) {
 * [TextInformationFrame](https://google.github.io/ExoPlayer/doc/reference/com/google/android/exoplayer2/metadata/id3/TextInformationFrame.html)
 * [UrlLinkFrame](https://google.github.io/ExoPlayer/doc/reference/com/google/android/exoplayer2/metadata/id3/UrlLinkFrame.html)
 
-#### DASH:
+#### DASH
 
 * [EventMessage](https://google.github.io/ExoPlayer/doc/reference/com/google/android/exoplayer2/metadata/emsg/EventMessage.html)
 
+
+## Have Questions or Need Help?
+
+Check out the [Kaltura Player SDK Forum](https://forum.kaltura.org/c/playkit) page for different ways of getting in touch.
 
 
 
