@@ -1,4 +1,3 @@
-temp
 ---
 layout: page
 title: Access Control and Content Retrieval on Connected Devices
@@ -12,11 +11,9 @@ Kaltura has two different mechanisms for enforcing access control without requir
 
 * Advanced Access Control - Used for more fine-grain control on the flavor level, Advanced Access control allows both multiple-scheduling windows and multiple rules beyond scheduling. For example (“Don’t serve the HD flavor in Canada”, “Playback on iPads is not allowed 8 hours after TV air date”). This mechanism is more complex. Additional information is available in the article [Kaltura Media Access Control Model](https://vpaas.kaltura.com/documentation/Secure_Control_and_Govern/kaltura-media-access-control-model.html).
   
-Both Scheduling and Advanced Access-Control are fully enforced on the server-side and by mobile applications when they retrieve content via Kaltura APIs. For more information on how to retrieve content per platform/protocol see <a href="{{site.url}}/documentation/Knowledge/how-retrieve-download-or-streaming-url-using-api-calls.html" target="_blank">How to retrieve the download or streaming URL using API calls?</a>
+Both Scheduling and Advanced Access-Control are fully enforced on the server-side and by mobile applications when they retrieve content via Kaltura APIs. For more information on how to retrieve content per platform/protocol see [How to Retrieve the Download or Streaming URL using API Calls?](https://vpaas.kaltura.com/documentation/deliver-and-distribute-media/retrieve-download-or-streaming-url-using-api-calls.html)
 
-how-retrieve-download-or-streaming-url-using-api-calls.html)
-
-<a href="{{site.url}}/documentation/Knowledge/how-retrieve-download-or-streaming-url-using-api-calls.html" target="_blank"></a>It is recommended to always use these methods and not, for example, store returned m3u8 urls, as m3u8 urls are only temporary.
+>Note: It is recommended to always use these methods and not, for example, store returned m3u8 urls, as m3u8 urls are only temporary.
 
 When using the scheduling mechanism, setting the scheduling window on an entry, either via KMC, or via API, will have the access control logic enforced cross-device.
 
