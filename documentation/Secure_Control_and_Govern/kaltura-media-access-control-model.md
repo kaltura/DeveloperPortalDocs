@@ -1,3 +1,4 @@
+temp
 ---
 layout: page
 title: The Kaltura Media Access Control Model
@@ -34,159 +35,13 @@ The API object <a href="https://developer.kaltura.com/api-docs/#/KalturaAccessCo
 
 The KalturaRule type contains the following attributes:
 
-<table style="width: 693px;" border="0" cellpadding="0">
-  <tbody>
-    <tr>
-      <td style="text-align: left;">
-        <strong>Name</strong>
-      </td>
-      
-      <td style="text-align: left;">
-        <strong>Type</strong>
-      </td>
-      
-      <td>
-        <strong>Writable</strong>
-      </td>
-      
-      <td>
-        <p style="text-align: left;">
-          <strong>Description</strong>
-        </p>
-      </td>
-    </tr>
-    
-    <tr>
-      <td>
-        <p style="text-align: left;">
-          actions
-        </p>
-      </td>
-      
-      <td>
-        <p style="text-align: left;">
-          <a href="https://developer.kaltura.com/api-docs/#/KalturaAccessControlActionArray" target="_blank">KalturaAccessControlActionArray</a>
-        </p>
-      </td>
-      
-      <td>
-        <p>
-          <span>V</span>
-        </p>
-      </td>
-      
-      <td>
-        <p style="text-align: left;">
-          Actions to be performed by the player in case the rule is fulfilled.
-        </p>
-      </td>
-    </tr>
-    
-    <tr>
-      <td>
-        <p style="text-align: left;">
-          conditions
-        </p>
-      </td>
-      
-      <td>
-        <p style="text-align: left;">
-          <a href="https://developer.kaltura.com/api-docs/#/KalturaConditionArray" target="_blank">KalturaConditionArray</a>
-        </p>
-      </td>
-      
-      <td>
-        <p>
-          V
-        </p>
-      </td>
-      
-      <td>
-        <p style="text-align: left;">
-          Conditions to validate the rule.
-        </p>
-      </td>
-    </tr>
-    
-    <tr>
-      <td>
-        <p style="text-align: left;">
-          contexts
-        </p>
-      </td>
-      
-      <td>
-        <p>
-          <a href="https://developer.kaltura.com/api-docs/#/KalturaAccessControlContextTypeHolderArray" target="_blank">KalturaAccessControlContextTypeHolderArray</a>
-        </p>
-      </td>
-      
-      <td>
-        <p>
-          V
-        </p>
-      </td>
-      
-      <td>
-        <p style="text-align: left;">
-          Indicates what contexts should be tested by this rule. 
-        </p>
-      </td>
-    </tr>
-    
-    <tr>
-      <td>
-        <p style="text-align: left;">
-          message
-        </p>
-      </td>
-      
-      <td>
-        <p style="text-align: left;">
-          string
-        </p>
-      </td>
-      
-      <td>
-        <p>
-          V
-        </p>
-      </td>
-      
-      <td>
-        <p style="text-align: left;">
-          Message to be thrown to the player in case the rule is fulfilled.
-        </p>
-      </td>
-    </tr>
-    
-    <tr>
-      <td>
-        <p>
-          stopProcessing
-        </p>
-      </td>
-      
-      <td>
-        <p style="text-align: left;">
-          boolean
-        </p>
-      </td>
-      
-      <td>
-        <p>
-          V
-        </p>
-      </td>
-      
-      <td>
-        <p style="text-align: left;">
-          Indicates that when this rule has been met there is no need to continue checking the rest of the rules. 
-        </p>
-      </td>
-    </tr>
-  </tbody>
-</table>
+| Name           | Type                                       | Writable | Description                                                                                              |
+|----------------|--------------------------------------------|----------|----------------------------------------------------------------------------------------------------------|
+| actions        | KalturaAccessControlActionArray            | V        | Actions to be performed by the player in case the rule is fulfilled.                                     |
+| conditions     | KalturaConditionArray                      | V        | Conditions to validate the rule.                                                                         |
+| contexts       | KalturaAccessControlContextTypeHolderArray | V        | Indicates what contexts should be tested by this rule.                                                   |
+| message        | string                                     | V        | Message to be thrown to the player in case the rule is fulfilled.                                        |
+| stopProcessing | boolean                                    | V        | Indicates that when this rule has been met there is no need to continue checking the rest of the rules.  |
 
 Rules are evaluated according to their order and evaluated only if they are configured to run in the current context, according to their contexts attribute. A KalturaRule is considered  fulfilled only if all its conditions are evaluated as true. The available context types are in the[ KalturaAccessControlContextType][3].
 
@@ -194,89 +49,12 @@ Rules are evaluated according to their order and evaluated only if they are conf
 
 **KalturaAccessControlContextType**
 
-<table style="width: 485px;" border="0" cellpadding="0">
-  <tbody>
-    <tr>
-      <td>
-        <p style="text-align: left;">
-          <strong>Name</strong>
-        </p>
-      </td>
-      
-      <td>
-        <p style="text-align: left;">
-          <strong>Type</strong>
-        </p>
-      </td>
-      
-      <td>
-        <p style="text-align: left;">
-          <strong>Value</strong>
-        </p>
-      </td>
-    </tr>
-    
-    <tr>
-      <td>
-        <p style="text-align: left;">
-          DOWNLOAD
-        </p>
-      </td>
-      
-      <td>
-        <p style="text-align: left;">
-          string
-        </p>
-      </td>
-      
-      <td>
-        <p style="text-align: left;">
-          2
-        </p>
-      </td>
-    </tr>
-    
-    <tr>
-      <td>
-        <p style="text-align: left;">
-          PLAY
-        </p>
-      </td>
-      
-      <td>
-        <p style="text-align: left;">
-          string
-        </p>
-      </td>
-      
-      <td>
-        <p style="text-align: left;">
-          1
-        </p>
-      </td>
-    </tr>
-    
-    <tr>
-      <td>
-        <p style="text-align: left;">
-          <span style="text-decoration: line-through;"></span>THUMBNAIL
-        </p>
-      </td>
-      
-      <td>
-        <p style="text-align: left;">
-          string
-        </p>
-      </td>
-      
-      <td>
-        <p style="text-align: left;">
-          3
-        </p>
-      </td>
-    </tr>
-  </tbody>
-</table>
+| Name      | Type   | Value |
+|-----------|--------|-------|
+| DOWNLOAD  | string | 2     |
+| PLAY      | string | 1     |
+| THUMBNAIL | string | 3     |
+
 
 All rules are evaluated, unless one of the rule's stop processing flag is true and the rule condition was fulfilled. Each rule that matches the conditions, adds the actions to the outcome actions and its message to the outcome messages. All of the actions are performed for rules that are evaluated and their conditions are true. Each rule is composed of a set of conditions <a href="https://developer.kaltura.com/api-docs/#/KalturaConditionArray" target="_blank">KalturaCondition</a>  and an action [KalturaAccessControlAction.][4]  The action types are described in <a href="https://developer.kaltura.com/api-docs/#/KalturaAccessControlActionType" target="_blank">KalturaAccessControlActionType. </a>The logical relation between the set of conditions in a single rule uses the AND operator, meaning that all conditions must be evaluated to true in order to consider the rule as fulfilled.
 
@@ -292,213 +70,17 @@ The condition types are:
   <a href="https://developer.kaltura.com/api-docs/#/KalturaConditionArray" target="_blank">KalturaConditionType</a> 
 </p>
 
-<table border="0" cellpadding="0">
-  <tbody>
-    <tr>
-      <td style="text-align: left;">
-        <strong>Name</strong>
-      </td>
-      
-      <td style="text-align: left;">
-        <strong>Type</strong>
-      </td>
-      
-      <td>
-        <strong>Value</strong>
-      </td>
-      
-      <td>
-        <p style="text-align: left;">
-          <strong>Description</strong>
-        </p>
-      </td>
-    </tr>
-    
-    <tr>
-      <td style="text-align: left;">
-        AUTHENTICATED 
-      </td>
-      
-      <td>
-        <p>
-          <span>string</span>
-        </p>
-      </td>
-      
-      <td style="text-align: left;">
-         1
-      </td>
-      
-      <td>
-        <p style="text-align: left;">
-          <span>Validate that the user is authenticated, specific privileges may be defined.</span>
-        </p>
-      </td>
-    </tr>
-    
-    <tr>
-      <td>
-        <p style="text-align: left;">
-          COUNTRY
-        </p>
-      </td>
-      
-      <td>
-        <p>
-          <span>string</span>
-        </p>
-      </td>
-      
-      <td style="text-align: left;">
-         2
-      </td>
-      
-      <td>
-        <p style="text-align: left;">
-          <span>Validate that the request came from a specific country, calculated according to request IP.</span>
-        </p>
-      </td>
-    </tr>
-    
-    <tr>
-      <td>
-        <p style="text-align: left;">
-          FIELD_COMPARE 
-        </p>
-      </td>
-      
-      <td style="text-align: left;">
-        <span>string</span>
-      </td>
-      
-      <td>
-        <p style="text-align: left;">
-           7
-        </p>
-      </td>
-      
-      <td>
-        <p style="text-align: left;">
-          <span>Validate that the field number compared correctly to all listed numeric values.</span>
-        </p>
-      </td>
-    </tr>
-    
-    <tr>
-      <td>
-        <p style="text-align: left;">
-          FIELD_MATCH
-        </p>
-      </td>
-      
-      <td>
-        <p style="text-align: left;">
-          <span>string</span>
-        </p>
-      </td>
-      
-      <td>
-        <p style="text-align: left;">
-           6
-        </p>
-      </td>
-      
-      <td style="text-align: left;">
-        Validate that the field text matches any of listed textual values. 
-      </td>
-    </tr>
-    
-    <tr>
-      <td style="text-align: left;">
-        IP_ADDRESS 
-      </td>
-      
-      <td style="text-align: left;">
-        <span>string</span> 
-      </td>
-      
-      <td style="text-align: left;">
-         3
-      </td>
-      
-      <td style="text-align: left;">
-        <span>Validate that the request came from a specific IP range.</span>
-      </td>
-    </tr>
-    
-    <tr>
-      <td>
-        METADATA_FIELD_COMPARE 
-      </td>
-      
-      <td style="text-align: left;">
-        <span>string</span>
-      </td>
-      
-      <td style="text-align: left;">
-        metadata.FieldCompare 
-      </td>
-      
-      <td style="text-align: left;">
-        Validate that all metadata elements number compared correctly to all listed numeric values. 
-      </td>
-    </tr>
-    
-    <tr>
-      <td style="text-align: left;">
-        METADATA_FIELD_MATCH
-      </td>
-      
-      <td style="text-align: left;">
-        <span>string</span> 
-      </td>
-      
-      <td style="text-align: left;">
-        metadata.FieldMatch 
-      </td>
-      
-      <td style="text-align: left;">
-        Validate that any of the metadata elements text matches any of listed textual values. 
-      </td>
-    </tr>
-    
-    <tr>
-      <td style="text-align: left;">
-        SITE
-      </td>
-      
-      <td style="text-align: left;">
-        <span>string</span>
-      </td>
-      
-      <td style="text-align: left;">
-         4
-      </td>
-      
-      <td style="text-align: left;">
-        <span>Validate that the request came from a specific domain, wildcards are supported.</span> 
-      </td>
-    </tr>
-    
-    <tr>
-      <td style="text-align: left;">
-        USER_AGENT
-      </td>
-      
-      <td style="text-align: left;">
-        <span>string</span> 
-      </td>
-      
-      <td style="text-align: left;">
-         5
-      </td>
-      
-      <td style="text-align: left;">
-        <span>Validate that the request came from a specific user agent, regular expressions are supported.</span> 
-      </td>
-    </tr>
-  </tbody>
-</table>
+| Name                    | Type    | Value                  | Description                                                                                    |
+|-------------------------|---------|------------------------|------------------------------------------------------------------------------------------------|
+| AUTHENTICATED           | string  |  1                     | Validate that the user is authenticated, specific privileges may be defined.                   |
+| COUNTRY                 | string  |  2                     | Validate that the request came from a specific country, calculated according to request IP.    |
+| FIELD_COMPARE           | string  |  7                     | Validate that the field number compared correctly to all listed numeric values.                |
+| FIELD_MATCH             | string  |  6                     | Validate that the field text matches any of listed textual values.                             |
+| IP_ADDRESS              | string  |  3                     | Validate that the request came from a specific IP range.                                       |
+| METADATA_FIELD_COMPARE  | string  | metadata.FieldCompare  | Validate that all metadata elements number compared correctly to all listed numeric values.    |
+| METADATA_FIELD_MATCH    | string  | metadata.FieldMatch    | Validate that any of the metadata elements text matches any of listed textual values.          |
+| SITE                    | string  |  4                     | Validate that the request came from a specific domain, wildcards are supported.                |
+| USER_AGENT              | string  |  5                     | Validate that the request came from a specific user agent, regular expressions are supported.  |
 
  The objects available that implement the condition objects are:
 
@@ -574,236 +156,35 @@ The following set of actions are defined:
 
 The **<a href="https://developer.kaltura.com/api-docs/#/KalturaAccessControlScope" target="_blank">KalturaAccessControlScope</a>**API contains a predefined list of context variables: 
 
-<table style="width: 892px;" border="0" cellpadding="0">
-  <tbody>
-    <tr>
-      <td>
-        <p style="text-align: left;">
-          <strong>Name</strong>
-        </p>
-      </td>
-      
-      <td>
-        <p style="text-align: left;">
-          <strong>Type</strong>
-        </p>
-      </td>
-      
-      <td>
-        <p>
-          <strong>Writable</strong>
-        </p>
-      </td>
-      
-      <td>
-        <p style="text-align: left;">
-          <strong>Description</strong>
-        </p>
-      </td>
-    </tr>
-    
-    <tr>
-      <td>
-        <p style="text-align: left;">
-          contexts
-        </p>
-      </td>
-      
-      <td>
-        <p style="text-align: left;">
-          <a href="https://developer.kaltura.com/api-docs/#/KalturaAccessControlContextTypeHolderArray" target="_blank">KalturaAccessControlContextTypeHolderArray</a>
-        </p>
-      </td>
-      
-      <td>
-        <p>
-          V
-        </p>
-      </td>
-      
-      <td>
-        <p style="text-align: left;">
-          Indicates what contexts should be tested. No context means any context.
-        </p>
-      </td>
-    </tr>
-    
-    <tr>
-      <td>
-        <p style="text-align: left;">
-          ip
-        </p>
-      </td>
-      
-      <td>
-        <p style="text-align: left;">
-          string
-        </p>
-      </td>
-      
-      <td>
-        <p>
-          V
-        </p>
-      </td>
-      
-      <td>
-        <p style="text-align: left;">
-          IP to be used to test geographic location conditions.
-        </p>
-      </td>
-    </tr>
-    
-    <tr>
-      <td>
-        <p style="text-align: left;">
-          ks
-        </p>
-      </td>
-      
-      <td>
-        <p style="text-align: left;">
-          string
-        </p>
-      </td>
-      
-      <td>
-        <p>
-          V
-        </p>
-      </td>
-      
-      <td>
-        <p style="text-align: left;">
-          Kaltura session to be used to test session and user conditions.
-        </p>
-      </td>
-    </tr>
-    
-    <tr>
-      <td>
-        <p style="text-align: left;">
-          referrer
-        </p>
-      </td>
-      
-      <td>
-        <p style="text-align: left;">
-          string
-        </p>
-      </td>
-      
-      <td>
-        <p>
-          V
-        </p>
-      </td>
-      
-      <td>
-        <p style="text-align: left;">
-          URL to be used to test domain conditions.
-        </p>
-      </td>
-    </tr>
-    
-    <tr>
-      <td>
-        <p style="text-align: left;">
-          time
-        </p>
-      </td>
-      
-      <td>
-        <p style="text-align: left;">
-          int
-        </p>
-      </td>
-      
-      <td>
-        <p>
-          V
-        </p>
-      </td>
-      
-      <td>
-        <p style="text-align: left;">
-          Unix timestamp (in seconds) to be used to test entry scheduling, keep null to use now.
-        </p>
-      </td>
-    </tr>
-    
-    <tr>
-      <td>
-        <p style="text-align: left;">
-          userAgent
-        </p>
-      </td>
-      
-      <td>
-        <p style="text-align: left;">
-          string
-        </p>
-      </td>
-      
-      <td>
-        <p>
-          V
-        </p>
-      </td>
-      
-      <td>
-        <p style="text-align: left;">
-          Browser or client application to be used to test agent conditions.
-        </p>
-      </td>
-    </tr>
-  </tbody>
-</table>
 
-<div>
-  <hr width="33%" size="1" />
-  
-  <div>
-    <h2>
-      Examples
-    </h2>
-    
-    <p>
-      The following examples are in PHP and effectively will be the same across all client libraries. 
-    </p>
-    
-    <p>
-      Note that the xpath property may contain the full xpath to the field in three formats:
-    </p>
-    
-    <ul>
-      <li>
-        Slashed xPath, e.g. /metadata/myElementName
-      </li>
-      <li>
-        Using local-name function, e.g. /*[local-name()='metadata']/*[local-name()='myElementName']
-      </li>
-      <li>
-        Using only the field name, e.g. myElementName, it will be searched as //myElementName
-      </li>
-    </ul>
-    
-    <h3>
-      Device-specific scheduling window
-    </h3>
-    
-    <p>
-      Condition #1: User agent MATCH 'ipad' (regular expression)
-    </p>
-    
+| contexts  | KalturaAccessControlContextTypeHolderArray | V | Indicates what contexts should be tested. No context means any context.                |
+|-----------|--------------------------------------------|---|----------------------------------------------------------------------------------------|
+| ip        | string                                     | V | IP to be used to test geographic location conditions.                                  |
+| ks        | string                                     | V | Kaltura session to be used to test session and user conditions.                        |
+| referrer  | string                                     | V | URL to be used to test domain conditions.                                              |
+| time      | int                                        | V | Unix timestamp (in seconds) to be used to test entry scheduling, keep null to use now. |
+| userAgent | string                                     | V | Browser or client application to be used to test agent conditions.                     |
+
+## Examples  
+
+The following examples are in PHP and effectively will be the same across all client libraries. 
+
+>Note that the xpath property may contain the full xpath to the field in three formats:
+* Slashed xPath, e.g. /metadata/myElementName
+* Using local-name function, e.g. /*[local-name()='metadata']/*[local-name()='myElementName']
+* Using only the field name, e.g. myElementName, it will be searched as //myElementName
+
+### Device-specific Scheduling Window  
+
+Condition #1: User agent MATCH 'ipad' (regular expression)
+   
     <pre class="brush: php;fontsize: 100; first-line: 1; ">$value1 = new KalturaStringValue();
 $value1-&gt;value = '.*ipad.*';
 $condition1 = new KalturaUserAgentCondition();
 $condition1-&gt;values = array($value1);</pre>
-    
-    <p>
-      Condition #2: Current time => entry’s {metadata_123/ipadSunrise}
-    </p>
+   
+
+Condition #2: Current time => entry’s {metadata_123/ipadSunrise}
     
     <pre class="brush: php;fontsize: 100; first-line: 1; ">$condition2 = new KalturaCompareMetadataCondition();
 $condition2-&gt;comparison = KalturaSearchConditionComparison::LESS_THAN_OR_EQUAL;
@@ -811,9 +192,8 @@ $condition2-&gt;xPath = 'ipadSunrise';
 $condition2-&gt;profileId = 123;
 $condition2-&gt;value = new KalturaTimeContextField();</pre>
     
-    <p>
-      Condition #3: Current time <= entry’s {metadata_123/ipadSunset}
-    </p>
+
+Condition #3: Current time <= entry’s {metadata_123/ipadSunset}
     
     <pre class="brush: php;fontsize: 100; first-line: 1; ">$condition3 = new KalturaCompareMetadataCondition();
 $condition3-&gt;comparison = KalturaSearchConditionComparison::GREATER_THAN_OR_EQUAL;
