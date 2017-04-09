@@ -1,7 +1,7 @@
 ---
 layout: page
 title: The Kaltura Media Access Control Model
-date: 2012-04-22 23:10:42
+weight: 105
 ---
 
 An Access Control Profile defines authorized and restricted domains where your content can or cannot be displayed, countries from which it can or cannot be viewed, white and black lists of IP addresses and authorized and unauthorized domains and devices in which your media can be embedded.
