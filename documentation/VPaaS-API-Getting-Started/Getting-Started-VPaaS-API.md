@@ -214,7 +214,7 @@ This section details the Kaltura API documentation that is available to develope
 
 * [Create A New Kaltura Entry And Upload Video File Using The Kaltura API](https://vpaas.kaltura.com/documentation/VPaaS-API-Getting-Started/examples/create-new-kaltura-entry-and-upload-video-file-using-kaltura-api.html)
 * [Getting Started with the Kaltura API - Blog post and Webinar](http://blog.kaltura.org/kaltura-api-how-to-get-started-video)
-* [How to retrieve the download or streaming URL using API calls?]https://vpaas.kaltura.com/documentation/VPaaS-API-Getting-Started/examples/how-retrieve-download-or-streaming-url-using-api-calls.html)
+* [How to retrieve the download or streaming URL using API calls?](https://vpaas.kaltura.com/documentation/VPaaS-API-Getting-Started/examples/how-retrieve-download-or-streaming-url-using-api-calls.html)
 * [How to retrieve a media entry details and metadata?](https://vpaas.kaltura.com/documentation/VPaaS-API-Getting-Started/examples/how-retrieve-metadata-media-entry-using-api.html)
 * [How the Search in Kaltura Works (How to perform AND, OR, NOT and Exact Match searches in API)](https://vpaas.kaltura.com/documentation/VPaaS-API-Getting-Started/examples/how-search-kaltura-works-how-perform-and-or-not-and-exact-match-searches-api.html).               
 
@@ -352,9 +352,9 @@ In the response XML:
 
 In most client libraries, the client library code throws an exception when an error is returned from the API. Depending on the programming language, catching the exception to read the code and/or the message enables user-friendly error handling. Errors that you encounter during development usually are caused by incorrect implementation.
 
-### The Multirequest API  
+### The Multi-request API  
 
-#### Understanding the Multi-Request Feature  
+#### Understanding the Multi-request Feature  
 
 The Kaltura API can execute several API calls in a single HTTP request to Kaltura. The multi-request feature improves performance in Kaltura integrations. The feature enables a developer to stack multiple API calls and issue them in a single request. This reduces the number of round-trips from server-side or client-side developer code to Kaltura.
 
@@ -362,9 +362,9 @@ The Kaltura API processes each of the API calls that are included in the single 
 
 While the Kaltura API is processing each of the API calls in a multi-request, it detects when there is a dependency in one of the call parameters. The Kaltura API parses the dependency and replaces it with the result of the relevant call.
 
-#### Using the Multi-Request Feature  
+#### Using the Multi-request Feature  
 
-##### Multi-Request with Dependency - Sample Use Case
+##### Multi-request with Dependency - Sample Use Case
 
 To create a new entry out of a file in your server, execute several different API calls:
 
@@ -378,7 +378,7 @@ You'll need the token string when executing the next action – uploading the fi
 
 Using the multi-request feature, in the second request you specify obtaining the value of the token parameter from the token property that is the result of the first request.
 
-### Multi-Request Structure  
+### Multi-request Structure  
 
 To perform a multi-request call:
 
@@ -405,7 +405,7 @@ To perform a multi-request call:
 {% endhighlight %}
 
 
-### Multi-Request with Dependency - Structure  
+### Multi-request with Dependency - Structure  
 
 To create a multi-request with a dependent request, use the following structure as input in the variable whose value you want to replace with a result of a preceding request:
 
