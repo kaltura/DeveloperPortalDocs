@@ -1,3 +1,4 @@
+temp
 ---
 layout: page
 title: Access Control and Content Retrieval on Connected Devices
@@ -5,13 +6,15 @@ weight: 104
 ---
 
 
-Kaltura has two different mechanisms that enforce access control without cross-dependency which are effective for all connected devices:
+Kaltura has two different mechanisms for enforcing access control without requiring cross-dependency that are effective for all connected devices:
 
-* Scheduling - Used for enforcing access control on the entry-level across all connected devices. This mechanism is based on a single start/end window. It is recommended to use the scheduling mechanism if and when it meets your business requirements. Scheduling is easier to setup via the API and can be<span style="color: #000000;"> self-served by non-technical users, either through the KMC or through MediaSpace.</span>
+* Scheduling - Used for enforcing access control on the entry-level across all connected devices. This mechanism is based on a single start/end window. It is recommended to use the scheduling mechanism if and when it meets your business requirements. Scheduling is easier to setup via the API and can be self-served by non-technical users, either through the KMC or through MediaSpace.
 
-* Advanced Access Control - Used for more fine-grain control, on the flavor level, and allows both multiple-scheduling windows and multiple rules beyond scheduling. For example (“Don’t serve the HD flavor in Canada”, “Playback on iPads is not allowed 8 hours after TV air date”). This mechanism is more complex. Additional information is available in the article <a href="%20http://kc-public.kaltura.com/kaltura-media-access-control-model#device-specific" target="_blank"><span style="color: #000000;">The Kaltura Media Access Control Model</span></a>.</span>
+* Advanced Access Control - Used for more fine-grain control on the flavor level, Advanced Access control allows both multiple-scheduling windows and multiple rules beyond scheduling. For example (“Don’t serve the HD flavor in Canada”, “Playback on iPads is not allowed 8 hours after TV air date”). This mechanism is more complex. Additional information is available in the article [Kaltura Media Access Control Model](https://vpaas.kaltura.com/documentation/Secure_Control_and_Govern/kaltura-media-access-control-model.html).
   
 Both Scheduling and Advanced Access-Control are fully enforced on the server-side and by mobile applications when they retrieve content via Kaltura APIs. For more information on how to retrieve content per platform/protocol see <a href="{{site.url}}/documentation/Knowledge/how-retrieve-download-or-streaming-url-using-api-calls.html" target="_blank">How to retrieve the download or streaming URL using API calls?</a>
+
+how-retrieve-download-or-streaming-url-using-api-calls.html)
 
 <a href="{{site.url}}/documentation/Knowledge/how-retrieve-download-or-streaming-url-using-api-calls.html" target="_blank"></a>It is recommended to always use these methods and not, for example, store returned m3u8 urls, as m3u8 urls are only temporary.
 
