@@ -28,9 +28,10 @@ The parameters are passed in the following form:
 ```http://YourKalturaServer/p/{partner\_id}/thumbnail/entry\_id/{entry_id}**/paramX\_name/paramX\_value/...*```
 
 1.  Replace *{partner_id}* with your partner ID from the [KMC Integration Settings][1].  
-    <img src="../../assets/226.img">
-2.  Replace *{entry_id}* with the id of the desired entry thumbnail. The id can be found in the list of entries in the <a href="http://www.kaltura.com/index.php/kmc/kmc4#content|manage" target="_blank">KMC Content Tab</a>.  
-    <img src="../../assets/227.img">
+  (![KMC Integration Settings](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/Engage_and_Publish/images/kmc-integration.png). 
+Please always ensure that a descriptive Alt text is specified on your image to ensure compatability with screen readers and better search indexing.
+2.  Replace *{entry_id}* with the id of the desired entry thumbnail. The id can be found in the list of entries in the [KMC Content Tab](http://www.kaltura.com/index.php/kmc/kmc4#content|manage).  
+  (![KMC Content Tab entries](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/Engage_and_Publish/images/entries%20table%20entry%20id.JPG). 
 3.  Then append any of the parameters below according to the following format: /paramX\_name/paramX\_value/...
 
  [1]: http://www.kaltura.com/index.php/kmc/kmc4#account|integration
