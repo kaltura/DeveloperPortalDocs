@@ -60,7 +60,9 @@ The parameters are passed in the following form:
 | vid_slices     | integer | No        | Number of slices                                                                                                                                                                                                                                  |
 
 
-<span class="mce-heading-3">Parameters usage</span>To use the parameters, append each parameter name followed by the desired value in the following format: /paramX\_name/paramX\_value/...
+## Parameters Usage 
+
+To use the parameters, append each parameter name followed by the desired value in the following format: /paramX\_name/paramX\_value/...
 
 *   If both width and height were given a zero value the original image will be returned.
 *   If neither width nor height were specified, the resulting size will be 120x90 (default thumbnail size).
@@ -72,11 +74,9 @@ The parameters are passed in the following form:
 3.  crop according to the given dimensions while maintaining the original aspect ratio. The resulting image may be cover only part of the original image.
 4.  crops the image so that only the upper part of the image remains.
 
-<p class="mce-heading-2">
-  Examples
-</p>
+## Examples  
 
-<span>Consider this as the original thumbnail we'll play with:</span>
+Let's consider this as the original thumbnail we'll play with:
 
 *   http URL - [http://cdn.kaltura.com/p/811441/thumbnail/entry\_id/0\_wf3km7rh][2]
 *   secured URL - <a href="https://cdnapisec.kaltura.com/p/811441/thumbnail/entry_id/0_wf3km7rh" target="_blank">https://cdnapisec.kaltura.com/p/811441/thumbnail/entry_id/0_wf3km7rh </a>
@@ -85,33 +85,21 @@ The parameters are passed in the following form:
 
  
 
-<span><img src="http://cdn.kaltura.com/p/811441/thumbnail/entry_id/0_wf3km7rh" border="0" alt="Original Thumbnail" width="120" height="68" /></span>
+>Note: If neither width nor height were specified, the resulting size will be 120x90 (default thumbnail size).</span>
 
-<p class="mce-note-graphic">
-  <span>NOTE: If neither width nor height were specified, the resulting size will be 120x90 (default thumbnail size).</span>
-</p>
+### Resizing  
 
-<p class="mce-heading-3">
-  <span>Resizing</span>
-</p>
-
-<span>The thumbnail with dimensions of 500 x 400 (with maintain aspect-ratio from original) and defined quality: (X is the quality)</span>
+The thumbnail with dimensions of 500 x 400 (with maintain aspect-ratio from original) and defined quality: (X is the quality)
 
 <span>http://cdn.kaltura.com/p/811441/thumbnail/entry_id/0_wf3km7rh/width/200/height/100/type/1/quality/X</span>
 
 <span></span><span class="mce-sub-heading">         10% Quality:                            <strong><span class="mce-sub-heading">50% Quality:                             <strong><span class="mce-sub-heading">100% Quality:</span></strong></span></strong></span><strong class="mce-sub-heading"><br /></strong><img src="http://cdn.kaltura.com/p/811441/thumbnail/entry_id/0_wf3km7rh/width/200/height/100/type/1/quality/10" border="0" alt="Resized thumbnail to 200x100 and Quality of 10%" title="Resized thumbnail to 200x100 and Quality of 10%" width="178" height="100" />     <img src="http://cdn.kaltura.com/p/811441/thumbnail/entry_id/0_wf3km7rh/width/200/height/100/type/1/quality/50" border="0" alt="Resized thumbnail to 200x100 and Quality of 50%" title="Resized thumbnail to 200x100 and Quality of 50%" width="178" height="100" style="border-style: initial; border-color: initial;" />     <img src="http://cdn.kaltura.com/p/811441/thumbnail/entry_id/0_wf3km7rh/width/200/height/100/type/1/quality/100" border="0" alt="Resized thumbnail to 200x100 and Quality of 100%" title="Resized thumbnail to 200x100 and Quality of 100%" width="178" height="100" style="border-style: initial; border-color: initial;" />
 
-<p class="mce-note-graphic">
-  NOTE: The Quality parameter affects the compression value of the JPEG algorithm. To learn more about JPEG Compressions, visit the <a href="http://en.wikipedia.org/wiki/JPEG#Effects_of_JPEG_compression" target="_blank">JPEG entry on Wikipedia</a>.
-</p>
+>Note: The Quality parameter affects the compression value of the JPEG algorithm. To learn more about JPEG Compressions, visit the [JPEG entry on Wikipedia](http://en.wikipedia.org/wiki/JPEG#Effects_of_JPEG_compression).
 
-<p class="mce-heading-3">
-  <span>Using vid_sec parameter</span> 
-</p>
+### Using vid_sec parameter  
 
-<span>The vid_sec parameter allows us to select a specific second in a video entry.</span>
-
-<span>The following will capture various frames from the 10<sup>th</sup>, 50<sup>th</sup>, 100<sup>th</sup> and 150<sup>th</sup> second in the video: (X is the second)</span>
+The vid_sec parameter allows us to select a specific second in a video entry. The following will capture various frames from the 10<sup>th</sup>, 50<sup>th</sup>, 100<sup>th</sup> and 150<sup>th</sup> second in the video: (X is the second)</span>
 
 <span></span>http://cdn.kaltura.com/p/811441/thumbnail/entry\_id/0\_wf3km7rh/width/200/height/100/type/1/vid_sec/X
 
