@@ -1,4 +1,3 @@
-temp
 ---
 layout: page
 title: The Kaltura Media Access Control Model
