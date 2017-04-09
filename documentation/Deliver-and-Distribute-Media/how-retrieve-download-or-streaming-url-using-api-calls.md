@@ -1,7 +1,7 @@
 ---
 layout: page
 title: How to Retrieve the Download or Streaming URL using API Calls?
-weight: 
+weight: 601
 ---
 
 The Kaltura Player abstracts the need to retrieve direct access to the video file, and handles the various aspects of the video playback including multi-bitrate, choosing the correct codec and streaming protocols, DRM, Access Control and more. Often applications need a direct URL for downloading the raw media file for purposes such as streaming outside of the Kaltura Player, processing the video data (such as video analysis or transcriptions) and more. In cases where you need to access the playback stream directly, or just a link to download the video file, you will need to consider the target playback devices, any security protocols applied to your Kaltura account and video, and then call the suitable API methods. The following will guide developers of using the playManifest API call to retrieve specific transcoded video flavors from a Kaltura account. 
@@ -18,11 +18,13 @@ playManifest features return the following types:
 
 ### Retrieving a URL for a Video Stream  
 
-To retrieve a specific video flavor, call the **playManifest** API. Be certain to have the Partner ID and Entry ID at hand. To call the **playManifest** API and retrieve a specific video flavor, call the following URL -
+To retrieve a specific video flavor:
+
+1.  Call the **playManifest** API. Be certain to have the Partner ID and Entry ID at hand. To call the **playManifest** API and retrieve a specific video flavor, call the following URL -
 
 **[serviceUrl]**/p/**[YourPartnerId]**/sp/0/playManifest/entryId/**[YourEntryId]**/format/**[StreamingFormat]**/protocol/**[Protocol]**/flavorParamId/**[VideoFlavorId]**/ks/**[ks]**/video.**[ext]**
 
-Replace the following parameters:
+2.  Replace the following parameters:
 
 *   **serviceUrl - **the base URL to the Kaltura Server
 *   **YourPartnerId** - Your Kaltura account publisher Id. (Can be retrieved from the [Publisher Account Settings](http://www.kaltura.com/index.php/kmc/kmc4#account|integration) page in the KMC).
@@ -82,7 +84,7 @@ Replace the following parameters:
 * **flavorParamId** represents the transcoding parameters that are used to generate a flavor. For example, all HD flavors in an account will usually have the same flavorParamId (across different entries)
 * **flavorId** is the identifier of a specific video file, for example, the HD flavor will have a different flavorId for each entry that has an HD flavor.
 
-**When should you use which flavor?**
+#### When to You use each Flavor?  
 
 * If the flavorIds for the specific entry are known (e.g., the application is doing a flavorAsset.list with entryIdEqual), then use flavorId/flavorIds.
 * If the flavorIds are not known (e.g., the application would like to build a URL to the HD flavor, but does not want to perform flavorAsset.list) use flavorParamId/flavorParamIds.
