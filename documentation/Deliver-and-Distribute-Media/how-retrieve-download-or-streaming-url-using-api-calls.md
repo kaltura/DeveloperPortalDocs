@@ -144,20 +144,20 @@ The correct flavor IDs (per account and Kaltura edition) can be retrieved using 
 
 To retrive streaming URL for mobile applications, use the following guidelines:
 
-* For Apple iPad devices – <a href="#acl-entitlements-consider">get all the flavors</a> (marked ready) that have the tag 'ipadnew' and build the following URL:
+* For Apple iPad devices – <a href="#considerations-of-access-control-and-entitlements">get all the flavors</a> (marked ready) that have the tag 'ipadnew' and build the following URL:
 
 {% highlight javascript %}
 serviceUrl + '/p/' + partnerId + '/sp/' + partnerId + '00/playManifest/entryId/' + entryId + '/flavorIds/' + flavorIds.join(',') + '/format/applehttp/protocol/http/a.m3u8?ks=' + ks + '&referrer=' + base64_encode(application_name)
 
 {% endhighlight %}
 
-* For Apple iPhone devices – <a href="#acl-entitlements-consider">get all the flavors</a> (marked ready) that have the tag 'iphonenew' tag and build the following URL:
+* For Apple iPhone devices – <a href="#considerations-of-access-control-and-entitlements">get all the flavors</a> (marked ready) that have the tag 'iphonenew' tag and build the following URL:
 
 {% highlight javascript %}
 serviceUrl + '/p/' + partnerId + '/sp/' + partnerId + '00/playManifest/entryId/' + entryId + '/flavorIds/' + flavorIds.join(',') + '/format/applehttp/protocol/http/a.m3u8?ks=' + ks + '&referrer=' + base64_encode(application_name)
 {% endhighlight %}
 
-* For Android devices that support HLS – <a href="#acl-entitlements-consider">get all the flavors</a> (marked ready) that have the tag 'iphonenew' tag (excluding audio-only flavors where width, height & framerate fields equal to zero) and build the following URL:
+* For Android devices that support HLS – <a href="#considerations-of-access-control-and-entitlements">get all the flavors</a> (marked ready) that have the tag 'iphonenew' tag (excluding audio-only flavors where width, height & framerate fields equal to zero) and build the following URL:
 
 {% highlight javascript %}
 serviceUrl + '/p/' + partnerId + '/sp/' + partnerId + '00/playManifest/entryId/' + entryId + '/flavorIds/' + flavorIds.join(',') + '/format/applehttp/protocol/http/a.m3u8?ks=' + ks + '&referrer=' + base64_encode(application_name)
