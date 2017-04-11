@@ -101,7 +101,7 @@ For best practice, to retrieve the download URL for an entry, use the following 
 
 Below is a PHP code sample for retrieving the download URL of a web-playable flavor for a desired entry ID:
 
-{% highlight c %}
+{% highlight php %}
 
 //Client library configuration and instantiation...
  
@@ -146,28 +146,28 @@ To retrive streaming URL for mobile applications, use the following guidelines:
 
 * For Apple iPad devices – <a href="#acl-entitlements-consider">get all the flavors</a> (marked ready) that have the tag 'ipadnew' and build the following URL:
 
-{% highlight c %}
-<pre class="brush: jscript;fontsize: 100; first-line: 1; ">serviceUrl + '/p/' + partnerId + '/sp/' + partnerId + '00/playManifest/entryId/' + entryId + '/flavorIds/' + flavorIds.join(',') + '/format/applehttp/protocol/http/a.m3u8?ks=' + ks + '&referrer=' + base64_encode(application_name)</pre>
-<pre class="brush: jscript;fontsize: 100; first-line: 1; ">serviceUrl + '/p/' + partnerId + '/sp/' + partnerId + '00/playManifest/entryId/' + entryId + '/flavorIds/' + flavorIds.join(',') + '/format/applehttp/protocol/http/a.m3u8?ks=' + ks + '&referrer=' + base64_encode(application_name)</pre>
+{% highlight javascript %}
+serviceUrl + '/p/' + partnerId + '/sp/' + partnerId + '00/playManifest/entryId/' + entryId + '/flavorIds/' + flavorIds.join(',') + '/format/applehttp/protocol/http/a.m3u8?ks=' + ks + '&referrer=' + base64_encode(application_name)
+serviceUrl + '/p/' + partnerId + '/sp/' + partnerId + '00/playManifest/entryId/' + entryId + '/flavorIds/' + flavorIds.join(',') + '/format/applehttp/protocol/http/a.m3u8?ks=' + ks + '&referrer=' + base64_encode(application_name)
 
 {% endhighlight %}
 
 * For Apple iPhone devices – <a href="#acl-entitlements-consider">get all the flavors</a> (marked ready) that have the tag 'iphonenew' tag and build the following URL:
 
-{% highlight c %}
-<pre class="brush: jscript;fontsize: 100; first-line: 1; ">serviceUrl + '/p/' + partnerId + '/sp/' + partnerId + '00/playManifest/entryId/' + entryId + '/flavorIds/' + flavorIds.join(',') + '/format/applehttp/protocol/http/a.m3u8?ks=' + ks + '&referrer=' + base64_encode(application_name)</pre>
+{% highlight javascript %}
+serviceUrl + '/p/' + partnerId + '/sp/' + partnerId + '00/playManifest/entryId/' + entryId + '/flavorIds/' + flavorIds.join(',') + '/format/applehttp/protocol/http/a.m3u8?ks=' + ks + '&referrer=' + base64_encode(application_name)
 {% endhighlight %}
 
 * For Android devices that support HLS – <a href="#acl-entitlements-consider">get all the flavors</a> (marked ready) that have the tag 'iphonenew' tag (excluding audio-only flavors where width, height & framerate fields equal to zero) and build the following URL:
 
-{% highlight c %}
-<pre class="brush: jscript;fontsize: 100; first-line: 1; ">serviceUrl + '/p/' + partnerId + '/sp/' + partnerId + '00/playManifest/entryId/' + entryId + '/flavorIds/' + flavorIds.join(',') + '/format/applehttp/protocol/http/a.m3u8?ks=' + ks + '&referrer=' + base64_encode(application_name)</pre>
+{% highlight javascript %}
+serviceUrl + '/p/' + partnerId + '/sp/' + partnerId + '00/playManifest/entryId/' + entryId + '/flavorIds/' + flavorIds.join(',') + '/format/applehttp/protocol/http/a.m3u8?ks=' + ks + '&referrer=' + base64_encode(application_name)
 {% endhighlight %}
 
 * For Android devices that do not support HLS – get a single video flavor that has the 'iPhoneNew' tag and build the following URL:
 
-{% highlight c %}
-<pre class="brush: jscript;fontsize: 100; first-line: 1; ">serviceUrl + '/p/' + partnerId + '/sp/' + partnerId + '00/playManifest/entryId/' + entryId + '/flavorId/' + flavorId + '/format/url/protocol/http/a.mp4?ks=' + ks + '&referrer=' + base64_encode(application_name)</pre>
+{% highlight javascript %}
+serviceUrl + '/p/' + partnerId + '/sp/' + partnerId + '00/playManifest/entryId/' + entryId + '/flavorId/' + flavorId + '/format/url/protocol/http/a.mp4?ks=' + ks + '&referrer=' + base64_encode(application_name)
 {% endhighlight %}
 
 ## Retrieving the Currently Playing Video URL using the Player JS API  
