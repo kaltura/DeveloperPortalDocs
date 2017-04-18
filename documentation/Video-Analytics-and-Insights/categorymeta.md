@@ -1,5 +1,5 @@
 ---
 layout: nil
-catname: Media Analytics
+catname: Video Analytics and Insights
 catweight: "07"
 ---
