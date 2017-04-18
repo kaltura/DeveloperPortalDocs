@@ -34,8 +34,11 @@ This package is an example of using Kaltura notifications, you may implement yo
 To use the API notifications client in your application, follow these steps:
 
 1 . Unpack the zip file on a "public" web server accessible from the internet.
+
 2 . Set up an instance Kaltura PHP 5.3 client library - Place contents of the 'Client' sub-folder found in the PHP 5.3 client library, under the <your handler web folder>\lib\Kaltura\Client.
+
 3 . Set up the special synchronization Metadata field:
+
  a. Access the KMC, under settings/custom data add a new schema called apinotifications_sync_data
  b. Add the following field to the profile:
  <br /><img src="../../assets/878.img">
