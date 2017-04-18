@@ -44,7 +44,7 @@ To use the API notifications client in your application, follow these steps:
  
  b. Add the following field to the profile:
 
- ![Profile Field](./images/Defining a sync status custom metadata field.PNG)
+ ![Profile Field](./images/custom-metadata-field.PNG)
 
 4 . Make sure the configuration settings are properly populated:
 
@@ -66,7 +66,7 @@ Access the KMC and set up notifications under Settings>Integration Settings>Noti
 1. Open the following file: lib/Kaltura/Notification/Handler/SyncEntry.php.
 2. Find line 190 and add your code inline:
 
- ![Code inline](./images/Screen Shot 2012-11-29 at 6.49.04 PM.png)
+ ![Code inline](./images/codeline.png)
 
 ### Set up the Notifications Handler Endpoint  
 
