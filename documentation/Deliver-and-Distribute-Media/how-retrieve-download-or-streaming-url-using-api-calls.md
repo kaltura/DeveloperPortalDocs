@@ -10,7 +10,7 @@ The Kaltura Player abstracts the need to retrieve direct access to the video fil
 
 The playManifest is a redirect action [source code](https://github.com/kaltura/server/blob/master/alpha/apps/kaltura/modules/extwidget/actions/playManifestAction.class.php), whose purpose is to direct media player applications to the desired video stream.
 
-playManifest features return the following types:
+The playManifest features return the following types:
 
 1.  A redirect to video file for [progressive download (http://en.wikipedia.org/wiki/Progressive_download) or an M3U8 stream descriptor for [Apple HTTP Streaming, aka HLS](http://en.wikipedia.org/wiki/HTTP_Live_Streaming).
 2. An XML response in the form of a MPEG-DASH Media Presentation Description (MPD).
@@ -20,20 +20,20 @@ playManifest features return the following types:
 
 To retrieve a specific video flavor:
 
-1.  Call the **playManifest** API. Be certain to have the Partner ID and Entry ID at hand. To call the **playManifest** API and retrieve a specific video flavor, call the following URL -
+1.  Make sure you have the Partner ID and Entry ID on hand, and then call the **playManifest** API using the following URL: **[serviceUrl]**/p/**[YourPartnerId]**/sp/0/playManifest/entryId/**[YourEntryId]**/format/**[StreamingFormat]**/protocol/**[Protocol]**/flavorParamId/**[VideoFlavorId]**/ks/**[ks]**/video.**[ext]**.
 
-**[serviceUrl]**/p/**[YourPartnerId]**/sp/0/playManifest/entryId/**[YourEntryId]**/format/**[StreamingFormat]**/protocol/**[Protocol]**/flavorParamId/**[VideoFlavorId]**/ks/**[ks]**/video.**[ext]**
+2.  Next, replace the following parameters:
 
-2.  Replace the following parameters:
-
-*   **serviceUrl - **the base URL to the Kaltura Server
-*   **YourPartnerId** - Your Kaltura account publisher Id. (Can be retrieved from the [Publisher Account Settings](http://www.kaltura.com/index.php/kmc/kmc4#account|integration) page in the KMC).
-*   ***YourEntryId** - The Id of the media entry you'd like to retrieve.
-*   **StreamingFormat** - See the list of available formats in the table below. This parameter is optional and defaults to **/format/url**.
-*   **Protocol** - Whether video is to be delivered over HTTP or HTTPS. See the list of available protocols below for additional options. This parameter is optional and defaults to **/format/http**.
-*   **VideoFlavorId** - ****The Id of the video flavor you want to download. If supported by the streaming format, multiple flavors may be comma-separated.
-*   **ks** - A valid Kaltura Session. This parameter is only required when the media entry has an Access Control defined to limit anonymous access to the media.
-*   **ext** - The file extension of the video you wish to retrieve (For example, mp4, if the video flavor is an MPEG4 file or flv, if the video flavor is an FLV file.)**
+|    Parameter           |    Description                                                                                                                                                                                 |         |
+|------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------|
+|    serviceUrl          |    The base URL to the Kaltura Server                                                                                                                                                          |         |
+|    YourPartnerId       |     Your Kaltura account publisher ID (this can be retrieved from   the [Publisher Account Settings](http://www.kaltura.com/index.php/kmc/kmc4#account|integration) page in the KMC).          |         |
+|    YourEntryId         |     The Id of the media entry   you'd like to retrieve.                                                                                                                                        |         |
+|    StreamingFormat     |     See the list of available   formats in the table below. This parameter is optional and defaults to   **/format/url**.                                                                      |         |
+|    Protocol            |     Whether video is to be delivered   over HTTP or HTTPS. See the list of available protocols below for additional   options. This parameter is optional and defaults to **/format/http**.    |         |
+|    VideoFlavorId       |    The Id of the video flavor you want to download. If supported by the   streaming format, multiple flavors may be comma separated.                                                           |         |
+|    ks                  |     A valid Kaltura Session. This   parameter is only required when the media entry has an Access Control defined   to limit anonymous access to the media.                                    |         |
+|    ext                 |     The file extension of the   video you wish to retrieve (for example, mp4 if the video flavor is an MPEG4   filem, or flv if the video flavor is an FLV file).                              |         |
 
 
 ### Available Service URLs (Public / SaaS)  
