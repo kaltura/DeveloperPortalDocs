@@ -38,7 +38,7 @@ To use the API notifications client in your application, follow these steps:
 3 . Set up the special synchronization Metadata field:
  a. Access the KMC, under settings/custom data add a new schema called apinotifications_sync_data
  b. Add the following field to the profile:
- <br /><img src="../../assets/878.img">
+ ![Profile Field](./images/Defining a sync status custom metadata field.PNG)
 4 . Make sure the configuration settings are properly populated:
  a. In session_config.php: Set up your partner id, admin secret and Kaltura service url
  b. In script_config.php: Set up the metadata field that will hold the synchronization status information for each entry
@@ -51,7 +51,8 @@ Access the KMC and set up notifications under Settings>Integration Settings>Noti
 ### Add Your Code to Handle the Notification  
 
 1. Open the following file: lib/Kaltura/Notification/Handler/SyncEntry.php.
-2. Find line 190 and add your code inline.<br /><img src="../../assets/879.img">/
+2. Find line 190 and add your code inline.
+ ![Code inline](./images/Screen Shot 2012-11-29 at 6.49.04 PM.png)
 
 ### Set up the Notifications Handler Endpoint  
 
@@ -63,8 +64,7 @@ To setup the Notifications endpoint, follow these steps:
 3.  Enter the Integration Settings sub-tab.
 4.  In the "Enter Notification URL" field, paste the URL to your notifications handler script.
 
- <img src="/sites/default/files/u16/notifications.jpg" border="0" width="500" height="354" />
-
+ ![Enter Notification URL](./images/notifications.jpg)
 
 ## Multi-notifications  
 
