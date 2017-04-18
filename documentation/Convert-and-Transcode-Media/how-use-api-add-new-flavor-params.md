@@ -22,6 +22,6 @@ $flavorParams->systemName = 'YourflavorParamssystemName';
 $flavorParams->description = 'YourflavorParamsDescription';
 $flavorParams->tags = 'YourflavorParamsTag1, YourflavorParamsTag2';
 $flavorParams->videoCodec = KalturaVideoCodec::FLV;
-$results = $client->flavorParams-&gt;add($flavorParams);
+$results = $client->flavorParams->add($flavorParams);
 
 {% endhighlight %}
