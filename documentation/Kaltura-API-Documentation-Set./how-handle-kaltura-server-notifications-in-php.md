@@ -34,18 +34,30 @@ This package is an example of using Kaltura notifications, you may implement yo
 To use the API notifications client in your application, follow these steps:
 
 1 . Unpack the zip file on a "public" web server accessible from the internet.
+
 2 . Set up an instance Kaltura PHP 5.3 client library - Place contents of the 'Client' sub-folder found in the PHP 5.3 client library, under the <your handler web folder>\lib\Kaltura\Client.
+
 3 . Set up the special synchronization Metadata field:
+
  a. Access the KMC, under settings/custom data add a new schema called apinotifications_sync_data
+ 
  b. Add the following field to the profile:
+
  ![Profile Field](./images/Defining a sync status custom metadata field.PNG)
+
 4 . Make sure the configuration settings are properly populated:
+
  a. In session_config.php: Set up your partner id, admin secret and Kaltura service url
+
  b. In script_config.php: Set up the metadata field that will hold the synchronization status information for each entry
+
 5 . Setting up notifications on Kaltura:
-Access the KMC and set up notifications under Settings>Integration Settings>Notifications. Refer to the knowledge center for more details - http://knowledge.kaltura.com/node/167
+Access the KMC and set up notifications under Settings>Integration Settings>Notifications. Refer to the article [What types of notifications are there in the KMC?](http://knowledge.kaltura.com/node/167) for more details.
+
 6 . Select the type of notification you want to be triggered and add the path the public server that host the nofication script
+
 7 . To test your notification handler, open an entry in the KMC and update it (if you set up notification as "Update Entry" for instance). Kaltura should trigger a notification and execute your script on the public server where it has been installed
+
 8 . To check if your notification handler went through, check the log in the "log" directory.
 
 ### Add Your Code to Handle the Notification  
