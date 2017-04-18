@@ -12,7 +12,9 @@ The media.get request will return the basic metadata and information associated 
 
 Using the Kaltura REST API, the media.get request will look as [follows](http://www.kaltura.com/api_v3/index.php?service=media&action=get&entryId=yourentryId&ks=%7bks%7d).
 
-<pre class="brush: plain;fontsize: 100; first-line: 1; ">http://www.kaltura.com/api_v3/index.php?service=media&action=get&entryId={yourentryId}&ks={ks}</pre>
+```
+http://www.kaltura.com/api_v3/index.php?service=media&action=get&entryId={yourentryId}&ks={ks}
+```
 
 Where *{yourentryId}* is the id of the media entry you'd like to retrieve information about, and *{ks}* is a valid [Kaltura Session](https://vpaas.kaltura.com/documentation/VPaaS-API-Getting-Started/how-to-create-kaltura-session.html) of an entitled user who has access to that media entry.
 

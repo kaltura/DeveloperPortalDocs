@@ -224,21 +224,21 @@ Some privileges support a wildcard (*) value (for example, *edit:**). A wildcar
 Example: Allow access to entry id 0_iuasd7 (this [blog post](http://blog.kaltura.org/create-ks-protected-videos-with-free-preview) shows an example of a use case.
  
 ```
- $ks = $client-&gt;session-&gt;start ( $userSecret, "myUser", KalturaSessionType::USER, $partnerID , null, "sview:0_iuasd7"
+ $ks = $client->session->start ( $userSecret, "myUser", KalturaSessionType::USER, $partnerID , null, "sview:0_iuasd7"
 ```
 
 **Limit the number of actions for a KS**  
 Example: Limit the number of actions to four:
 
 ```
-$ks = $client-&gt;session-&gt;start ( $userSecret, "myUser", KalturaSessionType::USER, $partnerID , null, "actionslimit:4
+$ks = $client->session->start ( $userSecret, "myUser", KalturaSessionType::USER, $partnerID , null, "actionslimit:4
 ```
 
 **Set the role on the KS**  
 Example: Set the role id 2345 on a KS:
 
  ```
- $ks = $client-&gt;session-&gt;start ( $userSecret, "myUser", KalturaSessionType::USER, $partnerID , null, "setrole:2345")
+ $ks = $client->session->start ( $userSecret, "myUser", KalturaSessionType::USER, $partnerID , null, "setrole:2345")
  ```
 
 ## Secured Delivery  

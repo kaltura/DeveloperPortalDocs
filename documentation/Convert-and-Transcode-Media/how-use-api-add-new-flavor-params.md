@@ -9,17 +9,19 @@ weight: 102
 
 To add flavor params, call the [flavorParams.add](https://developer.kaltura.com/api-docs/#/flavorParams.add) API action:
 
-<pre class="brush: php;fontsize: 100; first-line: 1; ">&lt;?php
+{% highlight php %}
+<?php
 require_once('lib/KalturaClient.php');
 $config = new KalturaConfiguration($partnerId);
-$config-&gt;serviceUrl = 'http://www.kaltura.com/';
+$config->serviceUrl = 'https://www.kaltura.com/';
 $client = new KalturaClient($config);
-$client-&gt;setKs('AddYourKS');
+$client->setKs('AddYourKS');
 $flavorParams = new KalturaFlavorParams();
-$flavorParams-&gt;name = 'YourflavorParamsName';
-$flavorParams-&gt;systemName = 'YourflavorParamssystemName';
-$flavorParams-&gt;description = 'YourflavorParamsDescription';
-$flavorParams-&gt;tags = 'YourflavorParamsTag1, YourflavorParamsTag2';
-$flavorParams-&gt;videoCodec = KalturaVideoCodec::FLV;
-$results = $client-&gt;flavorParams-&gt;add($flavorParams);
-</pre>
+$flavorParams->name = 'YourflavorParamsName';
+$flavorParams->systemName = 'YourflavorParamssystemName';
+$flavorParams->description = 'YourflavorParamsDescription';
+$flavorParams->tags = 'YourflavorParamsTag1, YourflavorParamsTag2';
+$flavorParams->videoCodec = KalturaVideoCodec::FLV;
+$results = $client->flavorParams-&gt;add($flavorParams);
+
+{% endhighlight %}
