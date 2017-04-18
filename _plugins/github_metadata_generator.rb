@@ -13,6 +13,7 @@ module Jekyll
         Dir.chdir(site.source) do
           site.config['git'] = site_data
           (site.pages + site.posts.docs).each do |page|
+	  print page.path + "\n"
           #(site.collections["pages"].docs + site.collections["posts"].docs).each do |page|
 	    if page.path != 'search.md'
 	    	#print page.path.shellescape + "\n"
