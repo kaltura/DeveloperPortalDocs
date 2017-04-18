@@ -1,6 +1,7 @@
 ---
 layout: page
 title: How To Handle Kaltura Server Notifications in PHP
+weight: 101
 ---
 
 Often applications require the ability to respond to asynchronous events that occurred on the Kaltura server. For example, when a Media Entry was uploaded, finished transcoding or any other status update. This guide will take you through the steps of listening to these events, called [Event Notifications](https://developer.kaltura.com/api-docs/#/eventNotificationTemplate), how to parse the data carried in these notifications, and how to respond properly in your applications.
@@ -40,21 +41,32 @@ To use the API notifications client in your application, follow these steps:
 3 . Set up the special synchronization Metadata field:
 
  a. Access the KMC, under settings/custom data add a new schema called apinotifications_sync_data
+ 
  b. Add the following field to the profile:
- <br /><img src="../../assets/878.img">
+
+ ![Profile Field](./images/Defining a sync status custom metadata field.PNG)
+
 4 . Make sure the configuration settings are properly populated:
+
  a. In session_config.php: Set up your partner id, admin secret and Kaltura service url
+
  b. In script_config.php: Set up the metadata field that will hold the synchronization status information for each entry
+
 5 . Setting up notifications on Kaltura:
-Access the KMC and set up notifications under Settings>Integration Settings>Notifications. Refer to the knowledge center for more details - http://knowledge.kaltura.com/node/167
+Access the KMC and set up notifications under Settings>Integration Settings>Notifications. Refer to the article [What types of notifications are there in the KMC?](http://knowledge.kaltura.com/node/167) for more details.
+
 6 . Select the type of notification you want to be triggered and add the path the public server that host the nofication script
+
 7 . To test your notification handler, open an entry in the KMC and update it (if you set up notification as "Update Entry" for instance). Kaltura should trigger a notification and execute your script on the public server where it has been installed
+
 8 . To check if your notification handler went through, check the log in the "log" directory.
 
 ### Add Your Code to Handle the Notification  
 
 1. Open the following file: lib/Kaltura/Notification/Handler/SyncEntry.php.
-2. Find line 190 and add your code inline.<br /><img src="../../assets/879.img">/
+2. Find line 190 and add your code inline:
+
+ ![Code inline](./images/Screen Shot 2012-11-29 at 6.49.04 PM.png)
 
 ### Set up the Notifications Handler Endpoint  
 
@@ -66,7 +78,8 @@ To setup the Notifications endpoint, follow these steps:
 3.  Enter the Integration Settings sub-tab.
 4.  In the "Enter Notification URL" field, paste the URL to your notifications handler script.
 
- <img src="/sites/default/files/u16/notifications.jpg" border="0" width="500" height="354" />
+ ![Notification URL](./images/notifications.jpg)
+
 
 
 ## Multi-notifications  
@@ -75,7 +88,7 @@ Publisher accounts with high activity (many entries are being added and updated 
 
 When multi-notifications is enabled, if a large amount of notifications for the same publisher account are aggregated in the queue and needs to be sent – the server can send all (or few) of them in a single combined HTTP request ("multi") to protect the publisher server from over-load, and potentially to reduce the delays.
 
->Note:  Multi-notifications is disabled by default on all publisher accounts. <br />Kaltura SaaS edition customers - If you suspect that your account require multi-notifications, consult your Kaltura Account Manager on enabling multi-notifications.
+>Note:  Multi-notifications is disabled by default on all publisher accounts. Kaltura SaaS edition customers - If you suspect that your account require multi-notifications, consult your Kaltura Account Manager on enabling multi-notifications.
 
 
 ### Enabling Multi-notifications on Kaltura Community and On Prem Editions  
