@@ -60,7 +60,7 @@ Uploading a file directly via the REST API requires knowledge of handling files 
 
 To learn how to use the file upload API, follow the recipe below:
 
-{% onebox https://developer.kaltura.com/workflows/Ingest_and_Upload_Media/embed %}
+{% onebox https://developer.kaltura.com/recipes/upload/embed#/start %}
 
 ## Working with Media Entries  
 
@@ -72,7 +72,7 @@ Now that you have content in your account, you will want to implement a library 
 
 Note that you can combine several filter parameters together to further narrow down your search results. 
 
-{% onebox https://developer.kaltura.com/workflows/Search_Discover_and_Personalize/Kaltura_Media_Library_Search/embed %}
+{% onebox https://developer.kaltura.com/recipes/video_search/embed#/start %}
 
 ### Retrieving Entry Details - media.get  
 
@@ -168,7 +168,7 @@ The uiConfId is used to reference the Player instance you wish to render when em
 
 ### Creating and Managing Player Widgets - uiConf Service  
 
-{% onebox https://developer.kaltura.com/workflows/Engage_and_Publish/Player_UI_conf/embed %} 
+{% onebox https://developer.kaltura.com/recipes/player_uiconf/embed#/start %} 
 
 ### Getting Started with the Player Features  
 
@@ -186,7 +186,7 @@ Integrated Analytics Partners - [See Configuring Analytics Plugins](https://know
 
 Follow the Code Recipe below to get started with the Kaltura Analytics [report service](https://developer.kaltura.com/api-docs/Review_Media_Analytics/report).
 
-{% onebox https://developer.kaltura.com/workflows/Integration_Scheduling_and_Hooks/Analytics_Reports %}
+{% onebox https://developer.kaltura.com/recipes/analytics/embed %}
 
 
 ## Kaltura API Documentation  
