@@ -26,7 +26,8 @@ The examples above use the [Kaltura PHP5 Client Library](https://developer.kaltu
 
 ## Code Example for Configuring a Kaltura Session  
 
-{% highlight c %}
+{% highlight php %}
+
 // include the KalturaClient PHP client library to be able to use its funtions/objects
 require_once(dirname(__FILE__).'/lib/KalturaClient.php');
 
@@ -56,24 +57,24 @@ function getClient($sessionType, $userId = '', $sessionExpiry = 86400, $sessionP
 {
 // Create KalturaClient object using the accound configuration
 $config = new KalturaConfiguration(KALTURA_PARTNER_ID);
-$config-&gt;serviceUrl = KALTURA_SERVICE_URL;
+$config->serviceUrl = KALTURA_SERVICE_URL;
 $client = new KalturaClient($config);
 
 // Generate KS string locally, without calling the API
-$ks = $client-&gt;generateSession(
+$ks = $client->generateSession(
   KALTURA_ADMIN_SECRET,
   $userId,
   $sessionType,
-  $config-&gt;partnerId,
+  $config->partnerId,
   $sessionExpiry,
   $sessionPrivileges
 );
 
 // Set the generated KS to be used for future API calls from this KalturaClient object
-$client-&gt;setKs($ks);
+$client->setKs($ks);
 
 // return the KalturaClient object
-return $client;?&gt;</pre>
+return $client;
 
 {% endhighlight %}
 
