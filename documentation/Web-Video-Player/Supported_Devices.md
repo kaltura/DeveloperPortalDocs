@@ -28,18 +28,18 @@ The following tables show the support matrix for desktops.
 
 ### Windows Support  
 
-|    Browser              |    Version              |    Windows Version      |                         |                         |                         |   |   |   |
-|-------------------------|-------------------------|-------------------------|-------------------------|-------------------------|-------------------------|---|---|---|
-|                         |                         |    Windows XP           |    Windows 7            |    Windows 8            |    Windows 10           |   |   |   |
-|    Internet Explorer    |    8                    |    V                    |    V                    |    X                    |    X                    |   |   |   |
-|                         |    9                    |    V                    |    V                    |    X                    |    X                    |   |   |   |
-|                         |    10                   |    X                    |    V                    |    V                    |    V                    |   |   |   |
-|                         |    11                   |    X                    |    V                    |    V                    |    V                    |   |   |   |
-|                         |    Edge                 |    X                    |    X                    |    X                    |    V                    |   |   |   |
-|    Firefox              |    Previous Versions    |    V                    |    V                    |    V                    |    V                    |   |   |   |
-|                         |    Latest Version       |    V                    |    V                    |    V                    |    V                    |   |   |   |
-|    Chrome               |    Previous Versions    |    V    |    V    |    V    |    V    |   |   |   |
-|                         |    Latest Version       |    V       |    V       |    V       |    V       |   |   |   |
+| Browser           | Version           | Windows Version |           |           |            |
+|-------------------|-------------------|-----------------|-----------|-----------|------------|
+|                   |                   | Windows XP      | Windows 7 | Windows 8 | Windows 10 |
+| Internet Explorer | 8                 | V               | V         | X         | X          |
+|                   | 9                 | V               | V         | X         | X          |
+|                   | 10                | X               | V         | V         | V          |
+|                   | 11                | X               | V         | V         | V          |
+|                   | Edge              | X               | X         | X         | V          |
+| Firefox           | Previous Versions | V               | V         | V         | V          |
+|                   | Latest Version    | V               | V         | V         | V          |
+| Chrome            | Previous Versions | V               | V         | V         | V          |
+|                   | Latest Version    | V               | V         | V         | V          |
 
 
 ### Mac Support  
