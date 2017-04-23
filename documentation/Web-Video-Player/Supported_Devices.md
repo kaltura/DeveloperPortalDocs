@@ -43,9 +43,8 @@ The following tables show the support matrix for desktops.
 
 ### Mac Support  
 
-|    Browser           |    Version              |    Mac Version    |               |               |
+|    Browser          |    Version         |    Mac Version X 10.10  |     Mac Version X 10.11   | Mac Version X 10.12        |
 |----------------------|-------------------------|-------------------|---------------|---------------|
-|                      |                         |    X 10.10        |    X 10.11    |    X 10.12    |
 |    Firefox           |    Previous Versions    |    V              |    V          |    V          |
 |                      |    Latest Version       |    V              |    V          |    V          |
 |    Chrome            |    Previous Versions    |    V              |    V          |    V          |
