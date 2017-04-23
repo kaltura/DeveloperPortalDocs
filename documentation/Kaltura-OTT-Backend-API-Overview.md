@@ -50,7 +50,7 @@ The following are the general characteristics of any REST API:
 ### REST API Request Formats  
 
 Although both form data and a Kaltura proprietary requests are supported, JSON is the recommended request format, as per the example below:
-(see http://www.kaltura.com/api_v3/service/asset/action/get for details):
+(see https://ott.developer.kaltura.com/api-docs/Services/asset/asset_get for details):
 
 {% highlight c %}
  {
@@ -227,7 +227,7 @@ Errors are returned in the serialized response (JSON or XML) and automatically i
 TVP-API works with refresh-token, a long-lived token that is created upon login, and an access-token, a short-lived token that used in any request to authenticate the user, the access-token is retrieved from the server using the refresh-token.
 Requests to TVP-API should be accompanied with init-object that contains the access-token.
 Requests to the OTT API can be accompanied by a ks property; this property will usually contain a KS as returned from the OTT API login, but it may also contain an access-token instead. When the access-token is used instead of KS, no init-object is needed; for example
-http://www.kaltura.com/api_v3/service/asset/action/get:
+https://ott.developer.kaltura.com/api-docs/Services/asset/asset_get:
 
 {% highlight c %}
  {
