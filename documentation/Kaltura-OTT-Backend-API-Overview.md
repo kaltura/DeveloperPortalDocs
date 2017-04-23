@@ -22,16 +22,19 @@ This API documentation provides specific information on:
 
 Before you begin using Kaltura’s OTT Backend APIs, here are a few terms you should familiarize yourself with:
 
-* OTT – Over The Top: Video transmitted via the Internet without an operator of multiple cable controlling or distributing the content.
-* KS – Kaltura Session: A valid KS must be passed with each call to Kaltura’s API. The session context embedded into a KS identifies your application, content access permissions, and API access permissions (it also contains other internal session data). This information is securely encrypted and hashed, preventing unauthorized manipulation of the session context.
-* EPG – Electronic Program Guide: An application used with digital set-top boxes and newer television sets to list current and scheduled programs that are or will be available on each channel and a short summary or commentary for each program. EPG is the electronic equivalent of a printed television program guide.
-* VOD – Video On Demand: Allows end users to watch video content whenever the user chooses.
-* Asset: This is any Kaltura EPG program or VOD content.
-* Channel: A set of Kaltura assets, selected manually or dynamically, using predefined filters.
-* EPG Channel: Equivalent to a TV channel, this represents a set of EPG programs related to the same playable source on a single timeline.
-* Group: A Kaltura OTT account owned by an operator.
-* Household: A users account, which must be associated with a group, and is owned by the operator’s customers.
-* OTT User: A specific user account that must be associated with household account.
+
+|    Term           |    Description                                                                                                                                                                                                                                                                                                                                                                       |
+|-------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|    OTT            |    Over The Top: Video transmitted via the Internet without an operator   of multiple cable controlling or distributing the content.                                                                                                                                                                                                                                                 |
+|    KS             |    Kaltura Session: A valid KS must be passed with each call to   Kaltura’s API. The session context embedded into a KS identifies your   application, content access permissions, and API access permissions (it also   contains other internal session data). This information is securely encrypted   and hashed, preventing unauthorized manipulation of the session context.    |
+|    EPG            |    Electronic Program Guide: An application used with digital set-top   boxes and newer television sets to list current and scheduled programs that   are or will be available on each channel and a short summary or commentary   for each program. EPG is the electronic equivalent of a printed television   program guide.                                                       |
+|    VOD            |    Video On Demand: Allows end users to watch video content whenever the   user chooses.                                                                                                                                                                                                                                                                                             |
+|    Asset          |    This is any Kaltura EPG program or VOD content.                                                                                                                                                                                                                                                                                                                                   |
+|    Channel        |    A set of Kaltura assets, selected manually or dynamically, using   predefined filters.                                                                                                                                                                                                                                                                                            |
+|    EPG Channel    |    Equivalent to a TV channel, this represents a set of EPG programs   related to the same playable source on a single timeline.                                                                                                                                                                                                                                                     |
+|    Group          |    A Kaltura OTT account owned by an operator.                                                                                                                                                                                                                                                                                                                                       |
+|    Household      |    A users account, which must be associated with a group, and is owned   by the operator’s customers.                                                                                                                                                                                                                                                                               |
+|    OTT User       |    A specific user account that must be associated with household   account.                                                                                                                                                                                                                                                                                                         |
 
 ## Using Kaltura’s OTT Backend REST APIs  
 
@@ -107,7 +110,7 @@ All objects extend from the KalturaObjectBase (note that the name may be differe
 
 #### Multi-Requests  
 
-Multi-requests enable sending multiple applicative requests in a single HTTP request. See http://www.kaltura.com/api_v3/service/multirequest for details:
+Multi-requests enable sending multiple applicative requests in a single HTTP request. 
 
 {% highlight c %}
 {
@@ -124,7 +127,7 @@ Multi-requests enable sending multiple applicative requests in a single HTTP req
 }
 {% endhighlight %}
 
-This enables using responses from one applicative request in another applicative request in the same HTTP request. See http://www.kaltura.com/api_v3/service/multirequest for details.
+This enables using responses from one applicative request in another applicative request in the same HTTP request.
 
 {% highlight c %}
  {
