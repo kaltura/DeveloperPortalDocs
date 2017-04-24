@@ -30,7 +30,7 @@ The following tables show the support matrix for desktops.
 
 | Browser           | Version           | Windows XP      | Windows 7 | Windows 8 | Windows 10 |
 |-------------------|-------------------|-----------------|-----------|-----------|------------|
-| Internet Explorer | 8                 | V               | V         | X         | X          |
+| Internet Explorer | 8                 | &#10006;        | &#10004;  | X         | X          |
 |                   | 9                 | V               | V         | X         | X          |
 |                   | 10                | X               | V         | V         | V          |
 |                   | 11                | X               | V         | V         | V          |
