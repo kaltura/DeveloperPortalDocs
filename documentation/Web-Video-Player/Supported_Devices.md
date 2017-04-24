@@ -30,23 +30,23 @@ The following tables show the support matrix for desktops.
 
 | Browser           | Version           | Windows XP      | Windows 7 | Windows 8 | Windows 10 |
 |-------------------|-------------------|-----------------|-----------|-----------|------------|
-| Internet Explorer | 8                 |       | &#10004;  |          |           |
-|                   | 9                 |  &#10004;               |  &#10004;         |          |           |
-|                   | 10                |                |  &#10004;         |  &#10004;         |  &#10004;          |
-|                   | 11                |                |  &#10004;         |  &#10004;         |  &#10004;          |
-|                   | Edge              |                |          |          |  &#10004;          |
-| Firefox           | Previous Versions |  &#10004;               |  &#10004;         |  &#10004;         |  &#10004;          |
-|                   | Latest Version    |  &#10004;               |  &#10004;         |  &#10004;         |  &#10004;          |
-| Chrome            | Previous Versions |  &#10004;               |  &#10004;         |  &#10004;         |  &#10004;          |
-|                   | Latest Version    |  &#10004;               |  &#10004;         |  &#10004;         |  &#10004;          |
+| Internet Explorer | 8                 |       | X  |          |           |
+|                   | 9                 | X               |  X         |          |           |
+|                   | 10                |                |  X         |  X         |  X          |
+|                   | 11                |                | X         |  X         |  X          |
+|                   | Edge              |                |          |          |  X          |
+| Firefox           | Previous Versions |  X               |  X         |  X         |  X          |
+|                   | Latest Version    |  X               |  X         |  X         | X          |
+| Chrome            | Previous Versions |  X               |  X         |  X         |  X          |
+|                   | Latest Version    |  X               |  X         |  X         | X          |
 
 
 ### Mac Support  
 
 |    Browser          |    Version         |    Mac Version X 10.10  |     Mac Version X 10.11   | Mac Version X 10.12        |
 |----------------------|-------------------------|-------------------|---------------|---------------|
-|    Firefox           |    Previous Versions    |     &#10004;              |     &#10004;          |     &#10004;          |
-|                      |    Latest Version       |     &#10004;              |     &#10004;          |     &#10004;          |
-|    Chrome            |    Previous Versions    |     &#10004;              |     &#10004;          |     &#10004;          |
-|                      |    Latest Version       |     &#10004;              |     &#10004;          |     &#10004;          |
-|    Desktop Safari    |    Latest               |     &#10004;              |     &#10004;          |     &#10004;          |
+|    Firefox           |    Previous Versions    |     X               |    X           |    X         |
+|                      |    Latest Version       |     X               |     X           |     X          |
+|    Chrome            |    Previous Versions    |    X               |     X           |    X          |
+|                      |    Latest Version       |    X               |     X          |     X          |
+|    Desktop Safari    |    Latest               |     X               |     X           |   X          |
