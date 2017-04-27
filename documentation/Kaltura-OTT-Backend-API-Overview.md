@@ -69,7 +69,7 @@ Although both form data and a Kaltura proprietary requests are supported, JSON i
 
 ### REST API Response Formats  
 
-In order to define the wanted request format use the Accpet HTTP header with application/json or text/xml.
+To define the required request format, use the Accept HTTP header with application/json or text/xml.
 The REST APIs use the following response formats:
 
 {% highlight c %}
