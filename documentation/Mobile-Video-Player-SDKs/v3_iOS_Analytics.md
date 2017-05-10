@@ -58,29 +58,8 @@ PlayKitManager.shared.registerPlugin(YouboraPlugin.self)
 ```swift
 // config options
 let youboraOptions: [String: Any] = [
-    "accountCode": "nicetest",
-    "httpSecure": true,
-    "parseHLS": true,
-    "media": [
-        "title": "Sintel",
-        "duration": 600
-    ],
-    "properties": [
-        "year": "2001",
-        "genre": "Fantasy",
-        "price": "free"
-    ],
-    "network": [
-        "ip": "1.2.3.4"
-    ],
-    "ads": [
-        "adsExpected": true,
-        "campaign": "Ad campaign name"
-    ],
-    "extraParams": [
-        "param1": "Extra param 1 value",
-        "param2": "Extra param 2 value"
-    ]
+    "accountCode": "nicetest" // mandatory
+    // YouboraPlugin.enableSmartAdsKey: true - use this if you want to enable smart ads
 ]
 // create analytics config with the created params
 let youboraConfig = AnalyticsConfig(params: youboraOptions)
@@ -97,29 +76,8 @@ let player = PlayKitManager.shared.loadPlayer(pluginConfig: pluginConfig)
 ```objc
 // config options
 NSDictionary * youboraOptions = @{
-                           @"accountCode": @"nicetest",
-                           @"httpSecure": @YES,
-                           @"parseHLS": @YES,
-                           @"media": @{
-                                  @"title": @"Sintel",
-                                  @"duration": @600
-                                  },
-                           @"properties": @{
-                                  @"year": @"2001",
-                                  @"genre": @"Fantasy",
-                                  @"price": @"free"
-                                  },
-                           @"network": @{
-                                  @"ip": @"1.2.3.4"
-                                  },
-                           @"ads": @{
-                                  @"adsExpected": @YES,
-                                  @"campaign": @"Ad campaign name"
-                                  },
-                           @"extraParams": @{
-                                   @"param1": @"Extra param 1 value",
-                                   @"param2": @"Extra param 2 value"
-                                   }
+                           @"accountCode": @"nicetest" // mandatory
+                           // [YouboraPlugin enableSmartAdsKey]: @true - use this if you want to enable smart ads
                            };
 // create analytics config with the created params                        
 AnalyticsConfig *youboraConfig = [[AnalyticsConfig alloc] initWithParams: youboraOptions];
