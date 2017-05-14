@@ -27,7 +27,7 @@ Web Video Player v.3.0 - expected to be released later this year - stay tuned!
 
 ### What's New  
 
-Audio tracks management – Added the option to define the default audio track. For more information, see Defining a Default Audio Track.
+Audio tracks management – Added the option to define the default audio track. For more information, see [Defining a Default Audio Track](https://vpaas.kaltura.com/documentation/Web-Video-Player/Define-Default-Audio-Track.html).
 
 ## Release 2.54  
 
@@ -39,16 +39,16 @@ Chromecast upgrade – The Web Receiver and sender to Google’s latest SDKs (CA
 
 ### What's New  
 
-360 Videos – 360 video tagging added to the 360 video ingestion process for web and mobile web. See Kaltura 360 Video Player Support for more information.
+360 Videos – 360 video tagging added to the 360 video ingestion process for web and mobile web. See [Kaltura 360 Video Player Support](https://knowledge.kaltura.com/node/1813) for more information.
 
 ## Release 2.53  
 
 ### What's New  
 
-* 360 Videos – 360 videos are now supported for web and mobile web. See Kaltura 360 Video Player Support for more information.
-* Live DRM – The Player now supports Kaltura’s uDRM solution on live streams. For more information about Kaltura’s uDRM solution, see Universal DRM (uDRM) Technical Specification.
+* 360 Videos – 360 videos are now supported for web and mobile web. See [Kaltura 360 Video Player Support](https://knowledge.kaltura.com/node/1813) for more information.
+* Live DRM – The Player now supports Kaltura’s uDRM solution on live streams. For more information about Kaltura’s uDRM solution, see [Universal DRM (uDRM) Technical Specification](https://knowledge.kaltura.com/node/1685).
 * Multi Audio Tracks – With HLS.JS adding support for multi audio tracks, this is now fully supported across all devices and browsers.
-* CVAA support for mobile devices – CVAA is now supported for mobile devices. For more information see CVAA Support within the Kaltura Player Toolkit.
+* CVAA support for mobile devices – CVAA is now supported for mobile devices. For more information see [CVAA Support within the Kaltura Player Toolkit](https://knowledge.kaltura.com/node/1760).
 
 ## Release 2.52  
 
@@ -82,21 +82,21 @@ Version 2.50 was released as a maintenance vesion.
 * WV Modular on Firefox - Widevime Modular DRM is now supported on Firefox.
 * Offline support of FPS for iOS10, including WebVTT and audiotracks support. 
 
-See the Kaltura Player Capabilities Matrix for information about the Kaltura Player Capabilities and support.
+See the [Kaltura Player Capabilities Matrix](https://knowledge.kaltura.com/kaltura-player-capabilities-matrix) for information about the Kaltura Player Capabilities and support.
 
 ## Release 2.47  
 
 ### What's New  
 
-* Offline WebVTT on Android  - WebVTT captions for offline playback are now available on Android, for Android versions 4.3 and up. See the Kaltura Player Capabilities Matrix for a full Matrix of WebVTT support.
-* CVAA Compliance – The Kaltura Player is now compliant with the Twenty-First Century Communications and Video Accessibility Act (CVAA) and includes a styling editor for captions to enhance accessibility. See CVAA Support within the Kaltura Player Toolkit for more information.
-* Safari on iOS10 - Fairplay DRM on Safari is now supported on iOS10 (awaiting iOS10 official release). See the Kaltura Player Capabilities Matrix for a full Matrix of DRM support.
+* Offline WebVTT on Android  - WebVTT captions for offline playback are now available on Android, for Android versions 4.3 and up. See the [Kaltura Player Capabilities Matrix](https://knowledge.kaltura.com/kaltura-player-capabilities-matrix) for a full Matrix of WebVTT support.
+* CVAA Compliance – The Kaltura Player is now compliant with the [Twenty-First Century Communications and Video Accessibility Act (CVAA)](https://www.fcc.gov/consumers/guides/21st-century-communications-and-video-accessibility-act-cvaa) and includes a styling editor for captions to enhance accessibility. See [CVAA Support within the Kaltura Player Toolkit](https://knowledge.kaltura.com/node/1760) for more information.
+* Safari on iOS10 - Fairplay DRM on Safari is now supported on iOS10. See the [Kaltura Player Capabilities Matrix](https://knowledge.kaltura.com/kaltura-player-capabilities-matrix) for a full Matrix of DRM support.
 
 ## Release 2.46  
 
 ### What's New  
 
-* Kaltura V2 Mobile Skin Player -The new mobile skin is designed to enable a more mobile/touch friendly user experience on Kaltura's V2 players. The new mobile skin is available to all customers and is enabled via the KMC. For more information see Using the Kaltura V2 Player Mobile Skin.
+* Kaltura V2 Mobile Skin Player -The new mobile skin is designed to enable a more mobile/touch friendly user experience on Kaltura's V2 players. The new mobile skin is available to all customers and is enabled via the KMC. For more information see [Using the Kaltura V2 Player Mobile Skin](https://knowledge.kaltura.com/node/1734).
 * Enhancements to the Chromecast Receiver - Additional features to Kaltura's custom receiver, including:
 * New mobile skin
 * Closed captions and watermarks 
