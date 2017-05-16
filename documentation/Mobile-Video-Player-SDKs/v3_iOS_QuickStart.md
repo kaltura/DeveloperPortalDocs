@@ -162,7 +162,7 @@ if (!error) {
 
 ### Setting the Player View Size  
 
-1 . Create a player container: 
+1. Create a player container: 
 
 >swift
 
@@ -176,7 +176,21 @@ if (!error) {
 @property (weak, nonatomic) IBOutlet UIView *playerContainer;
 ```
 
-2 . Set the player frame and add a player view as a subview:
+2. The way we recommand setting player's view is:
+
+>swift
+
+```swift
+self.player.view.add(toContainer: self.playerContainer)
+```
+
+>objc
+
+```objc
+[self.player.view addToContainer:self.playerContainer];
+```
+
+>Note: You can also use the player view frame if needed:
 
 >swift
 
@@ -190,78 +204,6 @@ playerContainer.addSubview(self.player.view)
 ```objc
 self.player.view.frame = CGRectMake(0, 0, self.playerContainer.frame.size.width,self.playerContainer.frame.size.height);   
 [self.playerContainer addSubview:self.player.view];
-```
-
-**Note:** The way we recommand **setting player's view frame** is:
-
-Using frame:
-
->swift
-
-```swift
-// make sure to add subview!
-self.playerContainer.addSubview(self.player.view)
-
-override func viewDidLayoutSubviews() {
-    super.viewWillLayoutSubviews()
-    self.player.view.frame = self.playerContainer.bounds
-}
-```
-
->objc
-
-```objc
-// make sure to add subview!
-[self.playerContainer addSubview:self.player.view];
-
-- (void)viewDidLayoutSubviews {
-    [super viewWillLayoutSubviews];
-    self.player.view.frame = self.playerContainer.bounds;
-}
-```
-
-Using Autolayout Constraints:
-
->swift
-
-```swift
-// make sure to add subview!
-self.playerContainer.addSubview(self.player.view)
-// add the constraints
-self.addConstraintsToPlayerView()
-
-func addConstraintsToPlayerView() {
-    let playerView = self.player.view
-    playerView.translatesAutoresizingMaskIntoConstraints = false
-    let views = ["playerView": playerView]
-    
-    let horizontalConstraint = NSLayoutConstraint.constraintsWithVisualFormat("H:|-0-[playerView]-0-|", options: [], metrics: nil, views: views)
-    let verticalConstraint = NSLayoutConstraint.constraintsWithVisualFormat("V:|-0-[playerView]-0-|", options: [], metrics: nil, views: views)
-    
-    self.playerContainer.addConstraints(horizontalConstraint)
-    self.playerContainer.addConstraints(verticalConstraint)
-}
-```
-
->objc
-
-```objc
-// make sure to add subview!
-[self.playerContainer addSubview:self.player.view];
-// add the constraints
-[self addConstraintsToPlayerView];
-
-- (void)addConstraintsToPlayerView {
-    UIView *playerView = self.player.view;
-    playerView.translatesAutoresizingMaskIntoConstraints = NO;
-    NSDictionary *views = NSDictionaryOfVariableBindings(playerView);
-    
-    NSArray *horizontalConstraint = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[playerView]-0-|" options:0 metrics:nil views:views];
-    NSArray *verticalConstraint = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[playerView]-0-|" options:0 metrics:nil views:views];
-    
-    [self.playerContainer addConstraints:horizontalConstraint];
-    [self.playerContainer addConstraints:verticalConstraint];
-}
 ```
 
 ### Adding Custom Buttons and Controls to the Player  
