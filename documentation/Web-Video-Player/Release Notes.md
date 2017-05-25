@@ -9,7 +9,7 @@ Web Video Player v.3.0 - expected to be released later this year - stay tuned!
 
 | Release | Date Released   | Details |
 |---------|-----------------|---------|
-| 2.56    | May 21, 2017   | [[Details](Release%20Notes.md#release-256)]
+| 2.56    | May 21, 2017   | [Details](Release%20Notes.md#release-256)|
 | 2.55    | Apr. 23, 2017   | [Details](Release%20Notes.md#release-255) |
 | 2.54    | Mar. 12, 2017   | [Details](Release%20Notes.md#release-254) |
 | 2.53.2  | Feb. 26, 2017   | [Details](Release%20Notes.md#release-2532) |
