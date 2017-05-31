@@ -308,7 +308,7 @@ For all request types:
 
 #### Request Input Parameters Example  
 
-{% highlight javascript %}
+{% highlight plaintext %}
 id=abc12&name=name%20with%20spaces&entry:tag=mytag&entry:description=mydesc
 {% endhighlight %}
 
