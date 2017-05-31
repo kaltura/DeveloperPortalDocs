@@ -308,19 +308,19 @@ For all request types:
 
 #### Request Input Parameters Example  
 
-{% highlight c %}
-<pre class="brush: plain;fontsize: 100; first-line: 1; ">id=abc12&name=name%20with%20spaces&entry:tag=mytag&entry:description=mydesc</pre>
+{% highlight javascript %}
+id=abc12&name=name%20with%20spaces&entry:tag=mytag&entry:description=mydesc
 {% endhighlight %}
 
 In the example, the following parameters are URL encoded and are passed as API input parameters:
 
-{% highlight c %}
-<pre class="brush: plain;fontsize: 100; first-line: 1; ">id = ‘abc’
-name = ‘name with spaces’
+{% highlight javascript %}
+id = 'abc'
+name = 'name with spaces'
 entry {
-	tag = ‘mytag’,
-	description = ‘mydesc’	
-}</pre>
+	tag = 'mytag',
+	description = 'mydesc'
+}
 {% endhighlight %}
 
 ### API Errors and Error Handling  
@@ -334,8 +334,8 @@ A comma separates the error ID from the description.
 
 #### API Error Example  
 
-{% highlight c %}
-<pre class="brush: plain;fontsize: 100; first-line: 1; ">ENTRY_ID_NOT_FOUND,Entry id "%s" not found </pre>
+{% highlight plaintext %}
+ENTRY_ID_NOT_FOUND,Entry id "%s" not found 
 {% endhighlight %}
 
 where *%s* is replaced with the value that is sent to the API call.
@@ -390,8 +390,8 @@ To perform a multi-request call:
 
 ### Multi-Request Structure Example  
 
-{% highlight c %}
-<pre class="brush: xml;fontsize: 100; first-line: 1; ">Request URL: api_v3/index.php?service=multirequest&action=null
+{% highlight plaintext %}
+Request URL: api_v3/index.php?service=multirequest&action=null
 	POST variables:
 		1:service=baseEntry
 		1:action=get
@@ -401,7 +401,7 @@ To perform a multi-request call:
 		2:action=getWebPlayableByEntryId
 		2:entryId=0_zsadqv3e
 		2:version=-1
-		ks={ks}</pre>
+		ks={ks}
 {% endhighlight %}
 
 
@@ -409,8 +409,8 @@ To perform a multi-request call:
 
 To create a multi-request with a dependent request, use the following structure as input in the variable whose value you want to replace with a result of a preceding request:
 
-{% highlight c %}
-<pre class="brush: xml;fontsize: 100; first-line: 1; ">{num:result:propertyName}</pre>
+{% highlight plaintext %}
+{num:result:propertyName}
 {% endhighlight %}
 
 where:
@@ -421,9 +421,9 @@ where:
 
 ### Multi-Request With Dependency - Example  
 
-{% highlight c %}
+{% highlight plaintext %}
 
-<pre class="brush: xml;fontsize: 100; first-line: 1; ">Request URL: api_v3/index.php?service=multirequest&action=null
+Request URL: api_v3/index.php?service=multirequest&action=null
 	POST variables:
 		1:service=media
 		1:action=list
@@ -431,7 +431,7 @@ where:
 		2:service=media
 		2:action=get
 		2:entryId={1:result:objects:0:id}
-		ks={ks}</pre>
+		ks={ks}
 {% endhighlight %}
 
 
