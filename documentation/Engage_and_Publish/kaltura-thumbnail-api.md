@@ -31,10 +31,11 @@ The parameters are passed in the following form:
 https://cdnsecakmi.kaltura.com/p/{partner_id}/thumbnail/entry_id/{entry_id}/paramX_name/paramX_value/...
 ```
 
-1. Replace `{partner_id}` with your partner ID from the [KMC Integration Settings](https://www.kaltura.com/index.php/kmc/kmc4#account|integration). Please always ensure that a descriptive Alt text is specified on your image to ensure compatability with screen readers and better search indexing.
-2. Replace `{entry_id}` with the id of the desired entry thumbnail. The id can be found in the list of entries in the [KMC Content Tab](https://www.kaltura.com/index.php/kmc/kmc4#content|manage).  
-3. Then append any of the parameters below according to the following format: `/paramX_name/paramX_value/...`
+1. Replace `{partner_id}` with your account ID (aka partnerId). 
+1. Replace `{entry_id}` with the id of the desired entry thumbnail. 
+1. Then append any of the parameters below according to the following format: `/paramX_name/paramX_value/...`.
 
+> Please always ensure that a descriptive Alt text is specified when using thumbnails as image in web apps to ensure compatability with screen readers and better search indexing.
 
 ## Thumbnail API Parameters  
 
