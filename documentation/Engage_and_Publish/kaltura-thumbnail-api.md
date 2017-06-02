@@ -10,7 +10,9 @@ The Thumbnail API provides a simple web interface to dynamically generate image 
 
 The images are generated upon demand (with caching on disk and via CDN) by calling the following URL - 
 
-`https://cdnsecakmi.kaltura.com/p/{partner_id}/thumbnail/entry_id/{entry_id}`
+```
+https://cdnsecakmi.kaltura.com/p/{partner_id}/thumbnail/entry_id/{entry_id}
+```
 
 The result of the thumbnail API is a JPEG image with one or more of the following features:
 
@@ -25,9 +27,11 @@ The result of the thumbnail API is a JPEG image with one or more of the followin
 
 The parameters are passed in the following form:
 
-`https://cdnsecakmi.kaltura.com/p/{partner_id}/thumbnail/entry_id/{entry_id}/paramX_name/paramX_value/...`
+```
+https://cdnsecakmi.kaltura.com/p/{partner_id}/thumbnail/entry_id/{entry_id}/paramX_name/paramX_value/...
+```
 
-1. Replace `{partner_id}` with your partner ID from the [KMC Integration Settings](https://www.kaltura.com/index.php/kmc/kmc4#account|integration). Please always ensure that a descriptive Alt text is specified on your image to ensure compatability with screen readers and better search indexing.
+1. Replace `{partner_id}` with your partner ID from the [KMC Integration Settings(https://www.kaltura.com/index.php/kmc/kmc4#account|integration). Please always ensure that a descriptive Alt text is specified on your image to ensure compatability with screen readers and better search indexing.
 2. Replace `{entry_id}` with the id of the desired entry thumbnail. The id can be found in the list of entries in the [KMC Content Tab](https://www.kaltura.com/index.php/kmc/kmc4#content|manage).  
 3. Then append any of the parameters below according to the following format: `/paramX_name/paramX_value/...`
 
@@ -72,7 +76,9 @@ To use the parameters, append each parameter name followed by the desired value 
 
 Let's consider this as the original thumbnail we'll play with:
 
-`https://cdnapisec.kaltura.com/p/811441/thumbnail/entry_id/0_wf3km7rh`
+```
+https://cdnapisec.kaltura.com/p/811441/thumbnail/entry_id/0_wf3km7rh
+```
 
 ![Thumbnail without params](https://cdnapisec.kaltura.com/p/811441/thumbnail/entry_id/0_wf3km7rh)
 
@@ -82,7 +88,9 @@ Let's consider this as the original thumbnail we'll play with:
 
 The thumbnail with dimensions of 500 x 400 (with maintain aspect-ratio from original) and defined quality: (X is JPEG quality ranging from 0 to 100)
 
-`https://cdnapisec.kaltura.com/p/811441/thumbnail/entry_id/0_wf3km7rh/width/200/height/100/type/1/quality/X`
+```
+https://cdnapisec.kaltura.com/p/811441/thumbnail/entry_id/0_wf3km7rh/width/200/height/100/type/1/quality/X
+```
 
 | 10% Quality | 50% Quality | 100% Quality |
 |-----------------------------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------:|------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
@@ -95,7 +103,9 @@ The thumbnail with dimensions of 500 x 400 (with maintain aspect-ratio from orig
 
 The vid_sec parameter allows us to select a specific second in a video entry. The following will capture various frames from the 10th, 50th, 100th and 150th second in the video: (X is the second).
 
-`https://cdnapisec.kaltura.com/p/811441/thumbnail/entry_id/0_wf3km7rh/width/200/height/100/type/1/vid_sec/X`
+```
+https://cdnapisec.kaltura.com/p/811441/thumbnail/entry_id/0_wf3km7rh/width/200/height/100/type/1/vid_sec/X
+```
 
 | 10th Second | 50th Second | 100th Second | 150th Second |
 |--------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------:|---------------------------------------------------------------------------------------------------------------------------------------------------:|
@@ -137,7 +147,9 @@ If vid_slices is provided without `vid_slice`, a stripe of all slices will be re
 
 To create a long stripe of thumbnail slices simply remove the `vid_slice` parameter: 
 
-`https://cdnapisec.kaltura.com/p/811441/thumbnail/entry_id/0_wf3km7rh/width/120/vid_slices/8/`
+```
+https://cdnapisec.kaltura.com/p/811441/thumbnail/entry_id/0_wf3km7rh/width/120/vid_slices/8/
+```
 
 ![Stripe of 8 slices](https://cdnapisec.kaltura.com/p/811441/thumbnail/entry_id/0_wf3km7rh/width/120/vid_slices/8/widget_id/0)
 
