@@ -17,3 +17,4 @@ To ingest a media file bundled with Metadata:
 * http://www.kaltura.com/api_v3/xsdDoc/?type=bulkUploadXml.bulkUploadXML#element-customData
 
  
+>Note: For any bulk actions that will create more than 5,000 entries (e.g., users), including categories bulk uploads, please contact your Kaltura representative to coordinate the upload.
