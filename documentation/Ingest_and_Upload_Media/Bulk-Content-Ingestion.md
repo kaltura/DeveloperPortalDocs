@@ -10,6 +10,8 @@ You can import multiple files per session using a simple comma separated CSV fil
 
 With these options, you can also ingest files from your own FTP server, or any publicly accessible file server.
 
+>Note: For any bulk actions that will create more than 5,000 entries (e.g., users), including categories bulk uploads, please contact your Kaltura representative to coordinate the upload.
+
 ## Introduction Video  
 
 The following video provides a quick walkthrough of the bulk-upload features in KMC:
