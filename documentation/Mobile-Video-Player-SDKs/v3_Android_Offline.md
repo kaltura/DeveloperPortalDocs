@@ -17,18 +17,18 @@ Note that you have two constructors for this object; however, the first construc
 >**Important!** The context must be the Android Application context.
 
 ```java
-  //Create new instance of localAssetManager with default implementatoin of LocalDrmStorage.
+  //Create new instance of localAssetManager with default implementatoin of LocalDataStore.
   LocalAssetsManager localAssetsManager = new LocalAssetsManager(context);
 ```
 
-Next, accept an additional parameter of type [LocalDrmStorage](https://github.com/kaltura/playkit-android/blob/develop/playkit/src/main/java/com/kaltura/playkit/LocalDrmStorage.java).
+Next, accept an additional parameter of type [LocalDataStore](https://github.com/kaltura/playkit-android/blob/develop/playkit/src/main/java/com/kaltura/playkit/LocalDataStore.java).
 
 ```java
-  //Create new instance of localAssetManager with custom implementatoin of LocalDrmStorage.
-  LocalAssetsManager localAssetsManager = new LocalAssetsManager(context, YourLocalDrmStorage);
+  //Create new instance of localAssetManager with custom implementatoin of LocalDataStore.
+  LocalAssetsManager localAssetsManager = new LocalAssetsManager(context, YourLocalDataStore);
 ```
 
-In first constructor, we implicitly implemented the [LocalDrmStorage](https://github.com/kaltura/playkit-android/blob/develop/playkit/src/main/java/com/kaltura/playkit/LocalDrmStorage.java) interface in the DefaultLocalDrmStorage class (which is actually an inner class of the LocalAssetsManager). In the second constructor, you can have your own implementation of this interface. You can read more about the LocalDrmStorage later in this section. For now, let's use the default constructor.
+In first constructor, we implicitly implemented the [LocalDataStore](https://github.com/kaltura/playkit-android/blob/develop/playkit/src/main/java/com/kaltura/playkit/LocalDataStore.java) interface in the DefaultLocalDataStore class (which is actually an inner class of the LocalAssetsManager). In the second constructor, you can have your own implementation of this interface. You can read more about the LocalDataStore later in this section. For now, let's use the default constructor.
 
 Register the asset to the LocalAssetsManager. Note that you'll need to be ***Online*** while doing so.
 
@@ -62,14 +62,14 @@ If the result is successful, you're ready to play your media in offline; to do s
 ```java
   LocalAssetsManager localAssetsManager = new LocalAssetsManager(context);
   PKMediaSource mediaSource = localAssetsManager.getLocalMediaSource(assetId, localAssetPath);
- 
+
 ```
 
 Next, set the mediaSource to your PKMediaEntry and pass the PlayerConfig to the player.preapre(PlayerConfig config) method.
 
 ## Additional Functionality  
 
-The LocalAssetsManager can provide you with some additional functionality. For example you can unregister the asset and check the asset status. 
+The LocalAssetsManager can provide you with some additional functionality. For example you can unregister the asset and check the asset status.
 
 ### Unregistering an Asset  
 
@@ -105,19 +105,18 @@ To check the asset's DRM:
   localAssetsManager.checkAssetStatus(yourAssetLocalPath, yourAssetID, assetStatusListener);
 ```
 
-## LocalDrmStorage  
+## LocalDataStore  
 
-The LocalDrmStorage is an interface that has three methods:
+The LocalDataStore is an interface that has three methods:
 
 - void save(String key, byte[] value);
 - byte[] load(String key) throws FileNotFoundException;
 - void remove(String key);
 
-Kaltura uses a default implementation of the LocalDrmStorage that uses Android SharedPreferences to save/load/remove the data. This implementation is responsible for storing the DRM keySetId to play DRM videos in offline. If your content doesn't have DRM protection, you can use this implementation freely. Howevever, you'll likely want to implement your own way of storing this data. To do so, you'll need to implement LocalDrmStorage and verify that you are actually saving/loading/removing the data that you receive.
+Kaltura uses a default implementation of the LocalDataStore that uses Android SharedPreferences to save/load/remove the data. This implementation is responsible for storing the DRM keySetId to play DRM videos in offline. If your content doesn't have DRM protection, you can use this implementation freely. Howevever, you'll likely want to implement your own way of storing this data. To do so, you'll need to implement LocalDataStore and verify that you are actually saving/loading/removing the data that you receive.
 
 </br>
 
 ## Have Questions or Need Help?
 
 Check out the [Kaltura Player SDK Forum](https://forum.kaltura.org/c/playkit) page for different ways of getting in touch.
-
