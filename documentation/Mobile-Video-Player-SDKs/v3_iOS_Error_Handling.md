@@ -18,7 +18,7 @@ Player errors:
 
 1. `failedToLoadAssetFromKeys`, code: 7000.</br>userInfo holds the root error if exists. Sent when asset was trying to load and one of the required keys (playable for example) couldn't load.
 2. `assetNotPlayable`, code: 7001.</br>Sent when the asset already loaded his required keys but isn't playable.
-3. `failedToPlayToEndTime`, code: 7002.</br>userInfo holds the root error if exists. Sent when player failed to play to the end time.
+3. `playerItemFailed`, code: 7002.</br>userInfo holds the root error if exists. Sent when player failed to play to the end time.
 
 `PlayerErrorLog` - These are non-fatal errors produced by `AVPlayer`, could be useful for debug purposes or analytics.
 code: 7100, wraps `AVPlayerItemErrorLogEvent` which contains all error log events.</br>userInfo holds the root error code and root domain of the original error. Sent when the player received an error log event.
