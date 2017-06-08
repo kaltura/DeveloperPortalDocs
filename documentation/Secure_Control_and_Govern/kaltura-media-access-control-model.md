@@ -176,36 +176,44 @@ The following examples are in PHP and effectively will be the same across all
 ### Device-specific Scheduling Window  
 
 Condition #1: User agent MATCH 'ipad' (regular expression)
-   
-    <pre class="brush: php;fontsize: 100; first-line: 1; ">$value1 = new KalturaStringValue();
-$value1-&gt;value = '.*ipad.*';
+  
+{% highlight php %} 
+$value1 = new KalturaStringValue();
+$value1->value = '.*ipad.*';
 $condition1 = new KalturaUserAgentCondition();
-$condition1-&gt;values = array($value1);</pre>
+$condition1->values = array($value1);
+{% endhighlight %}
    
 
 Condition #2: Current time => entry’s {metadata_123/ipadSunrise}
     
-    <pre class="brush: php;fontsize: 100; first-line: 1; ">$condition2 = new KalturaCompareMetadataCondition();
+{% highlight php %} 
+$condition2 = new KalturaCompareMetadataCondition();
 $condition2-&gt;comparison = KalturaSearchConditionComparison::LESS_THAN_OR_EQUAL;
 $condition2-&gt;xPath = 'ipadSunrise';
 $condition2-&gt;profileId = 123;
-$condition2-&gt;value = new KalturaTimeContextField();</pre>
+$condition2-&gt;value = new KalturaTimeContextField();
+{% endhighlight %}
     
 
 Condition #3: Current time <= entry’s {metadata_123/ipadSunset}
     
-    <pre class="brush: php;fontsize: 100; first-line: 1; ">$condition3 = new KalturaCompareMetadataCondition();
-$condition3-&gt;comparison = KalturaSearchConditionComparison::GREATER_THAN_OR_EQUAL;
-$condition3-&gt;xPath = 'ipadSunset';
-$condition3-&gt;profileId = 123;
-$condition3-&gt;value = new KalturaTimeContextField();</pre>
+{% highlight php %}
+$condition3 = new KalturaCompareMetadataCondition();
+$condition3->comparison = KalturaSearchConditionComparison::GREATER_THAN_OR_EQUAL;
+$condition3->xPath = 'ipadSunset';
+$condition3->profileId = 123;
+$condition3->value = new KalturaTimeContextField();
+{% endhighlight %}
     
     <p>
       Actions: none
     </p>
     
-    <pre class="brush: php;fontsize: 100; first-line: 1; ">$rule-&gt;conditions = array($condition1, $condition2, $condition3);
-$rule-&gt;stopProcessing = true;</pre>
+{% highlight php %}
+$rule->conditions = array($condition1, $condition2, $condition3);
+$rule->stopProcessing = true;
+{% endhighlight %}
     
     <p>
       The next rule should be defined with no conditions and one block action in order to block all requests that didn’t stop processing on the first rule.
@@ -219,32 +227,38 @@ $rule-&gt;stopProcessing = true;</pre>
       Condition #1: User agent MATCH ‘Mobile devices of brands X, Y, Z’ (regular expression)
     </p>
     
-    <pre class="brush: php;fontsize: 100; first-line: 1; ">$value1 = new KalturaStringValue();
-$value1-&gt;value = '.*X.*';
+{% highlight php %}
+$value1 = new KalturaStringValue();
+$value1->value = '.*X.*';
 $value2 = new KalturaStringValue();
-$value2-&gt;value = '.*Y.*';
+$value2->value = '.*Y.*';
 $value3 = new KalturaStringValue();
-$value3-&gt;value = '.*Z.*';
+$value3->value = '.*Z.*';
 $condition1 = new KalturaUserAgentCondition();
-$condition1-&gt;values = array($value1, $value2, $value3);</pre>
+$condition1->values = array($value1, $value2, $value3);
+{% endhighlight %}
     
     <p>
       Condition #2: Entry’s {metadata_123/FormatType} Equals ‘Long Form’
     </p>
     
-    <pre class="brush: php;fontsize: 100; first-line: 1; ">$value1 = new KalturaStringValue();
-$value1-&gt;value = 'Long Form';
+{% highlight php %}
+$value1 = new KalturaStringValue();
+$value1->value = 'Long Form';
 $condition2 = new KalturaMatchMetadataCondition();
-$condition2-&gt;xPath = 'FormatType';
-$condition2-&gt;profileId = 123;
-$condition2-&gt;values = array($value1);
-$rule-&gt;conditions = array($condition1, $condition2);</pre>
+$condition2->xPath = 'FormatType';
+$condition2->profileId = 123;
+$condition2->values = array($value1);
+$rule->conditions = array($condition1, $condition2);
+{% endhighlight %}
     
     <p>
       Actions: Block
     </p>
     
-    <pre class="brush: php;fontsize: 100; first-line: 1; ">$rule-&gt;actions = array(new KalturaAccessControlBlockAction());</pre>
+{% highlight php %}
+$rule->actions = array(new KalturaAccessControlBlockAction());
+{% endhighlight %}
     
     <h3>
       Block language-specific content for consumers in a specific geography
@@ -254,28 +268,34 @@ $rule-&gt;conditions = array($condition1, $condition2);</pre>
       Condition #1: Region Equals Quebec* (First phase will be limited to countries)
     </p>
     
-    <pre class="brush: php;fontsize: 100; first-line: 1; ">$value1 = new KalturaStringValue();
-$value1-&gt;value = 'Quebec';
+{% highlight php %}
+$value1 = new KalturaStringValue();
+$value1->value = 'Quebec';
 $condition1 = new KalturaCountryCondition();
-$condition1-&gt;values = array($value1);</pre>
+$condition1->values = array($value1);
+{% endhighlight %}
     
     <p>
       Condition #2: entry’s {metadata_123/AudioLanguage} NOT Equals ‘French’
     </p>
     
-    <pre class="brush: php;fontsize: 100; first-line: 1; ">$value1 = new KalturaStringValue();
-$value1-&gt;value = ‘French';
+{% highlight php %}
+$value1 = new KalturaStringValue();
+$value1->value = ‘French';
 $condition2 = new KalturaMatchMetadataCondition();
-$condition2-&gt;xPath = 'AudioLanguage';
-$condition2-&gt;profileId = 123;
-$condition2-&gt;values = array($value1);
-$condition2-&gt;not = true;</pre>
+$condition2->xPath = 'AudioLanguage';
+$condition2->profileId = 123;
+$condition2->values = array($value1);
+$condition2->not = true;
+{% endhighlight %}
     
     <p>
       Actions: Block
     </p>
     
-    <pre class="brush: php;fontsize: 100; first-line: 1; ">$rule-&gt;actions = array(new KalturaAccessControlBlockAction());</pre>
+{% highlight php %}
+$rule->actions = array(new KalturaAccessControlBlockAction());
+{% endhighlight %}
     
     <h3>
       Block content for unidentified devices
@@ -285,20 +305,23 @@ $condition2-&gt;not = true;</pre>
       Condition #1: User agent NOT MATCH ‘Mobile devices of brands X, Y, Z’ (regular expression)
     </p>
     
-    <pre class="brush: php;fontsize: 100; first-line: 1; ">$value1 = new KalturaStringValue();
-$value1-&gt;value = '.*X.*';
+{% highlight php %}
+$value1 = new KalturaStringValue();
+$value1->value = '.*X.*';
 $value2 = new KalturaStringValue();
-$value2-&gt;value = '.*Y.*';
+$value2->value = '.*Y.*';
 $value3 = new KalturaStringValue();
-$value3-&gt;value = '.*Z.*';
+$value3->value = '.*Z.*';
 $condition1 = new KalturaUserAgentCondition();
-$condition1-&gt;values = array($value1, $value2, $value3);
-$condition1-&gt;not = true;</pre>
+$condition1->values = array($value1, $value2, $value3);
+$condition1->not = true;
+{% endhighlight %}
     
     <p>
       Actions: Block
     </p>
-    
-    <pre class="brush: php;fontsize: 100; first-line: 1; ">$rule-&gt;actions = array(new KalturaAccessControlBlockAction());</pre>
+{% highlight php %}   
+$rule->actions = array(new KalturaAccessControlBlockAction());
+{% endhighlight %}
   </div>
 </div>
