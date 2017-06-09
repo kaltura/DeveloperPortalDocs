@@ -185,18 +185,18 @@ $condition1->values = array($value1);
 {% endhighlight %}
    
 
-Condition #2: Current time => entry’s {metadata_123/ipadSunrise}
+Condition #2: Current time => entry's {metadata_123/ipadSunrise}
     
-{% highlight php %} 
+{% highlight php %}
 $condition2 = new KalturaCompareMetadataCondition();
-$condition2-&gt;comparison = KalturaSearchConditionComparison::LESS_THAN_OR_EQUAL;
-$condition2-&gt;xPath = 'ipadSunrise';
-$condition2-&gt;profileId = 123;
-$condition2-&gt;value = new KalturaTimeContextField();
+$condition2->comparison = KalturaSearchConditionComparison::LESS_THAN_OR_EQUAL;
+$condition2->xPath = 'ipadSunrise';
+$condition2->profileId = 123;
+$condition2->value = new KalturaTimeContextField();
 {% endhighlight %}
     
 
-Condition #3: Current time <= entry’s {metadata_123/ipadSunset}
+Condition #3: Current time <= entry's {metadata_123/ipadSunset}
     
 {% highlight php %}
 $condition3 = new KalturaCompareMetadataCondition();
@@ -206,18 +206,18 @@ $condition3->profileId = 123;
 $condition3->value = new KalturaTimeContextField();
 {% endhighlight %}
     
-* Actions: none *
+**Actions: none**
     
 {% highlight php %}
 $rule->conditions = array($condition1, $condition2, $condition3);
 $rule->stopProcessing = true;
 {% endhighlight %}
     
-* The next rule should be defined with no conditions and one block action in order to block all requests that didn’t stop processing on the first rule. *
+**The next rule should be defined with no conditions and one block action in order to block all requests that didn’t stop processing on the first rule.**
     
 ### Block long-form content on mobile devices
     
-* Condition #1: User agent MATCH ‘Mobile devices of brands X, Y, Z’ (regular expression) *
+Condition #1: User agent MATCH ‘Mobile devices of brands X, Y, Z’ (regular expression) 
     
 {% highlight php %}
 $value1 = new KalturaStringValue();
@@ -230,7 +230,7 @@ $condition1 = new KalturaUserAgentCondition();
 $condition1->values = array($value1, $value2, $value3);
 {% endhighlight %}
     
-* Condition #2: Entry’s {metadata_123/FormatType} Equals 'Long Form' *
+Condition #2: Entry’s {metadata_123/FormatType} Equals 'Long Form'
     
 {% highlight php %}
 $value1 = new KalturaStringValue();
@@ -242,7 +242,7 @@ $condition2->values = array($value1);
 $rule->conditions = array($condition1, $condition2);
 {% endhighlight %}
     
-* Actions: Block *
+**Actions: Block**
     
 {% highlight php %}
 $rule->actions = array(new KalturaAccessControlBlockAction());
@@ -250,7 +250,7 @@ $rule->actions = array(new KalturaAccessControlBlockAction());
     
 ### Block language-specific content for consumers in a specific geography
     
-* Condition #1: Region Equals Quebec* (First phase will be limited to countries) *
+Condition #1: Region Equals Quebec (First phase will be limited to countries)
     
 {% highlight php %}
 $value1 = new KalturaStringValue();
@@ -259,11 +259,11 @@ $condition1 = new KalturaCountryCondition();
 $condition1->values = array($value1);
 {% endhighlight %}
     
-* Condition #2: entry’s {metadata_123/AudioLanguage} NOT Equals 'French' * 
+Condition #2: entry’s {metadata_123/AudioLanguage} NOT Equals 'French'
     
 {% highlight php %}
 $value1 = new KalturaStringValue();
-$value1->value = ‘French';
+$value1->value = 'French';
 $condition2 = new KalturaMatchMetadataCondition();
 $condition2->xPath = 'AudioLanguage';
 $condition2->profileId = 123;
@@ -271,7 +271,7 @@ $condition2->values = array($value1);
 $condition2->not = true;
 {% endhighlight %}
     
-* Actions: Block *
+**Actions: Block**
     
 {% highlight php %}
 $rule->actions = array(new KalturaAccessControlBlockAction());
@@ -279,7 +279,7 @@ $rule->actions = array(new KalturaAccessControlBlockAction());
     
 ### Block content for unidentified devices
     
-* Condition #1: User agent NOT MATCH ‘Mobile devices of brands X, Y, Z’ (regular expression) *
+Condition #1: User agent NOT MATCH ‘Mobile devices of brands X, Y, Z’ (regular expression)
     
 {% highlight php %}
 $value1 = new KalturaStringValue();
@@ -293,7 +293,7 @@ $condition1->values = array($value1, $value2, $value3);
 $condition1->not = true;
 {% endhighlight %}
 
-* Actions: Block *
+**Actions: Block**
 
 {% highlight php %}   
 $rule->actions = array(new KalturaAccessControlBlockAction());
