@@ -264,7 +264,7 @@ Error Domain=com.kaltura.playkit.error.ima Code=1005 "Ads cannot be requested be
 Please make sure that the order of removing player on your side is:
 
 ```
-// Firstly call destory
+// Firstly call destroy
 [_kPlayer destroy];
 // Only then
 [_kPlayer.view removeFromSuperview];
