@@ -253,6 +253,23 @@ player.addObserver(self, events: [AdEvent.adCuePointsUpdate]) { event in
 }];
 ```
 
+## Common Issues
+
+If you get below error:
+
+```
+Error Domain=com.kaltura.playkit.error.ima Code=1005 "Ads cannot be requested because the ad container is not attached to the view hierarchy." UserInfo={errorType=1, NSLocalizedDescription=Ads cannot be requested because the ad container is not attached to the view hierarchy.}
+```
+
+Please make sure that the order of removing player on your side is:
+
+```
+// Firstly call destory
+[_kPlayer destroy];
+// Only then
+[_kPlayer.view removeFromSuperview];
+```
+
 ## Have Questions or Need Help?
 
 Check out the [Kaltura Player SDK Forum](https://forum.kaltura.org/c/playkit) page for different ways of getting in touch.
