@@ -1,3 +1,4 @@
+Hide
 ---
 layout: page
 title: Kaltura Video Insights - Metrics Lexicon
