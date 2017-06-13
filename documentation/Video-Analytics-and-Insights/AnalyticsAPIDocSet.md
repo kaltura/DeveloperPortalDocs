@@ -1,3 +1,4 @@
+Hide
 ---
 layout: page
 title: Introduction to Kaltura Video Insights
