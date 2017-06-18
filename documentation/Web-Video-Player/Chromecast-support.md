@@ -32,9 +32,13 @@ The Chromecast system consists of the following:
 *  A **Receiver application**, which is a separate HTML page that runs on the Chromecast dongle attached to the end user’s TV, and is responsible for receiving the streaming requests from the Sender application and presenting it on the TV.
 Note that for Chromecast to work, the end user’s application and the Chromecast device must be connected to the **same wireless network**.
 
-<insert image 1 here>
+Figure 1:
 
-<insert image 2 here>
+(`![Sender and Receiver Apps](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/Web-Video-Player/images/chromcast1.png)`)
+
+Figure 2:
+
+(`![Sender and Receiver Apps](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/Web-Video-Player/images/chromcast2.png)`)
 
 As pictured in Figure 2 above, the Chromecast receiver handles the communication between itself and:
 •	The player
