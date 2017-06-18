@@ -92,9 +92,9 @@ To start the connection process and open the Cast Section on the mobile device, 
 While using the Web player, the end user can easily access the Chromecast icon from the chrome browser or the player itself.
 
 The Chromecast button has three states:
-•	Not connected (or disconnected) (`![Not connected/disconnected](https://vpaas.kaltura.com/documentation/Web-Video-Player/images/chromcast5.png)`) – This state is displayed when the Sender application is not connected to a Chromecast device.
-•	Connecting: While the receiver is connecting, the button animates the waves in the icon progressively  (`![Connecting](https://vpaas.kaltura.com/documentation/Web-Video-Player/images/chromcast6.png)`) - The Connecting (animated) state appears when the connection is being established. Once connected, the Receiver application launches.
-•	Connected (`![Connected](https://vpaas.kaltura.com/documentation/Web-Video-Player/images/chromcast7.png)`)  – This state is displayed when the Sender application is connected to a Chromecast device (but not necessarily casting).
+* Not connected (or disconnected) (`![Not connected/disconnected](https://vpaas.kaltura.com/documentation/Web-Video-Player/images/chromcast5.png)`) – This state is displayed when the Sender application is not connected to a Chromecast device.
+* Connecting: While the receiver is connecting, the button animates the waves in the icon progressively  (`![Connecting](https://vpaas.kaltura.com/documentation/Web-Video-Player/images/chromcast6.png)`) - The Connecting (animated) state appears when the connection is being established. Once connected, the Receiver application launches.
+* Connected (`![Connected](https://vpaas.kaltura.com/documentation/Web-Video-Player/images/chromcast7.png)`)  – This state is displayed when the Sender application is connected to a Chromecast device (but not necessarily casting).
 
 While using the Mobile SDKs, the entire player UI is implemented by the application (and not the player) and, therefore, it is up to the application to implement the Cast button.
 
