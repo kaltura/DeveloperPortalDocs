@@ -122,13 +122,7 @@ If the Receiver application gets accidently disconnected (e.g., the Wi-Fi issues
 ## Mobile SDKs – Additional Documentation  
 
 For additional documentation on the Mobile SDKs support of Chromecast, please see:
-* Android
- * Android Casting – Get started
-* iOS
- * iOS Casting – Get Started
- * Code samples
 
-The Kaltura player supports Chromecast on the following versions:
 * **Android** 
   * Android Casting – Get started
 * **iOS**
