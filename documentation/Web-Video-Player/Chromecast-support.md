@@ -34,11 +34,11 @@ Note that for Chromecast to work, the end user’s application and the Chromecas
 
 Figure 1:
 
-(`![Sender and Receiver Apps](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/Web-Video-Player/images/chromcast1.png)`)
+(`![Sender and Receiver Apps](https://vpaas.kaltura.com/documentation/Web-Video-Player/images/chromcast1.png)`)
 
 Figure 2:
 
-(`![Sender and Receiver Apps](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/Web-Video-Player/images/chromcast2.png)`)
+(`![Sender and Receiver Apps](https://vpaas.kaltura.com/documentation/Web-Video-Player/images/chromcast2.png)`)
 
 As pictured in Figure 2 above, the Chromecast receiver handles the communication between itself and:
 •	The player
@@ -54,10 +54,12 @@ The Chromecast Sender application represents the application that is responsible
 Kaltura uses a Custom Receiver, which is a custom-built HTML5 that can also stream files that use DRM. The receiver TV, depending on the status of the Chromecast connection, displays the following screens:
 
 **Content Loading – The Receiver application is loaded and connected and is now loading the video**
-<insert image 3>
+
+(`![Content Loading](https://vpaas.kaltura.com/documentation/Web-Video-Player/images/chromcast3.png)`)
 
 **Content Playing – The Receiver application is loaded, connected and playing**
-<Insert image 4>
+
+(`![Content Playing](https://vpaas.kaltura.com/documentation/Web-Video-Player/images/chromcast4.png)`)
 
 #### Customizing the Receiver Application  
 
@@ -90,10 +92,11 @@ To start the connection process and open the Cast Section on the mobile device, 
 While using the Web player, the end user can easily access the Chromecast icon from the chrome browser or the player itself.
 
 The Chromecast button has three states:
-•	Not connected (or disconnected) <Insert image 5> – This state is displayed when the Sender application is not connected to a Chromecast device.
-•	Connecting: While the receiver is connecting, the button animates the waves in the icon progressively  <Insert image 6>. The Connecting (animated) state appears when the connection is being established. Once connected, the Receiver application launches.
-•	Connected <Insert image 7>  – This state is displayed when the Sender application is connected to a Chromecast device (but not necessarily casting).
-While using the Mobile SDKs, the entire player UI is implemented by the application (and not the player) and therefor it is up to the app to implement the Cast button.
+•	Not connected (or disconnected) (`![Not connected/disconnected](https://vpaas.kaltura.com/documentation/Web-Video-Player/images/chromcast5.png)`) – This state is displayed when the Sender application is not connected to a Chromecast device.
+•	Connecting: While the receiver is connecting, the button animates the waves in the icon progressively  (`![Connecting](https://vpaas.kaltura.com/documentation/Web-Video-Player/images/chromcast6.png)`) - The Connecting (animated) state appears when the connection is being established. Once connected, the Receiver application launches.
+•	Connected (`![Connected](https://vpaas.kaltura.com/documentation/Web-Video-Player/images/chromcast7.png)`)  – This state is displayed when the Sender application is connected to a Chromecast device (but not necessarily casting).
+
+While using the Mobile SDKs, the entire player UI is implemented by the application (and not the player) and, therefore, it is up to the application to implement the Cast button.
 
 ## Additional Capabilities  
 
@@ -128,7 +131,7 @@ If the Receiver application gets accidently disconnected (e.g., the Wi-Fi issues
 For additional documentation on the Mobile SDKs support of Chromecast, please see:
 
 * **Android** 
-  * Android Casting – Get started
+  * [Android Casting – Get started](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/v3_Android_Casting.html)
 * **iOS**
-  * iOS Casting – Get Started 
-  * Code samples 
+  * [iOS Casting – Get Started](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/v3_iOS_Casting.html) 
+  * [Code samples](https://github.com/kaltura/playkit-ios-samples/tree/master/ChromecastSample) 
