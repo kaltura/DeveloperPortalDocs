@@ -275,6 +275,9 @@ To add support for advertisments:
 
 	```
 
+>Note:
+Google cast iOS SDK: CoreBluetooth & AudioToolbox framework dependencies explained below:
+https://developers.google.com/cast/docs/guest_mode
 
 ## Have Questions or Need Help?
 
