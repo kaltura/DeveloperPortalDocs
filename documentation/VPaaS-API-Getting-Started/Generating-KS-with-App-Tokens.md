@@ -13,7 +13,7 @@ Your application will use permanent Application Tokens to generate temporary KS 
 
 The Application Token will need to be created by your account administrator (or by Kaltura Professional Services). A developer will then use the Application Token to generate Kaltura Session tokens in her or his applications.
 
-The Application Token is comprised of an ID (ApplicationToken.id) and token (ApplicationToken.token). The Application Token is preconfigured with a maximum session length, a set of content entitlements (category access permissions), and API access privileges. Kaltura Sessions generated using an Application Token will inherit these properties from it. You'll also be told which hash function to use when working with the Application Token (the default is SHA1, but MD5, SHA-256, and others are also available).
+The Application Token is comprised of an ID (ApplicationToken.id) and token (ApplicationToken.token). The Application Token is preconfigured with a maximum session length, a set of content entitlements (category access permissions), and API access privileges. Kaltura Sessions generated using an Application Token will inherit these properties from it. You'll also be told which hash function to use when working with the Application Token (the hash function is either SHA-1 or SHA-256).
 
 See the following articles for details:
 
