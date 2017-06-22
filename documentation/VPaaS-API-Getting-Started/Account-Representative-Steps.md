@@ -69,7 +69,7 @@ The KS generated from an Application Token has a default expiration of 24 hours.
 
 ### Hashing Function  
 
-The default and recommended hashing function associated with an Application Token is SHA1. This type of hash function is available to all developers. Because Application Token hashes are salted, it does not pose a security risk. Clients with specific security requirements may select MD5, SHA-256, and SHA-512 functions.
+The default and recommended hashing function associated with an Application Token is SHA1. This type of hash function is available to all developers. Because Application Token hashes are salted, it does not pose a security risk. Clients with specific security requirements may select the hash function SHA-1 or SHA-256.
 
 ## Application Token Creation
 
@@ -77,7 +77,7 @@ Create the new Application Token by invoking the **add** action of the **appToke
 
 * Permissions line (includes API restrictions via 'setrole' directive)
 * Service user (required for restricting content access)
-* Hashing function (default=SHA-1)
+* Hashing function (either SHA-1 or SHA-256)
 * Expiration 
 
 Perform the call with the following parameters:
@@ -89,7 +89,7 @@ Perform the call with the following parameters:
 | sessionPrivileges  | string | V         |	The privileges that will be imparted to KS generated with this Application token. |
 | sessionUserId  | string | V         |	ID of the Service User that will provide entitlements for the KS created using this Application Token.  | 
 | expiry  | int | V         |	The date and time when this Application Token will expire. This must be provided in a UNIX timestamp format (Epoch time). This field is mandatory and should be set when creating the application token. | 
-| hashType  | string | V         |	One of the following:	MD5, SHA1 (default), SHA256, SHA512| 
+| hashType  | string | V         |	The hash type is either SHA-1 or SHA-256.| 
 
 A successful call will return a new Application Token. Note the following response values:
 
