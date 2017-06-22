@@ -36,7 +36,7 @@ The table shows the parameters for the **startSession** action of the **appToken
 | Parameter Name  | Required | Default Value | Notes|
 |------------ |------------------|------------------|------------------|
 |id | Yes| N/A |Provide the ID of your Application Token. |
-|tokenHash |Yes |SHA-1 |Concatenate the widget session from session.startWidgetSession and the Application Token's token value. Then, perform a hash of the entire string. The hash function to use is provided with your Application Token details. |
+|tokenHash |Yes |SHA-1 or SHA-256 |Concatenate the widget session from session.startWidgetSession and the Application Token's token value. Then, perform a hash of the entire string. The hash function to use is provided with your Application Token details. |
 |userId |No |N/A |(Advanced) This value is already set in your Application Token. Do not pass this parameter. |
 |type |No |N/A |(Advanced) This value is already set in your Application Token. Do not pass this parameter. |
 |expiry |No |N/A |This value is already set in your Application Token. Do not pass this parameter. |
