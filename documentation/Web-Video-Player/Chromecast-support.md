@@ -1,4 +1,3 @@
-temp
 ---
 layout: page
 title: Kaltura Player Support for Chromecast
