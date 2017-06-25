@@ -41,6 +41,9 @@ Kaltura’s Mobile Video SDK for iOS and Android supports the following features
 | Apple  |  iOS: v9+ |
 
 
+## Chromecast Support  
+
+The Kaltura Player supports Chromecast on a wide range of versions. For more information see [Kaltura Player Support for Chromecast](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/Chromecast-support.html).
 
 
 **Next:**
