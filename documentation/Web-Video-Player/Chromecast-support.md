@@ -1,11 +1,11 @@
 temp
 ---
 layout: page
-title: Kaltura Player Support for the Chromecast Solution
+title: Kaltura Player Support for Chromecast
 weight: 411
 ---
 
-This article describes the Kaltura Player support for the Chromecast solution.
+This article describes the Kaltura Player support for Chromecast.
 
 ## Overview  
 
