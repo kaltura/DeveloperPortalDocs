@@ -7,7 +7,35 @@ weight: 501
 
 This document describes the steps required for adding support for the IMA Plugin functionality on iOS devices. IMA (or Interactive Media Ads) was developed by Google to enable you to display ads in your application's video, audio, and game content. To learn more about Google's IMA, see [Google's IMA developer's site](https://developers.google.com/interactive-media-ads/).
 
-> Supported IMA SDK Version is: 3.4.1
+> Supported IMA SDK Version is: 3.5.2
+
+## Common Issues
+
+There is currently an open issue with IMA SDK where removing the player view before destorying the ads manager will cause an error on the next ad playback. To fix the issue all you have to do is call the `player.destroy()` before `player.removeFromSuperview()`
+
+If you get below error:
+
+```
+Error Domain=com.kaltura.playkit.error.ima Code=1005 "Ads cannot be requested because the ad container is not attached to the view hierarchy." UserInfo={errorType=1, NSLocalizedDescription=Ads cannot be requested because the ad container is not attached to the view hierarchy.}
+```
+
+Please make sure that the order of removing player on your side is:
+
+> Objc
+
+```objc
+// Firstly call destroy
+[_kPlayer destroy];
+// Only then
+[_kPlayer.view removeFromSuperview];
+```
+
+> Swift
+
+```swift
+player.destroy()
+player.removeFromSuperview()
+```
 
 ## Enable IMA Plugins for the Kaltura Video Player  
 
@@ -251,23 +279,6 @@ player.addObserver(self, events: [AdEvent.adCuePointsUpdate]) { event in
         }
     }
 }];
-```
-
-## Common Issues
-
-If you get below error:
-
-```
-Error Domain=com.kaltura.playkit.error.ima Code=1005 "Ads cannot be requested because the ad container is not attached to the view hierarchy." UserInfo={errorType=1, NSLocalizedDescription=Ads cannot be requested because the ad container is not attached to the view hierarchy.}
-```
-
-Please make sure that the order of removing player on your side is:
-
-```objc
-// Firstly call destroy
-[_kPlayer destroy];
-// Only then
-[_kPlayer.view removeFromSuperview];
 ```
 
 ## Have Questions or Need Help?
