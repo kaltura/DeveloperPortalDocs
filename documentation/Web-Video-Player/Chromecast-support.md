@@ -12,8 +12,8 @@ This article describes the Kaltura Player support for Chromecast.
 
 The Kaltura Player supports Chromecast on the following versions:
 * **Mobile SDK V3** 
-  * **iOS:** iOS 9, 10
-  * **Android:** Android 4.2.2+
+   * **iOS:** iOS 9, 10
+   * **Android:** Android 4.2.2+
 * **Web player** version 2.46+
 
 ### Cast API  
