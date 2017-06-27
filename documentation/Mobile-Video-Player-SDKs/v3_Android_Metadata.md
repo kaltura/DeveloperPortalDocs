@@ -5,8 +5,8 @@ subcat: SDK 3.0 - Android
 weight: 400
 ---
 
-Playkit SDK provides convinient methods to receive Metadata from HLS and DASH sources.
-Following article will explain how to do that and show list of all available metadata types. The working code sample you can find [here] (https://github.com/kaltura/playkit-android-samples/tree/master/MetadataSample).
+The Player SDK provides a convenient method for receiving metadata from HLS and DASH sources.
+Following article explains how to do get this metadata and provides a list of all available metadata types. You can find a working code sample [here](https://github.com/kaltura/playkit-android-samples/tree/master/MetadataSample).
 
 ### Step by step.
 
