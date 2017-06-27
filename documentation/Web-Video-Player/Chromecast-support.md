@@ -121,7 +121,7 @@ The Player Mobile SDKs support Queuing of VOD assets. Users can be given access 
 
 ### Disconnections  
 
-If the Sender application gets accidently disconnected (e.g., the battery dies), the content will continue to be shown on the receiver (the TV). The Sender application, once reloaded, should return to its last state. The queue will be maintained.
+If the Sender application gets disconnected accidently (e.g., the device battery dies), the content will continue to be shown on the receiver (the TV). The Sender application, once reloaded, should return to its last state. The queue will be maintained.
 If the Receiver application gets accidently disconnected (e.g., the Wi-Fi issues for instance), the ed user will need to reconnect the application to Chromecast and the queue will be reset.
 
 ## Mobile SDKs – Additional Documentation  
