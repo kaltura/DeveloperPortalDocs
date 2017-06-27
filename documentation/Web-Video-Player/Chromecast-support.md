@@ -53,12 +53,11 @@ The Chromecast Sender application represents the application that is responsible
 Kaltura uses a Custom Receiver, which is a custom-built HTML5 that can also stream files that use DRM. The receiver TV, depending on the status of the Chromecast connection, displays the following screens:
 
 **Content Loading – The Receiver application is loaded and connected and is now loading the video**
-
-(`![Content Loading](https://vpaas.kaltura.com/documentation/Web-Video-Player/images/chromcast3.png)`)
+![Content Loading](https://vpaas.kaltura.com/documentation/Web-Video-Player/images/chromcast3.png)
 
 **Content Playing – The Receiver application is loaded, connected and playing**
 
-(`![Content Playing](https://vpaas.kaltura.com/documentation/Web-Video-Player/images/chromcast4.png)`)
+![Content Playing](https://vpaas.kaltura.com/documentation/Web-Video-Player/images/chromcast4.png)
 
 #### Customizing the Receiver Application  
 
