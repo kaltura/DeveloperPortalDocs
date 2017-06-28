@@ -89,7 +89,7 @@ To configure the player to use IMA Plugin, add the following configuration to yo
 >swift
 
 ```swift
-let adsConfig = AdsConfig()
+let adsConfig = IMAConfig()
 adsConfig.set(adTagUrl: 'your ad tag url')
 playerConfig.plugins[IMAPlugin.pluginName] = adsConfig
 ```
@@ -97,7 +97,7 @@ playerConfig.plugins[IMAPlugin.pluginName] = adsConfig
 >objc
 
 ```objc
-AdsConfig *adsConfig = [AdsConfig new];
+AdsConfig *adsConfig = [IMAConfig new];
 adsConfig.adTagUrl = @"https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/3274935/preroll&impl=s&gdfp_req=1&env=vp&output=xml_vast2&unviewed_position_start=1&url=[referrer_url]&description_url=[description_url]&correlator=[timestamp]";
 [config setPlugins: @{IMAPlugin.pluginName: adsConfig}];
 ```
@@ -185,12 +185,12 @@ Use the following code to listen to ad events:
 >swift
 
 ```swift
-let events: [PKEvent.Type] = [AdEvents.adDidRequestPause, AdEvents.adDidRequestResume]
+let events: [PKEvent.Type] = [AdEvent.adDidRequestPause, AdEvent.adDidRequestResume]
 
 player.addObserver(self, events: events) { event in
-    if event is AdEvents.adDidRequestResume {
+    if event is AdEvent.adDidRequestResume {
         // handle adDidRequestResume
-    } else if event is AdEvents.adDidRequestPause {
+    } else if event is AdEvent.adDidRequestPause {
         // handle adDidRequestPause
     }
 })
@@ -199,12 +199,12 @@ player.addObserver(self, events: events) { event in
 >objc
 
 ```objc
-NSArray *events = @[AdEvents.adDidRequestPause, AdEvents.adDidRequestResume];
+NSArray *events = @[AdEvent.adDidRequestPause, AdEvent.adDidRequestResume];
         
 [self.player addObserver:self events: events block:^(PKEvent * _Nonnull event) {
-    if ([event isKindOfClass: AdEvents.adDidRequestResume]) {
+    if ([event isKindOfClass: AdEvent.adDidRequestResume]) {
         // handle adDidRequestResume
-    } else if ([event isKindOfClass: AdEvents.adDidRequestPause]) {
+    } else if ([event isKindOfClass: AdEvent.adDidRequestPause]) {
         // handle adDidRequestPause
     }
 }];
