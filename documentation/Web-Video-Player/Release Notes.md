@@ -41,17 +41,20 @@ Audio tracks management – Added the option to define the default audio track. 
 
 ## Release 2.54  
 
+
 ### What's New  
 
 Chromecast upgrade – The Web Receiver and sender to Google’s latest SDKs (CAST V3) has been upgraded..
 
 ## Release 2.53.2  
 
+
 ### What's New  
 
 360 Videos – 360 video tagging added to the 360 video ingestion process for web and mobile web. See [Kaltura 360 Video Player Support](https://knowledge.kaltura.com/node/1813) for more information.
 
 ## Release 2.53  
+
 
 ### What's New  
 
@@ -66,6 +69,7 @@ Version 2.52 was released as a maintenance vesion.
 
 ## Release 2.51  
 
+
 ### What's New  
 
 * Automatic Player Update – New studio players will now be updated automatically to the latest available player version. Customers will still be able to choose to keep their current player version and to update manually when they want.
@@ -77,6 +81,7 @@ Version 2.52 was released as a maintenance vesion.
 Version 2.50 was released as a maintenance vesion.
 
 ## Release 2.49  
+
 
 ### What's New  
 
@@ -96,6 +101,7 @@ See the [Kaltura Player Capabilities Matrix](https://knowledge.kaltura.com/kaltu
 
 ## Release 2.47  
 
+
 ### What's New  
 
 * Offline WebVTT on Android  - WebVTT captions for offline playback are now available on Android, for Android versions 4.3 and up. See the [Kaltura Player Capabilities Matrix](https://knowledge.kaltura.com/kaltura-player-capabilities-matrix) for a full Matrix of WebVTT support.
@@ -103,6 +109,7 @@ See the [Kaltura Player Capabilities Matrix](https://knowledge.kaltura.com/kaltu
 * Safari on iOS10 - Fairplay DRM on Safari is now supported on iOS10. See the [Kaltura Player Capabilities Matrix](https://knowledge.kaltura.com/kaltura-player-capabilities-matrix) for a full Matrix of DRM support.
 
 ## Release 2.46  
+
 
 ### What's New  
 
@@ -115,6 +122,7 @@ See the [Kaltura Player Capabilities Matrix](https://knowledge.kaltura.com/kaltu
 * Audio Selector in the Kaltura v2 Player - Use to enable multiple audio tracks on the player from the Player Studio.
 
 ## Release 2.45  
+
 
 ### What's New  
 
