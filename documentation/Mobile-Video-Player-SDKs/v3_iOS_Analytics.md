@@ -223,21 +223,21 @@ case ERROR = 99
 
 ## TVPAPI Analytics Plugin
 
-This section describes the steps required for using the TVPAPI Stats Plugin on iOS devices to get statistical information on the device, as well as the events supported by the plugin.
+This section describes the steps required for using the TVPAPI analytics plugin on iOS devices to get statistical information on the device, as well as the events supported by the plugin.
 
 <details><summary>Get Started With TVPAPI Plugin</summary><p>
 
-### Enabling the TVPAPI Stats Plugin for the Kaltura Video Player  
+### Enabling the TVPAPI Analytics Plugin for the Kaltura Video Player  
 
-To enable the TVPAPI Stats Plugin on iOS devices for the Kaltura Video Player, add the following line to your Podfile: 
+To enable the TVPAPI analytics plugin on iOS devices for the Kaltura Video Player, add the following line to your Podfile: 
 
 ```ruby
 pod 'PlayKit/PhoenixPlugin'
 ```
 
-### Register the TVPAPI Stats Plugin  
+### Register the TVPAPI Analytics Plugin  
 
-Register the TVPAPI Stats Plugin in your application as follows:
+Register the TVPAPI analytics plugin in your application as follows:
 
 >swift
 
@@ -257,28 +257,25 @@ PlayKitManager.shared.registerPlugin(TVPAPIAnalyticsPlugin.self)
 
 ```swift
 // config params, defaults values, insert your data instead
-let tvpapiPluginParams: [String: Any] = [
-    "fileId": "",
-    "baseUrl": "",
-    "timerInterval": 30,
-    "initObj": [
-        "Token": "",
-        "SiteGuid": "",
-        "ApiUser": "",
-        "DomainID": "",
-        "UDID": "",
-        "ApiPass": "",
-        "Locale": [
-            "LocaleUserState": "",
-            "LocaleCountry": "",
-            "LocaleDevice": "",
-            "LocaleLanguage": ""
-        ],
-        "Platform": ""
-    ]
-]
-// create analytics config with the created params
-let tvpapiPluginConfig = AnalyticsConfig(params: tvpapiPluginParams)
+let initObject: [String: Any] =  [
+            "Token": "",
+            "SiteGuid": "",
+            "ApiUser": "",
+            "DomainID": "",
+            "UDID": "",
+            "ApiPass": "",
+            "Locale": [
+                "LocaleUserState": "",
+                "LocaleCountry": "",
+                "LocaleDevice": "",
+                "LocaleLanguage": ""
+            ],
+            "Platform": ""
+        ]
+         
+let tvpapiPluginConfig = TVPAPIAnalyticsPluginConfig(baseUrl: "",
+                                               timerInterval: 30,
+                                                  initObject: initObject)
 // create config dictionary
 let config = [TVPAPIAnalyticsPlugin.pluginName: tvpapiPluginConfig]
 // create plugin config object
@@ -290,29 +287,26 @@ let player = PlayKitManager.shared.loadPlayer(pluginConfig: pluginConfig)
 >objc
 
 ```objc
-// config params, defaults values, insert your data instead
-NSDictionary *tvpapiPluginParams = @{
-                                     @"fileId": @"",
-                                     @"baseUrl": @"",
-                                     @"timerInterval": @30,
-                                     @"initObj": @{
-                                                  @"Token": @"",
-                                                  @"SiteGuid": @"",
-                                                  @"ApiUser": @"",
-                                                  @"DomainID": @"",
-                                                  @"UDID": @"",
-                                                  @"ApiPass": @"",
-                                                  @"Locale": @{
-                                                              @"LocaleUserState": @"",
-                                                              @"LocaleCountry": @"",
-                                                              @"LocaleDevice": @"",
-                                                              @"LocaleLanguage": @""
-                                                              },
-                                                 @"Platform": @""
-                                                 }
-                                     };
-// create analytics config with the created params                                               
-AnalyticsConfig *tvpapiPluginConfig = [[AnalyticsConfig alloc] initWithParams:tvpapiPluginParams];
+NSDictionary *initObject = @{
+                             @"Token": @"",
+                             @"SiteGuid": @"",
+                             @"ApiUser": @"",
+                             @"DomainID": @"",
+                             @"UDID": @"",
+                             @"ApiPass": @"",
+                             @"Locale": @{
+                                     @"LocaleUserState": @"",
+                                     @"LocaleCountry": @"",
+                                     @"LocaleDevice": @"",
+                                     @"LocaleLanguage": @""
+                                     },
+                             @"Platform": @""
+                             }];
+
+// config params, defaults values, insert your data instead                                              
+TVPAPIAnalyticsPluginConfig *tvpapiPluginConfig = [[TVPAPIAnalyticsPluginConfig alloc] initWithBaseUrl:@""
+                                                                                         timerInterval:30.0f
+                                                                                            initObject:initObject];
 // create config dictionary
 NSMutableDictionary *config = [NSMutableDictionary dictionary];
 // set the created config to the plugin name key in the dictionary
