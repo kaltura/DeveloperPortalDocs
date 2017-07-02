@@ -97,9 +97,9 @@ self.player = [PlayKitManager.sharedInstance loadPlayerWithPluginConfig:pluginCo
 
 </p></details> 
 
-## Kaltura Stats Plugin + Kaltura Live Stats Plugin Configuration 
+## Kaltura Stats Plugin
 
-This section describes the steps required for using the Kaltura stats plugin or live stats plugin. 
+This section describes the steps required for using the Kaltura stats plugin. 
 
 <details><summary>Get Started With Kaltura Stats + Live Stats</summary><p>
 
@@ -125,15 +125,9 @@ PlayKitManager.shared.registerPlugin(KalturaStatsPlugin.self)
 
 ```swift
 // config params, defaults values, insert your data instead
-let kalturaStatsPluginParams: [String: Any] = [
-   "sessionId": "",
-   "uiconfId": 0,
-   "baseUrl": "",
-   "partnerId": 0,
-   "timerInterval": 30                                          
-]
-// create analytics config with the created params
-let kalturaStatsConfig = AnalyticsConfig(params: kalturaStatsPluginParams)
+let kalturaStatsConfig = KalturaStatsPluginConfig(uiconfId: 0,
+                                                 partnerId: 0,
+                                                   entryId: "")
 // create config dictionary
 let config = [KalturaStatsPlugin.pluginName: kalturaStatsConfig]
 // create plugin config object
@@ -145,20 +139,14 @@ let player = PlayKitManager.shared.loadPlayer(pluginConfig: pluginConfig)
 >objc
 
 ```objc
-// config params, defaults values, insert your data instead
-NSDictionary *kalturaStatsPluginParams = @{
-                                           @"sessionId": @"",
-                                           @"uiconfId": @0,
-                                           @"baseUrl": @"",
-                                           @"partnerId": @0,
-                                           @"timerInterval": @30
-                                           };
-// create analytics config with the created params                                               
-AnalyticsConfig *kalturaStatsConfig = [[AnalyticsConfig alloc] initWithParams:kalturaStatsPluginParams];
+// config params, defaults values, insert your data instead                     
+KalturaStatsPluginConfig *kalturaStatsConfig = [[KalturaStatsPluginConfig alloc] initWithUiconfId:0
+                                                                                        partnerId:0
+                                                                                          entryId:@""];
 // create config dictionary
 NSMutableDictionary *config = [NSMutableDictionary dictionary];
 // set the created config to the plugin name key in the dictionary
-config[KalturaLiveStatsPlugin.pluginName] = kalturaStatsConfig;
+config[KalturaStatsPlugin.pluginName] = kalturaStatsConfig;
 // create plugin config object
 PluginConfig *pluginConfig = [[PluginConfig alloc] initWithConfig:config];
 // load the player with the created plugin config
