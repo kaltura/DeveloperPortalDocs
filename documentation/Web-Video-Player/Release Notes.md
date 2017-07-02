@@ -8,6 +8,7 @@ Web Video Player v.3.0 - expected to be released later this year - stay tuned!
 
 | Release | Date Released   | Details |
 |---------|-----------------|---------|
+| 2.58    | July 2, 2017   | [Details](Release%20Notes.md#release-258)|
 | 2.56    | May 21, 2017   | [Details](Release%20Notes.md#release-256)|
 | 2.55    | Apr. 23, 2017   | [Details](Release%20Notes.md#release-255) |
 | 2.54    | Mar. 12, 2017   | [Details](Release%20Notes.md#release-254) |
@@ -21,6 +22,12 @@ Web Video Player v.3.0 - expected to be released later this year - stay tuned!
 | 2.47    | August 29, 2016 | [Details](Release%20Notes.md#release-247) |
 | 2.46    | July 31, 2016   | [Details](Release%20Notes.md#release-246) |
 | 2.45    | July 03, 2016   | [Details](Release%20Notes.md#release-245) |
+
+
+## Release 2.58  
+
+* The Shaka Playback Engine has been upgraded to version 2.1.3
+* The Player has been upgraded to the latest Comscore version
 
 ## Release 2.56
 
