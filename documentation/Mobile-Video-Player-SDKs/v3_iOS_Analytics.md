@@ -29,7 +29,9 @@ You'll need to set up an account in http://www.youbora.com and then set the acco
 
 For extra information on YouboraPlugin options dictionary visit [developer portal](http://developer.nicepeopleatwork.com/plugins/general/setting-youbora-options/)
 
-<details><summary>Get Started With Youbora Plugin</summary><p>
+<details><summary>Get Started With Youbora Plugin</summary>
+
+<p>
 
 To enable the Youbora Stats Plugin on iOS devices for the Kaltura Video Player, add the following line to your Podfile: 
 
@@ -335,7 +337,7 @@ To enable the phoenix analytics plugin on iOS devices for the Kaltura Video Play
 pod 'PlayKit/PhoenixPlugin'
 ```
 
-### Register the Phoenix Stats Plugin  
+### Register the Phoenix Analytics Plugin  
 
 Register the phoenix analytics plugin in your application as follows:
 
@@ -356,18 +358,13 @@ PlayKitManager.shared.registerPlugin(PhoenixAnalyticsPlugin.self)
 >swift
 
 ```swift
-// config params, defaults values, insert your data instead
-let phoenixPluginParams = [
-    "fileId": "",
-    "baseUrl": "",
-    "ks": "",
-    "partnerId": 0,
-    "timerInterval": 30
+// set config. this are defaults values, insert your data instead
+let config = [
+    PhoenixAnalyticsPlugin.pluginName: PhoenixAnalyticsPluginConfig(baseUrl: "",
+                                                              timerInterval: 30,
+                                                                         ks: "",
+                                                                  partnerId: 0)
 ]
-// create analytics config with the created params
-let phoenixPluginConfig = AnalyticsConfig(params: phoenixPluginParams)
-// create config dictionary
-let config = [PhoenixAnalyticsPlugin.pluginName: phoenixPluginConfig]
 // create plugin config object
 let pluginConfig = PluginConfig(config: config)
 // load the player with the created plugin config
@@ -377,20 +374,13 @@ let player = PlayKitManager.shared.loadPlayer(pluginConfig: pluginConfig)
 >objc
 
 ```objc
-// config params, defaults values, insert your data instead
-NSDictionary *phoenixPluginParams = @{
-                                      @"fileId": @"",
-                                      @"baseUrl": @"",
-                                      @"ks": @"",
-                                      @"partnerId": @0,
-                                      @"timerInterval": @30
-                                      };
-// create analytics config with the created params                                               
-AnalyticsConfig *phoenixPluginConfig = [[AnalyticsConfig alloc] initWithParams:phoenixPluginParams];
 // create config dictionary
 NSMutableDictionary *config = [NSMutableDictionary dictionary];
-// set the created config to the plugin name key in the dictionary
-config[PhoenixAnalyticsPlugin.pluginName] = phoenixPluginConfig;
+// set config. this are defaults values, insert your data instead
+config[PhoenixAnalyticsPlugin.pluginName] = [[PhoenixAnalyticsPluginConfig alloc] initWithBaseUrl:@""
+                                                                                    timerInterval:30.0f
+                                                                                               ks:@""
+                                                                                        partnerId:0];
 // create plugin config object
 PluginConfig *pluginConfig = [[PluginConfig alloc] initWithConfig:config];
 // load the player with the created plugin config
