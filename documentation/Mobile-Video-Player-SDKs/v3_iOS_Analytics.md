@@ -101,9 +101,7 @@ self.player = [PlayKitManager.sharedInstance loadPlayerWithPluginConfig:pluginCo
 
 This section describes the steps required for using the Kaltura stats plugin. 
 
-<details><summary>Get Started With Kaltura Stats + Live Stats</summary><p>
-
-`KalturaStatsPlugin` will be used in the code sample but the same configuration applies for `KalturaLiveStatsPlugin` just replace the class.
+<details><summary>Get Started With Kaltura Stats</summary><p>
 
 ### Register the plugin
 
@@ -125,11 +123,11 @@ PlayKitManager.shared.registerPlugin(KalturaStatsPlugin.self)
 
 ```swift
 // config params, defaults values, insert your data instead
-let kalturaStatsConfig = KalturaStatsPluginConfig(uiconfId: 0,
-                                                 partnerId: 0,
-                                                   entryId: "")
+let KalturaStatsPluginConfig = KalturaStatsPluginConfig(uiconfId: 0,
+                                                        partnerId: 0,
+                                                        entryId: "")
 // create config dictionary
-let config = [KalturaStatsPlugin.pluginName: kalturaStatsConfig]
+let config = [KalturaStatsPlugin.pluginName: KalturaStatsPluginConfig]
 // create plugin config object
 let pluginConfig = PluginConfig(config: config)
 // load the player with the created plugin config
@@ -146,7 +144,7 @@ KalturaStatsPluginConfig *kalturaStatsConfig = [[KalturaStatsPluginConfig alloc]
 // create config dictionary
 NSMutableDictionary *config = [NSMutableDictionary dictionary];
 // set the created config to the plugin name key in the dictionary
-config[KalturaStatsPlugin.pluginName] = kalturaStatsConfig;
+config[KalturaStatsPlugin.pluginName] = KalturaStatsPluginConfig;
 // create plugin config object
 PluginConfig *pluginConfig = [[PluginConfig alloc] initWithConfig:config];
 // load the player with the created plugin config
@@ -205,6 +203,61 @@ case POSTROLL_50 = 39
 case POSTROLL_75 = 40
 case ERROR = 99
 }
+```
+
+</p></details>
+
+## Kaltura Live Stats Plugin
+
+This section describes the steps required for using the Kaltura live stats plugin. 
+
+<details><summary>Get Started With Kaltura Live Stats</summary><p>
+
+### Register the plugin
+
+>swift
+
+```swift
+PlayKitManager.shared.registerPlugin(KalturaLiveStatsPlugin.self)
+```
+
+>objc
+
+```objc
+[PlayKitManager.sharedInstance registerPlugin:KalturaLiveStatsPlugin.self];
+```
+
+### Create a config and load player
+
+>swift
+
+```swift
+// config params, defaults values, insert your data instead
+let kalturaLiveStatsPluginConfig = KalturaLiveStatsPluginConfig(entryId: "",
+                                                              partnerId: 0)
+// create config dictionary
+let config = [KalturaLiveStatsPlugin.pluginName: kalturaLiveStatsPluginConfig]
+// create plugin config object
+let pluginConfig = PluginConfig(config: config)
+// load the player with the created plugin config
+let player = PlayKitManager.shared.loadPlayer(pluginConfig: pluginConfig)
+```
+
+>objc
+
+```objc
+// config params, defaults values, insert your data instead                     
+KalturaLiveStatsPluginConfig *kalturaLiveStatsPluginConfig = [[KalturaLiveStatsPluginConfig alloc] initWithUiconfId:0
+                                                                                                          partnerId:0
+                                                                                                            entryId:@""];
+// create config dictionary
+NSMutableDictionary *config = [NSMutableDictionary dictionary];
+// set the created config to the plugin name key in the dictionary
+config[KalturaLiveStatsPlugin.pluginName] = kalturaLiveStatsPluginConfig;
+// create plugin config object
+PluginConfig *pluginConfig = [[PluginConfig alloc] initWithConfig:config];
+// load the player with the created plugin config
+self.player = [PlayKitManager.sharedInstance loadPlayerWithPluginConfig:pluginConfig];
 ```
 
 </p></details>
