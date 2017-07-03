@@ -160,50 +160,82 @@ if (!error) {
 
 >Note: To learn more about player config creation, see the [PlayerConfig Doc](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/Mobile-Video-Player-SDKs/v3_iOS_PlayerConfig.md) article.
 
-### Setting the Player View Size  
+### Setting The Player View  
 
-1. Create a player container: 
+The `Player` holds a weak reference on the view and it is the app responsibility to hold reference to it based on the needs.
+
+1. Using `IBOutlet`: 
 
 >swift
 
 ```swift
-@IBOutlet weak var playerContainer: UIView!
+@IBOutlet weak var playerView: PlayerView!
+
+// when loading the `Player` object:
+do {
+    player = try PlayKitManager.shared.loadPlayer(pluginConfig: nil)
+    // setup the player's view
+    player.view = self.playerView
+} catch let e as NSError {
+    // error loading the player
+}
 ```
 
 >objc
 
 ```objc
-@property (weak, nonatomic) IBOutlet UIView *playerContainer;
+@property (weak, nonatomic) IBOutlet PlayerView *playerView;
+
+// when loading the `Player` object:
+NSError *error = nil;
+self.player = [[PlayKitManager sharedInstance] loadPlayerWithPluginConfig:nil error:&error];
+// make sure player loaded
+if (!error) {
+    // setup the player's view
+    self.player.view = self.playerView;
+} else {
+    // error loading the player
+}
 ```
 
-2. The way we recommand setting player's view is:
+2. Adding to a container view:
 
 >swift
 
 ```swift
-self.player.view.add(toContainer: self.playerContainer)
+PlayerView.createPlayerView(forPlayer: player).add(toContainer: self.playerContainer)
 ```
 
 >objc
 
 ```objc
-[self.player.view addToContainer:self.playerContainer];
+[[PlayerView createPlayerViewForPlayer:player] addToContainer:self.playerContainer];
 ```
 
->Note: You can also use the player view frame if needed:
+3. Adding player view manually:
 
 >swift
 
 ```swift
-self.player.view.frame = playerContainer.bounds
-playerContainer.addSubview(self.player.view)
+let playerView = PlayerView()
+player.view = playerView
+// add subview to the view you want, make sure the view is inside the view heirarchy.
+// if for any reason you don't add as subview at this stage, 
+// make sure to add property to hold a strong reference to the playerView object.
+self.view.addSubview(playerView)
+player.view.frame = // the frame you want to set
 ```
 
 >objc
 
 ```objc
-self.player.view.frame = CGRectMake(0, 0, self.playerContainer.frame.size.width,self.playerContainer.frame.size.height);   
-[self.playerContainer addSubview:self.player.view];
+PlayerView *playerView = [[PlayerView alloc] init];
+player.view = playerView;
+// add subview to the view you want, make sure the view is inside the view heirarchy.
+// if for any reason you don't add as subview at this stage, 
+// make sure to add property to hold a strong reference to the playerView object.
+[self.view addSubview:playerView];
+player.view.frame = // the frame you want to set
 ```
 
 ### Adding Custom Buttons and Controls to the Player  
