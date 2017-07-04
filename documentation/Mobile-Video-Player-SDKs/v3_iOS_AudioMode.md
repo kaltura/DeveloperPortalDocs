@@ -47,6 +47,8 @@ if let _ = audioSessionInitialCategory {
 }
 ```
 
+For more information about this issue see [Apple's Doc](https://developer.apple.com/library/content/documentation/Audio/Conceptual/AudioSessionProgrammingGuide/AudioSessionBasics/AudioSessionBasics.html)
+
 
 ## Have Questions or Need Help?
 
