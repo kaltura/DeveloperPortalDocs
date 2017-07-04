@@ -11,6 +11,8 @@ The AVAudioSession enables you to play audio (essentially any sound) even when t
 1. When you begin playing the video, keep the initial category value of AVAudioSession aside.
 2. Change the actual category value to AVAudioSessionCategoryPlayback as follows:
 
+> Note: Should be done on `AppDelegate`
+
 ```swift
 var audioSessionInitialCategory: String?
 
