@@ -13,6 +13,16 @@ The AVAudioSession enables you to play audio (essentially any sound) even when t
 
 > Note: Should be done on `AppDelegate`
 
+> ObjC
+
+```objc
+NSError *sessionError = nil;
+    [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:&sessionError];
+```
+
+
+> Swift
+
 ```swift
 var audioSessionInitialCategory: String?
 
