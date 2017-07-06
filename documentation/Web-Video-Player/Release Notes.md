@@ -27,7 +27,7 @@ Web Video Player v.3.0 - expected to be released later this year - stay tuned!
 ## Release 2.58  
 
 * The Shaka Playback Engine has been upgraded to version 2.1.3
-* The Player has been upgraded to the latest Comscore version
+* The Comscore analytics plugin has been upgraded to the latest Comscore version
 
 ## Release 2.56
 
