@@ -8,6 +8,7 @@ Web Video Player v.3.0 - expected to be released later this year - stay tuned!
 
 | Release | Date Released   | Details |
 |---------|-----------------|---------|
+| 2.59    | July 30, 2017   | [Details](Release%20Notes.md#release-259)|
 | 2.58    | July 2, 2017   | [Details](Release%20Notes.md#release-258)|
 | 2.56    | May 21, 2017   | [Details](Release%20Notes.md#release-256)|
 | 2.55    | Apr. 23, 2017   | [Details](Release%20Notes.md#release-255) |
@@ -23,6 +24,12 @@ Web Video Player v.3.0 - expected to be released later this year - stay tuned!
 | 2.46    | July 31, 2016   | [Details](Release%20Notes.md#release-246) |
 | 2.45    | July 03, 2016   | [Details](Release%20Notes.md#release-245) |
 
+
+## Release 2.59  
+
+* Mobile Autoplay: The Kaltura Player now supports autoplay on mobile web browsers for both iOS and Android. Playback will begin muted and the sound will be turned on upon any user interaction. For more information, please see [Mobile Player Support on Kaltura Player](https://knowledge.kaltura.com/node/1900).
+* VR Support on Android Devices: The Kaltura Player now supports VR headsets on Android browsers. For more information, please see [Kaltura 360 and VR Video Player Support](https://knowledge.kaltura.com/node/1813).
+* Yoboura plugin upgrade: The Youbora QoE plugin has been updated to the latest version 5.4.5-1.0.0.
 
 ## Release 2.58  
 
