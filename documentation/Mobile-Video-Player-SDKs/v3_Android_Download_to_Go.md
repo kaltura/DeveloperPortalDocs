@@ -14,7 +14,6 @@ Kaltura’s **Download to Go** suite enables the end user to download on demand 
 Download to Go’s offline mode works on all mobile and tablet devices supported by the Player SDK for the following operating systems:
 
 * Android 4.3+
-* iOS 9+
 
 ### Supported Video Formats  
 
@@ -43,14 +42,15 @@ When a media asset is downloaded, it is accompanied by additional parameters and
 
 ### DRM  
 
-Kaltura’s DTG library supports both Widevine modular and Apple Fairplay. 
+Kaltura’s DTG library supports Widevine modular. 
 
-* For iOS9 and Android 4.2.2 WV classic will be used.
+* For Android 4.2.2 WV classic will be used.
 * For DRM-encrypted items, the download process includes download of a persistent, local DRM license that enables online and offline playback according to the media asset’s purchase usage terms (e.g., purchase and license durations). The DRM license is tailored to the download stream and is managed by a local DRM agent. The DRM license is retrieved and updated only when the end user is online.
 
 ### Captions and Audio Tracks  
 
 Captions and audio tracks can be downloaded along with the asset. The application can choose to download a single audio file or multiple files.
+
 When downloading multiple files on Android, the application will be able to select languages to download (MPEG-DASH only). On iOS all languages will be downloaded automatically.
 
 ### Background Downloading  
@@ -74,6 +74,4 @@ The availability duration can be set by the application.
 
 ## Additional Information  
 
-For more information, check out these articles:
-* **Android** - https://kaltura.github.io/playkit-dtg-android/ 
-* **iOS** - https://kaltura.github.io/playkit-dtg-ios/ 
+For more information, check out this article: https://kaltura.github.io/playkit-dtg-android/ 
