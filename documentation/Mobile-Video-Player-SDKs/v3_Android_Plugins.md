@@ -2,7 +2,7 @@
 layout: page
 title: Plugins
 subcat: SDK 3.0 - Android
-weight: 500
+weight: 501
 ---
 
 This article describes the steps required for building a New Analytics Plugin for the Kaltura Video Player on Android devices.
