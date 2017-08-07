@@ -7,13 +7,12 @@ weight: 501
 
 ## Background and Motivation  
 
-Kaltura’s **Download to Go** suite enables the end user to download on demand content and store the content to a storage device so that he or she can watch the content when poor or no connectivity occurs. Following content download, the end user can watch downloaded media items offline, streamed locally from the end user’s device. This increased flexibility enables the end user to Watch content on-the-go without worrying about high data costs or lock of Internet connectivity.
+Kaltura’s **Download to Go** suite enables the end user to download on-demand content and store the content to a storage device so that he or she can watch the content when poor or no connectivity occurs. Following content download, the end user can watch downloaded media items offline, streamed locally from the end user’s device. This increased flexibility enables the end user to Watch content on-the-go without worrying about high data costs or lock of Internet connectivity.
 
 ### Supported Devices  
 
 Download to Go’s offline mode works on all mobile and tablet devices supported by the Player SDK for the following operating systems:
 
-* Android 4.3+
 * iOS 9+
 
 ### Supported Video Formats  
@@ -21,7 +20,6 @@ Download to Go’s offline mode works on all mobile and tablet devices supported
 Download to Go supports the following formats:
 
 * HLS
-* MPEG-DASH (Android only)
 
 ## Enabling Download to Go  
 
@@ -43,9 +41,9 @@ When a media asset is downloaded, it is accompanied by additional parameters and
 
 ### DRM  
 
-Kaltura’s DTG library supports both Widevine modular and Apple Fairplay. 
+Kaltura’s DTG library supports Apple Fairplay. 
 
-* For iOS9 and Android 4.2.2 WV classic will be used.
+* For iOS9 WV classic will be used.
 * For DRM-encrypted items, the download process includes download of a persistent, local DRM license that enables online and offline playback according to the media asset’s purchase usage terms (e.g., purchase and license durations). The DRM license is tailored to the download stream and is managed by a local DRM agent. The DRM license is retrieved and updated only when the end user is online.
 
 ### Captions and Audio Tracks  
@@ -74,6 +72,4 @@ The availability duration can be set by the application.
 
 ## Additional Information  
 
-For more information, check out these articles:
-* **Android** - https://kaltura.github.io/playkit-dtg-android/ 
-* **iOS** - https://kaltura.github.io/playkit-dtg-ios/ 
+For more information, check out this article: https://kaltura.github.io/playkit-dtg-ios/ 
