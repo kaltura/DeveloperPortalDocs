@@ -1,7 +1,8 @@
 ---
 layout: page
-title: Introduction to Kaltura's Download to Go Suite
-weight: 101
+title: Kaltura's Download to Go Suite for Android Devices
+subcat: SDK 3.0 - Android
+weight: 501
 ---
 
 ## Background and Motivation  
