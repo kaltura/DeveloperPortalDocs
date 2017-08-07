@@ -7,7 +7,7 @@ weight: 501
 
 ## Background and Motivation  
 
-Kaltura’s **Download to Go** suite enables the end user to download on demand content and store the content to a storage device so that he or she can watch the content when poor or no connectivity occurs. Following content download, the end user can watch downloaded media items offline, streamed locally from the end user’s device. This increased flexibility enables the end user to Watch content on-the-go without worrying about high data costs or lock of Internet connectivity.
+Kaltura’s **Download to Go** suite enables the end user to download on-demand content and store the content to a storage device so that he or she can watch the content when poor or no connectivity occurs. Following content download, the end user can watch downloaded media items offline, streamed locally from the end user’s device. This increased flexibility enables the end user to Watch content on-the-go without worrying about high data costs or lock of Internet connectivity.
 
 ### Supported Devices  
 
