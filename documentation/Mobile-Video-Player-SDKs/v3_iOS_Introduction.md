@@ -46,7 +46,6 @@ This guide assumes that you have the necessary Objective C or Swift and iOS deve
 |                                                     **Quick Start** Create a Simple Video Application                                                   |       Detailed technical iOS API documentation      |
 
 
-</br>
-## Have Questions or Need Help?
+## Have Questions or Need Help?  
 
 Check out the [Kaltura Player SDK Forum](https://forum.kaltura.org/c/playkit) page for different ways of getting in touch.
