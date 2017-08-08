@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Kaltura's Download to Go Suite for Android Devices
+title: Kaltura's Download to Go Suite for iOS Devices
 subcat: SDK 3.0 - iOS
 weight: 515
 ---
