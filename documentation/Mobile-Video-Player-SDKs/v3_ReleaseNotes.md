@@ -11,9 +11,7 @@ weight: 101
 
 ## SDK 3.1.0  
 
-A new version of Download to Go (DTG) has been released for both Android and iOS. Documentation is available here:
-* [Download to Go for Android Devices](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/v3_Android_Download_to_Go.html)
-* [Download to Go for iOS Devices](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/v3_iOS_Download_to_Go.html)
+Release 3.10 is a maintenance release.
 
 
 
