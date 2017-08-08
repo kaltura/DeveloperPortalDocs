@@ -57,7 +57,7 @@ player.removeObserver(self, events: [PlayerEvent.playing])
 [self.player removeObserver:self events:@[PlayerEvent.playing]];
 ```
 
->Note: To get a complete list of supported player events, refer to the [Player Events page](https://kaltura.github.io/playkit/api/ios/Classes/PlayerEvents.html).
+>Note: To get a complete list of supported player events, refer to the [Player Events page](http://cocoadocs.org/docsets/PlayKit/3.1.2/Classes/PlayerEvent.html).
 
 ### Observing States  
 
@@ -101,7 +101,7 @@ func addEvents() {
 }
 ```
 
->Note: To get a complete list of supported player states, refer to the [Player States page](https://kaltura.github.io/playkit/api/ios/Enums/PlayerState.html).
+>Note: To get a complete list of supported player states, refer to the [Player States page](http://cocoadocs.org/docsets/PlayKit/3.1.2/Enums/PlayerState.html).
 
 ### Observing Timed Metadata
 
