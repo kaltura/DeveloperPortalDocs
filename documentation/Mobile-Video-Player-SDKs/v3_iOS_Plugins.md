@@ -40,7 +40,7 @@ The plugin configuration is passed via the `load` function, will be explained la
 
 ## Building Plugins  
 
-To build plugins, create a class that implements the [PKPlugin Protocol](https://kaltura.github.io/playkit/api/ios/Protocols/PKPlugin.html):
+To build plugins, create a class that implements the [PKPlugin Protocol](http://cocoadocs.org/docsets/PlayKit/3.1.2/Protocols/PKPlugin.html):
 
 >swift
 
