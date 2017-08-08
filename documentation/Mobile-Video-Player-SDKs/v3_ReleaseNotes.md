@@ -11,7 +11,7 @@ weight: 101
 
 ## SDK 3.1.0  
 
-Release 3.10 is a maintenance release.
+Release 3.1.0 is a maintenance release.
 
 
 
