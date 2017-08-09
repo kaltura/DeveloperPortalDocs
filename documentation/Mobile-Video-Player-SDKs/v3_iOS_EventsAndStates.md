@@ -57,7 +57,7 @@ player.removeObserver(self, events: [PlayerEvent.playing])
 [self.player removeObserver:self events:@[PlayerEvent.playing]];
 ```
 
->Note: To get a complete list of supported player events, refer to the [Player Events page](http://cocoadocs.org/docsets/PlayKit/3.1.2/Classes/PlayerEvent.html).
+>Note: To get a complete list of supported player events, refer to the technical documentation in our [cocoapods page](https://cocoapods.org/?q=playkit).
 
 ### Observing States  
 
