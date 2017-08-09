@@ -7,23 +7,22 @@ weight: 100
 Introduction – focus of the Player is on performance (1), and then on the fact that’s it modular – enables working with different backends not only Kaltura’s backend. Easier to work with plugins.
 Code samples, how to work with player – like the SDK work we did.
 Unlike SDK, not only for developers but all users – like we have today on Audio Tracks.
-No studio for initial release – need to be clear how they do all the work without the Studio – captions, etc.
-List of player flashvars
-List of error messages
-
-
 
 Kaltura's Web Video Player is an easy-to-use, powerful, flexible video platform, which is designed to enable you to deliver videos on your website quickly and easily, allowing you to reach viewers, engage them, and maximize your revenue. Moreover, the Kaltura Web Video Player technology is designed to ensure that the videos on your site will start quickly and stream smoothly. 
 
-Kaltura's Web Video Player leads the industry in flexibility, ease of customization, plug-in offerings and loading speed. All of the Kaltura Web Video Player features are supported on both HTML5 and Flash using the same configuration, which makes feature integration across platforms simple and easy. 
+Kaltura's Web Video Player leads the industry in performance, loading speed, flexibility, ease of customization, and plugin offerings. All of Web Video Player features are supported on both HTML5 and Flash using the same configuration, which makes feature integration across platforms simple and easy. 
 
 {% onebox http://cdnapi.kaltura.com/p/243342/sp/24334200/embedIframeJs/uiconf_id/20540612/partner_id/243342?iframeembed=true&playerId=kaltura_player&entry_id=1_sf5ovm7u&flashvars[streamerType]=auto %}
 
-Note that the easiest way to use Kaltura's Web Video Player is to build a player using [Kaltura's Universal Studio](https://knowledge.kaltura.com/node/1148), which provides a user-friendly UI for building and customizing the player. 
+The easiest way to use Kaltura's Web Video Player is to build a player using [Kaltura's Universal Studio](https://knowledge.kaltura.com/node/1148), which provides a user-friendly UI for building and customizing the player. 
+
+>Note: In this initial release, the Kaltura Player Studio is not supported; therefore, all actions that are generally created used the Studio (such as captions, audio, etc.) are created xxxxxxx.
+
+
 
 ## Kaltura's Web Video Player Toolkit    
 
-Kaltura's Web Video Player toolkit enables users to deliver videos with HTML5 and provide the fastest viewing experience on any device, while maintaining all of the same features and a consistent CSS/HTML player design. The toolkit enables delivery of HTML5 with Chromeless components for iOS and Android.
+Kaltura's Web Video Player toolkit enables users to deliver videos with HTML5 and provide the fastest viewing experience on any device, while maintaining all of the same features and a consistent CSS/HTML player design. The toolkit enables delivery of HTML5 with Chromeless components for iOS and Android. 
 
 ## Key Advantages of the Kaltura Web Video Player  
 
@@ -66,7 +65,7 @@ You get the best in class performance of all your features, without delays as in
 
 ### Cross-Platform Support  
 
-Our HTML5 video library provides you with the most advanced mobile delivery technology stack available today. Our smart-player technology delivers the right player, stream, and advertising to the right device anywhere, with just a single embed code. You can extend the functionality of both Flash and HTML5 players with our Unified development API:
+Our HTML5 video library provides you with the most advanced mobile delivery technology stack available today. Our smart-player technology delivers the right player, stream, and advertising to the right device anywhere, with just a single embed code:
 
 * Single player framework wraps, native iOS, native Android, and HTML5
 * Enables you to deliver features such as DRM, offline viewing, adaptive streaming, via native or plugin components, while still leveraging single unified configuration and the same player platform cross-devices
