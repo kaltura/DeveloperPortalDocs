@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Browsers and Mobile Devices Tested With Kaltura Players
+title: Browsers and Mobile Devices Tested with Kaltura Players
 weight: 403
 ---
 
