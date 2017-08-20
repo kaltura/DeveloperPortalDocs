@@ -6,13 +6,19 @@ weight: 101
 
 | Release | Date Released   | Details |
 |---------|-----------------|---------|
+| 3.1.3   | August 13, 2017   | [Details](Release%20Notes.md#release-313)|
 | 3.1.0   | July 30, 2017   | [Details](Release%20Notes.md#release-310)|
 | 3.0.0   | July 2, 2017   | [Details](Release%20Notes.md#release-300)|
+
+
+## SDK 3.1.3  
+
+Version 3.1.3 is a maintenance version.
+
 
 ## SDK 3.1.0  
 
 Release 3.1.0 is a maintenance release.
-
 
 
 ## SDK 3.0.0  
