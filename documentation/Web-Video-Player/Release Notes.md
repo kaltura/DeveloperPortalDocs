@@ -8,6 +8,7 @@ Web Video Player v.3.0 - expected to be released later this year - stay tuned!
 
 | Release | Date Released   | Details |
 |---------|-----------------|---------|
+| 2.60.2    | August 17, 2017   | [Details](Release%20Notes.md#release-2602)|
 | 2.59    | July 30, 2017   | [Details](Release%20Notes.md#release-259)|
 | 2.58    | July 2, 2017   | [Details](Release%20Notes.md#release-258)|
 | 2.56    | May 21, 2017   | [Details](Release%20Notes.md#release-256)|
@@ -24,6 +25,12 @@ Web Video Player v.3.0 - expected to be released later this year - stay tuned!
 | 2.46    | July 31, 2016   | [Details](Release%20Notes.md#release-246) |
 | 2.45    | July 03, 2016   | [Details](Release%20Notes.md#release-245) |
 
+
+## Release 2.60.2  
+
+* CAP Support: The Kaltura Player now supports .CAP caption files. .CAP files can be uploaded via the APIs and via the Kaltura On-the-Fly Packager, which converts the captions to WebVTT.
+* Chromecast Plugin Configuration: The Chromecast plugin can now be enabled from the Player Studio. For more information, please see [Universal Studio Information - Chromecast Plugin Configuration](https://knowledge.kaltura.com/universal-studio-information-guide#Chromecast_plugin_configuration).
+* HLS.JS Upgrade: Hls.js has been upgraded to the latest version.
 
 ## Release 2.59  
 
