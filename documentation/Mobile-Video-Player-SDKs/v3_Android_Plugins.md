@@ -101,21 +101,24 @@ The MessageBus supports the following events:
 PlayerEvents
 {
  public enum Type {
-         STATE_CHANGED, //IDLE, LOADING, READY, BUFFERING;
-         CAN_PLAY,   // Sent when enough data is available that the media can be played, at least for a couple of frames. This  corresponds to the HAVE_ENOUGH_DATA readyState.
-        DURATION_CHANGE,   //  The metadata has loaded or changed, indicating a change in duration of the media. This is sent, for   example, when the media has loaded enough that the duration is known.
+        STATE_CHANGED,
+        CAN_PLAY,   // Sent when enough data is available that the media can be played, at least for a couple of frames. This corresponds to the HAVE_ENOUGH_DATA readyState.
+        DURATION_CHANGE,   //  The metadata has loaded or changed, indicating a change in duration of the media. This is sent, for example, when the media has loaded enough that the duration is known.
         ENDED,   //  Sent when playback completes.
         ERROR,   //  Sent when an error occurs. The element's error attribute contains more information. See Error handling for details.
-        LOADED_METADATA,   //  The media's metadata has finished loading; all attributes now contain as much useful information as  they're going to.
+        LOADED_METADATA,   //  The media's metadata has finished loading; all attributes now contain as much useful information as they're going to.
         PAUSE,   //  Sent when playback is paused.
-        PLAY,   //  Sent when playback of the media starts after having been paused; that is, when playback is resumed after a prior  pause event.
-        PLAYING,   //  Sent when the media begins to play (either for the first time, after having been paused, or after ending and then  restarting).
+        PLAY,   //  Sent when playback of the media starts after having been paused; that is, when playback is resumed after a prior pause event.
+        PLAYING,   //  Sent when the media begins to play (either for the first time, after having been paused, or after ending and then restarting).
         SEEKED,   //  Sent when a seek operation completes.
         SEEKING,   //  Sent when a seek operation begins.
         TRACKS_AVAILABLE, // Sent when track info is available.
         REPLAY, //Sent when replay happened.
-        PLAYBACK_PARAMS, // Sent event that notify about changes in the playback parameters. When bitrate of the video or audio track  changes or new media loaded. Holds the PlaybackParamsInfo.java object with relevant data.
-        VOLUME_CHANGED // Sent when volume is changed.
+        PLAYBACK_INFO_UPDATED, // Sent event that notify about changes in the playback parameters. When bitrate of the video or audio track changes or new media loaded. Holds the PlaybackInfo.java object with relevant data.
+        VOLUME_CHANGED, // Sent when volume is changed.
+        STOPPED, // sent when stop player api is called
+        METADATA_AVAILABLE, // Sent when there is metadata available for this entry.
+        SOURCE_SELECTED, // Sent when the source was selected.
 }
 {% endhighlight %}
 
@@ -124,7 +127,9 @@ PlayerEvents
 
 AdEvents{
 public enum Type {
+      AD_REQUESTED,
         STARTED,
+        AD_DISPLAYED_AFTER_CONTENT_PAUSE,
         PAUSED,
         RESUMED,
         COMPLETED,
@@ -139,11 +144,15 @@ public enum Type {
         AD_PROGRESS,
         AD_BREAK_STARTED,
         AD_BREAK_ENDED,
+        AD_BREAK_IGNORED,
         CUEPOINTS_CHANGED,
+        PLAY_HEAD_CHANGED,
         LOADED,
         CONTENT_PAUSE_REQUESTED,
         CONTENT_RESUME_REQUESTED,
-        ALL_ADS_COMPLETED
+        ALL_ADS_COMPLETED,
+        AD_LOAD_TIMEOUT_TIMER_STARTED,
+        ERROR
 }
 {% endhighlight %}
  
@@ -284,7 +293,7 @@ videoMimeTypes.add(MimeTypes.APPLICATION_MP4);
 IMAConfig adsConfig = new IMAConfig("en", false, true, -1, 
 videoMimeTypes, adTagUrl, true, true);
     
-pluginsConfig.setPluginConfig(IMAPlugin.factory.getName(),adsConfig.toJSONObject());
+pluginsConfig.setPluginConfig(IMAPlugin.factory.getName(),adsConfig);
 
 {% endhighlight %}
 
