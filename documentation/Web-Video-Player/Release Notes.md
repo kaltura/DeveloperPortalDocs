@@ -31,6 +31,14 @@ Web Video Player v.3.0 - expected to be released later this year - stay tuned!
 * CAP Support: The Kaltura Player now supports .CAP caption files. .CAP files can be uploaded via the APIs and via the Kaltura On-the-Fly Packager, which converts the captions to WebVTT.
 * Chromecast Plugin Configuration: The Chromecast plugin can now be enabled from the Player Studio. For more information, please see [Universal Studio Information - Chromecast Plugin Configuration](https://knowledge.kaltura.com/universal-studio-information-guide#Chromecast_plugin_configuration).
 * HLS.JS Upgrade: Hls.js has been upgraded to the latest version.
+* Changes to keyboard shortcuts:
+  * Switch views’ changed from ‘w’ to ‘x’ and allows changing the view between the different screens
+  * ‘Next state’  changed from ‘q’ to ‘z’ and allows changing the video stream viewed
+  * ‘Openmenu’ and ‘Closemenu’ are no longer in use and their shortcuts have been removed
+* Call-to-Action Buttons: This release allows the user to add up to two brandable Call-to-Action Buttons at the end of playback, with or without related videos. Buttons defaults are defined on the player and can be overridden using entry custom metadata and embed flashvars.For more information, please see [Universal Studio Information - Call to Action Buttons](https://knowledge.kaltura.com/universal-studio-information-guide#CTA_Buttons).
+* Limitations:
+  * Only one custom data profile can be defined on the player. If custom data profile is used by any other plugin, CTA metadata fields should be added to the same custom data profile
+  * CTA without related videos is supported on video-on-demand, audio-on-demand (if the player includes a screen display), and YouTube entries; it is not supported on image entries, in-video-quizzes, and live entries. CTA with related videos will appear on the related screen in all cases, at the end of playback.
 
 ## Release 2.59  
 
