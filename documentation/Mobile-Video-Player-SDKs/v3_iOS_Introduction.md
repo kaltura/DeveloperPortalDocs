@@ -25,7 +25,7 @@ This guide assumes that you have the necessary Objective C or Swift and iOS deve
 * Tier B - Supported, not tested (we accept bug reports)
 * Tier C - Not supported
 
-| Support Tier | iOS (OS version 9 and 10) |
+| Support Tier | iOS (OS version 9 and up) |
 |--------------|---------------------------|
 | A            |      iPhone 5S/6S/7+      |
 | A            |         iPad Air 2        |
