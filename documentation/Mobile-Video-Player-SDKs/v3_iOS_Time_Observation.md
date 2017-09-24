@@ -85,7 +85,7 @@ ObjC API:
 // boundary factory used to create boundaries
 PKBoundaryFactory *boundaryFactory = [[PKBoundaryFactory alloc] initWithDuration:player.duration];
 // 2 boundaries, one for 60 seconds and one for 50% 
-NSArray<PKBoundary> *boundaries = @{[boundaryFactory timeBoundaryWithBoundaryTime:60.0f], [boundaryFactory percentageTimeBoundaryWithBoundary:50]};
+NSArray<PKBoundary> *boundaries = @[[boundaryFactory timeBoundaryWithBoundaryTime:60.0f], [boundaryFactory percentageTimeBoundaryWithBoundary:50]];
 // add the boundary observer
 NSUUID *token = [player addBoundaryObserverWithBoundaries:boundaries observeOn:nil using:^(NSTimeInterval time, double percentage) {
     // handle boundary observation
