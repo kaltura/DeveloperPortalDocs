@@ -8,6 +8,8 @@ The player provides an API to add periodic and boundary observers with a max dev
 
 >Note: **The observers are not removed when changing media** only on destroy/deinit, this means that boundary observers that are not relevant for next media should be removed. </br></br> The best practice is removing all boundary observers on changing media and adding the new boundary observers needed. 
 
+>Improtant: Make sure to add observers after player is ready to play (`canPlay` event). 
+
 ## Periodic Observation
 
 Periodic observation can be made in 100ms intervals.
