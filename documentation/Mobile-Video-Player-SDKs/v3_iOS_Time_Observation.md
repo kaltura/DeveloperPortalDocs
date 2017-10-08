@@ -36,8 +36,6 @@ let token = player.addPeriodicObserver(interval: 1, observeOn: nil) { (time) in
 }
 // remove single periodic observation using token
 player.removePeriodicObserver(token)
-// remove all periodic observations
-player.removePeriodicObservers()
 ````
 
 ObjC API:
@@ -49,8 +47,6 @@ NSUUID *token = [player addPeriodicObserverWithInterval:1.0f observeOn:nil using
 }];
 // remove single periodic observation using token
 [player removePeriodicObserver:token];
-// remove all periodic observations
-[player removePeriodicObservers];
 ````
 
 ## Boundary Observation
@@ -75,8 +71,6 @@ let token = player.addBoundaryObserver(boundaries: boundaries, observeOn: nil) {
 }
 // remove single boundary observation using token
 player.removeBoundaryObserver(token)
-// remove all boundary observations
-player.removeBoundaryObservers()
 ````
 
 ObjC API:
@@ -92,6 +86,4 @@ NSUUID *token = [player addBoundaryObserverWithBoundaries:boundaries observeOn:n
 }];
 // remove single boundary observation using token
 [player removeBoundaryObserver:token];
-// remove all boundary observations
-[player removePeriodicObservers];
 ````
