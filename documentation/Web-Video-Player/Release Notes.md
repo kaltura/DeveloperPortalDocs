@@ -8,7 +8,10 @@ Web Video Player v.3.0 - expected to be released later this year - stay tuned!
 
 | Release | Date Released   | Details |
 |---------|-----------------|---------|
-| 2.60.2    | August 17, 2017   | [Details](Release%20Notes.md#release-2602)|
+| 2.62    | October 22, 2017   | [Details](Release%20Notes.md#release-262)|
+| 2.61    | September 10, 2017   | [Details](Release%20Notes.md#release-261)|
+| 2.61    | September 10, 2017   | [Details](Release%20Notes.md#release-261)|
+| 2.60.2  | August 17, 2017   | [Details](Release%20Notes.md#release-2602)|
 | 2.59    | July 30, 2017   | [Details](Release%20Notes.md#release-259)|
 | 2.58    | July 2, 2017   | [Details](Release%20Notes.md#release-258)|
 | 2.56    | May 21, 2017   | [Details](Release%20Notes.md#release-256)|
@@ -25,6 +28,23 @@ Web Video Player v.3.0 - expected to be released later this year - stay tuned!
 | 2.46    | July 31, 2016   | [Details](Release%20Notes.md#release-246) |
 | 2.45    | July 03, 2016   | [Details](Release%20Notes.md#release-245) |
 
+
+## Release 2.62  
+
+* New Autoplay handling: Safari 11, released on September 19 for iOS11 and macOS, no longer supports autoplay for videos with sound. When set to autoplay, videos must now start muted, with sound enabled only upon a specific user interaction with the player itself. 
+
+Version 2.62 of the Kaltura player includes an automatic fallback to the muted autoplay option. By default, the player will now fall back onto muted autoplay for browsers that block sound. You can also choose to fall back onto an explicit 'Play' initiation on such browsers if you do not wish to play muted videos at all (set ‘autoPlayFallbackToMute’ FlashVar to False).
+* The Safari change temporarily affected the ads flow due to a bug in Google’s IMA plugin. The IMA issue was causing the first transition between a video and an advertisement to be considered as a new playback, requiring additional user interaction. This has now been fixed and the fix was incorporated in 2.62, so that ads do not require additional user interaction.
+ 
+**Known Issues:**
+* Post-sequence bumpers will require an additional play click after the video ends
+* Playlists with ads  - Each video in the playlist will require an additional play click
+
+## Release 2.61  
+
+Changes to 360 Flashvars – Flashvar names have been changed for simplicity:
+* ‘VR’ will now be called ‘enable_vr’, meaning the VR plugin s enabled and 360 videos can be watched.
+* ‘vr_mode’ will now be called ‘auto_load_as_vr’, meaning the video will load in VR mode (i.e, in split screen mode compatible with a VR device)
 
 ## Release 2.60.2  
 
