@@ -4,29 +4,28 @@ title: Web Video Player Release Notes
 weight: 402
 ---
 
-Web Video Player v.3.0 - expected to be released later this year - stay tuned!
 
 | Release | Date Released   | Details |
 |---------|-----------------|---------|
-| 2.62    | October 22, 2017   | [Details](Release%20Notes.md#release-262)|
-| 2.61    | September 10, 2017   | [Details](Release%20Notes.md#release-261)|
-| 2.61    | September 10, 2017   | [Details](Release%20Notes.md#release-261)|
-| 2.60.2  | August 17, 2017   | [Details](Release%20Notes.md#release-2602)|
-| 2.59    | July 30, 2017   | [Details](Release%20Notes.md#release-259)|
+| 2.62    | October 22, 2017   | [Details](Release-Notes.html#release-262)|
+| 2.61    | September 10, 2017   | [Details](Release-Notes.html#release-261)|
+| 2.61    | September 10, 2017   | [Details](Release-Notes.html#release-261)|
+| 2.60.2  | August 17, 2017   | [Details](Release-Notes.html#release-2602)|
+| 2.59    | July 30, 2017   | [Details](Release-Notes.html#release-259)|
 | 2.58    | July 2, 2017   | [Details](Release%20Notes.md#release-258)|
-| 2.56    | May 21, 2017   | [Details](Release%20Notes.md#release-256)|
-| 2.55    | Apr. 23, 2017   | [Details](Release%20Notes.md#release-255) |
-| 2.54    | Mar. 12, 2017   | [Details](Release%20Notes.md#release-254) |
-| 2.53.2  | Feb. 26, 2017   | [Details](Release%20Notes.md#release-2532) |
-| 2.53    | Feb. 12, 2017   | [Details](Release%20Notes.md#release-253) |
-| 2.52    | Jan. 15, 2017   | [Details](Release%20Notes.md#release-252) |
-| 2.51    | Dec. 27, 2016   | [Details](Release%20Notes.md#release-251) |
-| 2.50    | Nov. 20, 2016   | [Details](Release%20Notes.md#release-250) |
-| 2.49    | Nov. 6, 2016    | [Details](Release%20Notes.md#release-249) |
-| 2.48    | Sept 25, 2016   | [Details](Release%20Notes.md#release-248) |
-| 2.47    | August 29, 2016 | [Details](Release%20Notes.md#release-247) |
-| 2.46    | July 31, 2016   | [Details](Release%20Notes.md#release-246) |
-| 2.45    | July 03, 2016   | [Details](Release%20Notes.md#release-245) |
+| 2.56    | May 21, 2017   | [Details](Release-Notes.html#release-256)|
+| 2.55    | Apr. 23, 2017   | [Details](Release-Notes.html#release-255) |
+| 2.54    | Mar. 12, 2017   | [Details](Release-Notes.html#release-254) |
+| 2.53.2  | Feb. 26, 2017   | [Details](Release-Notes.html#release-2532)|
+| 2.53    | Feb. 12, 2017   | [Details](Release-Notes.html#release-253) |
+| 2.52    | Jan. 15, 2017   | [Details](Release-Notes.html#release-252) |
+| 2.51    | Dec. 27, 2016   | [Details](Release-Notes.html#release-251) |
+| 2.50    | Nov. 20, 2016   | [Details](Release-Notes.html#release-250) |
+| 2.49    | Nov. 6, 2016    | [Details](Release-Notes.html#release-249) |
+| 2.48    | Sept 25, 2016   | [Details](Release-Notes.html#release-248) |
+| 2.47    | August 29, 2016 | [Details](Release-Notes.html#release-247) |
+| 2.46    | July 31, 2016   | [Details](Release-Notes.html#release-246) |
+| 2.45    | July 03, 2016   | [Details](Release-Notes.html#release-245) |
 
 
 ## Release 2.62  
