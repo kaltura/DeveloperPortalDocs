@@ -42,7 +42,7 @@ player.removeFromSuperview()
 To enable the IMA Plugin on iOS devices for the Kaltura Video Player, add the following line to your Podfile: 
 
 ```ruby
-pod 'PlayKit/IMAPlugin'
+pod "PlayKit_IMA"
 ```
 
 ## Control Ad Play
