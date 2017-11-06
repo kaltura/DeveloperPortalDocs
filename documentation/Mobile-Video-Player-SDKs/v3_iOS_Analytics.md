@@ -12,10 +12,10 @@ Kaltura’s Mobile Video Player SDKs for iOS make it easy for you to integrate a
 | Analytics Plugin Name | More Information |
 |-----------------------|------------------|
 | Youbora               | [Youbora Developer Portal](http://developer.nicepeopleatwork.com) |
-| Kaltura Stats         | []()             |
-| Kaltura Live Stats    | []()             |
-| TVPAPI                | []()             |
-| Phoenix               | []()             |
+| Kaltura Stats         | [Kaltura Stats](v3_iOS_Analytics.html#Kaltura Stats Plugin)       |
+| Kaltura Live Stats    | [Kaltura Live Stats](v3_iOS_Analytics.html#Kaltura Live Stats Plugin)              |
+| TVPAPI                | [TVPAPI](v3_iOS_Analytics.html#TVPAPI)               |
+| Phoenix               | [Phoenix](v3_iOS_Analytics.html#Phoenix)               |
 
 >**Important** - The best practice is to register plugins in the `AppDelegate` file.
 
@@ -25,9 +25,9 @@ This section describes the steps required for implementing the Youbora Plugin on
 
 You'll need to set up an account in http://www.youbora.com and then set the account details in the plugin configuration to use this plugin. After these steps, you'll be able to use the Youbora dashboard and watch statistical events and analytics sent by the Kaltura Video Payer.
 
-For extra information on YouboraPlugin options dictionary visit [developer portal](http://developer.nicepeopleatwork.com/plugins/general/setting-youbora-options/)
+For additional information on the YouboraPlugin options dictionary refer to their [developer portal](http://developer.nicepeopleatwork.com/plugins/general/setting-youbora-options/).
 
-<details><summary>Get Started With Youbora Plugin</summary>
+<details><summary>Getting Started With Youbora Plugin</summary>
 
 To enable the Youbora Stats Plugin on iOS devices for the Kaltura Video Player, add the following line to your Podfile: 
 
