@@ -12,8 +12,8 @@ Kaltura’s Mobile Video Player SDKs for iOS make it easy for you to integrate a
 | Analytics Plugin Name | More Information |
 |-----------------------|------------------|
 | Youbora               | [Youbora Developer Portal](http://developer.nicepeopleatwork.com) |
-| Kaltura Stats         | [Kaltura Stats](v3_iOS_Analytics.html#Kaltura Stats Plugin)       |
-| Kaltura Live Stats    | [Kaltura Live Stats](v3_iOS_Analytics.html#Kaltura Live Stats Plugin)              |
+| Kaltura Stats         | [Kaltura Stats](v3_iOS_Analytics.html#KalturaStatsPlugin)       |
+| Kaltura Live Stats    | [Kaltura Live Stats](v3_iOS_Analytics.html#KalturaLiveStatsPlugin)              |
 | TVPAPI                | [TVPAPI](v3_iOS_Analytics.html#TVPAPI)               |
 | Phoenix               | [Phoenix](v3_iOS_Analytics.html#Phoenix)               |
 
