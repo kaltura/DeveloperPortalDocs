@@ -7,19 +7,13 @@ weight: 293
 
 In this section, you'll learn how to build a simple video application.
 
-## Integrate the Playkit SDK into your Application Settings  
+## Integrate the Playkit SDK into your Application Settings
 
-1 . Clone the SDK  from https://github.com/kaltura/playkit-android and locate it next to your application code. If you want to be able to review the code as standalone, open the playkit-android folder in the Android Studio. 
-2 . In the setting.gradle, add the SDK project settings as follows:
+Add the following to your build.gradle dependencies:
 
-```java
-include ':playkit', ':playkitdemo'
-```
-3 . In your build.gradle file, add the dependancy for the SDK:
-	
-```java
-compile project(path: ':playkit')
-```
+	compile 'com.kaltura.playkit:playkit:3.2.0'
+
+Replace with the latest version you want to use.
 
 ## Create the Player Instance and Start Playback  
 
@@ -27,7 +21,7 @@ compile project(path: ':playkit')
 
 
 ```java
-Player player = PlayKitManager.loadPlayer(config, context);
+Player player = PlayKitManager.loadPlayer(context, config);
 ```
 2 . Next, add the player view to the view hierarchy as follows:
 
