@@ -17,9 +17,7 @@ Kaltura’s Mobile Video Player SDKs for iOS make it easy for you to integrate a
 | TVPAPI                | []()             |
 | Phoenix               | []()             |
 
-> **important - best practice is to register plugins in `AppDelegate` file.**
-
-</p></details>
+>**Important** - The best practice is to register plugins in the `AppDelegate` file.
 
 ## Youbora Plugin  
 
@@ -30,8 +28,6 @@ You'll need to set up an account in http://www.youbora.com and then set the acco
 For extra information on YouboraPlugin options dictionary visit [developer portal](http://developer.nicepeopleatwork.com/plugins/general/setting-youbora-options/)
 
 <details><summary>Get Started With Youbora Plugin</summary>
-
-<p>
 
 To enable the Youbora Stats Plugin on iOS devices for the Kaltura Video Player, add the following line to your Podfile: 
 
