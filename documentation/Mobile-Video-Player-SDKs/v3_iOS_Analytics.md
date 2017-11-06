@@ -17,7 +17,7 @@ Kaltura’s Mobile Video Player SDKs for iOS make it easy for you to integrate a
 | TVPAPI                | [TVPAPI](v3_iOS_Analytics.html#TVPAPI)               |
 | Phoenix               | [Phoenix](v3_iOS_Analytics.html#Phoenix)               |
 
->**Important** - The best practice is to register plugins in the `AppDelegate` file.
+>**Important**: Best practice for using analytics is to register plugins in the `AppDelegate` file.
 
 ## Youbora Plugin  
 
