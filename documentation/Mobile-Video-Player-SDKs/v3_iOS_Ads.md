@@ -91,15 +91,18 @@ To configure the player to use IMA Plugin, add the following configuration to yo
 ```swift
 let adsConfig = IMAConfig()
 adsConfig.set(adTagUrl: 'your ad tag url')
-playerConfig.plugins[IMAPlugin.pluginName] = adsConfig
+let pluginConfig = PluginConfig(config: [IMAPlugin.pluginName: adsConfig])
 ```
 
 >objc
 
 ```objc
 AdsConfig *adsConfig = [IMAConfig new];
-adsConfig.adTagUrl = @"https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/3274935/preroll&impl=s&gdfp_req=1&env=vp&output=xml_vast2&unviewed_position_start=1&url=[referrer_url]&description_url=[description_url]&correlator=[timestamp]";
-[config setPlugins: @{IMAPlugin.pluginName: adsConfig}];
+adsConfig.adTagUrl = @"your ad tag url";
+
+NSMutableDictionary *pluginConfigDict = [NSMutableDictionary new];
+pluginConfigDict[IMAPlugin.pluginName] = adsConfig;
+PluginConfig *pluginConfig = [[PluginConfig alloc] initWithConfig:pluginConfigDict];
 ```
 
 ## Configure Clickthroughs 
