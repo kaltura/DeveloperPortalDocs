@@ -191,9 +191,9 @@ Use the following code to listen to ad events:
 let events: [PKEvent.Type] = [AdEvent.adDidRequestPause, AdEvent.adDidRequestResume]
 
 player.addObserver(self, events: events) { event in
-    if event is AdEvent.adDidRequestResume {
+    if type(of: event) == AdEvent.adDidRequestResume {
         // handle adDidRequestResume
-    } else if event is AdEvent.adDidRequestPause {
+    } else if type(of: event) == AdEvent.adDidRequestPause {
         // handle adDidRequestPause
     }
 })
