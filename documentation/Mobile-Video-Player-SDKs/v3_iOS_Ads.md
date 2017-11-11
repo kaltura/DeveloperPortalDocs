@@ -11,7 +11,7 @@ This document describes the steps required for adding support for the IMA Plugin
 
 ## Common Issues
 
-There is currently an open issue with IMA SDK where removing the player view before destorying the ads manager will cause an error on the next ad playback. To fix the issue all you have to do is call the `player.destroy()` before `player.removeFromSuperview()`
+1. There is currently an open issue with IMA SDK where removing the player view before destorying the ads manager will cause an error on the next ad playback. To fix the issue all you have to do is call the `player.destroy()` before `player.removeFromSuperview()`
 
 If you get below error:
 
@@ -35,6 +35,29 @@ Please make sure that the order of removing player on your side is:
 ```swift
 player.destroy()
 player.removeFromSuperview()
+```
+
+2. When not including ads, the PlayerEvent observed events start occuring after calling prepare().
+When including ads, none of the PlayerAd events occur after calling prepare().  
+
+To resolve this issue and get `autoPlay` with ads please make sure to call play() before those events start occuring.
+
+> Objc
+
+```objc
+// Firstly call prepare
+[_kPlayer prepare];
+// Then immediately 
+[_kPlayer play];
+```
+
+> Swift
+
+```swift
+// Firstly call prepare
+player.prepare()
+// Then immediately 
+player.play()
 ```
 
 ## Enable IMA Plugins for the Kaltura Video Player  
