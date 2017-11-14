@@ -39,3 +39,4 @@ The 360 video and VR feature is supported on devices with iOS 9 and up.
 
 ```PKVRController``` - Use this class to interact with the library.
 
+For more information refer to the [PlayKit VR for iOS page](https://kaltura.github.io/playkit-ios-vr/).
