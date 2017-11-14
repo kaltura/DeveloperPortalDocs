@@ -5,4 +5,39 @@ subcat: SDK 3.0 - iOS
 weight: 501
 ---
 
-Coming soon! Stay tuned!
+The 'video360' plugin and VR have are included in the Kaltura Mobile Video Player for iOS. The Kaltura Player supports 360 video and VR on both desktop and mobile browsers for any kind of motion - mouse, touch, device motion and keyboard keys.
+
+Immersive videos, also known as 360 videos, 360 degree videos or spherical videos, are video recordings of a real-world panorama, where the view in every direction is recorded at the same time, shot using an omnidirectional camera or a collection of cameras.
+Use cases for 360 / VR are varied, and include university lectures, conferences, sports events and more.
+
+Note that 360° / VR videos can only be viewed when the video360 / VR plugin is enabled.
+
+Kaltura provides the following infrastructure to upload and play 360 / VR videos on mobile devices:
+
+## Ingestion  
+
+1. Ingest your asset as usual, via either the KMC or APIs. 
+2. Tag the entry “360”.  Tagging the entry is required as the player will only enable 360 navigation on entries that are tagged "360". 
+
+For more information about tagging entries see How to add or remove tags to or from a KMC entry?
+
+H264 CODEC and up to 4K resolution are supported. 
+
+## Playback  
+
+The Kaltura Mobile Video Player will play inband multi-audio tracks based on the underlying delivery format.
+* Dash
+* HLS
+* HSS
+
+Kaltura supports navigation using the mouse or keyboard (using WASD keys) as well as touch on mobile devices.
+
+## Supported iOS Devices  
+
+The 360 video and VR feature is supported in devices with iOS 9 and up.
+
+
+## Implemented Classes/Interfaces  
+
+```PKVRController``` - Use this class to interact with the library.
+
