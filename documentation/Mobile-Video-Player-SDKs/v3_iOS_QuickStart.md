@@ -245,7 +245,7 @@ Add custom buttons and controls to the player as follows:
 
 ```swift
 @IBAction func playTouched(_ sender: Any) {
-    if self.player.isPlaying {
+    if !self.player.isPlaying {
         self.player.play()
     }
 }
