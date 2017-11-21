@@ -7,6 +7,7 @@ weight: 402
 
 | Release | Date Released   | Details |
 |---------|-----------------|---------|
+| 2.63    | November 19, 2017   | [Details](Release-Notes.html#release-263)|
 | 2.62    | October 22, 2017   | [Details](Release-Notes.html#release-262)|
 | 2.61    | September 10, 2017   | [Details](Release-Notes.html#release-261)|
 | 2.61    | September 10, 2017   | [Details](Release-Notes.html#release-261)|
@@ -27,6 +28,9 @@ weight: 402
 | 2.46    | July 31, 2016   | [Details](Release-Notes.html#release-246) |
 | 2.45    | July 03, 2016   | [Details](Release-Notes.html#release-245) |
 
+## Release 2.63  
+
+Version 2.63 was released as a maintenance version.
 
 ## Release 2.62  
 
