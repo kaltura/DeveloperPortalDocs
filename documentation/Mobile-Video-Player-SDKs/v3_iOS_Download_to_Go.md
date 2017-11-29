@@ -34,26 +34,21 @@ Before download, the DTG library will verify that there is there enough quota sp
 When a media asset is downloaded, it is accompanied by additional parameters and metadata, including:
 
 * Download URL
-* DRM license (see *DRM*)
 * Multiple audio files (see *Captions and Audio Tracks*) 
 * Multiple subtitle files in available languages(see *Captions and Audio Tracks*) 
 * Any one single bitrate, set by the application
 
-### DRM  
+## Content Protection  
 
-Kaltura’s DTG library supports Apple Fairplay. 
-
-* For iOS9 WV classic will be used.
-* For DRM-encrypted items, the download process includes download of a persistent, local DRM license that enables online and offline playback according to the media asset’s purchase usage terms (e.g., purchase and license durations). The DRM license is tailored to the download stream and is managed by a local DRM agent. The DRM license is retrieved and updated only when the end user is online.
+Kaltura’s Download to Go library for iOS Supports AES encryption for content protection.
 
 ### Captions and Audio Tracks  
 
-Captions and audio tracks can be downloaded along with the asset. The application can choose to download a single audio file or multiple files.
-When downloading multiple files on Android, the application will be able to select languages to download (MPEG-DASH only). On iOS all languages will be downloaded automatically.
+Captions and audio tracks can be downloaded along with the asset. When downloading multiple files on iOS, all languages will be downloaded automatically.
 
 ### Background Downloading  
 
-Background downloading is supported on both iOS and Android devices.
+Background downloading is supported on both iOS devices.
 
 ## Interruptions to Downloading  
 
