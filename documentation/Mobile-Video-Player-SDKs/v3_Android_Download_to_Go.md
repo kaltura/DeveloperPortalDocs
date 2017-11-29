@@ -11,16 +11,14 @@ Kaltura’s **Download to Go** suite enables the end user to download on-demand 
 
 ### Supported Devices  
 
-Download to Go’s offline mode works on all mobile and tablet devices supported by the Player SDK for the following operating systems:
-
-* Android 4.3+
+Download to Go's offline mode works on Android 4.1 and up. Widevine Modular is supported from Android 4.3, which means that you can download a Widevine Modular stream on Android 4.1/4.2, but will not be able to play it (Download to Go does not know that the stream is DRM-protected).
 
 ### Supported Video Formats  
 
-Download to Go supports the following formats:
+Download to Go supports the following formats for Android
 
-* HLS
 * MPEG-DASH (Android only)
+* HLS
 
 ## Enabling Download to Go  
 
@@ -37,21 +35,20 @@ When a media asset is downloaded, it is accompanied by additional parameters and
 * Download URL
 * DRM license (see *DRM*)
 * Multiple audio files (see *Captions and Audio Tracks*) 
-* Multiple subtitle files in available languages(see *Captions and Audio Tracks*) 
+* Multiple subtitle files in available languages (see *Captions and Audio Tracks*) 
 * Any one single bitrate, set by the application
 
 ### DRM  
 
-Kaltura’s DTG library supports Widevine modular. 
+Kaltura’s DTG library supports Widevine modular for DASH playback. 
 
 * For Android 4.2.2 WV classic will be used.
 * For DRM-encrypted items, the download process includes download of a persistent, local DRM license that enables online and offline playback according to the media asset’s purchase usage terms (e.g., purchase and license durations). The DRM license is tailored to the download stream and is managed by a local DRM agent. The DRM license is retrieved and updated only when the end user is online.
+* For HLS on Android, AES encrypotion is supported.
 
 ### Captions and Audio Tracks  
 
-Captions and audio tracks can be downloaded along with the asset. The application can choose to download a single audio file or multiple files.
-
-When downloading multiple files on Android, the application will be able to select languages to download (MPEG-DASH only). On iOS all languages will be downloaded automatically.
+Captions and audio tracks can be downloaded along with the asset (MPEG-DASH only). The application will be able to select multiple languages to download (MPEG-DASH only).
 
 ### Background Downloading  
 
