@@ -52,7 +52,7 @@ Captions and audio tracks can be downloaded along with the asset (MPEG-DASH only
 
 ### Background Downloading  
 
-Background downloading is supported on both iOS and Android devices.
+Background downloading is supported on Android devices.
 
 ## Interruptions to Downloading  
 
