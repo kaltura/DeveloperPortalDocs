@@ -48,7 +48,7 @@ Captions and audio tracks can be downloaded along with the asset. When downloadi
 
 ### Background Downloading  
 
-Background downloading is supported on both iOS devices.
+Background downloading is supported on iOS devices.
 
 ## Interruptions to Downloading  
 
