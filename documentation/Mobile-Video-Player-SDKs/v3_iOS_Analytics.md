@@ -27,7 +27,7 @@ You'll need to set up an account in http://www.youbora.com and then set the acco
 
 For additional information on the YouboraPlugin options dictionary refer to their [developer portal](http://developer.nicepeopleatwork.com/plugins/general/setting-youbora-options/).
 
-<details><summary>Getting Started With Youbora Plugin</summary>
+### Getting Started with the Youbora Plugin  
 
 To enable the Youbora Stats Plugin on iOS devices for the Kaltura Video Player, add the following line to your Podfile: 
 
@@ -35,7 +35,7 @@ To enable the Youbora Stats Plugin on iOS devices for the Kaltura Video Player, 
 pod 'PlayKit/YouboraPlugin'
 ```
 
-### Register Plugin
+#### Register Plugin
 
 >swift
 
@@ -49,7 +49,7 @@ PlayKitManager.shared.registerPlugin(YouboraPlugin.self)
 [PlayKitManager.sharedInstance registerPlugin: YouboraPlugin.self];
 ```
 
-### Create a config and load player
+#### Create a Config and Load Player
 
 >swift
 
@@ -89,17 +89,16 @@ PluginConfig *pluginConfig = [[PluginConfig alloc] initWithConfig:config];
 self.player = [PlayKitManager.sharedInstance loadPlayerWithPluginConfig:pluginConfig];
 ```
 
->Note: Only then load player with Plugin Config.
+>Note: Only now load the player with the Plugin Config.
 
-</p></details> 
 
 ## Kaltura Stats Plugin
 
 This section describes the steps required for using the Kaltura stats plugin. 
 
-<details><summary>Get Started With Kaltura Stats</summary><p>
+### Getting Started  with the Kaltura Stats Plugin
 
-### Register the plugin
+#### Register the Plugin
 
 >swift
 
@@ -113,7 +112,7 @@ PlayKitManager.shared.registerPlugin(KalturaStatsPlugin.self)
 [PlayKitManager.sharedInstance registerPlugin:KalturaStatsPlugin.self];
 ```
 
-### Create a config and load player
+#### Create a Config and Load Player
 
 >swift
 
@@ -147,13 +146,9 @@ PluginConfig *pluginConfig = [[PluginConfig alloc] initWithConfig:config];
 self.player = [PlayKitManager.sharedInstance loadPlayerWithPluginConfig:pluginConfig];
 ```
 
-</p></details>
-
 ### Kaltura Stats Plugin Events
 
-This section describes the events available for kaltura stats plugin.
-
-<details><summary>Kaltura Stats Plugin Events</summary><p>
+This section describes the events available for the Kaltura Stats plugin.
 
 ```swift
 enum KStatsEventType : Int {
@@ -201,15 +196,13 @@ case ERROR = 99
 }
 ```
 
-</p></details>
-
-## Kaltura Live Stats Plugin
+## Kaltura Live Stats Plugin  
 
 This section describes the steps required for using the Kaltura live stats plugin. 
 
-<details><summary>Get Started With Kaltura Live Stats</summary><p>
+### Get Started  with the Kaltura Live Stats Plugin  
 
-### Register the plugin
+#### Register the Plugin
 
 >swift
 
@@ -223,7 +216,7 @@ PlayKitManager.shared.registerPlugin(KalturaLiveStatsPlugin.self)
 [PlayKitManager.sharedInstance registerPlugin:KalturaLiveStatsPlugin.self];
 ```
 
-### Create a config and load player
+#### Create a Config and Load Player
 
 >swift
 
@@ -256,15 +249,13 @@ PluginConfig *pluginConfig = [[PluginConfig alloc] initWithConfig:config];
 self.player = [PlayKitManager.sharedInstance loadPlayerWithPluginConfig:pluginConfig];
 ```
 
-</p></details>
-
-## TVPAPI Analytics Plugin
+## TVPAPI Analytics Plugin  
 
 This section describes the steps required for using the TVPAPI analytics plugin on iOS devices to get statistical information on the device, as well as the events supported by the plugin.
 
-<details><summary>Get Started With TVPAPI Plugin</summary><p>
+### Getting Started with the TVPAPI Plugin  
 
-### Enabling the TVPAPI Analytics Plugin for the Kaltura Video Player  
+#### Enabling the TVPAPI Analytics Plugin for the Kaltura Video Player  
 
 To enable the TVPAPI analytics plugin on iOS devices for the Kaltura Video Player, add the following line to your Podfile: 
 
@@ -272,7 +263,7 @@ To enable the TVPAPI analytics plugin on iOS devices for the Kaltura Video Playe
 pod 'PlayKit/PhoenixPlugin'
 ```
 
-### Register the TVPAPI Analytics Plugin  
+#### Register the TVPAPI Analytics Plugin  
 
 Register the TVPAPI analytics plugin in your application as follows:
 
@@ -288,7 +279,7 @@ PlayKitManager.shared.registerPlugin(TVPAPIAnalyticsPlugin.self)
 [PlayKitManager.sharedInstance registerPlugin:TVPAPIAnalyticsPlugin.self];
 ```
 
-### Create a config and load player
+#### Create a Config and Load Player
 
 >swift
 
@@ -354,23 +345,21 @@ PluginConfig *pluginConfig = [[PluginConfig alloc] initWithConfig:config];
 self.player = [PlayKitManager.sharedInstance loadPlayerWithPluginConfig:pluginConfig];
 ```
 
-</p></details>
-
 ## Phoenix Analytics Plugin  
 
 This section describes the steps required for configuring the Kaltura Video Player to use the Phoenix Stats Plugin on iOS devices as well as the supported plugin events. This will enable you to obtain important statistical information about usage.
 
-<details><summary>Get Started With Phoenix Plugin</summary><p>
+### Getting Started with the Phoenix Plugin  
 
-To enable the phoenix analytics plugin on iOS devices for the Kaltura Video Player, add the following line to your Podfile: 
+To enable the Phoenix Analytics plugin on iOS devices for the Kaltura Video Player, add the following line to your Podfile: 
 
 ```ruby
 pod 'PlayKit/PhoenixPlugin'
 ```
 
-### Register the Phoenix Analytics Plugin  
+##### Register the Phoenix Analytics Plugin  
 
-Register the phoenix analytics plugin in your application as follows:
+Register the Phoenix Analytics plugin in your application as follows:
 
 >swift
 
@@ -384,7 +373,7 @@ PlayKitManager.shared.registerPlugin(PhoenixAnalyticsPlugin.self)
 [PlayKitManager.sharedInstance registerPlugin:PhoenixAnalyticsPlugin.self];
 ```
 
-### Create a config and load player
+#### Create a Config and Load Player  
 
 >swift
 
@@ -418,13 +407,11 @@ PluginConfig *pluginConfig = [[PluginConfig alloc] initWithConfig:config];
 self.player = [PlayKitManager.sharedInstance loadPlayerWithPluginConfig:pluginConfig];
 ```
 
-</p></details>
+## OTT Stats Plugin Info  
 
-## OTT Stats Plugin Info
+This section provides additional information on the OTT Stats plugin.
 
-<details><summary>Extra Info on OTT Stats Plugin</summary><p>
-
-## OTT Stats Plugin Supported Events  
+### OTT Stats Plugin Supported Events  
 
 The OTT Stats Plugins (Phoenix, TVPAPI) supports the following events:
 
@@ -443,7 +430,7 @@ enum OTTAnalyticsEventType: String {
 }
 ```
 
-## Concurrency Handler  
+### Concurrency Handler  
 
 To receive concurrency events from the OTT Stats Plugin, you'll need to add a listener to the following event:
 
