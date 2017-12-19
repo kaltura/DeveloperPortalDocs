@@ -7,6 +7,7 @@ weight: 402
 
 | Release | Date Released   | Details |
 |---------|-----------------|---------|
+| 2.64    | December 19, 2017   | [Details](Release-Notes.html#release-264)|
 | 2.63    | November 19, 2017   | [Details](Release-Notes.html#release-263)|
 | 2.62    | October 22, 2017   | [Details](Release-Notes.html#release-262)|
 | 2.61    | September 10, 2017   | [Details](Release-Notes.html#release-261)|
@@ -27,6 +28,10 @@ weight: 402
 | 2.47    | August 29, 2016 | [Details](Release-Notes.html#release-247) |
 | 2.46    | July 31, 2016   | [Details](Release-Notes.html#release-246) |
 | 2.45    | July 03, 2016   | [Details](Release-Notes.html#release-245) |
+
+## Release 2.63  
+
+Lead with HLS by default on Android browsers: If you wish to lead with Progressive on Android on your player, please set KalturaLeadHLSOnAndroid to **False**.
 
 ## Release 2.63  
 
