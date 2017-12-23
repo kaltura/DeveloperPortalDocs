@@ -10,7 +10,7 @@ Kaltura's Mobile Video SDK supports various advanced features to enable multiple
 
 
 
-|                    |      Documentation                        | Sample | Apple Doc                                   |
+|                    |      Documentation                        | Sample | API Doc                                   |
 |--------------------|:-----------------------------------------:|:------:|:-------------------------------------------:|
 |**Player Config**   |[Setup PlayerConfig][playerConfigDocs]     | [x]()  | [PlayerConfig][playerConfigSwiftDocs]       |
 |**Events & States** |[Events Observation][eventsObservationDocs]| [x]()  | [PlayerEvents][eventsObservationSwiftDocs]  |
