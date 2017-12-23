@@ -44,9 +44,9 @@ player.pause();
 
 ## More About PlayerConfig  
 
-The PlayerConfig object is a simple data object that holds the initial configurations for the player, similar to the media entry you wish to play and the plugins you want to configure. You can find additional documentation on PlayerConfig in this [PlayerConfig article](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/Android/PlayerConfig-Android.md).
+The PlayerConfig object is a simple data object that holds the initial configurations for the player, similar to the media entry you wish to play and the plugins you want to configure. You can find additional documentation on PlayerConfig in this [PlayerConfig article](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/v3_Android_PlayerConfig.html).
 
-The [PlayerConfig](https://github.com/kaltura/playkit-android/blob/master/playkit/src/main/java/com/kaltura/playkit/PlayerConfig.java) consists of two main objects: media and plugins. For now, we'll focus on creating the **media** object. Additional information about plugins is available in this [plugins ](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/Plugins-Android.md) article.
+The [PlayerConfig](https://github.com/kaltura/playkit-android/blob/master/playkit/src/main/java/com/kaltura/playkit/PlayerConfig.java) consists of two main objects: media and plugins. For now, we'll focus on creating the **media** object. Additional information about plugins is available in this [plugins ](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/v3_Plugins-Android.html) article.
 
 ## Kaltura's MediaProvider Classes  
 
