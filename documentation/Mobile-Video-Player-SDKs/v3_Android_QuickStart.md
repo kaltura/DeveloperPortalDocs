@@ -17,7 +17,7 @@ Replace with the latest version you want to use.
 
 ## Create the Player Instance and Start Playback  
 
-1 . To create the instance of the player, add the following line to your Activity/Fragment to pass the [PlayerConfig](https://github.com/kaltura/playkit-android/tree/develop/playkit/src/main/java/com/kaltura/playkit/PlayerConfig.java) object and Android Context:
+1 . To create the instance of the player, add the following line to your Activity/Fragment to pass the [PlayerConfig](https://github.com/kaltura/playkit-android/blob/master/playkit/src/main/java/com/kaltura/playkit/PlayerConfig.java) object and Android Context:
 
 
 ```java
@@ -46,11 +46,11 @@ player.pause();
 
 The PlayerConfig object is a simple data object that holds the initial configurations for the player, similar to the media entry you wish to play and the plugins you want to configure. You can find additional documentation on PlayerConfig in this [PlayerConfig article](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/Android/PlayerConfig-Android.md).
 
-The [PlayerConfig](https://github.com/kaltura/playkit-android/blob/develop/playkit/src/main/java/com/kaltura/playkit/PlayerConfig.java) consists of two main objects: media and plugins. For now, we'll focus on creating the **media** object. Additional information about plugins is available in this [plugins ](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/Plugins-Android.md) article.
+The [PlayerConfig](https://github.com/kaltura/playkit-android/blob/master/playkit/src/main/java/com/kaltura/playkit/PlayerConfig.java) consists of two main objects: media and plugins. For now, we'll focus on creating the **media** object. Additional information about plugins is available in this [plugins ](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/Plugins-Android.md) article.
 
 ## Kaltura's MediaProvider Classes  
 
-Playkit has a large number of built-in [MediaProvider classes](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/Android/MediaProviders-Android.md). In this example we'll focus on the [MockMediaProvider](https://github.com/kaltura/playkit-android/blob/develop/playkit/src/main/java/com/kaltura/playkit/backend/mock/MockMediaProvider.java) class, which is a class that knows how to create a Media object from JSON. 
+Playkit has a large number of built-in [MediaProvider classes](https://github.com/kaltura/DeveloperPortalDocs/blob/playkit/documentation/PlayKit/Android/MediaProviders-Android.md). In this example we'll focus on the [MockMediaProvider](https://github.com/kaltura/playkit-android/blob/master/playkit/src/main/java/com/kaltura/playkit/backend/mock/MockMediaProvider.java) class, which is a class that knows how to create a Media object from JSON. 
 
 ### Using the MockMediaProvider  
 
@@ -71,7 +71,7 @@ Playkit has a large number of built-in [MediaProvider classes](https://github.co
     ]
   }
 ``` 
-3 . You now want the [MockMediaProvider](https://github.com/kaltura/playkit-android/blob/develop/playkit/src/main/java/com/kaltura/playkit/backend/mock/MockMediaProvider.java) to provide you with the PlayerConfig.Media object. Therefore, you need to create a new instance of it, and pass to the constructor the location of the file, the Android context, and the ID of the media you're interested in:
+3 . You now want the [MockMediaProvider](https://github.com/kaltura/playkit-android/blob/master/playkit/src/main/java/com/kaltura/playkit/backend/mock/MockMediaProvider.java) to provide you with the PlayerConfig.Media object. Therefore, you need to create a new instance of it, and pass to the constructor the location of the file, the Android context, and the ID of the media you're interested in:
 
 ```java
  	@Override
