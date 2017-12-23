@@ -17,7 +17,7 @@ Replace with the latest version you want to use.
 
 ## Create the Player Instance and Start Playback  
 
-1 . To create the instance of the player, add the following line to your Activity/Fragment to pass the [PlayerConfig](https://github.com/kaltura/playkit-android/blob/develop/playkit/src/main/java/com/kaltura/playkit/PlayerConfig.java) object and Android Context:
+1 . To create the instance of the player, add the following line to your Activity/Fragment to pass the [PlayerConfig](https://github.com/kaltura/playkit-android/tree/develop/playkit/src/main/java/com/kaltura/playkit/PlayerConfig.java) object and Android Context:
 
 
 ```java
