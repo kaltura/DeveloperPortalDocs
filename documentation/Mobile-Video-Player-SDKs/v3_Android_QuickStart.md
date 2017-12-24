@@ -50,7 +50,7 @@ The [PlayerConfig](https://github.com/kaltura/playkit-android/blob/master/playki
 
 ## Kaltura's MediaProvider Classes  
 
-Playkit has a large number of built-in [MediaProvider classes](https://https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/v3_MediaProviders-Android.html). In this example we'll focus on the [MockMediaProvider](https://github.com/kaltura/playkit-android/blob/master/playkit/src/main/java/com/kaltura/playkit/backend/mock/MockMediaProvider.java) class, which is a class that knows how to create a Media object from JSON. 
+Playkit has a large number of built-in MediaProvider classes. In this example we'll focus on the [MockMediaProvider](https://github.com/kaltura/playkit-android/blob/master/playkit/src/main/java/com/kaltura/playkit/backend/mock/MockMediaProvider.java) class, which is a class that knows how to create a Media object from JSON. 
 
 ### Using the MockMediaProvider  
 
@@ -160,8 +160,6 @@ protected void onStart() {
 
 and pass it to the PlayerConfig object.
 
-
-> [Download Full Sample]()
 
 
 
