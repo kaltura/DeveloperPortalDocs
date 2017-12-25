@@ -23,13 +23,13 @@ The examples above use the [Kaltura PHP5 Client Library](https://developer.kaltu
 ## Important Security Notes  
 
 1.  The ADMIN type KS provides super admin priveliges to the Kaltura account. If you're creating an application where the session will be exposed to the end-user, make sure that you are using a USER type KS and not ADMIN type. Exposing an ADMIN type KS in non-administrative context will expose your Kaltura account to risks of being used by malicious users with unrestricted access.</strong>
-2.  Sharing the account API secret keys with 3rd party vendors should be avoided, as secret keys can not be regenerated or blocked for access. Kaltura API based application developers and 3rd party application vendors should build their application to leverage the user.loginByLoginId API and ask the publisher for their email, password and account Id (aka partnerId). Users can be easily created, removed or blocked and their password can easily be changed.
+2.  Sharing the account API secret keys with 3rd party vendors should be avoided, as secret keys can not be regenerated or blocked for access. Kaltura API based application developers and 3rd party application vendors should build their application to leverage the user.loginByLoginId API and ask the publisher for their email, password and account Id (aka partnerId). Users can be easily created, removed or blocked and their password can be changed easily.
 
 ## Code Example for Configuring a Kaltura Session  
 
 {% highlight php %}
 
-// include the KalturaClient PHP client library to be able to use its funtions/objects
+// include the KalturaClient PHP client library to be able to use its functions/objects
 require_once(dirname(__FILE__).'/lib/KalturaClient.php');
 
 
