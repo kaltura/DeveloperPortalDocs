@@ -41,7 +41,7 @@ Before you begin using Kaltura’s Backend APIs, here are a few terms you should
 The following are the general characteristics of any REST API:
 
 * Client – Server model.
-* Stateless – The session information shoudl not be saved on the server side.
+* Stateless – The session information should not be saved on the server side.
 * Cacheable – The responses can be cached using standard HTTP headers.
 * Layered – The client cannot tell whether it is connected to an end server or to an intermediary server.
 * Uniform interface:
