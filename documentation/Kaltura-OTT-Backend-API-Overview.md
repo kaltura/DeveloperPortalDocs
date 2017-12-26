@@ -62,7 +62,7 @@ Although both form data and a Kaltura proprietary requests are supported, JSON i
   "format": 1,
   "id": "654321",
   "kalsig": "ef6ddd187091dddddddcccccdbbcdaf4f",
-  "ks": "IUUELKJFLDKJFOIJPikdlkajf;88JDJPDO9IFOIJGVFLIJJFLKJDLKJMNGF9O12KJDJKLFOIKij14r87597uijzUJ908U098UAij14r87597uijzUJ908U0OOOU78765TYUwqtf3560JK24F"
+  "ks": "VALID_KS_STRING"
 }
 {% endhighlight %}
 
@@ -77,7 +77,7 @@ JSON (format = 1, Accept: application/json)
   "executionTime": 0.900651,
   "result": {
     "objectType": "KalturaLoginSession",
-    "ks": "IUUELKJFLDKJFOIJPikdlkajf;88JDJPDO9IFOIJGVFLIJJFLKJDLKJMNGF9O12KJDJKLFOIKij14r87597uijzUJ908U098UAij14r87597uijzUJ908U0OOOU78765TYUwqtf3560JK24F"
+    "ks": "VALID_KS_STRING"
   }
 }
 {% endhighlight %}
@@ -89,7 +89,7 @@ XML (format = 2 , Accept: text/xml)
     <executionTime>0.6486599</executionTime>
     <result>
         <objectType>KalturaLoginSession</objectType>
-        <ks> IUUELKJFLDKJFOIJPikdlkajf;88JDJPDO9IFOIJGVFLIJJFLKJDLKJMNGF9O12KJDJKLFOIKij14r87597uijzUJ908U098UAij14r87597uijzUJ908U0OOOU78765TYUwqtf3560JK24F</ks>
+        <ks>VALID_KS_STRING</ks>
     </result>
 </xml>
 {% endhighlight %}
@@ -115,7 +115,7 @@ Multi-requests enable sending multiple applicative requests in a single HTTP req
 {% highlight c %}
 {
   "apiVersion": "3.6.1579.29065",
-  "ks": "IUUELKJFLDKJFOIJPikdlkajf;88JDJPDO9IFOIJGVFLIJJFLKJDLKJMNGF9O12KJDJKLFOIKij14r87597uijzUJ908U098UAij14r87597uijzUJ908U0OOOU78765TYUwqtf3560JK24F",
+  "ks": "VALID_KS_STRING",
   "0": {
     "service": "asset",
     "action": "list"
@@ -132,7 +132,7 @@ This enables using responses from one applicative request in another applicative
 {% highlight c %}
  {
   "apiVersion": "3.6.1579.29065",
-  "ks": "IUUELKJFLDKJFOIJPikdlkajf;88JDJPDO9IFOIJGVFLIJJFLKJDLKJMNGF9O12KJDJKLFOIKij14r87597uijzUJ908U098UAij14r87597uijzUJ908U0OOOU78765TYUwqtf3560JK24F",
+  "ks": "VALID_KS_STRING",
   "0": {
     "service": "ottUser",
     "action": "anonymousLogin",
@@ -212,7 +212,7 @@ Errors are returned in the serialized response (JSON or XML) and automatically i
     {
       "objectType": "KalturaLoginSession",
       "refreshToken": "eyyhhfijh989087jflf809JFI80559I99",
-      "ks": "IUUELKJFLDKJFOIJPikdlkajf;88JDJPDO9IFOIJGVFLIJJFLKJDLKJMNGF9O12KJDJKLFOIKij14r87597uijzUJ908U098UAij14r87597uijzUJ908U0OOOU78765TYUwqtf3560JK24F="
+      "ks": "VALID_KS_STRING="
     },
     {
       "error": {
@@ -240,7 +240,7 @@ see [asset_get](https://ott.developer.kaltura.com/api-docs/Services/asset/asset_
   "format": 1,
   "id": "654321",
   "kalsig": "ef6ddd187091e42003f2c59dbbcdaf4f",
-  "ks": "IUUELKJFLDKJFOIJPikdlkajf;88JDJPDO9IFOIJGVFLIJJFLKJDLKJMNGF9O12KJDJKLFOIKij14r87597uijzUJ908U098UAij14r87597uijzUJ908U0OOOU78765TYUwqtf3560JK24F"
+  "ks": "VALID_KS_STRING"
 }
 {% endhighlight %}
 
