@@ -58,11 +58,11 @@ Although both form data and a Kaltura proprietary requests are supported, JSON i
  {
   "apiVersion": "3.6.1579.29065",
   "assetReferenceType": "media",
-  "clientTag": "dotnet:16-12-20",
+  "clientTag": "refnet:16-11-22",
   "format": 1,
-  "id": "566254",
-  "kalsig": "ef6ddd187091e42003f2c59dbbcdaf4f",
-  "ks": "MGVjNGY4YzBkM2ZhYmIxYTA4Y2VhYjYwZGM4NWQ5NzczNzcxY2JmYXwxODY7MTg2OzE0ODQxNDAwNzE7MDs2MzYxOTc0MzQ3MTA0NDI3NzU7MDAwMDA3MTcyMkBnbWFpbC5jb20udGVzdDs7"
+  "id": "654321",
+  "kalsig": "ef6ddd187091dddddddcccccdbbcdaf4f",
+  "ks": "IUUELKJFLDKJFOIJPikdlkajf;88JDJPDO9IFOIJGVFLIJJFLKJDLKJMNGF9O12KJDJKLFOIKij14r87597uijzUJ908U098UAij14r87597uijzUJ908U0OOOU78765TYUwqtf3560JK24F"
 }
 {% endhighlight %}
 
@@ -77,7 +77,7 @@ JSON (format = 1, Accept: application/json)
   "executionTime": 0.900651,
   "result": {
     "objectType": "KalturaLoginSession",
-    "ks": " MGVjNGY4YzBkM2ZhYmIxYTA4Y2VhYjYwZGM4NWQ5NzczNzcxY2JmYXwxODY7MTg2OzE0ODQxNDAwNzE7MDs2MzYxOTc0MzQ3MTA0NDI3NzU7MDAwMDA3MTcyMkBnbWFpbC5jb20udGVzdDs7"
+    "ks": "IUUELKJFLDKJFOIJPikdlkajf;88JDJPDO9IFOIJGVFLIJJFLKJDLKJMNGF9O12KJDJKLFOIKij14r87597uijzUJ908U098UAij14r87597uijzUJ908U0OOOU78765TYUwqtf3560JK24F"
   }
 }
 {% endhighlight %}
@@ -89,7 +89,7 @@ XML (format = 2 , Accept: text/xml)
     <executionTime>0.6486599</executionTime>
     <result>
         <objectType>KalturaLoginSession</objectType>
-        <ks> MGVjNGY4YzBkM2ZhYmIxYTA4Y2VhYjYwZGM4NWQ5NzczNzcxY2JmYXwxODY7MTg2OzE0ODQxNDAwNzE7MDs2MzYxOTc0MzQ3MTA0NDI3NzU7MDAwMDA3MTcyMkBnbWFpbC5jb20udGVzdDs7</ks>
+        <ks> IUUELKJFLDKJFOIJPikdlkajf;88JDJPDO9IFOIJGVFLIJJFLKJDLKJMNGF9O12KJDJKLFOIKij14r87597uijzUJ908U098UAij14r87597uijzUJ908U0OOOU78765TYUwqtf3560JK24F</ks>
     </result>
 </xml>
 {% endhighlight %}
@@ -115,7 +115,7 @@ Multi-requests enable sending multiple applicative requests in a single HTTP req
 {% highlight c %}
 {
   "apiVersion": "3.6.1579.29065",
-  "ks": "MGVjNGY4YzBkM2ZhYmIxYTA4Y2VhYjYwZGM4NWQ5NzczNzcxY2JmYXwxODY7MTg2OzE0ODQxNDAwNzE7MDs2MzYxOTc0MzQ3MTA0NDI3NzU7MDAwMDA3MTcyMkBnbWFpbC5jb20udGVzdDs7",
+  "ks": "IUUELKJFLDKJFOIJPikdlkajf;88JDJPDO9IFOIJGVFLIJJFLKJDLKJMNGF9O12KJDJKLFOIKij14r87597uijzUJ908U098UAij14r87597uijzUJ908U0OOOU78765TYUwqtf3560JK24F",
   "0": {
     "service": "asset",
     "action": "list"
@@ -132,11 +132,11 @@ This enables using responses from one applicative request in another applicative
 {% highlight c %}
  {
   "apiVersion": "3.6.1579.29065",
-  "ks": "MGVjNGY4YzBkM2ZhYmIxYTA4Y2VhYjYwZGM4NWQ5NzczNzcxY2JmYXwxODY7MTg2OzE0ODQxNDAwNzE7MDs2MzYxOTc0MzQ3MTA0NDI3NzU7MDAwMDA3MTcyMkBnbWFpbC5jb20udGVzdDs7",
+  "ks": "IUUELKJFLDKJFOIJPikdlkajf;88JDJPDO9IFOIJGVFLIJJFLKJDLKJMNGF9O12KJDJKLFOIKij14r87597uijzUJ908U098UAij14r87597uijzUJ908U0OOOU78765TYUwqtf3560JK24F",
   "0": {
     "service": "ottUser",
     "action": "anonymousLogin",
-    "partnerId": 203345
+    "partnerId": 654321
   },
   "1": {
     "service": "asset",
@@ -181,7 +181,7 @@ Errors are returned in the serialized response (JSON or XML) and automatically i
     <result>
         <error>
             <objectType>KalturaAPIException</objectType>
-            <code>500016</code>
+            <code>555555</code>
             <message>KS expired</message>
         </error>
     </result>
@@ -197,7 +197,7 @@ Errors are returned in the serialized response (JSON or XML) and automatically i
     "error": {
       "objectType": "KalturaAPIException",
       "message": "KS expired",
-      "code": "500016"
+      "code": "444444"
     }
   }
 }
@@ -211,8 +211,8 @@ Errors are returned in the serialized response (JSON or XML) and automatically i
   "result": [
     {
       "objectType": "KalturaLoginSession",
-      "refreshToken": "vsdvssdp046ab84d27b1abb6djowdsd34",
-      "ks": "jsdfo9MI9KKzY0uE7J_lsdjofdsp09mLILmn0LIJML_sokdfsf0lsfLOJKLOJKp9ikmkl-dflgkdfgp0idfkmsdlflokkplOKPplLpKLJHJHBMJUH_KJBH0k090_lsdfsdfKLJKLJ909-0klj ="
+      "refreshToken": "eyyhhfijh989087jflf809JFI80559I99",
+      "ks": "IUUELKJFLDKJFOIJPikdlkajf;88JDJPDO9IFOIJGVFLIJJFLKJDLKJMNGF9O12KJDJKLFOIKij14r87597uijzUJ908U098UAij14r87597uijzUJ908U0OOOU78765TYUwqtf3560JK24F="
     },
     {
       "error": {
@@ -236,11 +236,11 @@ see [asset_get](https://ott.developer.kaltura.com/api-docs/Services/asset/asset_
  {
   "apiVersion": "3.6.1579.29065",
   "assetReferenceType": "media",
-  "clientTag": "dotnet:16-12-20",
+  "clientTag": "refnet:16-10-22",
   "format": 1,
-  "id": "566254",
+  "id": "654321",
   "kalsig": "ef6ddd187091e42003f2c59dbbcdaf4f",
-  "ks": "MGVjNGY4YzBkM2ZhYmIxYTA4Y2VhYjYwZGM4NWQ5NzczNzcxY2JmYXwxODY7MTg2OzE0ODQxNDAwNzE7MDs2MzYxOTc0MzQ3MTA0NDI3NzU7MDAwMDA3MTcyMkBnbWFpbC5jb20udGVzdDs7"
+  "ks": "IUUELKJFLDKJFOIJPikdlkajf;88JDJPDO9IFOIJGVFLIJJFLKJDLKJMNGF9O12KJDJKLFOIKij14r87597uijzUJ908U098UAij14r87597uijzUJ908U0OOOU78765TYUwqtf3560JK24F"
 }
 {% endhighlight %}
 
