@@ -60,7 +60,7 @@ Although both form data and a Kaltura proprietary requests are supported, JSON i
   "assetReferenceType": "media",
   "clientTag": "refnet:16-11-22",
   "format": 1,
-  "id": "654321",
+  "id": "PARTNER_ID",
   "kalsig": "ef6ddd187091dddddddcccccdbbcdaf4f",
   "ks": "VALID_KS_STRING"
 }
@@ -181,7 +181,7 @@ Errors are returned in the serialized response (JSON or XML) and automatically i
     <result>
         <error>
             <objectType>KalturaAPIException</objectType>
-            <code>555555</code>
+            <code>500016</code>
             <message>KS expired</message>
         </error>
     </result>
@@ -197,7 +197,7 @@ Errors are returned in the serialized response (JSON or XML) and automatically i
     "error": {
       "objectType": "KalturaAPIException",
       "message": "KS expired",
-      "code": "444444"
+      "code": "500016"
     }
   }
 }
@@ -238,7 +238,7 @@ see [asset_get](https://ott.developer.kaltura.com/api-docs/Services/asset/asset_
   "assetReferenceType": "media",
   "clientTag": "refnet:16-10-22",
   "format": 1,
-  "id": "654321",
+  "id": "PARTNER_ID",
   "kalsig": "ef6ddd187091e42003f2c59dbbcdaf4f",
   "ks": "VALID_KS_STRING"
 }
