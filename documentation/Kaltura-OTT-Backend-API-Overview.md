@@ -136,7 +136,7 @@ This enables using responses from one applicative request in another applicative
   "0": {
     "service": "ottUser",
     "action": "anonymousLogin",
-    "partnerId": 654321
+    "partnerId": PARTNER_ID
   },
   "1": {
     "service": "asset",
