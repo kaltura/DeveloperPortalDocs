@@ -12,7 +12,7 @@ This document describes how to use track selection modes in the player.
 
 There are three available track selection modes:
 
-* Off - This is the default mode; in this mode, audio takes the default selection and text if off.
+* Off - Off, which is the default mode, means different things for text selection and audio selection: for text selection, Off means the player will use the default value from the playlist. For audio select, the player will simply turn audio selection off.
 * Auto - In this mode, the player selects the language by the device locale if available; if not, it takes the default selection from the stream instead (if there is one).
 * Selection - This mode uses a specific selection, where you'll need to provide the specific selection you'd like to use.
 
