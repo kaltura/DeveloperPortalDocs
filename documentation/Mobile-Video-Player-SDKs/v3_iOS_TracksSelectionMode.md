@@ -4,19 +4,19 @@ layout: page
 
 ## Tracks Selection Mode
 
-This document describes how to use tracks selection modes.
+This document describes how to use track selection modes in the player.
 
->Note: Tracks selection modes are available for audio and text tracks only!
+>Note: Track selection modes are available for audio and text tracks only!
 
 ### Available Modes and Behavior
 
-There are 3 available modes:
+There are three available track selection modes:
 
-1. Off - the default mode, in this mode audio takes the default selection and text if off.
-2. Auto - Selects the language by the device locale if available, if not takes the default selection from the stream instead (if there is one).
-3. Selection - A specific selection, in this mode you provide a specific selection you would like to use.
+* Off - This is the default mode; in this mode, audio takes the default selection and text if off.
+* Auto - In this mode, the player selects the language by the device locale if available; if not, it takes the default selection from the stream instead (if there is one).
+* Selection - This mode uses a specific selection, where you'll need to provide the specific selection you'd like to use.
 
-#### Text Tracks Selection
+#### Text Track Selection  
 
 >swift
 
@@ -34,7 +34,7 @@ player.settings.trackSelection.textSelectionMode = // TrackSelectionModeOff/Trac
 player.settings.trackSelection.textSelectionLanguage = // en/fr...
 ```
 
-#### Audio Tracks Selection
+#### Audio Track Selection
 
 >swift
 
@@ -54,8 +54,8 @@ player.settings.trackSelection.audioSelectionLanguage = // en/fr...
 
 ## Code Samples
 
-[PlayKit iOS Samples](https://github.com/kaltura/playkit-ios-samples/tree/master), click to go to samples.
+Go to [PlayKit iOS Samples](https://github.com/kaltura/playkit-ios-samples/tree/master) for code samples.
 
-## Have Questions or Need Help?
+## Have Questions or Need Help?  
 
 Check out the [Kaltura Player SDK Forum](https://forum.kaltura.org/c/playkit) page for different ways of getting in touch.
