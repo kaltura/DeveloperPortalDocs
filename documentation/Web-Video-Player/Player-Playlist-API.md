@@ -200,3 +200,37 @@ kWidget.embed({
 	"entry_id": "0_kh14ze3t"
 });
 ```
+
+## Which Flashvars are Used for Changing the Playlist Items Text Color in a Playlist Player?  
+
+In general, two flashvars are required for this action:
+
+* [labelId].dynamicColor=true
+* [labelId].color1=[your color]
+Whereby [labelId] should be replaced with the ID of the label you would like to change.
+
+For example (relevant for the “new” templates, not “basic”):
+
+If you would like to change the name text color to red , add:
+
+* nameLabel.dynamicColor=true
+* nameLabel.color1=0xFF0000
+* hoverNameLabel.dynamicColor=true
+* hoverNameLabel.color1=0xFF0000
+
+>Note: In this example both nameLabel and hoverNameLabel were changed. In the new templates, each item is represented by two labels, one is used in regular state, and the other is used on mouse over. In the “basic” player, only one item needs to be  changed. In this example it would be " irLinkIrScreen" label. Please note that there’s a difference between the IDs of labels in the ”new” templates and in the “basic” templates.
+
+Here is a complete list of playlist item renderer labels and their matching IDs:
+
+| Playlist Item | ID in “new” template:regular / hover     | ID in “basic” template |
+|---------------|------------------------------------------|------------------------|
+| Name          | nameLabel / hoverNameLabel               | irLinkIrScreen         |
+| Description   | descriptionLabel / hoverDescriptionLabel | irDescriptionIrScreen  |
+| Duration      | durationLabel / hoverDurationLabel       | irDurationIrScreen     |
+| plays         | playsLabel / hoverPlaysLabel             | irPlaysIrScreen        |
+| rank          | rankLabel / hoverRankLabel               | irRankIrScreen         |
+| votes         | votesLabel / hoverVotesLabel             | irVotesIrScreen        |
+| tags          | tagsLabel / hoverTagsLabel               | irTagsIrScreen         |
+| categories    | adminTagsLabel / hoverAdminTagsLabel     | irAdminTagsIrScreen    |
+| Created At    | createdAtLabel / hoverCreatedAtLabel     | irCreatedAtIrScreen    |
+| Created By    | createdByLabel/ hoverCreatedByLabel      | irCreatedByIrScreen    |
