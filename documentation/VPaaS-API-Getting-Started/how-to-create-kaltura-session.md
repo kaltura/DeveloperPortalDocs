@@ -5,7 +5,7 @@ weight: 103
 ---
 
 
-The Kaltura API is representational state transfer (REST)(http://en.wikipedia.org/wiki/Representational_state_transfer)-based, which is a style of software architecture for distributed systems such as the World Wide Web. REST has emerged over the past few years as a predominant Web service design model. REST has increasingly displaced other design models such as SOAP and WSDL due to its simpler style and [statelessness](http://en.wikipedia.org/wiki/Stateless_protocol). Every call (request) made to the Kaltura API requires an authentication key, the Kaltura Session (aka KS), identifying the account on which the action to be carried, the authenticated user and its role.
+The Kaltura API is representational state transfer [REST](http://en.wikipedia.org/wiki/Representational_state_transfer)-based, which is a style of software architecture for distributed systems such as the World Wide Web. REST has emerged over the past few years as a predominant Web service design model. REST has increasingly displaced other design models such as SOAP and WSDL due to its simpler style and [statelessness](http://en.wikipedia.org/wiki/Stateless_protocol). Every call (request) made to the Kaltura API requires an authentication key, the Kaltura Session (aka KS), identifying the account on which the action to be carried, the authenticated user and its role.
 
 ### Methods for Generating a Kaltura Session  
 
