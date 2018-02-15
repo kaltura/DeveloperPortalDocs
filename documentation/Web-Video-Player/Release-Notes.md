@@ -7,6 +7,7 @@ weight: 402
 
 | Release | Date Released   | Details |
 |---------|-----------------|---------|
+| 2.66    | February 11, 2018   | [Details](Release-Notes.html#release-266)|
 | 2.65    | January 14, 2018   | [Details](Release-Notes.html#release-265)|
 | 2.64    | December 19, 2017   | [Details](Release-Notes.html#release-264)|
 | 2.63    | November 19, 2017   | [Details](Release-Notes.html#release-263)|
@@ -29,6 +30,10 @@ weight: 402
 | 2.47    | August 29, 2016 | [Details](Release-Notes.html#release-247) |
 | 2.46    | July 31, 2016   | [Details](Release-Notes.html#release-246) |
 | 2.45    | July 03, 2016   | [Details](Release-Notes.html#release-245) |
+
+## Release 2.66
+
+Added INSECURE mode for IMA plugin which allows VPAID ads in insecure mode. For details, see this [article](https://developers.google.com/interactive-media-ads/docs/sdks/html5/vpaid2js). 
 
 ## Release 2.64  
 
