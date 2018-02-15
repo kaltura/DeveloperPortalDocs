@@ -33,7 +33,7 @@ weight: 402
 
 ## Release 2.66
 
-Added INSECURE mode for IMA plugin which allows VPAID ads in insecure mode. For details, see this [article](https://developers.google.com/interactive-media-ads/docs/sdks/html5/vpaid2js). 
+Added the INSECURE mode for the IMA plugin, which allows VPAID ads in insecure mode. For details, see this [article](https://developers.google.com/interactive-media-ads/docs/sdks/html5/vpaid2js). 
 
 ## Release 2.64  
 
