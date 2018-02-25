@@ -155,7 +155,7 @@ The following is a list of the most commonly used Player events triggered during
 | `mediaError`                     | errorEvent       | The Player is notified about media errors                                                                                                                     |
 | `playerError`                     | errorEvent       | The Player is notified about an error. The errorEvent object contains the error details.                                                                                                                     |
 | `playerStateChange`              | MediaPlayerState | Dispatched when the media Player's state has changed                                                                                                       |
-| `firstPlay`                      | n/a              | Triggered once per content entry when first played. If the end user initiates a replay this is a new content playback sequence and will triger firstPlay again |
+| `firstPlay`                      | n/a              | Triggered once per content entry when first played|
 | `playerPlayed`                   | n/a              | Triggered when the Player enters a play state. This event may be triggered multiple times during a single playback session                                 |
 | `playerPaused`                   | n/a              | The Player is now in a pause state                                                                                                                       |
 | `preSeek`                        | seekTime         | Notifies about a seek activity that is about to start                                                                                                    |
