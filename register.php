@@ -133,7 +133,7 @@ foreach ($media_sub_verticals as $sub_vert){
     <ul class="w-list-unstyled">
         <li class="temp-list"><span class="feature-bullets fa fa-chevron-right"></span>Pay-As-You-Go. For full pricing details, visit our <a class="pricing-pg-inline-link" href="pricing.html">Pricing Page</a>
         </li>
-        <li class="temp-list"><span class="feature-bullets fa fa-chevron-right"></span>$400/month VPaaS credit for the first 12 months following sign-up (subject to conditions listed on the <a class="pricing-pg-inline-link" href="/pricing.html">Pricing Page</a>)</li>
+        <li class="temp-list"><span class="feature-bullets fa fa-chevron-right"></span>Includes Free 500GB of Storage &amp; Bandwidth per Month for the First 6 Months following sign-up (subject to conditions listed on the <a class="pricing-pg-inline-link" href="/pricing.html">Pricing Page</a>)</li>
         <li class="temp-list"><span class="feature-bullets fa fa-chevron-right"></span>You will be invoiced on a monthly basis for all usage generated via your VPaaS account(s) at the rates specified on the Pricing Page</li>
         <li class="temp-list"><span class="feature-bullets fa fa-chevron-right"></span>You agree to receive invoices at the e-mail address you have provided in the registration form</li>
     </ul>
