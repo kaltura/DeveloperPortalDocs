@@ -146,6 +146,13 @@ foreach ($media_sub_verticals as $sub_vert){
 <div class="w-form-done"><p>Thank you! Your submission has been received!</p></div>
 <div class="w-form-fail"><p>Oops! Something went wrong while submitting the form</p></div>
 <script>
+  !function(){
+    var script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://risk.clearbit.com/v1/risk.js';
+    var parent = document.getElementsByTagName('script')[0];
+    parent.parentNode.insertBefore(script, parent);
+  }();
 
 function validate(event)
 {
