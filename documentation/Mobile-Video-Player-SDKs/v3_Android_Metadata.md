@@ -6,19 +6,19 @@ weight: 400
 ---
 
 The Player SDK provides a convenient method for receiving metadata from HLS and DASH sources.
-Following article explains how to do get this metadata and provides a list of all available metadata types. You can find a working code sample [here](https://github.com/kaltura/playkit-android-samples/tree/master/MetadataSample).
+The following article explains how to get this metadata, and provides a list of all available metadata types. You can find a working code sample [here](https://github.com/kaltura/playkit-android-samples/tree/master/MetadataSample).
 
-### Step by step.
+### Step by Step  
 
-1) Subscribe to METADATA_AVAILABLE event.
+1) Subscribe to the METADATA_AVAILABLE event.
 
-2) Obtain the Metadata object.
+2) Obtain the metadata object.
 
-3) get the actual metadata.
+3) Get the actual metadata.
  
-### Subscribe to METADATE_AVAILABLE event.
+### Subscribe to the METADATE_AVAILABLE Event
 
-In order to get start receiving metadata, you need to subscribe to the corresponding event, called METADATA_AVAILABLE. More about events subscription you can learn from [here.] (https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/v3_Android_EventsAndStates.html)
+To start receiving metadata, you'll need to subscribe to the corresponding event, called METADATA_AVAILABLE. You can learn more about events subscription [here] (https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/v3_Android_EventsAndStates.html).
 
 ```
          player.addEventListener(new PKEvent.Listener() {
@@ -31,9 +31,9 @@ In order to get start receiving metadata, you need to subscribe to the correspon
 
 ```
 
-### Obtain the Metadata object.
+### Obtain the Metadata Object  
 
-METADATA_AVAILABLE event holds data object with Metadata. In order to get this object, first you must cast event to PlayerEvent.MetadataAvailable, and then apply getter on it.
+The METADATA_AVAILABLE event holds data object with metadata. To get this object, you'll first need to cast an event to PlayerEvent.MetadataAvailable, and then apply a getter on it.
 
 
 ```
@@ -45,9 +45,9 @@ METADATA_AVAILABLE event holds data object with Metadata. In order to get this o
 
 ```
 
-### Get the actual metadata.
+### Get the Actual Metadata  
 
-Each media entry can have more than one type of metadata objects, called frames. In order to receive the one you are interested in you should run through all the entries in Metadata object and check it for instance. In next section we will see the list of all available types of metadata.
+Each media entry can have more than one type of metadata objects, called frames. To receive the one you are interested in, you'll need to run run through all the entries in the metadata object and check it for instances. In the next section, we'll look at the list of all available types of metadata.
 
 ```
   				//Iterate through all entries in metadata object.
@@ -66,9 +66,9 @@ Each media entry can have more than one type of metadata objects, called frames.
                 }
 ```
 
-### List of available metadata types:
+### List of Available Metadata Types
 
-####HLS:
+#### HLS
 
 * [ApicFram](https://google.github.io/ExoPlayer/doc/reference/com/google/android/exoplayer2/metadata/id3/ApicFrame.html)
 * [BinaryFrame](https://google.github.io/ExoPlayer/doc/reference/com/google/android/exoplayer2/metadata/id3/BinaryFrame.html)
@@ -81,7 +81,7 @@ Each media entry can have more than one type of metadata objects, called frames.
 * [TextInformationFrame](https://google.github.io/ExoPlayer/doc/reference/com/google/android/exoplayer2/metadata/id3/TextInformationFrame.html)
 * [UrlLinkFrame](https://google.github.io/ExoPlayer/doc/reference/com/google/android/exoplayer2/metadata/id3/UrlLinkFrame.html)
 
-####DASH:
+#### DASH
 
 * [EventMessage](https://google.github.io/ExoPlayer/doc/reference/com/google/android/exoplayer2/metadata/emsg/EventMessage.html)
 
