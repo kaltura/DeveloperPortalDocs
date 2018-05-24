@@ -95,6 +95,8 @@ Follow these steps to use the device upload APIs:
 5. Create a new entry with the template-entry id (media.add).
 6. Associate the entry with the uploaded media (media.addContent).
 
+> Note: When uploading multiple streams (e.g., a separate recording of the camera and screen), they must be uploaded as separate entries. After the first entry is created and uploaded, subsequent entries should include the attribute parentEntryID with the value of the first entry ID.
+
 ## iCal Sync from Kaltura  
 
 iCal export is supported via HTTP/HTTPS or FTP. 
