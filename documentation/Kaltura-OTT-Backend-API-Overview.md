@@ -1,12 +1,8 @@
-temp
----
-layout: page
-title: Kaltura’s OTT Backend API Overview
----
+### Kaltura’s OTT Backend API Overview
 
 Kaltura’s Backend features hundreds of REST-based APIs that provide programmable access to every OTT service. With full access to the Backend API, you can extend every feature and functionality of the Kaltura Platform to integrate with Kaltura’s solutions, services, and widgets seamlessly, creating a unified experience within your chosen environments.
 
-This site provides comprehensive documentation on Kaltura’s Backend API, and is intended for developers who wish to use these APIs within their services. To gain a greater understanding of Kaltura’s OTT Video Platform, please review the [introduction to Kaltura OTT TV](https://corp.kaltura.com/Video-Solutions/OTT-TV-and-TV-Everywhere) article.
+This site provides comprehensive documentation on Kaltura’s Backend API, and is intended for developers who wish to use these APIs within their services. To gain a greater understanding of Kaltura’s OTT Video Platform, please review the [Introduction to Kaltura OTT TV](https://corp.kaltura.com/Video-Solutions/OTT-TV-and-TV-Everywhere) article.
 
 ## About Kaltura’s Backend  
 
@@ -54,7 +50,7 @@ The following are the general characteristics of any REST API:
 
 Although both form data and a Kaltura proprietary requests are supported, JSON is the recommended request format, as per the example below. See [asset_get](https://ott.developer.kaltura.com/api-docs/Services/asset/asset_get) for details.
 
-{% highlight c %}
+```
  {
   "apiVersion": "3.6.1579.29065",
   "assetReferenceType": "media",
@@ -64,14 +60,14 @@ Although both form data and a Kaltura proprietary requests are supported, JSON i
   "kalsig": "ef6ddd187091dddddddcccccdbbcdaf4f",
   "ks": "VALID_KS_STRING"
 }
-{% endhighlight %}
+```
 
 ### REST API Response Formats  
 
 To define the required request format, use the Accept HTTP header with application/json or text/xml.
 The REST APIs use the following response formats:
 
-{% highlight c %}
+```
 JSON (format = 1, Accept: application/json)
 {
   "executionTime": 0.900651,
@@ -80,9 +76,9 @@ JSON (format = 1, Accept: application/json)
     "ks": "VALID_KS_STRING"
   }
 }
-{% endhighlight %}
+```
 
-{% highlight c %}
+```
 XML (format = 2 , Accept: text/xml)
 <?xml version="1.0" encoding="utf-8"?>
 <xml>
@@ -92,7 +88,7 @@ XML (format = 2 , Accept: text/xml)
         <ks>VALID_KS_STRING</ks>
     </result>
 </xml>
-{% endhighlight %}
+```
 
 ### API Services and Actions  
 
@@ -112,7 +108,7 @@ All objects extend from the KalturaObjectBase (note that the name may be differe
 
 Multi-requests enable sending multiple applicative requests in a single HTTP request. 
 
-{% highlight c %}
+```
 {
   "apiVersion": "3.6.1579.29065",
   "ks": "VALID_KS_STRING",
@@ -125,11 +121,11 @@ Multi-requests enable sending multiple applicative requests in a single HTTP req
     "action": "get"
   }
 }
-{% endhighlight %}
+```
 
 This enables using responses from one applicative request in another applicative request in the same HTTP request.
 
-{% highlight c %}
+```
  {
   "apiVersion": "3.6.1579.29065",
   "ks": "VALID_KS_STRING",
@@ -144,7 +140,7 @@ This enables using responses from one applicative request in another applicative
     "ks": "{1:result:ks}"
   }
 }
-{% endhighlight %}
+```
 
 #### Global Parameters
 
@@ -173,8 +169,7 @@ Errors are returned in the serialized response (JSON or XML) and automatically i
 #### Error Response Examples  
 
 **XML:**
-
-{% highlight c %}
+```
 <?xml version="1.0" encoding="utf-8"?>
 <xml>
     <executionTime>0.0011062</executionTime>
@@ -186,11 +181,10 @@ Errors are returned in the serialized response (JSON or XML) and automatically i
         </error>
     </result>
 </xml>
-{% endhighlight %}
+```
 
 **JSON:**
-
-{% highlight c %}
+```
 {
   "executionTime": 0.0007125,
   "result": {
@@ -201,11 +195,11 @@ Errors are returned in the serialized response (JSON or XML) and automatically i
     }
   }
 }
-{% endhighlight %}
+```
 
 **Multi-request:**
 
-{% highlight c %}
+```
 {
   "executionTime": 3.40099,
   "result": [
@@ -223,7 +217,7 @@ Errors are returned in the serialized response (JSON or XML) and automatically i
     }
   ]
 }
-{% endhighlight %}
+```
 
 ## Using the TVPAPI Security Model  
 
@@ -232,7 +226,7 @@ Requests to TVP-API should be accompanied with init-object that contains the acc
 Requests to the OTT API can be accompanied by a ks property; this property will usually contain a KS as returned from the OTT API login, but it may also contain an access-token instead. When the access-token is used instead of KS, no init-object is needed; for example
 see [asset_get](https://ott.developer.kaltura.com/api-docs/Services/asset/asset_get):
 
-{% highlight c %}
+```
  {
   "apiVersion": "3.6.1579.29065",
   "assetReferenceType": "media",
@@ -242,5 +236,5 @@ see [asset_get](https://ott.developer.kaltura.com/api-docs/Services/asset/asset_
   "kalsig": "ef6ddd187091e42003f2c59dbbcdaf4f",
   "ks": "VALID_KS_STRING"
 }
-{% endhighlight %}
+```
 
