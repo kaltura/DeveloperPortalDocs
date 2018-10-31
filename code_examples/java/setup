@@ -1,0 +1,5 @@
+public static Client generateKalturaClient() {
+        Configuration config = new Configuration();
+        Client client = new Client(config);
+        return client;
+    }
