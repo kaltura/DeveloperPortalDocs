@@ -1,0 +1,4 @@
+require_once('lib/KalturaClient.php');
+
+$config = new KalturaConfiguration();
+$client = new KalturaClient($config);
