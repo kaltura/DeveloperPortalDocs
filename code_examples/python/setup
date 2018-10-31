@@ -1,0 +1,4 @@
+from KalturaClient import *
+
+config = KalturaConfiguration()
+client = KalturaClient(config)
