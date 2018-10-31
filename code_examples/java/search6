@@ -1,0 +1,7 @@
+SearchEntryESearchBuilder requestBuilder = ESearchService.searchEntry(searchParams)
+    .setCompletion(new OnCompletion<Response<ESearchEntryResponse>>() {
+        @Override
+        public void onComplete(Response<ESearchEntryResponse> result) {
+            System.out.println(result);
+        }
+    });

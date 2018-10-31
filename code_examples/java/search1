@@ -1,0 +1,3 @@
+ESearchEntryParams searchParams = new ESearchEntryParams();
+searchParams.setSearchOperator(new ESearchEntryOperator());
+searchParams.getSearchOperator().setSearchItems(new ArrayList<ESearchEntryBaseItem>(1));

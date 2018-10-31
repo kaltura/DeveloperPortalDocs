@@ -1,0 +1,7 @@
+$uploadTokenId = $token->id;
+$fileData = "/path/to/file";
+$resume = false;
+$finalChunk = true;
+$resumeAt = -1;
+
+$result = $client->uploadToken->upload($uploadTokenId, $fileData, $resume, $finalChunk, $resumeAt);

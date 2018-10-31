@@ -1,0 +1,9 @@
+UploadToken uploadToken = new UploadToken();
+
+AddUploadTokenBuilder requestBuilder = UploadTokenService.add(uploadToken)
+.setCompletion(new OnCompletion<Response<UploadToken>>() {
+    @Override
+    public void onComplete(Response<UploadToken> token) {
+        System.out.println(token);
+    }
+});

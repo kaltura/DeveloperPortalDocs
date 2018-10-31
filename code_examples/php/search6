@@ -1,0 +1,1 @@
+$result = $elasticSearchPlugin->eSearch->searchEntry($searchParams);

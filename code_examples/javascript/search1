@@ -1,0 +1,3 @@
+let searchParams = new kaltura.objects.ESearchEntryParams();
+searchParams.searchOperator = new kaltura.objects.ESearchEntryOperator();
+searchParams.searchOperator.searchItems = [];

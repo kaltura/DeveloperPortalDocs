@@ -1,0 +1,1 @@
+searchParams.getSearchOperator().getSearchItems().set(0, new ESearchUnifiedItem());

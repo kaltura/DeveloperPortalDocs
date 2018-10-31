@@ -1,0 +1,6 @@
+$mediaEntry = new KalturaMediaEntry();
+$mediaEntry->name = "Kaltura Logo";
+$mediaEntry->description = "sample video of kaltura logo";
+$mediaEntry->mediaType = KalturaMediaType::VIDEO;
+
+$entry = $client->media->add($mediaEntry);

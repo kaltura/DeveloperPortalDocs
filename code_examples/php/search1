@@ -1,0 +1,4 @@
+$elasticSearchPlugin = KalturaElasticSearchClientPlugin::get($client);
+$searchParams = new KalturaESearchEntryParams();
+$searchParams->searchOperator = new KalturaESearchEntryOperator();
+$searchParams->searchOperator->searchItems = [];

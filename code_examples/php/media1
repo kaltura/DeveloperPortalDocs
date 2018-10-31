@@ -1,0 +1,2 @@
+$uploadToken = new KalturaUploadToken();
+$token = $client->uploadToken->add($uploadToken);

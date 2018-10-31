@@ -1,0 +1,5 @@
+$entryId = $entry->id;
+$resource = new KalturaUploadedFileTokenResource();
+$resource->token = $uploadTokenId;
+
+$result = $client->media->addContent($entryId, $resource);
