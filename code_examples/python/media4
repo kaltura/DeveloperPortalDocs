@@ -1,0 +1,5 @@
+entry_id = entry.id
+resource = KalturaUploadedFileTokenResource()
+resource.token = upload_token_id
+
+result = client.media.addContent(entry_id, resource)

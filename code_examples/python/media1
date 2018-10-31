@@ -1,0 +1,2 @@
+upload_token = KalturaUploadToken()
+token = client.uploadToken.add(upload_token);

@@ -1,0 +1,3 @@
+searchParams = KalturaESearchEntryParams()
+searchParams.searchOperator = KalturaESearchEntryOperator()
+searchParams.searchOperator.searchItems = []

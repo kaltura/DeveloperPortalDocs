@@ -1,0 +1,5 @@
+media_entry = KalturaMediaEntry()
+media_entry.name = "Kaltura Logo"
+media_entry.description = "sample video of kaltura logo"
+media_entry.mediaType = KalturaMediaType.VIDEO
+entry = client.media.add(media_entry)

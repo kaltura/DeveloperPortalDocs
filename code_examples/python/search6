@@ -1,0 +1,2 @@
+result = client.elasticsearch.eSearch.searchEntry(searchParams);
+print(result);

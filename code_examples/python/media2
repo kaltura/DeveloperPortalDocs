@@ -1,0 +1,6 @@
+upload_token_id = token.id
+file_data =  open('Kaltura_Logo_Animation.flv', 'r')
+resume = False
+final_chunk = True	
+resume_at = 0
+result = client.uploadToken.upload(upload_token_id, file_data, resume, final_chunk, resume_at)
