@@ -1,0 +1,16 @@
+ReportType reportType = ReportType.TOP_CONTENT.getValue();
+ReportInputFilter reportInputFilter = new ReportInputFilter();
+
+reportInputFilter.setFromDay("20181001");
+reportInputFilter.setToDay("20181031");
+FilterPager pager = new FilterPager();
+pager.setPageIndex(0);
+pager.setPageSize(20);
+
+GetTableReportBuilder requestBuilder = ReportService.getTable(reportType, reportInputFilter, pager)
+    .setCompletion(new OnCompletion<Response<ReportTable>>() {
+        @Override
+        public void onComplete(Response<ReportTable> result) {
+            System.out.println(result);
+        }
+});

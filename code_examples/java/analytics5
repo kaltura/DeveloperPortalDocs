@@ -1,0 +1,17 @@
+ReportType reportType = ReportType. MAP_OVERLAY.getValue();
+ReportInputFilter reportInputFilter = new ReportInputFilter();
+reportInputFilter.setFromDay("20181001");
+reportInputFilter.setToDay("20181031");
+FilterPager pager = new FilterPager();
+pager.setPageIndex(0);
+pager.setPageSize(20);
+String order = "count_plays";
+String objectIds = "Germany";
+
+GetTableReportBuilder requestBuilder = ReportService.getTable(reportType, reportInputFilter, pager, order, objectIds)
+    .setCompletion(new OnCompletion<Response<ReportTable>>() {
+        @Override
+        public void onComplete(Response<ReportTable> result) {
+            System.out.println(result);
+        }
+});   
