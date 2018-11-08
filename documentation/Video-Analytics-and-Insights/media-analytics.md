@@ -15,12 +15,12 @@ You can follow the [Interactive Code Workflow,](https://developer.kaltura.com/wo
 
 ## Getting Started 
 
-The Report API contains a couple different actions for returning data. For the purpose of this doc, we will use [`report.getTable`](https://developer.kaltura.com/console/service/report/action/getTable), which returns a JSON object of the insights data, as well as the respective column headers. Other actions include [`report.getGraphs`](https://developer.kaltura.com/console/service/report/action/getGraphs) which returns points for a graph UI, and [`report.getUrlForReportAsCsv`](https://developer.kaltura.com/console/service/report/action/getUrlForReportAsCsv), which produces a CSV report based on your given headers. 
+The Report API contains a couple of different actions for returning data. For the purpose of this doc, we will use [`report.getTable`](https://developer.kaltura.com/console/service/report/action/getTable), which returns an object of the insights data, as well as the respective column headers. Other actions include [`report.getGraphs`](https://developer.kaltura.com/console/service/report/action/getGraphs) which returns points for a graph UI, and [`report.getUrlForReportAsCsv`](https://developer.kaltura.com/console/service/report/action/getUrlForReportAsCsv), which produces a CSV report based on your given headers. 
 
 For any `report.getTable` action, you need: 
-- **reportType:** Object enum or integer (listed below) - determines the type of report to produce 
+- **reportType:** Object enum or integer (list of types found [here](https://developer.kaltura.com/api-docs/General_Objects/Enums/KalturaReportType)) that determines the type of report to produce 
 - **reportInputFilter:** Can be of type `KalturaReportInputFilter` or `KalturaEndUserReportInputFilter`. It is required, and allows you to set date range, specific categories, keywords, or custom variables. 
-- **pager:** Unlike some other Kaltura APIs, a pager is always required for this action. It contains the `pageIndex` (starting with zero) and `pageSize` (number of results you'd like per page). 
+- **pager:** Unlike some other Kaltura APIs, a pager is always required for this action. It contains the `pageIndex` and `pageSize` (number of results you'd like per page). 
 
 Other optional parameters: 
 - **objectIds:** For when you want to drill down on statistics for a specific entry or user. 
@@ -30,7 +30,7 @@ Let's look at a few available report types:
 
 ## Top Content
 
-So you want to basic insights on how much engagement your entries have been drawing in the last month, like how many times the video has been loaded and then actually played, and when users are likely to drop-off. In the example below, we set the `reportType` to Top Content (1), the date range to the entire month of October, and a page size of 20. The result contains a list of entries and their statistics.
+So you want basic insights on how much engagement your entries have been drawing in the last month, like how many times the video has been loaded and then actually played, and when users are likely to drop-off. In the example below, we set the `reportType` to Top Content (1), the date range to the entire month of October, and a page size of 20. The result contains a list of entries and their statistics.
 
 {% code_example analytics1 %}
 
@@ -89,33 +89,4 @@ To learn how to setup player plugins read: [Configuring Analytics Plugins](https
 * [Nielsen](http://player.kaltura.com/docs/NielsenVideoCensus)
 * [Google Analytics](https://knowledge.kaltura.com/node/1148#googleanalytics)
 * [Chartbeat](http://support.chartbeat.com/docs/video.html#kaltura)
-
-## Report Types by Number 
-
-- Top Content (1)
-- Content Dropoff (2)
-- Content Interactions (3)
-- Map Overlay (4)
-- Top Contributors (5)
-- Top Syndication (6)
-- Content Contributions (7) 
-- User Engagement (11)
-- Specific User Engagement (12)
-- User Top Content (13)
-- User Content Dropoff (14)
-- User Content Interactions (15)
-- Applications (16)
-- User Usage (17)
-- Specific User Usage (18)
-- Top Creators (20)
-- Platforms (21)
-- Operating System (22)
-- Browsers (23)
-- Live (24)
-- Top Playback Context (25)
-- VPaaS Usage (26)
-- Entry Usage (27) 
-- Reach Usage (28)
-- Top Custom Var1 (29)
-- Partner Usage (201)
 
