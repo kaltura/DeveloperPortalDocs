@@ -3,7 +3,7 @@ reportInputFilter = KalturaReportInputFilter()
 reportInputFilter.fromDay = "20181001"
 reportInputFilter.toDay = "20181031"
 pager = KalturaFilterPager()
-pager.pageIndex = 0
+pager.pageIndex = 1
 pager.pageSize = 20
 
 result = client.report.getTable(reportType, reportInputFilter, pager)
