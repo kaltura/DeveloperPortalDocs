@@ -3,7 +3,7 @@ ReportInputFilter reportInputFilter = new ReportInputFilter();
 reportInputFilter.setFromDay("20181001");
 reportInputFilter.setToDay("20181031");
 FilterPager pager = new FilterPager();
-pager.setPageIndex(0);
+pager.setPageIndex(1);
 pager.setPageSize(20);
 String order = "count_plays";
 
