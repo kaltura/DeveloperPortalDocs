@@ -3,7 +3,7 @@ let reportInputFilter = new kaltura.objects.ReportInputFilter();
 reportInputFilter.fromDay = "20181001";
 reportInputFilter.toDay = "20181031";
 let pager = new kaltura.objects.FilterPager();
-pager.pageIndex = 0;
+pager.pageIndex = 1;
 pager.pageSize = 20;
 
 kaltura.services.report.getTable(reportType, reportInputFilter, pager)
