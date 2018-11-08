@@ -9,7 +9,7 @@ The Kaltura Analytics API reports provide you with the insight you need to manag
 ## Report Service
 
 Kaltura analytics data is exposed via the [`Report Service`](https://developer.kaltura.com/console/service/report).   
-A number of actions within this service will enable you to pull data for Content, User Engagement, Bandwith and Storage, and System. A specific set of filters will ensure you get the insights you need. 
+A number of actions within this service will enable you to pull data for Content, User Engagement, Bandwidth and Storage, and System. A specific set of filters will ensure you get the insights you need. 
 
 You can follow the [Interactive Code Workflow,](https://developer.kaltura.com/workflows/Review_Media_Analytics/Analytics_Reports) or continue reading to learn about a few basic reports:
 
