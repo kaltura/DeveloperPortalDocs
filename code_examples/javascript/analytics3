@@ -1,0 +1,15 @@
+let reportType = kaltura.enums.ReportType.USER_ENGAGEMENT;
+let reportInputFilter = new kaltura.objects.KalturaEndUserReportInputFilter();
+reportInputFilter.categories = "Mediaspace>site>channels>podcasts";
+reportInputFilter.fromDay = "20181001";
+reportInputFilter.toDay = "20181031";
+let pager = new kaltura.objects.FilterPager();
+pager.pageIndex = 0;
+pager.pageSize = 20;
+let objectIds = "1_qwerty";
+
+kaltura.services.report.getTable(reportType, reportInputFilter, pager, objectIds)
+.execute(client)
+.then(result => {
+    console.log(result);
+});

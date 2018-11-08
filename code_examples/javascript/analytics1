@@ -1,0 +1,13 @@
+let reportType = kaltura.enums.ReportType.TOP_CONTENT;
+let reportInputFilter = new kaltura.objects.ReportInputFilter();
+reportInputFilter.fromDay = "20181001";
+reportInputFilter.toDay = "20181031";
+let pager = new kaltura.objects.FilterPager();
+pager.pageIndex = 0;
+pager.pageSize = 20;
+
+kaltura.services.report.getTable(reportType, reportInputFilter, pager)
+.execute(client)
+.then(result => {
+    console.log(result);
+});

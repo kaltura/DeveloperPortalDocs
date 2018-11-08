@@ -1,0 +1,15 @@
+let reportType = kaltura.enums.ReportType.MAP_OVERLAY;
+let reportInputFilter = new kaltura.objects.KalturaReportInputFilter();
+reportInputFilter.fromDay = "20181001";
+reportInputFilter.toDay = "20181031";
+let pager = new kaltura.objects.FilterPager();
+pager.pageIndex = 0;
+pager.pageSize = 20;
+let order = "count_plays"
+let objectIds = "Germany";
+
+kaltura.services.report.getTable(reportType, reportInputFilter, pager, order, objectIds)
+.execute(client)
+.then(result => {
+    console.log(result);
+});
