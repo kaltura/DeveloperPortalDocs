@@ -1,0 +1,10 @@
+$reportType = KalturaReportType::TOP_CONTRIBUTORS;
+$reportInputFilter = new KalturaReportInputFilter();
+$reportInputFilter->fromDay = "20181001";
+$reportInputFilter->toDay = "20181031";
+$pager = new KalturaFilterPager();
+$pager->pageIndex = 0;
+$pager->pageSize = 20;
+$order = "count_total";
+
+$result = $client->report->getTable($reportType, $reportInputFilter, $pager, $order);

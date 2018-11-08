@@ -1,0 +1,11 @@
+$reportType = KalturaReportType::USER_ENGAGEMENT;
+$reportInputFilter = new KalturaEndUserReportInputFilter();
+$reportInputFilter->categories = "Mediaspace>site>channels>podcasts";
+$reportInputFilter->fromDay = "20181001";
+$reportInputFilter->toDay = "20181031";
+$pager = new KalturaFilterPager();
+$pager->pageIndex = 0;
+$pager->pageSize = 20;
+$objectIds = "1_qwerty"
+
+$result = $client->report->getTable($reportType, $reportInputFilter, $pager, $objectIds);
