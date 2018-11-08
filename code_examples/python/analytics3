@@ -4,7 +4,7 @@ reportInputFilter.categories = "Mediaspace>site>channels>podcasts"
 reportInputFilter.fromDay = "20181001"
 reportInputFilter.toDay = "20181031"
 pager = KalturaFilterPager()
-pager.pageIndex = 0
+pager.pageIndex = 1
 pager.pageSize = 20
 objectIds = "1_qwerty"
 
