@@ -1,0 +1,11 @@
+reportType = KalturaReportType.MAP_OVERLAY
+reportInputFilter = KalturaReportInputFilter()
+reportInputFilter.fromDay = "20181001"
+reportInputFilter.toDay = "20181031"
+pager = KalturaFilterPager()
+pager.pageIndex = 1
+pager.pageSize = 20
+order = "count_plays"
+objectIds = "Germany"
+
+result = client.report.getTable(reportType, reportInputFilter, pager, order, objectIds)
