@@ -50,7 +50,7 @@ This guide assumes that you have the necessary Java and Android development skil
 |                                                      Getting Started                                                     |           Technical Documentation           |
 |:------------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------:|
 |                                           ![help](./v3-images/getStarted.png)                                           |         ![help](./v3-images/TD.png)        |
-| [Getting Started](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/v3_Android_GetStarted.html) | [Docs](https://kaltura.github.io/playkit/api/android/reference/packages.html) |
+| [Getting Started](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/v3_Android_GetStarted.html) | [Docs](https://kaltura.github.io/playkit/api/android/core) |
 |                                                     How to contribute                                                    |       Detailed technical documentation      |
 
 

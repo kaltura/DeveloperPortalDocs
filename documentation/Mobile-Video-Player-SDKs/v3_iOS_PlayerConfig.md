@@ -8,7 +8,7 @@ The player configuration is the main data object of the Mobile Video Player SDK.
 
 This object is used for configuring custom players, including specific plugins, and obtaining the media that will be played on the device.
 
-> Note: To view additional information about the player configuration, see the [Player Config API documentation](https://kaltura.github.io/playkit/api/ios/Classes/PlayerConfig.html).
+> Note: To view additional information about the player configuration, see the [Player Config API documentation](https://kaltura.github.io/playkit/api/ios/core/Classes/PlayerConfig.html).
 
 ### Creating a PlayerConfig Instance  
 
@@ -40,7 +40,7 @@ The MediaEntry can be created using one of the following methods:
 
 Once you have a `MediaEntry` ready, you can build the player configuration and plugins, and continue to prepare the Kaltura Mobile Video Player for play.
 
-> Note: To view additional information about the Media Entry, see the [Player Config API documentation](https://kaltura.github.io/playkit/api/ios/Classes/MediaEntry.html).
+> Note: To view additional information about the Media Entry, see the [Player Config API documentation](https://kaltura.github.io/playkit/api/ios/core/Classes/MediaEntry.html).
 
 
 ## Have Questions or Need Help?

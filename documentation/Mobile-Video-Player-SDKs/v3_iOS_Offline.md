@@ -102,10 +102,10 @@ The constructor of LocalAssetsManager takes an optional [LocalDataStore]. This o
 A simple implementation is provided in [DefaultLocalDataStore], but if the application has an existing persistent storage facility (such as a CoreData/SQLite db), it might be good idea to provide a different implementation.
 
 
-[LocalAssetsManager]: https://kaltura.github.io/playkit/api/ios/Classes/LocalAssetsManager.html
-[LocalDataStore]: https://kaltura.github.io/playkit/api/ios/Protocols/LocalDataStore.html
-[DefaultLocalDataStore]: https://kaltura.github.io/playkit/api/ios/Classes/DefaultLocalDataStore.html
-[MediaEntry]: https://kaltura.github.io/playkit/api/ios/Classes/MediaEntry.html
+[LocalAssetsManager]: https://kaltura.github.io/playkit/api/ios/core/Classes/LocalAssetsManager.html
+[LocalDataStore]: https://kaltura.github.io/playkit/api/ios/core/Protocols/LocalDataStore.html
+[DefaultLocalDataStore]: https://kaltura.github.io/playkit/api/ios/core/Classes/DefaultLocalDataStore.html
+[MediaEntry]: https://kaltura.github.io/playkit/api/ios/core/Classes/MediaEntry.html
 [AVAssetDownloadTask]: https://developer.apple.com/reference/avfoundation/avassetdownloadtask
 [URLSessionDownloadTask]: https://developer.apple.com/reference/foundation/urlsessiondownloadtask
 
