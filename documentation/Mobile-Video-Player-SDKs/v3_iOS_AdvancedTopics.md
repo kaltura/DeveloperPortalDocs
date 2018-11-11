@@ -20,11 +20,11 @@ Kaltura's Mobile Video SDK supports various advanced features to enable multiple
 |**DRM**             |[DRM]                                      | [x]()  | X                                           |
 
 [playerConfigDocs]:https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/v3_iOS_PlayerConfig.html
-[playerConfigSwiftDocs]:https://kaltura.github.io/playkit/api/ios/Classes/PlayerConfig.html 
+[playerConfigSwiftDocs]:https://kaltura.github.io/playkit/api/ios/core/Classes/PlayerConfig.html 
 [eventsObservationDocs]:https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/v3_iOS_EventsAndStates.html
-[eventsObservationSwiftDocs]:https://kaltura.github.io/playkit/api/ios/Classes/PlayerEvents.html
+[eventsObservationSwiftDocs]:https://kaltura.github.io/playkit/api/ios/core/Classes/PlayerEvents.html
 [Audio&TextTracksDocs]:https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/v3_iOS_TracksSelection.html
-[Audio&TextTracksSwiftDocs]: https://kaltura.github.io/playkit/api/ios/Classes/PlayerEvents/tracksAvailable.html#/s:FCC7PlayKit12PlayerEvents15tracksAvailablecFT6tracksCS_8PKTracks_S1_
+[Audio&TextTracksSwiftDocs]: https://kaltura.github.io/playkit/api/ios/core/Classes/PlayerEvents/tracksAvailable.html#/s:FCC7PlayKit12PlayerEvents15tracksAvailablecFT6tracksCS_8PKTracks_S1_
 [Live Stream Docs]:https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/v3_iOS_Live.html
 [Live Stream SwiftDocs]: http://
 [Offline Playback Docs]:https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/v3_iOS_Offline.html
