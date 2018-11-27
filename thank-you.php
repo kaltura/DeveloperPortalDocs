@@ -21,7 +21,7 @@ $( document ).ready(function() {
               <h3 class="thank-you-h3">Let&apos;s Get You Started</h3>
               <p class="thank-you-p">To complete your registration please follow the email verification link in the welcome email you'll receive shortly.</p>
               <p class="thank-you-p">This quick guide will get you started with the basics; How to authenticate with the Kaltura API, what are Kaltura entries, and how to embed a video.
-              <br />We also recommend that you visit our <a href="https://vpaas.kaltura.com/documentation/01_VPaaS-API-Getting-Started/Getting-Started-VPaaS-API.html">Get Started with Kaltura VPaaS guide</a> and share it with your team members.
+              <br />We also recommend that you visit our <a href="https://developer.kaltura.com/api-docs/VPaaS-API-Getting-Started/Getting-Started-VPaaS-API.html/">Get Started with Kaltura VPaaS guide</a> and share it with your team members.
               </p>
                   <ul>
                     <li><a href="#partnerid">partnerId (Kaltura Account ID)</a></li>
