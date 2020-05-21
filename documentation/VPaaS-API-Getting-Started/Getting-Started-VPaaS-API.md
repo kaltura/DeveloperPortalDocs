@@ -14,7 +14,7 @@ To get started, let's review the foundational building blocks of a video experie
 
 To access the Kaltura API, you'll need the following:
 
-* A Kaltura publisher account - To obtain a Kaltura account, start a [free trail](http://corp.kaltura.com/free-trial), [contact us](http://corp.kaltura.com/company/contact-us), or [download Kaltura CE](http://www.kaltura.org/project/community_edition_video_platform).
+* A Kaltura publisher account - To obtain a Kaltura account, start a [free trial](http://corp.kaltura.com/free-trial), [contact us](http://corp.kaltura.com/company/contact-us), or [download Kaltura CE](http://www.kaltura.org/project/community_edition_video_platform).
 * Your Kaltura API publisher credentials, which are available through the [KMC Integration Settings](http://www.kaltura.com/index.php/kmc/kmc4#account/integration).
 
 ## Your Kaltura Account ID (PartnerId)  
