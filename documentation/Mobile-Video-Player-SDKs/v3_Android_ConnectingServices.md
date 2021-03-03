@@ -38,62 +38,62 @@ The JsonObject should contain the relevant properties needed to construct the PK
 1 . Manually create a JsonObject and add its properties:
 
 ```java
-    JsonObject entries = new JsonObject();
-    JsonObject mediaEntryJson = new JsonObject();
-   mediaEntryJson.addProperty("id", id);
-   mediaEntryJson.addProperty("name", name);
-    mediaEntryJson.addProperty("duration", duration);
-  mediaEntryJson.addProperty("mediaType", type);
+JsonObject entries = new JsonObject();
+JsonObject mediaEntryJson = new JsonObject();
+mediaEntryJson.addProperty("id", id);
+mediaEntryJson.addProperty("name", name);
+mediaEntryJson.addProperty("duration", duration);
+mediaEntryJson.addProperty("mediaType", type);
 
-  JsonArray sourcesArray = new JsonArray();
-  JsonObject sourceObject = new JsonObject();
-  sourceObject.addProperty("id", id);
-  sourceObject.addProperty("url", url);
+JsonArray sourcesArray = new JsonArray();
+JsonObject sourceObject = new JsonObject();
+sourceObject.addProperty("id", id);
+sourceObject.addProperty("url", url);
 
-  JsonArray drm = new JsonArray();
-  JsonObject drmData = new JsonObject();
-  drmData.addProperty("licenseUri", license);
-  drm.add(drmData);
+JsonArray drm = new JsonArray();
+JsonObject drmData = new JsonObject();
+drmData.addProperty("licenseUri", license);
+drm.add(drmData);
 
-  sourceObject.add("drmData", drmData);
-  sourcesArray.add(sourceObject);
-  mediaEntryJson.add("sources",  sourcesArray);
+sourceObject.add("drmData", drmData);
+sourcesArray.add(sourceObject);
+mediaEntryJson.add("sources",  sourcesArray);
 
-  entries.add(<EntryId>, mediaEntryJson);
+entries.add(<EntryId>, mediaEntryJson);
 ```
 
 2 . Parsing a string representation of JSON data into JsonObject:
 
 ```java
-  String entries = "{\n" +
-        "  \"mp4\": {\n" +
-        "    \"duration\": 102000,\n" +
-        "    \"id\": \"1_1h1vsv3z\",\n" +
-        "    \"name\": \"MP4: Kaltura Video Solutions for Media Companies\",\n" +
-        "    \"sources\": [\n" +
-        "      {\n" +
-        "        \"id\": \"1_1h1vsv3z_mp4\",\n" +
-        "        \"url\": \"https://cdnapisec.kaltura.com/p/2209591/sp/0/playManifest/entryId/1_1h1vsv3z/format/mpegdash/protocol/http/a.mp4\"\n" +
-        "      }\n" +
-        "    ]\n" +
-        "  },\n" +
-        "  \"dash\": {\n" +
-        "    \"duration\": 102000,\n" +
-        "    \"id\": \"1_1h1vsv3z\",\n" +
-        "    \"name\": \"DASH: Kaltura Video Solutions for Media Companies\",\n" +
-        "    \"sources\": [\n" +
-        "      {\n" +
-        "        \"id\": \"1_1h1vsv3z_dash\",\n" +
-        "        \"url\": \"https://cdnapisec.kaltura.com/p/2209591/sp/0/playManifest/entryId/1_1h1vsv3z/format/mpegdash/protocol/http/a.mp4,\"\n" +
-        "        \"drmData\": [\n" +
-        "            {\n" +
-        "              \"licenseUri\": \"licenseUri\"\n" +
-        "            }\n" +
-        "        ]\n" +
-        "      }\n" +
-        "    ]\n" +
-        "  }\n" +
-        "}";
+String entries = "{\n" +
+      "  \"mp4\": {\n" +
+      "    \"duration\": 102000,\n" +
+      "    \"id\": \"1_1h1vsv3z\",\n" +
+      "    \"name\": \"MP4: Kaltura Video Solutions for Media Companies\",\n" +
+      "    \"sources\": [\n" +
+      "      {\n" +
+      "        \"id\": \"1_1h1vsv3z_mp4\",\n" +
+      "        \"url\": \"https://cdnapisec.kaltura.com/p/2209591/sp/0/playManifest/entryId/1_1h1vsv3z/format/mpegdash/protocol/http/a.mp4\"\n" +
+      "      }\n" +
+      "    ]\n" +
+      "  },\n" +
+      "  \"dash\": {\n" +
+      "    \"duration\": 102000,\n" +
+      "    \"id\": \"1_1h1vsv3z\",\n" +
+      "    \"name\": \"DASH: Kaltura Video Solutions for Media Companies\",\n" +
+      "    \"sources\": [\n" +
+      "      {\n" +
+      "        \"id\": \"1_1h1vsv3z_dash\",\n" +
+      "        \"url\": \"https://cdnapisec.kaltura.com/p/2209591/sp/0/playManifest/entryId/1_1h1vsv3z/format/mpegdash/protocol/http/a.mp4,\"\n" +
+      "        \"drmData\": [\n" +
+      "            {\n" +
+      "              \"licenseUri\": \"licenseUri\"\n" +
+      "            }\n" +
+      "        ]\n" +
+      "      }\n" +
+      "    ]\n" +
+      "  }\n" +
+      "}";
 
 JsonParser parser = new JsonParser();
 JsonObject jsonObject = parser.parse(entries).getAsJsonObject();
@@ -137,17 +137,17 @@ _entries.json_
 _singleEntry.json_
 
 ```json
-  {
-    "id": "0_pl5lbfo0",
-    "sources": [
-      {
-        "id": "0_pl5lbfo0_dash",
-        "url": "http://cdnapi.kaltura.com/p/1851571/sp/185157100/playManifest/entryId/0_pl5lbfo0/flavorIds/0_ywkmqnkg/format/mpegdash/protocol/http/a.mpd",
-        "drmData": {
-            "licenseUri": "https://udrm.kaltura.com/cenc/widevine/license?custom_data=eyJjYV9zeXN0ZW0iOiJPVlAiLCJ1c2VyX3Rva2VuIjoiZGpKOE1UZzFNVFUzTVh6NnJxM3hFYnI0aFBWU3N0ajRDaGtkT1NoVU1QYV9sTFFaNWpkSVdscWdYNld6YnJuSGZORHZ0V3hmYmExT3dJVmVjeXNIVTc3ci1VazBvWWZkaGttd0dZNWQwSmdCUGdfMkZ3Wi13cE1yRlE9PSIsImFjY291bnRfaWQiOiIxODUxNTcxIiwiY29udGVudF9pZCI6IjBfcGw1bGJmbzAiLCJmaWxlcyI6IjBfendxM2w0NHIsMF91YTYycms2cywwX290bWFxcG5mLDBfeXdrbXFua2csMV9lMHF0YWoxaiwxX2IycXp5dmE3In0%3D&signature=eFrsxqplBh6b8%2BRkn4XaLsKD7Lc%3D"
-        }
+{
+  "id": "0_pl5lbfo0",
+  "sources": [
+   {
+      "id": "0_pl5lbfo0_dash",
+      "url": "http://cdnapi.kaltura.com/p/1851571/sp/185157100/playManifest/entryId/0_pl5lbfo0/flavorIds/0_ywkmqnkg/format/mpegdash/protocol/http/a.mpd",
+      "drmData": {
+          "licenseUri": "https://udrm.kaltura.com/cenc/widevine/license?custom_data=eyJjYV9zeXN0ZW0iOiJPVlAiLCJ1c2VyX3Rva2VuIjoiZGpKOE1UZzFNVFUzTVh6NnJxM3hFYnI0aFBWU3N0ajRDaGtkT1NoVU1QYV9sTFFaNWpkSVdscWdYNld6YnJuSGZORHZ0V3hmYmExT3dJVmVjeXNIVTc3ci1VazBvWWZkaGttd0dZNWQwSmdCUGdfMkZ3Wi13cE1yRlE9PSIsImFjY291bnRfaWQiOiIxODUxNTcxIiwiY29udGVudF9pZCI6IjBfcGw1bGJmbzAiLCJmaWxlcyI6IjBfendxM2w0NHIsMF91YTYycms2cywwX290bWFxcG5mLDBfeXdrbXFua2csMV9lMHF0YWoxaiwxX2IycXp5dmE3In0%3D&signature=eFrsxqplBh6b8%2BRkn4XaLsKD7Lc%3D"
       }
-    ]
+    }
+  ]
 }
 ```
 
@@ -157,19 +157,18 @@ _singleEntry.json_
 // using input file
 MockMediaProvider mockMediaProvider = new MockMediaProvider(InputFile, context, entryId);
 OR
-//using JsonObject
+// using JsonObject
 MockMediaProvider mockMediaProvider = new MockMediaProvider(JsonObject, entryId);
 
-
 mockMediaProvider.load(new OnMediaLoadCompletion() {
-        @Override
-        public void onComplete(ResultElement<PKMediaEntry> response) {
-            if(response.isSuccess()) {
-                // response.getResponse() will contain the PKMediaEntry object
-            } else {
-                // media retrieval error: response.getError() will contain the error
-            }
+    @Override
+    public void onComplete(ResultElement<PKMediaEntry> response) {
+        if(response.isSuccess()) {
+            // response.getResponse() will contain the PKMediaEntry object
+        } else {
+            // media retrieval error: response.getError() will contain the error
         }
+    }
 });
 
 ```
@@ -187,20 +186,20 @@ To use this provider:
 3. Activate the providers "load" method, passing it an OnMediaLoadCompletion callback object, in order to get the PKMediaEntry object.  
 
 ```java
-  KalturaOvpMediaProvider mediaProvider = new KalturaOvpMediaProvider()
-                                            .setSessionProvider(ovpSessionProvider)
-                                            .setEntryId(NonDRMEntryId);
+KalturaOvpMediaProvider mediaProvider = new KalturaOvpMediaProvider()
+    .setSessionProvider(ovpSessionProvider)
+    .setEntryId(NonDRMEntryId);
 
-  mediaProvider.load(new OnMediaLoadCompletion() {
+mediaProvider.load(new OnMediaLoadCompletion() {
     @Override
     public void onComplete(ResultElement<PKMediaEntry> response) {
         if(response.isSuccess()){
-          // response.getResponse() will contain the PKMediaEntry object
+            // response.getResponse() will contain the PKMediaEntry object
         } else {
-          // error occurred - check the response.getError() to check what happened.
+            // error occurred - check the response.getError() to check what happened.
         }
     }
-  });                                            
+});                                            
 ```
 
 
@@ -230,18 +229,18 @@ To use this provider:
 
 ```java
 PhoenixMediaProvider mediaProvider = new PhoenixMediaProvider()
-                                            .setSessionProvider(ottSessionProvider)
-                                            .setReferenceType(APIDefines.AssetReferenceType.Media)
-                                            .setAssetId(MediaId)
-                                            .setFormats(FormatHD, FormatSD);
+    .setSessionProvider(ottSessionProvider)
+    .setReferenceType(APIDefines.AssetReferenceType.Media)
+    .setAssetId(MediaId)
+    .setFormats(FormatHD, FormatSD);
 
 mediaProvider.load(new OnMediaLoadCompletion() {
     @Override
     public void onComplete(ResultElement<PKMediaEntry> response) {
         if(response.isSuccess()){
-          // response.getResponse() will contain the PKMediaEntry object
+            // response.getResponse() will contain the PKMediaEntry object
         } else {
-          // error occurred - check the response.getError() to check what happened.
+            // error occurred - check the response.getError() to check what happened.
         }
     }
 });                                            
@@ -261,22 +260,22 @@ The executor can be a mock executor for test purposes or connect to a remote sou
 For each source do the following:
 
 ```java
-  List<PKMediaSource> mediaSourceList = new ArrayList<>();
-  PKMediaSource pkMediaSource = new PKMediaSource();
-  pkMediaSource.setId(<FileId>);
-  pkMediaSource.setUrl(<Media URL>);
-  pkMediaSource.setMediaFormat(PKMediaFormat.getMediaFormat(<Media URL));
+List<PKMediaSource> mediaSourceList = new ArrayList<>();
+PKMediaSource pkMediaSource = new PKMediaSource();
+pkMediaSource.setId(<FileId>);
+pkMediaSource.setUrl(<Media URL>);
+pkMediaSource.setMediaFormat(PKMediaFormat.getMediaFormat(<Media URL));
   
-  mediaSourceList.add(mediaSource); 
+mediaSourceList.add(mediaSource); 
 ```
 
 > Note: In case of Widevine Media, a DRM license is required.
 
 ```java
-  List<PKDrmParams> pkDrmDataList = new ArrayList<>();
-  PKDrmParams pkDrmParams = new PKDrmParams(licenseUrl);
-  pkDrmDataList.add(pkDrmParams);
-  pkMediaSource.setDrmData(pkDrmDataList);
+List<PKDrmParams> pkDrmDataList = new ArrayList<>();
+PKDrmParams pkDrmParams = new PKDrmParams(licenseUrl);
+pkDrmDataList.add(pkDrmParams);
+pkMediaSource.setDrmData(pkDrmDataList);
 ```
 
 ### Create the Media Entry  
@@ -284,12 +283,11 @@ For each source do the following:
 For each entry, do the following:
   
 ```java
-  PKMediaEntry mediaEntry = new PKMediaEntry();
-  mediaEntry.setId(<MediaId>)
-  mediaSourceList.add(pkMediaSource);
-  mediaEntry.setSources(mediaSourceList);
-  mediaEntry.setDuration(mediaDuration);
-
+PKMediaEntry mediaEntry = new PKMediaEntry();
+mediaEntry.setId(<MediaId>)
+mediaSourceList.add(pkMediaSource);
+mediaEntry.setSources(mediaSourceList);
+mediaEntry.setDuration(mediaDuration);
 ```
 
 **When the PKMediaEntry is ready, you can begin configuring the player.**
@@ -301,7 +299,7 @@ The SessionProvider interface defines the base requirements for implementing an 
 
 Components such as Media Providers and some of the OVP plugins that need to connect to the remote data source and request actions, get data, and update date, work with the SessionProvider.
 
-The SessoinProvider provides the following:
+The SessionProvider provides the following:
 
 1 . A Base url - This is the domain name of the designated remote host.
   _**The Base url should only contain the host domain name and should not include
@@ -310,7 +308,7 @@ The SessoinProvider provides the following:
  _Example:_
   
 ```java
-  OVP base url: https://cdnapisec.kaltura.com/
+OVP base url: https://cdnapisec.kaltura.com/
 ```
 
 2 . A Session Token - This is a valid session key to work against the data source.
@@ -331,26 +329,26 @@ You can create a SessionProvider using an anonymous interface instantiation or i
 
 ```java
 SessionProvider sessionProvider = new SessionProvider() {
-            @Override
-            public String baseUrl() {
-                return baseUrl;
-            }
+    @Override
+    public String baseUrl() {
+        return baseUrl;
+    }
 
-            @Override
-            public void getKs(OnCompletion<PrimitiveResult> completion) {
-                completion.onComplete(new PrimitiveResult(getKs()));
-            }
+    @Override
+    public void getKs(OnCompletion<PrimitiveResult> completion) {
+        completion.onComplete(new PrimitiveResult(getKs()));
+    }
 
-            @Override
-            public int partnerId() {
-                return partnerId();
-            }
-        };
+    @Override
+    public int partnerId() {
+        return partnerId();
+    }
+};
 ```
 
 ### Provided Implementation
 
-You can create a SessionProvider using the existing OttSessionProvider or OvpSessionProvider providerrs.
+You can create a SessionProvider using the existing OttSessionProvider or OvpSessionProvider providers.
 
 #### OttSessionProvider  
 
@@ -376,30 +374,30 @@ After a session has started, the SessionProvider is ready and can be used as a p
 To use the OttSessionProvider, implement the following:
 
 ```java
-    OttSessionProvider ottSessionProvider = new OttSessionProvider(PhoenixBaseUrl, partnerId);
-    ottSessionProvider.startSession(username, password, udid, new OnComplition<PrimitiveRersult>(){
-     @Override
-        public void onComplete(PrimitiveResult response) {
-            if(response.isSuccess()) { // has valid session:
+OttSessionProvider ottSessionProvider = new OttSessionProvider(PhoenixBaseUrl, partnerId);
+ottSessionProvider.startSession(username, password, udid, new OnComplition<PrimitiveRersult>() {
+    @Override
+    public void onComplete(PrimitiveResult response) {
+        if(response.isSuccess()) { // has valid session:
 
-                phoenixMediaProvider = new PhoenixMediaProvider()
-                              .setSessionProvider(ottSessionProvider)
-                              .setReferenceType(APIDefines.AssetReferenceType.Media)
-                              .setAssetId(ChannelId)
-                              .setFormats(FormatHD, FormatSD);
+            phoenixMediaProvider = new PhoenixMediaProvider()
+                .setSessionProvider(ottSessionProvider)
+                .setReferenceType(APIDefines.AssetReferenceType.Media)
+                .setAssetId(ChannelId)
+                .setFormats(FormatHD, FormatSD);
 
-                phoenixMediaProvider.load(new OnMediaLoadCompletion() {
-                    @Override
-                    public void onComplete(ResultElement<PKMediaEntry> response) {
-                      ...
-                    }
-                });
+            phoenixMediaProvider.load(new OnMediaLoadCompletion() {
+                @Override
+                public void onComplete(ResultElement<PKMediaEntry> response) {
+                    ...
+                }
+            });
 
-            } else { // error: session creation failed
-              ErrorElement error = response.getError();
-            }
+        } else { // error: session creation failed
+            ErrorElement error = response.getError();
         }
-    });
+    }
+});
 ```
 
 #### OvpSessionProvider  
@@ -407,7 +405,7 @@ To use the OttSessionProvider, implement the following:
 The [OvpSessionProvider](https://github.com/kaltura/playkit-android/blob/develop/playkit/src/main/java/com/kaltura/playkit/backend/ovp/OvpSessionProvider.java) supports anonymous and user-specific session creation on Kaltura's OVP Backend.
 
 * A anonymous session starts with the "session/startWidgetSession" API.
-* A user specific session starts with the "user/loginByLoginId" API
+* A user specific session starts with the "user/loginByLoginId" API.
 
 By default a session is valid for 24 hours. Once expired, the OvpSessionProvider will try to renew the session.
 
@@ -426,28 +424,28 @@ After a session starts, the SessionProvider is ready and can be used as a parame
 To use the OvpSessionProvider, implement the following:
 
 ```java
-      OvpSessionProvider ovpSessionProvider = new OvpSessionProvider(OvpBaseUrl);
-      ovpSessionProvider.startAnonymousSession(partnerId, new OnComplition<PrimitiveRersult>(){
-       @Override
-          public void onComplete(PrimitiveResult response) {
-              if(response.isSuccess()) { // has valid session:
+OvpSessionProvider ovpSessionProvider = new OvpSessionProvider(OvpBaseUrl);
+ovpSessionProvider.startAnonymousSession(partnerId, new OnComplition<PrimitiveRersult>() {
+    @Override
+    public void onComplete(PrimitiveResult response) {
+        if(response.isSuccess()) { // has valid session:
 
-                  kalturaOvpMediaProvider = new KalturaOvpMediaProvider()
-                                .setSessionProvider(ovpSessionProvider)
-                                .setEntryId(EntryId);
+            kalturaOvpMediaProvider = new KalturaOvpMediaProvider()
+                .setSessionProvider(ovpSessionProvider)
+                .setEntryId(EntryId);
 
-                  kalturaOvpMediaProvider.load(new OnMediaLoadCompletion() {
-                      @Override
-                      public void onComplete(ResultElement<PKMediaEntry> response) {
-                        ...
-                      }
-                  });
+            kalturaOvpMediaProvider.load(new OnMediaLoadCompletion() {
+                @Override
+                public void onComplete(ResultElement<PKMediaEntry> response) {
+                    ...
+                }
+            });
 
-              } else { // error: session creation failed
-                ErrorElement error = response.getError();
-              }
-          }
-      });
+        } else { // error: session creation failed
+            ErrorElement error = response.getError();
+        }
+    }
+});
 ```
 
 ## UIConf Provider
